@@ -7,10 +7,8 @@
     <meta name="description" content="Venta de computadoras completas armadas por niveles (Nivel 5 a Nivel 1 Extreme), refacciones y componentes en Guadalajara Centro. Pedro Moreno 501 A.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- SDK Oficial de Pasarela de Pagos Segura (Tokenizada SAQ-A) -->
     <script src="https://js.stripe.com/v3/"></script>
     
-    <!-- Marcado Estructurado SEO Local & Motores de IA (GEO) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -149,7 +147,7 @@
                         <option value="pc" selected>Computadora Completa</option>
                         <option value="refaccion">Refacción / Periférico</option>
                     </select>
-                    <input id="hero-search-input" type="text" placeholder="Ej. PC para oficina, Gamer Nivel 3, Memoria DDR4, SSD M.2, Monitor..." onkeypress="ejecutarBusquedaHero(event)" class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-indigo-400">
+                    <input id="hero-search-input" type="text" placeholder="Ej. PC para oficina, Nivel 1 Extreme, Memoria DDR5 8000MHz, SSD NVMe PCIe 5.0..." onkeypress="ejecutarBusquedaHero(event)" class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-indigo-400">
                     <button onclick="buscarHero()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold px-6 py-3 rounded-xl transition text-xs whitespace-nowrap">
                         <i class="fa-solid fa-magnifying-glass mr-1"></i> Buscar
                     </button>
@@ -167,7 +165,7 @@
         </div>
     </header>
 
-    <!-- BANNER DE CAPTURA DE LEADS (30% DESCUENTO EN MANTENIMIENTO) -->
+    <!-- BANNER DE CAPTURA DE LEADS -->
     <section class="py-12 bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950 border-b border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <div class="bg-slate-900/90 border border-blue-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
@@ -191,7 +189,7 @@
         </div>
     </section>
 
-    <!-- CATALOGO DE COMPUTADORAS COMPLETAS (NIVEL 5 AL NIVEL 1) -->
+    <!-- CATALOGO DE COMPUTADORAS COMPLETAS CON RANGOS REALES DE PRECIO -->
     <section id="niveles" class="py-20 max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-16">
             <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">Computadoras Completas por Niveles</h2>
@@ -211,13 +209,13 @@
                     <h3 class="text-xl font-bold text-white mb-2">PC Completa Hogar & Oficina</h3>
                     <p class="text-slate-400 text-sm mb-6">Equipos eficientes completos para navegar, redes sociales, punto de venta y tareas escolares.</p>
                     <ul class="space-y-2.5 text-sm text-slate-300 mb-6 font-mono">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> Intel / AMD Eficientes</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> SSD NVMe Alta Velocidad</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> 8GB / 16GB RAM DDR4</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> Intel Pentium / Core i3 / AMD Athlon</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> SSD SATA / NVMe 256GB - 512GB</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> 8GB RAM DDR4 2666/3200MHz</li>
                     </ul>
                 </div>
                 <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs text-slate-400 font-mono">Equipo Completo</span>
+                    <span class="text-xs text-slate-400 font-mono">Entrada Básico</span>
                     <button onclick="abrirCotizadorConNivel('5')" class="text-blue-400 hover:text-blue-300 text-sm font-bold flex items-center gap-1">Cotizar <i class="fa-solid fa-arrow-right text-xs"></i></button>
                 </div>
             </div>
@@ -226,19 +224,19 @@
             <div class="gradient-card-2 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
                 <div>
                     <div class="flex justify-between items-center mb-4">
-                        <span class="px-3 py-1 rounded-lg bg-indigo-950 text-indigo-300 font-mono text-xs font-bold border border-indigo-700">NIVEL 4 ($3,500 - $6,500 MXN)</span>
+                        <span class="px-3 py-1 rounded-lg bg-indigo-950 text-indigo-300 font-mono text-xs font-bold border border-indigo-700">NIVEL 4 ($3,500 - $8,500 MXN)</span>
                         <i class="fa-solid fa-laptop-code text-2xl text-indigo-400"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">PC Completa Gama Media</h3>
                     <p class="text-slate-400 text-sm mb-6">Productividad avanzada, diseño gráfico de entrada, edición ligera y multitarea ágil.</p>
                     <ul class="space-y-2.5 text-sm text-slate-300 mb-6 font-mono">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400 text-xs"></i> Intel 12ª Gen / Ryzen 5000+</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400 text-xs"></i> Intel Core i5 (12ª/13ª Gen) / Ryzen 5 5600</li>
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400 text-xs"></i> 16GB RAM DDR4 3200MHz</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400 text-xs"></i> Gráficos Dedicados HD / GTX</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400 text-xs"></i> Gráficos GTX 1650 / RTX 3050</li>
                     </ul>
                 </div>
                 <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs text-slate-400 font-mono">Equipo Completo</span>
+                    <span class="text-xs text-slate-400 font-mono">Multitarea / Estudio</span>
                     <button onclick="abrirCotizadorConNivel('4')" class="text-indigo-400 hover:text-indigo-300 text-sm font-bold flex items-center gap-1">Cotizar <i class="fa-solid fa-arrow-right text-xs"></i></button>
                 </div>
             </div>
@@ -247,19 +245,19 @@
             <div class="gradient-card-1 rounded-2xl p-6 flex flex-col justify-between hover:border-purple-500 transition shadow-xl">
                 <div>
                     <div class="flex justify-between items-center mb-4">
-                        <span class="px-3 py-1 rounded-lg bg-purple-950 text-purple-300 font-mono text-xs font-bold border border-purple-700">NIVEL 3</span>
+                        <span class="px-3 py-1 rounded-lg bg-purple-950 text-purple-300 font-mono text-xs font-bold border border-purple-700">NIVEL 3 ($9,000 - $20,000 MXN)</span>
                         <i class="fa-solid fa-cubes text-2xl text-purple-400"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2">PC Completa Gama Alta / Render</h3>
-                    <p class="text-slate-400 text-sm mb-6">Estaciones para modelado 3D, renderizado pesado, arquitectura y edición de video 4K.</p>
+                    <p class="text-slate-400 text-sm mb-6">Estaciones para modelado 3D, renderizado pesado, arquitectura (CAD) y edición de video 4K.</p>
                     <ul class="space-y-2.5 text-sm text-slate-300 mb-6 font-mono">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-xs"></i> Intel 13ª/14ª Gen / Ryzen 7000</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-xs"></i> 32GB RAM DDR4/DDR5</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-xs"></i> RTX Serie 30 / 40</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-xs"></i> Intel Core i7 (13ª/14ª Gen) / Ryzen 7 7700X</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-xs"></i> 32GB RAM DDR5 5600MHz</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-xs"></i> RTX 4060 Ti / RTX 4070 Super</li>
                     </ul>
                 </div>
                 <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs text-slate-400 font-mono">Equipo Completo</span>
+                    <span class="text-xs text-slate-400 font-mono">Render & CAD 3D</span>
                     <button onclick="abrirCotizadorConNivel('3')" class="text-purple-400 hover:text-purple-300 text-sm font-bold flex items-center gap-1">Cotizar <i class="fa-solid fa-arrow-right text-xs"></i></button>
                 </div>
             </div>
@@ -268,19 +266,19 @@
             <div class="gradient-card-1 rounded-2xl p-6 flex flex-col justify-between hover:border-pink-500 transition shadow-xl">
                 <div>
                     <div class="flex justify-between items-center mb-4">
-                        <span class="px-3 py-1 rounded-lg bg-pink-950 text-pink-300 font-mono text-xs font-bold border border-pink-700">NIVEL 2</span>
+                        <span class="px-3 py-1 rounded-lg bg-pink-950 text-pink-300 font-mono text-xs font-bold border border-pink-700">NIVEL 2 ($20,000 - $55,000 MXN)</span>
                         <i class="fa-solid fa-bolt text-2xl text-pink-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">PC Completa Entusiasta / IA</h3>
-                    <p class="text-slate-400 text-sm mb-6">Sistemas de producción exigentes, desarrollo de software e inteligencia artificial local.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">PC Completa Entusiasta & Creadores Pro</h3>
+                    <p class="text-slate-400 text-sm mb-6">Sistemas de producción exigentes, desarrollo de software, simulación e inteligencia artificial local.</p>
                     <ul class="space-y-2.5 text-sm text-slate-300 mb-6 font-mono">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-400 text-xs"></i> Intel Core Ultra / Ryzen 9000</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-400 text-xs"></i> Memorias DDR5 Ultra Rápidas</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-400 text-xs"></i> Enfriamiento Líquido AIO</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-400 text-xs"></i> Intel Core Ultra 7 / Ryzen 9 9900X</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-400 text-xs"></i> 32GB / 64GB DDR5 6400MHz High Speed</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-400 text-xs"></i> RTX 4070 Ti Super / RTX 4080 Super</li>
                     </ul>
                 </div>
                 <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs text-slate-400 font-mono">Equipo Completo</span>
+                    <span class="text-xs text-slate-400 font-mono">Creadores Pro / IA</span>
                     <button onclick="abrirCotizadorConNivel('2')" class="text-pink-400 hover:text-pink-300 text-sm font-bold flex items-center gap-1">Cotizar <i class="fa-solid fa-arrow-right text-xs"></i></button>
                 </div>
             </div>
@@ -289,21 +287,21 @@
             <div class="gradient-card-amber rounded-2xl p-6 flex flex-col justify-between hover:border-amber-400 transition shadow-2xl col-span-1 md:col-span-2 lg:col-span-2">
                 <div>
                     <div class="flex justify-between items-center mb-4">
-                        <span class="px-3 py-1 rounded-lg bg-amber-500/20 text-amber-300 font-mono text-xs font-bold border border-amber-500/50">NIVEL 1 - TOPPING EXTREME (2026)</span>
+                        <span class="px-3 py-1 rounded-lg bg-amber-500/20 text-amber-300 font-mono text-xs font-bold border border-amber-500/50">NIVEL 1 - TOPPING EXTREME ($60,000 - $150,000+ MXN)</span>
                         <i class="fa-solid fa-crown text-2xl text-amber-400"></i>
                     </div>
                     <h3 class="text-2xl font-black text-amber-400 mb-2">Extreme Workstation & Servidores Corporativos</h3>
-                    <p class="text-slate-300 text-sm mb-6">El estándar máximo en computación: tarjetas tope de gama, placas especializadas, fuentes Platinum y soporte para inteligencia artificial masiva.</p>
+                    <p class="text-slate-300 text-sm mb-6">El estándar máximo en computación: tarjetas tope de gama de última generación, placas especializadas, fuentes Platinum y soporte para IA masiva.</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-200 font-mono mb-6">
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400 text-xs"></i> Procesadores Extreme / Ultra</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400 text-xs"></i> Intel Core Ultra 9 285K / Ryzen 9 9950X</div>
                         <div class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400 text-xs"></i> Nvidia RTX 5090 32GB (Serie 5000)</div>
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400 text-xs"></i> Placas Madre Especializadas</div>
-                        <div class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400 text-xs"></i> Fuentes 1000W - 1200W Gold</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400 text-xs"></i> Placas Madre Z890 / X870E Extreme</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400 text-xs"></i> 64GB - 128GB RAM DDR5 8000MHz+ XMP</div>
                     </div>
                 </div>
                 <div class="pt-4 border-t border-amber-900/50 flex justify-between items-center">
                     <span class="text-xs text-amber-300/80 font-mono">Equipo Completo Extreme</span>
-                    <button onclick="abrirCotizadorConNivel('1')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-5 py-2 rounded-xl text-sm font-bold flex items-center gap-2 transition font-sans">
+                    <button onclick="abrirCotizadorConNivel('1')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-5 py-2 rounded-xl text-sm font-bold flex items-center gap-2 transition">
                         Cotizar Extreme <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
@@ -311,15 +309,15 @@
         </div>
     </section>
 
-    <!-- COTIZADOR CON PREFILTRO Y SECUENCIA LÓGICA DE ENSAMBLE -->
+    <!-- COTIZADOR MATRIZ DINÁMICA SIN REDUNDANCIAS -->
     <section id="cotizador" class="py-20 bg-slate-900/80 border-y border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-12">
                 <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 font-mono text-xs uppercase tracking-widest inline-block mb-3">
-                    Configurador de Computadoras Completas
+                    Configurador Matriz con Hardware de Última Generación
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-black text-white">Configura tu Equipo Paso a Paso</h2>
-                <p class="text-slate-400 mt-2">Elige primero tu Nivel. El sistema filtrará componentes para garantizar que el gabinete, la fuente y la tarjeta de video sean 100% compatibles.</p>
+                <p class="text-slate-400 mt-2">Selecciona tu nivel objetivo. La matriz actualizará automáticamente las placas base, procesadores, fuentes y frecuencias exactas para ese nivel.</p>
             </div>
 
             <div id="alert-compatibilidad" class="hidden mb-6 p-4 rounded-xl bg-amber-500/10 border border-amber-500/40 text-amber-300 text-sm flex items-start gap-3">
@@ -329,92 +327,81 @@
 
             <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl">
                 
-                <!-- PASO 1: PREFILTRO DE NIVEL -->
+                <!-- PASO 1: SELECCIÓN DE NIVEL -->
                 <div class="mb-8 pb-8 border-b border-slate-800">
                     <label class="block text-sm font-bold font-mono text-amber-400 mb-3 uppercase tracking-wider">
                         1. Selecciona el Nivel de la PC Completa
                     </label>
                     <select id="select-nivel-filtro" onchange="actualizarPrefiltroNivel()" class="w-full bg-slate-900 border border-amber-500/50 text-amber-200 rounded-xl p-3.5 focus:border-amber-400 focus:outline-none font-bold">
                         <option value="5" selected>Nivel 5 — Entrada / Hogar / Oficina ($2,000 - $3,500 MXN)</option>
-                        <option value="4">Nivel 4 — Gama Media Moderna ($3,500 - $6,500 MXN)</option>
-                        <option value="3">Nivel 3 — Gama Alta / Trabajo Pesado</option>
-                        <option value="2">Nivel 2 — Categoría Entusiasta / Creadores / IA Local</option>
-                        <option value="1">Nivel 1 — TOPPING EXTREME (Nvidia RTX 5090 / Servidores IA)</option>
+                        <option value="4">Nivel 4 — Gama Media Moderna ($3,500 - $8,500 MXN)</option>
+                        <option value="3">Nivel 3 — Gama Alta / Renderizado / CAD 3D ($9,000 - $20,000 MXN)</option>
+                        <option value="2">Nivel 2 — Categoría Entusiasta / Creadores / IA ($20,000 - $55,000 MXN)</option>
+                        <option value="1">Nivel 1 — TOPPING EXTREME / RTX 5090 ($60,000 - $150,000+ MXN)</option>
                     </select>
                 </div>
 
-                <!-- PASO 2: GABINETE -->
+                <!-- PASO 2: GABINETE MODERNO CON NOMBRE Y MARCA -->
                 <div class="mb-8 pb-8 border-b border-slate-800">
                     <label class="block text-sm font-bold font-mono text-blue-400 mb-3 uppercase tracking-wider">
-                        2. Gabinete (Chasis)
+                        2. Gabinete (Chasis Flujo de Aire Especializado)
                     </label>
                     <select id="select-gabinete" onchange="validarCompatibilidad()" class="w-full bg-slate-900 border border-slate-700 text-slate-100 rounded-xl p-3.5 focus:border-blue-500 focus:outline-none font-medium">
-                        <option value="compact">Gabinete Compacto / Mini-ITX (Espacio reducido - GPUs max 240mm)</option>
-                        <option value="mid" selected>Gabinete Mid-Tower ATX Estándar (Flujo de aire optimizado)</option>
-                        <option value="full">Gabinete Full-Tower ATX XL (Espacio extremo y refrigeración líquida)</option>
+                        <!-- Generado dinámicamente -->
                     </select>
                 </div>
 
                 <!-- PASO 3: FUENTE DE PODER -->
                 <div class="mb-8 pb-8 border-b border-slate-800">
                     <label class="block text-sm font-bold font-mono text-emerald-400 mb-3 uppercase tracking-wider">
-                        3. Fuente de Poder (Suministro de Energía)
+                        3. Fuente de Poder Certificada
                     </label>
                     <select id="select-psu" class="w-full bg-slate-900 border border-slate-700 text-slate-100 rounded-xl p-3.5 focus:border-emerald-500 focus:outline-none font-medium">
                         <!-- Generado dinámicamente -->
                     </select>
                 </div>
 
-                <!-- PASO 4: TARJETA MADRE & PROCESADOR -->
+                <!-- PASO 4: TARJETA MADRE & PROCESADOR DE ÚLTIMA GENERACIÓN -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 pb-8 border-b border-slate-800">
                     <div>
                         <label class="block text-sm font-bold font-mono text-purple-400 mb-3 uppercase tracking-wider">
-                            4. Tarjeta Madre
+                            4. Tarjeta Madre (Placa Base)
                         </label>
                         <select id="select-mobo" class="w-full bg-slate-900 border border-slate-700 text-slate-100 rounded-xl p-3.5 focus:border-purple-500 focus:outline-none font-medium">
-                            <option value="b660">Placa Base Comercial Micro-ATX (B660 / B760)</option>
-                            <option value="z490">Placa Base Profesional ATX (ASUS Z490 / Z590 / Z790)</option>
-                            <option value="x670">Placa Base Entusiasta Extreme (X670E / Z890)</option>
+                            <!-- Generado dinámicamente -->
                         </select>
                     </div>
                     <div>
                         <label class="block text-sm font-bold font-mono text-pink-400 mb-3 uppercase tracking-wider">
-                            5. Procesador (CPU) & Enfriamiento
+                            5. Procesador (CPU Intel / AMD) & Enfriamiento
                         </label>
                         <select id="select-cpu" class="w-full bg-slate-900 border border-slate-700 text-slate-100 rounded-xl p-3.5 focus:border-pink-500 focus:outline-none font-medium">
-                            <option value="i3">Intel Core i3 / i5 12ª Gen + Disipador Torre</option>
-                            <option value="i7">Intel Core i7 13ª/14ª Gen + Enfriamiento Líquido 240mm</option>
-                            <option value="i9">Intel Core i9 / Core Ultra 9 + Liquido 360mm Extreme</option>
+                            <!-- Generado dinámicamente -->
                         </select>
                     </div>
                 </div>
 
-                <!-- PASO 5: MEMORIA & ALMACENAMIENTO -->
+                <!-- PASO 5: MEMORIA & ALMACENAMIENTO EXACTOS -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 pb-8 border-b border-slate-800">
                     <div>
                         <label class="block text-sm font-bold font-mono text-cyan-400 mb-3 uppercase tracking-wider">
-                            6. Memoria RAM
+                            6. Memoria RAM (Frecuencias Corregidas)
                         </label>
                         <select id="select-ram" class="w-full bg-slate-900 border border-slate-700 text-slate-100 rounded-xl p-3.5 focus:border-cyan-500 focus:outline-none font-medium">
-                            <option value="8gb">8GB DDR4 3200MHz (Básico Oficina)</option>
-                            <option value="16gb" selected>16GB DDR4 / DDR5 Dual Channel</option>
-                            <option value="32gb">32GB DDR5 6000MHz High Speed</option>
-                            <option value="64gb">64GB / 128GB DDR5 Pro Workstation</option>
+                            <!-- Generado dinámicamente -->
                         </select>
                     </div>
                     <div>
                         <label class="block text-sm font-bold font-mono text-amber-400 mb-3 uppercase tracking-wider">
-                            7. Almacenamiento SSD
+                            7. Almacenamiento SSD NVMe
                         </label>
                         <select id="select-ssd" class="w-full bg-slate-900 border border-slate-700 text-slate-100 rounded-xl p-3.5 focus:border-amber-500 focus:outline-none font-medium">
-                            <option value="512gb">SSD NVMe 512GB (Rápido)</option>
-                            <option value="1tb" selected>SSD NVMe 1TB PCIe 4.0</option>
-                            <option value="2tb">SSD NVMe 2TB PCIe 5.0 High Speed</option>
+                            <!-- Generado dinámicamente -->
                         </select>
                     </div>
                 </div>
 
-                <!-- PASO 6: TARJETA DE VIDEO -->
+                <!-- PASO 6: TARJETA DE VIDEO (GPU) -->
                 <div class="mb-8 pb-8 border-b border-slate-800">
                     <label class="block text-sm font-bold font-mono text-indigo-400 mb-3 uppercase tracking-wider">
                         8. Tarjeta de Video (GPU)
@@ -425,7 +412,7 @@
                 </div>
 
                 <!-- BOTÓN DE COBRO Y PRESUPUESTO -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
                     <div>
                         <h4 class="font-bold text-white text-lg">¿Listo con tu presupuesto de PC completa?</h4>
                         <p class="text-slate-400 text-sm">Nos adecuamos a tu presupuesto. Puedes solicitar tu orden o realizar tu pago seguro directo en línea.</p>
@@ -453,38 +440,38 @@
             <p class="text-slate-400 max-w-2xl mx-auto mb-8">Si solo buscas un componente individual (RAM, SSD, bocinas, cámaras, micro SD, monitores), utiliza nuestro buscador de oportunidades:</p>
             
             <div class="max-w-2xl mx-auto relative mb-12">
-                <input id="boutique-search-input" type="text" placeholder="Escribe lo que buscas: DDR3, DDR4, DDR5, SSD M.2, Monitor, Teclado, Cámara, USB..." onkeyup="filtrarRefacciones()" class="w-full bg-slate-900 border-2 border-pink-500/50 rounded-2xl pl-12 pr-28 py-3.5 text-sm text-slate-100 focus:outline-none focus:border-pink-400 shadow-xl font-medium">
+                <input id="boutique-search-input" type="text" placeholder="Escribe lo que buscas: DDR3, DDR4, DDR5 8000, SSD M.2 PCIe 5.0, Monitor, Teclado, Cámara, USB..." onkeyup="filtrarRefacciones()" class="w-full bg-slate-900 border-2 border-pink-500/50 rounded-2xl pl-12 pr-28 py-3.5 text-sm text-slate-100 focus:outline-none focus:border-pink-400 shadow-xl font-medium">
                 <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-pink-400 text-lg"></i>
                 <button onclick="filtrarRefacciones()" class="absolute right-2 top-2 bg-pink-600 hover:bg-pink-500 text-white px-5 py-2 rounded-xl text-xs font-bold transition">Buscar</button>
             </div>
         </div>
 
         <div id="contenedor-refacciones" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-pink-500/50 transition" data-tags="ddr3 ddr4 ddr5 ram memoria laptop escritorio">
+            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-pink-500/50 transition" data-tags="ddr3 ddr4 ddr5 8000 ram memoria laptop escritorio">
                 <i class="fa-solid fa-memory text-3xl text-pink-400 mb-4 block"></i>
-                <h3 class="font-bold text-white mb-2">Memorias RAM (DDR3 / DDR4 / DDR5)</h3>
-                <p class="text-xs text-slate-400 mb-4">Módulos para Laptop y PC de escritorio. Oportunidades en kits Dual Channel.</p>
+                <h3 class="font-bold text-white mb-2">Memorias RAM (DDR3 / DDR4 / DDR5 8000+)</h3>
+                <p class="text-xs text-slate-400 mb-4">Módulos para Laptop y PC de escritorio. Oportunidades en kits Dual Channel de alta frecuencia.</p>
                 <button onclick="abrirChatbotConMensaje('Hola, busco una oferta de Memoria RAM (DDR3, DDR4 o DDR5).')" class="text-xs bg-slate-800 hover:bg-slate-700 text-pink-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Buscar Oportunidad</button>
             </div>
 
-            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-blue-500/50 transition" data-tags="ssd m2 nvme disco duro mecanico almacenamiento usb micro sd">
+            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-blue-500/50 transition" data-tags="ssd m2 nvme pcie 5.0 disco duro mecanico almacenamiento usb micro sd">
                 <i class="fa-solid fa-hard-drive text-3xl text-blue-400 mb-4 block"></i>
-                <h3 class="font-bold text-white mb-2">SSD M.2, USB & Micro SD</h3>
-                <p class="text-xs text-slate-400 mb-4">Almacenamiento ultra veloz PCIe 4.0/5.0, discos mecánicos y tarjetas SD.</p>
+                <h3 class="font-bold text-white mb-2">SSD M.2 PCIe 5.0 & Discos Mecánicos</h3>
+                <p class="text-xs text-slate-400 mb-4">Almacenamiento ultra veloz PCIe 4.0/5.0 (12,000 MB/s), discos externos y memorias SD.</p>
                 <button onclick="abrirChatbotConMensaje('Hola, busco cotizar un SSD M.2, Disco Mecánico o Memoria SD.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-blue-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Buscar Oportunidad</button>
             </div>
 
             <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-purple-500/50 transition" data-tags="monitor teclado mouse pad bocinas camara camara web microfono">
                 <i class="fa-solid fa-desktop text-3xl text-purple-400 mb-4 block"></i>
                 <h3 class="font-bold text-white mb-2">Monitores, Periféricos & Audio</h3>
-                <p class="text-xs text-slate-400 mb-4">Monitores, teclados, ratones, bocinas, cámaras web y micrófonos para streaming.</p>
+                <p class="text-xs text-slate-400 mb-4">Monitores 144Hz/240Hz, teclados mecánicos, ratones, bocinas y cámaras web 4K.</p>
                 <button onclick="abrirChatbotConMensaje('Hola, busco cotizar un monitor, periféricos o cámaras web.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-purple-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Buscar Periféricos</button>
             </div>
 
-            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-emerald-500/50 transition" data-tags="intel amd procesador gabinete fuente cooling liquido enfriamiento">
+            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-emerald-500/50 transition" data-tags="intel ultra amd ryzen 9000 procesador gabinete hyte lian li fuente cooling liquido">
                 <i class="fa-solid fa-microchip text-3xl text-emerald-400 mb-4 block"></i>
-                <h3 class="font-bold text-white mb-2">Procesadores & Gabinetes</h3>
-                <p class="text-xs text-slate-400 mb-4">Enlaces directos y oportunidades en procesadores Intel / AMD y gabinetes.</p>
+                <h3 class="font-bold text-white mb-2">Procesadores & Gabinetes de Autor</h3>
+                <p class="text-xs text-slate-400 mb-4">Enlaces directos a procesadores Intel Core Ultra, Ryzen 9000 y chasís Lian Li / HYTE.</p>
                 <button onclick="abrirChatbotConMensaje('Hola, busco cotizar un procesador o gabinete suelto.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-emerald-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Ver Opciones Intel/AMD</button>
             </div>
         </div>
@@ -504,7 +491,7 @@
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Sustitución Directa</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">
-                    Si un component-e falla, cambiamos el módulo completo por una pieza probada para que tu equipo vuelva a trabajar de inmediato.
+                    Si un componente falla, cambiamos el módulo completo por una pieza probada para que tu equipo vuelva a trabajar de inmediato.
                 </p>
             </div>
 
@@ -722,47 +709,140 @@
             });
         }
 
-        // LÓGICA DE COBRO SEGURO TOKENIZADO (SAQ-A)
         function ejecutarPagoSeguro() {
             const nivel = document.getElementById('select-nivel-filtro').selectedOptions[0].text;
             abrirChatbotConMensaje(`Deseo realizar el pago seguro en línea para el ensamble: ${nivel}`);
         }
 
-        // CONTROLES DE NIVEL Y FILTRO DE GPU Y FUENTE
+        // MATRIZ DINÁMICA DE HARDWARE DE ÚLTIMA GENERACIÓN (SIN REDUNDANCIAS NI MODELOS OBSOLETOS)
         function actualizarPrefiltroNivel() {
             const nivel = document.getElementById('select-nivel-filtro').value;
-            const gpuSelect = document.getElementById('select-gpu');
+            const gabineteSelect = document.getElementById('select-gabinete');
             const psuSelect = document.getElementById('select-psu');
-            
+            const moboSelect = document.getElementById('select-mobo');
+            const cpuSelect = document.getElementById('select-cpu');
+            const ramSelect = document.getElementById('select-ram');
+            const ssdSelect = document.getElementById('select-ssd');
+            const gpuSelect = document.getElementById('select-gpu');
+
             if (nivel === '5') {
-                psuSelect.innerHTML = `<option value="500w">Fuente 500W Certificada Standard</option>`;
-                gpuSelect.innerHTML = `
-                    <option value="integrated" selected>Gráficos Integrados de Eficiencia (Oficina / Casa)</option>
-                    <option value="gtx1650">Nvidia GTX 1650 / RX 6400 (Entrada Básica)</option>
+                gabineteSelect.innerHTML = `
+                    <option value="compact">Gabinete Slim / Micro-ATX Oficina (Flujo Básico)</option>
+                    <option value="mid" selected>Gabinete Mid-Tower Mesh Standard (Flujo Medio)</option>
                 `;
-            } else if (nivel === '4') {
-                psuSelect.innerHTML = `<option value="600w">Fuente 600W 80+ Bronze</option>`;
-                gpuSelect.innerHTML = `
-                    <option value="rtx3050">Nvidia RTX 3050 (Entrada Gaming / Diseño)</option>
-                    <option value="rtx3060" selected>Nvidia RTX 3060 / RTX 4060 8GB (Productividad)</option>
+                psuSelect.innerHTML = `<option value="500w">Fuente 500W Certificada Standard 80+</option>`;
+                moboSelect.innerHTML = `
+                    <option value="h610">Placa Base Intel H610M Micro-ATX</option>
+                    <option value="a520">Placa Base AMD A520M Micro-ATX</option>
                 `;
-            } else if (nivel === '3') {
-                psuSelect.innerHTML = `<option value="750w">Fuente 750W 80+ Gold</option>`;
-                gpuSelect.innerHTML = `
-                    <option value="rtx4060ti">Nvidia RTX 4060 Ti 16GB (Multitarea Ruda)</option>
-                    <option value="rtx4070" selected>Nvidia RTX 4070 Super / 4070 Ti (CAD 3D / Render)</option>
+                cpuSelect.innerHTML = `
+                    <option value="i3-12100">Intel Core i3-12100 / i3-13100 + Disipador Stock</option>
+                    <option value="ryzen-3200g">AMD Ryzen 3 3200G / 4300G con Vega Graphics</option>
                 `;
-            } else if (nivel === '2') {
-                psuSelect.innerHTML = `<option value="850w">Fuente 850W 80+ Gold Modular</option>`;
-                gpuSelect.innerHTML = `
-                    <option value="rtx4070ti">Nvidia RTX 4070 Ti Super 16GB (Producción Pro)</option>
-                    <option value="rtx4080" selected>Nvidia RTX 4080 Super 16GB (Entusiasta Extreme)</option>
+                ramSelect.innerHTML = `
+                    <option value="8gb-ddr4">8GB DDR4 2666MHz Single Channel</option>
+                    <option value="16gb-ddr4" selected>16GB DDR4 3200MHz Dual Channel</option>
                 `;
-            } else if (nivel === '1') {
-                psuSelect.innerHTML = `<option value="1000w">Fuente 1000W - 1200W 80+ Gold / Platinum ATX 3.0</option>`;
+                ssdSelect.innerHTML = `
+                    <option value="256gb-sata">SSD SATA III 256GB / 512GB</option>
+                    <option value="512gb-nvme" selected>SSD NVMe M.2 512GB (Rápido)</option>
+                `;
                 gpuSelect.innerHTML = `
-                    <option value="rtx5090" selected>Nvidia GeForce RTX 5090 32GB (Topping Extreme 2026 / IA)</option>
-                    <option value="enterprise">Solución Corporativa Multi-GPU / Servidores IA (Bajo Cotización)</option>
+                    <option value="integrated" selected>Gráficos Integrados de Eficiencia (Intel UHD / AMD Vega)</option>
+                    <option value="gtx1650">Nvidia GeForce GTX 1650 4GB (Entrada Multimedia)</option>
+                `;
+            } 
+            else if (nivel === '4') {
+                gabineteSelect.innerHTML = `<option value="mid">Gabinete Mid-Tower ATX Flujo de Aire (Ventiladores Mesh)</option>`;
+                psuSelect.innerHTML = `<option value="650w">Fuente 600W - 650W 80+ Bronze Certificada</option>`;
+                moboSelect.innerHTML = `
+                    <option value="b760">Placa Base Intel B760M Dual M.2 PCIe 4.0</option>
+                    <option value="b550">Placa Base AMD B550M DDR4 High Speed</option>
+                `;
+                cpuSelect.innerHTML = `
+                    <option value="i5-12400f">Intel Core i5-12400F / i5-13400F + Disipador Torre Air</option>
+                    <option value="ryzen-5600">AMD Ryzen 5 5600X / 5600G 6 Núcleos</option>
+                `;
+                ramSelect.innerHTML = `
+                    <option value="16gb-ddr4-3200" selected>16GB DDR4 3200MHz Dual Channel (2x8GB)</option>
+                    <option value="32gb-ddr4-3200">32GB DDR4 3200MHz Dual Channel (2x16GB)</option>
+                `;
+                ssdSelect.innerHTML = `
+                    <option value="1tb-nvme-pci4" selected>SSD NVMe M.2 1TB PCIe 4.0 (3,500 MB/s)</option>
+                `;
+                gpuSelect.innerHTML = `
+                    <option value="rtx3050">Nvidia GeForce RTX 3050 8GB GDDR6</option>
+                    <option value="rtx4060" selected>Nvidia GeForce RTX 4060 8GB GDDR6 (DLSS 3)</option>
+                `;
+            } 
+            else if (nivel === '3') {
+                gabineteSelect.innerHTML = `<option value="mid-premium">Gabinete Corsair / Cougar Mid-Tower Cristal Templado & ARGB</option>`;
+                psuSelect.innerHTML = `<option value="750w">Fuente 750W 80+ Gold Modular ATX 3.0</option>`;
+                moboSelect.innerHTML = `
+                    <option value="b760-ddr5">Placa Base Intel B760 DDR5 Wi-Fi 6E</option>
+                    <option value="b650-am5">Placa Base AMD B650 AM5 DDR5 PCIe 5.0 Ready</option>
+                `;
+                cpuSelect.innerHTML = `
+                    <option value="i7-13700f">Intel Core i7-13700F / i7-14700F + Liquido 240mm AIO</option>
+                    <option value="ryzen-7700x">AMD Ryzen 7 7700X / 7800X3D 8 Núcleos AM5</option>
+                `;
+                ramSelect.innerHTML = `
+                    <option value="32gb-ddr5-5600" selected>32GB DDR5 5600MHz Dual Channel (2x16GB)</option>
+                `;
+                ssdSelect.innerHTML = `
+                    <option value="1tb-nvme-pci4-fast" selected>SSD NVMe M.2 1TB PCIe 4.0 (7,000 MB/s High Speed)</option>
+                    <option value="2tb-nvme-pci4">SSD NVMe M.2 2TB PCIe 4.0 Ultra Speed</option>
+                `;
+                gpuSelect.innerHTML = `
+                    <option value="rtx4060ti">Nvidia GeForce RTX 4060 Ti 16GB GDDR6</option>
+                    <option value="rtx4070super" selected>Nvidia GeForce RTX 4070 Super 12GB GDDR6X</option>
+                `;
+            } 
+            else if (nivel === '2') {
+                gabineteSelect.innerHTML = `<option value="hyte-y60">Gabinete HYTE Y60 / Lian Li O11 Dynamic Panorama RGB</option>`;
+                psuSelect.innerHTML = `<option value="850w">Fuente 850W 80+ Gold Full Modular ATX 3.0 (PCIe 5.0 Cable)</option>`;
+                moboSelect.innerHTML = `
+                    <option value="z790-pro">Placa Base ASUS / MSI Z790 DDR5 Wi-Fi 7</option>
+                    <option value="x670-am5">Placa Base AMD X670E AM5 Extreme DDR5</option>
+                `;
+                cpuSelect.innerHTML = `
+                    <option value="ultra-7">Intel Core Ultra 7 265K / i9-14900KF + Enfriamiento 360mm AIO</option>
+                    <option value="ryzen-9900x">AMD Ryzen 9 9900X / 9900X3D AM5 Next-Gen</option>
+                `;
+                ramSelect.innerHTML = `
+                    <option value="32gb-ddr5-6400" selected>32GB DDR5 6400MHz XMP/EXPO (2x16GB)</option>
+                    <option value="64gb-ddr5-6400">64GB DDR5 6400MHz Dual Channel (2x32GB)</option>
+                `;
+                ssdSelect.innerHTML = `
+                    <option value="2tb-nvme-pci4-pro" selected>SSD NVMe M.2 2TB PCIe 4.0 Pro (7,400 MB/s)</option>
+                `;
+                gpuSelect.innerHTML = `
+                    <option value="rtx4070tisuper">Nvidia GeForce RTX 4070 Ti Super 16GB GDDR6X</option>
+                    <option value="rtx4080super" selected>Nvidia GeForce RTX 4080 Super 16GB GDDR6X</option>
+                `;
+            } 
+            else if (nivel === '1') {
+                gabineteSelect.innerHTML = `<option value="custom-frame">Chasis Custom Frame Lian Li / HYTE Y70 Touch Screen XL</option>`;
+                psuSelect.innerHTML = `<option value="1200w">Fuente 1000W - 1200W 80+ Platinum / Titanium ATX 3.1 Native</option>`;
+                moboSelect.innerHTML = `
+                    <option value="z890-extreme" selected>Placa Base Intel Z890 ROG Maximus / MEG DDR5 Extreme</option>
+                    <option value="x870e-extreme">Placa Base AMD X870E Taichi / AORUS Master PCIe 5.0</option>
+                `;
+                cpuSelect.innerHTML = `
+                    <option value="ultra-9-285k" selected>Intel Core Ultra 9 285K / i9-14900KS + Enfriamiento Custom / 420mm AIO</option>
+                    <option value="ryzen-9950x">AMD Ryzen 9 9950X 16 Núcleos / 32 Hilos Extreme</option>
+                `;
+                ramSelect.innerHTML = `
+                    <option value="64gb-ddr5-8000" selected>64GB DDR5 8000MHz+ Hi-Overclock XMP (2x32GB)</option>
+                    <option value="128gb-ddr5-8000">128GB DDR5 8000MHz Custom Quad Kit Workstation</option>
+                `;
+                ssdSelect.innerHTML = `
+                    <option value="2tb-nvme-pci5" selected>SSD NVMe M.2 2TB PCIe 5.0 Extreme (12,400 MB/s)</option>
+                    <option value="4tb-nvme-pci5">SSD NVMe M.2 4TB PCIe 5.0 Extreme Gen5</option>
+                `;
+                gpuSelect.innerHTML = `
+                    <option value="rtx5090" selected>Nvidia GeForce RTX 5090 32GB GDDR7 (Topping Extreme 2026)</option>
+                    <option value="enterprise">Solución Corporativa Multi-GPU / Cluster Servidor IA (Bajo Cotización)</option>
                 `;
             }
             validarCompatibilidad();
