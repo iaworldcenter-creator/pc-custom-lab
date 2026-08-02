@@ -714,7 +714,7 @@
             abrirChatbotConMensaje(`Deseo realizar el pago seguro en línea para el ensamble: ${nivel}`);
         }
 
-        // MATRIZ DINÁMICA DE HARDWARE DE ÚLTIMA GENERACIÓN (SIN REDUNDANCIAS NI MODELOS OBSOLETOS)
+        // MÓDULO CORREGIDO: MATRIZ DE HARDWARE DE ÚLTIMA GENERACIÓN SIN REDUNDANCIAS
         function actualizarPrefiltroNivel() {
             const nivel = document.getElementById('select-nivel-filtro').value;
             const gabineteSelect = document.getElementById('select-gabinete');
@@ -726,10 +726,7 @@
             const gpuSelect = document.getElementById('select-gpu');
 
             if (nivel === '5') {
-                gabineteSelect.innerHTML = `
-                    <option value="compact">Gabinete Slim / Micro-ATX Oficina (Flujo Básico)</option>
-                    <option value="mid" selected>Gabinete Mid-Tower Mesh Standard (Flujo Medio)</option>
-                `;
+                gabineteSelect.innerHTML = `<option value="compact">Gabinete Slim / Micro-ATX Oficina</option>`;
                 psuSelect.innerHTML = `<option value="500w">Fuente 500W Certificada Standard 80+</option>`;
                 moboSelect.innerHTML = `
                     <option value="h610">Placa Base Intel H610M Micro-ATX</option>
@@ -741,11 +738,11 @@
                 `;
                 ramSelect.innerHTML = `
                     <option value="8gb-ddr4">8GB DDR4 2666MHz Single Channel</option>
-                    <option value="16gb-ddr4" selected>16GB DDR4 3200MHz Dual Channel</option>
+                    <option value="16gb-ddr4">16GB DDR4 3200MHz Dual Channel</option>
                 `;
                 ssdSelect.innerHTML = `
                     <option value="256gb-sata">SSD SATA III 256GB / 512GB</option>
-                    <option value="512gb-nvme" selected>SSD NVMe M.2 512GB (Rápido)</option>
+                    <option value="512gb-nvme">SSD NVMe M.2 512GB (Rápido)</option>
                 `;
                 gpuSelect.innerHTML = `
                     <option value="integrated" selected>Gráficos Integrados de Eficiencia (Intel UHD / AMD Vega)</option>
