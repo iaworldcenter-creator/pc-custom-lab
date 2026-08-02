@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC Custom Lab | Ensamble, Reparación & Cotizador</title>
+    <title>PC Custom Lab | Ensamble, Reparación & Equipos Guadalajara</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -14,20 +14,14 @@
         .gradient-card-2 { background: linear-gradient(145deg, #1e1b4b, #0f172a); border: 1px solid #4338ca; }
         .gradient-card-amber { background: linear-gradient(145deg, #451a03, #18181b); border: 1px solid #f59e0b; }
         
-        #mobile-menu {
-            transition: transform 0.3s ease-in-out;
-        }
-        .menu-closed {
-            transform: translateX(100%);
-        }
-        .menu-open {
-            transform: translateX(0);
-        }
+        #mobile-menu { transition: transform 0.3s ease-in-out; }
+        .menu-closed { transform: translateX(100%); }
+        .menu-open { transform: translateX(0); }
 
+        #chatbot-window { height: 500px; max-height: 85vh; }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0f172a; }
         ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #475569; }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden">
@@ -50,13 +44,13 @@
                 <a href="#niveles" class="hover:text-blue-400 transition flex items-center gap-2"><i class="fa-solid fa-layer-group text-blue-500"></i> Niveles</a>
                 <a href="#cotizador" class="hover:text-indigo-400 transition flex items-center gap-2"><i class="fa-solid fa-sliders text-indigo-500"></i> Arma tu PC</a>
                 <a href="#servicios" class="hover:text-purple-400 transition flex items-center gap-2"><i class="fa-solid fa-wrench text-purple-500"></i> Servicios</a>
+                <a href="#garantias" class="hover:text-emerald-400 transition flex items-center gap-2"><i class="fa-solid fa-shield-halved text-emerald-500"></i> Garantías</a>
                 <a href="#contacto" class="hover:text-amber-400 transition flex items-center gap-2"><i class="fa-solid fa-phone text-amber-500"></i> Contacto</a>
-                <a href="#contacto" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2.5 rounded-xl shadow-lg shadow-blue-600/30 transition font-bold">
-                    Solicitar Diagnóstico
-                </a>
+                <button onclick="abrirChatbotConMensaje('Hola, me gustaría solicitar un diagnóstico personalizado para mi equipo.')" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2.5 rounded-xl shadow-lg shadow-blue-600/30 transition font-bold">
+                    Diagnóstico
+                </button>
             </div>
 
-            <!-- Mobile Hamburger Button -->
             <button id="menu-btn" class="md:hidden text-2xl text-slate-300 hover:text-white focus:outline-none p-2">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -81,56 +75,85 @@
                     <i class="fa-solid fa-sliders text-indigo-400 w-6"></i> Cotizador "Arma tu PC"
                 </a>
                 <a href="#servicios" class="mobile-link py-3 px-4 rounded-xl hover:bg-slate-800 text-slate-200 flex items-center gap-3">
-                    <i class="fa-solid fa-wrench text-purple-400 w-6"></i> Mantenimiento & Reparación
+                    <i class="fa-solid fa-wrench text-purple-400 w-6"></i> Servicios Técnicos
+                </a>
+                <a href="#garantias" class="mobile-link py-3 px-4 rounded-xl hover:bg-slate-800 text-slate-200 flex items-center gap-3">
+                    <i class="fa-solid fa-shield-halved text-emerald-400 w-6"></i> Políticas y Garantía
                 </a>
                 <a href="#contacto" class="mobile-link py-3 px-4 rounded-xl hover:bg-slate-800 text-slate-200 flex items-center gap-3">
-                    <i class="fa-solid fa-phone text-amber-400 w-6"></i> Atención Directa
+                    <i class="fa-solid fa-phone text-amber-400 w-6"></i> Ubicación y Contacto
                 </a>
             </div>
         </div>
 
         <div class="border-t border-slate-800 pt-6 space-y-3">
-            <div class="text-xs text-slate-400 font-mono uppercase tracking-wider">Contacto Rápido</div>
-            <a href="#contacto" class="flex items-center gap-3 text-sm text-slate-300 hover:text-white">
-                <i class="fa-solid fa-phone text-blue-400"></i> Fijo y Celular Directos
+            <div class="text-xs text-slate-400 font-mono uppercase tracking-wider">Atención en Guadalajara</div>
+            <a href="tel:3336136348" class="flex items-center gap-3 text-sm text-slate-300 hover:text-white">
+                <i class="fa-solid fa-phone text-blue-400"></i> Fijo: (33) 3613-6348
             </a>
-            <a href="https://wa.me/523300000000" target="_blank" class="flex items-center gap-3 text-sm text-emerald-400 font-semibold hover:underline">
-                <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Directo
+            <a href="https://wa.me/523337271440" target="_blank" class="flex items-center gap-3 text-sm text-emerald-400 font-semibold hover:underline">
+                <i class="fa-brands fa-whatsapp text-lg"></i> WA: +52 (33) 3727-1440
             </a>
         </div>
     </div>
 
     <!-- HERO SECTION -->
     <header class="gradient-hero py-20 px-4 sm:px-6 text-center border-b border-slate-800 relative overflow-hidden">
-        <div class="max-w-4xl mx-auto relative z-10">
-            <span class="px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
-                Ensamble Profesional & Servicio Técnico Especializado
-            </span>
+        <div class="max-w-5xl mx-auto relative z-10">
             <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight mb-6 leading-tight">
-                Computadoras a la Medida y <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Reparación Modular</span>
+                Ensamblaje Profesional y Servicio Técnico Especializado<br>
+                <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Computadoras a la Medida</span><br>
+                y Reparación Modular
             </h1>
-            <p class="text-base sm:text-xl text-slate-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
-                Desde estaciones de trabajo de entrada hasta monstruos de rendimiento extremo. Reemplazo directo de módulos con diagnóstico certero y transparencia absoluta.
+            <p class="text-base sm:text-xl text-slate-300 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                Nos adecuamos a tu sueño y lo hacemos realidad dentro de tu presupuesto. Ofrecemos equipos completamente nuevos y reacondicionados certificados con garantía, reemplazo directo de módulos y seguimiento técnico continuo.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#cotizador" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-blue-600/30 transition text-lg flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-gears"></i> Ir al Cotizador Interactivo
-                </a>
-                <a href="#contacto" class="bg-slate-800/80 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold px-8 py-4 rounded-xl transition text-lg flex items-center justify-center gap-3">
+                <button onclick="abrirChatbotConMensaje('Hola, deseo iniciar una cotización inmediata para armar mi equipo.')" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-blue-600/30 transition text-lg flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-comments text-xl"></i> Cotización Inmediata
+                </button>
+                <button onclick="abrirChatbotConMensaje('Hola, me gustaría hablar con un asesor para consultar sobre un proyecto o equipo.')" class="bg-slate-800/80 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold px-8 py-4 rounded-xl transition text-lg flex items-center justify-center gap-3">
                     <i class="fa-solid fa-headset text-amber-400"></i> Contactar a un Asesor
-                </a>
+                </button>
             </div>
         </div>
     </header>
 
+    <!-- BANNER DE CAPTURA DE LEADS (30% DESCUENTO EN MANTENIMIENTO) -->
+    <section class="py-12 bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950 border-b border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="bg-slate-900/90 border border-blue-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="text-left max-w-xl">
+                    <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 font-mono text-xs uppercase font-bold mb-3 inline-block">
+                        🎁 Beneficio Exclusivo de Comunidad
+                    </span>
+                    <h3 class="text-2xl font-black text-white mb-2">30% de Descuento en tu Próximo Mantenimiento</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Regístrate para recibir nuestro programa de seguimiento preventivo. Al comprar un equipo o registrar el tuyo, obtienes descuentos continuos e incentivos de actualización a cuenta.
+                    </p>
+                </div>
+                <form id="form-lead" onsubmit="guardarLead(event)" class="w-full md:w-auto flex flex-col sm:flex-row gap-3">
+                    <input type="email" id="lead-email" placeholder="Tu Correo Electrónico" required class="bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
+                    <input type="tel" id="lead-phone" placeholder="Tu WhatsApp / Teléfono" required class="bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition whitespace-nowrap">
+                        Obtener Mi 30%
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- NIVELES DE EQUIPOS -->
     <section id="niveles" class="py-20 max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight mb-3">Niveles de Rendimiento (Estándar 2026)</h2>
-            <p class="text-slate-400 max-w-2xl mx-auto">Selecciona el nivel que mejor se adapta a tus necesidades operativas o presupuesto.</p>
+            <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">Niveles de Rendimiento Estándar</h2>
+            <p class="text-lg text-indigo-300 font-medium max-w-3xl mx-auto">
+                Nos adaptamos a tu sueño y a tu presupuesto para hacerlo realidad. Nos adecuamos a lo que necesitas con opciones en componentes Nuevos de fábrica o Reacondicionados Certificados.
+            </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Nivel 5 -->
             <div class="gradient-card-1 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-500 transition shadow-xl">
                 <div>
                     <div class="flex justify-between items-center mb-4">
@@ -147,10 +170,11 @@
                 </div>
                 <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
                     <span class="text-xs text-slate-400 font-mono">Uso General</span>
-                    <a href="#cotizador" onclick="seleccionarNivel('5')" class="text-blue-400 hover:text-blue-300 text-sm font-bold flex items-center gap-1">Configurar <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                    <button onclick="abrirCotizadorConNivel('5')" class="text-blue-400 hover:text-blue-300 text-sm font-bold flex items-center gap-1">Configurar <i class="fa-solid fa-arrow-right text-xs"></i></button>
                 </div>
             </div>
 
+            <!-- Nivel 4 -->
             <div class="gradient-card-2 rounded-2xl p-6 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl relative overflow-hidden">
                 <div>
                     <div class="flex justify-between items-center mb-4">
@@ -167,10 +191,11 @@
                 </div>
                 <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
                     <span class="text-xs text-slate-400 font-mono">Balance / Trabajo</span>
-                    <a href="#cotizador" onclick="seleccionarNivel('4')" class="text-indigo-400 hover:text-indigo-300 text-sm font-bold flex items-center gap-1">Configurar <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                    <button onclick="abrirCotizadorConNivel('4')" class="text-indigo-400 hover:text-indigo-300 text-sm font-bold flex items-center gap-1">Configurar <i class="fa-solid fa-arrow-right text-xs"></i></button>
                 </div>
             </div>
 
+            <!-- Nivel 3 -->
             <div class="gradient-card-1 rounded-2xl p-6 flex flex-col justify-between hover:border-purple-500 transition shadow-xl">
                 <div>
                     <div class="flex justify-between items-center mb-4">
@@ -187,10 +212,11 @@
                 </div>
                 <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
                     <span class="text-xs text-slate-400 font-mono">Alto Rendimiento</span>
-                    <a href="#cotizador" onclick="seleccionarNivel('3')" class="text-purple-400 hover:text-purple-300 text-sm font-bold flex items-center gap-1">Configurar <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                    <button onclick="abrirCotizadorConNivel('3')" class="text-purple-400 hover:text-purple-300 text-sm font-bold flex items-center gap-1">Configurar <i class="fa-solid fa-arrow-right text-xs"></i></button>
                 </div>
             </div>
 
+            <!-- Nivel 2 -->
             <div class="gradient-card-1 rounded-2xl p-6 flex flex-col justify-between hover:border-pink-500 transition shadow-xl">
                 <div>
                     <div class="flex justify-between items-center mb-4">
@@ -207,10 +233,11 @@
                 </div>
                 <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
                     <span class="text-xs text-slate-400 font-mono">Pro / IA</span>
-                    <a href="#cotizador" onclick="seleccionarNivel('2')" class="text-pink-400 hover:text-pink-300 text-sm font-bold flex items-center gap-1">Configurar <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                    <button onclick="abrirCotizadorConNivel('2')" class="text-pink-400 hover:text-pink-300 text-sm font-bold flex items-center gap-1">Configurar <i class="fa-solid fa-arrow-right text-xs"></i></button>
                 </div>
             </div>
 
+            <!-- Nivel 1 -->
             <div class="gradient-card-amber rounded-2xl p-6 flex flex-col justify-between hover:border-amber-400 transition shadow-2xl col-span-1 md:col-span-2 lg:col-span-2">
                 <div>
                     <div class="flex justify-between items-center mb-4">
@@ -228,23 +255,23 @@
                 </div>
                 <div class="pt-4 border-t border-amber-900/50 flex justify-between items-center">
                     <span class="text-xs text-amber-300/80 font-mono">Máxima Potencia</span>
-                    <a href="#cotizador" onclick="seleccionarNivel('1')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-5 py-2 rounded-xl text-sm font-bold flex items-center gap-2 transition">
+                    <button onclick="abrirCotizadorConNivel('1')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-5 py-2 rounded-xl text-sm font-bold flex items-center gap-2 transition">
                         Configurar Extreme <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COTIZADOR INTERACTIVO CON VALIDACIÓN DE COMPATIBILIDAD FLUIDA -->
+    <!-- COTIZADOR / ARMA TU EQUIPO CON PREFILTRO DE SEGURIDAD COMERCIAL -->
     <section id="cotizador" class="py-20 bg-slate-900/80 border-y border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-12">
                 <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 font-mono text-xs uppercase tracking-widest inline-block mb-3">
-                    Configurador Inteligente
+                    Configurador Guiado con Filtro de Compatibilidad
                 </span>
                 <h2 class="text-3xl sm:text-4xl font-black text-white">Arma tu Propio Equipo</h2>
-                <p class="text-slate-400 mt-2">Selecciona tus componentes. El sistema sugerirá gabinetes y fuentes ajustadas al tamaño de tu tarjeta de video y consumo.</p>
+                <p class="text-slate-400 mt-2">Elige primero tu Nivel de rendimiento deseado. El sistema filtrará únicamente los componentes compatibles para evitar errores de alimentación o espacio.</p>
             </div>
 
             <div id="alert-compatibilidad" class="hidden mb-6 p-4 rounded-xl bg-amber-500/10 border border-amber-500/40 text-amber-300 text-sm flex items-start gap-3">
@@ -253,9 +280,25 @@
             </div>
 
             <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl">
+                
+                <!-- PASO 0: PREFILTRO OBLIGATORIO DE NIVEL -->
+                <div class="mb-8 pb-8 border-b border-slate-800">
+                    <label class="block text-sm font-bold font-mono text-amber-400 mb-3 uppercase tracking-wider">
+                        PASO 1: Selecciona el Nivel de Rendimiento Deseado
+                    </label>
+                    <select id="select-nivel-filtro" onchange="actualizarPrefiltroNivel()" class="w-full bg-slate-900 border border-amber-500/50 text-amber-200 rounded-xl p-3.5 focus:border-amber-400 focus:outline-none font-bold">
+                        <option value="5" selected>Nivel 5 — Entrada / Trabajo / Oficina (Eficiencia sin excesos)</option>
+                        <option value="4">Nivel 4 — Gama Media Moderna (Productividad & Juegos Ligeros)</option>
+                        <option value="3">Nivel 3 — Gama Alta / Renderizado / CAD / Multitarea Pesada</option>
+                        <option value="2">Nivel 2 — Categoría Entusiasta / Producción Pro / IA Local</option>
+                        <option value="1">Nivel 1 — TOPPING ABSOLUTO (Estaciones Extreme y Máxima Potencia)</option>
+                    </select>
+                </div>
+
+                <!-- PASO 1: GABINETE -->
                 <div class="mb-8 pb-8 border-b border-slate-800">
                     <label class="block text-sm font-bold font-mono text-blue-400 mb-3 uppercase tracking-wider">
-                        1. Selecciona el Gabinete (Chasis)
+                        2. Selecciona el Gabinete (Chasis)
                     </label>
                     <select id="select-gabinete" onchange="validarCompatibilidad()" class="w-full bg-slate-900 border border-slate-700 text-slate-100 rounded-xl p-3.5 focus:border-blue-500 focus:outline-none font-medium">
                         <option value="compact">Gabinete Compacto / Mini-ITX (Ideal espacio reducido - GPUs max 240mm)</option>
@@ -264,22 +307,21 @@
                     </select>
                 </div>
 
+                <!-- PASO 2: TARJETA DE VIDEO (FILTRADA POR NIVEL) -->
                 <div class="mb-8 pb-8 border-b border-slate-800">
                     <label class="block text-sm font-bold font-mono text-indigo-400 mb-3 uppercase tracking-wider">
-                        2. Selecciona la Tarjeta de Video (GPU)
+                        3. Selecciona la Tarjeta de Video (GPU)
                     </label>
                     <select id="select-gpu" onchange="validarCompatibilidad()" class="w-full bg-slate-900 border border-slate-700 text-slate-100 rounded-xl p-3.5 focus:border-indigo-500 focus:outline-none font-medium">
-                        <option value="integrated">Gráficos Integrados de Procesador (Uso Oficina / Trabajo Diario)</option>
-                        <option value="rtx3060" selected>Nvidia GeForce RTX 3060 / 4060 (Largo Estándar ~240mm - Fuente 550W+)</option>
-                        <option value="rtx4070">Nvidia GeForce RTX 4070 Super / 4070 Ti (Largo Medio ~280mm - Fuente 650W+)</option>
-                        <option value="rtx4090">Nvidia GeForce RTX 4090 / Serie Extreme (Triple Ventilador ~340mm - Fuente 850W+)</option>
+                        <!-- Opciones dinámicas según nivel -->
                     </select>
                 </div>
 
+                <!-- PASO 3: TARJETA MADRE & PROCESADOR -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 pb-8 border-b border-slate-800">
                     <div>
                         <label class="block text-sm font-bold font-mono text-purple-400 mb-3 uppercase tracking-wider">
-                            3. Tarjeta Madre
+                            4. Tarjeta Madre
                         </label>
                         <select id="select-mobo" class="w-full bg-slate-900 border border-slate-700 text-slate-100 rounded-xl p-3.5 focus:border-purple-500 focus:outline-none font-medium">
                             <option value="b660">Placa Base Comercial Micro-ATX (B660 / B760)</option>
@@ -289,7 +331,7 @@
                     </div>
                     <div>
                         <label class="block text-sm font-bold font-mono text-pink-400 mb-3 uppercase tracking-wider">
-                            4. Procesador (CPU)
+                            5. Procesador (CPU)
                         </label>
                         <select id="select-cpu" class="w-full bg-slate-900 border border-slate-700 text-slate-100 rounded-xl p-3.5 focus:border-pink-500 focus:outline-none font-medium">
                             <option value="i3">Intel Core i3 / i5 12ª Gen (Eficiencia)</option>
@@ -302,10 +344,10 @@
                 <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
                     <div>
                         <h4 class="font-bold text-white text-lg">¿Listo con tu presupuesto preliminar?</h4>
-                        <p class="text-slate-400 text-sm">Envía tu configuración seleccionada para recibir cotización de piezas exactas y tiempo de ensamble.</p>
+                        <p class="text-slate-400 text-sm">Nos adecuamos a tu presupuesto para darte el precio final exacto de tu ensamble.</p>
                     </div>
                     <button onclick="enviarPresupuestoWhatsApp()" class="w-full md:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-600/20 transition flex items-center justify-center gap-2 whitespace-nowrap">
-                        <i class="fa-brands fa-whatsapp text-xl"></i> Solicitar Presupuesto
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Solicitar Presupuesto Directo
                     </button>
                 </div>
             </div>
@@ -352,25 +394,73 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE CONTACTO DIRECTO -->
-    <section id="contacto" class="py-20 bg-slate-900 border-t border-slate-800">
+    <!-- SECCIÓN DE POLÍTICAS, GARANTÍAS Y MARCO LEGAL -->
+    <section id="garantias" class="py-20 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs uppercase tracking-widest inline-block mb-3">
+                    Transparencia y Protección Jurídica
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white">Políticas de Garantía y Servicio</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Términos claros para la protección del cliente y de nuestro laboratorio técnico.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+                <!-- Tarjeta 1: Garantías de Hardware y Servicio -->
+                <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4">
+                    <h3 class="text-lg font-bold text-emerald-400 flex items-center gap-2">
+                        <i class="fa-solid fa-file-contract"></i> Cobertura de Garantía
+                    </h3>
+                    <ul class="space-y-3 text-slate-300 leading-relaxed font-mono text-xs">
+                        <li>• <strong>Mano de Obra y Ensamble:</strong> 30 días naturales de garantía directa sobre cualquier diagnóstico o servicio realizado.</li>
+                        <li>• <strong>Componentes Nuevos:</strong> Cuentan con la garantía oficial otorgada directamente por el fabricante o distribuidor autorizado.</li>
+                        <li>• <strong>Componentes Reacondicionados / De Uso:</strong> Probados bajo estrés técnico previo. Se especifica el periodo de respaldo en cada nota de entrega con sustitución directa de módulo.</li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta 2: Exclusiones de Garantía -->
+                <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4">
+                    <h3 class="text-lg font-bold text-amber-400 flex items-center gap-2">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Exclusiones (Mal Uso)
+                    </h3>
+                    <ul class="space-y-3 text-slate-300 leading-relaxed font-mono text-xs">
+                        <li>• <strong>Voltajes Incorrectos:</strong> La garantía queda estrictamente anulada si el equipo es conectado a fuentes de alimentación de 220V cuando su configuración opera a 127V, o por descargas eléctricas sin regulador.</li>
+                        <li>• <strong>Daños Físicos y Derrames:</strong> Inundaciones, golpes, caídas o manipulación por terceros no autorizados invalidan la garantía.</li>
+                        <li>• <strong>Software de Terceros:</strong> La garantía cubre el hardware y sistema operativo base; no cubre virus o alteraciones posteriores del usuario.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE CONTACTO Y UBICACIÓN OFICIAL -->
+    <section id="contacto" class="py-20 bg-slate-950 border-t border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-indigo-950 border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
                         <span class="text-xs font-mono text-amber-400 uppercase tracking-widest block mb-2">// Atención Personalizada</span>
-                        <h2 class="text-3xl font-black text-white mb-4">¿Tienes dudas o buscas diagnóstico?</h2>
+                        <h2 class="text-3xl font-black text-white mb-4">Ubicación & Contacto Directo</h2>
                         <p class="text-slate-300 text-sm mb-6 leading-relaxed">
-                            Contáctanos directamente para agendar la recepción de tu equipo, solicitar asesoría de componentes o cotizar un ensamble personalizado.
+                            Visítanos en nuestras instalaciones en la colonia Centro de Guadalajara para recepción de equipos, asesoría presencial o entrega de ensambles.
                         </p>
                         <div class="space-y-4 text-slate-200">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-400 block font-mono">Dirección Física</span>
+                                    <span class="font-bold text-sm">Pedro Moreno 501 A, Col. Guadalajara Centro<br>C.P. 44100, Guadalajara, Jal.</span>
+                                </div>
+                            </div>
                             <div class="flex items-center gap-4">
                                 <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400">
                                     <i class="fa-solid fa-phone"></i>
                                 </div>
                                 <div>
-                                    <span class="text-xs text-slate-400 block font-mono">Teléfono Fijo</span>
-                                    <span class="font-bold">(33) 0000-0000</span>
+                                    <span class="text-xs text-slate-400 block font-mono">Teléfono Fijo (Telmex)</span>
+                                    <a href="tel:3336136348" class="font-bold hover:text-blue-400">(33) 3613-6348</a>
                                 </div>
                             </div>
                             <div class="flex items-center gap-4">
@@ -378,17 +468,8 @@
                                     <i class="fa-brands fa-whatsapp text-lg"></i>
                                 </div>
                                 <div>
-                                    <span class="text-xs text-slate-400 block font-mono">Celular / WhatsApp</span>
-                                    <span class="font-bold text-emerald-400">+52 (33) 0000-0000</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div>
-                                    <span class="text-xs text-slate-400 block font-mono">Ubicación de Atención</span>
-                                    <span class="font-bold">Guadalajara, Jalisco, México</span>
+                                    <span class="text-xs text-slate-400 block font-mono">Celular / WhatsApp Business</span>
+                                    <a href="https://wa.me/523337271440" target="_blank" class="font-bold text-emerald-400 hover:underline">+52 (33) 3727-1440</a>
                                 </div>
                             </div>
                         </div>
@@ -397,9 +478,9 @@
                     <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 text-center">
                         <i class="fa-solid fa-clock-rotate-left text-4xl text-amber-400 mb-4 block"></i>
                         <h3 class="text-lg font-bold text-white mb-2">Horarios de Recepción</h3>
-                        <p class="text-slate-400 text-sm mb-4">Lunes a Viernes: 9:00 AM - 7:00 PM<br>Sábados: 10:00 AM - 3:00 PM</p>
-                        <a href="https://wa.me/523300000000" target="_blank" class="block w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3 rounded-xl transition">
-                            Enviar Mensaje Directo
+                        <p class="text-slate-400 text-sm mb-6">Lunes a Viernes: 9:00 AM - 7:00 PM<br>Sábados: 10:00 AM - 3:00 PM</p>
+                        <a href="https://wa.me/523337271440?text=Hola,%20quisiera%20agendar%20una%20cita%20o%20visita%20a%20su%20ubicacion%20en%20Pedro%20Moreno." target="_blank" class="block w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3.5 rounded-xl transition text-center">
+                            Agendar Visita por WhatsApp
                         </a>
                     </div>
                 </div>
@@ -409,41 +490,36 @@
 
     <!-- FOOTER -->
     <footer class="py-8 bg-slate-950 border-t border-slate-900 text-center text-slate-500 text-sm font-mono">
-        <p>© 2026 PC Custom Lab. Todos los derechos reservados.</p>
+        <p>© 2026 PC Custom Lab. Pedro Moreno 501 A, Guadalajara Centro. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- WIDGET DE CHATBOT FLOTANTE EN VIVO -->
+    <!-- WIDGET DE CHATBOT FLOTANTE -->
     <div class="fixed bottom-6 right-6 z-50">
-        <button id="chatbot-toggle" onclick="toggleChatbot()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:scale-105 text-white w-14 h-14 rounded-full shadow-2xl shadow-blue-600/50 flex items-center justify-center text-2xl transition-all">
+        <button id="chatbot-toggle" onclick="toggleChatbot()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:scale-105 text-white w-16 h-16 rounded-full shadow-2xl shadow-blue-600/50 flex items-center justify-center text-2xl transition-all">
             <i id="chatbot-icon" class="fa-solid fa-comments"></i>
         </button>
 
-        <div id="chatbot-window" class="hidden absolute bottom-18 right-0 w-80 sm:w-96 bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden flex flex-col h-96">
+        <div id="chatbot-window" class="hidden absolute bottom-20 right-0 w-80 sm:w-[420px] bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
             <div class="bg-slate-950 p-4 border-b border-slate-800 flex justify-between items-center">
                 <div class="flex items-center gap-3">
                     <div class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
                     <div>
-                        <span class="font-bold text-sm text-white block">Asistente Virtual // PC Lab</span>
+                        <span class="font-bold text-sm text-white block">Asistente Virtual // PC Custom Lab</span>
                         <span class="text-xs text-slate-400 font-mono">Responde al instante 24/7</span>
                     </div>
                 </div>
-                <button onclick="toggleChatbot()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+                <button onclick="toggleChatbot()" class="text-slate-400 hover:text-white p-1"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
 
-            <div id="chat-messages" class="p-4 flex-1 overflow-y-auto space-y-3 text-sm">
-                <div class="bg-slate-800 text-slate-200 p-3 rounded-xl rounded-tl-none max-w-[85%] border border-slate-700">
-                    ¡Hola! 👋 Bienvenido a PC Custom Lab. ¿En qué te puedo ayudar hoy?
-                </div>
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <button onclick="responderBot('precios')" class="text-xs bg-slate-800 hover:bg-slate-700 text-blue-300 border border-slate-700 px-2.5 py-1.5 rounded-lg transition">💡 Ver Niveles y Precios</button>
-                    <button onclick="responderBot('garantia')" class="text-xs bg-slate-800 hover:bg-slate-700 text-purple-300 border border-slate-700 px-2.5 py-1.5 rounded-lg transition">🛡️ Garantía y Reparación</button>
-                    <button onclick="responderBot('humano')" class="text-xs bg-slate-800 hover:bg-slate-700 text-emerald-300 border border-slate-700 px-2.5 py-1.5 rounded-lg transition">👨🔧 Hablar con Asesor</button>
+            <div id="chat-messages" class="p-4 flex-1 overflow-y-auto space-y-4 text-sm">
+                <div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed">
+                    ¡Hola! 👋 Nos adecuamos a tu sueño y lo hacemos realidad dentro de tu presupuesto. Cuéntanos, ¿qué esperas de nosotros o qué tipo de equipo buscas?
                 </div>
             </div>
 
             <div class="p-3 bg-slate-950 border-t border-slate-800 flex gap-2">
-                <input id="chat-input" type="text" placeholder="Escribe tu duda aquí..." onkeypress="handleKeyPress(event)" class="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500">
-                <button onclick="enviarMensaje()" class="bg-blue-600 hover:bg-blue-500 text-white px-3.5 py-2 rounded-xl text-sm transition"><i class="fa-solid fa-paper-plane"></i></button>
+                <input id="chat-input" type="text" placeholder="Escribe aquí tu proyecto o duda..." onkeypress="handleKeyPress(event)" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
+                <button onclick="enviarMensaje()" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-3 rounded-xl text-sm transition"><i class="fa-solid fa-paper-plane"></i></button>
             </div>
         </div>
     </div>
@@ -473,62 +549,101 @@
         menuBackdrop.addEventListener('click', toggleMenu);
         mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
 
+        // CONTROLES DE NIVEL Y FILTRO DE GPU
+        function actualizarPrefiltroNivel() {
+            const nivel = document.getElementById('select-nivel-filtro').value;
+            const gpuSelect = document.getElementById('select-gpu');
+            
+            if (nivel === '5') {
+                gpuSelect.innerHTML = `
+                    <option value="integrated" selected>Gráficos Integrados de Eficiencia (Ideales para Oficina / Casa)</option>
+                    <option value="gtx1650">Nvidia GTX 1650 / RX 6400 (Entrada Básica Multimedia)</option>
+                `;
+            } else if (nivel === '4') {
+                gpuSelect.innerHTML = `
+                    <option value="rtx3050">Nvidia RTX 3050 (Entrada Gaming / Diseño)</option>
+                    <option value="rtx3060" selected>Nvidia RTX 3060 / RTX 4060 8GB (Productividad / Render Ligero)</option>
+                `;
+            } else if (nivel === '3') {
+                gpuSelect.innerHTML = `
+                    <option value="rtx4060ti">Nvidia RTX 4060 Ti 16GB (Multitarea Ruda)</option>
+                    <option value="rtx4070" selected>Nvidia RTX 4070 Super / 4070 Ti (CAD 3D / Renderizado Pesado)</option>
+                `;
+            } else if (nivel === '2') {
+                gpuSelect.innerHTML = `
+                    <option value="rtx4070ti">Nvidia RTX 4070 Ti Super 16GB (Producción Pro / IA Local)</option>
+                    <option value="rtx4080" selected>Nvidia RTX 4080 Super 16GB (Entusiasta Extreme)</option>
+                `;
+            } else if (nivel === '1') {
+                gpuSelect.innerHTML = `
+                    <option value="rtx4090" selected>Nvidia GeForce RTX 4090 24GB (Topping Absoluto / IA / Render Industrial)</option>
+                `;
+            }
+            validarCompatibilidad();
+        }
+
+        function abrirCotizadorConNivel(nivel) {
+            document.getElementById('select-nivel-filtro').value = nivel;
+            actualizarPrefiltroNivel();
+            document.getElementById('cotizador').scrollIntoView({ behavior: 'smooth' });
+        }
+
         function validarCompatibilidad() {
             const gabinete = document.getElementById('select-gabinete').value;
             const gpu = document.getElementById('select-gpu').value;
             const alertBox = document.getElementById('alert-compatibilidad');
             const alertText = document.getElementById('alert-text');
 
-            if (gabinete === 'compact' && (gpu === 'rtx4070' || gpu === 'rtx4090')) {
+            if (gabinete === 'compact' && (gpu === 'rtx4070' || gpu === 'rtx4080' || gpu === 'rtx4090')) {
                 alertBox.classList.remove('hidden');
-                alertText.innerHTML = '<strong>¡Incompatibilidad Detectada!</strong> La tarjeta de video seleccionada es demasiado larga para un gabinete compacto. El sistema ha ajustado la vista a un Gabinete Mid-Tower ATX para asegurar el flujo de aire y espacio físico.';
+                alertText.innerHTML = '<strong>¡Incompatibilidad de Espacio!</strong> La tarjeta de video seleccionada requiere un chasis más amplio. Ajustando automáticamente a Gabinete Mid-Tower ATX para asegurar ventilación.';
                 document.getElementById('select-gabinete').value = 'mid';
-            } else if (gpu === 'rtx4090' && gabinete === 'mid') {
-                alertBox.classList.remove('hidden');
-                alertText.innerHTML = '<strong>Sugerencia de Flujo de Aire:</strong> Para una GPU Extreme (RTX 4090), recomendamos un Gabinete Full-Tower para evitar acumulación de calor.';
             } else {
                 alertBox.classList.add('hidden');
             }
         }
 
-        function seleccionarNivel(nivel) {
-            const gpuSelect = document.getElementById('select-gpu');
-            if (nivel === '5') gpuSelect.value = 'integrated';
-            if (nivel === '4') gpuSelect.value = 'rtx3060';
-            if (nivel === '3') gpuSelect.value = 'rtx4070';
-            if (nivel === '1' || nivel === '2') gpuSelect.value = 'rtx4090';
-            validarCompatibilidad();
-        }
-
         function enviarPresupuestoWhatsApp() {
+            const nivel = document.getElementById('select-nivel-filtro').selectedOptions[0].text;
             const gabinete = document.getElementById('select-gabinete').selectedOptions[0].text;
             const gpu = document.getElementById('select-gpu').selectedOptions[0].text;
             const mobo = document.getElementById('select-mobo').selectedOptions[0].text;
             const cpu = document.getElementById('select-cpu').selectedOptions[0].text;
             
-            const mensaje = `Hola, me gustaría cotizar una PC con los siguientes componentes:%0A- Gabinete: ${gabinete}%0A- GPU: ${gpu}%0A- Placa Madre: ${mobo}%0A- CPU: ${cpu}`;
-            window.open(`https://wa.me/523300000000?text=${mensaje}`, '_blank');
+            const mensaje = `Hola, me gustaría cotizar una PC con los siguientes parámetros:%0A- Nivel: ${nivel}%0A- Gabinete: ${gabinete}%0A- GPU: ${gpu}%0A- Placa Madre: ${mobo}%0A- CPU: ${cpu}`;
+            window.open(`https://wa.me/523337271440?text=${mensaje}`, '_blank');
         }
 
+        function guardarLead(e) {
+            e.preventDefault();
+            const email = document.getElementById('lead-email').value;
+            const phone = document.getElementById('lead-phone').value;
+            alert('¡Gracias por registrarte! Te hemos otorgado tu cupón del 30% de descuento en tu próximo mantenimiento.');
+            window.open(`https://wa.me/523337271440?text=Hola,%20acabo%20de%20registrarme%20para%20el%2030%25%20de%20descuento%20en%20mantenimiento.%20Mi%20correo%20es:%20${encodeURIComponent(email)}`, '_blank');
+        }
+
+        // CONTROLES DE CHATBOT
         function toggleChatbot() {
-            const win = document.getElementById('chatbot-window');
-            win.classList.toggle('hidden');
+            document.getElementById('chatbot-window').classList.toggle('hidden');
         }
 
-        function responderBot(tipo) {
+        // CONTROL DE MENSAJES
+        function abrirChatbotConMensaje(mensajeInicial) {
+            document.getElementById('chatbot-window').classList.remove('hidden');
             const messages = document.getElementById('chat-messages');
-            let resp = '';
-
-            if (tipo === 'precios') {
-                resp = 'Contamos con 5 Niveles: desde el Nivel 5 (Oficina/Entrada) hasta el Nivel 1 (Topping Extreme con componentes especializados). ¡Puedes configurarlos en la sección "Arma tu PC"!';
-            } else if (tipo === 'garantia') {
-                resp = 'Nuestros diagnósticos son directos: no reparamos piezas con cautín. Si un componente falla dentro de la garantía, lo sustituimos completo por una refacción probada.';
-            } else if (tipo === 'humano') {
-                resp = 'Te conecto directamente con nuestro especialista principal por WhatsApp: <a href="https://wa.me/523300000000" target="_blank" class="text-emerald-400 underline font-bold">Haz clic aquí para chatear</a>.';
-            }
-
-            messages.innerHTML += `<div class="bg-slate-800 text-slate-200 p-3 rounded-xl rounded-tl-none max-w-[85%] border border-slate-700">${resp}</div>`;
+            messages.innerHTML += `<div class="bg-blue-600 text-white p-3.5 rounded-2xl rounded-tr-none max-w-[85%] ml-auto font-medium shadow-md">${mensajeInicial}</div>`;
             messages.scrollTop = messages.scrollHeight;
+
+            setTimeout(() => {
+                messages.innerHTML += `<div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed">
+                    ¡Excelente! Te conecto de inmediato con nuestro especialista principal en Guadalajara para atenderte: 
+                    <br><br>
+                    <a href="https://wa.me/523337271440?text=${encodeURIComponent(mensajeInicial)}" target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-xl transition text-xs">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> Chatear por WhatsApp
+                    </a>
+                </div>`;
+                messages.scrollTop = messages.scrollHeight;
+            }, 600);
         }
 
         function enviarMensaje() {
@@ -537,18 +652,27 @@
             if (!text) return;
 
             const messages = document.getElementById('chat-messages');
-            messages.innerHTML += `<div class="bg-blue-600 text-white p-3 rounded-xl rounded-tr-none max-w-[85%] ml-auto">${text}</div>`;
+            messages.innerHTML += `<div class="bg-blue-600 text-white p-3.5 rounded-2xl rounded-tr-none max-w-[85%] ml-auto font-medium shadow-md">${text}</div>`;
             input.value = '';
 
             setTimeout(() => {
-                messages.innerHTML += `<div class="bg-slate-800 text-slate-200 p-3 rounded-xl rounded-tl-none max-w-[85%] border border-slate-700">Gracias por tu mensaje. Para darte una respuesta exacta sobre tu consulta, te paso directo con nuestro asesor humano: <a href="https://wa.me/523300000000" target="_blank" class="text-emerald-400 underline font-bold">Abrir WhatsApp</a></div>`;
+                messages.innerHTML += `<div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed">
+                    Muchas gracias por escribirnos. Para darle seguimiento directo a tu idea o cotización:
+                    <br><br>
+                    <a href="https://wa.me/523337271440?text=${encodeURIComponent(text)}" target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-xl transition text-xs">
+                        <i class="fa-brands fa-whatsapp text-sm"></i> Transferir a WhatsApp Directo
+                    </a>
+                </div>`;
                 messages.scrollTop = messages.scrollHeight;
-            }, 800);
+            }, 700);
         }
 
         function handleKeyPress(e) {
             if (e.key === 'Enter') enviarMensaje();
         }
+
+        // INICIALIZACIÓN
+        actualizarPrefiltroNivel();
     </script>
 </body>
 </html>
