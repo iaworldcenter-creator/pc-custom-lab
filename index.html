@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Custom Lab - Ensamble & Soporte Técnico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .card-hover:hover { transform: translateY(-4px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased">
+
+    <!-- Navegación -->
+    <nav class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="text-xl font-bold tracking-wider text-blue-500">PC_CUSTOM // LAB</div>
+            <div class="flex space-x-6 text-sm">
+                <a href="#niveles" class="hover:text-blue-400">Niveles de Equipos</a>
+                <a href="#servicios" class="hover:text-blue-400">Servicios & Reparación</a>
+                <a href="#contacto" class="hover:text-blue-400">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado Principal -->
+    <header class="py-20 text-center max-w-4xl mx-auto px-6">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6">
+            Especialistas en Ensamble, Actualización y Mantenimiento de PC
+        </h1>
+        <p class="text-lg text-slate-400 mb-8">
+            Desde equipos de entrada para trabajo y oficina hasta estaciones de trabajo de alto rendimiento. Servicio de diagnóstico y reemplazo directo de componentes.
+        </p>
+        <a href="#niveles" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition">
+            Explorar Categorías
+        </a>
+    </header>
+
+    <!-- Sección de Niveles -->
+    <section id="niveles" class="py-16 max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 border-b border-slate-800 pb-4">
+            Catálogo por Niveles de Rendimiento
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Nivel 5 -->
+            <div class="bg-slate-800 border border-slate-700 rounded-xl p-6 card-hover">
+                <span class="text-xs font-semibold px-3 py-1 bg-slate-700 text-slate-300 rounded-full">NIVEL 5</span>
+                <h3 class="text-xl font-bold mt-4 mb-2">Entrada & Oficina</h3>
+                <p class="text-slate-400 text-sm mb-4">Equipos accesibles para uso administrativo, hogar y puntos de venta.</p>
+                <ul class="text-sm text-slate-300 space-y-2 mb-6">
+                    <li>• Procesadores Eficientes (Pre-12ª Gen)</li>
+                    <li>• Almacenamiento SSD Veloz</li>
+                    <li>• 8GB / 16GB RAM DDR4</li>
+                </ul>
+            </div>
+
+            <!-- Nivel 4 -->
+            <div class="bg-slate-800 border border-slate-700 rounded-xl p-6 card-hover">
+                <span class="text-xs font-semibold px-3 py-1 bg-blue-900 text-blue-300 rounded-full">NIVEL 4</span>
+                <h3 class="text-xl font-bold mt-4 mb-2">Gama Media Moderna</h3>
+                <p class="text-slate-400 text-sm mb-4">Productividad avanzada, diseño básico y juegos ligeros.</p>
+                <ul class="text-sm text-slate-300 space-y-2 mb-6">
+                    <li>• Intel 12ª Gen / Ryzen 5000+</li>
+                    <li>• Memorias DDR4 de alta velocidad</li>
+                    <li>• Gráficos Dedicados HD / RTX Entrada</li>
+                </ul>
+            </div>
+
+            <!-- Nivel 3 -->
+            <div class="bg-slate-800 border border-slate-700 rounded-xl p-6 card-hover">
+                <span class="text-xs font-semibold px-3 py-1 bg-indigo-900 text-indigo-300 rounded-full">NIVEL 3</span>
+                <h3 class="text-xl font-bold mt-4 mb-2">Gama Alta / Multitarea</h3>
+                <p class="text-slate-400 text-sm mb-4">Estaciones para renderizado, edición de video y multitarea intensiva.</p>
+                <ul class="text-sm text-slate-300 space-y-2 mb-6">
+                    <li>• Intel 13ª/14ª Gen o superior</li>
+                    <li>• 32GB+ RAM Dual Channel</li>
+                    <li>• GPUs Serie RTX 30 / 40</li>
+                </ul>
+            </div>
+
+            <!-- Nivel 2 -->
+            <div class="bg-slate-800 border border-slate-700 rounded-xl p-6 card-hover">
+                <span class="text-xs font-semibold px-3 py-1 bg-purple-900 text-purple-300 rounded-full">NIVEL 2</span>
+                <h3 class="text-xl font-bold mt-4 mb-2">Entusiasta / Creadores</h3>
+                <p class="text-slate-400 text-sm mb-4">Plataformas recientes de alto flujo para profesionales demandantes.</p>
+                <ul class="text-sm text-slate-300 space-y-2 mb-6">
+                    <li>• Arquitecturas Core Ultra / Ryzen 9000</li>
+                    <li>• Memorias DDR5 Ultra Rápidas</li>
+                    <li>• Disipación de Alto Rendimiento</li>
+                </ul>
+            </div>
+
+            <!-- Nivel 1 -->
+            <div class="bg-slate-800 border border-amber-500/50 rounded-xl p-6 card-hover col-span-1 md:col-span-2">
+                <span class="text-xs font-semibold px-3 py-1 bg-amber-900 text-amber-300 rounded-full">NIVEL 1 - TOPPING</span>
+                <h3 class="text-xl font-bold mt-4 mb-2 text-amber-400">Extreme Workstation</h3>
+                <p class="text-slate-400 text-sm mb-4">El estándar máximo en computación: IA, renderizado masivo y simulación sin límites.</p>
+                <ul class="text-sm text-slate-300 space-y-2 mb-6">
+                    <li>• Componentes e hilos de procesamiento masivo</li>
+                    <li>• Tarjetas Madre especializadas tope de gama</li>
+                    <li>• Gráficos Extreme (RTX 4090 / Serie Profesional)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="py-16 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Servicios Técnicos Integrales</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-slate-900 rounded-lg border border-slate-800">
+                    <h3 class="text-lg font-bold mb-2 text-blue-400">Sustitución Directa</h3>
+                    <p class="text-slate-400 text-sm">Diagnosticamos y cambiamos el componente dañado completo por refacciones probadas para asegurar rapidez y funcionamiento inmediato.</p>
+                </div>
+                <div class="p-6 bg-slate-900 rounded-lg border border-slate-800">
+                    <h3 class="text-lg font-bold mb-2 text-blue-400">Mantenimiento & Limpieza</h3>
+                    <p class="text-slate-400 text-sm">Optimización térmica, reemplazo de pasta térmica de alta conductividad y gestión de cables profesional.</p>
+                </div>
+                <div class="p-6 bg-slate-900 rounded-lg border border-slate-800">
+                    <h3 class="text-lg font-bold mb-2 text-blue-400">Software & Licenciamiento</h3>
+                    <p class="text-slate-400 text-sm">Instalación y configuración de sistemas operativos oficiales, suites de trabajo y optimización de controladores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="py-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <p>© 2026 PC Custom Lab. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
