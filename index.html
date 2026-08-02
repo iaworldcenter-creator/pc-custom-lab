@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC Custom Lab | Ensamble de Computadoras & Servicio Técnico Guadalajara</title>
-    <meta name="description" content="Especialistas en ensamble de PC a la medida, venta de componentes, laptops y reparación modular en Guadalajara Centro. Pedro Moreno 501 A.">
+    <title>PC Custom Lab | Ensamble y Venta de Computadoras Completas Guadalajara</title>
+    <meta name="description" content="Venta de computadoras completas armadas por niveles (Nivel 5 a Nivel 1 Extreme), refacciones y componentes en Guadalajara Centro. Pedro Moreno 501 A.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- SDK Oficial de Pasarela de Pagos Segura (Tokenizada SAQ-A) -->
+    <script src="https://js.stripe.com/v3/"></script>
     
-    <!-- Esquema Estructurado SEO Local (Schema.org) -->
+    <!-- Marcado Estructurado SEO Local & Motores de IA (GEO) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ComputerStore",
       "name": "PC Custom Lab",
+      "description": "Especialistas en venta de computadoras armadas completas por niveles, componentes y servicio técnico modular.",
       "image": "https://iaworldcenter-creator.github.io/pc-custom-lab/logo.png",
       "telephone": "+523336136348",
       "address": {
@@ -51,28 +54,27 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden">
 
-    <!-- NAV BAR -->
+    <!-- NAV BAR PRINCIPAL -->
     <nav class="border-b border-slate-800 bg-slate-950/90 backdrop-blur sticky top-0 z-40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
+            <div class="flex items-center space-x-3 shrink-0">
                 <div class="bg-gradient-to-r from-blue-600 to-indigo-600 p-2.5 rounded-xl shadow-lg shadow-blue-500/20">
                     <i class="fa-solid fa-microchip text-2xl text-white"></i>
                 </div>
                 <div>
-                    <span class="text-2xl font-black tracking-wider bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">PC CUSTOM</span>
-                    <span class="text-xs block text-slate-400 font-mono tracking-widest">// LAB & TECH SERVICES</span>
+                    <span class="text-xl sm:text-2xl font-black tracking-wider bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">PC CUSTOM</span>
+                    <span class="text-[10px] sm:text-xs block text-slate-400 font-mono tracking-widest">// LAB & TECH SERVICES</span>
                 </div>
             </div>
 
             <!-- Menú Escritorio -->
-            <div class="hidden md:flex items-center space-x-8 text-sm font-semibold">
-                <a href="#niveles" class="hover:text-blue-400 transition flex items-center gap-2"><i class="fa-solid fa-layer-group text-blue-500"></i> Niveles</a>
-                <a href="#cotizador" class="hover:text-indigo-400 transition flex items-center gap-2"><i class="fa-solid fa-sliders text-indigo-500"></i> Arma tu PC</a>
-                <a href="#refacciones" class="hover:text-pink-400 transition flex items-center gap-2"><i class="fa-solid fa-store text-pink-500"></i> Boutique Refacciones</a>
-                <a href="#servicios" class="hover:text-purple-400 transition flex items-center gap-2"><i class="fa-solid fa-wrench text-purple-500"></i> Servicios</a>
-                <a href="#contacto" class="hover:text-amber-400 transition flex items-center gap-2"><i class="fa-solid fa-phone text-amber-500"></i> Contacto</a>
-                <button onclick="abrirChatbotConMensaje('Hola, me gustaría solicitar un diagnóstico personalizado para mi equipo.')" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2.5 rounded-xl shadow-lg shadow-blue-600/30 transition font-bold">
-                    Diagnóstico
+            <div class="hidden md:flex items-center space-x-6 text-xs xl:text-sm font-semibold shrink-0">
+                <a href="#niveles" class="hover:text-blue-400 transition flex items-center gap-1.5"><i class="fa-solid fa-desktop text-blue-500"></i> PCs Armadas</a>
+                <a href="#cotizador" class="hover:text-indigo-400 transition flex items-center gap-1.5"><i class="fa-solid fa-sliders text-indigo-500"></i> Arma tu PC</a>
+                <a href="#refacciones" class="hover:text-pink-400 transition flex items-center gap-1.5"><i class="fa-solid fa-store text-pink-500"></i> Boutique Refacciones</a>
+                <a href="#contacto" class="hover:text-amber-400 transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-amber-500"></i> Contacto</a>
+                <button onclick="abrirChatbotConMensaje('Hola, me gustaría cotizar una computadora armada completa.')" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-4 py-2 rounded-xl shadow-lg shadow-blue-600/30 transition font-bold font-sans">
+                    Cotizar PC Completa
                 </button>
             </div>
 
@@ -82,7 +84,7 @@
         </div>
     </nav>
 
-    <!-- MOBILE DRAWER MENU DESDE LA DERECHA -->
+    <!-- MOBILE DRAWER MENU -->
     <div id="menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden"></div>
     <div id="mobile-menu" class="fixed top-0 right-0 w-4/5 max-w-sm h-full bg-slate-900 border-l border-slate-800 z-50 p-6 shadow-2xl menu-closed flex flex-col justify-between">
         <div>
@@ -94,19 +96,19 @@
             </div>
             <div class="flex flex-col space-y-4 font-medium text-lg">
                 <a href="#niveles" class="mobile-link py-3 px-4 rounded-xl hover:bg-slate-800 text-slate-200 flex items-center gap-3">
-                    <i class="fa-solid fa-layer-group text-blue-400 w-6"></i> Niveles de Equipos
+                    <i class="fa-solid fa-desktop text-blue-400 w-6"></i> Computadoras Armadas
                 </a>
                 <a href="#cotizador" class="mobile-link py-3 px-4 rounded-xl hover:bg-slate-800 text-slate-200 flex items-center gap-3">
-                    <i class="fa-solid fa-sliders text-indigo-400 w-6"></i> Cotizador "Arma tu PC"
+                    <i class="fa-solid fa-sliders text-indigo-400 w-6"></i> Cotizador Guiado
                 </a>
                 <a href="#refacciones" class="mobile-link py-3 px-4 rounded-xl hover:bg-slate-800 text-slate-200 flex items-center gap-3">
-                    <i class="fa-solid fa-store text-pink-400 w-6"></i> Boutique de Refacciones
+                    <i class="fa-solid fa-store text-pink-400 w-6"></i> Boutique Refacciones
                 </a>
                 <a href="#servicios" class="mobile-link py-3 px-4 rounded-xl hover:bg-slate-800 text-slate-200 flex items-center gap-3">
-                    <i class="fa-solid fa-wrench text-purple-400 w-6"></i> Mantenimiento & Laptops
+                    <i class="fa-solid fa-wrench text-purple-400 w-6"></i> Servicio Técnico Modular
                 </a>
                 <a href="#contacto" class="mobile-link py-3 px-4 rounded-xl hover:bg-slate-800 text-slate-200 flex items-center gap-3">
-                    <i class="fa-solid fa-phone text-amber-400 w-6"></i> Ubicación en Guadalajara
+                    <i class="fa-solid fa-phone text-amber-400 w-6"></i> Guadalajara Centro
                 </a>
             </div>
         </div>
@@ -125,20 +127,41 @@
     <!-- HERO SECTION -->
     <header class="gradient-hero py-20 px-4 sm:px-6 text-center border-b border-slate-800 relative overflow-hidden">
         <div class="max-w-5xl mx-auto relative z-10">
+            <span class="px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
+                Venta de Computadoras Armadas & Soporte Modular
+            </span>
             <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight mb-6 leading-tight">
-                Ensamblaje Profesional y Servicio Técnico Especializado<br>
-                <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Computadoras a la Medida</span><br>
-                y Reparación Modular
+                Venta de Computadoras Completas<br>
+                <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Ensambladas a la Medida</span><br>
+                y Refacciones de Oportunidad
             </h1>
             <p class="text-base sm:text-xl text-slate-300 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-                Nos adecuamos a tu sueño y lo hacemos realidad dentro de tu presupuesto. Venta de computadoras de escritorio, laptops, servidores de IA corporativos y componentes individuales con garantía.
+                Nos especializamos en armar y vender computadoras completas (Nivel 5 al Nivel 1 Extreme). Si requieres un componente o periférico suelto, te conseguimos la mejor oportunidad del mercado.
             </p>
+
+            <!-- BUSCADOR INTELIGENTE DE DOBLE PROPÓSITO -->
+            <div class="bg-slate-900/90 border-2 border-indigo-500/40 rounded-3xl p-6 shadow-2xl max-w-3xl mx-auto mb-8 text-left">
+                <label class="block text-xs font-mono font-bold text-indigo-300 uppercase tracking-wider mb-3">
+                    ¿Qué estás buscando hoy?
+                </label>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <select id="tipo-busqueda" class="bg-slate-950 border border-slate-700 text-slate-200 rounded-xl px-4 py-3 text-xs font-bold focus:outline-none focus:border-indigo-400">
+                        <option value="pc" selected>Computadora Completa</option>
+                        <option value="refaccion">Refacción / Periférico</option>
+                    </select>
+                    <input id="hero-search-input" type="text" placeholder="Ej. PC para oficina, Gamer Nivel 3, Memoria DDR4, SSD M.2, Monitor..." onkeypress="ejecutarBusquedaHero(event)" class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-indigo-400">
+                    <button onclick="buscarHero()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold px-6 py-3 rounded-xl transition text-xs whitespace-nowrap">
+                        <i class="fa-solid fa-magnifying-glass mr-1"></i> Buscar
+                    </button>
+                </div>
+            </div>
+
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <button onclick="abrirChatbotConMensaje('Hola, deseo iniciar una cotización inmediata para armar mi equipo.')" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-blue-600/30 transition text-lg flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-comments text-xl"></i> Cotización Inmediata
-                </button>
-                <button onclick="abrirChatbotConMensaje('Hola, me gustaría hablar con un asesor para consultar sobre un proyecto o equipo.')" class="bg-slate-800/80 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold px-8 py-4 rounded-xl transition text-lg flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-headset text-amber-400"></i> Contactar a un Asesor
+                <a href="#niveles" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-3.5 rounded-xl shadow-xl transition text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-desktop"></i> Ver Equipos Ensamblados
+                </a>
+                <button onclick="abrirChatbotConMensaje('Hola, me gustaría consultar la disponibilidad de una computadora o refacción.')" class="bg-slate-800/80 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold px-8 py-3.5 rounded-xl transition text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-headset text-amber-400"></i> Atención Directa
                 </button>
             </div>
         </div>
@@ -150,11 +173,11 @@
             <div class="bg-slate-900/90 border border-blue-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
                 <div class="text-left max-w-xl">
                     <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 font-mono text-xs uppercase font-bold mb-3 inline-block">
-                        🎁 Membresía de Seguimiento Técnico
+                        🎁 Registro de Clientes
                     </span>
                     <h3 class="text-2xl font-black text-white mb-2">30% de Descuento en tu Próximo Servicio</h3>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        Regístrate con tu correo y teléfono. Te damos seguimiento preventivo para tu Torre o Laptop e incentivos de toma a cuenta si decides ascender de Nivel.
+                        Al comprar tu equipo o registrar tus datos, obtienes seguimiento preventivo continuo e incentivos de toma a cuenta si deseas actualizar tu máquina en el futuro.
                     </p>
                 </div>
                 <form id="form-lead" onsubmit="guardarLead(event)" class="w-full md:w-auto flex flex-col sm:flex-row gap-3">
@@ -168,12 +191,12 @@
         </div>
     </section>
 
-    <!-- NIVELES DE EQUIPOS (NIVEL 5 AL NIVEL 1) -->
+    <!-- CATALOGO DE COMPUTADORAS COMPLETAS (NIVEL 5 AL NIVEL 1) -->
     <section id="niveles" class="py-20 max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-16">
-            <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">Niveles de Rendimiento Estándar (2026)</h2>
+            <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">Computadoras Completas por Niveles</h2>
             <p class="text-lg text-indigo-300 font-medium max-w-3xl mx-auto">
-                Nos adaptamos a tu sueño y a tu presupuesto para hacerlo realidad. Nos adecuamos a lo que necesitas: desde equipos básicos de oficina hasta servidores de inteligencia artificial.
+                Armamos y vendemos el equipo completo ajustado exactamente a tu presupuesto. Si el día de mañana quieres ascender de nivel, te evaluamos tu equipo anterior.
             </p>
         </div>
 
@@ -185,8 +208,8 @@
                         <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 font-mono text-xs font-bold border border-slate-700">NIVEL 5 ($2,000 - $3,500 MXN)</span>
                         <i class="fa-solid fa-desktop text-2xl text-slate-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Entrada, Hogar & Oficina</h3>
-                    <p class="text-slate-400 text-sm mb-6">Equipos económicos para navegar, redes sociales, streaming HD y tareas escolares sin demoras.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">PC Completa Hogar & Oficina</h3>
+                    <p class="text-slate-400 text-sm mb-6">Equipos eficientes completos para navegar, redes sociales, punto de venta y tareas escolares.</p>
                     <ul class="space-y-2.5 text-sm text-slate-300 mb-6 font-mono">
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> Intel / AMD Eficientes</li>
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-xs"></i> SSD NVMe Alta Velocidad</li>
@@ -194,8 +217,8 @@
                     </ul>
                 </div>
                 <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs text-slate-400 font-mono">Uso General</span>
-                    <button onclick="abrirCotizadorConNivel('5')" class="text-blue-400 hover:text-blue-300 text-sm font-bold flex items-center gap-1">Configurar <i class="fa-solid fa-arrow-right text-xs"></i></button>
+                    <span class="text-xs text-slate-400 font-mono">Equipo Completo</span>
+                    <button onclick="abrirCotizadorConNivel('5')" class="text-blue-400 hover:text-blue-300 text-sm font-bold flex items-center gap-1">Cotizar <i class="fa-solid fa-arrow-right text-xs"></i></button>
                 </div>
             </div>
 
@@ -206,7 +229,7 @@
                         <span class="px-3 py-1 rounded-lg bg-indigo-950 text-indigo-300 font-mono text-xs font-bold border border-indigo-700">NIVEL 4 ($3,500 - $6,500 MXN)</span>
                         <i class="fa-solid fa-laptop-code text-2xl text-indigo-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Gama Media Moderna</h3>
+                    <h3 class="text-xl font-bold text-white mb-2">PC Completa Gama Media</h3>
                     <p class="text-slate-400 text-sm mb-6">Productividad avanzada, diseño gráfico de entrada, edición ligera y multitarea ágil.</p>
                     <ul class="space-y-2.5 text-sm text-slate-300 mb-6 font-mono">
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-indigo-400 text-xs"></i> Intel 12ª Gen / Ryzen 5000+</li>
@@ -215,8 +238,8 @@
                     </ul>
                 </div>
                 <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs text-slate-400 font-mono">Trabajo / Estudio</span>
-                    <button onclick="abrirCotizadorConNivel('4')" class="text-indigo-400 hover:text-indigo-300 text-sm font-bold flex items-center gap-1">Configurar <i class="fa-solid fa-arrow-right text-xs"></i></button>
+                    <span class="text-xs text-slate-400 font-mono">Equipo Completo</span>
+                    <button onclick="abrirCotizadorConNivel('4')" class="text-indigo-400 hover:text-indigo-300 text-sm font-bold flex items-center gap-1">Cotizar <i class="fa-solid fa-arrow-right text-xs"></i></button>
                 </div>
             </div>
 
@@ -227,8 +250,8 @@
                         <span class="px-3 py-1 rounded-lg bg-purple-950 text-purple-300 font-mono text-xs font-bold border border-purple-700">NIVEL 3</span>
                         <i class="fa-solid fa-cubes text-2xl text-purple-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Gama Alta / Renderizado</h3>
-                    <p class="text-slate-400 text-sm mb-6">Estaciones de trabajo pesadas para arquitectura (CAD/3D), render y edición de video 4K.</p>
+                    <h3 class="text-xl font-bold text-white mb-2">PC Completa Gama Alta / Render</h3>
+                    <p class="text-slate-400 text-sm mb-6">Estaciones para modelado 3D, renderizado pesado, arquitectura y edición de video 4K.</p>
                     <ul class="space-y-2.5 text-sm text-slate-300 mb-6 font-mono">
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-xs"></i> Intel 13ª/14ª Gen / Ryzen 7000</li>
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400 text-xs"></i> 32GB RAM DDR4/DDR5</li>
@@ -236,8 +259,8 @@
                     </ul>
                 </div>
                 <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs text-slate-400 font-mono">Alto Rendimiento</span>
-                    <button onclick="abrirCotizadorConNivel('3')" class="text-purple-400 hover:text-purple-300 text-sm font-bold flex items-center gap-1">Configurar <i class="fa-solid fa-arrow-right text-xs"></i></button>
+                    <span class="text-xs text-slate-400 font-mono">Equipo Completo</span>
+                    <button onclick="abrirCotizadorConNivel('3')" class="text-purple-400 hover:text-purple-300 text-sm font-bold flex items-center gap-1">Cotizar <i class="fa-solid fa-arrow-right text-xs"></i></button>
                 </div>
             </div>
 
@@ -248,7 +271,7 @@
                         <span class="px-3 py-1 rounded-lg bg-pink-950 text-pink-300 font-mono text-xs font-bold border border-pink-700">NIVEL 2</span>
                         <i class="fa-solid fa-bolt text-2xl text-pink-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Entusiasta & Creadores Pro</h3>
+                    <h3 class="text-xl font-bold text-white mb-2">PC Completa Entusiasta / IA</h3>
                     <p class="text-slate-400 text-sm mb-6">Sistemas de producción exigentes, desarrollo de software e inteligencia artificial local.</p>
                     <ul class="space-y-2.5 text-sm text-slate-300 mb-6 font-mono">
                         <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-400 text-xs"></i> Intel Core Ultra / Ryzen 9000</li>
@@ -257,8 +280,8 @@
                     </ul>
                 </div>
                 <div class="pt-4 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs text-slate-400 font-mono">Creadores Pro / IA</span>
-                    <button onclick="abrirCotizadorConNivel('2')" class="text-pink-400 hover:text-pink-300 text-sm font-bold flex items-center gap-1">Configurar <i class="fa-solid fa-arrow-right text-xs"></i></button>
+                    <span class="text-xs text-slate-400 font-mono">Equipo Completo</span>
+                    <button onclick="abrirCotizadorConNivel('2')" class="text-pink-400 hover:text-pink-300 text-sm font-bold flex items-center gap-1">Cotizar <i class="fa-solid fa-arrow-right text-xs"></i></button>
                 </div>
             </div>
 
@@ -269,8 +292,8 @@
                         <span class="px-3 py-1 rounded-lg bg-amber-500/20 text-amber-300 font-mono text-xs font-bold border border-amber-500/50">NIVEL 1 - TOPPING EXTREME (2026)</span>
                         <i class="fa-solid fa-crown text-2xl text-amber-400"></i>
                     </div>
-                    <h3 class="text-2xl font-black text-amber-400 mb-2">Extreme Workstation & Servidores IA</h3>
-                    <p class="text-slate-300 text-sm mb-6">La cima del rendimiento industrial y corporativo. Configurable para estudios de cine, procesamiento de IA masivo y simulaciones extreme.</p>
+                    <h3 class="text-2xl font-black text-amber-400 mb-2">Extreme Workstation & Servidores Corporativos</h3>
+                    <p class="text-slate-300 text-sm mb-6">El estándar máximo en computación: tarjetas tope de gama, placas especializadas, fuentes Platinum y soporte para inteligencia artificial masiva.</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-200 font-mono mb-6">
                         <div class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400 text-xs"></i> Procesadores Extreme / Ultra</div>
                         <div class="flex items-center gap-2"><i class="fa-solid fa-star text-amber-400 text-xs"></i> Nvidia RTX 5090 32GB (Serie 5000)</div>
@@ -279,23 +302,23 @@
                     </div>
                 </div>
                 <div class="pt-4 border-t border-amber-900/50 flex justify-between items-center">
-                    <span class="text-xs text-amber-300/80 font-mono">Topping Absoluto</span>
-                    <button onclick="abrirCotizadorConNivel('1')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-5 py-2 rounded-xl text-sm font-bold flex items-center gap-2 transition">
-                        Configurar Extreme <i class="fa-solid fa-arrow-right"></i>
+                    <span class="text-xs text-amber-300/80 font-mono">Equipo Completo Extreme</span>
+                    <button onclick="abrirCotizadorConNivel('1')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 px-5 py-2 rounded-xl text-sm font-bold flex items-center gap-2 transition font-sans">
+                        Cotizar Extreme <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COTIZADOR CON PREFILTRO Y SECUENCIA LÓGICA -->
+    <!-- COTIZADOR CON PREFILTRO Y SECUENCIA LÓGICA DE ENSAMBLE -->
     <section id="cotizador" class="py-20 bg-slate-900/80 border-y border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-12">
                 <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 font-mono text-xs uppercase tracking-widest inline-block mb-3">
-                    Secuencia Guiada de Ensamble
+                    Configurador de Computadoras Completas
                 </span>
-                <h2 class="text-3xl sm:text-4xl font-black text-white">Arma tu Propio Equipo</h2>
+                <h2 class="text-3xl sm:text-4xl font-black text-white">Configura tu Equipo Paso a Paso</h2>
                 <p class="text-slate-400 mt-2">Elige primero tu Nivel. El sistema filtrará componentes para garantizar que el gabinete, la fuente y la tarjeta de video sean 100% compatibles.</p>
             </div>
 
@@ -309,12 +332,12 @@
                 <!-- PASO 1: PREFILTRO DE NIVEL -->
                 <div class="mb-8 pb-8 border-b border-slate-800">
                     <label class="block text-sm font-bold font-mono text-amber-400 mb-3 uppercase tracking-wider">
-                        1. Selecciona el Nivel de Rendimiento
+                        1. Selecciona el Nivel de la PC Completa
                     </label>
                     <select id="select-nivel-filtro" onchange="actualizarPrefiltroNivel()" class="w-full bg-slate-900 border border-amber-500/50 text-amber-200 rounded-xl p-3.5 focus:border-amber-400 focus:outline-none font-bold">
                         <option value="5" selected>Nivel 5 — Entrada / Hogar / Oficina ($2,000 - $3,500 MXN)</option>
                         <option value="4">Nivel 4 — Gama Media Moderna ($3,500 - $6,500 MXN)</option>
-                        <option value="3">Nivel 3 — Gama Alta / Renderizado / Trabajo Pesado</option>
+                        <option value="3">Nivel 3 — Gama Alta / Trabajo Pesado</option>
                         <option value="2">Nivel 2 — Categoría Entusiasta / Creadores / IA Local</option>
                         <option value="1">Nivel 1 — TOPPING EXTREME (Nvidia RTX 5090 / Servidores IA)</option>
                     </select>
@@ -338,7 +361,7 @@
                         3. Fuente de Poder (Suministro de Energía)
                     </label>
                     <select id="select-psu" class="w-full bg-slate-900 border border-slate-700 text-slate-100 rounded-xl p-3.5 focus:border-emerald-500 focus:outline-none font-medium">
-                        <!-- Generado dinámicamente por nivel -->
+                        <!-- Generado dinámicamente -->
                     </select>
                 </div>
 
@@ -391,7 +414,7 @@
                     </div>
                 </div>
 
-                <!-- PASO 6: TARJETA DE VIDEO (FILTRADA POR NIVEL) -->
+                <!-- PASO 6: TARJETA DE VIDEO -->
                 <div class="mb-8 pb-8 border-b border-slate-800">
                     <label class="block text-sm font-bold font-mono text-indigo-400 mb-3 uppercase tracking-wider">
                         8. Tarjeta de Video (GPU)
@@ -401,65 +424,77 @@
                     </select>
                 </div>
 
+                <!-- BOTÓN DE COBRO Y PRESUPUESTO -->
                 <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
                     <div>
-                        <h4 class="font-bold text-white text-lg">¿Listo con tu presupuesto preliminar?</h4>
-                        <p class="text-slate-400 text-sm">Nos adecuamos a tu presupuesto para darte el precio final exacto de tu ensamble.</p>
+                        <h4 class="font-bold text-white text-lg">¿Listo con tu presupuesto de PC completa?</h4>
+                        <p class="text-slate-400 text-sm">Nos adecuamos a tu presupuesto. Puedes solicitar tu orden o realizar tu pago seguro directo en línea.</p>
                     </div>
-                    <button onclick="enviarPresupuestoWhatsApp()" class="w-full md:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-600/20 transition flex items-center justify-center gap-2 whitespace-nowrap">
-                        <i class="fa-brands fa-whatsapp text-xl"></i> Solicitar Presupuesto Directo
-                    </button>
+                    <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                        <button onclick="ejecutarPagoSeguro()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2 whitespace-nowrap">
+                            <i class="fa-solid fa-lock"></i> Pagar Ensamble en Línea
+                        </button>
+                        <button onclick="enviarPresupuestoWhatsApp()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2 whitespace-nowrap">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Cotizar por WhatsApp
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BOUTIQUE DE REFACCIONES & PERIFÉRICOS -->
+    <!-- BOUTIQUE DE REFACCIONES & PERIFÉRICOS SUELTOS -->
     <section id="refacciones" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 border-b border-slate-800">
-        <div class="text-center mb-16">
+        <div class="text-center mb-12">
             <span class="px-3 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-400 font-mono text-xs uppercase tracking-widest inline-block mb-3">
-                Compra Piezas Sueltas o Complementos
+                Oportunidades & Enlaces Oficiales
             </span>
             <h2 class="text-3xl sm:text-4xl font-black text-white mb-3">Boutique de Refacciones & Periféricos</h2>
-            <p class="text-slate-400 max-w-2xl mx-auto">¿No buscas un equipo completo? Encuentra componentes individuales, refacciones garantizadas y accesorios con envío a domicilio.</p>
+            <p class="text-slate-400 max-w-2xl mx-auto mb-8">Si solo buscas un componente individual (RAM, SSD, bocinas, cámaras, micro SD, monitores), utiliza nuestro buscador de oportunidades:</p>
+            
+            <div class="max-w-2xl mx-auto relative mb-12">
+                <input id="boutique-search-input" type="text" placeholder="Escribe lo que buscas: DDR3, DDR4, DDR5, SSD M.2, Monitor, Teclado, Cámara, USB..." onkeyup="filtrarRefacciones()" class="w-full bg-slate-900 border-2 border-pink-500/50 rounded-2xl pl-12 pr-28 py-3.5 text-sm text-slate-100 focus:outline-none focus:border-pink-400 shadow-xl font-medium">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-pink-400 text-lg"></i>
+                <button onclick="filtrarRefacciones()" class="absolute right-2 top-2 bg-pink-600 hover:bg-pink-500 text-white px-5 py-2 rounded-xl text-xs font-bold transition">Buscar</button>
+            </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-pink-500/50 transition">
+        <div id="contenedor-refacciones" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-pink-500/50 transition" data-tags="ddr3 ddr4 ddr5 ram memoria laptop escritorio">
                 <i class="fa-solid fa-memory text-3xl text-pink-400 mb-4 block"></i>
-                <h3 class="font-bold text-white mb-2">Memorias RAM</h3>
-                <p class="text-xs text-slate-400 mb-4">DDR4 y DDR5 para Laptop y PC de escritorio. Módulos individuales y kits dual channel.</p>
-                <button onclick="abrirChatbotConMensaje('Hola, busco cotizar una Memoria RAM específica para mi equipo.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-pink-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Consultar Modelos</button>
+                <h3 class="font-bold text-white mb-2">Memorias RAM (DDR3 / DDR4 / DDR5)</h3>
+                <p class="text-xs text-slate-400 mb-4">Módulos para Laptop y PC de escritorio. Oportunidades en kits Dual Channel.</p>
+                <button onclick="abrirChatbotConMensaje('Hola, busco una oferta de Memoria RAM (DDR3, DDR4 o DDR5).')" class="text-xs bg-slate-800 hover:bg-slate-700 text-pink-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Buscar Oportunidad</button>
             </div>
 
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-blue-500/50 transition">
+            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-blue-500/50 transition" data-tags="ssd m2 nvme disco duro mecanico almacenamiento usb micro sd">
                 <i class="fa-solid fa-hard-drive text-3xl text-blue-400 mb-4 block"></i>
-                <h3 class="font-bold text-white mb-2">Discos Duros & SSD</h3>
-                <p class="text-xs text-slate-400 mb-4">Unidades SSD NVMe M.2, discos externos USB y almacenamiento de alta capacidad.</p>
-                <button onclick="abrirChatbotConMensaje('Hola, busco cotizar almacenamiento SSD o disco duro.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-blue-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Consultar Modelos</button>
+                <h3 class="font-bold text-white mb-2">SSD M.2, USB & Micro SD</h3>
+                <p class="text-xs text-slate-400 mb-4">Almacenamiento ultra veloz PCIe 4.0/5.0, discos mecánicos y tarjetas SD.</p>
+                <button onclick="abrirChatbotConMensaje('Hola, busco cotizar un SSD M.2, Disco Mecánico o Memoria SD.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-blue-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Buscar Oportunidad</button>
             </div>
 
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-purple-500/50 transition">
-                <i class="fa-solid fa-keyboard text-3xl text-purple-400 mb-4 block"></i>
-                <h3 class="font-bold text-white mb-2">Periféricos & Accesorios</h3>
-                <p class="text-xs text-slate-400 mb-4">Teclados mecánicos, ratones ergonómicos, monitores, lectores DVD/CD y cables.</p>
-                <button onclick="abrirChatbotConMensaje('Hola, busco accesorios o periféricos para mi computadora.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-purple-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Consultar Accesorios</button>
+            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-purple-500/50 transition" data-tags="monitor teclado mouse pad bocinas camara camara web microfono">
+                <i class="fa-solid fa-desktop text-3xl text-purple-400 mb-4 block"></i>
+                <h3 class="font-bold text-white mb-2">Monitores, Periféricos & Audio</h3>
+                <p class="text-xs text-slate-400 mb-4">Monitores, teclados, ratones, bocinas, cámaras web y micrófonos para streaming.</p>
+                <button onclick="abrirChatbotConMensaje('Hola, busco cotizar un monitor, periféricos o cámaras web.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-purple-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Buscar Periféricos</button>
             </div>
 
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-emerald-500/50 transition">
-                <i class="fa-solid fa-fan text-3xl text-emerald-400 mb-4 block"></i>
-                <h3 class="font-bold text-white mb-2">Sistemas de Enfriamiento</h3>
-                <p class="text-xs text-slate-400 mb-4">Disipadores de aire por torre, enfriamientos líquidos AIO y ventiladores ARGB.</p>
-                <button onclick="abrirChatbotConMensaje('Hola, busco un sistema de enfriamiento o ventiladores.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-emerald-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Consultar Enfriamientos</button>
+            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-emerald-500/50 transition" data-tags="intel amd procesador gabinete fuente cooling liquido enfriamiento">
+                <i class="fa-solid fa-microchip text-3xl text-emerald-400 mb-4 block"></i>
+                <h3 class="font-bold text-white mb-2">Procesadores & Gabinetes</h3>
+                <p class="text-xs text-slate-400 mb-4">Enlaces directos y oportunidades en procesadores Intel / AMD y gabinetes.</p>
+                <button onclick="abrirChatbotConMensaje('Hola, busco cotizar un procesador o gabinete suelto.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-emerald-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Ver Opciones Intel/AMD</button>
             </div>
         </div>
     </section>
 
-    <!-- SERVICIOS TÉCNICOS INTEGRALES (TORRE VS LAPTOP) -->
+    <!-- SERVICIOS TÉCNICOS MODULARES -->
     <section id="servicios" class="py-20 max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl font-black text-white mb-3">Servicios Técnicos & Reparación</h2>
-            <p class="text-slate-400 max-w-2xl mx-auto">Diagnóstico preciso y sustitución directa de componentes para entregas rápidas sin demoras.</p>
+            <h2 class="text-3xl sm:text-4xl font-black text-white mb-3">Servicio Técnico Modular</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto">Sustitución directa de componentes para entregas rápidas sin demoras.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -469,7 +504,7 @@
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Sustitución Directa</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">
-                    Si un componente falla, no perdemos tiempo con cautín. Sustituimos el módulo completo por una pieza probada para que tu equipo vuelva a trabajar al 100% de inmediato.
+                    Si un component-e falla, cambiamos el módulo completo por una pieza probada para que tu equipo vuelva a trabajar de inmediato.
                 </p>
             </div>
 
@@ -479,7 +514,7 @@
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Mantenimiento de Laptops & Torres</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">
-                    Servicio técnico diferenciado: limpieza ultrasónica, reemplazo de pasta térmica de alta conductividad en Torres, Laptops de gama alta y Workstations.
+                    Limpieza ultrasónica, reemplazo de pasta térmica de alta conductividad en Torres, Laptops y Workstations.
                 </p>
             </div>
 
@@ -489,13 +524,13 @@
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Software & Licencias</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">
-                    Instalación limpia de Windows 11, optimización de BIOS/XMP, instalación de controladores oficiales y activación de suites de trabajo originales.
+                    Instalación limpia de Windows 11, optimización de BIOS/XMP, controladores oficiales y suites de trabajo originales.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- POLÍTICAS, GARANTÍAS Y MARCO LEGAL -->
+    <!-- POLÍTICAS Y MARCO LEGAL -->
     <section id="garantias" class="py-20 bg-slate-900 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-16">
@@ -592,7 +627,7 @@
         <p>© 2026 PC Custom Lab. Pedro Moreno 501 A, Guadalajara Centro. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- WIDGET DE CHATBOT FLOTANTE -->
+    <!-- CHATBOT FLOTANTE -->
     <div class="fixed bottom-6 right-6 z-50">
         <button id="chatbot-toggle" onclick="toggleChatbot()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:scale-105 text-white w-16 h-16 rounded-full shadow-2xl shadow-blue-600/50 flex items-center justify-center text-2xl transition-all">
             <i id="chatbot-icon" class="fa-solid fa-comments"></i>
@@ -612,7 +647,7 @@
 
             <div id="chat-messages" class="p-4 flex-1 overflow-y-auto space-y-4 text-sm">
                 <div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed">
-                    ¡Hola! 👋 Nos adecuamos a tu sueño y lo hacemos realidad dentro de tu presupuesto. Cuéntanos, ¿qué esperas de nosotros o qué tipo de equipo buscas?
+                    ¡Hola! 👋 Nos adecuamos a tu sueño y lo hacemos realidad dentro de tu presupuesto. Cuéntanos, ¿buscas una computadora completa o una refacción?
                 </div>
             </div>
 
@@ -647,6 +682,51 @@
         closeBtn.addEventListener('click', toggleMenu);
         menuBackdrop.addEventListener('click', toggleMenu);
         mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+        // LÓGICA DE BÚSQUEDA HERO DOBLE PROPÓSITO
+        function buscarHero() {
+            const tipo = document.getElementById('tipo-busqueda').value;
+            const query = document.getElementById('hero-search-input').value.trim();
+
+            if (tipo === 'pc') {
+                document.getElementById('niveles').scrollIntoView({ behavior: 'smooth' });
+                if (query) {
+                    abrirChatbotConMensaje(`Hola, busco una Computadora Completa ensamblada con las siguientes características: "${query}"`);
+                }
+            } else {
+                document.getElementById('refacciones').scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('boutique-search-input').value = query;
+                filtrarRefacciones();
+                if (query) {
+                    abrirChatbotConMensaje(`Hola, busco cotizar o comprar la siguiente refacción / periférico: "${query}"`);
+                }
+            }
+        }
+
+        function ejecutarBusquedaHero(e) {
+            if (e.key === 'Enter') buscarHero();
+        }
+
+        function filtrarRefacciones() {
+            const query = document.getElementById('boutique-search-input').value.toLowerCase().trim();
+            const items = document.querySelectorAll('.item-refaccion');
+
+            items.forEach(item => {
+                const tags = item.getAttribute('data-tags') || '';
+                const text = item.innerText.toLowerCase();
+                if (tags.includes(query) || text.includes(query) || query === '') {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // LÓGICA DE COBRO SEGURO TOKENIZADO (SAQ-A)
+        function ejecutarPagoSeguro() {
+            const nivel = document.getElementById('select-nivel-filtro').selectedOptions[0].text;
+            abrirChatbotConMensaje(`Deseo realizar el pago seguro en línea para el ensamble: ${nivel}`);
+        }
 
         // CONTROLES DE NIVEL Y FILTRO DE GPU Y FUENTE
         function actualizarPrefiltroNivel() {
@@ -719,7 +799,7 @@
             const ssd = document.getElementById('select-ssd').selectedOptions[0].text;
             const gpu = document.getElementById('select-gpu').selectedOptions[0].text;
             
-            const mensaje = `Hola, me gustaría cotizar una PC con los siguientes parámetros:%0A- Nivel: ${nivel}%0A- Gabinete: ${gabinete}%0A- Fuente: ${psu}%0A- Placa Madre: ${mobo}%0A- CPU: ${cpu}%0A- RAM: ${ram}%0A- SSD: ${ssd}%0A- GPU: ${gpu}`;
+            const mensaje = `Hola, me gustaría cotizar una PC COMPLETA ENSAMBLADA con los siguientes parámetros:%0A- Nivel: ${nivel}%0A- Gabinete: ${gabinete}%0A- Fuente: ${psu}%0A- Placa Madre: ${mobo}%0A- CPU: ${cpu}%0A- RAM: ${ram}%0A- SSD: ${ssd}%0A- GPU: ${gpu}`;
             window.open(`https://wa.me/523337271440?text=${mensaje}`, '_blank');
         }
 
@@ -743,7 +823,7 @@
             messages.scrollTop = messages.scrollHeight;
 
             setTimeout(() => {
-                messages.innerHTML += `<div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed">
+                messages.innerHTML += `<div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed font-sans">
                     ¡Excelente! Te conecto de inmediato con nuestro especialista principal en Guadalajara para atenderte: 
                     <br><br>
                     <a href="https://wa.me/523337271440?text=${encodeURIComponent(mensajeInicial)}" target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-xl transition text-xs">
@@ -775,7 +855,6 @@
             }, 700);
         }
 
-        // CONTROL DE ENTER EN CHAT
         function handleKeyPress(e) {
             if (e.key === 'Enter') enviarMensaje();
         }
