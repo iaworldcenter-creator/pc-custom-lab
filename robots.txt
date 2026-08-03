@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iaworldcenter-creator.github.io/pc-custom-lab/sitemap.xml
