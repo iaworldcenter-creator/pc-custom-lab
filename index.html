@@ -714,7 +714,7 @@
             abrirChatbotConMensaje(`Deseo realizar el pago seguro en línea para el ensamble: ${nivel}`);
         }
 
-        // MÓDULO CORREGIDO: MATRIZ DE HARDWARE DE ÚLTIMA GENERACIÓN SIN REDUNDANCIAS
+        // MÓDULO JS CORREGIDO: GRADUACIÓN DE GABINETES (INCLUYE MODDING EXÓTICO) Y HARDWARE REAL
         function actualizarPrefiltroNivel() {
             const nivel = document.getElementById('select-nivel-filtro').value;
             const gabineteSelect = document.getElementById('select-gabinete');
@@ -726,120 +726,67 @@
             const gpuSelect = document.getElementById('select-gpu');
 
             if (nivel === '5') {
-                gabineteSelect.innerHTML = `<option value="compact">Gabinete Slim / Micro-ATX Oficina</option>`;
-                psuSelect.innerHTML = `<option value="500w">Fuente 500W Certificada Standard 80+</option>`;
-                moboSelect.innerHTML = `
-                    <option value="h610">Placa Base Intel H610M Micro-ATX</option>
-                    <option value="a520">Placa Base AMD A520M Micro-ATX</option>
+                gabineteSelect.innerHTML = `
+                    <option value="torre-sola">$2,000 MXN — Solo Gabinete Genérico / Slim Oficina</option>
+                    <option value="kit-completo" selected>$3,500 MXN — Kit Completo (Torre Genérica + Monitor Básico + Teclado + Mouse)</option>
                 `;
-                cpuSelect.innerHTML = `
-                    <option value="i3-12100">Intel Core i3-12100 / i3-13100 + Disipador Stock</option>
-                    <option value="ryzen-3200g">AMD Ryzen 3 3200G / 4300G con Vega Graphics</option>
-                `;
-                ramSelect.innerHTML = `
-                    <option value="8gb-ddr4">8GB DDR4 2666MHz Single Channel</option>
-                    <option value="16gb-ddr4">16GB DDR4 3200MHz Dual Channel</option>
-                `;
-                ssdSelect.innerHTML = `
-                    <option value="256gb-sata">SSD SATA III 256GB / 512GB</option>
-                    <option value="512gb-nvme">SSD NVMe M.2 512GB (Rápido)</option>
-                `;
-                gpuSelect.innerHTML = `
-                    <option value="integrated" selected>Gráficos Integrados de Eficiencia (Intel UHD / AMD Vega)</option>
-                    <option value="gtx1650">Nvidia GeForce GTX 1650 4GB (Entrada Multimedia)</option>
-                `;
+                psuSelect.innerHTML = `<option value="300w">Fuente Genérica 300W - 400W</option>`;
+                moboSelect.innerHTML = `<option value="h81">Placa Base Elemental ($2,500 MXN Max - Conexión Básica Internet/YouTube)</option>`;
+                cpuSelect.innerHTML = `<option value="celeron">Intel Celeron / Dual Core / Quad Core / Athlon Elemental</option>`;
+                ramSelect.innerHTML = `<option value="8gb-ddr3" selected>8GB RAM DDR3 / DDR4 (Estándar Económico)</option>`;
+                ssdSelect.innerHTML = `<option value="500gb-hdd">Disco Mecánico 500GB / SSD 256GB SATA Económico</option>`;
+                gpuSelect.innerHTML = `<option value="integrated" selected>Sin Tarjeta Dedicada (Gráficos Integrados Básicos)</option>`;
             } 
             else if (nivel === '4') {
-                gabineteSelect.innerHTML = `<option value="mid">Gabinete Mid-Tower ATX Flujo de Aire (Ventiladores Mesh)</option>`;
-                psuSelect.innerHTML = `<option value="650w">Fuente 600W - 650W 80+ Bronze Certificada</option>`;
-                moboSelect.innerHTML = `
-                    <option value="b760">Placa Base Intel B760M Dual M.2 PCIe 4.0</option>
-                    <option value="b550">Placa Base AMD B550M DDR4 High Speed</option>
-                `;
-                cpuSelect.innerHTML = `
-                    <option value="i5-12400f">Intel Core i5-12400F / i5-13400F + Disipador Torre Air</option>
-                    <option value="ryzen-5600">AMD Ryzen 5 5600X / 5600G 6 Núcleos</option>
-                `;
-                ramSelect.innerHTML = `
-                    <option value="16gb-ddr4-3200" selected>16GB DDR4 3200MHz Dual Channel (2x8GB)</option>
-                    <option value="32gb-ddr4-3200">32GB DDR4 3200MHz Dual Channel (2x16GB)</option>
-                `;
-                ssdSelect.innerHTML = `
-                    <option value="1tb-nvme-pci4" selected>SSD NVMe M.2 1TB PCIe 4.0 (3,500 MB/s)</option>
-                `;
-                gpuSelect.innerHTML = `
-                    <option value="rtx3050">Nvidia GeForce RTX 3050 8GB GDDR6</option>
-                    <option value="rtx4060" selected>Nvidia GeForce RTX 4060 8GB GDDR6 (DLSS 3)</option>
-                `;
+                gabineteSelect.innerHTML = `<option value="kit-media" selected>Kit Completo ($3,500 - $8,000 MXN) — Gabinete Estándar Mesh + Monitor 22" + Teclado + Mouse + Webcam + Windows/Office Legal</option>`;
+                psuSelect.innerHTML = `<option value="450w">Fuente 400W - 500W Standard</option>`;
+                moboSelect.innerHTML = `<option value="b460">Placa Base Comercial Intel B460 / B560 / AMD B450 (Hasta 10ª Gen)</option>`;
+                cpuSelect.innerHTML = `<option value="i5-10gen">Intel Core i3 / i5 (Hasta 10ª Gen) / AMD Ryzen 3 / 5 3600</option>`;
+                ramSelect.innerHTML = `<option value="16gb-ddr4" selected>16GB RAM DDR4 3200MHz</option>`;
+                ssdSelect.innerHTML = `<option value="512gb-nvme">SSD NVMe M.2 512GB / 1TB Rápido</option>`;
+                gpuSelect.innerHTML = `<option value="integrated-hd" selected>Sin Tarjeta Dedicada (Gráficos Integrados UHD / Vega)</option>`;
             } 
             else if (nivel === '3') {
-                gabineteSelect.innerHTML = `<option value="mid-premium">Gabinete Corsair / Cougar Mid-Tower Cristal Templado & ARGB</option>`;
-                psuSelect.innerHTML = `<option value="750w">Fuente 750W 80+ Gold Modular ATX 3.0</option>`;
-                moboSelect.innerHTML = `
-                    <option value="b760-ddr5">Placa Base Intel B760 DDR5 Wi-Fi 6E</option>
-                    <option value="b650-am5">Placa Base AMD B650 AM5 DDR5 PCIe 5.0 Ready</option>
+                gabineteSelect.innerHTML = `
+                    <option value="gab-deepcool" selected>Gabinete de Marca Económico $1,000-$2,000 MXN (DeepCool / Cougar / XPG ARGB) + Kit Completo ($8,000 - $20,000 MXN)</option>
                 `;
-                cpuSelect.innerHTML = `
-                    <option value="i7-13700f">Intel Core i7-13700F / i7-14700F + Liquido 240mm AIO</option>
-                    <option value="ryzen-7700x">AMD Ryzen 7 7700X / 7800X3D 8 Núcleos AM5</option>
-                `;
-                ramSelect.innerHTML = `
-                    <option value="32gb-ddr5-5600" selected>32GB DDR5 5600MHz Dual Channel (2x16GB)</option>
-                `;
-                ssdSelect.innerHTML = `
-                    <option value="1tb-nvme-pci4-fast" selected>SSD NVMe M.2 1TB PCIe 4.0 (7,000 MB/s High Speed)</option>
-                    <option value="2tb-nvme-pci4">SSD NVMe M.2 2TB PCIe 4.0 Ultra Speed</option>
-                `;
+                psuSelect.innerHTML = `<option value="600w-gold">Fuente 500W - 700W 80+ Gold</option>`;
+                moboSelect.innerHTML = `<option value="b660-lga1700">Placa Base Intel B660 / B760 (11ª a 13ª Gen) / AMD B550</option>`;
+                cpuSelect.innerHTML = `<option value="i7-12gen">Intel Core i5 / i7 (11ª a 13ª Gen) / AMD Ryzen 7 5700X + Disipador Torre Air</option>`;
+                ramSelect.innerHTML = `<option value="32gb-ddr4" selected>32GB RAM DDR4 / DDR5 Dual Channel</option>`;
+                ssdSelect.innerHTML = `<option value="combo-1tb">SSD NVMe M.2 256GB/512GB (Sistema) + HDD 1TB (Respaldo Datos)</option>`;
                 gpuSelect.innerHTML = `
-                    <option value="rtx4060ti">Nvidia GeForce RTX 4060 Ti 16GB GDDR6</option>
-                    <option value="rtx4070super" selected>Nvidia GeForce RTX 4070 Super 12GB GDDR6X</option>
+                    <option value="gtx1650">Nvidia GTX 1650 4GB</option>
+                    <option value="rtx3050" selected>Nvidia RTX 2060 / RTX 3050 / RTX 3060 8GB GDDR6</option>
                 `;
             } 
             else if (nivel === '2') {
-                gabineteSelect.innerHTML = `<option value="hyte-y60">Gabinete HYTE Y60 / Lian Li O11 Dynamic Panorama RGB</option>`;
-                psuSelect.innerHTML = `<option value="850w">Fuente 850W 80+ Gold Full Modular ATX 3.0 (PCIe 5.0 Cable)</option>`;
-                moboSelect.innerHTML = `
-                    <option value="z790-pro">Placa Base ASUS / MSI Z790 DDR5 Wi-Fi 7</option>
-                    <option value="x670-am5">Placa Base AMD X670E AM5 Extreme DDR5</option>
+                gabineteSelect.innerHTML = `
+                    <option value="gab-corsair" selected>Gabinete Reconocido Mundialmente (Corsair / NZXT / Lian Li O11 Dynamic / Cooler Master) + Kit Pro ($20,000 - $50,000 MXN)</option>
                 `;
-                cpuSelect.innerHTML = `
-                    <option value="ultra-7">Intel Core Ultra 7 265K / i9-14900KF + Enfriamiento 360mm AIO</option>
-                    <option value="ryzen-9900x">AMD Ryzen 9 9900X / 9900X3D AM5 Next-Gen</option>
-                `;
-                ramSelect.innerHTML = `
-                    <option value="32gb-ddr5-6400" selected>32GB DDR5 6400MHz XMP/EXPO (2x16GB)</option>
-                    <option value="64gb-ddr5-6400">64GB DDR5 6400MHz Dual Channel (2x32GB)</option>
-                `;
-                ssdSelect.innerHTML = `
-                    <option value="2tb-nvme-pci4-pro" selected>SSD NVMe M.2 2TB PCIe 4.0 Pro (7,400 MB/s)</option>
-                `;
+                psuSelect.innerHTML = `<option value="850w-gold">Fuente 850W 80+ Gold Full Modular ATX 3.0</option>`;
+                moboSelect.innerHTML = `<option value="z790-am5">Placa Base Nuevo Socket: Intel Z790 / Z890 / AMD X670E AM5</option>`;
+                cpuSelect.innerHTML = `<option value="i9-14gen">Intel Core i7 / i9 (13ª, 14ª Gen / Ultra) / AMD Ryzen 9 (Serie 7000/8000) + Enfriamiento Líquido AIO</option>`;
+                ramSelect.innerHTML = `<option value="64gb-ddr5" selected>64GB RAM DDR5 6400MHz High Speed (2x32GB)</option>`;
+                ssdSelect.innerHTML = `<option value="combo-2tb">SSD M.2 NVMe PCIe 4.0/5.0 de 1TB-2TB + HDD 2TB (Respaldo)</option>`;
                 gpuSelect.innerHTML = `
-                    <option value="rtx4070tisuper">Nvidia GeForce RTX 4070 Ti Super 16GB GDDR6X</option>
-                    <option value="rtx4080super" selected>Nvidia GeForce RTX 4080 Super 16GB GDDR6X</option>
+                    <option value="rtx4070">Nvidia RTX 4070 Super 12GB</option>
+                    <option value="rtx4080" selected>Nvidia RTX 4070 Ti Super / RTX 4080 Super 16GB</option>
                 `;
             } 
             else if (nivel === '1') {
-                gabineteSelect.innerHTML = `<option value="custom-frame">Chasis Custom Frame Lian Li / HYTE Y70 Touch Screen XL</option>`;
-                psuSelect.innerHTML = `<option value="1200w">Fuente 1000W - 1200W 80+ Platinum / Titanium ATX 3.1 Native</option>`;
-                moboSelect.innerHTML = `
-                    <option value="z890-extreme" selected>Placa Base Intel Z890 ROG Maximus / MEG DDR5 Extreme</option>
-                    <option value="x870e-extreme">Placa Base AMD X870E Taichi / AORUS Master PCIe 5.0</option>
+                gabineteSelect.innerHTML = `
+                    <option value="gab-hyte-y70" selected>Gabinete Élite Cristal Templado / Pantalla Táctil (HYTE Y70 Touch / Lian Li V3000 Plus)</option>
+                    <option value="gab-custom-modding">Proyecto Exótico a la Medida (Custom Modding: Fibra de Vidrio, Chasis Escultórico / Forma Especial)</option>
                 `;
-                cpuSelect.innerHTML = `
-                    <option value="ultra-9-285k" selected>Intel Core Ultra 9 285K / i9-14900KS + Enfriamiento Custom / 420mm AIO</option>
-                    <option value="ryzen-9950x">AMD Ryzen 9 9950X 16 Núcleos / 32 Hilos Extreme</option>
-                `;
-                ramSelect.innerHTML = `
-                    <option value="64gb-ddr5-8000" selected>64GB DDR5 8000MHz+ Hi-Overclock XMP (2x32GB)</option>
-                    <option value="128gb-ddr5-8000">128GB DDR5 8000MHz Custom Quad Kit Workstation</option>
-                `;
-                ssdSelect.innerHTML = `
-                    <option value="2tb-nvme-pci5" selected>SSD NVMe M.2 2TB PCIe 5.0 Extreme (12,400 MB/s)</option>
-                    <option value="4tb-nvme-pci5">SSD NVMe M.2 4TB PCIe 5.0 Extreme Gen5</option>
-                `;
+                psuSelect.innerHTML = `<option value="1200w">Fuente 1200W 80+ Platinum / Titanium ATX 3.1 Native</option>`;
+                moboSelect.innerHTML = `<option value="z890-extreme" selected>Placa Base Intel Z890 ROG Maximus / AMD X870E Taichi PCIe 5.0</option>`;
+                cpuSelect.innerHTML = `<option value="ultra-9" selected>Intel Core Ultra 9 285K / AMD Ryzen 9 9950X (Serie 9000 AM5) + Líquida Custom 420mm</option>`;
+                ramSelect.innerHTML = `<option value="128gb-ddr5" selected>128GB RAM DDR5 8000MHz+ Hi-Overclock XMP/EXPO (4x32GB)</option>`;
+                ssdSelect.innerHTML = `<option value="combo-extreme">SSD NVMe M.2 4TB PCIe 5.0 Extreme (12,400 MB/s) + HDD 4TB-6TB (Respaldo)</option>`;
                 gpuSelect.innerHTML = `
                     <option value="rtx5090" selected>Nvidia GeForce RTX 5090 32GB GDDR7 (Topping Extreme 2026)</option>
-                    <option value="enterprise">Solución Corporativa Multi-GPU / Cluster Servidor IA (Bajo Cotización)</option>
+                    <option value="multi-gpu">Cluster Servidor IA Multi-GPU Corporativo</option>
                 `;
             }
             validarCompatibilidad();
