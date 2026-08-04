@@ -76,7 +76,7 @@
             <span class="absolute left-14 bg-slate-900 border border-slate-800 text-white text-[10px] font-mono px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition whitespace-nowrap">Facebook</span>
         </a>
         <a href="#" target="_blank" class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 hover:bg-sky-500 hover:text-white transition flex items-center justify-center text-lg relative group" title="Twitter/X">
-            <i class="fa-brands fa-x-twitter"></i>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             <span class="absolute left-14 bg-slate-900 border border-slate-800 text-white text-[10px] font-mono px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition whitespace-nowrap">Twitter / X</span>
         </a>
         <a href="#" target="_blank" class="w-10 h-10 rounded-xl bg-pink-600/10 border border-pink-500/30 text-pink-500 hover:bg-pink-600 hover:text-white transition flex items-center justify-center text-lg relative group" title="Instagram">
@@ -280,41 +280,11 @@
             </div>
         </div>
 
-        <div id="contenedor-refacciones" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-pink-500/50 transition" data-tags="ddr3 ddr4 ddr5 8000 ram memoria laptop escritorio">
-                <i class="fa-solid fa-memory text-3xl text-pink-400 mb-4 block"></i>
-                <h3 class="font-bold text-white mb-2">Memorias RAM (DDR3 / DDR4 / DDR5 8000+)</h3>
-                <p class="text-xs text-slate-400 mb-4">Módulos para Laptop y PC de escritorio. Oportunidades en kits Dual Channel de alta frecuencia.</p>
-                <button onclick="abrirChatbotConMensaje('Hola, busco una oferta de Memoria RAM (DDR3, DDR4 o DDR5).')" class="text-xs bg-slate-800 hover:bg-slate-700 text-pink-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Buscar Oportunidad</button>
-            </div>
-
-            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-blue-500/50 transition" data-tags="ssd m2 nvme pcie 5.0 disco duro mecanico almacenamiento usb micro sd">
-                <i class="fa-solid fa-hard-drive text-3xl text-blue-400 mb-4 block"></i>
-                <h3 class="font-bold text-white mb-2">SSD M.2 PCIe 5.0 & Discos Mecánicos</h3>
-                <p class="text-xs text-slate-400 mb-4">Almacenamiento ultra veloz PCIe 4.0/5.0 (12,000 MB/s), discos externos y memorias SD.</p>
-                <button onclick="abrirChatbotConMensaje('Hola, busco cotizar un SSD M.2, Disco Mecánico o Memoria SD.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-blue-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Buscar Oportunidad</button>
-            </div>
-
-            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-purple-500/50 transition" data-tags="monitor teclado mouse pad bocinas camara camara web microfono">
-                <i class="fa-solid fa-desktop text-3xl text-purple-400 mb-4 block"></i>
-                <h3 class="font-bold text-white mb-2">Monitores, Periféricos & Audio</h3>
-                <p class="text-xs text-slate-400 mb-4">Monitores 144Hz/240Hz, teclados mecánicos, ratones, bocinas y cámaras web 4K.</p>
-                <button onclick="abrirChatbotConMensaje('Hola, busco cotizar un monitor, periféricos o cámaras web.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-purple-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Buscar Periféricos</button>
-            </div>
-
-            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-emerald-500/50 transition" data-tags="intel ultra amd ryzen 9000 procesador gabinete hyte lian li fuente cooling liquido">
-                <i class="fa-solid fa-microchip text-3xl text-emerald-400 mb-4 block"></i>
-                <h3 class="font-bold text-white mb-2">Procesadores & Gabinetes de Autor</h3>
-                <p class="text-xs text-slate-400 mb-4">Enlaces directos a procesadores Intel Core Ultra, Ryzen 9000 y chasís Lian Li / HYTE.</p>
-                <button onclick="abrirChatbotConMensaje('Hola, busco cotizar un procesador o gabinete suelto.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-emerald-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Ver Opciones Intel/AMD</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- CARRUSEL DINÁMICO DE LA MASCOTA TIGRE -->
-    <section class="py-12 bg-slate-950/60 border-b border-slate-800 overflow-hidden">
+        <!-- CARRUSEL DINÁMICO DE LA MASCOTA TIGRE (REUBICADO) -->
+<!-- CARRUSEL DINÁMICO DE LA MASCOTA TIGRE -->
+    <div class="text-center mt-16 overflow-hidden bg-teal-950/10 p-6 sm:p-10 rounded-3xl border border-teal-500/20 shadow-2xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-            <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
+            <span class="px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
                 PC Custom Lab & Tech Service
             </span>
             <h2 class="text-3xl font-black text-white mb-2">Garantía, Calidad y Respaldo</h2>
@@ -328,84 +298,84 @@
                     <div class="flex flex-nowrap">
                         
                         <!-- Card 1 -->
-                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
                                 <img src="assets/img/tigre_atlas.jpg" alt="Tigre Atlas" class="w-full h-full object-cover">
                             </div>
-                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
-                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                            <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
                                     MURO DE MARCAS GLOBAL<br>COMPONENTES ORIGINALES CERTIFICADOS
                                 </span>
                             </div>
                         </div>
 
                         <!-- Card 2 -->
-                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
                                 <img src="assets/img/tigre_mosaico.jpg" alt="Tigre Mosaico" class="w-full h-full object-cover">
                             </div>
-                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
-                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                            <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
                                     PERIFÉRICOS & ACCESORIOS<br>DISEÑO ERGONÓMICO Y ALTA PRECISIÓN
                                 </span>
                             </div>
                         </div>
 
                         <!-- Card 3 -->
-                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
                                 <img src="assets/img/tigre_corporativo.jpg" alt="Tigre Corporativo" class="w-full h-full object-cover">
                             </div>
-                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
-                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                            <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
                                     PC CUSTOM LAB | TECH SERVICE<br>CALIDAD CORPORATIVA CERTIFICADA - GARANTÍA DIRECTA DE DISTRIBUIDOR
                                 </span>
                             </div>
                         </div>
 
                         <!-- Card 4 -->
-                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
                                 <img src="assets/img/tigre_mantenimiento.jpg" alt="Tigre Mantenimiento" class="w-full h-full object-cover">
                             </div>
-                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
-                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                            <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
                                     HONESTIDAD | TRANSPARENCIA<br>SERVICIO TÉCNICO ESPECIALIZADO
                                 </span>
                             </div>
                         </div>
 
                         <!-- Card 5 -->
-                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
                                 <img src="assets/img/watermarked_img_18022745987980343598.png" alt="Tigre Software" class="w-full h-full object-cover">
                             </div>
-                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
-                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                            <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
                                     LICENCIAMIENTO GARANTIZADO<br>IMPULSAMOS TU NEGOCIO
                                 </span>
                             </div>
                         </div>
 
                         <!-- Card 6 -->
-                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
                                 <img src="assets/img/watermarked_img_14066452234785072076.png" alt="Tigre Gamer" class="w-full h-full object-cover">
                             </div>
-                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
-                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                            <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
                                     PC CUSTOM LAB | GAMING ELITE<br>EQUIPOS DE COMPETENCIA DE ALTO RENDIMIENTO
                                 </span>
                             </div>
                         </div>
 
                         <!-- Card 7 -->
-                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
                                 <img src="assets/img/watermarked_img_2569896447007544548.png" alt="Tigre Gemini" class="w-full h-full object-cover">
                             </div>
-                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
-                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                            <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
                                     PC CUSTOM LAB TECH SERVICE<br>SITIO CREADO POR GOOGLE GEMINI AI
                                 </span>
                             </div>
@@ -417,84 +387,84 @@
                     <div class="flex flex-nowrap">
                         
                         <!-- Card 1 -->
-                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
                                 <img src="assets/img/tigre_atlas.jpg" alt="Tigre Atlas" class="w-full h-full object-cover">
                             </div>
-                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
-                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                            <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
                                     MURO DE MARCAS GLOBAL<br>COMPONENTES ORIGINALES CERTIFICADOS
                                 </span>
                             </div>
                         </div>
 
                         <!-- Card 2 -->
-                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
                                 <img src="assets/img/tigre_mosaico.jpg" alt="Tigre Mosaico" class="w-full h-full object-cover">
                             </div>
-                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
-                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                            <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
                                     PERIFÉRICOS & ACCESORIOS<br>DISEÑO ERGONÓMICO Y ALTA PRECISIÓN
                                 </span>
                             </div>
                         </div>
 
                         <!-- Card 3 -->
-                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
                                 <img src="assets/img/tigre_corporativo.jpg" alt="Tigre Corporativo" class="w-full h-full object-cover">
                             </div>
-                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
-                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                            <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
                                     PC CUSTOM LAB | TECH SERVICE<br>CALIDAD CORPORATIVA CERTIFICADA - GARANTÍA DIRECTA DE DISTRIBUIDOR
                                 </span>
                             </div>
                         </div>
 
                         <!-- Card 4 -->
-                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
                                 <img src="assets/img/tigre_mantenimiento.jpg" alt="Tigre Mantenimiento" class="w-full h-full object-cover">
                             </div>
-                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
-                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                            <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
                                     HONESTIDAD | TRANSPARENCIA<br>SERVICIO TÉCNICO ESPECIALIZADO
                                 </span>
                             </div>
                         </div>
 
                         <!-- Card 5 -->
-                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
                                 <img src="assets/img/watermarked_img_18022745987980343598.png" alt="Tigre Software" class="w-full h-full object-cover">
                             </div>
-                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
-                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                            <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
                                     LICENCIAMIENTO GARANTIZADO<br>IMPULSAMOS TU NEGOCIO
                                 </span>
                             </div>
                         </div>
 
                         <!-- Card 6 -->
-                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
                                 <img src="assets/img/watermarked_img_14066452234785072076.png" alt="Tigre Gamer" class="w-full h-full object-cover">
                             </div>
-                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
-                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                            <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
                                     PC CUSTOM LAB | GAMING ELITE<br>EQUIPOS DE COMPETENCIA DE ALTO RENDIMIENTO
                                 </span>
                             </div>
                         </div>
 
                         <!-- Card 7 -->
-                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
                                 <img src="assets/img/watermarked_img_2569896447007544548.png" alt="Tigre Gemini" class="w-full h-full object-cover">
                             </div>
-                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
-                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                            <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
                                     PC CUSTOM LAB TECH SERVICE<br>SITIO CREADO POR GOOGLE GEMINI AI
                                 </span>
                             </div>
@@ -504,33 +474,12 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    
     </section>
 
-    <!-- BANNER DE CAPTURA DE LEADS -->
-    <section class="py-12 bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950 border-b border-slate-800">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6">
-            <div class="bg-slate-900/90 border border-blue-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
-                <div class="text-left max-w-xl">
-                    <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 font-mono text-xs uppercase font-bold mb-3 inline-block">
-                        🎁 Registro de Clientes
-                    </span>
-                    <h3 class="text-2xl font-black text-white mb-2">30% de Descuento en tu Próximo Servicio</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        Al comprar tu equipo o registrar tus datos, obtienes seguimiento preventivo continuo e incentivos de toma a cuenta si deseas actualizar tu máquina en el futuro.
-                    </p>
-                </div>
-                <form id="form-lead" onsubmit="guardarLead(event)" class="w-full md:w-auto flex flex-col sm:flex-row gap-3">
-                    <input type="email" id="lead-email" placeholder="Tu Correo Electrónico" required class="bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
-                    <input type="tel" id="lead-phone" placeholder="Tu WhatsApp / Teléfono" required class="bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
-                    <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition whitespace-nowrap">
-                        Obtener Mi 30%
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- NIVELES DE EQUIPOS (REEMPLAZADO POR VIDEO Y NIVELES EN COBERTURA TURQUESA/ESMERALDA CLARO) -->
+<!-- NIVELES DE EQUIPOS (REEMPLAZADO POR VIDEO Y NIVELES EN COBERTURA TURQUESA/ESMERALDA CLARO) -->
     <section id="niveles" class="py-20 bg-slate-950 border-t border-slate-900 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
             
@@ -649,7 +598,9 @@
 
         </div>
     </section>
-    <!-- COTIZADOR MATRIZ DINÁMICA SIN REDUNDANCIAS -->
+    
+
+<!-- COTIZADOR MATRIZ DINÁMICA SIN REDUNDANCIAS -->
     <section id="cotizador" class="py-20 bg-slate-900/80 border-y border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-12">
@@ -770,164 +721,9 @@
         </div>
     </section>
 
-    <!-- SERVICIOS TÉCNICOS MODULARES -->
-    <section id="servicios" class="py-20 max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl font-black text-white mb-3">Servicio Técnico Modular</h2>
-            <p class="text-slate-400 max-w-2xl mx-auto">Sustitución directa de componentes para entregas rápidas sin demoras.</p>
-        </div>
+    
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-blue-500/50 transition shadow-xl">
-                <div class="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 text-xl font-bold mb-6 border border-blue-500/20">
-                    <i class="fa-solid fa-arrows-rotate"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">Sustitución Directa</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Si un componente falla, cambiamos el módulo completo por una pieza probada para que tu equipo vuelva a trabajar de inmediato.
-                </p>
-            </div>
-
-            <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-indigo-500/50 transition shadow-xl">
-                <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 text-xl font-bold mb-6 border border-indigo-500/20">
-                    <i class="fa-solid fa-laptop text-indigo-400"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">Mantenimiento de Laptops & Torres</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Limpieza ultrasónica, reemplazo de pasta térmica de alta conductividad en Torres, Laptops y Workstations.
-                </p>
-            </div>
-
-            <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl hover:border-purple-500/50 transition shadow-xl">
-                <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 text-xl font-bold mb-6 border border-purple-500/20">
-                    <i class="fa-solid fa-key"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">Software & Licencias</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Instalación limpia de Windows 11, optimización de BIOS/XMP, controladores oficiales y suites de trabajo originales.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- POLÍTICAS Y MARCO LEGAL -->
-    <section id="garantias" class="py-20 bg-slate-900 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="text-center mb-16">
-                <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs uppercase tracking-widest inline-block mb-3">
-                    Transparencia y Protección Jurídica
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-black text-white">Políticas de Garantía y Servicio</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">Términos claros para la protección del cliente y de nuestro laboratorio técnico.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
-                <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4">
-                    <h3 class="text-lg font-bold text-emerald-400 flex items-center gap-2">
-                        <i class="fa-solid fa-file-contract"></i> Cobertura de Garantía
-                    </h3>
-                    <ul class="space-y-3 text-slate-300 leading-relaxed font-mono text-xs">
-                        <li>• <strong>Mano de Obra y Ensamble:</strong> 30 días naturales de garantía directa sobre cualquier diagnóstico o servicio realizado.</li>
-                        <li>• <strong>Componentes Nuevos:</strong> Respaldados por la garantía oficial directa del fabricante o distribuidor.</li>
-                        <li>• <strong>Componentes Reacondicionados / De Uso:</strong> Probados bajo estrés técnico previo. Se especifica el periodo en la nota de entrega con sustitución directa de módulo.</li>
-                    </ul>
-                </div>
-
-                <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4">
-                    <h3 class="text-lg font-bold text-amber-400 flex items-center gap-2">
-                        <i class="fa-solid fa-triangle-exclamation"></i> Exclusiones (Mal Uso)
-                    </h3>
-                    <ul class="space-y-3 text-slate-300 leading-relaxed font-mono text-xs">
-                        <li>• <strong>Voltajes Incorrectos:</strong> La garantía queda estrictamente anulada si el equipo es conectado a fuentes de alimentación de 220V cuando su configuración opera a 127V, o por descargas eléctricas sin regulador.</li>
-                        <li>• <strong>Daños Físicos y Derrames:</strong> Inundaciones, golpes, caídas o manipulación por terceros no autorizados invalidan la garantía.</li>
-                        <li>• <strong>Software de Terceros:</strong> La garantía cubre el hardware y sistema operativo base; no cubre virus o alteraciones posteriores del usuario.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACTO Y UBICACIÓN OFICIAL EN GUADALAJARA CENTRO -->
-    <section id="contacto" class="py-20 bg-slate-950 border-t border-slate-800">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6">
-            <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-indigo-950 border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <span class="text-xs font-mono text-amber-400 uppercase tracking-widest block mb-2">// Atención Personalizada</span>
-                        <h2 class="text-3xl font-black text-white mb-4">Ubicación & Contacto Directo</h2>
-                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">
-                            Visítanos en nuestras instalaciones en la colonia Centro de Guadalajara para recepción de equipos, asesoría presencial o entrega de ensambles.
-                        </p>
-                        <div class="space-y-4 text-slate-200">
-                            <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div>
-                                    <span class="text-xs text-slate-400 block font-mono">Dirección Física</span>
-                                    <span class="font-bold text-sm">Pedro Moreno 501 A, Col. Guadalajara Centro<br>C.P. 44100, Guadalajara, Jal.</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div>
-                                    <span class="text-xs text-slate-400 block font-mono">Teléfono Fijo</span>
-                                    <a href="tel:3336136348" class="font-bold hover:text-blue-400">(33) 3613-6348</a>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
-                                    <i class="fa-brands fa-whatsapp text-lg"></i>
-                                </div>
-                                <div>
-                                    <span class="text-xs text-slate-400 block font-mono">Celular / WhatsApp Business</span>
-                                    <a href="https://wa.me/523337271440" target="_blank" class="font-bold text-emerald-400 hover:underline">+52 (33) 3727-1440</a>
-                                </div>
-                            </div>
-                            <!-- Contenedor Integrado para Redes Sociales en Contacto -->
-                            <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-lg bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400">
-                                    <i class="fa-solid fa-share-nodes"></i>
-                                </div>
-                                <div>
-                                    <span class="text-xs text-slate-400 block font-mono">Redes Sociales</span>
-                                    <div class="flex gap-2.5 mt-1">
-                                        <a href="#" target="_blank" class="w-8 h-8 rounded-lg bg-slate-850/80 hover:bg-red-600/20 text-slate-400 hover:text-red-500 border border-slate-800 flex items-center justify-center transition" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                                        <a href="#" target="_blank" class="w-8 h-8 rounded-lg bg-slate-850/80 hover:bg-blue-600/20 text-slate-400 hover:text-blue-500 border border-slate-800 flex items-center justify-center transition" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                        <a href="#" target="_blank" class="w-8 h-8 rounded-lg bg-slate-850/80 hover:bg-sky-500/20 text-slate-400 hover:text-sky-400 border border-slate-800 flex items-center justify-center transition" title="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-                                        <a href="#" target="_blank" class="w-8 h-8 rounded-lg bg-slate-850/80 hover:bg-pink-600/20 text-slate-400 hover:text-pink-500 border border-slate-800 flex items-center justify-center transition" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                                        <a href="#" target="_blank" class="w-8 h-8 rounded-lg bg-slate-850/80 hover:bg-cyan-600/20 text-slate-400 hover:text-cyan-400 border border-slate-800 flex items-center justify-center transition" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <span class="text-xs text-slate-400 block font-mono">Correo Electrónico</span>
-                                    <a href="mailto:iaworldcenter@gmail.com" class="font-bold text-slate-200 hover:text-white hover:underline">iaworldcenter@gmail.com</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 text-center">
-                        <i class="fa-solid fa-clock-rotate-left text-4xl text-amber-400 mb-4 block"></i>
-                        <h3 class="text-lg font-bold text-white mb-2">Horarios de Recepción</h3>
-                        <p class="text-slate-400 text-sm mb-6">Lunes a Viernes: 9:00 AM - 7:00 PM<br>Sábados: 10:00 AM - 3:00 PM</p>
-                        <a href="https://wa.me/523337271440?text=Hola,%20quisiera%20agendar%20una%20cita%20o%20visita%20a%20su%20ubicacion%20en%20Pedro%20Moreno." target="_blank" class="block w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3.5 rounded-xl transition text-center">
-                            Agendar Visita por WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROGRAMA DE LEALTAD Y MASCOTA EJECUTIVA -->
+<!-- PROGRAMA DE LEALTAD Y MASCOTA EJECUTIVA -->
     <section class="py-16 bg-slate-900/40 border-t border-slate-800 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -982,7 +778,91 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    
+
+<!-- CONTACTO Y UBICACIÓN OFICIAL EN GUADALAJARA CENTRO -->
+    <section id="contacto" class="py-20 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-indigo-950 border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <span class="text-xs font-mono text-amber-400 uppercase tracking-widest block mb-2">// Ubicación y Contacto Directo</span>
+                        <h2 class="text-3xl font-black text-white mb-4">Ubicación y Contacto Directo</h2>
+                        <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                            Visítanos en nuestras instalaciones en la colonia Centro de Guadalajara para recepción de equipos, asesoría presencial o entrega de ensambles.
+                        </p>
+                        <div class="space-y-4 text-slate-200">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-400 block font-mono">Dirección Física</span>
+                                    <span class="font-bold text-sm">Pedro Moreno 501 A, Col. Guadalajara Centro<br>C.P. 44100, Guadalajara, Jal.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-400 block font-mono">Teléfono Fijo</span>
+                                    <a href="tel:3336136348" class="font-bold hover:text-blue-400">(33) 3613-6348</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-400 block font-mono">Celular / WhatsApp Business</span>
+                                    <a href="https://wa.me/523337271440" target="_blank" class="font-bold text-emerald-400 hover:underline">+52 (33) 3727-1440</a>
+                                </div>
+                            </div>
+                            <!-- Contenedor Integrado para Redes Sociales en Contacto -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-400 block font-mono">Redes Sociales</span>
+                                    <div class="flex gap-2.5 mt-1">
+                                        <a href="#" target="_blank" class="w-8 h-8 rounded-lg bg-slate-850/80 hover:bg-red-600/20 text-slate-400 hover:text-red-500 border border-slate-800 flex items-center justify-center transition" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                                        <a href="#" target="_blank" class="w-8 h-8 rounded-lg bg-slate-850/80 hover:bg-blue-600/20 text-slate-400 hover:text-blue-500 border border-slate-800 flex items-center justify-center transition" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="#" target="_blank" class="w-8 h-8 rounded-lg bg-slate-850/80 hover:bg-sky-500/20 text-slate-400 hover:text-sky-400 border border-slate-800 flex items-center justify-center transition" title="Twitter/X"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                                        <a href="#" target="_blank" class="w-8 h-8 rounded-lg bg-slate-850/80 hover:bg-pink-600/20 text-slate-400 hover:text-pink-500 border border-slate-800 flex items-center justify-center transition" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="#" target="_blank" class="w-8 h-8 rounded-lg bg-slate-850/80 hover:bg-cyan-600/20 text-slate-400 hover:text-cyan-400 border border-slate-800 flex items-center justify-center transition" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-400 block font-mono">Correo Electrónico</span>
+                                    <a href="mailto:iaworldcenter@gmail.com" class="font-bold text-slate-200 hover:text-white hover:underline">iaworldcenter@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 text-center">
+                        <i class="fa-solid fa-clock-rotate-left text-4xl text-amber-400 mb-4 block"></i>
+                        <h3 class="text-lg font-bold text-white mb-2">Horarios de Recepción</h3>
+                        <p class="text-slate-400 text-sm mb-6">Lunes a Viernes: 9:00 AM - 7:00 PM<br>Sábados: 10:00 AM - 3:00 PM</p>
+                        <a href="https://wa.me/523337271440?text=Hola,%20quisiera%20agendar%20una%20cita%20o%20visita%20a%20su%20ubicacion%20en%20Pedro%20Moreno." target="_blank" class="block w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3.5 rounded-xl transition text-center">
+                            Agendar Visita por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+<!-- FOOTER -->
     <footer class="py-8 bg-slate-950 border-t border-slate-900 text-center text-slate-500 text-sm font-mono">
         <p>© 2026 PC Custom Lab. Pedro Moreno 501 A, Guadalajara Centro. Todos los derechos reservados.</p>
     </footer>
