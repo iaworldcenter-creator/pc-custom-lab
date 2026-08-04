@@ -636,8 +636,17 @@
             </div>
 
             <div id="chat-messages" class="p-4 flex-1 overflow-y-auto space-y-4 text-sm">
-                <div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed">
-                    ¡Hola! 👋 Nos adecuamos a tu sueño y lo hacemos realidad dentro de tu presupuesto. Cuéntanos, ¿buscas una computadora completa o una refacción?
+                <div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed space-y-3">
+                    <p>¡Hola! 👋 Nos adecuamos a tu sueño y lo hacemos realidad dentro de tu presupuesto. Cuéntanos tu idea o contáctanos directamente:</p>
+                    <div class="flex flex-col gap-2 pt-1">
+                        <a href="tel:3337271440" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-solid fa-phone"></i> Llamar por Teléfono Directo
+                        </a>
+                        <a href="https://wa.me/523337271440?text=Hola,%20quisiera%20cotizar%20un%20equipo%20en%20PC%20Custom%20Lab" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Chatear por WhatsApp
+                        </a>
+                    </div>
+                    <p class="text-slate-400 text-[11px] pt-1 font-mono text-center">O escribe tu mensaje abajo si no cuentas con WhatsApp:</p>
                 </div>
             </div>
 
@@ -741,7 +750,7 @@
                 gpuSelect.innerHTML = `<option value="integrated" selected>Sin Tarjeta Dedicada (Gráficos Integrados Básicos)</option>`;
             } 
             else if (nivel === '4') {
-                gabineteSelect.innerHTML = `<option value="kit-media" selected>Kit Completo ($3,500 - $8,000 MXN) — Gabinete Estándar + Monitor 22" + Teclado + Mouse + Webcam + Licencia Legal</option>`;
+                gabineteSelect.innerHTML = `<option value="kit-media" selected>Kit Completo (Gabinete Estándar + Monitor 22" + Teclado + Mouse + Webcam + Licencia Legal)</option>`;
                 psuSelect.innerHTML = `<option value="450w">Fuente Estándar 400W - 500W</option>`;
                 moboSelect.innerHTML = `<option value="b460">Placa Base Comercial Intel B460 / B560 / AMD B450</option>`;
                 cpuSelect.innerHTML = `<option value="i5-10gen">Intel Core i3 / i5 (Hasta 10ª Gen) / AMD Ryzen 3 / 5 3600</option>`;
@@ -750,7 +759,7 @@
                 gpuSelect.innerHTML = `<option value="integrated-hd" selected>Sin Tarjeta Dedicada (Gráficos Integrados UHD / Vega)</option>`;
             } 
             else if (nivel === '3') {
-                gabineteSelect.innerHTML = `<option value="kit-alta" selected>Kit Trabajo/Render ($8,000 - $20,000 MXN) — Gabinete Marca Económica ($1k-$2k) + Monitor 24" + Disipador Torre Air + Periféricos</option>`;
+                gabineteSelect.innerHTML = `<option value="kit-alta" selected>Kit Trabajo/Render (Gabinete Marca Económica + Monitor 24" + Disipador Torre Air + Periféricos)</option>`;
                 psuSelect.innerHTML = `<option value="600w-gold">Fuente 500W - 700W 80+ Gold</option>`;
                 moboSelect.innerHTML = `<option value="b660-lga1700">Placa Base Intel B660 / B760 (11ª y 12ª Gen) / AMD B550</option>`;
                 cpuSelect.innerHTML = `<option value="i7-12gen">Intel Core i5 / i7 (11ª y 12ª Gen) / AMD Ryzen 7 5700X</option>`;
@@ -762,7 +771,7 @@
                 `;
             } 
             else if (nivel === '2') {
-                gabineteSelect.innerHTML = `<option value="kit-entusiasta" selected>Kit Pro ($20,000 - $50,000 MXN) — Chasis Marca Mundial (Corsair/NZXT/Lian Li) + Monitor 144Hz + Líquida AIO + Licencias</option>`;
+                gabineteSelect.innerHTML = `<option value="kit-entusiasta" selected>Kit Pro (Chasis Marca Mundial (Corsair/NZXT/Lian Li) + Monitor 144Hz + Líquida AIO + Licencias)</option>`;
                 psuSelect.innerHTML = `<option value="850w-gold">Fuente 800W - 1000W 80+ Gold Full Modular ATX 3.0</option>`;
                 moboSelect.innerHTML = `<option value="z790-am5">Placa Base Nuevo Socket: Intel Z790 / Z890 / AMD X670E AM5</option>`;
                 cpuSelect.innerHTML = `<option value="i9-14gen">Intel Core i7 / i9 (13ª, 14ª Gen / Ultra) / AMD Ryzen 9 (Serie 7000/8000)</option>`;
@@ -775,7 +784,7 @@
             } 
             else if (nivel === '1') {
                 gabineteSelect.innerHTML = `
-                    <option value="gab-hyte-y70" selected>Estación Extreme ($60,000 - $150,000+ MXN) — Chasis Élite HYTE Y70 Touch Screen / Lian Li V3000</option>
+                    <option value="gab-hyte-y70" selected>Estación Extreme (Chasis Élite HYTE Y70 Touch Screen / Lian Li V3000)</option>
                     <option value="gab-custom-modding">Proyecto Exótico Personalizado (Fibra de Vidrio, Herrería, Estructura Escultórica a Medida)</option>
                 `;
                 psuSelect.innerHTML = `<option value="1200w">Fuente 1200W 80+ Platinum / Titanium ATX 3.1 Native</option>`;
@@ -846,12 +855,19 @@
             messages.scrollTop = messages.scrollHeight;
 
             setTimeout(() => {
-                messages.innerHTML += `<div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed font-sans">
-                    ¡Excelente! Te conecto de inmediato con nuestro especialista principal en Guadalajara para atenderte: 
-                    <br><br>
-                    <a href="https://wa.me/523337271440?text=${encodeURIComponent(mensajeInicial)}" target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-xl transition text-xs">
-                        <i class="fa-brands fa-whatsapp text-sm"></i> Chatear por WhatsApp
-                    </a>
+                messages.innerHTML += `<div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed space-y-3">
+                    <p>¡Excelente! Selecciona cómo deseas continuar:</p>
+                    <div class="flex flex-col gap-2">
+                        <a href="tel:3337271440" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-solid fa-phone"></i> Llamar por Teléfono Directo
+                        </a>
+                        <a href="https://wa.me/523337271440?text=${encodeURIComponent(mensajeInicial)}" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Chatear por WhatsApp
+                        </a>
+                        <a href="mailto:soporte@pccustomlab.com?subject=Cotizacion%20PC%20Custom%20Lab&body=${encodeURIComponent(mensajeInicial)}" class="flex items-center justify-center gap-2 bg-slate-700 hover:bg-slate-600 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-solid fa-envelope"></i> Enviar por Correo Electrónico
+                        </a>
+                    </div>
                 </div>`;
                 messages.scrollTop = messages.scrollHeight;
             }, 600);
@@ -867,12 +883,19 @@
             input.value = '';
 
             setTimeout(() => {
-                messages.innerHTML += `<div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed">
-                    Muchas gracias por escribirnos. Para darle seguimiento directo a tu idea o cotización:
-                    <br><br>
-                    <a href="https://wa.me/523337271440?text=${encodeURIComponent(text)}" target="_blank" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2 rounded-xl transition text-xs">
-                        <i class="fa-brands fa-whatsapp text-sm"></i> Transferir a WhatsApp Directo
-                    </a>
+                messages.innerHTML += `<div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed space-y-3">
+                    <p>Muchas gracias por escribirnos. Elige la vía para comunicarte con nosotros o enviarnos tu mensaje:</p>
+                    <div class="flex flex-col gap-2">
+                        <a href="tel:3337271440" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-solid fa-phone"></i> Llamar por Teléfono Directo
+                        </a>
+                        <a href="https://wa.me/523337271440?text=${encodeURIComponent(text)}" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Enviar por WhatsApp
+                        </a>
+                        <a href="mailto:soporte@pccustomlab.com?subject=Consulta%20PC%20Custom%20Lab&body=${encodeURIComponent(text)}" class="flex items-center justify-center gap-2 bg-slate-700 hover:bg-slate-600 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-solid fa-envelope"></i> Enviar por Correo Electrónico
+                        </a>
+                    </div>
                 </div>`;
                 messages.scrollTop = messages.scrollHeight;
             }, 700);
