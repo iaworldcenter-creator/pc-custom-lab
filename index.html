@@ -49,6 +49,19 @@
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0f172a; }
         ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 25s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden">
@@ -218,6 +231,267 @@
             </div>
         </div>
     </header>
+
+    <!-- PROGRAMA DE LEALTAD Y MASCOTA EJECUTIVA -->
+    <section class="py-16 bg-slate-900/40 border-b border-slate-800 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Mascota & Crédito -->
+                <div class="lg:col-span-5 flex flex-col items-center text-center">
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950">
+                        <img src="assets/img/mascota_tigre.jpg" alt="Mascota Tigre Ejecutivo" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 bg-slate-950/80 border-t border-slate-800 p-3">
+                            <span class="text-[10px] text-slate-400 font-mono tracking-wider">
+                                <i class="fa-solid fa-wand-magic-sparkles text-indigo-400 mr-1"></i> Este sitio fue creado con la inteligencia artificial de Google Gemini
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenido & Formulario de Lealtad -->
+                <div class="lg:col-span-7 space-y-6 text-left">
+                    <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 font-mono text-xs uppercase tracking-widest inline-block">
+                        Club de Socios PC Custom Lab
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white leading-tight">Programa de Lealtad & Recompensas</h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Recibe recompensas exclusivas, mantenimientos preventivos gratuitos y regalos sorpresa en tus compras y servicios de Gabinetes, Procesadores, Tarjetas de Video, Memorias RAM y componentes seleccionados.
+                    </p>
+
+                    <!-- Registro Rápido -->
+                    <form id="form-lealtad" onsubmit="registrarLealtad(event)" class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Correo Electrónico</label>
+                                <input type="email" id="lealtad-email" placeholder="correo@ejemplo.com" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">WhatsApp / Celular</label>
+                                <input type="tel" id="lealtad-phone" placeholder="33 3727 1440" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500">
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 pt-2">
+                            <input type="checkbox" id="cookies-accept" required class="mt-1 accent-indigo-600 rounded">
+                            <label for="cookies-accept" class="text-xs text-slate-400 leading-normal select-none">
+                                Acepto la política de cookies para optimizar búsquedas y respuestas rápidas del asistente virtual de PC Custom Lab.
+                            </label>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3.5 rounded-xl text-sm transition shadow-lg">
+                            <i class="fa-solid fa-user-plus mr-1"></i> Registrarme y Acumular Puntos
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- CARRUSEL DESLIZANTE DE PRODUCTOS (MARQUESINA CONTINUA INFINITA) -->
+            <div class="mt-20 border-t border-slate-800/60 pt-12 text-center">
+                <span class="text-xs text-slate-400 font-mono uppercase tracking-wider block mb-6">// Componentes de Alta Demanda con Recompensas</span>
+                
+                <div class="relative w-full overflow-hidden py-4 bg-slate-950/40 rounded-2xl border border-slate-900">
+                    <div class="animate-marquee flex">
+                        
+                        <!-- Lista de Tarjetas (Grupo 1) -->
+                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-pink-500 transition shadow-lg text-left">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 bg-pink-500/10 border border-pink-500/30 rounded-xl flex items-center justify-center text-pink-400 text-xl">
+                                    <i class="fa-solid fa-microchip"></i>
+                                </div>
+                                <span class="text-[9px] font-mono uppercase bg-pink-950 text-pink-300 border border-pink-700 px-2 py-0.5 rounded-md">GPU</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">Nvidia GeForce RTX 4070 / 5090</h4>
+                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Rendimiento extremo para render, gaming e inteligencia artificial.</p>
+                            </div>
+                            <span class="text-[10px] text-pink-400 font-mono font-bold flex items-center gap-1">
+                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
+                            </span>
+                        </div>
+
+                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-blue-500 transition shadow-lg text-left">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center justify-center text-blue-400 text-xl">
+                                    <i class="fa-solid fa-desktop"></i>
+                                </div>
+                                <span class="text-[9px] font-mono uppercase bg-blue-950 text-blue-300 border border-blue-700 px-2 py-0.5 rounded-md">Monitores</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">Monitores Gamer Ultrawide 34"</h4>
+                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Frecuencia de actualización de 144Hz y paneles IPS ultra claros.</p>
+                            </div>
+                            <span class="text-[10px] text-blue-400 font-mono font-bold flex items-center gap-1">
+                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
+                            </span>
+                        </div>
+
+                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-purple-500 transition shadow-lg text-left">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 bg-purple-500/10 border border-purple-500/30 rounded-xl flex items-center justify-center text-purple-400 text-xl">
+                                    <i class="fa-solid fa-keyboard"></i>
+                                </div>
+                                <span class="text-[9px] font-mono uppercase bg-purple-950 text-purple-300 border border-purple-700 px-2 py-0.5 rounded-md">Periféricos</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">Teclado Mecánico RGB & Mouse</h4>
+                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Switches mecánicos premium y sensores ópticos de alta precisión.</p>
+                            </div>
+                            <span class="text-[10px] text-purple-400 font-mono font-bold flex items-center gap-1">
+                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
+                            </span>
+                        </div>
+
+                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-amber-500 transition shadow-lg text-left">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/30 rounded-xl flex items-center justify-center text-amber-400 text-xl">
+                                    <i class="fa-solid fa-box-open"></i>
+                                </div>
+                                <span class="text-[9px] font-mono uppercase bg-amber-950 text-amber-300 border border-amber-700 px-2 py-0.5 rounded-md">Gabinete</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">Chasis Airflow Corsair & NZXT</h4>
+                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Diseñados con el mejor flujo de aire y cristales templados.</p>
+                            </div>
+                            <span class="text-[10px] text-amber-400 font-mono font-bold flex items-center gap-1">
+                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
+                            </span>
+                        </div>
+
+                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-emerald-500 transition shadow-lg text-left">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/30 rounded-xl flex items-center justify-center text-emerald-400 text-xl">
+                                    <i class="fa-solid fa-gauge-high"></i>
+                                </div>
+                                <span class="text-[9px] font-mono uppercase bg-emerald-950 text-emerald-300 border border-emerald-700 px-2 py-0.5 rounded-md">CPU / Mobo</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">Ryzen 9 & Placas X870E Taichi</h4>
+                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Procesadores de última generación con zócalo PCIe 5.0 nativo.</p>
+                            </div>
+                            <span class="text-[10px] text-emerald-400 font-mono font-bold flex items-center gap-1">
+                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
+                            </span>
+                        </div>
+
+                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-cyan-500 transition shadow-lg text-left">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 bg-cyan-500/10 border border-cyan-500/30 rounded-xl flex items-center justify-center text-cyan-400 text-xl">
+                                    <i class="fa-solid fa-memory"></i>
+                                </div>
+                                <span class="text-[9px] font-mono uppercase bg-cyan-950 text-cyan-300 border border-cyan-700 px-2 py-0.5 rounded-md">RAM</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">RAM DDR5 Corsair Vengeance</h4>
+                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Módulos de alta velocidad y disipador de aluminio negro.</p>
+                            </div>
+                            <span class="text-[10px] text-cyan-400 font-mono font-bold flex items-center gap-1">
+                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
+                            </span>
+                        </div>
+
+                        <!-- Lista de Tarjetas (Grupo 2 - Copia Idéntica para Loop Infinito) -->
+                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-pink-500 transition shadow-lg text-left">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 bg-pink-500/10 border border-pink-500/30 rounded-xl flex items-center justify-center text-pink-400 text-xl">
+                                    <i class="fa-solid fa-microchip"></i>
+                                </div>
+                                <span class="text-[9px] font-mono uppercase bg-pink-950 text-pink-300 border border-pink-700 px-2 py-0.5 rounded-md">GPU</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">Nvidia GeForce RTX 4070 / 5090</h4>
+                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Rendimiento extremo para render, gaming e inteligencia artificial.</p>
+                            </div>
+                            <span class="text-[10px] text-pink-400 font-mono font-bold flex items-center gap-1">
+                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
+                            </span>
+                        </div>
+
+                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-blue-500 transition shadow-lg text-left">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center justify-center text-blue-400 text-xl">
+                                    <i class="fa-solid fa-desktop"></i>
+                                </div>
+                                <span class="text-[9px] font-mono uppercase bg-blue-950 text-blue-300 border border-blue-700 px-2 py-0.5 rounded-md">Monitores</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">Monitores Gamer Ultrawide 34"</h4>
+                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Frecuencia de actualización de 144Hz y paneles IPS ultra claros.</p>
+                            </div>
+                            <span class="text-[10px] text-blue-400 font-mono font-bold flex items-center gap-1">
+                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
+                            </span>
+                        </div>
+
+                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-purple-500 transition shadow-lg text-left">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 bg-purple-500/10 border border-purple-500/30 rounded-xl flex items-center justify-center text-purple-400 text-xl">
+                                    <i class="fa-solid fa-keyboard"></i>
+                                </div>
+                                <span class="text-[9px] font-mono uppercase bg-purple-950 text-purple-300 border border-purple-700 px-2 py-0.5 rounded-md">Periféricos</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">Teclado Mecánico RGB & Mouse</h4>
+                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Switches mecánicos premium y sensores ópticos de alta precisión.</p>
+                            </div>
+                            <span class="text-[10px] text-purple-400 font-mono font-bold flex items-center gap-1">
+                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
+                            </span>
+                        </div>
+
+                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-amber-500 transition shadow-lg text-left">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/30 rounded-xl flex items-center justify-center text-amber-400 text-xl">
+                                    <i class="fa-solid fa-box-open"></i>
+                                </div>
+                                <span class="text-[9px] font-mono uppercase bg-amber-950 text-amber-300 border border-amber-700 px-2 py-0.5 rounded-md">Gabinete</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">Chasis Airflow Corsair & NZXT</h4>
+                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Diseñados con el mejor flujo de aire y cristales templados.</p>
+                            </div>
+                            <span class="text-[10px] text-amber-400 font-mono font-bold flex items-center gap-1">
+                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
+                            </span>
+                        </div>
+
+                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-emerald-500 transition shadow-lg text-left">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/30 rounded-xl flex items-center justify-center text-emerald-400 text-xl">
+                                    <i class="fa-solid fa-gauge-high"></i>
+                                </div>
+                                <span class="text-[9px] font-mono uppercase bg-emerald-950 text-emerald-300 border border-emerald-700 px-2 py-0.5 rounded-md">CPU / Mobo</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">Ryzen 9 & Placas X870E Taichi</h4>
+                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Procesadores de última generación con zócalo PCIe 5.0 nativo.</p>
+                            </div>
+                            <span class="text-[10px] text-emerald-400 font-mono font-bold flex items-center gap-1">
+                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
+                            </span>
+                        </div>
+
+                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-cyan-500 transition shadow-lg text-left">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 bg-cyan-500/10 border border-cyan-500/30 rounded-xl flex items-center justify-center text-cyan-400 text-xl">
+                                    <i class="fa-solid fa-memory"></i>
+                                </div>
+                                <span class="text-[9px] font-mono uppercase bg-cyan-950 text-cyan-300 border border-cyan-700 px-2 py-0.5 rounded-md">RAM</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm mb-1">RAM DDR5 Corsair Vengeance</h4>
+                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Módulos de alta velocidad y disipador de aluminio negro.</p>
+                            </div>
+                            <span class="text-[10px] text-cyan-400 font-mono font-bold flex items-center gap-1">
+                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- BANNER DE CAPTURA DE LEADS -->
     <section class="py-12 bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950 border-b border-slate-800">
