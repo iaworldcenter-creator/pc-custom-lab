@@ -232,264 +232,245 @@
         </div>
     </header>
 
-    <!-- PROGRAMA DE LEALTAD Y MASCOTA EJECUTIVA -->
-    <section class="py-16 bg-slate-900/40 border-b border-slate-800 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Mascota & Crédito -->
-                <div class="lg:col-span-5 flex flex-col items-center text-center">
-                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950">
-                        <img src="assets/img/mascota_tigre.jpg" alt="Mascota Tigre Ejecutivo" class="w-full h-full object-cover">
-                        <div class="absolute bottom-0 inset-x-0 bg-slate-950/80 border-t border-slate-800 p-3">
-                            <span class="text-[10px] text-slate-400 font-mono tracking-wider">
-                                <i class="fa-solid fa-wand-magic-sparkles text-indigo-400 mr-1"></i> Este sitio fue creado con la inteligencia artificial de Google Gemini
-                            </span>
-                        </div>
-                    </div>
-                </div>
+    <!-- BOUTIQUE DE REFACCIONES & PERIFÉRICOS SUELTOS -->
+    <section id="refacciones" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 border-b border-slate-800">
+        <div class="text-center mb-12">
+            <span class="px-3 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-400 font-mono text-xs uppercase tracking-widest inline-block mb-3">
+                Oportunidades & Enlaces Oficiales
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-white mb-3">Boutique de Refacciones & Periféricos</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto mb-8">Si solo buscas un componente individual (RAM, SSD, bocinas, cámaras, micro SD, monitores), utiliza nuestro buscador de oportunidades:</p>
+            
+            <div class="max-w-2xl mx-auto relative mb-12">
+                <input id="boutique-search-input" type="text" placeholder="Escribe lo que buscas: DDR3, DDR4, DDR5 8000, SSD M.2 PCIe 5.0, Monitor, Teclado, Cámara, USB..." onkeyup="filtrarRefacciones()" class="w-full bg-slate-900 border-2 border-pink-500/50 rounded-2xl pl-12 pr-28 py-3.5 text-sm text-slate-100 focus:outline-none focus:border-pink-400 shadow-xl font-medium">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-pink-400 text-lg"></i>
+                <button onclick="filtrarRefacciones()" class="absolute right-2 top-2 bg-pink-600 hover:bg-pink-500 text-white px-5 py-2 rounded-xl text-xs font-bold transition">Buscar</button>
+            </div>
+        </div>
 
-                <!-- Contenido & Formulario de Lealtad -->
-                <div class="lg:col-span-7 space-y-6 text-left">
-                    <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 font-mono text-xs uppercase tracking-widest inline-block">
-                        Club de Socios PC Custom Lab
-                    </span>
-                    <h2 class="text-3xl sm:text-4xl font-black text-white leading-tight">Programa de Lealtad & Recompensas</h2>
-                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-                        Recibe recompensas exclusivas, mantenimientos preventivos gratuitos y regalos sorpresa en tus compras y servicios de Gabinetes, Procesadores, Tarjetas de Video, Memorias RAM y componentes seleccionados.
-                    </p>
-
-                    <!-- Registro Rápido -->
-                    <form id="form-lealtad" onsubmit="registrarLealtad(event)" class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Correo Electrónico</label>
-                                <input type="email" id="lealtad-email" placeholder="correo@ejemplo.com" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">WhatsApp / Celular</label>
-                                <input type="tel" id="lealtad-phone" placeholder="33 3727 1440" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500">
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3 pt-2">
-                            <input type="checkbox" id="cookies-accept" required class="mt-1 accent-indigo-600 rounded">
-                            <label for="cookies-accept" class="text-xs text-slate-400 leading-normal select-none">
-                                Acepto la política de cookies para optimizar búsquedas y respuestas rápidas del asistente virtual de PC Custom Lab.
-                            </label>
-                        </div>
-                        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3.5 rounded-xl text-sm transition shadow-lg">
-                            <i class="fa-solid fa-user-plus mr-1"></i> Registrarme y Acumular Puntos
-                        </button>
-                    </form>
-                </div>
-
+        <div id="contenedor-refacciones" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-pink-500/50 transition" data-tags="ddr3 ddr4 ddr5 8000 ram memoria laptop escritorio">
+                <i class="fa-solid fa-memory text-3xl text-pink-400 mb-4 block"></i>
+                <h3 class="font-bold text-white mb-2">Memorias RAM (DDR3 / DDR4 / DDR5 8000+)</h3>
+                <p class="text-xs text-slate-400 mb-4">Módulos para Laptop y PC de escritorio. Oportunidades en kits Dual Channel de alta frecuencia.</p>
+                <button onclick="abrirChatbotConMensaje('Hola, busco una oferta de Memoria RAM (DDR3, DDR4 o DDR5).')" class="text-xs bg-slate-800 hover:bg-slate-700 text-pink-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Buscar Oportunidad</button>
             </div>
 
-            <!-- CARRUSEL DESLIZANTE DE PRODUCTOS (MARQUESINA CONTINUA INFINITA) -->
-            <div class="mt-20 border-t border-slate-800/60 pt-12 text-center">
-                <span class="text-xs text-slate-400 font-mono uppercase tracking-wider block mb-6">// Componentes de Alta Demanda con Recompensas</span>
-                
-                <div class="relative w-full overflow-hidden py-4 bg-slate-950/40 rounded-2xl border border-slate-900">
-                    <div class="animate-marquee flex">
+            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-blue-500/50 transition" data-tags="ssd m2 nvme pcie 5.0 disco duro mecanico almacenamiento usb micro sd">
+                <i class="fa-solid fa-hard-drive text-3xl text-blue-400 mb-4 block"></i>
+                <h3 class="font-bold text-white mb-2">SSD M.2 PCIe 5.0 & Discos Mecánicos</h3>
+                <p class="text-xs text-slate-400 mb-4">Almacenamiento ultra veloz PCIe 4.0/5.0 (12,000 MB/s), discos externos y memorias SD.</p>
+                <button onclick="abrirChatbotConMensaje('Hola, busco cotizar un SSD M.2, Disco Mecánico o Memoria SD.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-blue-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Buscar Oportunidad</button>
+            </div>
+
+            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-purple-500/50 transition" data-tags="monitor teclado mouse pad bocinas camara camara web microfono">
+                <i class="fa-solid fa-desktop text-3xl text-purple-400 mb-4 block"></i>
+                <h3 class="font-bold text-white mb-2">Monitores, Periféricos & Audio</h3>
+                <p class="text-xs text-slate-400 mb-4">Monitores 144Hz/240Hz, teclados mecánicos, ratones, bocinas y cámaras web 4K.</p>
+                <button onclick="abrirChatbotConMensaje('Hola, busco cotizar un monitor, periféricos o cámaras web.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-purple-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Buscar Periféricos</button>
+            </div>
+
+            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-emerald-500/50 transition" data-tags="intel ultra amd ryzen 9000 procesador gabinete hyte lian li fuente cooling liquido">
+                <i class="fa-solid fa-microchip text-3xl text-emerald-400 mb-4 block"></i>
+                <h3 class="font-bold text-white mb-2">Procesadores & Gabinetes de Autor</h3>
+                <p class="text-xs text-slate-400 mb-4">Enlaces directos a procesadores Intel Core Ultra, Ryzen 9000 y chasís Lian Li / HYTE.</p>
+                <button onclick="abrirChatbotConMensaje('Hola, busco cotizar un procesador o gabinete suelto.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-emerald-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Ver Opciones Intel/AMD</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARRUSEL DINÁMICO DE LA MASCOTA TIGRE -->
+    <section class="py-12 bg-slate-950/60 border-b border-slate-800 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+            <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
+                PC Custom Lab & Tech Service
+            </span>
+            <h2 class="text-3xl font-black text-white mb-2">Garantía, Calidad y Respaldo</h2>
+            <p class="text-slate-400 text-sm max-w-2xl mx-auto mb-10">
+                Conoce a nuestra mascota y los pilares que respaldan cada uno de nuestros ensambles y servicios técnicos.
+            </p>
+
+            <div class="relative w-full overflow-hidden py-4 bg-slate-900/20 rounded-3xl border border-slate-900">
+                <div class="animate-marquee flex">
+                    <!-- Grupo 1 -->
+                    <div class="flex flex-nowrap">
                         
-                        <!-- Lista de Tarjetas (Grupo 1) -->
-                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-pink-500 transition shadow-lg text-left">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="w-12 h-12 bg-pink-500/10 border border-pink-500/30 rounded-xl flex items-center justify-center text-pink-400 text-xl">
-                                    <i class="fa-solid fa-microchip"></i>
-                                </div>
-                                <span class="text-[9px] font-mono uppercase bg-pink-950 text-pink-300 border border-pink-700 px-2 py-0.5 rounded-md">GPU</span>
+                        <!-- Card 1 -->
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                            <div class="w-full h-64 overflow-hidden bg-slate-950">
+                                <img src="assets/img/tigre_atlas.jpg" alt="Tigre Atlas" class="w-full h-full object-cover">
                             </div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm mb-1">Nvidia GeForce RTX 4070 / 5090</h4>
-                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Rendimiento extremo para render, gaming e inteligencia artificial.</p>
+                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                                    MURO DE MARCAS GLOBAL<br>COMPONENTES ORIGINALES CERTIFICADOS
+                                </span>
                             </div>
-                            <span class="text-[10px] text-pink-400 font-mono font-bold flex items-center gap-1">
-                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
-                            </span>
                         </div>
 
-                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-blue-500 transition shadow-lg text-left">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="w-12 h-12 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center justify-center text-blue-400 text-xl">
-                                    <i class="fa-solid fa-desktop"></i>
-                                </div>
-                                <span class="text-[9px] font-mono uppercase bg-blue-950 text-blue-300 border border-blue-700 px-2 py-0.5 rounded-md">Monitores</span>
+                        <!-- Card 2 -->
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                            <div class="w-full h-64 overflow-hidden bg-slate-950">
+                                <img src="assets/img/tigre_mosaico.jpg" alt="Tigre Mosaico" class="w-full h-full object-cover">
                             </div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm mb-1">Monitores Gamer Ultrawide 34"</h4>
-                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Frecuencia de actualización de 144Hz y paneles IPS ultra claros.</p>
+                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                                    PERIFÉRICOS & ACCESORIOS<br>DISEÑO ERGONÓMICO Y ALTA PRECISIÓN
+                                </span>
                             </div>
-                            <span class="text-[10px] text-blue-400 font-mono font-bold flex items-center gap-1">
-                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
-                            </span>
                         </div>
 
-                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-purple-500 transition shadow-lg text-left">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="w-12 h-12 bg-purple-500/10 border border-purple-500/30 rounded-xl flex items-center justify-center text-purple-400 text-xl">
-                                    <i class="fa-solid fa-keyboard"></i>
-                                </div>
-                                <span class="text-[9px] font-mono uppercase bg-purple-950 text-purple-300 border border-purple-700 px-2 py-0.5 rounded-md">Periféricos</span>
+                        <!-- Card 3 -->
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                            <div class="w-full h-64 overflow-hidden bg-slate-950">
+                                <img src="assets/img/tigre_corporativo.jpg" alt="Tigre Corporativo" class="w-full h-full object-cover">
                             </div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm mb-1">Teclado Mecánico RGB & Mouse</h4>
-                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Switches mecánicos premium y sensores ópticos de alta precisión.</p>
+                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                                    PC CUSTOM LAB | TECH SERVICE<br>CALIDAD CORPORATIVA CERTIFICADA - GARANTÍA DIRECTA DE DISTRIBUIDOR
+                                </span>
                             </div>
-                            <span class="text-[10px] text-purple-400 font-mono font-bold flex items-center gap-1">
-                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
-                            </span>
                         </div>
 
-                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-amber-500 transition shadow-lg text-left">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/30 rounded-xl flex items-center justify-center text-amber-400 text-xl">
-                                    <i class="fa-solid fa-box-open"></i>
-                                </div>
-                                <span class="text-[9px] font-mono uppercase bg-amber-950 text-amber-300 border border-amber-700 px-2 py-0.5 rounded-md">Gabinete</span>
+                        <!-- Card 4 -->
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                            <div class="w-full h-64 overflow-hidden bg-slate-950">
+                                <img src="assets/img/tigre_mantenimiento.jpg" alt="Tigre Mantenimiento" class="w-full h-full object-cover">
                             </div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm mb-1">Chasis Airflow Corsair & NZXT</h4>
-                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Diseñados con el mejor flujo de aire y cristales templados.</p>
+                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                                    HONESTIDAD | TRANSPARENCIA<br>SERVICIO TÉCNICO ESPECIALIZADO
+                                </span>
                             </div>
-                            <span class="text-[10px] text-amber-400 font-mono font-bold flex items-center gap-1">
-                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
-                            </span>
                         </div>
 
-                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-emerald-500 transition shadow-lg text-left">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/30 rounded-xl flex items-center justify-center text-emerald-400 text-xl">
-                                    <i class="fa-solid fa-gauge-high"></i>
-                                </div>
-                                <span class="text-[9px] font-mono uppercase bg-emerald-950 text-emerald-300 border border-emerald-700 px-2 py-0.5 rounded-md">CPU / Mobo</span>
+                        <!-- Card 5 -->
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                            <div class="w-full h-64 overflow-hidden bg-slate-950">
+                                <img src="assets/img/tigre_software.jpg" alt="Tigre Software" class="w-full h-full object-cover">
                             </div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm mb-1">Ryzen 9 & Placas X870E Taichi</h4>
-                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Procesadores de última generación con zócalo PCIe 5.0 nativo.</p>
+                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                                    LICENCIAMIENTO GARANTIZADO<br>IMPULSAMOS TU NEGOCIO
+                                </span>
                             </div>
-                            <span class="text-[10px] text-emerald-400 font-mono font-bold flex items-center gap-1">
-                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
-                            </span>
                         </div>
 
-                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-cyan-500 transition shadow-lg text-left">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="w-12 h-12 bg-cyan-500/10 border border-cyan-500/30 rounded-xl flex items-center justify-center text-cyan-400 text-xl">
-                                    <i class="fa-solid fa-memory"></i>
-                                </div>
-                                <span class="text-[9px] font-mono uppercase bg-cyan-950 text-cyan-300 border border-cyan-700 px-2 py-0.5 rounded-md">RAM</span>
+                        <!-- Card 6 -->
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                            <div class="w-full h-64 overflow-hidden bg-slate-950">
+                                <img src="assets/img/tigre_gamer.jpg" alt="Tigre Gamer" class="w-full h-full object-cover">
                             </div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm mb-1">RAM DDR5 Corsair Vengeance</h4>
-                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Módulos de alta velocidad y disipador de aluminio negro.</p>
+                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                                    PC CUSTOM LAB | GAMING ELITE<br>EQUIPOS DE COMPETENCIA DE ALTO RENDIMIENTO
+                                </span>
                             </div>
-                            <span class="text-[10px] text-cyan-400 font-mono font-bold flex items-center gap-1">
-                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
-                            </span>
                         </div>
 
-                        <!-- Lista de Tarjetas (Grupo 2 - Copia Idéntica para Loop Infinito) -->
-                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-pink-500 transition shadow-lg text-left">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="w-12 h-12 bg-pink-500/10 border border-pink-500/30 rounded-xl flex items-center justify-center text-pink-400 text-xl">
-                                    <i class="fa-solid fa-microchip"></i>
-                                </div>
-                                <span class="text-[9px] font-mono uppercase bg-pink-950 text-pink-300 border border-pink-700 px-2 py-0.5 rounded-md">GPU</span>
+                        <!-- Card 7 -->
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                            <div class="w-full h-64 overflow-hidden bg-slate-950">
+                                <img src="assets/img/tigre_gemini.jpg" alt="Tigre Gemini" class="w-full h-full object-cover">
                             </div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm mb-1">Nvidia GeForce RTX 4070 / 5090</h4>
-                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Rendimiento extremo para render, gaming e inteligencia artificial.</p>
+                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                                    PC CUSTOM LAB TECH SERVICE<br>SITIO CREADO POR GOOGLE GEMINI AI
+                                </span>
                             </div>
-                            <span class="text-[10px] text-pink-400 font-mono font-bold flex items-center gap-1">
-                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
-                            </span>
                         </div>
 
-                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-blue-500 transition shadow-lg text-left">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="w-12 h-12 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center justify-center text-blue-400 text-xl">
-                                    <i class="fa-solid fa-desktop"></i>
-                                </div>
-                                <span class="text-[9px] font-mono uppercase bg-blue-950 text-blue-300 border border-blue-700 px-2 py-0.5 rounded-md">Monitores</span>
+                    </div>
+
+                    <!-- Grupo 2 (Duplicado Idéntico) -->
+                    <div class="flex flex-nowrap">
+                        
+                        <!-- Card 1 -->
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                            <div class="w-full h-64 overflow-hidden bg-slate-950">
+                                <img src="assets/img/tigre_atlas.jpg" alt="Tigre Atlas" class="w-full h-full object-cover">
                             </div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm mb-1">Monitores Gamer Ultrawide 34"</h4>
-                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Frecuencia de actualización de 144Hz y paneles IPS ultra claros.</p>
+                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                                    MURO DE MARCAS GLOBAL<br>COMPONENTES ORIGINALES CERTIFICADOS
+                                </span>
                             </div>
-                            <span class="text-[10px] text-blue-400 font-mono font-bold flex items-center gap-1">
-                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
-                            </span>
                         </div>
 
-                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-purple-500 transition shadow-lg text-left">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="w-12 h-12 bg-purple-500/10 border border-purple-500/30 rounded-xl flex items-center justify-center text-purple-400 text-xl">
-                                    <i class="fa-solid fa-keyboard"></i>
-                                </div>
-                                <span class="text-[9px] font-mono uppercase bg-purple-950 text-purple-300 border border-purple-700 px-2 py-0.5 rounded-md">Periféricos</span>
+                        <!-- Card 2 -->
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                            <div class="w-full h-64 overflow-hidden bg-slate-950">
+                                <img src="assets/img/tigre_mosaico.jpg" alt="Tigre Mosaico" class="w-full h-full object-cover">
                             </div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm mb-1">Teclado Mecánico RGB & Mouse</h4>
-                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Switches mecánicos premium y sensores ópticos de alta precisión.</p>
+                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                                    PERIFÉRICOS & ACCESORIOS<br>DISEÑO ERGONÓMICO Y ALTA PRECISIÓN
+                                </span>
                             </div>
-                            <span class="text-[10px] text-purple-400 font-mono font-bold flex items-center gap-1">
-                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
-                            </span>
                         </div>
 
-                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-amber-500 transition shadow-lg text-left">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/30 rounded-xl flex items-center justify-center text-amber-400 text-xl">
-                                    <i class="fa-solid fa-box-open"></i>
-                                </div>
-                                <span class="text-[9px] font-mono uppercase bg-amber-950 text-amber-300 border border-amber-700 px-2 py-0.5 rounded-md">Gabinete</span>
+                        <!-- Card 3 -->
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                            <div class="w-full h-64 overflow-hidden bg-slate-950">
+                                <img src="assets/img/tigre_corporativo.jpg" alt="Tigre Corporativo" class="w-full h-full object-cover">
                             </div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm mb-1">Chasis Airflow Corsair & NZXT</h4>
-                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Diseñados con el mejor flujo de aire y cristales templados.</p>
+                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                                    PC CUSTOM LAB | TECH SERVICE<br>CALIDAD CORPORATIVA CERTIFICADA - GARANTÍA DIRECTA DE DISTRIBUIDOR
+                                </span>
                             </div>
-                            <span class="text-[10px] text-amber-400 font-mono font-bold flex items-center gap-1">
-                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
-                            </span>
                         </div>
 
-                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-emerald-500 transition shadow-lg text-left">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/30 rounded-xl flex items-center justify-center text-emerald-400 text-xl">
-                                    <i class="fa-solid fa-gauge-high"></i>
-                                </div>
-                                <span class="text-[9px] font-mono uppercase bg-emerald-950 text-emerald-300 border border-emerald-700 px-2 py-0.5 rounded-md">CPU / Mobo</span>
+                        <!-- Card 4 -->
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                            <div class="w-full h-64 overflow-hidden bg-slate-950">
+                                <img src="assets/img/tigre_mantenimiento.jpg" alt="Tigre Mantenimiento" class="w-full h-full object-cover">
                             </div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm mb-1">Ryzen 9 & Placas X870E Taichi</h4>
-                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Procesadores de última generación con zócalo PCIe 5.0 nativo.</p>
+                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                                    HONESTIDAD | TRANSPARENCIA<br>SERVICIO TÉCNICO ESPECIALIZADO
+                                </span>
                             </div>
-                            <span class="text-[10px] text-emerald-400 font-mono font-bold flex items-center gap-1">
-                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
-                            </span>
                         </div>
 
-                        <div class="flex-shrink-0 w-64 bg-slate-900 border border-slate-800 rounded-2xl p-5 mx-3 flex flex-col justify-between hover:border-cyan-500 transition shadow-lg text-left">
-                            <div class="flex justify-between items-start mb-4">
-                                <div class="w-12 h-12 bg-cyan-500/10 border border-cyan-500/30 rounded-xl flex items-center justify-center text-cyan-400 text-xl">
-                                    <i class="fa-solid fa-memory"></i>
-                                </div>
-                                <span class="text-[9px] font-mono uppercase bg-cyan-950 text-cyan-300 border border-cyan-700 px-2 py-0.5 rounded-md">RAM</span>
+                        <!-- Card 5 -->
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                            <div class="w-full h-64 overflow-hidden bg-slate-950">
+                                <img src="assets/img/tigre_software.jpg" alt="Tigre Software" class="w-full h-full object-cover">
                             </div>
-                            <div>
-                                <h4 class="font-bold text-white text-sm mb-1">RAM DDR5 Corsair Vengeance</h4>
-                                <p class="text-xs text-slate-400 mb-4 leading-relaxed">Módulos de alta velocidad y disipador de aluminio negro.</p>
+                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                                    LICENCIAMIENTO GARANTIZADO<br>IMPULSAMOS TU NEGOCIO
+                                </span>
                             </div>
-                            <span class="text-[10px] text-cyan-400 font-mono font-bold flex items-center gap-1">
-                                <i class="fa-solid fa-circle-nodes text-[8px] animate-pulse"></i> Obtén puntos acumulables en esta compra
-                            </span>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                            <div class="w-full h-64 overflow-hidden bg-slate-950">
+                                <img src="assets/img/tigre_gamer.jpg" alt="Tigre Gamer" class="w-full h-full object-cover">
+                            </div>
+                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                                    PC CUSTOM LAB | GAMING ELITE<br>EQUIPOS DE COMPETENCIA DE ALTO RENDIMIENTO
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Card 7 -->
+                        <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-indigo-500 transition shadow-xl">
+                            <div class="w-full h-64 overflow-hidden bg-slate-950">
+                                <img src="assets/img/tigre_gemini.jpg" alt="Tigre Gemini" class="w-full h-full object-cover">
+                            </div>
+                            <div class="bg-indigo-950/80 border-t border-indigo-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
+                                <span class="text-xs font-mono font-bold text-indigo-300 uppercase tracking-wide leading-relaxed">
+                                    PC CUSTOM LAB TECH SERVICE<br>SITIO CREADO POR GOOGLE GEMINI AI
+                                </span>
+                            </div>
                         </div>
 
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -760,53 +741,6 @@
         </div>
     </section>
 
-    <!-- BOUTIQUE DE REFACCIONES & PERIFÉRICOS SUELTOS -->
-    <section id="refacciones" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 border-b border-slate-800">
-        <div class="text-center mb-12">
-            <span class="px-3 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-400 font-mono text-xs uppercase tracking-widest inline-block mb-3">
-                Oportunidades & Enlaces Oficiales
-            </span>
-            <h2 class="text-3xl sm:text-4xl font-black text-white mb-3">Boutique de Refacciones & Periféricos</h2>
-            <p class="text-slate-400 max-w-2xl mx-auto mb-8">Si solo buscas un componente individual (RAM, SSD, bocinas, cámaras, micro SD, monitores), utiliza nuestro buscador de oportunidades:</p>
-            
-            <div class="max-w-2xl mx-auto relative mb-12">
-                <input id="boutique-search-input" type="text" placeholder="Escribe lo que buscas: DDR3, DDR4, DDR5 8000, SSD M.2 PCIe 5.0, Monitor, Teclado, Cámara, USB..." onkeyup="filtrarRefacciones()" class="w-full bg-slate-900 border-2 border-pink-500/50 rounded-2xl pl-12 pr-28 py-3.5 text-sm text-slate-100 focus:outline-none focus:border-pink-400 shadow-xl font-medium">
-                <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-pink-400 text-lg"></i>
-                <button onclick="filtrarRefacciones()" class="absolute right-2 top-2 bg-pink-600 hover:bg-pink-500 text-white px-5 py-2 rounded-xl text-xs font-bold transition">Buscar</button>
-            </div>
-        </div>
-
-        <div id="contenedor-refacciones" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-pink-500/50 transition" data-tags="ddr3 ddr4 ddr5 8000 ram memoria laptop escritorio">
-                <i class="fa-solid fa-memory text-3xl text-pink-400 mb-4 block"></i>
-                <h3 class="font-bold text-white mb-2">Memorias RAM (DDR3 / DDR4 / DDR5 8000+)</h3>
-                <p class="text-xs text-slate-400 mb-4">Módulos para Laptop y PC de escritorio. Oportunidades en kits Dual Channel de alta frecuencia.</p>
-                <button onclick="abrirChatbotConMensaje('Hola, busco una oferta de Memoria RAM (DDR3, DDR4 o DDR5).')" class="text-xs bg-slate-800 hover:bg-slate-700 text-pink-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Buscar Oportunidad</button>
-            </div>
-
-            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-blue-500/50 transition" data-tags="ssd m2 nvme pcie 5.0 disco duro mecanico almacenamiento usb micro sd">
-                <i class="fa-solid fa-hard-drive text-3xl text-blue-400 mb-4 block"></i>
-                <h3 class="font-bold text-white mb-2">SSD M.2 PCIe 5.0 & Discos Mecánicos</h3>
-                <p class="text-xs text-slate-400 mb-4">Almacenamiento ultra veloz PCIe 4.0/5.0 (12,000 MB/s), discos externos y memorias SD.</p>
-                <button onclick="abrirChatbotConMensaje('Hola, busco cotizar un SSD M.2, Disco Mecánico o Memoria SD.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-blue-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Buscar Oportunidad</button>
-            </div>
-
-            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-purple-500/50 transition" data-tags="monitor teclado mouse pad bocinas camara camara web microfono">
-                <i class="fa-solid fa-desktop text-3xl text-purple-400 mb-4 block"></i>
-                <h3 class="font-bold text-white mb-2">Monitores, Periféricos & Audio</h3>
-                <p class="text-xs text-slate-400 mb-4">Monitores 144Hz/240Hz, teclados mecánicos, ratones, bocinas y cámaras web 4K.</p>
-                <button onclick="abrirChatbotConMensaje('Hola, busco cotizar un monitor, periféricos o cámaras web.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-purple-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Buscar Periféricos</button>
-            </div>
-
-            <div class="item-refaccion bg-slate-900 border border-slate-800 p-6 rounded-2xl text-center hover:border-emerald-500/50 transition" data-tags="intel ultra amd ryzen 9000 procesador gabinete hyte lian li fuente cooling liquido">
-                <i class="fa-solid fa-microchip text-3xl text-emerald-400 mb-4 block"></i>
-                <h3 class="font-bold text-white mb-2">Procesadores & Gabinetes de Autor</h3>
-                <p class="text-xs text-slate-400 mb-4">Enlaces directos a procesadores Intel Core Ultra, Ryzen 9000 y chasís Lian Li / HYTE.</p>
-                <button onclick="abrirChatbotConMensaje('Hola, busco cotizar un procesador o gabinete suelto.')" class="text-xs bg-slate-800 hover:bg-slate-700 text-emerald-300 border border-slate-700 px-3 py-2 rounded-xl transition font-mono">Ver Opciones Intel/AMD</button>
-            </div>
-        </div>
-    </section>
-
     <!-- SERVICIOS TÉCNICOS MODULARES -->
     <section id="servicios" class="py-20 max-w-7xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-16">
@@ -944,6 +878,61 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMA DE LEALTAD Y MASCOTA EJECUTIVA -->
+    <section class="py-16 bg-slate-900/40 border-t border-slate-800 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Mascota & Crédito -->
+                <div class="lg:col-span-5 flex flex-col items-center text-center">
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950">
+                        <img src="assets/img/mascota_tigre.jpg" alt="Mascota Tigre Ejecutivo" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 inset-x-0 bg-slate-950/80 border-t border-slate-800 p-3">
+                            <span class="text-[10px] text-slate-400 font-mono tracking-wider">
+                                <i class="fa-solid fa-wand-magic-sparkles text-indigo-400 mr-1"></i> Este sitio fue creado con la inteligencia artificial de Google Gemini
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenido & Formulario de Lealtad -->
+                <div class="lg:col-span-7 space-y-6 text-left">
+                    <span class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 font-mono text-xs uppercase tracking-widest inline-block">
+                        Club de Socios PC Custom Lab
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white leading-tight">Programa de Lealtad & Recompensas</h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Recibe recompensas exclusivas, mantenimientos preventivos gratuitos y regalos sorpresa en tus compras y servicios de Gabinetes, Procesadores, Tarjetas de Video, Memorias RAM y componentes seleccionados.
+                    </p>
+
+                    <!-- Registro Rápido -->
+                    <form id="form-lealtad" onsubmit="registrarLealtad(event)" class="bg-slate-950/80 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">Correo Electrónico</label>
+                                <input type="email" id="lealtad-email" placeholder="correo@ejemplo.com" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono text-slate-400 mb-1.5 uppercase">WhatsApp / Celular</label>
+                                <input type="tel" id="lealtad-phone" placeholder="33 3727 1440" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-indigo-500">
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 pt-2">
+                            <input type="checkbox" id="cookies-accept" required class="mt-1 accent-indigo-600 rounded">
+                            <label for="cookies-accept" class="text-xs text-slate-400 leading-normal select-none">
+                                Acepto la política de cookies para optimizar búsquedas y respuestas rápidas del asistente virtual de PC Custom Lab.
+                            </label>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3.5 rounded-xl text-sm transition shadow-lg">
+                            <i class="fa-solid fa-user-plus mr-1"></i> Registrarme y Acumular Puntos
+                        </button>
+                    </form>
+                </div>
+
             </div>
         </div>
     </section>
@@ -1273,6 +1262,14 @@
             clearInterval(sliderInterval);
             showSlide(index);
             sliderInterval = setInterval(nextSlide, 5000);
+        }
+
+        function registrarLealtad(event) {
+            event.preventDefault();
+            const email = document.getElementById('lealtad-email').value;
+            const phone = document.getElementById('lealtad-phone').value;
+            alert(`¡Felicidades! Te has registrado con éxito al Club de Socios de PC Custom Lab.\nCorreo: ${email}\nTeléfono: ${phone}\nPronto recibirás notificaciones y puntos acumulables para tus próximas compras.`);
+            document.getElementById('form-lealtad').reset();
         }
 
         // INICIALIZACIÓN
