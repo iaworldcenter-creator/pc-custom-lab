@@ -929,8 +929,10 @@
                 <!-- Mascota & Crédito -->
                 <div class="lg:col-span-5 flex flex-col items-center text-center">
                     <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950">
-                        <img src="assets/img/Gemini_Generated_Image_gfl5u5gfl5u5gfl5.png" alt="Fachada PC Custom Lab" class="w-full h-full object-cover">
-                        <div class="absolute bottom-0 inset-x-0 bg-slate-950/80 border-t border-slate-800 p-3">
+                        <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                            <source src="assets/img/Tiger_walking_in_warehouse_202608072327.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute bottom-0 inset-x-0 bg-slate-950/80 border-t border-slate-800 p-3 z-10">
                             <span class="text-[10px] text-slate-400 font-mono tracking-wider">
                                 <i class="fa-solid fa-wand-magic-sparkles text-indigo-400 mr-1"></i> Este sitio fue creado con la inteligencia artificial de Google Gemini
                             </span>
@@ -967,7 +969,7 @@
                             </label>
                         </div>
                         <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3.5 rounded-xl text-sm transition shadow-lg">
-                            <i class="fa-solid fa-user-plus mr-1"></i> Registrarme y Acumular Puntos
+                            <i class="fa-solid fa-user-plus mr-1"></i> Registrarme y Acumular Cashback
                         </button>
                     </form>
                 </div>
@@ -1404,7 +1406,7 @@
             event.preventDefault();
             const email = document.getElementById('lealtad-email').value;
             const phone = document.getElementById('lealtad-phone').value;
-            alert(`¡Felicidades! Te has registrado con éxito al Club de Socios de PC Custom Lab.\nCorreo: ${email}\nTeléfono: ${phone}\nPronto recibirás notificaciones y puntos acumulables para tus próximas compras.`);
+            alert(`¡Felicidades! Te has registrado con éxito al Club de Socios de PC Custom Lab.\nCorreo: ${email}\nTeléfono: ${phone}\nPronto recibirás notificaciones y cashback acumulable para tus próximas compras.`);
             document.getElementById('form-lealtad').reset();
         }
 
