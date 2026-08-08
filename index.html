@@ -67,7 +67,15 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden">
     <!-- BARRA LATERAL FLOTANTE DE REDES SOCIALES -->
-    <div class="fixed left-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3 bg-slate-950/80 backdrop-blur-md border-y border-r border-slate-800 p-2.5 rounded-r-2xl shadow-2xl">
+    <div class="hidden md:flex fixed left-0 top-1/2 -translate-y-1/2 z-50 flex-col gap-3 bg-slate-950/80 backdrop-blur-md border-y border-r border-slate-800 p-2.5 rounded-r-2xl shadow-2xl">
+        <a href="https://wa.me/523337271440" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-emerald-600/10 border border-emerald-500/30 text-emerald-500 hover:bg-emerald-600 hover:text-white transition flex items-center justify-center text-lg relative group" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <span class="absolute left-14 bg-slate-900 border border-slate-800 text-white text-[10px] font-mono px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition whitespace-nowrap">WhatsApp Business</span>
+        </a>
+        <a href="mailto:iaworldcenter@gmail.com" class="w-10 h-10 rounded-xl bg-indigo-600/10 border border-indigo-500/30 text-indigo-400 hover:bg-indigo-600 hover:text-white transition flex items-center justify-center text-lg relative group" title="Correo">
+            <i class="fa-solid fa-envelope"></i>
+            <span class="absolute left-14 bg-slate-900 border border-slate-800 text-white text-[10px] font-mono px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition whitespace-nowrap">Correo Electrónico</span>
+        </a>
         <a href="https://www.youtube.com/@IAWorldCenter" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-red-600/10 border border-red-500/30 text-red-500 hover:bg-red-600 hover:text-white transition flex items-center justify-center text-lg relative group" title="YouTube">
             <i class="fa-brands fa-youtube"></i>
             <span class="absolute left-14 bg-slate-900 border border-slate-800 text-white text-[10px] font-mono px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition whitespace-nowrap">Canal de Contenido</span>
@@ -75,10 +83,6 @@
         <a href="https://www.facebook.com/profile.php?id=61593020515115" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-blue-600/10 border border-blue-500/30 text-blue-500 hover:bg-blue-600 hover:text-white transition flex items-center justify-center text-lg relative group" title="Facebook">
             <i class="fa-brands fa-facebook-f"></i>
             <span class="absolute left-14 bg-slate-900 border border-slate-800 text-white text-[10px] font-mono px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition whitespace-nowrap">Facebook</span>
-        </a>
-        <a href="https://x.com/PCCUSTOMLAB" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 hover:bg-sky-500 hover:text-white transition flex items-center justify-center text-lg relative group" title="Twitter/X">
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            <span class="absolute left-14 bg-slate-900 border border-slate-800 text-white text-[10px] font-mono px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition whitespace-nowrap">Twitter / X</span>
         </a>
         <a href="https://www.instagram.com/pccustomlab/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-pink-600/10 border border-pink-500/30 text-pink-500 hover:bg-pink-600 hover:text-white transition flex items-center justify-center text-lg relative group" title="Instagram">
             <i class="fa-brands fa-instagram"></i>
@@ -95,12 +99,10 @@
     <nav class="border-b border-slate-800 bg-slate-950/90 backdrop-blur sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
             <div class="flex items-center space-x-3 shrink-0">
-                <div class="bg-gradient-to-r from-blue-600 to-indigo-600 p-2.5 rounded-xl shadow-lg shadow-blue-500/20">
-                    <i class="fa-solid fa-microchip text-2xl text-white"></i>
-                </div>
+                <img src="assets/img/mascota_tigre.jpg" alt="Tigre Logo" class="w-11 h-11 rounded-full object-cover border border-blue-500 shadow-md shadow-blue-500/20">
                 <div>
-                    <span class="text-xl sm:text-2xl font-black tracking-wider bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">PC CUSTOM</span>
-                    <span class="text-[10px] sm:text-xs block text-slate-400 font-mono tracking-widest">// LAB & TECH SERVICES</span>
+                    <span class="text-xl sm:text-2xl font-black tracking-wider text-blue-500 block leading-tight">PC CUSTOM LAB</span>
+                    <span class="text-[10px] sm:text-xs block text-slate-400 font-mono tracking-widest uppercase">Tech Service</span>
                 </div>
                 <!-- Insignia en Escritorio -->
                 <a href="https://gemini.google.com/" target="_blank" class="hidden md:inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/15 border border-teal-500/30 text-teal-300 font-mono text-xs uppercase tracking-wider ml-8 hover:bg-teal-500/30 hover:border-teal-500/50 hover:text-teal-200 transition shadow-md shadow-teal-500/5 shrink-0">
@@ -109,12 +111,12 @@
             </div>
 
             <!-- Menú Escritorio -->
-            <div class="hidden md:flex items-center space-x-6 text-xs xl:text-sm font-semibold shrink-0">
-                <a href="#niveles" class="hover:text-blue-400 transition flex items-center gap-1.5"><i class="fa-solid fa-desktop text-blue-500"></i> PCs Armadas</a>
-                <a href="#cotizador" class="hover:text-indigo-400 transition flex items-center gap-1.5"><i class="fa-solid fa-sliders text-indigo-500"></i> Arma tu PC</a>
-                <a href="#refacciones" class="hover:text-pink-400 transition flex items-center gap-1.5"><i class="fa-solid fa-store text-pink-500"></i> Boutique Refacciones</a>
-                <a href="#contacto" class="hover:text-amber-400 transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-amber-500"></i> Contacto</a>
-                <button onclick="abrirChatbotConMensaje('Hola, me gustaría cotizar una computadora armada completa.')" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-4 py-2 rounded-xl shadow-lg shadow-blue-600/30 transition font-bold font-sans">
+            <div class="hidden md:flex items-center space-x-3 text-xs font-bold shrink-0">
+                <a href="#niveles" class="bg-blue-600 hover:bg-blue-500 text-white px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md shadow-blue-900/20"><i class="fa-solid fa-desktop"></i> PCs Armadas</a>
+                <a href="#cotizador" class="bg-blue-600 hover:bg-blue-500 text-white px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md shadow-blue-900/20"><i class="fa-solid fa-sliders"></i> Arma tu PC</a>
+                <a href="#refacciones" class="bg-blue-600 hover:bg-blue-500 text-white px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md shadow-blue-900/20"><i class="fa-solid fa-store"></i> Boutique Refacciones</a>
+                <a href="#contacto" class="bg-blue-600 hover:bg-blue-500 text-white px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 shadow-md shadow-blue-900/20"><i class="fa-solid fa-phone"></i> Contacto</a>
+                <button onclick="abrirChatbotConMensaje('Hola, me gustaría cotizar una computadora armada completa.')" class="bg-gradient-to-r from-blue-700 to-indigo-600 hover:from-blue-600 hover:to-indigo-500 text-white px-4 py-2 rounded-xl shadow-lg shadow-blue-600/30 transition font-sans font-black uppercase tracking-wider text-[11px]">
                     Cotizar PC Completa
                 </button>
             </div>
@@ -248,14 +250,14 @@
 
         <!-- Fixed Search Bar Overlapping Slider Bottom -->
         <div class="absolute bottom-6 left-0 right-0 z-20 px-4 sm:px-6">
-            <div class="max-w-3xl mx-auto bg-slate-900/90 border-2 border-indigo-500/40 rounded-2xl p-4 shadow-2xl">
+            <div class="max-w-3xl mx-auto bg-slate-950/90 border-2 border-blue-500 rounded-2xl p-4 shadow-[0_0_25px_rgba(59,130,246,0.7)]">
                 <div class="flex flex-col sm:flex-row gap-3">
-                    <select id="tipo-busqueda" class="bg-slate-950 border border-slate-700 text-slate-200 rounded-xl px-4 py-2.5 text-xs font-bold focus:outline-none focus:border-indigo-400">
+                    <select id="tipo-busqueda" class="bg-slate-900 border border-blue-500/30 text-slate-200 rounded-xl px-4 py-2.5 text-xs font-bold focus:outline-none focus:border-blue-400">
                         <option value="pc" selected>Computadora Completa</option>
                         <option value="refaccion">Refacción / Periférico</option>
                     </select>
-                    <input id="hero-search-input" type="text" placeholder="¿Qué buscas? Ej. PC Gamer, RAM DDR4, SSD M.2, Monitor..." onkeypress="ejecutarBusquedaHero(event)" class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-indigo-400">
-                    <button onclick="buscarHero()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold px-6 py-2.5 rounded-xl transition text-xs whitespace-nowrap">
+                    <input id="hero-search-input" type="text" placeholder="¿Qué producto, pieza o antojo buscas hoy? Escribe aquí..." onkeypress="ejecutarBusquedaHero(event)" class="flex-1 bg-slate-900 border border-blue-500/30 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-blue-400 focus:shadow-[0_0_10px_rgba(59,130,246,0.4)]">
+                    <button onclick="buscarHero()" class="bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-slate-955 text-slate-950 font-black px-6 py-2.5 rounded-xl transition text-xs whitespace-nowrap shadow-[0_0_12px_rgba(245,158,11,0.6)] hover:shadow-[0_0_18px_rgba(245,158,11,0.9)] hover:scale-102">
                         <i class="fa-solid fa-magnifying-glass mr-1"></i> Buscar
                     </button>
                 </div>
@@ -698,7 +700,7 @@
                 <!-- Columna del Video (Visualizador de Ensamble) -->
                 <div class="lg:col-span-6 relative rounded-3xl overflow-hidden border border-teal-500/30 shadow-2xl shadow-teal-950/20 bg-slate-900/40 p-1 flex items-center justify-center min-h-[300px] sm:min-h-[450px]">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-slate-950/40 z-10"></div>
-                    <video class="w-full h-full object-cover rounded-2xl absolute inset-0" autoplay loop muted playsinline>
+                    <video class="w-full h-full object-cover rounded-2xl absolute inset-0" autoplay muted playsinline>
                         <source src="assets/img/Female_technician_assembling_gam_202608041518.mp4" type="video/mp4">
                         Tu navegador no soporta video HTML5.
                     </video>
@@ -930,7 +932,7 @@
                 <!-- Mascota & Crédito -->
                 <div class="lg:col-span-5 flex flex-col items-center text-center">
                     <div class="relative w-72 h-72 sm:w-[352px] sm:h-[352px] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950">
-                        <video autoplay loop muted playsinline class="w-full h-full object-cover object-tiger-loyalty">
+                        <video autoplay muted playsinline class="w-full h-full object-cover object-tiger-loyalty">
                             <source src="assets/img/Tiger_walking_in_warehouse_202608072327.mp4" type="video/mp4">
                         </video>
                         <div class="absolute bottom-0 inset-x-0 bg-slate-950/80 border-t border-slate-800 p-3 z-10">
@@ -1030,7 +1032,6 @@
                                     <div class="flex gap-2.5 mt-1">
                                         <a href="https://www.youtube.com/@IAWorldCenter" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-850/80 hover:bg-red-600/20 text-slate-400 hover:text-red-500 border border-slate-800 flex items-center justify-center transition" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
                                         <a href="https://www.facebook.com/profile.php?id=61593020515115" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-850/80 hover:bg-blue-600/20 text-slate-400 hover:text-blue-500 border border-slate-800 flex items-center justify-center transition" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                        <a href="https://x.com/PCCUSTOMLAB" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-850/80 hover:bg-sky-500/20 text-slate-400 hover:text-sky-400 border border-slate-800 flex items-center justify-center transition" title="Twitter/X"><svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
                                         <a href="https://www.instagram.com/pccustomlab/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-850/80 hover:bg-pink-600/20 text-slate-400 hover:text-pink-500 border border-slate-800 flex items-center justify-center transition" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
                                         <a href="https://t.me/pc_custom_lab" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-850/80 hover:bg-cyan-600/20 text-slate-400 hover:text-cyan-400 border border-slate-800 flex items-center justify-center transition" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
                                     </div>
@@ -1078,6 +1079,18 @@
 
 <!-- FOOTER -->
     <footer class="py-8 bg-slate-950 border-t border-slate-900 text-center text-slate-500 text-sm font-mono">
+        <!-- Íconos de contacto móvil -->
+        <div class="md:hidden flex justify-center gap-6 mb-6">
+            <a href="https://wa.me/523337271440" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-emerald-600/10 border border-emerald-500/30 text-emerald-500 flex items-center justify-center text-2xl shadow-lg transition-transform hover:scale-105" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="mailto:iaworldcenter@gmail.com" class="w-12 h-12 rounded-full bg-indigo-600/10 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-2xl shadow-lg transition-transform hover:scale-105" title="Correo">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="#contacto" class="w-12 h-12 rounded-full bg-blue-600/10 border border-blue-500/30 text-blue-400 flex items-center justify-center text-2xl shadow-lg transition-transform hover:scale-105" title="Contacto">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+        </div>
         <p>© 2026 PC Custom Lab. Pedro Moreno 501 A, Guadalajara Centro. Todos los derechos reservados.</p>
     </footer>
 
@@ -1413,6 +1426,26 @@
 
         // INICIALIZACIÓN
         actualizarPrefiltroNivel();
+
+        // Ajustar velocidad de videos y pausar 5 segundos al finalizar
+        document.addEventListener('DOMContentLoaded', () => {
+            const videos = document.querySelectorAll('video');
+            videos.forEach(video => {
+                video.loop = false;
+                video.playbackRate = 0.6;
+                video.addEventListener('play', () => {
+                    video.playbackRate = 0.6;
+                });
+                video.addEventListener('ended', () => {
+                    setTimeout(() => {
+                        video.play().catch(err => console.log("Reinicio de video prevenido:", err));
+                    }, 5000);
+                });
+                if (video.paused) {
+                    video.play().catch(err => console.log("Autoplay de video:", err));
+                }
+            });
+        });
     </script>
 </body>
 </html>
