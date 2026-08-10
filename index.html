@@ -1423,7 +1423,7 @@
         let currentSlide = 0;
         const slides = document.querySelectorAll('.hero-slide');
         const dots = document.querySelectorAll('.hero-dot');
-        let sliderInterval = setInterval(nextSlide, 5000);
+        let sliderInterval;
 
         function showSlide(index) {
             slides[currentSlide].classList.remove('active', 'opacity-100', 'z-10');
@@ -1437,6 +1437,16 @@
             slides[currentSlide].classList.add('active', 'opacity-100', 'z-10');
             dots[currentSlide].classList.remove('bg-slate-600');
             dots[currentSlide].classList.add('bg-blue-500');
+            
+            // Reiniciar el temporizador automáticamente al cambiar de slide
+            resetSliderInterval();
+        }
+
+        function resetSliderInterval() {
+            if (sliderInterval) {
+                clearInterval(sliderInterval);
+            }
+            sliderInterval = setInterval(nextSlide, 5000);
         }
 
         function nextSlide() {
@@ -1448,10 +1458,11 @@
         }
 
         function goToSlide(index) {
-            clearInterval(sliderInterval);
             showSlide(index);
-            sliderInterval = setInterval(nextSlide, 5000);
         }
+
+        // Inicializar el carrusel
+        resetSliderInterval();
 
         function registrarLealtad(event) {
             event.preventDefault();
