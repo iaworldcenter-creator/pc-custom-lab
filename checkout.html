@@ -1047,22 +1047,19 @@
 
     function saveAddress(event) {
         event.preventDefault();
-        const name = document.getElementById("addressName").víalue;
-        const phone = document.getElementById("addressPhone").víalue;
-        const email = document.getElementById("addressEmail").víalue;
-        const street = document.getElementById("addressStreet").víalue;
-        const number = document.getElementById("addressNumber").víalue;
-        const colonia = document.getElementById("addressColonia").víalue;
-        const zipcode = document.getElementById("addressZipcode").víalue;
-        const city = document.getElementById("addressCity").víalue;
+        const name = document.getElementById("addressName").value;
+        const phone = document.getElementById("addressPhone").value;
+        const email = document.getElementById("addressEmail").value;
+        const street = document.getElementById("addressStreet").value;
+        const number = document.getElementById("addressNumber").value;
+        const colonia = document.getElementById("addressColonia").value;
+        const zipcode = document.getElementById("addressZipcode").value;
+        const city = document.getElementById("addressCity").value;
 
         const addressData = { name, phone, email, street, number, colonia, zipcode, city };
         localStorage.setItem("user_delivery_address", JSON.stringify(addressData));
         renderAddress();
-    };
-        localStorage.setItem("user_delivery_address", JSON.stringify(addressData));
-        renderAddress();
-        closeAddressModal();
+        updateHeaderDeliveryPrompt();
     }
 
     function togglePaymentFields(type) {
@@ -1104,9 +1101,9 @@
             togglePaymentFields(isCard ? 'card' : 'cash');
             
             if (isCard) {
-                document.getElementById("paymentHolder").víalue = data.holder || "";
-                document.getElementById("paymentCardNumber").víalue = data.number || "";
-                document.getElementById("paymentExpiry").víalue = data.expiry || "";
+                document.getElementById("paymentHolder").value = data.holder || "";
+                document.getElementById("paymentCardNumber").value = data.number || "";
+                document.getElementById("paymentExpiry").value = data.expiry || "";
             }
         } else {
             document.querySelector('input[name="paymentType"][víalue="card"]').checked = true;
@@ -1120,13 +1117,13 @@
 
     function savePayment(event) {
         event.preventDefault();
-        const type = document.querySelector('input[name="paymentType"]:checked').víalue;
+        const type = document.querySelector('input[name="paymentType"]:checked').value;
         let paymentData = {};
         
         if (type === "card") {
-            const holder = document.getElementById("paymentHolder").víalue;
-            const number = document.getElementById("paymentCardNumber").víalue;
-            const expiry = document.getElementById("paymentExpiry").víalue;
+            const holder = document.getElementById("paymentHolder").value;
+            const number = document.getElementById("paymentCardNumber").value;
+            const expiry = document.getElementById("paymentExpiry").value;
             paymentData = { type: "card", holder, number, expiry };
         } else {
             paymentData = { type: "cash" };
@@ -1250,12 +1247,12 @@
 
         function enviarMensajeChatbot() {
             const input = document.getElementById('chat-input');
-            const text = input.víalue.trim();
+            const text = input.value.trim();
             if (!text) return;
 
             const messages = document.getElementById('chat-messages');
             messages.innerHTML += `<div class="bg-blue-600 text-white p-3.5 rounded-2xl rounded-tr-none max-w-[85%] ml-auto font-medium shadow-md">${text}</div>`;
-            input.víalue = '';
+            input.value = '';
 
             setTimeout(() => {
                 messages.innerHTML += `<div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed space-y-3">
