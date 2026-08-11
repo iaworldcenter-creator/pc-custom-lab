@@ -713,7 +713,7 @@
 
 
     let checkoutItems = [];
-    let shippingCost = 0;
+    let shippingCost = 35;
 
     function getQueryParam(param) {
         const urlParams = new URLSearchParams(window.location.search);
@@ -865,20 +865,20 @@
             subtotal += parseFloat(item.precio) * item.quantity;
         });
 
-        // Shipping is Gratis
-        const shipping = 0;
+        // Shipping cost is flat 35 pesos for PC Custom Lab
+        const shipping = 35;
         
         // Cashback: 5% of subtotal, rounded down to nearest integer (Math.floor) as requested
         const cashback = Math.floor(subtotal * 0.05);
         
-        // Total sum
+        // Total sum includes shipping cost
         const total = subtotal + shipping - cashback;
 
         const subtotalEl = document.getElementById("summary-subtotal");
         if (subtotalEl) subtotalEl.innerText = `$${Math.floor(subtotal)} MXN`;
         
         const shippingEl = document.getElementById("summary-shipping");
-        if (shippingEl) shippingEl.innerText = "Gratis";
+        if (shippingEl) shippingEl.innerText = `$${shipping} MXN`;
         
         const cashbackEl = document.getElementById("summary-cashback");
         if (cashbackEl) cashbackEl.innerText = `-$${Math.floor(cashback)} MXN`;
