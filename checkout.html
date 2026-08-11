@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar la compra de manera segura</title>
+    <meta name="google-site-verification" content="BwSy5nNuFFrHJUtxe189nJtPxM4h5QY-SxK1V8wqYDE" />
+    <style>
+        :root { 
+            --crema: #FFFDF9; 
+            --texto: #1F2937; 
+        }
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; 
+            background: #05070f; 
+            color: víar(--texto); 
+            font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        #chatbot-window { height: 520px; max-height: 85vh; }
+</style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+</head>
+<body>
+<!-- HEADER DE CHECKOUT MINIMALISTA AL ESTILO AMAZON -->
+<header class="w-full bg-slate-950 text-white py-2.5 px-6 md:px-12 flex justify-between items-center border-b border-slate-800">
+    <div class="flex items-center gap-3">
+        <img loading="lazy" decoding="async" src="assets/img/mascota_tigre.jpg" alt="Tigre Logo" class="w-10 h-10 rounded-full object-cover border border-amber-500">
+        <span class="text-sm font-black text-amber-400 tracking-wider uppercase">Anti-Gravity Checkout</span>
+    </div>
+    <h1 class="text-base md:text-lg font-black text-white flex items-center gap-2">
+        <i class="fa-solid fa-lock text-green-500"></i> Finalizar la compra de manera segura
+    </h1>
+    <a href="index.html" class="text-xs text-slate-400 hover:text-white transition">Volver al catálogo</a>
+</header>
+
+<main class="flex-1 w-full max-w-6xl mx-auto py-8 px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        
+        <!-- Columna Izquierda (Spans 8/12) -->
+        <div class="lg:col-span-8 flex flex-col gap-4">
+            
+            <!-- Domicilio de Envío Directo (Inline) -->
+            <div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm">
+                <h3 class="text-sm font-black text-white mb-4">1. Domicilio de entrega y registro</h3>
+                <div id="checkout-address-display" class="text-xs text-slate-200 leading-relaxed">
+                    <!-- Formulario de registro o datos guardados se inyectan aquí -->
+                </div>
+            </div>
+
+            <!-- Método de Pago -->
+            <div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-sm font-black text-white">2. Método de pago</h3>
+                    <button onclick="openPaymentModal()" class="text-xs text-blue-600 hover:underline font-bold">Cambiar</button>
+                </div>
+                <div id="checkout-payment-display" class="text-xs text-slate-200 leading-relaxed">
+                    <span class="text-slate-400 italic">No se ha registrado un método de pago. Haz clic en "Cambiar" para agregar uno.</span>
+                </div>
+            </div>
+
+            <!-- Revisión de Productos e Ingesta de Envío -->
+            <div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm">
+                <h3 class="text-sm font-black text-white mb-4">3. Revisar productos y opciones de envío</h3>
+                <div class="flex flex-col gap-6" id="checkout-products-list">
+                    <!-- Productos cargados por JS -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Columna Derecha: Resumen de Pedido -->
+        <div class="lg:col-span-4 flex flex-col gap-4">
+            <div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm flex flex-col gap-4">
+                <button onclick="placeOrder()" class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-[#0F1111] font-black py-3 rounded-full text-xs text-center border border-[#FCD200] shadow transition active:scale-97">
+                    🚀 ¡Autorizar Cargo y Completar Compra! 🚀
+                </button>
+                <a href="index.html" class="w-full bg-slate-950/80 hover:bg-slate-900/60 text-slate-100 font-bold py-2.5 rounded-full text-xs text-center border border-slate-300 shadow-sm transition active:scale-97 block">
+                    Seguir comprando
+                </a>
+                <p class="text-[10px] text-slate-400 text-center">
+                    Al realizar tu pedido, aceptas nuestro aviso de privíacidad y las condiciones de uso local de Anti-Gravity.
+                </p>
+
+                <!-- Banner precio especial mayoreo -->
+                <div class="bg-blue-950/30 border border-blue-900/50 rounded-xl p-3 text-[10px] text-blue-200 leading-relaxed flex flex-col gap-1">
+                    <strong class="font-black text-blue-300 flex items-center gap-1">
+                        <i class="fa-solid fa-tag"></i> Descuento de Mayoreo Activo
+                    </strong>
+                    <span>Compra 10 artículos o más del catálogo y recibe precio especial preferencial con un 15% de descuento sobre el subtotal directo.</span>
+                </div>
+
+                <div class="border-t border-slate-800/80 pt-4 flex flex-col gap-2">
+                    <h4 class="text-xs font-black text-white">Resumen del pedido</h4>
+                    <div class="flex justify-between text-xs text-slate-300">
+                        <span>Productos:</span>
+                        <span id="summary-subtotal">$0.00 MXN</span>
+                    </div>
+                    <div class="flex justify-between text-xs text-slate-300">
+                        <span>Envío:</span>
+                        <span id="summary-shipping">$0.00 MXN</span>
+                    </div>
+                    <div class="flex justify-between text-xs text-green-700 font-bold">
+                        <span>Cashback (5%):</span>
+                        <span id="summary-cashback">-$0.00 MXN</span>
+                    </div>
+                    <div class="border-t border-slate-800/80 pt-2 flex justify-between text-sm font-black text-red-600">
+                        <span>Total del pedido:</span>
+                        <span id="summary-total">$0.00 MXN</span>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 text-[10px] text-amber-800 leading-relaxed">
+                    🎉 <strong>Ahorro Total:</strong> Te estás ahorrando <strong id="summary-savings">$0.00 MXN</strong> (5% Cashback aplicado inmediatamente).
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- DIÁLOGO DE CONFIRMACIÓN DE ELIMINACIÓN -->
+<div id="confirmDeleteModal" class="fixed inset-0 z-[300] hidden flex items-center justify-center bg-slate-950/80 backdrop-blur-sm px-4">
+    <div class="bg-slate-950/80 rounded-2xl p-6 max-w-sm w-full shadow-2xl border border-slate-800/80 text-center">
+        <i class="fa-solid fa-trash-can text-red-500 text-3xl mb-3"></i>
+        <h4 class="text-sm font-black text-white mb-1">¿Quieres eliminar el producto?</h4>
+        <p class="text-xs text-slate-400 mb-4">Esta acción removerá el costo del artículo de tu total.</p>
+        <div class="flex gap-3">
+            <button onclick="confirmDeleteResponse(false)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-200 font-bold py-2 rounded-xl text-xs transition">No, mantener</button>
+            <button onclick="confirmDeleteResponse(true)" class="flex-1 bg-red-600 hover:bg-red-500 text-white font-black py-2 rounded-xl text-xs transition">Sí, eliminar</button>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL DE PAGO -->
+<div id="paymentModal" class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-slate-950/80 backdrop-blur-md px-4">
+    <div class="bg-slate-900/95 border border-slate-800 rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative text-slate-100">
+        <h3 class="text-lg font-black text-white mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-wallet text-amber-500"></i> Registrar Método de Pago
+        </h3>
+        <p class="text-[11px] text-slate-400 mb-4">Selecciona tu método de pago preferido para liquidar tus compras.</p>
+        <form id="paymentForm" onsubmit="savePayment(event)" class="flex flex-col gap-3">
+            <!-- Selector de Tipo de Pago -->
+            <div class="flex gap-4 mb-2">
+                <label class="flex items-center gap-2 text-xs cursor-pointer font-bold">
+                    <input type="radio" name="paymentType" víalue="card" checked onclick="togglePaymentFields('card')" class="accent-amber-500">
+                    💳 Tarjeta (Crédito/Débito)
+                </label>
+                <label class="flex items-center gap-2 text-xs cursor-pointer font-bold">
+                    <input type="radio" name="paymentType" víalue="cash" onclick="togglePaymentFields('cash')" class="accent-amber-500">
+                    💵 Efectivo / Transferencia
+                </label>
+            </div>
+            
+            <!-- Campos de Tarjeta -->
+            <div id="cardFields" class="flex flex-col gap-3">
+                <div>
+                    <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Nombre del Titular</label>
+                    <input type="text" id="paymentHolder" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Número de Tarjeta</label>
+                    <input type="text" id="paymentCardNumber" maxlength="16" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
+                </div>
+                <div class="grid grid-cols-2 gap-2.5">
+                    <div>
+                        <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Vencimiento (MM/AA)</label>
+                        <input type="text" id="paymentExpiry" placeholder="12/29" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">CVV</label>
+                        <input type="password" id="paymentCvv" maxlength="3" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mensaje de Efectivo -->
+            <div id="cashFields" class="hidden bg-slate-950 border border-slate-800 rounded-xl p-3.5 text-xs text-slate-300 leading-relaxed">
+                <p class="font-bold text-amber-400 mb-1">Pago Contra Entrega / Depósito</p>
+                Paga en efectivo al recibir tu entrega física a domicilio o realiza transferencia bancaria directa una vez coordinado tu pedido por WhatsApp.
+            </div>
+
+            <div class="flex gap-2.5 mt-2">
+                <button type="button" onclick="closePaymentModal()" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-2 rounded-xl text-xs transition">Cancelar</button>
+                <button type="submit" class="flex-1 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2 rounded-xl text-xs transition">Guardar Método</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    const productCatalog = [
+        {
+                "sku": "000946",
+                "nombre": "Bocina Radio FM / Reproductor Link Bits RD017 (2\" LED / TWS)",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_thbep9thbep9thbe.png",
+                "precio": "150",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Bocina portátil de 2 pulgadas Link Bits modelo RD017. Cuenta con conexión Bluetooth inalámbrica, radio FM, reproductor USB y MicroSD/TF, iluminación LED multicolor y tecnología TWS.",
+                "precio_original": "218",
+                "modelo_caja": "RD017",
+                "descuento": "45% OFF",
+                "tamano_altavoz": "2 Pulgadas",
+                "caracteristicas": "Conexión Bluetooth, Radio FM, Entrada USB, Tarjeta MicroSD/TF, Luces LED Multicolor, Tecnología TWS, Sonido HD"
+        },
+        {
+                "sku": "LB02820",
+                "nombre": "Bocina Radio FM / Reproductor Link Bits RFR034 (3\" Con Asa / TWS)",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_2ppzz92ppzz92ppz.png",
+                "precio": "152",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Bocina portátil de 3 pulgadas Link Bits modelo RFR034 con asa de transporte integrada. Incluye Bluetooth, radio FM, reproductor USB/MicroSD y función TWS.",
+                "precio_original": "221",
+                "modelo_caja": "RFR034",
+                "descuento": "45% OFF",
+                "tamano_altavoz": "3 Pulgadas",
+                "caracteristicas": "Conexión Bluetooth, Radio FM, Entrada USB, Tarjeta MicroSD/TF, Asa Superior Integrada, Tecnología TWS"
+        },
+        {
+                "sku": "003382",
+                "nombre": "Bocina Radio FM / Reproductor Link Bits RFR342 (3\" LED HD / TWS)",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_ikl59pikl59pikl5.png",
+                "precio": "150",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Bocina portátil de 3 pulgadas Link Bits modelo RFR342. Diseño compacto con rejilla protectora, iluminación LED rítmica, Bluetooth, radio FM, USB/MicroSD y TWS.",
+                "precio_original": "218",
+                "modelo_caja": "RFR342",
+                "descuento": "45% OFF",
+                "tamano_altavoz": "3 Pulgadas",
+                "caracteristicas": "Conexión Bluetooth, Radio FM, Entrada USB, Tarjeta MicroSD/TF, Luces LED, Sonido HD, Tecnología TWS"
+        },
+        {
+                "sku": "003161",
+                "nombre": "Bocina Radio FM / Reproductor Link Bits RFR368 (Doble 3\" x2 / Display / TWS)",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_yxthc8yxthc8yxth.png",
+                "precio": "179",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Bocina portátil bafle de doble altavoz (3\" x 2) Link Bits modelo RFR368. Equipada con pantalla digital frontal, doble woofer con iluminación LED, radio FM, USB/MicroSD y TWS.",
+                "precio_original": "260",
+                "modelo_caja": "RFR368",
+                "descuento": "45% OFF",
+                "tamano_altavoz": "Doble 3\" (3\" x2)",
+                "caracteristicas": "Doble Altavoz de 3\", Pantalla Display Digital, Conexión Bluetooth, Radio FM, Entrada USB, Tarjeta MicroSD/TF, Luces LED, TWS"
+        },
+        {
+                "sku": "003280",
+                "nombre": "Bocina Radio FM / Reproductor Link Bits RFR388 (3\" C/Micrófono / TWS)",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_n0hl1sn0hl1sn0hl.png",
+                "precio": "168",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Bocina portátil de 3 pulgadas Link Bits modelo RFR388. Incluye micrófono alámbrico para karaoke o avisos, luces LED decorativías, Bluetooth, radio FM, lector USB/MicroSD y TWS.",
+                "precio_original": "244",
+                "modelo_caja": "RFR388",
+                "descuento": "45% OFF",
+                "tamano_altavoz": "3 Pulgadas",
+                "caracteristicas": "Incluye Micrófono Alámbrico, Conexión Bluetooth, Radio FM, Entrada USB, Tarjeta MicroSD/TF, Luces LED, Tecnología TWS"
+        },
+        {
+                "sku": "003288",
+                "nombre": "Bocina Radio FM / Reproductor Link Bits RFR392 (4\" LED HD / TWS)",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_c92fjrc92fjrc92f.png",
+                "precio": "161",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Bocina portátil de 4 pulgadas Link Bits modelo RFR392. Mayor potencia con altavoz de 4\", sonido HD, iluminación LED frontal, radio FM, reproductor USB/MicroSD y TWS.",
+                "precio_original": "234",
+                "modelo_caja": "RFR392",
+                "descuento": "45% OFF",
+                "tamano_altavoz": "4 Pulgadas",
+                "caracteristicas": "Altavoz de 4\", Conexión Bluetooth, Radio FM, Entrada USB, Tarjeta MicroSD/TF, Luces LED rítmicas, Sonido HD, TWS"
+        },
+        {
+                "sku": "DUL-001",
+                "nombre": "Carlos V",
+                "imagen": "assets/img/mascota_tigre.jpg",
+                "precio": "12",
+                "frecuencia": "quincenal",
+                "inventario_tipo": "primer mercado",
+                "categoria": "dulces",
+                "existencias": "45",
+                "descripcion": "El chocolate con leche favorito de México, ideal para saciar un antojo dulce instantáneo.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "CIG-001",
+                "nombre": "Cigarro Suelto",
+                "imagen": "assets/img/mascota_tigre.jpg",
+                "precio": "10",
+                "frecuencia": "semanal",
+                "inventario_tipo": "primer mercado",
+                "categoria": "cigarros",
+                "existencias": "200",
+                "descripcion": "Cigarro individual de marcas líderes nacionales con precio de venta único y estándar.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "COMP-002",
+                "nombre": "Computadora de Escritorio PC Custom Lab Intel i5 / 16GB RAM / 500GB SSD",
+                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "precio": "8500",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Equipo seminuevo en excelente estado, ideal para oficina, estudiantes y tareas del hogar.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": "Intel i5, 16GB RAM, 500GB SSD"
+        },
+        {
+                "sku": "COMP-001",
+                "nombre": "Computadora Gamer PC Custom Lab Ryzen 7 / RTX 4070 / 32GB RAM / 1TB SSD",
+                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "precio": "28500",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Computadora de alto rendimiento para gaming y diseño. Ensamble premium nuevo con componentes certificados.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": "Ryzen 7, RTX 4070, 32GB RAM, 1TB SSD"
+        },
+        {
+                "sku": "REV-003",
+                "nombre": "Cosmopolitan",
+                "imagen": "assets/img/portadas/casa_cover.jpg",
+                "precio": "75",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "15",
+                "descripcion": "Moda, estilo de vida, tendencias de belleza e historias inspiradoras para la mujer moderna.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-008",
+                "nombre": "Cosmopolitan Moda",
+                "imagen": "assets/img/portadas/casa_cover.jpg",
+                "precio": "75",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "5",
+                "descripcion": "Especial de temporada con las pasarelas internacionales y colecciones otoño-invierno.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-013",
+                "nombre": "Crucigramas Clásicos",
+                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "precio": "35",
+                "frecuencia": "semanal",
+                "inventario_tipo": "segundo mercado",
+                "categoria": "revistas",
+                "existencias": "18",
+                "descripcion": "Los retos clásicos de palabras y conocimiento general para resolver en tus ratos libres.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-005",
+                "nombre": "Esquire",
+                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "precio": "90",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "6",
+                "descripcion": "Estilo de vida masculino, alta relojería, automovilismo y cultura contemporánea.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "DUL-002",
+                "nombre": "Halls Menta",
+                "imagen": "assets/img/mascota_tigre.jpg",
+                "precio": "10",
+                "frecuencia": "quincenal",
+                "inventario_tipo": "primer mercado",
+                "categoria": "dulces",
+                "existencias": "60",
+                "descripcion": "Pastillas refrescantes con sabor a mentol eucalipto para despejar tu garganta y respiración.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-010",
+                "nombre": "Hogar y Jardín",
+                "imagen": "assets/img/portadas/casa_cover.jpg",
+                "precio": "65",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "7",
+                "descripcion": "Paisajismo, cuidado de plantas de interiores y diseño de terrazas urbanas.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-011",
+                "nombre": "Mascotas y Naturaleza",
+                "imagen": "assets/img/portadas/wildlife_cover.jpg",
+                "precio": "60",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "9",
+                "descripcion": "El bienestar de tu mascota: nutrición, salud veterinaria y psicología animal.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "DUL-003",
+                "nombre": "Mazapán de la Rosa Grande",
+                "imagen": "assets/img/mascota_tigre.jpg",
+                "precio": "8",
+                "frecuencia": "quincenal",
+                "inventario_tipo": "primer mercado",
+                "categoria": "dulces",
+                "existencias": "100",
+                "descripcion": "El dulce tradicional de cacahuate molido con textura suave y sabor inigualable.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-001",
+                "nombre": "Muy Interesante",
+                "imagen": "assets/img/portadas/science_cover.jpg",
+                "precio": "85",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "12",
+                "descripcion": "Descubre las últimas fronteras de la ciencia, tecnología y el universo.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-006",
+                "nombre": "Muy Interesante Ciencia",
+                "imagen": "assets/img/portadas/science_cover.jpg",
+                "precio": "85",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "4",
+                "descripcion": "Edición especial dedicada a la física cuántica, biotecnología y medicina del futuro.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-002",
+                "nombre": "National Geographic",
+                "imagen": "assets/img/portadas/travel_cover.jpg",
+                "precio": "95",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "8",
+                "descripcion": "Explora las maravillas naturales y culturas de nuestro planeta con fotografía galardonada.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-007",
+                "nombre": "National Geographic Viajes",
+                "imagen": "assets/img/portadas/travel_cover.jpg",
+                "precio": "95",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "3",
+                "descripcion": "Guías completas de destinos mundiales, consejos de viaje y mapas detallados.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-015",
+                "nombre": "Revista Padres e Hijos 2016",
+                "imagen": "assets/img/portadas/wildlife_cover.jpg",
+                "precio": "30",
+                "frecuencia": "mensual",
+                "inventario_tipo": "segundo mercado",
+                "categoria": "revistas",
+                "existencias": "11",
+                "descripcion": "Consejos atemporales de pediatría, crianza respetuosa y estimulación temprana para bebés.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-012",
+                "nombre": "Sopas de Letras Gigante",
+                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "precio": "40",
+                "frecuencia": "quincenal",
+                "inventario_tipo": "segundo mercado",
+                "categoria": "revistas",
+                "existencias": "24",
+                "descripcion": "Ejercicios mentales divertidos para mantener la mente activía y ágil a cualquier edad.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-014",
+                "nombre": "Sudoku Desafío",
+                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "precio": "38",
+                "frecuencia": "quincenal",
+                "inventario_tipo": "segundo mercado",
+                "categoria": "revistas",
+                "existencias": "15",
+                "descripcion": "Rompecabezas numéricos desde nivel básico hasta extremo para entrenar la concentración.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-004",
+                "nombre": "Vanidades",
+                "imagen": "assets/img/portadas/casa_cover.jpg",
+                "precio": "70",
+                "frecuencia": "quincenal",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "9",
+                "descripcion": "La revista líder de entretenimiento, realeza, recetas y decoración en español.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-009",
+                "nombre": "Vanidades Hogar",
+                "imagen": "assets/img/portadas/casa_cover.jpg",
+                "precio": "70",
+                "frecuencia": "quincenal",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "4",
+                "descripcion": "Ideas prácticas para organizar tu espacio, decoración de interiores y recetas rápidas.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        }
+];
+
+    
+    function showPaymentProcessing(callback) {
+        const overlay = document.getElementById("payment-processing-overlay");
+        const spinner = document.getElementById("payment-spinner");
+        const successIcon = document.getElementById("payment-success-icon");
+        const title = document.getElementById("payment-title");
+        const statusText = document.getElementById("payment-status");
+        
+        const dot1 = document.getElementById("step-dot-1");
+        const dot2 = document.getElementById("step-dot-2");
+        const dot3 = document.getElementById("step-dot-3");
+        const dot4 = document.getElementById("step-dot-4");
+
+        const storedPay = localStorage.getItem("user_payment_method");
+        const payData = storedPay ? JSON.parse(storedPay) : { type: 'cash' };
+
+        overlay.classList.remove("hidden");
+        spinner.classList.remove("hidden");
+        successIcon.classList.add("hidden");
+        title.innerText = "Procesando pago...";
+        
+        dot1.className = "h-1.5 w-8 rounded bg-blue-600 transition duration-300";
+        dot2.className = "h-1.5 w-8 rounded bg-slate-200 transition duration-300";
+        dot3.className = "h-1.5 w-8 rounded bg-slate-200 transition duration-300";
+        dot4.className = "h-1.5 w-8 rounded bg-slate-200 transition duration-300";
+
+        if (payData.type === 'card') {
+            statusText.innerText = "Estableciendo conexión encriptada SSL/TLS...";
+            
+            setTimeout(() => {
+                statusText.innerText = "Comprobando existencia y validez de la tarjeta...";
+                dot2.className = "h-1.5 w-8 rounded bg-blue-600 transition duration-300";
+            }, 1200);
+
+            setTimeout(() => {
+                statusText.innerText = "Validando fondos suficientes con la red bancaria...";
+                dot3.className = "h-1.5 w-8 rounded bg-blue-600 transition duration-300";
+            }, 2400);
+
+            setTimeout(() => {
+                spinner.classList.add("hidden");
+                successIcon.classList.remove("hidden");
+                title.innerText = "¡Pago autorizado!";
+                const authCode = "AUTH-" + Math.floor(100000 + Math.random() * 900000);
+                statusText.innerHTML = `<span class="text-emerald-600 font-bold">Transacción autorizada con éxito.</span><br><span class="font-mono text-[10px] text-slate-400">Ref: ${authCode}</span>`;
+                dot4.className = "h-1.5 w-8 rounded bg-emerald-500 transition duration-300";
+                localStorage.setItem("simulated_auth_code", authCode);
+            }, 3600);
+
+            setTimeout(() => {
+                overlay.classList.add("hidden");
+                callback();
+            }, 5000);
+        } else {
+            statusText.innerText = "Registrando solicitud de pedido contra entrega...";
+            
+            setTimeout(() => {
+                statusText.innerText = "Comprobando cobertura de entrega a domicilio...";
+                dot2.className = "h-1.5 w-8 rounded bg-blue-600 transition duration-300";
+            }, 1000);
+
+            setTimeout(() => {
+                spinner.classList.add("hidden");
+                successIcon.classList.remove("hidden");
+                title.innerText = "¡Pedido registrado!";
+                const ordCode = "ORD-" + Math.floor(100000 + Math.random() * 900000);
+                statusText.innerHTML = `<span class="text-emerald-600 font-bold">Pedido agendado para entrega local.</span><br><span class="font-mono text-[10px] text-slate-400">ID: ${ordCode}</span>`;
+                dot3.className = "h-1.5 w-8 rounded bg-emerald-500 transition duration-300";
+                dot4.className = "h-1.5 w-8 rounded bg-emerald-500 transition duration-300";
+                localStorage.setItem("simulated_auth_code", ordCode);
+            }, 2000);
+
+            setTimeout(() => {
+                overlay.classList.add("hidden");
+                callback();
+            }, 3500);
+        }
+    }
+
+
+
+    let checkoutItems = [];
+    let shippingCost = 0;
+
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function initCheckout() {
+        const storedCart = localStorage.getItem("shopping_cart");
+        let cart = storedCart ? JSON.parse(storedCart) : [];
+
+        const sku = getQueryParam("sku");
+        if (sku) {
+            const prod = productCatalog.find(p => p.sku === sku);
+            if (prod) {
+                const existing = cart.find(item => item.sku === sku);
+                if (existing) {
+                    if (!existing.quantity) existing.quantity = 1;
+                } else {
+                    cart.push({...prod, quantity: 1});
+                }
+                localStorage.setItem("shopping_cart", JSON.stringify(cart));
+            }
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+        
+        checkoutItems = cart;
+        renderCheckoutProducts();
+        updateSummary();
+        renderAddress();
+        renderPayment();
+        updateHeaderDeliveryPrompt();
+    }
+
+    function updateQty(sku, qty) {
+        const item = checkoutItems.find(p => p.sku === sku);
+        if (item) {
+            item.quantity = Math.max(0, parseInt(qty));
+            
+            // Sync active items (qty > 0) back to localStorage
+            const activeItems = checkoutItems.filter(p => p.quantity > 0);
+            localStorage.setItem("shopping_cart", JSON.stringify(activeItems));
+            
+            renderCheckoutProducts();
+            updateSummary();
+            updateHeaderDeliveryPrompt();
+        }
+    }
+
+    function renderCheckoutProducts() {
+        const container = document.getElementById("checkout-products-container");
+        if (!container) return;
+        container.innerHTML = "";
+
+        if (checkoutItems.length === 0) {
+            container.innerHTML = `
+                <div class="text-center py-8 text-slate-400">
+                    <i class="fa-solid fa-cart-shopping text-3xl mb-2"></i>
+                    <p class="text-xs">No hay productos en tu carrito.</p>
+                </div>
+            `;
+            return;
+        }
+
+        checkoutItems.forEach(item => {
+            const isDeleted = (item.quantity || 0) === 0;
+            const prodRow = document.createElement("div");
+            
+            if (isDeleted) {
+                // Grayed out, disabled state for accidental deletion
+                prodRow.className = "flex gap-4 p-4 rounded-xl border border-dashed border-slate-300 bg-slate-900/60 opacity-45 grayscale transition duration-300 items-center justify-between";
+                prodRow.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-16 bg-slate-950/80 border border-slate-800/80 rounded-lg overflow-hidden flex items-center justify-center p-1">
+                            <img src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-contain bg-slate-950/80">
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-200 leading-tight line-clamp-1">${item.nombre}</h4>
+                            <p class="text-[10px] text-red-500 font-bold mt-0.5"><i class="fa-solid fa-trash-can"></i> Producto removido de la compra</p>
+                        </div>
+                    </div>
+                    <button onclick="updateQty('${item.sku}', 1)" class="bg-blue-950/30 hover:bg-blue-100 text-blue-600 border border-blue-900/50 font-black px-3 py-1.5 rounded-lg text-[9px] uppercase tracking-wider transition active:scale-97 cursor-pointer flex items-center gap-1">
+                        <i class="fa-solid fa-rotate-left"></i> Volver a agregar
+                    </button>
+                `;
+            } else {
+                // Active normal product card row with detailed savings
+                prodRow.className = "flex gap-4 p-4 rounded-xl border border-slate-800/80 bg-slate-900/60/50 hover:bg-slate-900/60 transition duration-200";
+                
+                const hasDiscount = item.precio_original && parseFloat(item.precio_original) > parseFloat(item.precio);
+                const origVal = hasDiscount ? parseFloat(item.precio_original) : 0;
+                const precVal = parseFloat(item.precio);
+                const savingsVal = hasDiscount ? (origVal - precVal) * item.quantity : 0;
+
+                const itemPriceBlock = hasDiscount ? `
+                    <div class="flex flex-col gap-0.5">
+                        <span class="text-[9px] text-slate-400 line-through">Antes: $${Math.floor(origVal)} MXN</span>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-black text-white">$${Math.floor(precVal)} MXN</span>
+                            <span class="bg-red-50 text-red-500 border border-red-200 text-[8px] font-black px-1.5 py-0.2 rounded uppercase">Ahorraste: $${Math.floor(savingsVal)} MXN (${item.descuento || '45% OFF'})</span>
+                        </div>
+                    </div>
+                ` : `
+                    <span class="text-xs font-black text-white">$${Math.floor(precVal)} MXN</span>
+                `;
+
+                const itemSpecs = `
+                    ${item.modelo_caja ? `<span class="bg-slate-100 border border-slate-800/80 text-slate-300 text-[9px] font-mono font-bold px-1.5 py-0.2 rounded">${item.modelo_caja}</span>` : ''}
+                    ${item.tamano_altavoz ? `<span class="bg-slate-100 border border-slate-800/80 text-slate-300 text-[9px] font-mono font-bold px-1.5 py-0.2 rounded">Altavoz ${item.tamano_altavoz}</span>` : ''}
+                `;
+
+                prodRow.innerHTML = `
+                    <div class="w-16 h-20 bg-slate-950/80 border border-slate-800/80 rounded-xl overflow-hidden flex items-center justify-center p-1 shrink-0">
+                        <img src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-contain bg-slate-950/80">
+                    </div>
+                    <div class="flex-1 flex flex-col gap-1.5">
+                        <div>
+                            <h4 class="text-xs font-black text-white leading-tight">${item.nombre}</h4>
+                            <p class="text-[10px] text-slate-400 line-clamp-1 mt-0.5">${item.descripcion}</p>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mt-0.5">
+                            ${itemSpecs}
+                        </div>
+                        <div class="flex items-center justify-between mt-2 pt-2 border-t border-slate-800/80">
+                            <div class="flex items-center gap-2">
+                                ${itemPriceBlock}
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="flex items-center border border-slate-800/80 rounded-lg overflow-hidden bg-slate-950/80">
+                                    <button onclick="updateQty('${item.sku}', ${item.quantity - 1})" class="px-2 py-0.5 text-xs text-slate-400 hover:bg-slate-100 hover:text-white font-bold transition"><i class="fa-solid fa-minus"></i></button>
+                                    <span class="px-2 text-xs font-mono font-bold text-slate-100 bg-slate-900/60">${item.quantity}</span>
+                                    <button onclick="updateQty('${item.sku}', ${item.quantity + 1})" class="px-2 py-0.5 text-xs text-slate-400 hover:bg-slate-100 hover:text-white font-bold transition"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                                <button onclick="updateQty('${item.sku}', 0)" class="text-[10px] text-red-500 hover:underline font-bold flex items-center gap-0.5">
+                                    <i class="fa-solid fa-trash-can"></i> Eliminar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            container.appendChild(prodRow);
+        });
+    }
+
+    function updateSummary() {
+        const activeItems = checkoutItems.filter(item => item.quantity > 0);
+        let subtotal = 0;
+        activeItems.forEach(item => {
+            subtotal += parseFloat(item.precio) * item.quantity;
+        });
+
+        // Shipping is Gratis
+        const shipping = 0;
+        
+        // Cashback: 5% of subtotal, rounded down to nearest integer (Math.floor) as requested
+        const cashback = Math.floor(subtotal * 0.05);
+        
+        // Total sum
+        const total = subtotal + shipping - cashback;
+
+        const subtotalEl = document.getElementById("summary-subtotal");
+        if (subtotalEl) subtotalEl.innerText = `$${Math.floor(subtotal)} MXN`;
+        
+        const shippingEl = document.getElementById("summary-shipping");
+        if (shippingEl) shippingEl.innerText = "Gratis";
+        
+        const cashbackEl = document.getElementById("summary-cashback");
+        if (cashbackEl) cashbackEl.innerText = `-$${Math.floor(cashback)} MXN`;
+        
+        const totalEl = document.getElementById("summary-total");
+        if (totalEl) totalEl.innerText = `$${Math.floor(total)} MXN`;
+    }
+
+
+    function renderAddress() {
+        const display = document.getElementById("checkout-address-display");
+        const stored = localStorage.getItem("user_delivery_address");
+        if (stored) {
+            const data = JSON.parse(stored);
+            display.innerHTML = `
+                <div class="flex flex-col gap-3 mt-1 relative p-4 rounded-xl bg-slate-900/60 border border-slate-800/80">
+                    <div class="absolute top-3 right-3">
+                        <button onclick="editAddress()" class="text-xs text-blue-600 hover:underline font-bold flex items-center gap-1">
+                            <i class="fa-solid fa-pen-to-square"></i> Editar datos
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-2.5 text-slate-200 text-xs">
+                        <div class="flex items-center gap-2">
+                            <span class="text-slate-400 font-bold w-20 uppercase text-[9px]">Nombre:</span>
+                            <strong class="text-white font-black">${data.name}</strong>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-slate-400 font-bold w-20 uppercase text-[9px]">Correo:</span>
+                            <span class="text-white">${data.email}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-slate-400 font-bold w-20 uppercase text-[9px]">Teléfono:</span>
+                            <span class="text-white">${data.phone}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-slate-400 font-bold w-20 uppercase text-[9px]">Dirección:</span>
+                            <span class="text-white">${data.street} No. ${data.number}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-slate-400 font-bold w-20 uppercase text-[9px]">Colonia:</span>
+                            <span class="text-white">Col. ${data.colonia}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-slate-400 font-bold w-20 uppercase text-[9px]">C.P. / Ciudad:</span>
+                            <span class="text-white">C.P. ${data.zipcode}, ${data.city}</span>
+                        </div>
+                    </div>
+                    <div class="mt-1.5 flex items-center gap-1.5 text-[10px] text-green-600 font-bold">
+                        <i class="fa-solid fa-circle-check"></i> Perfil Registrado y Dirección de Envío Activía
+                    </div>
+                </div>
+            `;
+        } else {
+            display.innerHTML = `
+                <form id="inlineAddressForm" onsubmit="saveAddress(event)" class="flex flex-col gap-3 mt-2 bg-slate-900/60 p-4 rounded-xl border border-slate-800/80">
+                    <p class="text-[11px] text-slate-400 mb-1 leading-relaxed">
+                        Registra tus datos de entrega en la base de datos de tu navegador para poder recibir tu pedido de manera efectivía.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[9px] font-black text-slate-300 uppercase">Nombre Completo</label>
+                            <input type="text" id="addressName" required placeholder="Ej. Juan Pérez" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[9px] font-black text-slate-300 uppercase">Teléfono (10 dígitos)</label>
+                            <input type="tel" id="addressPhone" required placeholder="Ej. 5512345678" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[9px] font-black text-slate-300 uppercase">Correo Electrónico</label>
+                            <input type="email" id="addressEmail" required placeholder="Ej. cliente@correo.com" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[9px] font-black text-slate-300 uppercase">Calle de Entrega</label>
+                            <input type="text" id="addressStreet" required placeholder="Ej. Av. Juárez" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[9px] font-black text-slate-300 uppercase">Número (Ext/Int)</label>
+                            <input type="text" id="addressNumber" required placeholder="Ej. 450 Int 3" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[9px] font-black text-slate-300 uppercase">Colonia</label>
+                            <input type="text" id="addressColonia" required placeholder="Ej. Polanco" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[9px] font-black text-slate-300 uppercase">Código Postal</label>
+                            <input type="text" id="addressZipcode" required placeholder="Ej. 11560" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[9px] font-black text-slate-300 uppercase">Ciudad y Estado</label>
+                        <input type="text" id="addressCity" required placeholder="Ej. Ciudad de México" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <button type="submit" class="w-full mt-2 bg-blue-600 hover:bg-blue-950/300 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider shadow-sm transition active:scale-97 cursor-pointer">
+                        Registrar datos en la base de datos
+                    </button>
+                </form>
+            `;
+        }
+    }
+
+    function editAddress() {
+        const display = document.getElementById("checkout-address-display");
+        const stored = localStorage.getItem("user_delivery_address");
+        let data = {};
+        if (stored) {
+            data = JSON.parse(stored);
+        }
+        display.innerHTML = `
+            <form id="inlineAddressForm" onsubmit="saveAddress(event)" class="flex flex-col gap-3 mt-2 bg-slate-900/60 p-4 rounded-xl border border-slate-800/80">
+                <p class="text-[11px] text-slate-400 mb-1 leading-relaxed">
+                    Edita tus datos de entrega y guarda los cambios en la base de datos de tu perfil.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[9px] font-black text-slate-300 uppercase">Nombre Completo</label>
+                        <input type="text" id="addressName" required placeholder="Ej. Juan Pérez" víalue="${data.name || ''}" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[9px] font-black text-slate-300 uppercase">Teléfono (10 dígitos)</label>
+                        <input type="tel" id="addressPhone" required placeholder="Ej. 5512345678" víalue="${data.phone || ''}" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[9px] font-black text-slate-300 uppercase">Correo Electrónico</label>
+                        <input type="email" id="addressEmail" required placeholder="Ej. cliente@correo.com" víalue="${data.email || ''}" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[9px] font-black text-slate-300 uppercase">Calle de Entrega</label>
+                        <input type="text" id="addressStreet" required placeholder="Ej. Av. Juárez" víalue="${data.street || ''}" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[9px] font-black text-slate-300 uppercase">Número (Ext/Int)</label>
+                        <input type="text" id="addressNumber" required placeholder="Ej. 450 Int 3" víalue="${data.number || ''}" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[9px] font-black text-slate-300 uppercase">Colonia</label>
+                        <input type="text" id="addressColonia" required placeholder="Ej. Polanco" víalue="${data.colonia || ''}" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-[9px] font-black text-slate-300 uppercase">Código Postal</label>
+                        <input type="text" id="addressZipcode" required placeholder="Ej. 11560" víalue="${data.zipcode || ''}" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label class="text-[9px] font-black text-slate-300 uppercase">Ciudad y Estado</label>
+                    <input type="text" id="addressCity" required placeholder="Ej. Ciudad de México" víalue="${data.city || ''}" class="w-full bg-slate-950/80 border border-slate-800/80 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-blue-500">
+                </div>
+                <div class="flex gap-3">
+                    <button type="button" onclick="renderAddress()" class="flex-1 bg-slate-200 hover:bg-slate-300 text-slate-200 font-bold py-2 rounded-xl text-xs uppercase tracking-wider transition active:scale-97 cursor-pointer">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="flex-1 bg-blue-600 hover:bg-blue-950/300 text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider shadow-sm transition active:scale-97 cursor-pointer">
+                        Guardar cambios
+                    </button>
+                </div>
+            </form>
+        `;
+    }
+
+    function saveAddress(event) {
+        event.preventDefault();
+        const name = document.getElementById("addressName").víalue;
+        const phone = document.getElementById("addressPhone").víalue;
+        const email = document.getElementById("addressEmail").víalue;
+        const street = document.getElementById("addressStreet").víalue;
+        const number = document.getElementById("addressNumber").víalue;
+        const colonia = document.getElementById("addressColonia").víalue;
+        const zipcode = document.getElementById("addressZipcode").víalue;
+        const city = document.getElementById("addressCity").víalue;
+
+        const addressData = { name, phone, email, street, number, colonia, zipcode, city };
+        localStorage.setItem("user_delivery_address", JSON.stringify(addressData));
+        renderAddress();
+    };
+        localStorage.setItem("user_delivery_address", JSON.stringify(addressData));
+        renderAddress();
+        closeAddressModal();
+    }
+
+    function togglePaymentFields(type) {
+        const cardFields = document.getElementById("cardFields");
+        const cashFields = document.getElementById("cashFields");
+        
+        const holder = document.getElementById("paymentHolder");
+        const number = document.getElementById("paymentCardNumber");
+        const expiry = document.getElementById("paymentExpiry");
+        const cvv = document.getElementById("paymentCvv");
+        
+        if (type === "card") {
+            cardFields.classList.remove("hidden");
+            cashFields.classList.add("hidden");
+            
+            holder.setAttribute("required", "required");
+            number.setAttribute("required", "required");
+            expiry.setAttribute("required", "required");
+            cvv.setAttribute("required", "required");
+        } else {
+            cardFields.classList.add("hidden");
+            cashFields.classList.remove("hidden");
+            
+            holder.removeAttribute("required");
+            number.removeAttribute("required");
+            expiry.removeAttribute("required");
+            cvv.removeAttribute("required");
+        }
+    }
+
+    function openPaymentModal() {
+        document.getElementById("paymentModal").classList.remove("hidden");
+        const stored = localStorage.getItem("user_payment_method");
+        if (stored) {
+            const data = JSON.parse(stored);
+            const isCard = data.type === "card" || !data.type;
+            
+            document.querySelector(`input[name="paymentType"][víalue="${isCard ? 'card' : 'cash'}"]`).checked = true;
+            togglePaymentFields(isCard ? 'card' : 'cash');
+            
+            if (isCard) {
+                document.getElementById("paymentHolder").víalue = data.holder || "";
+                document.getElementById("paymentCardNumber").víalue = data.number || "";
+                document.getElementById("paymentExpiry").víalue = data.expiry || "";
+            }
+        } else {
+            document.querySelector('input[name="paymentType"][víalue="card"]').checked = true;
+            togglePaymentFields('card');
+        }
+    }
+
+    function closePaymentModal() {
+        document.getElementById("paymentModal").classList.add("hidden");
+    }
+
+    function savePayment(event) {
+        event.preventDefault();
+        const type = document.querySelector('input[name="paymentType"]:checked').víalue;
+        let paymentData = {};
+        
+        if (type === "card") {
+            const holder = document.getElementById("paymentHolder").víalue;
+            const number = document.getElementById("paymentCardNumber").víalue;
+            const expiry = document.getElementById("paymentExpiry").víalue;
+            paymentData = { type: "card", holder, number, expiry };
+        } else {
+            paymentData = { type: "cash" };
+        }
+        
+        localStorage.setItem("user_payment_method", JSON.stringify(paymentData));
+        renderPayment();
+        closePaymentModal();
+    }
+
+    function placeOrder() {
+        const activeItems = checkoutItems.filter(item => item.quantity > 0);
+        if (activeItems.length === 0) {
+            alert("No hay productos activos en tu carrito de compra.");
+            return;
+        }
+
+        const storedAddr = localStorage.getItem("user_delivery_address");
+        const storedPay = localStorage.getItem("user_payment_method");
+
+        if (!storedAddr) {
+            alert("Por favor registra tu dirección de envío.");
+            openAddressModal();
+            return;
+        }
+
+        if (!storedPay) {
+            alert("Por favor registra tu método de pago.");
+            openPaymentModal();
+            return;
+        }
+
+        const data = JSON.parse(storedAddr);
+        const productsText = activeItems.map(item => `${item.nombre} (x${item.quantity})`).join(", ");
+        
+        let subtotal = 0;
+        activeItems.forEach(item => { subtotal += parseFloat(item.precio) * item.quantity; });
+        const cashback = subtotal * 0.05;
+        const total = subtotal + shippingCost - cashback;
+
+        const waUrl = `https://wa.me/523337271440?text=Hola,%20quiero%20confirmar%20mi%20pedido%20de:%20${encodeURIComponent(productsText)}.%20Monto%20total%20con%205%25%20cashback%20aplicado:%20$${total.toFixed(2)}%20MXN.%20Entregar%20en:%20${encodeURIComponent(data.street)},%20Col.%20${encodeURIComponent(data.colonia)}.%20Contacto:%20${encodeURIComponent(data.name)}%20(Tel:%20${encodeURIComponent(data.phone)}%20|%20Email:%20${encodeURIComponent(data.email)}).`;
+
+        window.open(waUrl, "_blank");
+        localStorage.removeItem("shopping_cart");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        initCheckout();
+    });
+</script>
+
+    <!-- CHATBOT FLOTANTE -->
+    <div class="fixed bottom-6 right-6 z-[9999] text-slate-100 font-sans">
+        <button id="chatbot-toggle" onclick="toggleChatbot()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:scale-105 text-white w-16 h-16 rounded-full shadow-2xl shadow-blue-600/50 flex items-center justify-center text-2xl transition-all cursor-pointer">
+            <i id="chatbot-icon" class="fa-solid fa-comments"></i>
+        </button>
+
+        <div id="chatbot-window" class="hidden absolute bottom-20 right-0 w-80 sm:w-[420px] bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+            <div class="bg-slate-950 p-4 border-b border-slate-800 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+                    <div>
+                        <span class="font-bold text-sm text-white block">Asistente Virtual // Puesto de Revistas & Bazar</span>
+                        <span class="text-xs text-slate-400 font-mono">Responde al instante 24/7</span>
+                    </div>
+                </div>
+                <button onclick="toggleChatbot()" class="text-slate-400 hover:text-white p-1 cursor-pointer"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+
+            <div id="chat-messages" class="p-4 flex-1 overflow-y-auto space-y-4 text-sm max-h-[350px]">
+                <div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed space-y-3">
+                    <p>¡Hola! 👋 Encuentra revistas físicas, periódicos, dulces, cigarros y accesorios en nuestro puesto de revistas. Cuéntanos tu pedido o contáctanos directamente:</p>
+                    <div class="flex flex-col gap-2 pt-1">
+                        <a href="tel:3337271440" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-950/300 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-solid fa-phone"></i> Llamar a Atención Local
+                        </a>
+                        <a href="https://wa.me/523337271440?text=Hola%2C%20quisiera%20cotizar%20o%20pedir%20algo%20en%20el%20puesto%20de%20revistas%20y%20bazar..." target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Chatear por WhatsApp
+                        </a>
+                    </div>
+                    <p class="text-slate-400 text-[11px] pt-1 font-mono text-center">O escribe tu mensaje abajo si no cuentas con WhatsApp:</p>
+                </div>
+            </div>
+
+            <div class="p-3 bg-slate-950 border-t border-slate-800 flex gap-2">
+                <input id="chat-input" type="text" placeholder="Escribe aquí tu proyecto o duda..." onkeypress="handleChatKeyPress(event)" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
+                <button onclick="enviarMensajeChatbot()" class="bg-blue-600 hover:bg-blue-950/300 text-white px-4 py-3 rounded-xl text-sm transition cursor-pointer"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleChatbot() {
+            document.getElementById('chatbot-window').classList.toggle('hidden');
+        }
+
+        function abrirChatbotConMensaje(mensajeInicial) {
+            document.getElementById('chatbot-window').classList.remove('hidden');
+            const messages = document.getElementById('chat-messages');
+            messages.innerHTML += `<div class="bg-blue-600 text-white p-3.5 rounded-2xl rounded-tr-none max-w-[85%] ml-auto font-medium shadow-md">${mensajeInicial}</div>`;
+            messages.scrollTop = messages.scrollHeight;
+
+            setTimeout(() => {
+                messages.innerHTML += `<div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed space-y-3">
+                    <p>¡Excelente! Selecciona cómo deseas continuar:</p>
+                    <div class="flex flex-col gap-2">
+                        <a href="tel:3337271440" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-950/300 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-solid fa-phone"></i> Llamar a Atención Local
+                        </a>
+                        <a href="https://wa.me/523337271440?text=${encodeURIComponent(mensajeInicial)}" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Chatear por WhatsApp
+                        </a>
+                        <a href="mailto:iaworldcenter@gmail.com?subject=Consulta&body=${encodeURIComponent(mensajeInicial)}" class="flex items-center justify-center gap-2 bg-slate-700 hover:bg-slate-600 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-solid fa-envelope"></i> Enviar por Correo Electrónico
+                        </a>
+                    </div>
+                </div>`;
+                messages.scrollTop = messages.scrollHeight;
+            }, 600);
+        }
+
+        function enviarMensajeChatbot() {
+            const input = document.getElementById('chat-input');
+            const text = input.víalue.trim();
+            if (!text) return;
+
+            const messages = document.getElementById('chat-messages');
+            messages.innerHTML += `<div class="bg-blue-600 text-white p-3.5 rounded-2xl rounded-tr-none max-w-[85%] ml-auto font-medium shadow-md">${text}</div>`;
+            input.víalue = '';
+
+            setTimeout(() => {
+                messages.innerHTML += `<div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed space-y-3">
+                    <p>Muchas gracias por escribirnos. Elige la vía para comunicarte con nosotros o enviarnos tu mensaje:</p>
+                    <div class="flex flex-col gap-2">
+                        <a href="tel:3337271440" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-950/300 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-solid fa-phone"></i> Llamar a Atención Local
+                        </a>
+                        <a href="https://wa.me/523337271440?text=${encodeURIComponent(text)}" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Enviar por WhatsApp
+                        </a>
+                        <a href="mailto:iaworldcenter@gmail.com?subject=Consulta&body=${encodeURIComponent(text)}" class="flex items-center justify-center gap-2 bg-slate-700 hover:bg-slate-600 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-solid fa-envelope"></i> Enviar por Correo Electrónico
+                        </a>
+                    </div>
+                </div>`;
+                messages.scrollTop = messages.scrollHeight;
+            }, 700);
+        }
+
+        function handleChatKeyPress(e) {
+            if (e.key === 'Enter') enviarMensajeChatbot();
+        }
+    </script>
+
+
+    <!-- Quicklink Prefetching for <100ms Transitions -->
+    <script type="module">
+        import { listen } from 'https://unpkg.com/quicklink@2.3.0/dist/quicklink.mjs';
+        window.addEventListener('load', () => {
+            listen({ priority: true });
+        });
+    </script>
+
+
+<!-- OVERLAY DE PROCESAMIENTO DE PAGO SIMULADO (EXTREME PREMIUM) -->
+<div id="payment-processing-overlay" class="fixed inset-0 z-[300] hidden flex items-center justify-center bg-slate-950/80 backdrop-blur-md">
+    <div class="bg-slate-950/80 p-8 rounded-3xl border border-slate-800/80 shadow-2xl max-w-sm w-full mx-4 text-center flex flex-col items-center gap-5">
+        <div id="payment-spinner" class="relative flex items-center justify-center">
+            <!-- Spinner Animation -->
+            <div class="animate-spin rounded-full h-16 w-16 border-4 border-slate-800/80 border-t-blue-600"></div>
+            <i class="fa-solid fa-lock absolute text-blue-600 text-lg"></i>
+        </div>
+        <div id="payment-success-icon" class="hidden text-emerald-500 text-5xl animate-bounce">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        
+        <div class="flex flex-col gap-2">
+            <h3 id="payment-title" class="text-sm font-black text-white uppercase tracking-wide">Validando pago...</h3>
+            <p id="payment-status" class="text-xs text-slate-400 leading-relaxed font-semibold">Conectando con la pasarela de pago bancaria...</p>
+        </div>
+        
+        <!-- Steps Indicators -->
+        <div class="flex gap-1.5 justify-center w-full mt-1">
+            <div id="step-dot-1" class="h-1.5 w-8 rounded bg-blue-600 transition duration-300"></div>
+            <div id="step-dot-2" class="h-1.5 w-8 rounded bg-slate-200 transition duration-300"></div>
+            <div id="step-dot-3" class="h-1.5 w-8 rounded bg-slate-200 transition duration-300"></div>
+            <div id="step-dot-4" class="h-1.5 w-8 rounded bg-slate-200 transition duration-300"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

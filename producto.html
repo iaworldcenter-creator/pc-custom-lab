@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto | Puesto de Revistas &amp; Bazar</title>
+    <meta name="google-site-verification" content="BwSy5nNuFFrHJUtxe189nJtPxM4h5QY-SxK1V8wqYDE" />
+    <style>
+        :root { 
+            --crema: #FFFDF9; 
+            --texto: #1F2937; 
+        }
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; 
+            background: var(--crema); 
+            color: var(--texto); 
+            font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .neon-search-frame {
+            border: 2px solid #3b82f6;
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.75);
+        }
+    
+        #chatbot-window { height: 520px; max-height: 85vh; }
+</style>
+    <script src="https://cdn.tailwindcss.com">    function getCart() {
+        const stored = localStorage.getItem("shopping_cart");
+        return stored ? JSON.parse(stored) : [];
+    }
+    function saveCart(cart) {
+    // FUNCIONES DEL CARRITO SLIDE-OVER DRAWER
+    window.openCartDrawer = function() {
+        const drawer = document.getElementById("cartDrawer");
+        if (drawer) {
+            drawer.classList.remove("hidden");
+            renderDrawerCart();
+        }
+    }
+    
+    window.closeCartDrawer = function() {
+        const drawer = document.getElementById("cartDrawer");
+        if (drawer) drawer.classList.add("hidden");
+    }
+    
+    window.removeFromCart = function(sku) {
+        let cart = getCart();
+        cart = cart.filter(item => item.sku !== sku);
+        saveCart(cart);
+        renderDrawerCart();
+    }
+    
+    window.changeQuantity = function(sku, amount) {
+        let cart = getCart();
+        const item = cart.find(i => i.sku === sku);
+        if (item) {
+            item.quantity = (item.quantity || 1) + amount;
+            if (item.quantity <= 0) {
+                cart = cart.filter(i => i.sku !== sku);
+            }
+        }
+        saveCart(cart);
+        renderDrawerCart();
+    }
+    
+    window.renderDrawerCart = function() {
+        const container = document.getElementById("drawer-cart-items");
+        const subtotalDisplay = document.getElementById("drawer-subtotal");
+        if (!container) return;
+        
+        const cart = getCart();
+        container.innerHTML = "";
+        
+        if (cart.length === 0) {
+            container.innerHTML = `
+                <div class="text-center py-12 text-slate-400">
+                    <i class="fa-solid fa-cart-flatbed text-4xl mb-3 block opacity-40"></i>
+                    <p class="text-xs font-semibold">Tu carrito está vacío.</p>
+                </div>
+            `;
+            if (subtotalDisplay) subtotalDisplay.innerText = "$0.00 MXN";
+            return;
+        }
+        
+        let subtotal = 0;
+        cart.forEach(item => {
+            const price = parseFloat(item.precio);
+            const qty = item.quantity || 1;
+            const itemTotal = price * qty;
+            subtotal += itemTotal;
+            
+            const div = document.createElement("div");
+            div.className = "flex items-center gap-3.5 bg-slate-950 border border-slate-800/80 rounded-2xl p-3 shadow-md";
+            div.innerHTML = `
+                <div class="w-12 h-16 rounded-lg overflow-hidden bg-slate-900 border border-slate-800 shrink-0">
+                    <img src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-1 flex flex-col justify-between min-h-[50px]">
+                    <div class="flex justify-between items-start gap-1">
+                        <h4 class="text-[11px] font-black text-white leading-tight line-clamp-2">${item.nombre}</h4>
+                        <button onclick="removeFromCart('${item.sku}')" class="text-slate-400 hover:text-red-400 text-xs cursor-pointer">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center mt-1">
+                        <span class="text-xs font-black text-amber-400">$${price.toFixed(2)}</span>
+                        <div class="flex items-center gap-2.5 bg-slate-900 border border-slate-800 rounded-lg px-2 py-0.5">
+                            <button onclick="changeQuantity('${item.sku}', -1)" class="text-[10px] text-slate-400 hover:text-white cursor-pointer"><i class="fa-solid fa-minus"></i></button>
+                            <span class="text-[11px] font-mono font-bold w-3 text-center">${qty}</span>
+                            <button onclick="changeQuantity('${item.sku}', 1)" class="text-[10px] text-slate-400 hover:text-white cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.appendChild(div);
+        });
+        
+        if (subtotalDisplay) subtotalDisplay.innerText = `$${subtotal.toFixed(2)} MXN`;
+    }
+
+        localStorage.setItem("shopping_cart", JSON.stringify(cart));
+        updateCartBadge();
+    }
+    function updateCartBadge() {
+        const cart = getCart();
+        let totalQty = 0;
+        cart.forEach(item => totalQty += (item.quantity || 1));
+        const badge = document.getElementById("cart-badge-count");
+        if (badge) badge.innerText = totalQty;
+    }
+    function addToCart(sku) {
+        const prod = productCatalog.find(p => p.sku === sku);
+        if (!prod) return;
+
+        const cart = getCart();
+        const existing = cart.find(item => item.sku === sku);
+        if (existing) {
+            existing.quantity = (existing.quantity || 1) + 1;
+        } else {
+            cart.push({ ...prod, quantity: 1 });
+        }
+        saveCart(cart);
+
+        // Show toast alert for 3 seconds
+        const toast = document.getElementById("cartToast");
+        const toastDetails = document.getElementById("cartToastDetails");
+        let totalQty = 0;
+        cart.forEach(item => totalQty += (item.quantity || 1));
+
+        if (toast && toastDetails) {
+            toastDetails.innerText = `Llevas ${totalQty} artículo(s) en tu carrito.`;
+            toast.classList.remove("hidden");
+            setTimeout(() => {
+                toast.classList.add("hidden");
+            }, 3000);
+        }
+    }
+    function goToCheckout() {
+        window.location.href = "checkout.html";
+    }
+    
+    // Auto-update badge on load
+    document.addEventListener("DOMContentLoaded", () => {
+        updateCartBadge();
+    });
+
+
+
+    function updateHeaderDeliveryPrompt() {
+        const promptDiv = document.getElementById("header-delivery-prompt");
+        if (!promptDiv) return;
+        const stored = localStorage.getItem("user_delivery_address");
+        // Check if we are inside pc-custom-lab (uses relative path for checkout)
+        const isPcCustomLab = window.location.pathname.includes("pc-custom-lab");
+        const checkoutUrl = isPcCustomLab ? "../mi-puesto-bazar/checkout.html" : "checkout.html";
+        
+        if (stored) {
+            const data = JSON.parse(stored);
+            promptDiv.innerHTML = `<i class="fa-solid fa-location-dot text-emerald-400 animate-bounce"></i> <span class="text-emerald-400 font-bold">Enviar a ${data.name.split(' ')[0]} (${data.city.split(',')[0]})</span>`;
+        } else {
+            promptDiv.innerHTML = `<i class="fa-solid fa-circle-exclamation text-amber-500 animate-pulse"></i> <span class="text-amber-500 font-black uppercase tracking-wider text-[9px] bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">¡Registra tu domicilio de entrega aquí!</span>`;
+        }
+        promptDiv.classList.remove("hidden");
+    }
+    
+    // Auto-run on load
+    document.addEventListener("DOMContentLoaded", () => {
+        updateHeaderDeliveryPrompt();
+    });
+
+</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Open Graph para Applebot, Siri, Spotlight, Facebook, Discord -->
+    <meta property="og:title" content="Ofertas y Liquidaciones | Puesto de Revistas & Bazar" />
+    <meta property="og:description" content="Encuentra las mejores ofertas y liquidaciones en revistas, dulces, cigarros y gadgets en nuestro puesto local. ¡Hasta 5% de cashback!" />
+    <meta property="og:image" content="https://iaworldcenter-creator.github.io/mi-puesto-bazar/assets/img/portadas/science_cover.jpg" />
+    <meta property="og:url" content="https://iaworldcenter-creator.github.io/mi-puesto-bazar/producto.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Puesto de Revistas &amp; Bazar" />
+
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+</head>
+<body>
+<!-- FRANJA NEGRA DE NAVEGACIÓN SUPERIOR AMPLIADA -->
+<!-- FRANJA NEGRA DE NAVEGACIÓN SUPERIOR AMPLIADA (ECOSISTEMA & AI CO-PILOT) -->
+<header class="w-full bg-slate-950 border-b border-slate-800 pt-3 pb-3 px-4 flex flex-col gap-2.5 relative z-[100] text-slate-100">
+    <!-- Nivel 1: Izquierda (Carrito, Sesión, Software) | Centro (Enlaces Ecosistema) | Derecha (Marca, Logo, Dirección) -->
+    <div class="w-full flex flex-col xl:flex-row justify-between items-center gap-4 border-b border-slate-800/40 pb-3 px-2">
+        
+        <!-- IZQUIERDA: Carrito, Sesión y Descarga -->
+        <div class="flex items-center gap-4 shrink-0 flex-wrap justify-center">
+            <!-- Letrero dinámico de Domicilio para estimular el registro -->
+            <div id="header-delivery-prompt" class="hidden flex items-center gap-1.5 text-[10px] cursor-pointer hover:underline text-slate-300 transition" onclick="const isPc = window.location.pathname.includes('pc-custom-lab'); window.location.href = isPc ? '../mi-puesto-bazar/checkout.html' : 'checkout.html'"></div>
+            
+            <!-- Carrito de Compras Estilo Amazon -->
+            <div class="flex items-center gap-2 cursor-pointer group" onclick="openCartDrawer()">
+                <div class="relative">
+                    <i class="fa-solid fa-cart-shopping text-slate-100 text-lg hover:text-amber-400 transition"></i>
+                    <span id="cart-badge-count" class="absolute -top-2 -right-2 bg-amber-500 text-slate-950 text-[9px] font-black rounded-full px-1.5 py-0.2 min-w-[15px] text-center">0</span>
+                </div>
+                <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition">Carrito</span>
+            </div>
+            <span class="text-slate-100">|</span>
+            <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="text-[10px] font-bold text-slate-300 hover:text-amber-400 transition">Inicia sesión Gemini</a>
+            <span class="text-slate-100">|</span>
+            <a href="https://github.com/google-deepmind" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-500 text-white font-black px-2.5 py-1 rounded-md transition text-[9px] uppercase tracking-wider">Descargar Anti-Gravity</a>
+        </div>
+
+        <!-- CENTRO: Enlaces Ecosistema -->
+        <div class="flex flex-wrap justify-center items-center gap-x-2.5 gap-y-1 text-[11px] font-semibold text-slate-400">
+            <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" class="hover:text-amber-400 transition">Kiosco Digital</a>
+            <span class="text-slate-100">|</span>
+            <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" class="hover:text-amber-400 transition">Dulcería &amp; Botanas</a>
+            <span class="text-slate-100">|</span>
+            <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" class="hover:text-amber-400 transition">Cigarros &amp; Accesorios</a>
+            <span class="text-slate-100">|</span>
+            <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="hover:text-amber-400 transition">PC Custom Lab</a>
+            <span class="text-slate-100">|</span>
+            <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" class="hover:text-amber-400 transition">Puesto de Revistas &amp; Bazar</a>
+        </div>
+
+        <!-- DERECHA: Marca, Logo y Dirección -->
+        <div class="flex items-center gap-4 shrink-0 flex-wrap justify-center">
+            <!-- Dirección de Entrega -->
+            <div class="flex items-center gap-2 bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 shadow-md">
+                <i class="fa-solid fa-location-dot text-amber-500 text-xs animate-bounce"></i>
+                <div class="text-[10px]" id="delivery-address-display">
+                    <span>📍 ¿En dónde quieres que llegue tu producto? </span>
+                    <button onclick="openDeliveryModal()" class="text-amber-400 hover:text-amber-300 font-black underline ml-1 cursor-pointer">Registrar dirección</button>
+                </div>
+            </div>
+            <!-- Logo y Marca -->
+            <div class="flex items-center gap-2.5">
+                <div class="flex flex-col text-right">
+                    <span class="text-base font-black text-amber-400 tracking-wide uppercase leading-tight">Anti-Gravity Copilot</span>
+                    <span class="text-[10px] font-bold text-slate-400 leading-none">Ofertas y Liquidaciones</span>
+                </div>
+                <img loading="lazy" decoding="async" src="assets/img/mascota_tigre.jpg" alt="Tigre Logo" class="w-11 h-11 rounded-full object-cover border-2 border-amber-500 shadow-md">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Nivel 2: Barra de Búsqueda Centrada de 6 Columnas -->
+    <div class="w-full grid grid-cols-1 md:grid-cols-8 gap-0 mt-1">
+        <div class="hidden md:block col-span-1"></div>
+        <div class="col-span-1 md:col-span-6 px-4 md:px-0">
+            <form class="flex items-center gap-2 p-2.5 rounded-2xl bg-slate-950/80 w-full neon-search-frame" role="search" onsubmit="return false;">
+                <label class="sr-only" for="siteSearch">¿Qué deseas buscar hoy?</label>
+                <input id="siteSearch" name="q" type="text" placeholder="¿Qué deseas buscar hoy? Escribe aquí..." class="flex-1 bg-transparent border-0 outline-none text-white font-bold text-sm px-3 placeholder-slate-400" autocomplete="off">
+                <button type="submit" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-6 py-3 rounded-xl text-xs transition shadow-md hover:scale-103 shrink-0">Buscar</button>
+            </form>
+        </div>
+        <div class="hidden md:block col-span-1"></div>
+    </div>
+
+    <!-- Nivel 3: Atajos de Categoría/Departamentos (Sub-Navegación) -->
+    <div class="w-full flex justify-center items-center gap-4 text-[10px] font-bold text-slate-400 border-t border-slate-900 pt-2 mt-1 flex-wrap">
+        <span class="text-slate-400">Departamentos:</span>
+        <button onclick="window.location.href='index.html?cat=Primer'" class="hover:text-amber-400 transition">📖 Revistas Físicas</button>
+        <span class="text-slate-100">•</span>
+        <button onclick="window.location.href='index.html'" class="hover:text-amber-400 transition">📱 Digitales</button>
+        <span class="text-slate-100">•</span>
+        <button onclick="window.location.href='index.html#featured-grid-container'" class="hover:text-amber-400 transition">🍬 Dulces</button>
+        <span class="text-slate-100">•</span>
+        <button onclick="window.location.href='index.html#featured-grid-container'" class="hover:text-amber-400 transition">🚬 Cigarros</button>
+        <span class="text-slate-100">•</span>
+        <button onclick="window.location.href='index.html#featured-grid-container'" class="hover:text-amber-400 transition">🔌 Cables &amp; Gadgets</button>
+        <span class="text-slate-100">•</span>
+        <button onclick="window.location.href='index.html?cat=Segundo'" class="hover:text-amber-400 transition">📦 Segundo Mercado</button>
+    </div>
+</header>
+
+<!-- MODAL DE REGISTRO DE DIRECCIÓN (GLASSMORPHISM) -->
+<div id="deliveryModal" class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-slate-950/80 backdrop-blur-md px-4">
+    <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative overflow-hidden text-slate-100">
+        <h3 class="text-lg font-black text-white mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-map-location-dot text-amber-500"></i> Registrar Domicilio de Entrega
+        </h3>
+        <p class="text-[11px] text-slate-400 mb-4 leading-relaxed">
+            ⚠️ <strong>Nota:</strong> Servicio disponible únicamente a no más de <strong>5 km de distancia</strong> de nuestra sucursal Centro.
+        </p>
+        <form id="deliveryForm" onsubmit="saveDeliveryAddress(event)" class="flex flex-col gap-3">
+            <div>
+                <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Nombre Completo</label>
+                <input type="text" id="deliveryName" required placeholder="Ej. Juan Pérez" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
+            </div>
+            <div>
+                <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Teléfono de Contacto</label>
+                <input type="tel" id="deliveryPhone" required placeholder="Ej. 3337271440" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
+            </div>
+            <div>
+                <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Correo Electrónico</label>
+                <input type="email" id="deliveryEmail" required placeholder="Ej. cliente@correo.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
+            </div>
+            <div>
+                <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Calle y Número</label>
+                <input type="text" id="deliveryStreet" required placeholder="Ej. Av. Pedro Moreno 123" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
+            </div>
+            <div class="grid grid-cols-2 gap-2.5">
+                <div>
+                    <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Colonia</label>
+                    <input type="text" id="deliveryColonia" required placeholder="Ej. Centro" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Ciudad</label>
+                    <input type="text" id="deliveryCity" required placeholder="Ej. Guadalajara" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
+                </div>
+            </div>
+            <div class="flex gap-2.5 mt-2">
+                <button type="button" onclick="closeDeliveryModal()" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-2 rounded-xl text-xs transition">Cancelar</button>
+                <button type="submit" class="flex-1 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2 rounded-xl text-xs transition">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- CONTENIDO DETALLE DEL PRODUCTO (MAQUETADO DE 8 COLUMNAS) -->
+<main class="flex-1 bg-orange-50/15 w-full py-8 text-slate-100">
+    <div class="w-full grid grid-cols-1 md:grid-cols-8 gap-6 px-4 md:px-0">
+        <!-- Columna 1: Vacía -->
+        <div class="hidden md:block col-span-1"></div>
+
+        <!-- Espacio Central de 6 Columnas (Columnas 2 a 7) -->
+        <div id="product-detail-root" class="col-span-1 md:col-span-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start bg-slate-950/80 p-6 md:p-8 rounded-3xl border border-slate-800/80/80 shadow-lg">
+            <!-- Cargado por JS -->
+        </div>
+
+        <!-- Columna 8: Vacía -->
+        <div class="hidden md:block col-span-1"></div>
+    </div>
+</main>
+
+<script>
+    const productCatalog = [
+        {
+                "sku": "000946",
+                "nombre": "Bocina Radio FM / Reproductor Link Bits RD017 (2\" LED / TWS)",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_thbep9thbep9thbe.png",
+                "precio": "150",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Bocina portátil de 2 pulgadas Link Bits modelo RD017. Cuenta con conexión Bluetooth inalámbrica, radio FM, reproductor USB y MicroSD/TF, iluminación LED multicolor y tecnología TWS.",
+                "precio_original": "218",
+                "modelo_caja": "RD017",
+                "descuento": "45% OFF",
+                "tamano_altavoz": "2 Pulgadas",
+                "caracteristicas": "Conexión Bluetooth, Radio FM, Entrada USB, Tarjeta MicroSD/TF, Luces LED Multicolor, Tecnología TWS, Sonido HD"
+        },
+        {
+                "sku": "LB02820",
+                "nombre": "Bocina Radio FM / Reproductor Link Bits RFR034 (3\" Con Asa / TWS)",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_2ppzz92ppzz92ppz.png",
+                "precio": "152",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Bocina portátil de 3 pulgadas Link Bits modelo RFR034 con asa de transporte integrada. Incluye Bluetooth, radio FM, reproductor USB/MicroSD y función TWS.",
+                "precio_original": "221",
+                "modelo_caja": "RFR034",
+                "descuento": "45% OFF",
+                "tamano_altavoz": "3 Pulgadas",
+                "caracteristicas": "Conexión Bluetooth, Radio FM, Entrada USB, Tarjeta MicroSD/TF, Asa Superior Integrada, Tecnología TWS"
+        },
+        {
+                "sku": "003382",
+                "nombre": "Bocina Radio FM / Reproductor Link Bits RFR342 (3\" LED HD / TWS)",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_ikl59pikl59pikl5.png",
+                "precio": "150",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Bocina portátil de 3 pulgadas Link Bits modelo RFR342. Diseño compacto con rejilla protectora, iluminación LED rítmica, Bluetooth, radio FM, USB/MicroSD y TWS.",
+                "precio_original": "218",
+                "modelo_caja": "RFR342",
+                "descuento": "45% OFF",
+                "tamano_altavoz": "3 Pulgadas",
+                "caracteristicas": "Conexión Bluetooth, Radio FM, Entrada USB, Tarjeta MicroSD/TF, Luces LED, Sonido HD, Tecnología TWS"
+        },
+        {
+                "sku": "003161",
+                "nombre": "Bocina Radio FM / Reproductor Link Bits RFR368 (Doble 3\" x2 / Display / TWS)",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_yxthc8yxthc8yxth.png",
+                "precio": "179",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Bocina portátil bafle de doble altavoz (3\" x 2) Link Bits modelo RFR368. Equipada con pantalla digital frontal, doble woofer con iluminación LED, radio FM, USB/MicroSD y TWS.",
+                "precio_original": "260",
+                "modelo_caja": "RFR368",
+                "descuento": "45% OFF",
+                "tamano_altavoz": "Doble 3\" (3\" x2)",
+                "caracteristicas": "Doble Altavoz de 3\", Pantalla Display Digital, Conexión Bluetooth, Radio FM, Entrada USB, Tarjeta MicroSD/TF, Luces LED, TWS"
+        },
+        {
+                "sku": "003280",
+                "nombre": "Bocina Radio FM / Reproductor Link Bits RFR388 (3\" C/Micrófono / TWS)",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_n0hl1sn0hl1sn0hl.png",
+                "precio": "168",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Bocina portátil de 3 pulgadas Link Bits modelo RFR388. Incluye micrófono alámbrico para karaoke o avisos, luces LED decorativas, Bluetooth, radio FM, lector USB/MicroSD y TWS.",
+                "precio_original": "244",
+                "modelo_caja": "RFR388",
+                "descuento": "45% OFF",
+                "tamano_altavoz": "3 Pulgadas",
+                "caracteristicas": "Incluye Micrófono Alámbrico, Conexión Bluetooth, Radio FM, Entrada USB, Tarjeta MicroSD/TF, Luces LED, Tecnología TWS"
+        },
+        {
+                "sku": "003288",
+                "nombre": "Bocina Radio FM / Reproductor Link Bits RFR392 (4\" LED HD / TWS)",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_c92fjrc92fjrc92f.png",
+                "precio": "161",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Bocina portátil de 4 pulgadas Link Bits modelo RFR392. Mayor potencia con altavoz de 4\", sonido HD, iluminación LED frontal, radio FM, reproductor USB/MicroSD y TWS.",
+                "precio_original": "234",
+                "modelo_caja": "RFR392",
+                "descuento": "45% OFF",
+                "tamano_altavoz": "4 Pulgadas",
+                "caracteristicas": "Altavoz de 4\", Conexión Bluetooth, Radio FM, Entrada USB, Tarjeta MicroSD/TF, Luces LED rítmicas, Sonido HD, TWS"
+        },
+        {
+                "sku": "DUL-001",
+                "nombre": "Carlos V",
+                "imagen": "assets/img/mascota_tigre.jpg",
+                "precio": "12",
+                "frecuencia": "quincenal",
+                "inventario_tipo": "primer mercado",
+                "categoria": "dulces",
+                "existencias": "45",
+                "descripcion": "El chocolate con leche favorito de México, ideal para saciar un antojo dulce instantáneo.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "CIG-001",
+                "nombre": "Cigarro Suelto",
+                "imagen": "assets/img/mascota_tigre.jpg",
+                "precio": "10",
+                "frecuencia": "semanal",
+                "inventario_tipo": "primer mercado",
+                "categoria": "cigarros",
+                "existencias": "200",
+                "descripcion": "Cigarro individual de marcas líderes nacionales con precio de venta único y estándar.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "COMP-002",
+                "nombre": "Computadora de Escritorio PC Custom Lab Intel i5 / 16GB RAM / 500GB SSD",
+                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "precio": "8500",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Equipo seminuevo en excelente estado, ideal para oficina, estudiantes y tareas del hogar.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": "Intel i5, 16GB RAM, 500GB SSD"
+        },
+        {
+                "sku": "COMP-001",
+                "nombre": "Computadora Gamer PC Custom Lab Ryzen 7 / RTX 4070 / 32GB RAM / 1TB SSD",
+                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "precio": "28500",
+                "frecuencia": "Inmediato",
+                "inventario_tipo": "Primer Mercado",
+                "categoria": "gadgets",
+                "existencias": "1",
+                "descripcion": "Computadora de alto rendimiento para gaming y diseño. Ensamble premium nuevo con componentes certificados.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": "Ryzen 7, RTX 4070, 32GB RAM, 1TB SSD"
+        },
+        {
+                "sku": "REV-003",
+                "nombre": "Cosmopolitan",
+                "imagen": "assets/img/portadas/casa_cover.jpg",
+                "precio": "75",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "15",
+                "descripcion": "Moda, estilo de vida, tendencias de belleza e historias inspiradoras para la mujer moderna.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-008",
+                "nombre": "Cosmopolitan Moda",
+                "imagen": "assets/img/portadas/casa_cover.jpg",
+                "precio": "75",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "5",
+                "descripcion": "Especial de temporada con las pasarelas internacionales y colecciones otoño-invierno.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-013",
+                "nombre": "Crucigramas Clásicos",
+                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "precio": "35",
+                "frecuencia": "semanal",
+                "inventario_tipo": "segundo mercado",
+                "categoria": "revistas",
+                "existencias": "18",
+                "descripcion": "Los retos clásicos de palabras y conocimiento general para resolver en tus ratos libres.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-005",
+                "nombre": "Esquire",
+                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "precio": "90",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "6",
+                "descripcion": "Estilo de vida masculino, alta relojería, automovilismo y cultura contemporánea.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "DUL-002",
+                "nombre": "Halls Menta",
+                "imagen": "assets/img/mascota_tigre.jpg",
+                "precio": "10",
+                "frecuencia": "quincenal",
+                "inventario_tipo": "primer mercado",
+                "categoria": "dulces",
+                "existencias": "60",
+                "descripcion": "Pastillas refrescantes con sabor a mentol eucalipto para despejar tu garganta y respiración.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-010",
+                "nombre": "Hogar y Jardín",
+                "imagen": "assets/img/portadas/casa_cover.jpg",
+                "precio": "65",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "7",
+                "descripcion": "Paisajismo, cuidado de plantas de interiores y diseño de terrazas urbanas.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-011",
+                "nombre": "Mascotas y Naturaleza",
+                "imagen": "assets/img/portadas/wildlife_cover.jpg",
+                "precio": "60",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "9",
+                "descripcion": "El bienestar de tu mascota: nutrición, salud veterinaria y psicología animal.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "DUL-003",
+                "nombre": "Mazapán de la Rosa Grande",
+                "imagen": "assets/img/mascota_tigre.jpg",
+                "precio": "8",
+                "frecuencia": "quincenal",
+                "inventario_tipo": "primer mercado",
+                "categoria": "dulces",
+                "existencias": "100",
+                "descripcion": "El dulce tradicional de cacahuate molido con textura suave y sabor inigualable.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-001",
+                "nombre": "Muy Interesante",
+                "imagen": "assets/img/portadas/science_cover.jpg",
+                "precio": "85",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "12",
+                "descripcion": "Descubre las últimas fronteras de la ciencia, tecnología y el universo.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-006",
+                "nombre": "Muy Interesante Ciencia",
+                "imagen": "assets/img/portadas/science_cover.jpg",
+                "precio": "85",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "4",
+                "descripcion": "Edición especial dedicada a la física cuántica, biotecnología y medicina del futuro.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-002",
+                "nombre": "National Geographic",
+                "imagen": "assets/img/portadas/travel_cover.jpg",
+                "precio": "95",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "8",
+                "descripcion": "Explora las maravillas naturales y culturas de nuestro planeta con fotografía galardonada.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-007",
+                "nombre": "National Geographic Viajes",
+                "imagen": "assets/img/portadas/travel_cover.jpg",
+                "precio": "95",
+                "frecuencia": "mensual",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "3",
+                "descripcion": "Guías completas de destinos mundiales, consejos de viaje y mapas detallados.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-015",
+                "nombre": "Revista Padres e Hijos 2016",
+                "imagen": "assets/img/portadas/wildlife_cover.jpg",
+                "precio": "30",
+                "frecuencia": "mensual",
+                "inventario_tipo": "segundo mercado",
+                "categoria": "revistas",
+                "existencias": "11",
+                "descripcion": "Consejos atemporales de pediatría, crianza respetuosa y estimulación temprana para bebés.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-012",
+                "nombre": "Sopas de Letras Gigante",
+                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "precio": "40",
+                "frecuencia": "quincenal",
+                "inventario_tipo": "segundo mercado",
+                "categoria": "revistas",
+                "existencias": "24",
+                "descripcion": "Ejercicios mentales divertidos para mantener la mente activa y ágil a cualquier edad.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-014",
+                "nombre": "Sudoku Desafío",
+                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "precio": "38",
+                "frecuencia": "quincenal",
+                "inventario_tipo": "segundo mercado",
+                "categoria": "revistas",
+                "existencias": "15",
+                "descripcion": "Rompecabezas numéricos desde nivel básico hasta extremo para entrenar la concentración.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-004",
+                "nombre": "Vanidades",
+                "imagen": "assets/img/portadas/casa_cover.jpg",
+                "precio": "70",
+                "frecuencia": "quincenal",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "9",
+                "descripcion": "La revista líder de entretenimiento, realeza, recetas y decoración en español.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        },
+        {
+                "sku": "REV-009",
+                "nombre": "Vanidades Hogar",
+                "imagen": "assets/img/portadas/casa_cover.jpg",
+                "precio": "70",
+                "frecuencia": "quincenal",
+                "inventario_tipo": "primer mercado",
+                "categoria": "revistas",
+                "existencias": "4",
+                "descripcion": "Ideas prácticas para organizar tu espacio, decoración de interiores y recetas rápidas.",
+                "precio_original": "",
+                "modelo_caja": "",
+                "descuento": "",
+                "tamano_altavoz": "",
+                "caracteristicas": ""
+        }
+];
+
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function renderProductDetail() {
+        const sku = getQueryParam("sku");
+        const product = productCatalog.find(p => p.sku === sku) || productCatalog[0];
+        const detailRoot = document.getElementById("product-detail-root");
+
+        if (!product) {
+            detailRoot.innerHTML = `<div class="col-span-full py-12 text-center text-slate-400 font-bold">Producto no encontrado.</div>`;
+            return;
+        }
+
+        const hasDiscount = product.precio_original && parseFloat(product.precio_original) > parseFloat(product.precio);
+        const originalPriceValue = hasDiscount ? parseFloat(product.precio_original) : 0;
+        const actualPriceValue = parseFloat(product.precio);
+        const savings = hasDiscount ? (originalPriceValue - actualPriceValue) : 0;
+
+        const priceBlockCentral = hasDiscount ? `
+            <div class="flex flex-col gap-1 border-t border-slate-800/80 pt-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-bold text-slate-400 uppercase">Antes:</span>
+                    <span class="line-through text-slate-400 text-sm font-semibold">$${Math.floor(originalPriceValue)} MXN</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-bold text-slate-300 uppercase">Oferta:</span>
+                    <span class="text-2xl font-black text-red-600">$${Math.floor(actualPriceValue)} MXN</span>
+                    <span class="bg-red-50 text-red-500 border border-red-200 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase">${product.descuento || '45% OFF'}</span>
+                </div>
+            </div>
+        ` : `
+            <div class="border-t border-slate-800/80 pt-3 flex items-center gap-2">
+                <span class="text-xs font-bold text-slate-300 uppercase">Precio:</span>
+                <span class="text-2xl font-black text-white">$${Math.floor(actualPriceValue)} MXN</span>
+            </div>
+        `;
+
+        const specsRows = `
+            <tr class="border-b border-slate-50"><td class="py-1.5 font-bold w-1/3">Marca</td><td class="py-1.5 text-slate-100">Link Bits / PC Custom Lab</td></tr>
+            <tr class="border-b border-slate-50"><td class="py-1.5 font-bold w-1/3">SKU</td><td class="py-1.5 text-slate-100">${product.sku}</td></tr>
+            <tr class="border-b border-slate-50"><td class="py-1.5 font-bold w-1/3">Frecuencia</td><td class="py-1.5 text-slate-100">${product.frecuencia}</td></tr>
+            <tr class="border-b border-slate-50"><td class="py-1.5 font-bold w-1/3">Categoría</td><td class="py-1.5 text-slate-100">${product.categoria}</td></tr>
+            ${product.modelo_caja ? `<tr class="border-b border-slate-50"><td class="py-1.5 font-bold w-1/3">Modelo Caja</td><td class="py-1.5 text-slate-100">${product.modelo_caja}</td></tr>` : ''}
+            ${product.tamano_altavoz ? `<tr class="border-b border-slate-50"><td class="py-1.5 font-bold w-1/3">Altavoz</td><td class="py-1.5 text-slate-100">${product.tamano_altavoz}</td></tr>` : ''}
+            ${product.caracteristicas ? `<tr class="border-b border-slate-50"><td class="py-1.5 font-bold w-1/3">Características</td><td class="py-1.5 text-slate-100">${product.caracteristicas}</td></tr>` : ''}
+        `;
+
+        const buyBoxPriceBlock = hasDiscount ? `
+            <div class="flex flex-col gap-0.5">
+                <span class="text-2xl font-black text-white">$${Math.floor(actualPriceValue)} MXN</span>
+                <span class="text-[10px] text-red-600 font-bold bg-red-50 border border-red-200 px-2 py-0.5 rounded w-max mt-0.5">
+                    Te ahorraste: $${Math.floor(savings)} MXN (45%)
+                </span>
+            </div>
+        ` : `
+            <div class="flex flex-col gap-0.5">
+                <span class="text-2xl font-black text-white">$${Math.floor(actualPriceValue)} MXN</span>
+            </div>
+        `;
+
+        detailRoot.innerHTML = `
+            <!-- Columna Izquierda: Imagen del Producto Grande (Fondo Blanco) -->
+            <div class="lg:col-span-5 flex flex-col gap-4">
+                <div class="w-full aspect-[3/4] overflow-hidden rounded-2xl bg-slate-950/80 border border-slate-800/80 shadow-sm flex items-center justify-center p-4">
+                    <img loading="lazy" decoding="async" src="${product.imagen}" alt="${product.nombre}" class="w-full h-full object-contain bg-slate-950/80">
+                </div>
+                <div class="flex gap-2 justify-center">
+                    <img loading="lazy" decoding="async" src="${product.imagen}" class="w-12 h-16 object-contain rounded-md border-2 border-amber-500 cursor-pointer shadow-sm bg-slate-950/80 p-1">
+                    <img loading="lazy" decoding="async" src="assets/img/mascota_tigre.jpg" class="w-12 h-16 object-contain rounded-md border border-slate-800/80 cursor-pointer opacity-70 hover:opacity-100 transition bg-slate-950/80 p-1">
+                </div>
+            </div>
+
+            <!-- Columna Central: Detalles e Información -->
+            <div class="lg:col-span-4 flex flex-col gap-4">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-black text-white leading-tight">${product.nombre}</h2>
+                    <p class="text-xs text-blue-600 hover:underline cursor-pointer font-bold mt-1">Visita la tienda de la marca</p>
+                </div>
+
+                <div class="flex items-center gap-1.5 text-xs text-amber-500">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="text-slate-400 font-semibold ml-1">(4.8 - 42 valoraciones)</span>
+                </div>
+
+                ${priceBlockCentral}
+
+                <!-- Tabla de Especificaciones -->
+                <div class="border-t border-slate-800/80 pt-3">
+                    <table class="w-full text-xs text-slate-300">
+                        <tbody>
+                            ${specsRows}
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Acerca de este artículo -->
+                <div class="border-t border-slate-800/80 pt-3 flex flex-col gap-1.5">
+                    <h4 class="text-xs font-black text-slate-100">Acerca de este artículo</h4>
+                    <ul class="list-disc list-inside text-xs text-slate-300 flex flex-col gap-1">
+                        <li>${product.descripcion}</li>
+                        <li>Servicio de entrega a domicilio a no más de 5 km de distancia.</li>
+                        <li>Garantía de originalidad directa con el Voceador.</li>
+                    </ul>
+                </div>
+                
+                <!-- Precio especial para mayoristas -->
+                <div class="border-t border-slate-800/80 pt-3 flex flex-col gap-1 bg-blue-950/30 p-3 rounded-xl border border-blue-900/50">
+                    <h4 class="text-xs font-black text-blue-300 flex items-center gap-1.5">
+                        <i class="fa-solid fa-tag"></i> Precio especial para mayoristas
+                    </h4>
+                    <p class="text-[10px] text-blue-200 leading-relaxed">
+                        ¡Adquiere 10 piezas o más del catálogo y recibe hasta un 15% de descuento adicional sobre precio especial! Contacta a nuestro centro operativo en checkout.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Compra Express (Buy Box) -->
+            <div class="lg:col-span-3 bg-slate-950/80 p-5 rounded-2xl border border-slate-800/80/80 shadow flex flex-col gap-4">
+                ${buyBoxPriceBlock}
+                
+                <div class="text-[11px] text-slate-400 flex flex-col gap-1 border-t border-slate-800/80 pt-3">
+                    <span>Gastos de envío: <strong class="text-green-700">Gratis (Entrega local inmediata)</strong></span>
+                </div>
+
+                <div class="text-xs text-green-700 font-bold flex items-center gap-1.5">
+                    <i class="fa-solid fa-circle-check"></i> Disponible
+                </div>
+
+                <div class="text-[11px] text-slate-400 flex flex-col gap-1.5 bg-slate-900/60 p-2.5 rounded-xl border border-slate-800/80">
+                    <div id="buy-box-address">
+                        <span>📍 Cargar dirección de entrega...</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-2 mt-2">
+                    <a href="checkout.html?sku=${product.sku}" class="bg-[#FFD814] hover:bg-[#F7CA00] text-[#0F1111] font-bold py-2.5 rounded-full text-xs text-center shadow-sm border border-[#FCD200] transition active:scale-97 block">
+                        Comprar ahora
+                    </a>
+                    <button onclick="addToCart('${product.sku}')" class="bg-[#FFA41C] hover:bg-[#F59500] text-white font-bold py-2.5 rounded-full text-xs text-center transition active:scale-97 w-full">
+                        Agregar al carrito
+                    </button>
+                </div>
+
+                <div class="border-t border-slate-800/80 pt-3 text-[10px] text-slate-400 flex flex-col gap-1">
+                    <span>Enviado por: <strong>Bazar Sucursal Centro</strong></span>
+                    <span>Vendido por: <strong>Anti-Gravity Copilot</strong></span>
+                </div>
+            </div>
+        `;
+        updateBuyBoxAddress();
+    }
+
+    function openDeliveryModal() {
+        document.getElementById('deliveryModal').classList.remove('hidden');
+    }
+    function closeDeliveryModal() {
+        document.getElementById('deliveryModal').classList.add('hidden');
+    }
+    function saveDeliveryAddress(event) {
+        event.preventDefault();
+        const name = document.getElementById('deliveryName').value;
+        const phone = document.getElementById('deliveryPhone').value;
+        const email = document.getElementById('deliveryEmail').value;
+        const street = document.getElementById('deliveryStreet').value;
+        const colonia = document.getElementById('deliveryColonia').value;
+        const city = document.getElementById('deliveryCity').value;
+
+        const addressData = { name, phone, email, street, colonia, city };
+        localStorage.setItem('user_delivery_address', JSON.stringify(addressData));
+        updateAddressDisplay();
+        updateBuyBoxAddress();
+        closeDeliveryModal();
+    }
+    function updateAddressDisplay() {
+        const addressDisplay = document.getElementById('delivery-address-display');
+        const stored = localStorage.getItem('user_delivery_address');
+        if (stored) {
+            const data = JSON.parse(stored);
+            addressDisplay.innerHTML = `📍 Entregar a: <strong class="text-amber-400">${data.name}</strong> <span class="text-slate-400">(${data.street}, ${data.colonia} - Tel: ${data.phone} - Email: ${data.email})</span> <button onclick="openDeliveryModal()" class="text-blue-400 hover:underline font-bold ml-1 cursor-pointer">Cambiar</button>`;
+        } else {
+            addressDisplay.innerHTML = `<span>📍 ¿En dónde quieres que llegue tu producto? </span><button onclick="openDeliveryModal()" class="text-amber-400 hover:text-amber-300 font-black underline ml-1 cursor-pointer">Registrar dirección</button>`;
+        }
+    }
+    function updateBuyBoxAddress() {
+        const buyBoxAddress = document.getElementById('buy-box-address');
+        if (!buyBoxAddress) return;
+        const stored = localStorage.getItem('user_delivery_address');
+        if (stored) {
+            const data = JSON.parse(stored);
+            buyBoxAddress.innerHTML = `<span>Entregar a: <strong>${data.name}</strong></span><br><span class="text-[10px] text-slate-400">${data.street}, ${data.colonia} - Tel: ${data.phone} - Email: ${data.email}</span>`;
+        } else {
+            buyBoxAddress.innerHTML = `<span>No has registrado dirección.</span> <button onclick="openDeliveryModal()" class="text-blue-600 hover:underline font-bold block mt-1">Registrar dirección de envío</button>`;
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        updateAddressDisplay();
+        renderProductDetail();
+    });
+    function getCart() {
+        const stored = localStorage.getItem("shopping_cart");
+        return stored ? JSON.parse(stored) : [];
+    }
+    function saveCart(cart) {
+    // FUNCIONES DEL CARRITO SLIDE-OVER DRAWER
+    window.openCartDrawer = function() {
+        const drawer = document.getElementById("cartDrawer");
+        if (drawer) {
+            drawer.classList.remove("hidden");
+            renderDrawerCart();
+        }
+    }
+    
+    window.closeCartDrawer = function() {
+        const drawer = document.getElementById("cartDrawer");
+        if (drawer) drawer.classList.add("hidden");
+    }
+    
+    window.removeFromCart = function(sku) {
+        let cart = getCart();
+        cart = cart.filter(item => item.sku !== sku);
+        saveCart(cart);
+        renderDrawerCart();
+    }
+    
+    window.changeQuantity = function(sku, amount) {
+        let cart = getCart();
+        const item = cart.find(i => i.sku === sku);
+        if (item) {
+            item.quantity = (item.quantity || 1) + amount;
+            if (item.quantity <= 0) {
+                cart = cart.filter(i => i.sku !== sku);
+            }
+        }
+        saveCart(cart);
+        renderDrawerCart();
+    }
+    
+    window.renderDrawerCart = function() {
+        const container = document.getElementById("drawer-cart-items");
+        const subtotalDisplay = document.getElementById("drawer-subtotal");
+        if (!container) return;
+        
+        const cart = getCart();
+        container.innerHTML = "";
+        
+        if (cart.length === 0) {
+            container.innerHTML = `
+                <div class="text-center py-12 text-slate-400">
+                    <i class="fa-solid fa-cart-flatbed text-4xl mb-3 block opacity-40"></i>
+                    <p class="text-xs font-semibold">Tu carrito está vacío.</p>
+                </div>
+            `;
+            if (subtotalDisplay) subtotalDisplay.innerText = "$0.00 MXN";
+            return;
+        }
+        
+        let subtotal = 0;
+        cart.forEach(item => {
+            const price = parseFloat(item.precio);
+            const qty = item.quantity || 1;
+            const itemTotal = price * qty;
+            subtotal += itemTotal;
+            
+            const div = document.createElement("div");
+            div.className = "flex items-center gap-3.5 bg-slate-950 border border-slate-800/80 rounded-2xl p-3 shadow-md";
+            div.innerHTML = `
+                <div class="w-12 h-16 rounded-lg overflow-hidden bg-slate-900 border border-slate-800 shrink-0">
+                    <img src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-1 flex flex-col justify-between min-h-[50px]">
+                    <div class="flex justify-between items-start gap-1">
+                        <h4 class="text-[11px] font-black text-white leading-tight line-clamp-2">${item.nombre}</h4>
+                        <button onclick="removeFromCart('${item.sku}')" class="text-slate-400 hover:text-red-400 text-xs cursor-pointer">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center mt-1">
+                        <span class="text-xs font-black text-amber-400">$${price.toFixed(2)}</span>
+                        <div class="flex items-center gap-2.5 bg-slate-900 border border-slate-800 rounded-lg px-2 py-0.5">
+                            <button onclick="changeQuantity('${item.sku}', -1)" class="text-[10px] text-slate-400 hover:text-white cursor-pointer"><i class="fa-solid fa-minus"></i></button>
+                            <span class="text-[11px] font-mono font-bold w-3 text-center">${qty}</span>
+                            <button onclick="changeQuantity('${item.sku}', 1)" class="text-[10px] text-slate-400 hover:text-white cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.appendChild(div);
+        });
+        
+        if (subtotalDisplay) subtotalDisplay.innerText = `$${subtotal.toFixed(2)} MXN`;
+    }
+
+        localStorage.setItem("shopping_cart", JSON.stringify(cart));
+        updateCartBadge();
+    }
+    function updateCartBadge() {
+        const cart = getCart();
+        let totalQty = 0;
+        cart.forEach(item => totalQty += (item.quantity || 1));
+        const badge = document.getElementById("cart-badge-count");
+        if (badge) badge.innerText = totalQty;
+    }
+    function addToCart(sku) {
+        const prod = productCatalog.find(p => p.sku === sku);
+        if (!prod) return;
+
+        const cart = getCart();
+        const existing = cart.find(item => item.sku === sku);
+        if (existing) {
+            existing.quantity = (existing.quantity || 1) + 1;
+        } else {
+            cart.push({ ...prod, quantity: 1 });
+        }
+        saveCart(cart);
+
+        // Show toast alert for 3 seconds
+        const toast = document.getElementById("cartToast");
+        const toastDetails = document.getElementById("cartToastDetails");
+        let totalQty = 0;
+        cart.forEach(item => totalQty += (item.quantity || 1));
+
+        if (toast && toastDetails) {
+            toastDetails.innerText = `Llevas ${totalQty} artículo(s) en tu carrito.`;
+            toast.classList.remove("hidden");
+            setTimeout(() => {
+                toast.classList.add("hidden");
+            }, 3000);
+        }
+    }
+    function goToCheckout() {
+        window.location.href = "checkout.html";
+    }
+    
+    // Auto-update badge on load
+    document.addEventListener("DOMContentLoaded", () => {
+        updateCartBadge();
+    });
+</script>
+<!-- AVISO TEMPORAL DE CARRITO -->
+<div id="cartToast" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[300] hidden bg-slate-900/95 border border-slate-700 text-white rounded-2xl p-5 shadow-2xl flex flex-col items-center gap-2 max-w-sm w-full text-center">
+    <i class="fa-solid fa-circle-check text-green-500 text-2xl animate-bounce"></i>
+    <span class="text-sm font-black">¡Se ha agregado al carrito!</span>
+    <span id="cartToastDetails" class="text-xs text-slate-400 font-semibold"></span>
+</div>
+
+    <!-- CHATBOT FLOTANTE -->
+    <div class="fixed bottom-6 right-6 z-[9999] text-slate-100 font-sans">
+        <button id="chatbot-toggle" onclick="toggleChatbot()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:scale-105 text-white w-16 h-16 rounded-full shadow-2xl shadow-blue-600/50 flex items-center justify-center text-2xl transition-all cursor-pointer">
+            <i id="chatbot-icon" class="fa-solid fa-comments"></i>
+        </button>
+
+        <div id="chatbot-window" class="hidden absolute bottom-20 right-0 w-80 sm:w-[420px] bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+            <div class="bg-slate-950 p-4 border-b border-slate-800 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+                    <div>
+                        <span class="font-bold text-sm text-white block">Asistente Virtual // Puesto de Revistas & Bazar</span>
+                        <span class="text-xs text-slate-400 font-mono">Responde al instante 24/7</span>
+                    </div>
+                </div>
+                <button onclick="toggleChatbot()" class="text-slate-400 hover:text-white p-1 cursor-pointer"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+
+            <div id="chat-messages" class="p-4 flex-1 overflow-y-auto space-y-4 text-sm max-h-[350px]">
+                <div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed space-y-3">
+                    <p>¡Hola! 👋 Encuentra revistas físicas, periódicos, dulces, cigarros y accesorios en nuestro puesto de revistas. Cuéntanos tu pedido o contáctanos directamente:</p>
+                    <div class="flex flex-col gap-2 pt-1">
+                        <a href="tel:3337271440" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-solid fa-phone"></i> Llamar a Atención Local
+                        </a>
+                        <a href="https://wa.me/523337271440?text=Hola%2C%20quisiera%20cotizar%20o%20pedir%20algo%20en%20el%20puesto%20de%20revistas%20y%20bazar..." target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Chatear por WhatsApp
+                        </a>
+                    </div>
+                    <p class="text-slate-400 text-[11px] pt-1 font-mono text-center">O escribe tu mensaje abajo si no cuentas con WhatsApp:</p>
+                </div>
+            </div>
+
+            <div class="p-3 bg-slate-950 border-t border-slate-800 flex gap-2">
+                <input id="chat-input" type="text" placeholder="Escribe aquí tu proyecto o duda..." onkeypress="handleChatKeyPress(event)" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
+                <button onclick="enviarMensajeChatbot()" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-3 rounded-xl text-sm transition cursor-pointer"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleChatbot() {
+            document.getElementById('chatbot-window').classList.toggle('hidden');
+        }
+
+        function abrirChatbotConMensaje(mensajeInicial) {
+            document.getElementById('chatbot-window').classList.remove('hidden');
+            const messages = document.getElementById('chat-messages');
+            messages.innerHTML += `<div class="bg-blue-600 text-white p-3.5 rounded-2xl rounded-tr-none max-w-[85%] ml-auto font-medium shadow-md">${mensajeInicial}</div>`;
+            messages.scrollTop = messages.scrollHeight;
+
+            setTimeout(() => {
+                messages.innerHTML += `<div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed space-y-3">
+                    <p>¡Excelente! Selecciona cómo deseas continuar:</p>
+                    <div class="flex flex-col gap-2">
+                        <a href="tel:3337271440" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-solid fa-phone"></i> Llamar a Atención Local
+                        </a>
+                        <a href="https://wa.me/523337271440?text=${encodeURIComponent(mensajeInicial)}" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Chatear por WhatsApp
+                        </a>
+                        <a href="mailto:iaworldcenter@gmail.com?subject=Consulta&body=${encodeURIComponent(mensajeInicial)}" class="flex items-center justify-center gap-2 bg-slate-700 hover:bg-slate-600 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-solid fa-envelope"></i> Enviar por Correo Electrónico
+                        </a>
+                    </div>
+                </div>`;
+                messages.scrollTop = messages.scrollHeight;
+            }, 600);
+        }
+
+        function enviarMensajeChatbot() {
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if (!text) return;
+
+            const messages = document.getElementById('chat-messages');
+            messages.innerHTML += `<div class="bg-blue-600 text-white p-3.5 rounded-2xl rounded-tr-none max-w-[85%] ml-auto font-medium shadow-md">${text}</div>`;
+            input.value = '';
+
+            setTimeout(() => {
+                messages.innerHTML += `<div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed space-y-3">
+                    <p>Muchas gracias por escribirnos. Elige la vía para comunicarte con nosotros o enviarnos tu mensaje:</p>
+                    <div class="flex flex-col gap-2">
+                        <a href="tel:3337271440" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-solid fa-phone"></i> Llamar a Atención Local
+                        </a>
+                        <a href="https://wa.me/523337271440?text=${encodeURIComponent(text)}" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Enviar por WhatsApp
+                        </a>
+                        <a href="mailto:iaworldcenter@gmail.com?subject=Consulta&body=${encodeURIComponent(text)}" class="flex items-center justify-center gap-2 bg-slate-700 hover:bg-slate-600 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
+                            <i class="fa-solid fa-envelope"></i> Enviar por Correo Electrónico
+                        </a>
+                    </div>
+                </div>`;
+                messages.scrollTop = messages.scrollHeight;
+            }, 700);
+        }
+
+        function handleChatKeyPress(e) {
+            if (e.key === 'Enter') enviarMensajeChatbot();
+        }
+    </script>
+
+
+    <!-- Quicklink Prefetching for <100ms Transitions -->
+    <script type="module">
+        import { listen } from 'https://unpkg.com/quicklink@2.3.0/dist/quicklink.mjs';
+        window.addEventListener('load', () => {
+            listen({ priority: true });
+        });
+    </script>
+
+
+<!-- CARRITO SLIDE-OVER DRAWER (GLASSMORPHISM) -->
+<div id="cartDrawer" class="fixed inset-0 z-[250] hidden">
+    <!-- Backdrop -->
+    <div onclick="closeCartDrawer()" class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
+    <!-- Drawer Content -->
+    <div class="absolute right-0 top-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col justify-between text-slate-100 p-6 transition-transform duration-300">
+        <div>
+            <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-6">
+                <h3 class="text-base font-black text-white flex items-center gap-2">
+                    <i class="fa-solid fa-cart-shopping text-amber-500"></i> Tu Carrito de Compra
+                </h3>
+                <button onclick="closeCartDrawer()" class="text-2xl text-slate-400 hover:text-white cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <!-- Cart Items List Container -->
+            <div id="drawer-cart-items" class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] pr-1">
+                <!-- Cart items will be loaded dynamically -->
+            </div>
+        </div>
+        
+        <!-- Drawer Footer -->
+        <div class="border-t border-slate-800 pt-6 mt-6 flex flex-col gap-4">
+            <div class="flex justify-between items-center">
+                <span class="text-xs font-mono text-slate-400 uppercase font-bold">Subtotal:</span>
+                <span id="drawer-subtotal" class="text-lg font-black text-white">$0.00 MXN</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <button onclick="closeCartDrawer()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-3 rounded-xl text-xs transition">
+                    Seguir Comprando
+                </button>
+                <a href="checkout.html" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 rounded-xl text-xs text-center transition flex items-center justify-center gap-1.5">
+                    Proceder al Pago <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
