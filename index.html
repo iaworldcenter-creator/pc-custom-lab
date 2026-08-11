@@ -152,16 +152,30 @@
                 </div>
             </div>
 
-            <!-- Derecha: Botón de Cotización Principal -->
-            <div class="hidden xl:flex items-center shrink-0">
+            <!-- Derecha: Botón de Cotización Principal y Carrito -->
+            <div class="hidden xl:flex items-center gap-5 shrink-0">
+                <div class="flex items-center gap-2 cursor-pointer group" onclick="openCartDrawer()">
+                    <div class="relative">
+                        <i class="fa-solid fa-cart-shopping text-slate-100 text-lg hover:text-amber-400 transition"></i>
+                        <span id="cart-badge-count" class="absolute -top-2 -right-2 bg-amber-500 text-slate-950 text-[9px] font-black rounded-full px-1.5 py-0.2 min-w-[15px] text-center">0</span>
+                    </div>
+                    <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition">Carrito</span>
+                </div>
+                <span class="text-slate-800">|</span>
                 <button onclick="abrirChatbotConMensaje('Hola, me gustaría cotizar una computadora armada completa.')" class="bg-gradient-to-r from-blue-700 to-indigo-600 hover:from-blue-600 hover:to-indigo-500 text-white px-4 py-2 rounded-xl shadow-lg shadow-blue-600/30 transition font-sans font-black uppercase tracking-wider text-[11px] cursor-pointer">
                     Cotizar PC Completa
                 </button>
             </div>
 
-            <button id="menu-btn" class="xl:hidden text-2xl text-slate-300 hover:text-white focus:outline-none p-2">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <div class="xl:hidden flex items-center gap-3">
+                <button onclick="openCartDrawer()" class="relative text-slate-300 hover:text-white p-2">
+                    <i class="fa-solid fa-cart-shopping text-xl"></i>
+                    <span id="cart-badge-count-mobile" class="absolute top-0 right-0 bg-amber-500 text-slate-950 text-[8px] font-black rounded-full px-1.5 py-0.2 min-w-[12px] text-center">0</span>
+                </button>
+                <button id="menu-btn" class="text-2xl text-slate-300 hover:text-white focus:outline-none p-2">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -176,6 +190,10 @@
                 </button>
             </div>
             <div class="flex flex-col space-y-4 font-medium text-lg">
+                <button onclick="toggleMenu(); openCartDrawer();" class="w-full text-left py-3 px-4 rounded-xl hover:bg-slate-800 text-slate-200 flex items-center gap-3">
+                    <i class="fa-solid fa-cart-shopping text-blue-400 w-6"></i>
+                    <span>Ver Carrito</span>
+                </button>
                 <a href="#niveles" class="mobile-link py-3 px-4 rounded-xl hover:bg-slate-800 text-slate-200 flex items-center gap-3">
                     <i class="fa-solid fa-desktop text-blue-400 w-6"></i> Computadoras Armadas
                 </a>
@@ -1023,6 +1041,23 @@
 
     
 
+
+    <!-- SECCIÓN DE PRODUCTOS: GADGETS Y COMPUTADORAS -->
+    <section id="productos" class="py-20 bg-slate-900 border-t border-slate-800 text-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <span class="text-xs font-mono text-blue-400 uppercase tracking-widest block mb-2">// Tienda PC Custom Lab</span>
+                <h2 class="text-3xl font-black text-white">Bocinas, Gadgets & Computadoras</h2>
+                <p class="text-slate-400 text-xs mt-2 max-w-md mx-auto">Adquiere de forma directa componentes seleccionados y equipos ensamblados con precio regular y ofertas especiales de temporada.</p>
+            </div>
+            
+            <!-- Contenedor del grid -->
+            <div id="pc-products-grid" class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Las tarjetas de producto se renderizan dinámicamente -->
+            </div>
+        </div>
+    </section>
+
 <!-- CONTACTO Y UBICACIÓN OFICIAL EN GUADALAJARA CENTRO -->
     <section id="contacto" class="py-20 bg-slate-950 border-t border-slate-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
@@ -1176,6 +1211,186 @@
 
     <!-- SCRIPTS JS -->
     <script>
+        
+        // BASE DE DATOS DE PRODUCTOS (ORDENADA ALFABÉTICAMENTE)
+        const productCatalog = [
+            {sku: "000946", nombre: "Bocina Portátil Link Bits MB-119B Bluetooth / FM / USB / MicroSD", imagen: "assets/img/portadas/tech_cover.jpg", precio: 150, precio_original: 218, existencias: 1, categoria: "gadgets", descripcion: "Bocina Portátil Link Bits MB-119B Bluetooth / FM / USB / MicroSD. Excelente sonido y portabilidad."},
+            {sku: "003280", nombre: "Bocina Portátil Link Bits SA324T Bluetooth / Radio FM / USB", imagen: "assets/img/portadas/tech_cover.jpg", precio: 168, precio_original: 244, existencias: 1, categoria: "gadgets", descripcion: "Bocina Portátil Link Bits SA324T Bluetooth / Radio FM / USB. Conéctate y disfruta tu música en cualquier lugar."},
+            {sku: "003288", nombre: "Bocina Portátil Link Bits SA442T Bluetooth / TWS / USB", imagen: "assets/img/portadas/tech_cover.jpg", precio: 161, precio_original: 234, existencias: 1, categoria: "gadgets", descripcion: "Bocina Portátil Link Bits SA442T Bluetooth / TWS / USB. Sonido estéreo de alta calidad."},
+            {sku: "LB02820", nombre: "Bocina Portátil Link Bits VA364T Bluetooth / TWS / Luces LED", imagen: "assets/img/portadas/tech_cover.jpg", precio: 152, precio_original: 221, existencias: 1, categoria: "gadgets", descripcion: "Bocina Portátil Link Bits VA364T Bluetooth / TWS / Luces LED. Ambienta tus reuniones con luces y sonido."},
+            {sku: "003382", nombre: "Bocina Portátil Link Bits VA399T Bluetooth / Radio FM / MicroSD", imagen: "assets/img/portadas/tech_cover.jpg", precio: 150, precio_original: 218, existencias: 1, categoria: "gadgets", descripcion: "Bocina Portátil Link Bits VA399T Bluetooth / Radio FM / MicroSD. Práctica y compacta."},
+            {sku: "003161", nombre: "Bocina Portátil Link Bits VB366T Bluetooth / TWS / Pantalla LED", imagen: "assets/img/portadas/tech_cover.jpg", precio: 179, precio_original: 260, existencias: 1, categoria: "gadgets", descripcion: "Bocina Portátil Link Bits VB366T Bluetooth / TWS / Pantalla LED. Display inteligente y sonido premium."},
+            {sku: "COMP-002", nombre: "Computadora de Escritorio PC Custom Lab Intel i5 / 16GB RAM / 500GB SSD", imagen: "assets/img/portadas/tech_cover.jpg", precio: 8500, precio_original: 0, existencias: 1, categoria: "gadgets", descripcion: "Equipo seminuevo en excelente estado, ideal para oficina, estudiantes y tareas del hogar."},
+            {sku: "COMP-001", nombre: "Computadora Gamer PC Custom Lab Ryzen 7 / RTX 4070 / 32GB RAM / 1TB SSD", imagen: "assets/img/portadas/tech_cover.jpg", precio: 28500, precio_original: 0, existencias: 1, categoria: "gadgets", descripcion: "Computadora de alto rendimiento para gaming y diseño. Ensamble premium nuevo con componentes certificados."}
+        ];
+
+        // LÓGICA DE TIENDA Y CARRITO DE COMPRAS (UNIFICADO EN LOCALSTORAGE)
+        function getCart() {
+            const stored = localStorage.getItem("shopping_cart");
+            return stored ? JSON.parse(stored) : [];
+        }
+        function saveCart(cart) {
+            localStorage.setItem("shopping_cart", JSON.stringify(cart));
+            updateCartBadge();
+        }
+        function updateCartBadge() {
+            const cart = getCart();
+            let totalQty = 0;
+            cart.forEach(item => totalQty += (item.quantity || 1));
+            const badge = document.getElementById("cart-badge-count");
+            if (badge) badge.innerText = totalQty;
+            const badgeMobile = document.getElementById("cart-badge-count-mobile");
+            if (badgeMobile) badgeMobile.innerText = totalQty;
+        }
+        function addToCart(sku) {
+            const prod = productCatalog.find(p => p.sku === sku);
+            if (!prod) return;
+            const cart = getCart();
+            const existing = cart.find(item => item.sku === sku);
+            if (existing) {
+                existing.quantity = (existing.quantity || 1) + 1;
+            } else {
+                cart.push({...prod, quantity: 1});
+            }
+            saveCart(cart);
+            openCartDrawer();
+        }
+
+        window.openCartDrawer = function() {
+            const drawer = document.getElementById("cartDrawer");
+            if (drawer) {
+                drawer.classList.remove("hidden");
+                renderDrawerCart();
+            }
+        }
+        window.closeCartDrawer = function() {
+            const drawer = document.getElementById("cartDrawer");
+            if (drawer) drawer.classList.add("hidden");
+        }
+        window.removeFromCart = function(sku) {
+            let cart = getCart();
+            cart = cart.filter(item => item.sku !== sku);
+            saveCart(cart);
+            renderDrawerCart();
+        }
+        window.changeQuantity = function(sku, amount) {
+            let cart = getCart();
+            const item = cart.find(i => i.sku === sku);
+            if (item) {
+                item.quantity = (item.quantity || 1) + amount;
+                if (item.quantity <= 0) {
+                    cart = cart.filter(i => i.sku !== sku);
+                }
+            }
+            saveCart(cart);
+            renderDrawerCart();
+        }
+
+        window.renderDrawerCart = function() {
+            const container = document.getElementById("drawer-cart-items");
+            const subtotalDisplay = document.getElementById("drawer-subtotal");
+            if (!container) return;
+            
+            const cart = getCart();
+            container.innerHTML = "";
+            
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 text-slate-500">
+                        <i class="fa-solid fa-cart-flatbed text-4xl mb-3 block opacity-40"></i>
+                        <p class="text-xs font-semibold">Tu carrito está vacío.</p>
+                    </div>
+                `;
+                if (subtotalDisplay) subtotalDisplay.innerText = "$0.00 MXN";
+                return;
+            }
+            
+            let subtotal = 0;
+            cart.forEach(item => {
+                const price = parseFloat(item.precio);
+                const qty = item.quantity || 1;
+                const itemTotal = price * qty;
+                subtotal += itemTotal;
+                
+                const div = document.createElement("div");
+                div.className = "flex items-center gap-3.5 bg-slate-950 border border-slate-800/80 rounded-2xl p-3 shadow-md";
+                div.innerHTML = `
+                    <div class="w-12 h-16 rounded-lg overflow-hidden bg-slate-900 border border-slate-800 shrink-0">
+                        <img src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between min-h-[50px]">
+                        <div class="flex justify-between items-start gap-1">
+                            <h4 class="text-[11px] font-black text-white leading-tight line-clamp-2">${item.nombre}</h4>
+                            <button onclick="removeFromCart('${item.sku}')" class="text-slate-500 hover:text-red-400 text-xs cursor-pointer">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center mt-1">
+                            <span class="text-xs font-black text-amber-400">$${price.toFixed(2)}</span>
+                            <div class="flex items-center gap-2.5 bg-slate-900 border border-slate-800 rounded-lg px-2 py-0.5">
+                                <button onclick="changeQuantity('${item.sku}', -1)" class="text-[10px] text-slate-400 hover:text-white cursor-pointer"><i class="fa-solid fa-minus"></i></button>
+                                <span class="text-[11px] font-mono font-bold w-3 text-center">${qty}</span>
+                                <button onclick="changeQuantity('${item.sku}', 1)" class="text-[10px] text-slate-400 hover:text-white cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+            
+            if (subtotalDisplay) subtotalDisplay.innerText = `$${subtotal.toFixed(2)} MXN`;
+        }
+
+        // RENDERIZADO DINÁMICO DE TARJETAS
+        function renderProductsGrid() {
+            const grid = document.getElementById("pc-products-grid");
+            if (!grid) return;
+            grid.innerHTML = "";
+            
+            productCatalog.forEach(p => {
+                const card = document.createElement("div");
+                card.className = "bg-slate-950/80 border border-slate-800/80 p-4 rounded-2xl flex flex-col justify-between h-full shadow-lg hover:border-blue-500 transition duration-300 relative group";
+                
+                const hasDiscount = p.precio_original && parseFloat(p.precio_original) > parseFloat(p.precio);
+                const discountBadge = hasDiscount ? `<span class="absolute top-3 right-3 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-[9px] font-black uppercase px-2 py-0.5 rounded-full tracking-wider">45% OFF</span>` : '';
+                
+                const priceBlock = hasDiscount ? `
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="line-through text-slate-500 text-[10px]">$${Math.floor(p.precio_original)}</span>
+                        <span class="text-sm font-black text-white">$${Math.floor(p.precio)} MXN</span>
+                    </div>
+                ` : `
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="text-sm font-black text-white">$${Math.floor(p.precio)} MXN</span>
+                    </div>
+                `;
+                
+                card.innerHTML = `
+                    ${discountBadge}
+                    <div class="flex flex-col gap-2">
+                        <div class="w-full aspect-[4/3] overflow-hidden rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center">
+                            <img src="${p.imagen}" alt="${p.nombre}" class="w-full h-full object-cover group-hover:scale-103 transition duration-300">
+                        </div>
+                        <div class="flex flex-col gap-1 mt-1">
+                            <div class="flex justify-between items-center gap-1">
+                                <span class="text-[8px] font-mono font-bold text-slate-500">${p.sku}</span>
+                                <span class="text-[8px] font-bold px-1.5 py-0.2 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">PC Custom Lab</span>
+                            </div>
+                            <h4 class="text-xs font-black text-white leading-tight line-clamp-2 min-h-[32px]">${p.nombre}</h4>
+                            <p class="text-[10px] text-slate-400 line-clamp-2 leading-snug">${p.descripcion}</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2 mt-4 pt-3 border-t border-slate-800">
+                        ${priceBlock}
+                        <button onclick="addToCart('${p.sku}')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 rounded-xl text-[10px] text-center shadow-md transition active:scale-97 cursor-pointer flex items-center justify-center gap-1 uppercase tracking-wider">
+                            <i class="fa-solid fa-cart-plus"></i> Agregar al Carrito
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
         const menuBtn = document.getElementById('menu-btn');
         const closeBtn = document.getElementById('close-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -1477,6 +1692,8 @@
 
         // INICIALIZACIÓN
         actualizarPrefiltroNivel();
+        renderProductsGrid();
+        updateCartBadge();
 
         // Ajustar velocidad de videos y pausar 5 segundos al finalizar
         document.addEventListener('DOMContentLoaded', () => {
@@ -1506,6 +1723,47 @@
             listen({ priority: true });
         });
     </script>
+
+
+<!-- CARRITO SLIDE-OVER DRAWER (GLASSMORPHISM) -->
+<div id="cartDrawer" class="fixed inset-0 z-[250] hidden">
+    <!-- Backdrop -->
+    <div onclick="closeCartDrawer()" class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
+    <!-- Drawer Content -->
+    <div class="absolute right-0 top-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col justify-between text-slate-100 p-6 transition-transform duration-300">
+        <div>
+            <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-6">
+                <h3 class="text-base font-black text-white flex items-center gap-2">
+                    <i class="fa-solid fa-cart-shopping text-amber-500"></i> Tu Carrito de Compra
+                </h3>
+                <button onclick="closeCartDrawer()" class="text-2xl text-slate-400 hover:text-white cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <!-- Cart Items List Container -->
+            <div id="drawer-cart-items" class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] pr-1">
+                <!-- Cart items will be loaded dynamically -->
+            </div>
+        </div>
+        
+        <!-- Drawer Footer -->
+        <div class="border-t border-slate-800 pt-6 mt-6 flex flex-col gap-4">
+            <div class="flex justify-between items-center">
+                <span class="text-xs font-mono text-slate-400 uppercase font-bold">Subtotal:</span>
+                <span id="drawer-subtotal" class="text-lg font-black text-white">$0.00 MXN</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <button onclick="closeCartDrawer()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-3 rounded-xl text-xs transition">
+                    Seguir Comprando
+                </button>
+                <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/checkout.html" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 rounded-xl text-xs text-center transition flex items-center justify-center gap-1.5">
+                    Proceder al Pago <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
