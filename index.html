@@ -1466,17 +1466,59 @@
             const grid = document.getElementById("pc-products-grid");
             if (!grid) return;
             grid.innerHTML = "";
-            
+
             productCatalog.forEach(p => {
                 const card = document.createElement("div");
                 card.className = "bg-slate-950/80 border border-slate-800/80 p-4 rounded-2xl flex flex-col justify-between h-full shadow-lg hover:border-blue-500 transition duration-300 relative group";
-                
+
                 const hasDiscount = p.precio_original && parseFloat(p.precio_original) > parseFloat(p.precio);
-                const discountBadge = hasDiscount ? `<span class="absolute top-3 right-3 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-[9px] font-black uppercase px-2 py-0.5 rounded-full tracking-wider">45% OFF</span>` : '';
-                
+                const discountBadge = hasDiscount ? `<span class="absolute top-3 right-3 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-[9px] font-black uppercase px-2 py-0.5 rounded-full tracking-wider z-10">45% OFF</span>` : '';
+
                 const priceBlock = hasDiscount ? `
                     <div class="flex items-center gap-2 mt-1">
                         <span class="line-through text-slate-500 text-[10px]">$${Math.floor(p.precio_original)}</span>
+                        <span class="text-sm font-black text-white">$${Math.floor(p.precio)} MXN</span>
+                    </div>
+                ` : `
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="text-sm font-black text-white">$${Math.floor(p.precio)} MXN</span>
+                    </div>
+                `;
+
+                card.innerHTML = `
+                    ${discountBadge}
+                    <div class="flex flex-col gap-2">
+                        <a href="../mi-puesto-bazar/producto.html?sku=${p.sku}" class="block group">
+                            <div class="w-full aspect-[4/3] overflow-hidden rounded-xl bg-white border border-slate-200 flex items-center justify-center p-1">
+                                <img src="${p.imagen}" alt="${p.nombre}" class="w-full h-full object-contain p-2 bg-white group-hover:scale-103 transition duration-300">
+                            </div>
+                        </a>
+                        <div class="flex flex-col gap-1 mt-1">
+                            <div class="flex justify-between items-center gap-1">
+                                <span class="text-[8px] font-mono font-bold text-slate-500">${p.sku}</span>
+                                <span class="text-[8px] font-bold px-1.5 py-0.2 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">PC Custom Lab</span>
+                            </div>
+                            <a href="../mi-puesto-bazar/producto.html?sku=${p.sku}" class="hover:text-blue-400 transition">
+                                <h4 class="text-xs font-black text-white leading-tight line-clamp-2 min-h-[32px]">${p.nombre}</h4>
+                            </a>
+                            <p class="text-[10px] text-slate-400 line-clamp-2 leading-snug">${p.descripcion}</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2 mt-4 pt-3 border-t border-slate-800">
+                        ${priceBlock}
+                        <div class="grid grid-cols-2 gap-2">
+                            <a href="../mi-puesto-bazar/producto.html?sku=${p.sku}" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 rounded-xl text-[9px] text-center shadow-md transition active:scale-97 cursor-pointer flex items-center justify-center gap-1 uppercase tracking-wider">
+                                <i class="fa-solid fa-eye"></i> Ver
+                            </a>
+                            <button onclick="addToCart('${p.sku}')" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2 rounded-xl text-[9px] text-center shadow-md transition active:scale-97 cursor-pointer flex items-center justify-center gap-1 uppercase tracking-wider">
+                                <i class="fa-solid fa-cart-plus"></i> Añadir
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }</span>
                         <span class="text-sm font-black text-white">$${Math.floor(p.precio)} MXN</span>
                     </div>
                 ` : `
