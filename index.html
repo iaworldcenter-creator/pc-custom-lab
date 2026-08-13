@@ -181,10 +181,9 @@
             <div class="hidden xl:flex items-center gap-5 shrink-0">
                 <div class="flex items-center gap-2 cursor-pointer group" onclick="window.location.href='checkout.html'">
                     <div class="relative">
-                        <i class="fa-solid <!-- Letrero dinámico de Domicilio para estimular el registro -->
-            <div id="header-delivery-prompt" class="hidden flex items-center gap-1.5 text-[10px] cursor-pointer hover:underline text-slate-300 transition" onclick="const isPc = window.location.pathname.includes('pc-custom-lab'); window.location.href = isPc ? 'checkout.html' : 'checkout.html'"></div>
-            
-            fa-cart-shopping text-slate-100 text-lg hover:text-amber-400 transition"></i>
+                        <!-- Letrero dinámico de Domicilio para estimular el registro -->
+                        <div id="header-delivery-prompt" class="hidden flex items-center gap-1.5 text-[10px] cursor-pointer hover:underline text-slate-300 transition" onclick="window.location.href = 'checkout.html'"></div>
+                        <i class="fa-solid fa-cart-shopping text-slate-100 text-lg hover:text-amber-400 transition"></i>
                         <span id="cart-badge-count" class="absolute -top-2 -right-2 bg-amber-500 text-slate-950 text-[9px] font-black rounded-full px-1.5 py-0.2 min-w-[15px] text-center">0</span>
                     </div>
                     <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition">Carrito</span>
