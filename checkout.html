@@ -302,12 +302,12 @@
 <script>
     // Usa sessionStorage para conservar los artículos durante la navegación activa, pero reiniciar a cero al cerrar la pestaña
     function getCart() {
-        const stored = sessionStorage.getItem("shopping_cart");
+        const stored = localStorage.getItem("shopping_cart");
         return stored ? JSON.parse(stored) : [];
     }
 
     function saveCart(cart) {
-        sessionStorage.setItem("shopping_cart", JSON.stringify(cart));
+        localStorage.setItem("shopping_cart", JSON.stringify(cart));
         renderCheckoutProducts();
     }
 
@@ -610,6 +610,15 @@
     }
 
     // ENVÍO DE LA ORDEN DE COMPRA A WHATSAPP Y REGISTRO DE PEDIDO
+        function clearEntireCart() {
+        if (confirm("¿Estás seguro de que deseas vaciar todo el carrito?")) {
+            localStorage.removeItem("shopping_cart");
+            if (typeof renderCheckoutProducts === 'function') renderCheckoutProducts();
+            if (typeof updateOrderSummary === 'function') updateOrderSummary();
+            if (typeof updateHeaderBadge === 'function') updateHeaderBadge();
+        }
+    }
+
     function processFinalOrder() {
         const addressStored = localStorage.getItem("user_delivery_address");
         if (!addressStored) {
