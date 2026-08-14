@@ -7,7 +7,10 @@
 <meta content="BwSy5nNuFFrHJUtxe189nJtPxM4h5QY-SxK1V8wqYDE" name="google-site-verification">
 <title>PC Custom Lab | Venta y Catálogo en Guadalajara</title>
 <meta content="Bienvenido a PC Custom Lab. Compra en línea con entrega local express en Guadalajara Centro. Pedro Moreno 501 A." name="description"/>
-<link href="assets/css/tailwind-built.css" rel="stylesheet" />
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+<link rel="preload" href="assets/css/tailwind-built.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link href="assets/css/tailwind-built.css" rel="stylesheet" /></noscript>
 <script>
 
 
@@ -1133,7 +1136,7 @@ function renderProductsGrid() {
         card.innerHTML = `
             <div class="flex flex-col gap-2">
                 <div class="w-full h-32 md:h-40 overflow-hidden rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center p-1.5">
-                    <img loading="lazy" src="${p.imagen}" alt="${p.nombre}" class="w-full h-full object-contain p-2 bg-slate-950 group-hover:scale-103 transition duration-300" onerror="this.onerror=null;this.parentNode.innerHTML='<div class=&quot;flex flex-col items-center justify-center w-full h-full text-slate-500&quot;><i class=&quot;fa-solid fa-box-open text-3xl mb-2&quot;></i><span class=&quot;text-[9px] font-mono uppercase tracking-wider font-bold&quot;>Imagen Próximamente</span></div>';">
+                    <img loading="lazy" src="${p.imagen}" alt="${p.nombre}" class="w-full h-full object-contain p-2 bg-slate-950 group-hover:scale-103 transition duration-300" width="150" height="150" onerror="this.onerror=null;this.parentNode.innerHTML='<div class=&quot;flex flex-col items-center justify-center w-full h-full text-slate-500&quot;><i class=&quot;fa-solid fa-box-open text-3xl mb-2&quot;></i><span class=&quot;text-[9px] font-mono uppercase tracking-wider font-bold&quot;>Imagen Próximamente</span></div>';">
                 </div>
                 <div class="flex flex-col gap-1 mt-1">
                     <div class="flex justify-between items-center gap-1">
@@ -1383,11 +1386,21 @@ function registrarLealtad(event) {
 }
 
 // ========================================================================
-// INICIALIZACIÓN
+// INICIALIZACIÓN DIFERIDA (MOBILE-FIRST PERFORMANCE STANDARDS 2026)
 // ========================================================================
-actualizarPrefiltroNivel();
-renderProductsGrid();
-updateCartBadge();
+function initApp() {
+    actualizarPrefiltroNivel();
+    renderProductsGrid();
+    updateCartBadge();
+}
+
+if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => initApp());
+} else {
+    window.addEventListener('load', () => {
+        setTimeout(initApp, 30);
+    });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const videos = document.querySelectorAll('video');
