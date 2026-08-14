@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle del Producto | Puesto de Revistas &amp; Bazar</title>
-    <meta name="google-site-verification" content="BwSy5nNuFFrHJUtxe189nJtPxM4h5QY-SxK1V8wqYDE" />
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PC Custom Lab | Venta y Catálogo en Guadalajara</title>
+<meta content="BwSy5nNuFFrHJUtxe189nJtPxM4h5QY-SxK1V8wqYDE" name="google-site-verification">
+<style>
         :root { 
             --crema: #FFFDF9; 
             --texto: #1F2937; 
@@ -27,7 +28,7 @@
     
         #chatbot-window { height: 520px; max-height: 85vh; }
 </style>
-    <script src="https://cdn.tailwindcss.com">    function getCart() {
+<script src="https://cdn.tailwindcss.com">    function getCart() {
         const stored = sessionStorage.getItem("shopping_cart");
         return stored ? JSON.parse(stored) : [];
     }
@@ -192,177 +193,176 @@
     });
 
 </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Open Graph para Applebot, Siri, Spotlight, Facebook, Discord -->
-    <meta property="og:title" content="Ofertas y Liquidaciones | Puesto de Revistas & Bazar" />
-    <meta property="og:description" content="Encuentra las mejores ofertas y liquidaciones en revistas, dulces, cigarros y gadgets en nuestro puesto local. ¡Hasta 5% de cashback!" />
-    <meta property="og:image" content="https://iaworldcenter-creator.github.io/mi-puesto-bazar/assets/img/portadas/science_cover.webp" />
-    <meta property="og:url" content="https://iaworldcenter-creator.github.io/mi-puesto-bazar/producto.html" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Puesto de Revistas &amp; Bazar" />
-
-
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-    <style>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Open Graph para Applebot, Siri, Spotlight, Facebook, Discord -->
+<meta content="Ofertas y Liquidaciones | Puesto de Revistas &amp; Bazar" property="og:title">
+<meta content="Encuentra las mejores ofertas y liquidaciones en revistas, dulces, cigarros y gadgets en nuestro puesto local. ¡Hasta 5% de cashback!" property="og:description"/>
+<meta content="https://iaworldcenter-creator.github.io/mi-puesto-bazar/assets/img/portadas/science_cover.webp" property="og:image"/>
+<meta content="https://iaworldcenter-creator.github.io/mi-puesto-bazar/producto.html" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="Puesto de Revistas &amp; Bazar" property="og:site_name"/>
+<link as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<style>
         @media (max-width: 768px) {
             video { display: none !important; }
             .mobile-video-fallback { display: block !important; }
         }
     </style>
-</head>
-<body>
+</meta></meta><meta content="Bienvenido a PC Custom Lab. Compra en línea con entrega local express en Guadalajara Centro. Pedro Moreno 501 A." name="description"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ComputerStore",
+  "name": "PC Custom Lab",
+  "image": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp",
+  "telephone": "+52 33 3727 1440",
+  "url": "https://iaworldcenter-creator.github.io/pc-custom-lab/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Pedro Moreno 501 A",
+    "addressLocality": "Guadalajara",
+    "addressRegion": "Jalisco",
+    "postalCode": "44100",
+    "addressCountry": "MX"
+  }
+}</script></head>
+<body><h1 class="sr-only">PC Custom Lab</h1>
 <!-- FRANJA NEGRA DE NAVEGACIÓN SUPERIOR AMPLIADA -->
 <!-- FRANJA NEGRA DE NAVEGACIÓN SUPERIOR AMPLIADA (ECOSISTEMA & AI CO-PILOT) -->
 <header class="w-full bg-slate-950 border-b border-slate-800 pt-3 pb-3 px-4 flex flex-col gap-2.5 relative z-[100] text-slate-100">
-    <!-- Nivel 1: Izquierda (Carrito, Sesión, Software) | Centro (Enlaces Ecosistema) | Derecha (Marca, Logo, Dirección) -->
-    <div class="w-full flex flex-col xl:flex-row justify-between items-center gap-4 border-b border-slate-800/40 pb-3 px-2">
-        
-        <!-- IZQUIERDA: Carrito, Sesión y Descarga -->
-        <div class="flex items-center gap-4 shrink-0 flex-wrap justify-center">
-            <!-- Letrero dinámico de Domicilio para estimular el registro -->
-            <div id="header-delivery-prompt" class="hidden flex items-center gap-1.5 text-[10px] cursor-pointer hover:underline text-slate-300 transition" onclick="const isPc = window.location.pathname.includes('pc-custom-lab'); window.location.href = isPc ? '../mi-puesto-bazar/checkout.html' : 'checkout.html'"></div>
-            
-            <!-- Carrito de Compras Estilo Amazon -->
-            <div class="flex items-center gap-2 cursor-pointer group" onclick="openCartDrawer()">
-                <div class="relative">
-                    <i class="fa-solid fa-cart-shopping text-slate-100 text-lg hover:text-amber-400 transition"></i>
-                    <span id="cart-badge-count" class="absolute -top-2 -right-2 bg-amber-500 text-slate-950 text-[9px] font-black rounded-full px-1.5 py-0.2 min-w-[15px] text-center">0</span>
-                </div>
-                <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition">Carrito</span>
-            </div>
-            <span class="text-slate-100">|</span>
-            <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="text-[10px] font-bold text-slate-300 hover:text-amber-400 transition">Inicia sesión Gemini</a>
-            <span class="text-slate-100">|</span>
-            <a href="https://github.com/google-deepmind" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-500 text-white font-black px-2.5 py-1 rounded-md transition text-[9px] uppercase tracking-wider">Descargar Anti-Gravity</a>
-        </div>
-
-        <!-- CENTRO: Enlaces Ecosistema -->
-        <div class="flex flex-wrap justify-center items-center gap-x-2.5 gap-y-1 text-[11px] font-semibold text-slate-400">
-            <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" class="hover:text-amber-400 transition">Kiosco Digital</a>
-            <span class="text-slate-100">|</span>
-            <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" class="hover:text-amber-400 transition">Dulcería &amp; Botanas</a>
-            <span class="text-slate-100">|</span>
-            <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" class="hover:text-amber-400 transition">Cigarros &amp; Accesorios</a>
-            <span class="text-slate-100">|</span>
-            <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="hover:text-amber-400 transition">PC Custom Lab</a>
-            <span class="text-slate-100">|</span>
-            <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" class="hover:text-amber-400 transition">Puesto de Revistas &amp; Bazar</a>
-        </div>
-
-        <!-- DERECHA: Marca, Logo y Dirección -->
-        <div class="flex items-center gap-4 shrink-0 flex-wrap justify-center">
-            <!-- Dirección de Entrega -->
-            <div class="flex items-center gap-2 bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 shadow-md">
-                <i class="fa-solid fa-location-dot text-amber-500 text-xs animate-bounce"></i>
-                <div class="text-[10px]" id="delivery-address-display">
-                    <span>📍 ¿En dónde quieres que llegue tu producto? </span>
-                    <button onclick="openDeliveryModal()" class="text-amber-400 hover:text-amber-300 font-black underline ml-1 cursor-pointer">Registrar dirección</button>
-                </div>
-            </div>
-            <!-- Logo y Marca -->
-            <div class="flex items-center gap-2.5">
-                <div class="flex flex-col text-right">
-                    <span class="text-base font-black text-amber-400 tracking-wide uppercase leading-tight">Anti-Gravity Copilot</span>
-                    <span class="text-[10px] font-bold text-slate-400 leading-none">Ofertas y Liquidaciones</span>
-                </div>
-                <img loading="lazy" decoding="async" src="assets/img/mascota_tigre.webp" alt="Tigre Logo" class="w-11 h-11 rounded-full object-cover border-2 border-amber-500 shadow-md">
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Nivel 2: Barra de Búsqueda Centrada de 6 Columnas -->
-    <div class="w-full grid grid-cols-1 md:grid-cols-8 gap-0 mt-1">
-        <div class="hidden md:block col-span-1"></div>
-        <div class="col-span-1 md:col-span-6 px-4 md:px-0">
-            <form class="flex items-center gap-2 p-2.5 rounded-2xl bg-slate-950/80 w-full neon-search-frame" role="search" onsubmit="return false;">
-                <label class="sr-only" for="siteSearch">¿Qué deseas buscar hoy?</label>
-                <input id="siteSearch" name="q" type="text" placeholder="¿Qué deseas buscar hoy? Escribe aquí..." class="flex-1 bg-transparent border-0 outline-none text-white font-bold text-sm px-3 placeholder-slate-400" autocomplete="off">
-                <button type="submit" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-6 py-3 rounded-xl text-xs transition shadow-md hover:scale-103 shrink-0">Buscar</button>
-            </form>
-        </div>
-        <div class="hidden md:block col-span-1"></div>
-    </div>
-
-    <!-- Nivel 3: Atajos de Categoría/Departamentos (Sub-Navegación) -->
-    <div class="w-full flex justify-center items-center gap-4 text-[10px] font-bold text-slate-400 border-t border-slate-900 pt-2 mt-1 flex-wrap">
-        <span class="text-slate-400">Departamentos:</span>
-        <button onclick="window.location.href='index.html?cat=Primer'" class="hover:text-amber-400 transition">📖 Revistas Físicas</button>
-        <span class="text-slate-100">•</span>
-        <button onclick="window.location.href='index.html'" class="hover:text-amber-400 transition">📱 Digitales</button>
-        <span class="text-slate-100">•</span>
-        <button onclick="window.location.href='index.html#featured-grid-container'" class="hover:text-amber-400 transition">🍬 Dulces</button>
-        <span class="text-slate-100">•</span>
-        <button onclick="window.location.href='index.html#featured-grid-container'" class="hover:text-amber-400 transition">🚬 Cigarros</button>
-        <span class="text-slate-100">•</span>
-        <button onclick="window.location.href='index.html#featured-grid-container'" class="hover:text-amber-400 transition">🔌 Cables &amp; Gadgets</button>
-        <span class="text-slate-100">•</span>
-        <button onclick="window.location.href='index.html?cat=Segundo'" class="hover:text-amber-400 transition">📦 Segundo Mercado</button>
-    </div>
+<!-- Nivel 1: Izquierda (Carrito, Sesión, Software) | Centro (Enlaces Ecosistema) | Derecha (Marca, Logo, Dirección) -->
+<div class="w-full flex flex-col xl:flex-row justify-between items-center gap-4 border-b border-slate-800/40 pb-3 px-2">
+<!-- IZQUIERDA: Carrito, Sesión y Descarga -->
+<div class="flex items-center gap-4 shrink-0 flex-wrap justify-center">
+<!-- Letrero dinámico de Domicilio para estimular el registro -->
+<div class="hidden flex items-center gap-1.5 text-[10px] cursor-pointer hover:underline text-slate-300 transition" id="header-delivery-prompt" onclick="const isPc = window.location.pathname.includes('pc-custom-lab'); window.location.href = isPc ? '../mi-puesto-bazar/checkout.html' : 'checkout.html'"></div>
+<!-- Carrito de Compras Estilo Amazon -->
+<div class="flex items-center gap-2 cursor-pointer group" onclick="openCartDrawer()">
+<div class="relative">
+<i class="fa-solid fa-cart-shopping text-slate-100 text-lg hover:text-amber-400 transition"></i>
+<span class="absolute -top-2 -right-2 bg-amber-500 text-slate-950 text-[9px] font-black rounded-full px-1.5 py-0.2 min-w-[15px] text-center" id="cart-badge-count">0</span>
+</div>
+<span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition">Carrito</span>
+</div>
+<span class="text-slate-100">|</span>
+<a class="text-[10px] font-bold text-slate-300 hover:text-amber-400 transition" href="https://gemini.google.com" rel="noopener noreferrer" target="_blank">Inicia sesión Gemini</a>
+<span class="text-slate-100">|</span>
+<a class="bg-blue-600 hover:bg-blue-500 text-white font-black px-2.5 py-1 rounded-md transition text-[9px] uppercase tracking-wider" href="https://github.com/google-deepmind" rel="noopener noreferrer" target="_blank">Descargar Anti-Gravity</a>
+</div>
+<!-- CENTRO: Enlaces Ecosistema -->
+<div class="flex flex-wrap justify-center items-center gap-x-2.5 gap-y-1 text-[11px] font-semibold text-slate-400">
+<a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/kiosco-digital/">Kiosco Digital</a>
+<span class="text-slate-100">|</span>
+<a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/dulces-bazar/">Dulcería &amp; Botanas</a>
+<span class="text-slate-100">|</span>
+<a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/cigarros-bazar/">Cigarros &amp; Accesorios</a>
+<span class="text-slate-100">|</span>
+<a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/pc-custom-lab/">PC Custom Lab</a>
+<span class="text-slate-100">|</span>
+<a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/">Puesto de Revistas &amp; Bazar</a>
+</div>
+<!-- DERECHA: Marca, Logo y Dirección -->
+<div class="flex items-center gap-4 shrink-0 flex-wrap justify-center">
+<!-- Dirección de Entrega -->
+<div class="flex items-center gap-2 bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 shadow-md">
+<i class="fa-solid fa-location-dot text-amber-500 text-xs animate-bounce"></i>
+<div class="text-[10px]" id="delivery-address-display">
+<span>📍 ¿En dónde quieres que llegue tu producto? </span>
+<button aria-label="Registrar dirección" class="text-amber-400 hover:text-amber-300 font-black underline ml-1 cursor-pointer" onclick="openDeliveryModal()">Registrar dirección</button>
+</div>
+</div>
+<!-- Logo y Marca -->
+<div class="flex items-center gap-2.5">
+<div class="flex flex-col text-right">
+<span class="text-base font-black text-amber-400 tracking-wide uppercase leading-tight">Anti-Gravity Copilot</span>
+<span class="text-[10px] font-bold text-slate-400 leading-none">Ofertas y Liquidaciones</span>
+</div>
+<img alt="Mascota oficial Tigre inteligente de PC Custom Lab en Guadalajara" class="w-11 h-11 rounded-full object-cover border-2 border-amber-500 shadow-md" decoding="async" loading="lazy" src="assets/img/mascota_tigre.webp"/>
+</div>
+</div>
+</div>
+<!-- Nivel 2: Barra de Búsqueda Centrada de 6 Columnas -->
+<div class="w-full grid grid-cols-1 md:grid-cols-8 gap-0 mt-1">
+<div class="hidden md:block col-span-1"></div>
+<div class="col-span-1 md:col-span-6 px-4 md:px-0">
+<form class="flex items-center gap-2 p-2.5 rounded-2xl bg-slate-950/80 w-full neon-search-frame" onsubmit="return false;" role="search">
+<label class="sr-only" for="siteSearch">¿Qué deseas buscar hoy?</label>
+<input aria-label="Buscar productos en el catálogo" autocomplete="off" class="flex-1 bg-transparent border-0 outline-none text-white font-bold text-sm px-3 placeholder-slate-400" id="siteSearch" name="q" placeholder="¿Qué deseas buscar hoy? Escribe aquí..." type="text"/>
+<button aria-label="Buscar" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-6 py-3 rounded-xl text-xs transition shadow-md hover:scale-103 shrink-0" type="submit">Buscar</button>
+</form>
+</div>
+<div class="hidden md:block col-span-1"></div>
+</div>
+<!-- Nivel 3: Atajos de Categoría/Departamentos (Sub-Navegación) -->
+<div class="w-full flex justify-center items-center gap-4 text-[10px] font-bold text-slate-400 border-t border-slate-900 pt-2 mt-1 flex-wrap">
+<span class="text-slate-400">Departamentos:</span>
+<button aria-label="📖 Revistas Físicas" class="hover:text-amber-400 transition" onclick="window.location.href='index.html?cat=Primer'">📖 Revistas Físicas</button>
+<span class="text-slate-100">•</span>
+<button aria-label="📱 Digitales" class="hover:text-amber-400 transition" onclick="window.location.href='index.html'">📱 Digitales</button>
+<span class="text-slate-100">•</span>
+<button aria-label="🍬 Dulces" class="hover:text-amber-400 transition" onclick="window.location.href='index.html#featured-grid-container'">🍬 Dulces</button>
+<span class="text-slate-100">•</span>
+<button aria-label="🚬 Cigarros" class="hover:text-amber-400 transition" onclick="window.location.href='index.html#featured-grid-container'">🚬 Cigarros</button>
+<span class="text-slate-100">•</span>
+<button aria-label="🔌 Cables &amp; Gadgets" class="hover:text-amber-400 transition" onclick="window.location.href='index.html#featured-grid-container'">🔌 Cables &amp; Gadgets</button>
+<span class="text-slate-100">•</span>
+<button aria-label="📦 Segundo Mercado" class="hover:text-amber-400 transition" onclick="window.location.href='index.html?cat=Segundo'">📦 Segundo Mercado</button>
+</div>
 </header>
-
 <!-- MODAL DE REGISTRO DE DIRECCIÓN (GLASSMORPHISM) -->
-<div id="deliveryModal" class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-slate-950/80 backdrop-blur-md px-4">
-    <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative overflow-hidden text-slate-100">
-        <h3 class="text-lg font-black text-white mb-2 flex items-center gap-2">
-            <i class="fa-solid fa-map-location-dot text-amber-500"></i> Registrar Domicilio de Entrega
-        </h3>
-        <p class="text-[11px] text-slate-400 mb-4 leading-relaxed">
+<div class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-slate-950/80 backdrop-blur-md px-4" id="deliveryModal">
+<div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative overflow-hidden text-slate-100">
+<h2 class="text-lg font-black text-white mb-2 flex items-center gap-2">
+<i class="fa-solid fa-map-location-dot text-amber-500"></i> Registrar Domicilio de Entrega
+        </h2>
+<p class="text-[11px] text-slate-400 mb-4 leading-relaxed">
             ⚠️ <strong>Nota:</strong> Servicio disponible únicamente a no más de <strong>5 km de distancia</strong> de nuestra sucursal Centro.
         </p>
-        <form id="deliveryForm" onsubmit="saveDeliveryAddress(event)" class="flex flex-col gap-3">
-            <div>
-                <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Nombre Completo</label>
-                <input type="text" id="deliveryName" required placeholder="Ej. Juan Pérez" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
-            </div>
-            <div>
-                <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Teléfono de Contacto</label>
-                <input type="tel" id="deliveryPhone" required placeholder="Ej. 3337271440" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
-            </div>
-            <div>
-                <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Correo Electrónico</label>
-                <input type="email" id="deliveryEmail" required placeholder="Ej. cliente@correo.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
-            </div>
-            <div>
-                <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Calle y Número</label>
-                <input type="text" id="deliveryStreet" required placeholder="Ej. Av. Pedro Moreno 123" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
-            </div>
-            <div class="grid grid-cols-2 gap-2.5">
-                <div>
-                    <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Colonia</label>
-                    <input type="text" id="deliveryColonia" required placeholder="Ej. Centro" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
-                </div>
-                <div>
-                    <label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Ciudad</label>
-                    <input type="text" id="deliveryCity" required placeholder="Ej. Guadalajara" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500">
-                </div>
-            </div>
-            <div class="flex gap-2.5 mt-2">
-                <button type="button" onclick="closeDeliveryModal()" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-2 rounded-xl text-xs transition">Cancelar</button>
-                <button type="submit" class="flex-1 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2 rounded-xl text-xs transition">Guardar</button>
-            </div>
-        </form>
-    </div>
+<form class="flex flex-col gap-3" id="deliveryForm" onsubmit="saveDeliveryAddress(event)">
+<div>
+<label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Nombre Completo</label>
+<input aria-label="Nombre completo del comprador" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500" id="deliveryName" placeholder="Ej. Juan Pérez" required="" type="text"/>
 </div>
-
+<div>
+<label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Teléfono de Contacto</label>
+<input aria-label="Número de teléfono a 10 dígitos" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500" id="deliveryPhone" placeholder="Ej. 3337271440" required="" type="tel"/>
+</div>
+<div>
+<label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Correo Electrónico</label>
+<input aria-label="Correo electrónico de contacto" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500" id="deliveryEmail" placeholder="Ej. cliente@correo.com" required="" type="email"/>
+</div>
+<div>
+<label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Calle y Número</label>
+<input aria-label="Calle y número de domicilio" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500" id="deliveryStreet" placeholder="Ej. Av. Pedro Moreno 123" required="" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<div>
+<label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Colonia</label>
+<input aria-label="Colonia de entrega" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500" id="deliveryColonia" placeholder="Ej. Centro" required="" type="text"/>
+</div>
+<div>
+<label class="block text-[10px] font-mono text-slate-400 uppercase mb-1 font-bold">Ciudad</label>
+<input aria-label="Ciudad y estado de la entrega" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-blue-500" id="deliveryCity" placeholder="Ej. Guadalajara" required="" type="text"/>
+</div>
+</div>
+<div class="flex gap-2.5 mt-2">
+<button aria-label="Cancelar" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-2 rounded-xl text-xs transition" onclick="closeDeliveryModal()" type="button">Cancelar</button>
+<button aria-label="Guardar" class="flex-1 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2 rounded-xl text-xs transition" type="submit">Guardar</button>
+</div>
+</form>
+</div>
+</div>
 <!-- CONTENIDO DETALLE DEL PRODUCTO (MAQUETADO DE 8 COLUMNAS) -->
 <main class="flex-1 bg-orange-50/15 w-full py-8 text-slate-100">
-    <div class="w-full grid grid-cols-1 md:grid-cols-8 gap-6 px-4 md:px-0">
-        <!-- Columna 1: Vacía -->
-        <div class="hidden md:block col-span-1"></div>
-
-        <!-- Espacio Central de 6 Columnas (Columnas 2 a 7) -->
-        <div id="product-detail-root" class="col-span-1 md:col-span-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start bg-slate-950/80 p-6 md:p-8 rounded-3xl border border-slate-800/80/80 shadow-lg">
-            <!-- Cargado por JS -->
-        </div>
-
-        <!-- Columna 8: Vacía -->
-        <div class="hidden md:block col-span-1"></div>
-    </div>
+<div class="w-full grid grid-cols-1 md:grid-cols-8 gap-6 px-4 md:px-0">
+<!-- Columna 1: Vacía -->
+<div class="hidden md:block col-span-1"></div>
+<!-- Espacio Central de 6 Columnas (Columnas 2 a 7) -->
+<div class="col-span-1 md:col-span-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start bg-slate-950/80 p-6 md:p-8 rounded-3xl border border-slate-800/80/80 shadow-lg" id="product-detail-root">
+<!-- Cargado por JS -->
+</div>
+<!-- Columna 8: Vacía -->
+<div class="hidden md:block col-span-1"></div>
+</div>
 </main>
-
 <script>
     const productCatalog = [
         {
@@ -1145,53 +1145,48 @@
     });
 </script>
 <!-- AVISO TEMPORAL DE CARRITO -->
-<div id="cartToast" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[300] hidden bg-slate-900/95 border border-slate-700 text-white rounded-2xl p-5 shadow-2xl flex flex-col items-center gap-2 max-w-sm w-full text-center">
-    <i class="fa-solid fa-circle-check text-green-500 text-2xl animate-bounce"></i>
-    <span class="text-sm font-black">¡Se ha agregado al carrito!</span>
-    <span id="cartToastDetails" class="text-xs text-slate-400 font-semibold"></span>
+<div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[300] hidden bg-slate-900/95 border border-slate-700 text-white rounded-2xl p-5 shadow-2xl flex flex-col items-center gap-2 max-w-sm w-full text-center" id="cartToast">
+<i class="fa-solid fa-circle-check text-green-500 text-2xl animate-bounce"></i>
+<span class="text-sm font-black">¡Se ha agregado al carrito!</span>
+<span class="text-xs text-slate-400 font-semibold" id="cartToastDetails"></span>
 </div>
-
-    <!-- CHATBOT FLOTANTE -->
-    <div class="fixed bottom-6 right-6 z-[9999] text-slate-100 font-sans">
-        <button id="chatbot-toggle" onclick="toggleChatbot()" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:scale-105 text-white w-16 h-16 rounded-full shadow-2xl shadow-blue-600/50 flex items-center justify-center text-2xl transition-all cursor-pointer">
-            <i id="chatbot-icon" class="fa-solid fa-comments"></i>
-        </button>
-
-        <div id="chatbot-window" class="hidden absolute bottom-20 right-0 w-80 sm:w-[420px] bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
-            <div class="bg-slate-950 p-4 border-b border-slate-800 flex justify-between items-center">
-                <div class="flex items-center gap-3">
-                    <div class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
-                    <div>
-                        <span class="font-bold text-sm text-white block">Asistente Virtual // Puesto de Revistas & Bazar</span>
-                        <span class="text-xs text-slate-400 font-mono">Responde al instante 24/7</span>
-                    </div>
-                </div>
-                <button onclick="toggleChatbot()" class="text-slate-400 hover:text-white p-1 cursor-pointer"><i class="fa-solid fa-xmark text-lg"></i></button>
-            </div>
-
-            <div id="chat-messages" class="p-4 flex-1 overflow-y-auto space-y-4 text-sm max-h-[350px]">
-                <div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed space-y-3">
-                    <p>¡Hola! 👋 Encuentra revistas físicas, periódicos, dulces, cigarros y accesorios en nuestro puesto de revistas. Cuéntanos tu pedido o contáctanos directamente:</p>
-                    <div class="flex flex-col gap-2 pt-1">
-                        <a href="tel:3337271440" class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
-                            <i class="fa-solid fa-phone"></i> Llamar a Atención Local
+<!-- CHATBOT FLOTANTE -->
+<div class="fixed bottom-6 right-6 z-[9999] text-slate-100 font-sans">
+<button aria-label="Botón de acción interactiva" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:scale-105 text-white w-16 h-16 rounded-full shadow-2xl shadow-blue-600/50 flex items-center justify-center text-2xl transition-all cursor-pointer" id="chatbot-toggle" onclick="toggleChatbot()">
+<i class="fa-solid fa-comments" id="chatbot-icon"></i>
+</button>
+<div class="hidden absolute bottom-20 right-0 w-80 sm:w-[420px] bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col" id="chatbot-window">
+<div class="bg-slate-950 p-4 border-b border-slate-800 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+<div>
+<span class="font-bold text-sm text-white block">Asistente Virtual // Puesto de Revistas &amp; Bazar</span>
+<span class="text-xs text-slate-400 font-mono">Responde al instante 24/7</span>
+</div>
+</div>
+<button aria-label="Botón de acción interactiva" class="text-slate-400 hover:text-white p-1 cursor-pointer" onclick="toggleChatbot()"><i class="fa-solid fa-xmark text-lg"></i></button>
+</div>
+<div class="p-4 flex-1 overflow-y-auto space-y-4 text-sm max-h-[350px]" id="chat-messages">
+<div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed space-y-3">
+<p>¡Hola! 👋 Encuentra revistas físicas, periódicos, dulces, cigarros y accesorios en nuestro puesto de revistas. Cuéntanos tu pedido o contáctanos directamente:</p>
+<div class="flex flex-col gap-2 pt-1">
+<a class="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md" href="tel:3337271440">
+<i class="fa-solid fa-phone"></i> Llamar a Atención Local
                         </a>
-                        <a href="https://wa.me/523337271440?text=Hola%2C%20quisiera%20cotizar%20o%20pedir%20algo%20en%20el%20puesto%20de%20revistas%20y%20bazar..." target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md">
-                            <i class="fa-brands fa-whatsapp text-sm"></i> Chatear por WhatsApp
+<a class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl transition text-xs shadow-md" href="https://wa.me/523337271440?text=Hola%2C%20quisiera%20cotizar%20o%20pedir%20algo%20en%20el%20puesto%20de%20revistas%20y%20bazar..." target="_blank">
+<i class="fa-brands fa-whatsapp text-sm"></i> Chatear por WhatsApp
                         </a>
-                    </div>
-                    <p class="text-slate-400 text-[11px] pt-1 font-mono text-center">O escribe tu mensaje abajo si no cuentas con WhatsApp:</p>
-                </div>
-            </div>
-
-            <div class="p-3 bg-slate-950 border-t border-slate-800 flex gap-2">
-                <input id="chat-input" type="text" placeholder="Escribe aquí tu proyecto o duda..." onkeypress="handleChatKeyPress(event)" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500">
-                <button onclick="enviarMensajeChatbot()" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-3 rounded-xl text-sm transition cursor-pointer"><i class="fa-solid fa-paper-plane"></i></button>
-            </div>
-        </div>
-    </div>
-
-    <script>
+</div>
+<p class="text-slate-400 text-[11px] pt-1 font-mono text-center">O escribe tu mensaje abajo si no cuentas con WhatsApp:</p>
+</div>
+</div>
+<div class="p-3 bg-slate-950 border-t border-slate-800 flex gap-2">
+<input aria-label="Escribe aquí tu proyecto o duda..." class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500" id="chat-input" onkeypress="handleChatKeyPress(event)" placeholder="Escribe aquí tu proyecto o duda..." type="text"/>
+<button aria-label="Botón de acción interactiva" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-3 rounded-xl text-sm transition cursor-pointer" onclick="enviarMensajeChatbot()"><i class="fa-solid fa-paper-plane"></i></button>
+</div>
+</div>
+</div>
+<script>
         function toggleChatbot() {
             document.getElementById('chatbot-window').classList.toggle('hidden');
         }
@@ -1253,65 +1248,56 @@
             if (e.key === 'Enter') enviarMensajeChatbot();
         }
     </script>
-
-
-    <!-- Quicklink Prefetching for <100ms Transitions -->
-    <script type="module">
+<!-- Quicklink Prefetching for <100ms Transitions -->
+<script type="module">
         import { listen } from 'https://unpkg.com/quicklink@2.3.0/dist/quicklink.mjs';
         window.addEventListener('load', () => {
             listen({ priority: true });
         });
     </script>
-
-
 <!-- CARRITO SLIDE-OVER DRAWER (GLASSMORPHISM) -->
-<div id="cartDrawer" class="fixed inset-0 z-[250] hidden">
-    <!-- Backdrop -->
-    <div onclick="closeCartDrawer()" class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
-    <!-- Drawer Content -->
-    <div class="absolute right-0 top-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col justify-between text-slate-100 p-6 transition-transform duration-300">
-        <div>
-            <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-6">
-                <h3 class="text-base font-black text-white flex items-center gap-2">
-                    <i class="fa-solid fa-cart-shopping text-amber-500"></i> Tu Carrito de Compra
+<div class="fixed inset-0 z-[250] hidden" id="cartDrawer">
+<!-- Backdrop -->
+<div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" onclick="closeCartDrawer()"></div>
+<!-- Drawer Content -->
+<div class="absolute right-0 top-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col justify-between text-slate-100 p-6 transition-transform duration-300">
+<div>
+<div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-6">
+<h3 class="text-base font-black text-white flex items-center gap-2">
+<i class="fa-solid fa-cart-shopping text-amber-500"></i> Tu Carrito de Compra
                 </h3>
-                <button onclick="closeCartDrawer()" class="text-2xl text-slate-400 hover:text-white cursor-pointer">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            
-            <!-- Cart Items List Container -->
-            <div id="drawer-cart-items" class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] pr-1">
-                <!-- Cart items will be loaded dynamically -->
-            </div>
-        </div>
-        
-        <!-- Drawer Footer -->
-        <div class="border-t border-slate-800 pt-6 mt-6 flex flex-col gap-4">
-            <div class="flex justify-between items-center">
-                <span class="text-xs font-mono text-slate-400 uppercase font-bold">Subtotal:</span>
-                <span id="drawer-subtotal" class="text-lg font-black text-white">$0.00 MXN</span>
-            </div>
-            <div class="grid grid-cols-2 gap-3">
-                <button onclick="closeCartDrawer()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-3 rounded-xl text-xs transition">
+<button aria-label="Botón de acción interactiva" class="text-2xl text-slate-400 hover:text-white cursor-pointer" onclick="closeCartDrawer()">
+<i class="fa-solid fa-xmark"></i>
+</button>
+</div>
+<!-- Cart Items List Container -->
+<div class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] pr-1" id="drawer-cart-items">
+<!-- Cart items will be loaded dynamically -->
+</div>
+</div>
+<!-- Drawer Footer -->
+<div class="border-t border-slate-800 pt-6 mt-6 flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<span class="text-xs font-mono text-slate-400 uppercase font-bold">Subtotal:</span>
+<span class="text-lg font-black text-white" id="drawer-subtotal">$0.00 MXN</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button aria-label="Seguir Comprando" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-3 rounded-xl text-xs transition" onclick="closeCartDrawer()">
                     Seguir Comprando
                 </button>
-                <a href="checkout.html" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 rounded-xl text-xs text-center transition flex items-center justify-center gap-1.5">
+<a class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 rounded-xl text-xs text-center transition flex items-center justify-center gap-1.5" href="checkout.html">
                     Proceder al Pago <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </div>
+</a>
 </div>
-
-
-    <!-- BOTÓN DE CARRITO FLOTANTE FIJO (PC CUSTOM LAB STYLE) -->
-    <div id="floating-cart-button" class="fixed bottom-6 right-24 z-[9990] text-white">
-        <button onclick="window.location.href='checkout.html'" class="relative bg-slate-950 border border-blue-500/40 hover:border-blue-400 text-white w-12 h-12 rounded-full shadow-lg shadow-blue-500/20 flex items-center justify-center transition active:scale-95 cursor-pointer hover:scale-105 group">
-            <i class="fa-solid fa-cart-shopping text-base group-hover:text-amber-400 transition"></i>
-            <span id="floating-cart-badge" class="absolute -top-1.5 -right-1.5 bg-amber-500 text-slate-950 text-[9px] font-black rounded-full px-1.5 py-0.2 min-w-[15px] text-center">0</span>
-        </button>
-    </div>
-    
+</div>
+</div>
+</div>
+<!-- BOTÓN DE CARRITO FLOTANTE FIJO (PC CUSTOM LAB STYLE) -->
+<div class="fixed bottom-6 right-24 z-[9990] text-white" id="floating-cart-button">
+<button aria-label="0" class="relative bg-slate-950 border border-blue-500/40 hover:border-blue-400 text-white w-12 h-12 rounded-full shadow-lg shadow-blue-500/20 flex items-center justify-center transition active:scale-95 cursor-pointer hover:scale-105 group" onclick="window.location.href='checkout.html'">
+<i class="fa-solid fa-cart-shopping text-base group-hover:text-amber-400 transition"></i>
+<span class="absolute -top-1.5 -right-1.5 bg-amber-500 text-slate-950 text-[9px] font-black rounded-full px-1.5 py-0.2 min-w-[15px] text-center" id="floating-cart-badge">0</span>
+</button>
+</div>
 </body>
 </html>

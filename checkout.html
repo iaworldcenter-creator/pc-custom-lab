@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finalizar la compra de manera segura | PC Custom Lab</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PC Custom Lab | Venta y Catálogo en Guadalajara</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
         :root { 
             --crema: #FFFDF9; 
             --texto: #1F2937; 
@@ -22,289 +23,272 @@
             flex-direction: column;
         }
     </style>
-
-    <style>
+<style>
         @media (max-width: 768px) {
             video { display: none !important; }
             .mobile-video-fallback { display: block !important; }
         }
     </style>
-</head>
-<body class="bg-[#05070f] text-slate-100 min-h-screen flex flex-col">
-
+<meta content="Bienvenido a PC Custom Lab. Compra en línea con entrega local express en Guadalajara Centro. Pedro Moreno 501 A." name="description"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ComputerStore",
+  "name": "PC Custom Lab",
+  "image": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp",
+  "telephone": "+52 33 3727 1440",
+  "url": "https://iaworldcenter-creator.github.io/pc-custom-lab/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Pedro Moreno 501 A",
+    "addressLocality": "Guadalajara",
+    "addressRegion": "Jalisco",
+    "postalCode": "44100",
+    "addressCountry": "MX"
+  }
+}</script></head>
+<body class="bg-[#05070f] text-slate-100 min-h-screen flex flex-col"><h1 class="sr-only">PC Custom Lab</h1>
 <!-- HEADER DE CHECKOUT ESTILO TECH / PC CUSTOM LAB -->
 <header class="w-full bg-slate-950 text-white py-3.5 px-6 md:px-12 flex justify-between items-center border-b border-slate-800 sticky top-0 z-50 shadow-lg">
-    <!-- LOGO Y MARCA (ENLACE PURO A INDEX.HTML) -->
-    <a href="index.html" class="flex items-center gap-3 group">
-        <img loading="lazy" decoding="async" src="assets/img/mascota_tigre.webp" alt="Tigre Logo" class="w-10 h-10 rounded-full object-cover border border-amber-500 group-hover:scale-105 transition">
-        <span class="text-sm md:text-base font-black text-amber-400 tracking-wider uppercase group-hover:text-amber-300 transition">Anti-Gravity Checkout</span>
-    </a>
-
-    <!-- ACCESO RÁPIDO AL CARRITO DE COMPRAS -->
-    <a href="#seccion-carrito" class="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 px-3.5 py-1.5 rounded-xl transition group">
-        <div class="relative">
-            <i class="fa-solid fa-cart-shopping text-amber-400 text-base group-hover:scale-110 transition"></i>
-            <span id="header-cart-badge" class="absolute -top-2 -right-2 bg-amber-500 text-slate-950 text-[10px] font-black rounded-full px-1.5 py-0.2 min-w-[16px] text-center">0</span>
-        </div>
-        <span class="text-xs font-bold text-slate-200">Ver mi Pedido</span>
-    </a>
-
-    <!-- ENLACE DIRECTO AL CATÁLOGO -->
-    <a href="index.html" class="text-xs text-slate-400 hover:text-white transition">Volver al catálogo</a>
+<!-- LOGO Y MARCA (ENLACE PURO A INDEX.HTML) -->
+<a class="flex items-center gap-3 group" href="index.html">
+<img alt="Mascota oficial Tigre inteligente de PC Custom Lab en Guadalajara" class="w-10 h-10 rounded-full object-cover border border-amber-500 group-hover:scale-105 transition" decoding="async" loading="lazy" src="assets/img/mascota_tigre.webp"/>
+<span class="text-sm md:text-base font-black text-amber-400 tracking-wider uppercase group-hover:text-amber-300 transition">Anti-Gravity Checkout</span>
+</a>
+<!-- ACCESO RÁPIDO AL CARRITO DE COMPRAS -->
+<a class="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 px-3.5 py-1.5 rounded-xl transition group" href="#seccion-carrito">
+<div class="relative">
+<i class="fa-solid fa-cart-shopping text-amber-400 text-base group-hover:scale-110 transition"></i>
+<span class="absolute -top-2 -right-2 bg-amber-500 text-slate-950 text-[10px] font-black rounded-full px-1.5 py-0.2 min-w-[16px] text-center" id="header-cart-badge">0</span>
+</div>
+<span class="text-xs font-bold text-slate-200">Ver mi Pedido</span>
+</a>
+<!-- ENLACE DIRECTO AL CATÁLOGO -->
+<a class="text-xs text-slate-400 hover:text-white transition" href="index.html">Volver al catálogo</a>
 </header>
-
 <main class="flex-1 w-full max-w-6xl mx-auto py-8 px-4">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        
-        <!-- Columna Izquierda (Spans 8/12) -->
-        <div class="lg:col-span-8 flex flex-col gap-6">
-            
-            <!-- SECCIÓN 1: DOMICILIO DE ENTREGA Y REGISTRO -->
-            <div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm flex flex-col gap-4">
-                <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-                    <h3 class="text-base font-black text-white flex items-center gap-2">
-                        <span class="text-amber-400">1.</span> Domicilio de entrega y registro
-                    </h3>
-                    <button onclick="toggleAddressForm()" id="btn-edit-address" type="button" class="hidden text-xs font-bold text-blue-400 hover:underline">Cambiar</button>
-                </div>
-
-                <!-- Vista Resumen de Dirección Guardada -->
-                <div id="address-summary-view" class="hidden bg-slate-900/60 border border-slate-800 rounded-xl p-4 text-sm flex flex-col gap-1.5">
-                    <span id="summary-address-name" class="font-bold text-white"></span>
-                    <span id="summary-address-street" class="text-slate-300"></span>
-                    <span id="summary-address-phone" class="text-slate-400 font-mono"></span>
-                </div>
-
-                <!-- Formulario de Registro de Domicilio -->
-                <form id="addressForm" onsubmit="saveDeliveryAddress(event)" class="flex flex-col gap-3.5">
-                    <p class="text-xs text-slate-400 mb-1">Registra tus datos de entrega para recibir tu pedido de manera efectiva.</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Nombre Completo</label>
-                            <input type="text" id="inputName" required placeholder="Ej. Juan Pérez" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Teléfono (10 DÍGITOS)</label>
-                            <input type="tel" id="inputPhone" required placeholder="Ej. 3337271440" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500">
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Correo Electrónico</label>
-                            <input type="email" id="inputEmail" required placeholder="Ej. cliente@correo.com" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Calle de Entrega</label>
-                            <input type="text" id="inputStreet" required placeholder="Ej. Av. Juárez 450" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500">
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-3 gap-3">
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Número (EXT/INT)</label>
-                            <input type="text" id="inputNum" placeholder="Ej. 450 Int 3" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Colonia</label>
-                            <input type="text" id="inputColonia" required placeholder="Ej. Centro" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Código Postal</label>
-                            <input type="text" id="inputZip" required placeholder="Ej. 44100" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500">
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold uppercase text-slate-400 mb-1">Ciudad y Estado</label>
-                        <input type="text" id="inputCity" required placeholder="Ej. Guadalajara, Jalisco" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500">
-                    </div>
-                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-3 rounded-xl uppercase text-xs tracking-wider transition shadow-md mt-2 cursor-pointer">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Columna Izquierda (Spans 8/12) -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- SECCIÓN 1: DOMICILIO DE ENTREGA Y REGISTRO -->
+<div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm flex flex-col gap-4">
+<div class="flex justify-between items-center border-b border-slate-800 pb-3">
+<h2 class="text-base font-black text-white flex items-center gap-2">
+<span class="text-amber-400">1.</span> Domicilio de entrega y registro
+                    </h2>
+<button aria-label="Cambiar" class="hidden text-xs font-bold text-blue-400 hover:underline" id="btn-edit-address" onclick="toggleAddressForm()" type="button">Cambiar</button>
+</div>
+<!-- Vista Resumen de Dirección Guardada -->
+<div class="hidden bg-slate-900/60 border border-slate-800 rounded-xl p-4 text-sm flex flex-col gap-1.5" id="address-summary-view">
+<span class="font-bold text-white" id="summary-address-name"></span>
+<span class="text-slate-300" id="summary-address-street"></span>
+<span class="text-slate-400 font-mono" id="summary-address-phone"></span>
+</div>
+<!-- Formulario de Registro de Domicilio -->
+<form class="flex flex-col gap-3.5" id="addressForm" onsubmit="saveDeliveryAddress(event)">
+<p class="text-xs text-slate-400 mb-1">Registra tus datos de entrega para recibir tu pedido de manera efectiva.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Nombre Completo</label>
+<input aria-label="Nombre completo del comprador" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputName" placeholder="Ej. Juan Pérez" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Teléfono (10 DÍGITOS)</label>
+<input aria-label="Número de teléfono a 10 dígitos" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputPhone" placeholder="Ej. 3337271440" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Correo Electrónico</label>
+<input aria-label="Correo electrónico de contacto" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputEmail" placeholder="Ej. cliente@correo.com" required="" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Calle de Entrega</label>
+<input aria-label="Calle y número de domicilio" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputStreet" placeholder="Ej. Av. Juárez 450" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Número (EXT/INT)</label>
+<input aria-label="Ej. 450 Int 3" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputNum" placeholder="Ej. 450 Int 3" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Colonia</label>
+<input aria-label="Colonia de entrega" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputColonia" placeholder="Ej. Centro" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Código Postal</label>
+<input aria-label="Código postal de 5 dígitos" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputZip" placeholder="Ej. 44100" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Ciudad y Estado</label>
+<input aria-label="Ciudad y estado de la entrega" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputCity" placeholder="Ej. Guadalajara, Jalisco" required="" type="text"/>
+</div>
+<button aria-label="Registrar Datos de Envío" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-3 rounded-xl uppercase text-xs tracking-wider transition shadow-md mt-2 cursor-pointer" type="submit">
                         Registrar Datos de Envío
                     </button>
-                </form>
-            </div>
-
-            <!-- SECCIÓN 2: MÉTODO DE PAGO -->
-            <div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm flex flex-col gap-4">
-                <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-                    <h3 class="text-base font-black text-white flex items-center gap-2">
-                        <span class="text-amber-400">2.</span> Método de pago
+</form>
+</div>
+<!-- SECCIÓN 2: MÉTODO DE PAGO -->
+<div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm flex flex-col gap-4">
+<div class="flex justify-between items-center border-b border-slate-800 pb-3">
+<h3 class="text-base font-black text-white flex items-center gap-2">
+<span class="text-amber-400">2.</span> Método de pago
                     </h3>
-                    <button onclick="openPaymentModal()" type="button" class="text-xs font-bold text-blue-400 hover:underline">Cambiar</button>
-                </div>
-
-                <!-- Resumen del Método Seleccionado -->
-                <div id="payment-status-display" class="text-sm text-slate-400">
+<button aria-label="Cambiar" class="text-xs font-bold text-blue-400 hover:underline" onclick="openPaymentModal()" type="button">Cambiar</button>
+</div>
+<!-- Resumen del Método Seleccionado -->
+<div class="text-sm text-slate-400" id="payment-status-display">
                     No se ha registrado un método de pago. Haz clic en "Cambiar" para agregar uno.
                 </div>
-
-                <button onclick="openPaymentModal()" type="button" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-3 rounded-xl uppercase text-xs tracking-wider transition shadow-md cursor-pointer">
+<button aria-label="Registrar Método de Pago" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-3 rounded-xl uppercase text-xs tracking-wider transition shadow-md cursor-pointer" onclick="openPaymentModal()" type="button">
                     Registrar Método de Pago
                 </button>
-            </div>
-
-            <!-- SECCIÓN 3: REVISAR PRODUCTOS Y OPCIONES DE ENVÍO -->
-            <div id="seccion-carrito" class="bg-slate-950/80 p-6 rounded-2xl border-2 border-amber-500/60 shadow-md flex flex-col gap-5 scroll-mt-20">
-                <div class="border-b border-slate-800 pb-3 flex justify-between items-center">
-                    <h3 class="text-lg font-black text-white flex items-center gap-2">
-                        <i class="fa-solid fa-cart-shopping text-amber-400"></i>
-                        <span class="text-amber-400">3.</span> Revisar productos seleccionados
+</div>
+<!-- SECCIÓN 3: REVISAR PRODUCTOS Y OPCIONES DE ENVÍO -->
+<div class="bg-slate-950/80 p-6 rounded-2xl border-2 border-amber-500/60 shadow-md flex flex-col gap-5 scroll-mt-20" id="seccion-carrito">
+<div class="border-b border-slate-800 pb-3 flex justify-between items-center">
+<h3 class="text-lg font-black text-white flex items-center gap-2">
+<i class="fa-solid fa-cart-shopping text-amber-400"></i>
+<span class="text-amber-400">3.</span> Revisar productos seleccionados
                     </h3>
-                </div>
-
-                <!-- Contenedor Dinámico de Productos en el Carrito -->
-                <div id="checkout-products-container" class="flex flex-col gap-4">
-                    <!-- Las filas de productos se renderizan dinámicamente vía JavaScript -->
-                </div>
-
-                <!-- CONTADOR Y DESGLOSE LOCAL EN SECCIÓN 3 -->
-                <div class="border-t-2 border-slate-800 pt-5 flex flex-col gap-4">
-                    <div id="active-items-count" class="text-base font-black text-slate-200">
+</div>
+<!-- Contenedor Dinámico de Productos en el Carrito -->
+<div class="flex flex-col gap-4" id="checkout-products-container">
+<!-- Las filas de productos se renderizan dinámicamente vía JavaScript -->
+</div>
+<!-- CONTADOR Y DESGLOSE LOCAL EN SECCIÓN 3 -->
+<div class="border-t-2 border-slate-800 pt-5 flex flex-col gap-4">
+<div class="text-base font-black text-slate-200" id="active-items-count">
                         Cargando productos...
                     </div>
-
-                    <!-- CUADRO DE PRECIO PREVIO Y TOTAL EN GRANDE -->
-                    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col gap-3 shadow-inner">
-                        <div class="flex justify-between items-center text-sm">
-                            <span class="text-slate-400 font-semibold">Subtotal de artículos:</span>
-                            <span id="section3-subtotal" class="font-bold text-white text-base">$0.00 MXN</span>
-                        </div>
-
-                        <div class="flex justify-between items-center text-sm">
-                            <span class="text-slate-400 font-semibold">Costo de Envío:</span>
-                            <span id="section3-shipping" class="font-bold text-emerald-400 text-base">Gratis</span>
-                        </div>
-
-                        <div class="flex justify-between items-center text-sm">
-                            <span class="text-slate-400 font-semibold">Descuento Cashback (5%):</span>
-                            <span id="section3-cashback" class="font-bold text-emerald-400 text-base">-$0.00 MXN</span>
-                        </div>
-
-                        <div class="border-t border-slate-800 pt-3 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                            <div>
-                                <span class="text-xs uppercase tracking-wider font-mono font-bold text-slate-400 block">Total Final a Pagar:</span>
-                                <span id="section3-total" class="text-3xl font-black text-red-500">$0.00 MXN</span>
-                            </div>
-                            <span id="section3-savings-tag" class="bg-emerald-950/80 text-emerald-300 font-bold text-xs px-3 py-1 rounded-full border border-emerald-700">
+<!-- CUADRO DE PRECIO PREVIO Y TOTAL EN GRANDE -->
+<div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col gap-3 shadow-inner">
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-400 font-semibold">Subtotal de artículos:</span>
+<span class="font-bold text-white text-base" id="section3-subtotal">$0.00 MXN</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-400 font-semibold">Costo de Envío:</span>
+<span class="font-bold text-emerald-400 text-base" id="section3-shipping">Gratis</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-400 font-semibold">Descuento Cashback (5%):</span>
+<span class="font-bold text-emerald-400 text-base" id="section3-cashback">-$0.00 MXN</span>
+</div>
+<div class="border-t border-slate-800 pt-3 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+<div>
+<span class="text-xs uppercase tracking-wider font-mono font-bold text-slate-400 block">Total Final a Pagar:</span>
+<span class="text-3xl font-black text-red-500" id="section3-total">$0.00 MXN</span>
+</div>
+<span class="bg-emerald-950/80 text-emerald-300 font-bold text-xs px-3 py-1 rounded-full border border-emerald-700" id="section3-savings-tag">
                                 ¡Ahorro del 5% aplicado!
                             </span>
-                        </div>
-                    </div>
-
-                    <!-- BOTONES DE ACCIÓN FINAL EN SECCIÓN 3 -->
-                    <div class="flex flex-col gap-3 mt-2">
-                        <!-- Botón Amarillo Principal de Cierre de Compra -->
-                        <button onclick="processFinalOrder()" type="button" class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-[#0F1111] font-black py-4 px-6 rounded-2xl text-base text-center shadow-lg border-2 border-[#FCD200] transition active:scale-98 cursor-pointer flex items-center justify-center gap-2.5">
+</div>
+</div>
+<!-- BOTONES DE ACCIÓN FINAL EN SECCIÓN 3 -->
+<div class="flex flex-col gap-3 mt-2">
+<!-- Botón Amarillo Principal de Cierre de Compra -->
+<button aria-label="Completar pedido y autorizar cargo de compra" class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-[#0F1111] font-black py-4 px-6 rounded-2xl text-base text-center shadow-lg border-2 border-[#FCD200] transition active:scale-98 cursor-pointer flex items-center justify-center gap-2.5" onclick="processFinalOrder()" type="button">
                             🚀 ¡Proceder al Pago y Finalizar Compra! <i class="fa-solid fa-arrow-right text-lg"></i>
-                        </button>
-
-                        <!-- ENLACE PURO Y DIRECTO AL CATÁLOGO -->
-                        <a href="index.html" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-200 font-bold py-3.5 px-6 rounded-xl text-sm text-center border border-slate-700 transition flex items-center justify-center gap-2 cursor-pointer">
-                            <i class="fa-solid fa-cart-plus"></i> Seguir comprando en el catálogo
+</button>
+<!-- ENLACE PURO Y DIRECTO AL CATÁLOGO -->
+<a class="w-full bg-slate-900 hover:bg-slate-800 text-slate-200 font-bold py-3.5 px-6 rounded-xl text-sm text-center border border-slate-700 transition flex items-center justify-center gap-2 cursor-pointer" href="index.html">
+<i class="fa-solid fa-cart-plus"></i> Seguir comprando en el catálogo
                         </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Columna Derecha: Resumen de Pedido (Spans 4/12) -->
-        <div class="lg:col-span-4 flex flex-col gap-4 sticky top-20">
-            <div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm flex flex-col gap-4">
-                <button onclick="processFinalOrder()" type="button" class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-[#0F1111] font-black py-3.5 rounded-full text-sm text-center border border-[#FCD200] shadow transition active:scale-97 cursor-pointer">
+</div>
+</div>
+</div>
+</div>
+<!-- Columna Derecha: Resumen de Pedido (Spans 4/12) -->
+<div class="lg:col-span-4 flex flex-col gap-4 sticky top-20">
+<div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm flex flex-col gap-4">
+<button aria-label="Completar pedido y autorizar cargo de compra" class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-[#0F1111] font-black py-3.5 rounded-full text-sm text-center border border-[#FCD200] shadow transition active:scale-97 cursor-pointer" onclick="processFinalOrder()" type="button">
                     🚀 ¡Autorizar Cargo y Completar Compra! 🚀
                 </button>
-                <a href="index.html" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-100 font-bold py-2.5 rounded-full text-xs text-center border border-slate-700 shadow-sm transition active:scale-97 block">
+<a class="w-full bg-slate-900 hover:bg-slate-800 text-slate-100 font-bold py-2.5 rounded-full text-xs text-center border border-slate-700 shadow-sm transition active:scale-97 block" href="index.html">
                     Seguir comprando
                 </a>
-                <p class="text-[11px] text-slate-400 text-center leading-tight">
+<p class="text-[11px] text-slate-400 text-center leading-tight">
                     Al realizar tu pedido, aceptas nuestro aviso de privacidad y las condiciones de uso local de Anti-Gravity.
                 </p>
-
-                <!-- Banner precio especial mayoreo -->
-                <div class="bg-blue-950/30 border border-blue-900/50 rounded-xl p-3.5 text-xs text-blue-200 leading-relaxed flex flex-col gap-1">
-                    <strong class="font-black text-blue-300 flex items-center gap-1">
-                        <i class="fa-solid fa-tag"></i> Descuento de Mayoreo Activo
+<!-- Banner precio especial mayoreo -->
+<div class="bg-blue-950/30 border border-blue-900/50 rounded-xl p-3.5 text-xs text-blue-200 leading-relaxed flex flex-col gap-1">
+<strong class="font-black text-blue-300 flex items-center gap-1">
+<i class="fa-solid fa-tag"></i> Descuento de Mayoreo Activo
                     </strong>
-                    <span>Compra 10 artículos o más del catálogo y recibe precio especial preferencial con un 15% de descuento sobre el subtotal directo.</span>
-                </div>
-
-                <div class="border-t border-slate-800/80 pt-4 flex flex-col gap-2.5">
-                    <h4 class="text-sm font-black text-white">Resumen del pedido</h4>
-                    <div class="flex justify-between text-xs text-slate-300">
-                        <span>Productos:</span>
-                        <span id="summary-subtotal" class="font-bold text-white">$0.00 MXN</span>
-                    </div>
-                    <div class="flex justify-between text-xs text-slate-300">
-                        <span>Envío:</span>
-                        <span id="summary-shipping" class="font-bold text-emerald-400">Gratis</span>
-                    </div>
-                    <div class="flex justify-between text-xs text-emerald-400 font-bold">
-                        <span>Cashback (5%):</span>
-                        <span id="summary-cashback">-$0.00 MXN</span>
-                    </div>
-                    <div class="border-t border-slate-800/80 pt-2 flex justify-between text-base font-black text-red-500">
-                        <span>Total del pedido:</span>
-                        <span id="summary-total">$0.00 MXN</span>
-                    </div>
-                </div>
-
-                <div class="bg-amber-950/40 border border-amber-800/60 rounded-xl p-3 text-xs text-amber-200 leading-relaxed">
-                    🎉 <strong>Ahorro Total:</strong> Te estás ahorrando <strong id="summary-savings" class="text-amber-400">$0.00 MXN</strong> (5% Cashback aplicado inmediatamente).
-                </div>
-            </div>
-        </div>
-
-    </div>
-</main>
-
-<!-- MODAL REGISTRAR MÉTODO DE PAGO -->
-<div id="paymentModal" class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-slate-950/80 backdrop-blur-md px-4">
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-md w-full shadow-2xl relative text-slate-100">
-        <h3 class="text-base font-black text-white mb-3 flex items-center gap-2">
-            <i class="fa-solid fa-credit-card text-amber-500"></i> Registrar Método de Pago
-        </h3>
-        <p class="text-xs text-slate-400 mb-4">Selecciona tu método de pago preferido para liquidar tus compras.</p>
-        
-        <form id="paymentForm" onsubmit="savePaymentMethod(event)" class="flex flex-col gap-3">
-            <div class="flex gap-4 mb-2">
-                <label class="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
-                    <input type="radio" name="payType" value="card" checked onchange="togglePaymentFields()" class="text-amber-500">
-                    <span>Tarjeta (Crédito/Débito)</span>
-                </label>
-                <label class="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
-                    <input type="radio" name="payType" value="cash" onchange="togglePaymentFields()" class="text-amber-500">
-                    <span>Efectivo / Transferencia</span>
-                </label>
-            </div>
-
-            <div id="cardFields" class="flex flex-col gap-3">
-                <div>
-                    <label class="block text-xs uppercase font-mono text-slate-400 mb-1">Nombre del Titular</label>
-                    <input type="text" id="payHolder" placeholder="Ej. Juan Pérez" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500">
-                </div>
-                <div>
-                    <label class="block text-xs uppercase font-mono text-slate-400 mb-1">Número de Tarjeta</label>
-                    <input type="text" id="payNumber" placeholder="4532 XXXX XXXX 1234" maxlength="16" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500">
-                </div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-xs uppercase font-mono text-slate-400 mb-1">Vencimiento (MM/AA)</label>
-                        <input type="text" id="payExp" placeholder="12/29" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase font-mono text-slate-400 mb-1">CVV</label>
-                        <input type="password" id="payCvv" placeholder="123" maxlength="4" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500">
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex gap-3 mt-4">
-                <button type="button" onclick="closePaymentModal()" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-2.5 rounded-xl text-xs transition cursor-pointer">Cancelar</button>
-                <button type="submit" class="flex-1 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2.5 rounded-xl text-xs transition cursor-pointer">Guardar Método</button>
-            </div>
-        </form>
-    </div>
+<span>Compra 10 artículos o más del catálogo y recibe precio especial preferencial con un 15% de descuento sobre el subtotal directo.</span>
 </div>
-
+<div class="border-t border-slate-800/80 pt-4 flex flex-col gap-2.5">
+<h4 class="text-sm font-black text-white">Resumen del pedido</h4>
+<div class="flex justify-between text-xs text-slate-300">
+<span>Productos:</span>
+<span class="font-bold text-white" id="summary-subtotal">$0.00 MXN</span>
+</div>
+<div class="flex justify-between text-xs text-slate-300">
+<span>Envío:</span>
+<span class="font-bold text-emerald-400" id="summary-shipping">Gratis</span>
+</div>
+<div class="flex justify-between text-xs text-emerald-400 font-bold">
+<span>Cashback (5%):</span>
+<span id="summary-cashback">-$0.00 MXN</span>
+</div>
+<div class="border-t border-slate-800/80 pt-2 flex justify-between text-base font-black text-red-500">
+<span>Total del pedido:</span>
+<span id="summary-total">$0.00 MXN</span>
+</div>
+</div>
+<div class="bg-amber-950/40 border border-amber-800/60 rounded-xl p-3 text-xs text-amber-200 leading-relaxed">
+                    🎉 <strong>Ahorro Total:</strong> Te estás ahorrando <strong class="text-amber-400" id="summary-savings">$0.00 MXN</strong> (5% Cashback aplicado inmediatamente).
+                </div>
+</div>
+</div>
+</div>
+</main>
+<!-- MODAL REGISTRAR MÉTODO DE PAGO -->
+<div class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-slate-950/80 backdrop-blur-md px-4" id="paymentModal">
+<div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-md w-full shadow-2xl relative text-slate-100">
+<h3 class="text-base font-black text-white mb-3 flex items-center gap-2">
+<i class="fa-solid fa-credit-card text-amber-500"></i> Registrar Método de Pago
+        </h3>
+<p class="text-xs text-slate-400 mb-4">Selecciona tu método de pago preferido para liquidar tus compras.</p>
+<form class="flex flex-col gap-3" id="paymentForm" onsubmit="savePaymentMethod(event)">
+<div class="flex gap-4 mb-2">
+<label class="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
+<input aria-label="Campo de entrada de texto" checked="" class="text-amber-500" name="payType" onchange="togglePaymentFields()" type="radio" value="card"/>
+<span>Tarjeta (Crédito/Débito)</span>
+</label>
+<label class="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
+<input aria-label="Campo de entrada de texto" class="text-amber-500" name="payType" onchange="togglePaymentFields()" type="radio" value="cash"/>
+<span>Efectivo / Transferencia</span>
+</label>
+</div>
+<div class="flex flex-col gap-3" id="cardFields">
+<div>
+<label class="block text-xs uppercase font-mono text-slate-400 mb-1">Nombre del Titular</label>
+<input aria-label="Nombre del titular impreso en la tarjeta" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500" id="payHolder" placeholder="Ej. Juan Pérez" type="text"/>
+</div>
+<div>
+<label class="block text-xs uppercase font-mono text-slate-400 mb-1">Número de Tarjeta</label>
+<input aria-label="Número de tarjeta de 16 dígitos" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500" id="payNumber" maxlength="16" placeholder="4532 XXXX XXXX 1234" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block text-xs uppercase font-mono text-slate-400 mb-1">Vencimiento (MM/AA)</label>
+<input aria-label="Fecha de vencimiento en formato Mes Mes Año Año" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500" id="payExp" placeholder="12/29" type="text"/>
+</div>
+<div>
+<label class="block text-xs uppercase font-mono text-slate-400 mb-1">CVV</label>
+<input aria-label="Código de seguridad de 3 dígitos de la tarjeta" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500" id="payCvv" maxlength="4" placeholder="123" type="password"/>
+</div>
+</div>
+</div>
+<div class="flex gap-3 mt-4">
+<button aria-label="Cancelar" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-2.5 rounded-xl text-xs transition cursor-pointer" onclick="closePaymentModal()" type="button">Cancelar</button>
+<button aria-label="Guardar Método" class="flex-1 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2.5 rounded-xl text-xs transition cursor-pointer" type="submit">Guardar Método</button>
+</div>
+</form>
+</div>
+</div>
 <!-- LÓGICA JAVASCRIPT CON MEMORIA DE SESIÓN (sessionStorage) -->
 <script>
     // Usa sessionStorage para conservar los artículos durante la navegación activa, pero reiniciar a cero al cerrar la pestaña
@@ -708,6 +692,5 @@
         }
     });
 </script>
-
 </body>
 </html>
