@@ -496,10 +496,9 @@ header.relative { height: 600px; background-color: #020617; }
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 <div class="lg:col-span-6 relative rounded-3xl overflow-hidden border border-teal-500/30 shadow-2xl shadow-teal-950/20 bg-slate-900/40 p-1 flex items-center justify-center min-h-[300px] sm:min-h-[450px]">
 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-slate-950/40 z-10"></div>
-<video autoplay="" class="w-full h-full object-cover rounded-2xl absolute inset-0" muted="" playsinline="">
-<img alt="Imagen ilustrativa" class="absolute inset-0 w-full h-full object-cover mobile-video-fallback hidden" loading="lazy" src="assets/img/Female_technician_assembling_gam_202608041518.webp" style="display: none;"/>
-<source src="assets/img/Female_technician_assembling_gam_202608041518.mp4" type="video/mp4"/>
-</video>
+<div class="w-full h-full object-cover rounded-2xl absolute inset-0 overflow-hidden" id="video-container-1">
+    <img src="assets/img/Female_technician_assembling_gam_202608041518_thumb.webp" alt="Ensamble de Computadora" class="w-full h-full object-cover" loading="lazy" width="300" height="168" />
+</div>
 <div class="absolute bottom-6 left-6 right-6 bg-slate-950/80 backdrop-blur-md border border-teal-500/30 p-4 rounded-xl flex items-center gap-3 z-20">
 <div class="w-2.5 h-2.5 rounded-full bg-teal-400 animate-ping shrink-0"></div>
 <span class="text-[11px] text-teal-300 font-mono uppercase tracking-wider">Ensamble de Precisión: Control de Calidad en Pedro Moreno 501 A</span>
@@ -568,7 +567,9 @@ header.relative { height: 600px; background-color: #020617; }
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 <div class="lg:col-span-5 flex flex-col items-center text-center">
 <div class="relative w-72 h-72 sm:w-[352px] sm:h-[352px] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950">
-<video autoplay="" class="w-full h-full object-cover object-tiger-loyalty" muted="" playsinline=""><source src="assets/img/Tiger_walking_in_warehouse_202608072327.mp4" type="video/mp4"/></video>
+<div class="w-full h-full object-cover overflow-hidden" id="video-container-2">
+    <img src="assets/img/Tiger_walking_in_warehouse_202608072327_thumb.webp" alt="Club de Socios" class="w-full h-full object-cover object-tiger-loyalty" loading="lazy" width="300" height="168" />
+</div>
 <div class="absolute bottom-0 inset-x-0 bg-slate-950/80 border-t border-slate-800 p-3 z-10"><span class="text-[10px] text-slate-400 font-mono tracking-wider"><i class="fa-solid fa-wand-magic-sparkles text-indigo-400 mr-1"></i> Sitio creado con Google Gemini AI</span></div>
 </div>
 </div>
@@ -1692,6 +1693,57 @@ function initApp() {
     actualizarPrefiltroNivel();
     renderProductsGrid();
     updateCartBadge();
+    
+    // Dynamic video load for desktop only (reduces page load size on mobile by 5MB)
+    if (window.innerWidth > 768) {
+        const vc1 = document.getElementById("video-container-1");
+        if (vc1) {
+            vc1.innerHTML = `<video autoplay loop muted playsinline class="w-full h-full object-cover rounded-2xl">
+                <source src="assets/img/Female_technician_assembling_gam_202608041518.mp4" type="video/mp4" />
+            </video>`;
+        }
+        const vc2 = document.getElementById("video-container-2");
+        if (vc2) {
+            vc2.innerHTML = `<video autoplay loop muted playsinline class="w-full h-full object-cover object-tiger-loyalty">
+                <source src="assets/img/Tiger_walking_in_warehouse_202608072327.mp4" type="video/mp4" />
+            </video>`;
+        }
+    }
+    
+    // Touch swipe gestures for products pagination on mobile
+    const productsGrid = document.getElementById("pc-productos-grid");
+    if (productsGrid) {
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        productsGrid.addEventListener("touchstart", (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        productsGrid.addEventListener("touchend", (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+        
+        function handleSwipe() {
+            const swipeThreshold = 60; // minimum swipe distance in pixels
+            if (touchStartX - touchEndX > swipeThreshold) {
+                // Swiped Left -> Go to Next Page
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderProductsGrid();
+                    renderPagination();
+                }
+            } else if (touchEndX - touchStartX > swipeThreshold) {
+                // Swiped Right -> Go to Previous Page
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderProductsGrid();
+                    renderPagination();
+                }
+            }
+        }
+    }
 }
 
 if ('requestIdleCallback' in window) {
