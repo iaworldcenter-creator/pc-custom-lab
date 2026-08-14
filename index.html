@@ -1412,7 +1412,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-    </script>
+    
+// WebMCP Agentic Navigation Tool Registration
+try {
+    const modelCtx = (window.navigator && window.navigator.modelContext) || (window.document && window.document.modelContext);
+    if (modelCtx && modelCtx.registerTool) {
+        modelCtx.registerTool({
+            name: "agregar_al_carrito",
+            description: "Agrega un producto al carrito de compras usando su SKU",
+            inputSchema: {
+                type: "object",
+                properties: {
+                    sku: { type: "string", description: "El SKU unico del producto" }
+                },
+                required: ["sku"]
+            },
+            execute: async (args) => {
+                if (typeof addToCart === 'function') {
+                    addToCart(args.sku);
+                    return { success: true, message: `Producto ${args.sku} agregado.` };
+                }
+                return { success: false, error: "Metodo addToCart no disponible." };
+            }
+        });
+        modelCtx.registerTool({
+            name: "obtener_carrito",
+            description: "Obtiene los productos actualmente en el carrito de compras",
+            inputSchema: { type: "object", properties: {} },
+            execute: async () => {
+                const cart = localStorage.getItem("cart") || sessionStorage.getItem("cart") || "[]";
+                return { success: true, cart: JSON.parse(cart) };
+            }
+        });
+    }
+} catch(e) { console.warn("WebMCP registration skipped:", e); }
+
+</script>
 <script type="module">
 import { listen } from 'https://unpkg.com/quicklink@2.3.0/dist/quicklink.mjs';
 window.addEventListener('load', () => { listen({ priority: true }); });

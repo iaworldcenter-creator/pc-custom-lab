@@ -1,0 +1,10 @@
+# Pc Custom Lab
+
+Machine-readable context for AI agents visiting pc-custom-lab.
+
+## Description
+This website belongs to the brand ecosystem of Puesto de Revistas & Bazar, providing tech services, gadgets, and general store inventory in Guadalajara, Mexico.
+
+## Key Actions
+- [Homepage](index.html)
+- [Checkout & Cart](checkout.html)
