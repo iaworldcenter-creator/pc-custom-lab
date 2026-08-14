@@ -1115,7 +1115,7 @@ function renderProductsGrid() {
     // Renderizar los 20 productos de esta página
     pageProducts.slice(0, PRODUCTS_PER_PAGE).forEach((p) => {
         const card = document.createElement("div");
-        card.className = "bg-slate-950/80 border border-slate-800/80 p-7 rounded-2xl flex flex-col justify-between h-full shadow-lg hover:border-blue-500 hover:shadow-blue-900/10 transition duration-300 relative group cursor-pointer";
+        card.className = "bg-slate-950/80 border border-slate-800/80 p-3.5 rounded-2xl flex flex-col justify-between h-full shadow-lg hover:border-blue-500 hover:shadow-blue-900/10 transition duration-300 relative group cursor-pointer";
         
         card.onclick = (e) => {
             if (!e.target.closest('button') && !e.target.closest('a')) {
