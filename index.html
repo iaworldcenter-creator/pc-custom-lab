@@ -537,42 +537,43 @@
 <!-- Col 1: Margen izquierdo vacío -->
 <div class="hidden lg:block col-span-1"></div>
 
-<!-- Col 2-3: Sidebar de Navegación y Filtros -->
-<aside class="col-span-8 lg:col-span-1 w-full bg-slate-950/80 border border-slate-800 rounded-2xl p-5 shadow-xl sticky top-24 self-start">
-<h3 class="text-base font-black text-white mb-4 flex items-center gap-2">
-<i class="fa-solid fa-filter text-amber-400"></i> Navegación y Filtros
-</h3>
-<div class="mb-6">
-<h4 class="text-sm font-bold text-blue-400 mb-2 uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-desktop"></i> PCs Armadas</h4>
-<ul class="space-y-1.5 pl-2">
-<li><a href="#cotizador" onclick="document.getElementById('select-nivel-filtro').value='1'; actualizarPrefiltroNivel();" class="text-xs text-slate-300 hover:text-blue-400 transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Nivel 1: Topping Extreme</a></li>
-<li><a href="#cotizador" onclick="document.getElementById('select-nivel-filtro').value='2'; actualizarPrefiltroNivel();" class="text-xs text-slate-300 hover:text-blue-400 transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Nivel 2: Entusiasta / IA</a></li>
-<li><a href="#cotizador" onclick="document.getElementById('select-nivel-filtro').value='3'; actualizarPrefiltroNivel();" class="text-xs text-slate-300 hover:text-blue-400 transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Nivel 3: Gama Alta / Render</a></li>
-<li><a href="#cotizador" onclick="document.getElementById('select-nivel-filtro').value='4'; actualizarPrefiltroNivel();" class="text-xs text-slate-300 hover:text-blue-400 transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Nivel 4: Gama Media</a></li>
-<li><a href="#cotizador" onclick="document.getElementById('select-nivel-filtro').value='5'; actualizarPrefiltroNivel();" class="text-xs text-slate-300 hover:text-blue-400 transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Nivel 5: Hogar &amp; Oficina</a></li>
-</ul>
-</div>
-<div class="mb-2">
-<h4 class="text-sm font-bold text-pink-400 mb-2 uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-microchip"></i> Refacciones</h4>
-<ul class="space-y-1.5 pl-2">
-<li><a href="#productos" onclick="filterByCategory('todos', event)" class="text-xs text-blue-400 hover:text-blue-300 transition cursor-pointer flex items-center gap-1.5 font-bold"><i class="fa-solid fa-border-all text-[8px]"></i> Ver Todo</a></li>
-<li><a href="#productos" onclick="filterByCategory('gpu', event)" class="text-xs text-slate-300 hover:text-pink-400 transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Tarjetas de video (GPU)</a></li>
-<li><a href="#productos" onclick="filterByCategory('motherboards', event)" class="text-xs text-slate-300 hover:text-pink-400 transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Tarjeta madre</a></li>
-<li><a href="#productos" onclick="filterByCategory('ram', event)" class="text-xs text-slate-300 hover:text-pink-400 transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Memoria (RAM)</a></li>
-<li><a href="#productos" onclick="filterByCategory('procesadores', event)" class="text-xs text-slate-300 hover:text-pink-400 transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Procesador</a></li>
-<li><a href="#productos" onclick="filterByCategory('almacenamiento', event)" class="text-xs text-slate-300 hover:text-pink-400 transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Discos duros (SSD/HDD)</a></li>
-<li><a href="#productos" onclick="filterByCategory('gabinetes', event)" class="text-xs text-slate-300 hover:text-pink-400 transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Gabinete</a></li>
-<li><a href="#productos" onclick="filterByCategory('fuentes', event)" class="text-xs text-slate-300 hover:text-pink-400 transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Fuente de poder</a></li>
-<li><a href="#productos" onclick="filterByCategory('enfriamiento', event)" class="text-xs text-slate-300 hover:text-pink-400 transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Sistema de enfriamiento</a></li>
-<li><a href="#productos" onclick="filterByCategory('monitores', event)" class="text-xs text-slate-300 hover:text-pink-400 transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Monitor</a></li>
-<li><a href="#productos" onclick="filterByCategory('perifericos', event)" class="text-xs text-slate-300 hover:text-pink-400 transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Teclado y mouse (Periféricos)</a></li>
-</ul>
-</div>
-<div class="pt-4 mt-4 border-t border-slate-800">
-<div class="text-[10px] font-mono text-slate-500 uppercase tracking-wider mb-1">Inventario Total</div>
-<div class="text-xl font-black text-amber-400">200 <span class="text-xs text-slate-500 font-normal">productos</span></div>
-<div class="text-[10px] text-slate-600 font-mono">10 páginas × 20 por página</div>
-</div>
+<!-- Col 2-3: Sidebar de Navegación y Filtros (Spans 1 column on lg, 8 columns on mobile) -->
+<aside class="col-span-8 lg:col-span-1 w-full bg-slate-950/80 border border-slate-800 rounded-2xl p-4 lg:p-5 shadow-xl sticky lg:top-24 top-16 z-30 self-start flex flex-row lg:flex-col overflow-x-auto lg:overflow-visible gap-4 lg:gap-6 whitespace-nowrap lg:whitespace-normal scrollbar-none items-center lg:items-stretch">
+    <h3 class="text-base font-black text-white hidden lg:flex items-center gap-2">
+        <i class="fa-solid fa-filter text-amber-400"></i> Navegación y Filtros
+    </h3>
+    
+    <div class="flex flex-row lg:flex-col gap-4 lg:gap-6 items-center lg:items-stretch shrink-0 w-full lg:w-auto justify-start lg:justify-normal">
+        <!-- Seccion 1: PCs Armadas -->
+        <div class="flex flex-row lg:flex-col gap-2 lg:gap-2 items-center lg:items-stretch shrink-0">
+            <h4 class="text-xs lg:text-sm font-bold text-blue-400 uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-desktop"></i> <span class="hidden lg:inline">PCs Armadas</span></h4>
+            <ul class="flex flex-row lg:flex-col gap-2 lg:space-y-1.5 lg:gap-0 pl-0 lg:pl-2 shrink-0">
+                <li><a href="#cotizador" onclick="document.getElementById('select-nivel-filtro').value='1'; actualizarPrefiltroNivel();" class="text-xs text-slate-300 hover:text-blue-400 transition cursor-pointer flex items-center gap-1.5 bg-slate-900/60 lg:bg-transparent px-2.5 py-1 rounded lg:p-0 border border-slate-800 lg:border-none"><i class="hidden lg:inline fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Nivel 1</a></li>
+                <li><a href="#cotizador" onclick="document.getElementById('select-nivel-filtro').value='2'; actualizarPrefiltroNivel();" class="text-xs text-slate-300 hover:text-blue-400 transition cursor-pointer flex items-center gap-1.5 bg-slate-900/60 lg:bg-transparent px-2.5 py-1 rounded lg:p-0 border border-slate-800 lg:border-none"><i class="hidden lg:inline fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Nivel 2</a></li>
+                <li><a href="#cotizador" onclick="document.getElementById('select-nivel-filtro').value='3'; actualizarPrefiltroNivel();" class="text-xs text-slate-300 hover:text-blue-400 transition cursor-pointer flex items-center gap-1.5 bg-slate-900/60 lg:bg-transparent px-2.5 py-1 rounded lg:p-0 border border-slate-800 lg:border-none"><i class="hidden lg:inline fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Nivel 3</a></li>
+                <li><a href="#cotizador" onclick="document.getElementById('select-nivel-filtro').value='4'; actualizarPrefiltroNivel();" class="text-xs text-slate-300 hover:text-blue-400 transition cursor-pointer flex items-center gap-1.5 bg-slate-900/60 lg:bg-transparent px-2.5 py-1 rounded lg:p-0 border border-slate-800 lg:border-none"><i class="hidden lg:inline fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Nivel 4</a></li>
+                <li><a href="#cotizador" onclick="document.getElementById('select-nivel-filtro').value='5'; actualizarPrefiltroNivel();" class="text-xs text-slate-300 hover:text-blue-400 transition cursor-pointer flex items-center gap-1.5 bg-slate-900/60 lg:bg-transparent px-2.5 py-1 rounded lg:p-0 border border-slate-800 lg:border-none"><i class="hidden lg:inline fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Nivel 5</a></li>
+            </ul>
+        </div>
+        
+        <!-- Seccion 2: Refacciones -->
+        <div class="flex flex-row lg:flex-col gap-2 lg:gap-2 items-center lg:items-stretch shrink-0">
+            <h4 class="text-xs lg:text-sm font-bold text-pink-400 uppercase tracking-wider flex items-center gap-1.5"><i class="fa-solid fa-microchip"></i> <span class="hidden lg:inline">Refacciones</span></h4>
+            <ul class="flex flex-row lg:flex-col gap-2 lg:space-y-1.5 lg:gap-0 pl-0 lg:pl-2 shrink-0">
+                <li><a href="#productos" onclick="filterByCategory('todos', event)" class="text-xs text-blue-400 hover:text-blue-300 transition cursor-pointer flex items-center gap-1.5 font-bold bg-slate-900/60 lg:bg-transparent px-2.5 py-1 rounded lg:p-0 border border-slate-800 lg:border-none"><i class="hidden lg:inline fa-solid fa-border-all text-[8px]"></i> Todo</a></li>
+                <li><a href="#productos" onclick="filterByCategory('gpu', event)" class="text-xs text-slate-300 hover:text-pink-400 transition cursor-pointer flex items-center gap-1.5 bg-slate-900/60 lg:bg-transparent px-2.5 py-1 rounded lg:p-0 border border-slate-800 lg:border-none"><i class="hidden lg:inline fa-solid fa-chevron-right text-[8px] text-slate-500"></i> GPU</a></li>
+                <li><a href="#productos" onclick="filterByCategory('motherboards', event)" class="text-xs text-slate-300 hover:text-pink-400 transition cursor-pointer flex items-center gap-1.5 bg-slate-900/60 lg:bg-transparent px-2.5 py-1 rounded lg:p-0 border border-slate-800 lg:border-none"><i class="hidden lg:inline fa-solid fa-chevron-right text-[8px] text-slate-500"></i> Mobo</a></li>
+                <li><a href="#productos" onclick="filterByCategory('ram', event)" class="text-xs text-slate-300 hover:text-pink-400 transition cursor-pointer flex items-center gap-1.5 bg-slate-900/60 lg:bg-transparent px-2.5 py-1 rounded lg:p-0 border border-slate-800 lg:border-none"><i class="hidden lg:inline fa-solid fa-chevron-right text-[8px] text-slate-500"></i> RAM</a></li>
+                <li><a href="#productos" onclick="filterByCategory('procesadores', event)" class="text-xs text-slate-300 hover:text-pink-400 transition cursor-pointer flex items-center gap-1.5 bg-slate-900/60 lg:bg-transparent px-2.5 py-1 rounded lg:p-0 border border-slate-800 lg:border-none"><i class="hidden lg:inline fa-solid fa-chevron-right text-[8px] text-slate-500"></i> CPU</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="pt-4 border-t border-slate-800 hidden lg:block shrink-0">
+        <div class="text-[10px] font-mono text-slate-500 uppercase tracking-wider mb-1">Inventario Total</div>
+        <div class="text-xl font-black text-amber-400">200 <span class="text-xs text-slate-500 font-normal">productos</span></div>
+        <div class="text-[10px] text-slate-600 font-mono">10 páginas × 20 por página</div>
+    </div>
 </aside>
 
 <!-- Col 4-7: Cuadrícula de Productos (5 columnas interiores) -->
