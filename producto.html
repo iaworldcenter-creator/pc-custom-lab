@@ -28,7 +28,7 @@
         #chatbot-window { height: 520px; max-height: 85vh; }
 </style>
     <script src="https://cdn.tailwindcss.com">    function getCart() {
-        const stored = localStorage.getItem("shopping_cart");
+        const stored = sessionStorage.getItem("shopping_cart");
         return stored ? JSON.parse(stored) : [];
     }
     function saveCart(cart) {
@@ -96,7 +96,7 @@
             div.className = "flex items-center gap-3.5 bg-slate-950 border border-slate-800/80 rounded-2xl p-3 shadow-md";
             div.innerHTML = `
                 <div class="w-12 h-16 rounded-lg overflow-hidden bg-slate-900 border border-slate-800 shrink-0">
-                    <img src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-cover">
+                    <img loading="lazy" src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-cover">
                 </div>
                 <div class="flex-1 flex flex-col justify-between min-h-[50px]">
                     <div class="flex justify-between items-start gap-1">
@@ -121,7 +121,7 @@
         if (subtotalDisplay) subtotalDisplay.innerText = `$${subtotal.toFixed(2)} MXN`;
     }
 
-        localStorage.setItem("shopping_cart", JSON.stringify(cart));
+        sessionStorage.setItem("shopping_cart", JSON.stringify(cart));
         updateCartBadge();
     }
     function updateCartBadge() {
@@ -197,13 +197,20 @@
     <!-- Open Graph para Applebot, Siri, Spotlight, Facebook, Discord -->
     <meta property="og:title" content="Ofertas y Liquidaciones | Puesto de Revistas & Bazar" />
     <meta property="og:description" content="Encuentra las mejores ofertas y liquidaciones en revistas, dulces, cigarros y gadgets en nuestro puesto local. ¡Hasta 5% de cashback!" />
-    <meta property="og:image" content="https://iaworldcenter-creator.github.io/mi-puesto-bazar/assets/img/portadas/science_cover.jpg" />
+    <meta property="og:image" content="https://iaworldcenter-creator.github.io/mi-puesto-bazar/assets/img/portadas/science_cover.webp" />
     <meta property="og:url" content="https://iaworldcenter-creator.github.io/mi-puesto-bazar/producto.html" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Puesto de Revistas &amp; Bazar" />
 
 
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <style>
+        @media (max-width: 768px) {
+            video { display: none !important; }
+            .mobile-video-fallback { display: block !important; }
+        }
+    </style>
 </head>
 <body>
 <!-- FRANJA NEGRA DE NAVEGACIÓN SUPERIOR AMPLIADA -->
@@ -260,7 +267,7 @@
                     <span class="text-base font-black text-amber-400 tracking-wide uppercase leading-tight">Anti-Gravity Copilot</span>
                     <span class="text-[10px] font-bold text-slate-400 leading-none">Ofertas y Liquidaciones</span>
                 </div>
-                <img loading="lazy" decoding="async" src="assets/img/mascota_tigre.jpg" alt="Tigre Logo" class="w-11 h-11 rounded-full object-cover border-2 border-amber-500 shadow-md">
+                <img loading="lazy" decoding="async" src="assets/img/mascota_tigre.webp" alt="Tigre Logo" class="w-11 h-11 rounded-full object-cover border-2 border-amber-500 shadow-md">
             </div>
         </div>
 
@@ -361,7 +368,7 @@
         {
                 "sku": "000946",
                 "nombre": "Bocina Radio FM / Reproductor Link Bits RD017 (2\" LED / TWS)",
-                "imagen": "assets/img/bocinas/Gemini_Generated_Image_thbep9thbep9thbe.png",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_thbep9thbep9thbe.webp",
                 "precio": "150",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -377,7 +384,7 @@
         {
                 "sku": "LB02820",
                 "nombre": "Bocina Radio FM / Reproductor Link Bits RFR034 (3\" Con Asa / TWS)",
-                "imagen": "assets/img/bocinas/Gemini_Generated_Image_2ppzz92ppzz92ppz.png",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_2ppzz92ppzz92ppz.webp",
                 "precio": "152",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -393,7 +400,7 @@
         {
                 "sku": "003382",
                 "nombre": "Bocina Radio FM / Reproductor Link Bits RFR342 (3\" LED HD / TWS)",
-                "imagen": "assets/img/bocinas/Gemini_Generated_Image_ikl59pikl59pikl5.png",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_ikl59pikl59pikl5.webp",
                 "precio": "150",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -409,7 +416,7 @@
         {
                 "sku": "003161",
                 "nombre": "Bocina Radio FM / Reproductor Link Bits RFR368 (Doble 3\" x2 / Display / TWS)",
-                "imagen": "assets/img/bocinas/Gemini_Generated_Image_yxthc8yxthc8yxth.png",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_yxthc8yxthc8yxth.webp",
                 "precio": "179",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -425,7 +432,7 @@
         {
                 "sku": "003280",
                 "nombre": "Bocina Radio FM / Reproductor Link Bits RFR388 (3\" C/Micrófono / TWS)",
-                "imagen": "assets/img/bocinas/Gemini_Generated_Image_n0hl1sn0hl1sn0hl.png",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_n0hl1sn0hl1sn0hl.webp",
                 "precio": "168",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -441,7 +448,7 @@
         {
                 "sku": "003288",
                 "nombre": "Bocina Radio FM / Reproductor Link Bits RFR392 (4\" LED HD / TWS)",
-                "imagen": "assets/img/bocinas/Gemini_Generated_Image_c92fjrc92fjrc92f.png",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_c92fjrc92fjrc92f.webp",
                 "precio": "161",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -457,7 +464,7 @@
         {
                 "sku": "DUL-001",
                 "nombre": "Carlos V",
-                "imagen": "assets/img/mascota_tigre.jpg",
+                "imagen": "assets/img/mascota_tigre.webp",
                 "precio": "12",
                 "frecuencia": "quincenal",
                 "inventario_tipo": "primer mercado",
@@ -473,7 +480,7 @@
         {
                 "sku": "CIG-001",
                 "nombre": "Cigarro Suelto",
-                "imagen": "assets/img/mascota_tigre.jpg",
+                "imagen": "assets/img/mascota_tigre.webp",
                 "precio": "10",
                 "frecuencia": "semanal",
                 "inventario_tipo": "primer mercado",
@@ -489,7 +496,7 @@
         {
                 "sku": "COMP-002",
                 "nombre": "Computadora de Escritorio PC Custom Lab Intel i5 / 16GB RAM / 500GB SSD",
-                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "imagen": "assets/img/portadas/tech_cover.webp",
                 "precio": "8500",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -505,7 +512,7 @@
         {
                 "sku": "COMP-001",
                 "nombre": "Computadora Gamer PC Custom Lab Ryzen 7 / RTX 4070 / 32GB RAM / 1TB SSD",
-                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "imagen": "assets/img/portadas/tech_cover.webp",
                 "precio": "28500",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -521,7 +528,7 @@
         {
                 "sku": "REV-003",
                 "nombre": "Cosmopolitan",
-                "imagen": "assets/img/portadas/casa_cover.jpg",
+                "imagen": "assets/img/portadas/casa_cover.webp",
                 "precio": "75",
                 "frecuencia": "mensual",
                 "inventario_tipo": "primer mercado",
@@ -537,7 +544,7 @@
         {
                 "sku": "REV-008",
                 "nombre": "Cosmopolitan Moda",
-                "imagen": "assets/img/portadas/casa_cover.jpg",
+                "imagen": "assets/img/portadas/casa_cover.webp",
                 "precio": "75",
                 "frecuencia": "mensual",
                 "inventario_tipo": "primer mercado",
@@ -553,7 +560,7 @@
         {
                 "sku": "REV-013",
                 "nombre": "Crucigramas Clásicos",
-                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "imagen": "assets/img/portadas/tech_cover.webp",
                 "precio": "35",
                 "frecuencia": "semanal",
                 "inventario_tipo": "segundo mercado",
@@ -569,7 +576,7 @@
         {
                 "sku": "REV-005",
                 "nombre": "Esquire",
-                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "imagen": "assets/img/portadas/tech_cover.webp",
                 "precio": "90",
                 "frecuencia": "mensual",
                 "inventario_tipo": "primer mercado",
@@ -585,7 +592,7 @@
         {
                 "sku": "DUL-002",
                 "nombre": "Halls Menta",
-                "imagen": "assets/img/mascota_tigre.jpg",
+                "imagen": "assets/img/mascota_tigre.webp",
                 "precio": "10",
                 "frecuencia": "quincenal",
                 "inventario_tipo": "primer mercado",
@@ -601,7 +608,7 @@
         {
                 "sku": "REV-010",
                 "nombre": "Hogar y Jardín",
-                "imagen": "assets/img/portadas/casa_cover.jpg",
+                "imagen": "assets/img/portadas/casa_cover.webp",
                 "precio": "65",
                 "frecuencia": "mensual",
                 "inventario_tipo": "primer mercado",
@@ -617,7 +624,7 @@
         {
                 "sku": "REV-011",
                 "nombre": "Mascotas y Naturaleza",
-                "imagen": "assets/img/portadas/wildlife_cover.jpg",
+                "imagen": "assets/img/portadas/wildlife_cover.webp",
                 "precio": "60",
                 "frecuencia": "mensual",
                 "inventario_tipo": "primer mercado",
@@ -633,7 +640,7 @@
         {
                 "sku": "DUL-003",
                 "nombre": "Mazapán de la Rosa Grande",
-                "imagen": "assets/img/mascota_tigre.jpg",
+                "imagen": "assets/img/mascota_tigre.webp",
                 "precio": "8",
                 "frecuencia": "quincenal",
                 "inventario_tipo": "primer mercado",
@@ -649,7 +656,7 @@
         {
                 "sku": "REV-001",
                 "nombre": "Muy Interesante",
-                "imagen": "assets/img/portadas/science_cover.jpg",
+                "imagen": "assets/img/portadas/science_cover.webp",
                 "precio": "85",
                 "frecuencia": "mensual",
                 "inventario_tipo": "primer mercado",
@@ -665,7 +672,7 @@
         {
                 "sku": "REV-006",
                 "nombre": "Muy Interesante Ciencia",
-                "imagen": "assets/img/portadas/science_cover.jpg",
+                "imagen": "assets/img/portadas/science_cover.webp",
                 "precio": "85",
                 "frecuencia": "mensual",
                 "inventario_tipo": "primer mercado",
@@ -681,7 +688,7 @@
         {
                 "sku": "REV-002",
                 "nombre": "National Geographic",
-                "imagen": "assets/img/portadas/travel_cover.jpg",
+                "imagen": "assets/img/portadas/travel_cover.webp",
                 "precio": "95",
                 "frecuencia": "mensual",
                 "inventario_tipo": "primer mercado",
@@ -697,7 +704,7 @@
         {
                 "sku": "REV-007",
                 "nombre": "National Geographic Viajes",
-                "imagen": "assets/img/portadas/travel_cover.jpg",
+                "imagen": "assets/img/portadas/travel_cover.webp",
                 "precio": "95",
                 "frecuencia": "mensual",
                 "inventario_tipo": "primer mercado",
@@ -713,7 +720,7 @@
         {
                 "sku": "REV-015",
                 "nombre": "Revista Padres e Hijos 2016",
-                "imagen": "assets/img/portadas/wildlife_cover.jpg",
+                "imagen": "assets/img/portadas/wildlife_cover.webp",
                 "precio": "30",
                 "frecuencia": "mensual",
                 "inventario_tipo": "segundo mercado",
@@ -729,7 +736,7 @@
         {
                 "sku": "REV-012",
                 "nombre": "Sopas de Letras Gigante",
-                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "imagen": "assets/img/portadas/tech_cover.webp",
                 "precio": "40",
                 "frecuencia": "quincenal",
                 "inventario_tipo": "segundo mercado",
@@ -745,7 +752,7 @@
         {
                 "sku": "REV-014",
                 "nombre": "Sudoku Desafío",
-                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "imagen": "assets/img/portadas/tech_cover.webp",
                 "precio": "38",
                 "frecuencia": "quincenal",
                 "inventario_tipo": "segundo mercado",
@@ -761,7 +768,7 @@
         {
                 "sku": "REV-004",
                 "nombre": "Vanidades",
-                "imagen": "assets/img/portadas/casa_cover.jpg",
+                "imagen": "assets/img/portadas/casa_cover.webp",
                 "precio": "70",
                 "frecuencia": "quincenal",
                 "inventario_tipo": "primer mercado",
@@ -777,7 +784,7 @@
         {
                 "sku": "REV-009",
                 "nombre": "Vanidades Hogar",
-                "imagen": "assets/img/portadas/casa_cover.jpg",
+                "imagen": "assets/img/portadas/casa_cover.webp",
                 "precio": "70",
                 "frecuencia": "quincenal",
                 "inventario_tipo": "primer mercado",
@@ -862,7 +869,7 @@
                 </div>
                 <div class="flex gap-2 justify-center">
                     <img loading="lazy" decoding="async" src="${product.imagen}" class="w-12 h-16 object-contain rounded-md border-2 border-amber-500 cursor-pointer shadow-sm bg-slate-950/80 p-1">
-                    <img loading="lazy" decoding="async" src="assets/img/mascota_tigre.jpg" class="w-12 h-16 object-contain rounded-md border border-slate-800/80 cursor-pointer opacity-70 hover:opacity-100 transition bg-slate-950/80 p-1">
+                    <img loading="lazy" decoding="async" src="assets/img/mascota_tigre.webp" class="w-12 h-16 object-contain rounded-md border border-slate-800/80 cursor-pointer opacity-70 hover:opacity-100 transition bg-slate-950/80 p-1">
                 </div>
             </div>
 
@@ -998,7 +1005,7 @@
         renderProductDetail();
     });
     function getCart() {
-        const stored = localStorage.getItem("shopping_cart");
+        const stored = sessionStorage.getItem("shopping_cart");
         return stored ? JSON.parse(stored) : [];
     }
     function saveCart(cart) {
@@ -1066,7 +1073,7 @@
             div.className = "flex items-center gap-3.5 bg-slate-950 border border-slate-800/80 rounded-2xl p-3 shadow-md";
             div.innerHTML = `
                 <div class="w-12 h-16 rounded-lg overflow-hidden bg-slate-900 border border-slate-800 shrink-0">
-                    <img src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-cover">
+                    <img loading="lazy" src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-cover">
                 </div>
                 <div class="flex-1 flex flex-col justify-between min-h-[50px]">
                     <div class="flex justify-between items-start gap-1">
@@ -1091,7 +1098,7 @@
         if (subtotalDisplay) subtotalDisplay.innerText = `$${subtotal.toFixed(2)} MXN`;
     }
 
-        localStorage.setItem("shopping_cart", JSON.stringify(cart));
+        sessionStorage.setItem("shopping_cart", JSON.stringify(cart));
         updateCartBadge();
     }
     function updateCartBadge() {

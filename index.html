@@ -93,7 +93,7 @@
     <!-- Open Graph para Applebot, Siri, Spotlight, Facebook, Discord -->
     <meta property="og:title" content="PC Custom Lab | Ensamble y Venta de Computadoras Completas Guadalajara" />
     <meta property="og:description" content="Servicios de soporte computacional, gadgets, periféricos y accesorios personalizados." />
-    <meta property="og:image" content="https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.jpg" />
+    <meta property="og:image" content="https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp" />
     <meta property="og:url" content="https://iaworldcenter-creator.github.io/pc-custom-lab/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Puesto de Revistas &amp; Bazar" />
@@ -111,7 +111,14 @@
 
 
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="assets/img/slider_ia_human.jpg" as="image">
+    <link rel="preload" href="assets/img/slider_ia_human.webp" as="image">
+
+    <style>
+        @media (max-width: 768px) {
+            video { display: none !important; }
+            .mobile-video-fallback { display: block !important; }
+        }
+    </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden">
     <!-- BARRA LATERAL FLOTANTE DE REDES SOCIALES -->
@@ -148,7 +155,7 @@
         <div class="max-w-full mx-auto px-6 md:px-10 h-20 flex items-center justify-between gap-4">
             <!-- Izquierda: Logo y Nombre de Marca Limpios -->
             <div class="flex items-center space-x-3 shrink-0">
-                <img loading="lazy" decoding="async" src="assets/img/mascota_tigre.jpg" alt="Tigre Logo" class="w-11 h-11 rounded-full object-cover border border-blue-500 shadow-md shadow-blue-500/20">
+                <img loading="lazy" decoding="async" src="assets/img/mascota_tigre.webp" alt="Tigre Logo" class="w-11 h-11 rounded-full object-cover border border-blue-500 shadow-md shadow-blue-500/20">
                 <div>
                     <span class="text-xl sm:text-2xl font-black tracking-wider text-blue-500 block leading-tight">PC CUSTOM LAB</span>
                     <span class="text-[10px] sm:text-xs block text-slate-400 font-mono tracking-widest uppercase">Tech Service</span>
@@ -260,7 +267,7 @@
         <div id="hero-slider" class="relative w-full h-full">
             
             <!-- Slide 1 -->
-            <div class="hero-slide active absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000 ease-in-out z-10 bg-cover bg-center" style="background-image: url('assets/img/slider_ia_human.jpg');">
+            <div class="hero-slide active absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000 ease-in-out z-10 bg-cover bg-center" style="background-image: url('assets/img/slider_ia_human.webp');">
                 <div class="absolute inset-0 bg-slate-950/70"></div>
                 <div class="relative z-10 max-w-5xl mx-auto h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 pb-20">
                     <span class="px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
@@ -279,7 +286,7 @@
             </div>
 
             <!-- Slide 2 -->
-            <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 bg-cover bg-center" style="background-image: url('assets/img/slider_warehouse.jpg');">
+            <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 bg-cover bg-center" style="background-image: url('assets/img/slider_warehouse.webp');">
                 <div class="absolute inset-0 bg-slate-950/70"></div>
                 <div class="relative z-10 max-w-5xl mx-auto h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 pb-20">
                     <span class="px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
@@ -298,7 +305,7 @@
             </div>
 
             <!-- Slide 3 -->
-            <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 bg-cover bg-center" style="background-image: url('assets/img/slider_service.jpg');">
+            <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 bg-cover bg-center" style="background-image: url('assets/img/slider_service.webp');">
                 <div class="absolute inset-0 bg-slate-950/70"></div>
                 <div class="relative z-10 max-w-5xl mx-auto h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 pb-20">
                     <span class="px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
@@ -386,7 +393,7 @@
                         <!-- Card 1 -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_6jn16r6jn16r6jn1.png" alt="Tigre Atlas" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_6jn16r6jn16r6jn1.webp" alt="Tigre Atlas" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -398,7 +405,7 @@
                         <!-- Card 2 -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_om0amuom0amuom0a.png" alt="Tigre Mosaico" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_om0amuom0amuom0a.webp" alt="Tigre Mosaico" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -410,7 +417,7 @@
                         <!-- Card 3 -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_e3hrtre3hrtre3hr.png" alt="Tigre Corporativo" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_e3hrtre3hrtre3hr.webp" alt="Tigre Corporativo" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -422,7 +429,7 @@
                         <!-- Card 4 -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_9u70jp9u70jp9u70.png" alt="Tigre Mantenimiento" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_9u70jp9u70jp9u70.webp" alt="Tigre Mantenimiento" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -434,7 +441,7 @@
                         <!-- Card 5 -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_unei8unei8unei8u.png" alt="Tigre Software" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_unei8unei8unei8u.webp" alt="Tigre Software" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -446,7 +453,7 @@
                         <!-- Card 6 -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_l1kutll1kutll1ku.png" alt="Tigre Gamer" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_l1kutll1kutll1ku.webp" alt="Tigre Gamer" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -458,7 +465,7 @@
                         <!-- Card 7 -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_8eqpoz8eqpoz8eqp.png" alt="Tigre Gemini" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_8eqpoz8eqpoz8eqp.webp" alt="Tigre Gemini" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -471,7 +478,7 @@
                         <!-- Card 8 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="eager" src="assets/img/slider_ia_human.jpg" alt="Precisión de IA + Toque Humano" class="w-full h-full object-cover">
+                                <img loading="eager" src="assets/img/slider_ia_human.webp" alt="Precisión de IA + Toque Humano" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -482,7 +489,7 @@
                         <!-- Card 9 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/tigre_gamer.jpg" alt="Acumula Puntos en Cada Compra" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/tigre_gamer.webp" alt="Acumula Puntos en Cada Compra" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -493,7 +500,7 @@
                         <!-- Card 10 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/tigre_atlas.jpg" alt="Afíliate a Nuestra Tienda de Lealtad" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/tigre_atlas.webp" alt="Afíliate a Nuestra Tienda de Lealtad" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -504,7 +511,7 @@
                         <!-- Card 11 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/tigre_software.jpg" alt="Suscripción a Beneficios Exclusivos" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/tigre_software.webp" alt="Suscripción a Beneficios Exclusivos" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -515,7 +522,7 @@
                         <!-- Card 12 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/tigre_corporativo.jpg" alt="Soluciones Corporativas & Respaldo" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/tigre_corporativo.webp" alt="Soluciones Corporativas & Respaldo" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -526,7 +533,7 @@
                         <!-- Card 13 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/slider_service.jpg" alt="Mantenimiento Especializado" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/slider_service.webp" alt="Mantenimiento Especializado" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -537,7 +544,7 @@
                         <!-- Card 14 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/tigre_mantenimiento.jpg" alt="Servicio Técnico Certificado" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/tigre_mantenimiento.webp" alt="Servicio Técnico Certificado" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -548,7 +555,7 @@
                         <!-- Card 15 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/tigre_gemini.jpg" alt="Innovación y Potencia Visual" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/tigre_gemini.webp" alt="Innovación y Potencia Visual" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -559,7 +566,7 @@
                         <!-- Card 16 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/tigre_mosaico.jpg" alt="Ecosistema Completo de Refacciones" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/tigre_mosaico.webp" alt="Ecosistema Completo de Refacciones" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -575,7 +582,7 @@
                         <!-- Card 1 -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_6jn16r6jn16r6jn1.png" alt="Tigre Atlas" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_6jn16r6jn16r6jn1.webp" alt="Tigre Atlas" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -587,7 +594,7 @@
                         <!-- Card 2 -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_om0amuom0amuom0a.png" alt="Tigre Mosaico" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_om0amuom0amuom0a.webp" alt="Tigre Mosaico" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -599,7 +606,7 @@
                         <!-- Card 3 -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_e3hrtre3hrtre3hr.png" alt="Tigre Corporativo" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_e3hrtre3hrtre3hr.webp" alt="Tigre Corporativo" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -611,7 +618,7 @@
                         <!-- Card 4 -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_9u70jp9u70jp9u70.png" alt="Tigre Mantenimiento" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_9u70jp9u70jp9u70.webp" alt="Tigre Mantenimiento" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -623,7 +630,7 @@
                         <!-- Card 5 -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_unei8unei8unei8u.png" alt="Tigre Software" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_unei8unei8unei8u.webp" alt="Tigre Software" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -635,7 +642,7 @@
                         <!-- Card 6 -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_l1kutll1kutll1ku.png" alt="Tigre Gamer" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_l1kutll1kutll1ku.webp" alt="Tigre Gamer" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -647,7 +654,7 @@
                         <!-- Card 7 -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_8eqpoz8eqpoz8eqp.png" alt="Tigre Gemini" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/Gemini_Generated_Image_8eqpoz8eqpoz8eqp.webp" alt="Tigre Gemini" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -660,7 +667,7 @@
                         <!-- Card 8 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="eager" src="assets/img/slider_ia_human.jpg" alt="Precisión de IA + Toque Humano" class="w-full h-full object-cover">
+                                <img loading="eager" src="assets/img/slider_ia_human.webp" alt="Precisión de IA + Toque Humano" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -671,7 +678,7 @@
                         <!-- Card 9 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/tigre_gamer.jpg" alt="Acumula Puntos en Cada Compra" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/tigre_gamer.webp" alt="Acumula Puntos en Cada Compra" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -682,7 +689,7 @@
                         <!-- Card 10 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/tigre_atlas.jpg" alt="Afíliate a Nuestra Tienda de Lealtad" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/tigre_atlas.webp" alt="Afíliate a Nuestra Tienda de Lealtad" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -693,7 +700,7 @@
                         <!-- Card 11 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/tigre_software.jpg" alt="Suscripción a Beneficios Exclusivos" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/tigre_software.webp" alt="Suscripción a Beneficios Exclusivos" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -704,7 +711,7 @@
                         <!-- Card 12 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/tigre_corporativo.jpg" alt="Soluciones Corporativas & Respaldo" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/tigre_corporativo.webp" alt="Soluciones Corporativas & Respaldo" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -715,7 +722,7 @@
                         <!-- Card 13 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/slider_service.jpg" alt="Mantenimiento Especializado" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/slider_service.webp" alt="Mantenimiento Especializado" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -726,7 +733,7 @@
                         <!-- Card 14 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/tigre_mantenimiento.jpg" alt="Servicio Técnico Certificado" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/tigre_mantenimiento.webp" alt="Servicio Técnico Certificado" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -737,7 +744,7 @@
                         <!-- Card 15 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/tigre_gemini.jpg" alt="Innovación y Potencia Visual" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/tigre_gemini.webp" alt="Innovación y Potencia Visual" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -748,7 +755,7 @@
                         <!-- Card 16 (Added) -->
                         <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
                             <div class="w-full h-64 overflow-hidden bg-slate-950">
-                                <img loading="lazy" decoding="async" src="assets/img/tigre_mosaico.jpg" alt="Ecosistema Completo de Refacciones" class="w-full h-full object-cover">
+                                <img loading="lazy" decoding="async" src="assets/img/tigre_mosaico.webp" alt="Ecosistema Completo de Refacciones" class="w-full h-full object-cover">
                             </div>
                             <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center">
                                 <span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">
@@ -786,6 +793,7 @@
                 <div class="lg:col-span-6 relative rounded-3xl overflow-hidden border border-teal-500/30 shadow-2xl shadow-teal-950/20 bg-slate-900/40 p-1 flex items-center justify-center min-h-[300px] sm:min-h-[450px]">
                     <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-slate-950/40 z-10"></div>
                     <video class="w-full h-full object-cover rounded-2xl absolute inset-0" autoplay muted playsinline>
+            <img loading="lazy" src="assets/img/Female_technician_assembling_gam_202608041518.webp" class="absolute inset-0 w-full h-full object-cover mobile-video-fallback hidden" style="display: none;" alt="Mobile cover placeholder">
                         <source src="assets/img/Female_technician_assembling_gam_202608041518.mp4" type="video/mp4">
                         Tu navegador no soporta video HTML5.
                     </video>
@@ -1018,6 +1026,7 @@
                 <div class="lg:col-span-5 flex flex-col items-center text-center">
                     <div class="relative w-72 h-72 sm:w-[352px] sm:h-[352px] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950">
                         <video autoplay muted playsinline class="w-full h-full object-cover object-tiger-loyalty">
+            <img loading="lazy" src="assets/img/Tiger_walking_in_warehouse_202608072327.webp" class="absolute inset-0 w-full h-full object-cover mobile-video-fallback hidden" style="display: none;" alt="Mobile cover placeholder">
                             <source src="assets/img/Tiger_walking_in_warehouse_202608072327.mp4" type="video/mp4">
                         </video>
                         <div class="absolute bottom-0 inset-x-0 bg-slate-950/80 border-t border-slate-800 p-3 z-10">
@@ -1154,7 +1163,7 @@
                     <div class="space-y-6">
                         <!-- Fachada Oficial de PC Custom Lab -->
                         <div class="relative rounded-2xl overflow-hidden border border-teal-500/25 shadow-2xl bg-slate-950/80 group">
-                            <img loading="lazy" decoding="async" src="assets/img/fachada-oficial.png" alt="PC Custom Lab Fachada Oficial" class="w-full h-48 sm:h-56 object-cover transition duration-500 group-hover:scale-105">
+                            <img loading="lazy" decoding="async" src="assets/img/fachada-oficial.webp" alt="PC Custom Lab Fachada Oficial" class="w-full h-48 sm:h-56 object-cover transition duration-500 group-hover:scale-105">
                             <div class="absolute bottom-3 left-3 bg-slate-950/85 border border-slate-800 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-lg">
                                 <span class="text-[10px] text-teal-400 font-mono tracking-wider uppercase font-semibold">
                                     <i class="fa-solid fa-building text-teal-300 animate-pulse"></i> Fachada Principal Oficial
@@ -1244,7 +1253,7 @@
         {
                 "sku": "000946",
                 "nombre": "Bocina Radio FM / Reproductor Link Bits RD017 (2\" LED / TWS)",
-                "imagen": "assets/img/bocinas/Gemini_Generated_Image_thbep9thbep9thbe.png",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_thbep9thbep9thbe.webp",
                 "precio": "150",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -1260,7 +1269,7 @@
         {
                 "sku": "LB02820",
                 "nombre": "Bocina Radio FM / Reproductor Link Bits RFR034 (3\" Con Asa / TWS)",
-                "imagen": "assets/img/bocinas/Gemini_Generated_Image_2ppzz92ppzz92ppz.png",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_2ppzz92ppzz92ppz.webp",
                 "precio": "152",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -1276,7 +1285,7 @@
         {
                 "sku": "003382",
                 "nombre": "Bocina Radio FM / Reproductor Link Bits RFR342 (3\" LED HD / TWS)",
-                "imagen": "assets/img/bocinas/Gemini_Generated_Image_ikl59pikl59pikl5.png",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_ikl59pikl59pikl5.webp",
                 "precio": "150",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -1292,7 +1301,7 @@
         {
                 "sku": "003161",
                 "nombre": "Bocina Radio FM / Reproductor Link Bits RFR368 (Doble 3\" x2 / Display / TWS)",
-                "imagen": "assets/img/bocinas/Gemini_Generated_Image_yxthc8yxthc8yxth.png",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_yxthc8yxthc8yxth.webp",
                 "precio": "179",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -1308,7 +1317,7 @@
         {
                 "sku": "003280",
                 "nombre": "Bocina Radio FM / Reproductor Link Bits RFR388 (3\" C/Micrófono / TWS)",
-                "imagen": "assets/img/bocinas/Gemini_Generated_Image_n0hl1sn0hl1sn0hl.png",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_n0hl1sn0hl1sn0hl.webp",
                 "precio": "168",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -1324,7 +1333,7 @@
         {
                 "sku": "003288",
                 "nombre": "Bocina Radio FM / Reproductor Link Bits RFR392 (4\" LED HD / TWS)",
-                "imagen": "assets/img/bocinas/Gemini_Generated_Image_c92fjrc92fjrc92f.png",
+                "imagen": "assets/img/bocinas/Gemini_Generated_Image_c92fjrc92fjrc92f.webp",
                 "precio": "161",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -1340,7 +1349,7 @@
         {
                 "sku": "COMP-002",
                 "nombre": "Computadora de Escritorio PC Custom Lab Intel i5 / 16GB RAM / 500GB SSD",
-                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "imagen": "assets/img/portadas/tech_cover.webp",
                 "precio": "8500",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -1356,7 +1365,7 @@
         {
                 "sku": "COMP-001",
                 "nombre": "Computadora Gamer PC Custom Lab Ryzen 7 / RTX 4070 / 32GB RAM / 1TB SSD",
-                "imagen": "assets/img/portadas/tech_cover.jpg",
+                "imagen": "assets/img/portadas/tech_cover.webp",
                 "precio": "28500",
                 "frecuencia": "Inmediato",
                 "inventario_tipo": "Primer Mercado",
@@ -1373,11 +1382,11 @@
 
         // LÓGICA DE TIENDA Y CARRITO DE COMPRAS (UNIFICADO EN LOCALSTORAGE)
         function getCart() {
-            const stored = localStorage.getItem("shopping_cart");
+            const stored = sessionStorage.getItem("shopping_cart");
             return stored ? JSON.parse(stored) : [];
         }
         function saveCart(cart) {
-            localStorage.setItem("shopping_cart", JSON.stringify(cart));
+            sessionStorage.setItem("shopping_cart", JSON.stringify(cart));
             updateCartBadge();
         }
         function updateCartBadge() {
@@ -1463,7 +1472,7 @@
                 div.className = "flex items-center gap-3.5 bg-slate-950 border border-slate-800/80 rounded-2xl p-3 shadow-md";
                 div.innerHTML = `
                     <div class="w-12 h-16 rounded-lg overflow-hidden bg-slate-900 border border-slate-800 shrink-0">
-                        <img src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-contain p-1 bg-slate-950">
+                        <img loading="lazy" src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-contain p-1 bg-slate-950">
                     </div>
                     <div class="flex-1 flex flex-col justify-between min-h-[50px]">
                         <div class="flex justify-between items-start gap-1">
@@ -1523,7 +1532,7 @@
                     ${discountBadge}
                     <div class="flex flex-col gap-2">
                         <div class="w-full aspect-[4/3] overflow-hidden rounded-xl bg-white border border-slate-200 flex items-center justify-center p-1">
-                            <img src="${p.imagen}" alt="${p.nombre}" class="w-full h-full object-contain p-2 bg-white group-hover:scale-103 transition duration-300">
+                            <img loading="lazy" src="${p.imagen}" alt="${p.nombre}" class="w-full h-full object-contain p-2 bg-white group-hover:scale-103 transition duration-300">
                         </div>
                         <div class="flex flex-col gap-1 mt-1">
                             <div class="flex justify-between items-center gap-1">
