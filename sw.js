@@ -9,7 +9,8 @@ const ASSETS_TO_CACHE = [
   './assets/img/slider_service_thumb.webp?v=1.0.2',
   './assets/img/slider_ia_human.webp?v=1.0.2',
   './assets/img/slider_warehouse.webp?v=1.0.2',
-  './assets/img/slider_service.webp?v=1.0.2'
+  './assets/img/slider_service.webp?v=1.0.2',
+  './assets/img/fachada-oficial.webp?v=1.0.2'
 ];
 
 self.addEventListener('install', (event) => {
