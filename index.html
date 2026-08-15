@@ -424,6 +424,7 @@ header.relative { height: 600px; background-color: #020617; }
 <option value="refaccion">Refacción / Periférico</option>
 </select>
 <input aria-label="Buscar productos en el catálogo" class="flex-1 bg-slate-900 border border-blue-500/30 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-blue-400 focus:shadow-[0_0_10px_rgba(59,130,246,0.4)]" id="hero-search-input" onkeypress="ejecutarBusquedaHero(event)" placeholder="¿Qué producto, pieza o antojo buscas hoy? Escribe aquí..." type="text"/>
+<button type="button" onclick="startVoiceHeroSearch()" id="voice-hero-btn" class="text-slate-400 hover:text-amber-500 px-2 flex items-center justify-center transition mr-1" aria-label="Dictar búsqueda"><i class="fa-solid fa-microphone text-base"></i></button>
 <button aria-label="Buscar" class="bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-slate-955 text-slate-950 font-black px-6 py-2.5 rounded-xl transition text-xs whitespace-nowrap shadow-[0_0_12px_rgba(245,158,11,0.6)] hover:shadow-[0_0_18px_rgba(245,158,11,0.9)] hover:scale-102" onclick="buscarHero()">
 <i class="fa-solid fa-magnifying-glass mr-1"></i> Buscar
                     </button>
@@ -442,9 +443,12 @@ header.relative { height: 600px; background-color: #020617; }
 <h2 class="text-3xl sm:text-4xl font-black text-white mb-3">Boutique de Refacciones &amp; Periféricos</h2>
 <p class="text-slate-400 max-w-2xl mx-auto mb-8">Si solo buscas un componente individual (RAM, SSD, bocinas, cámaras, micro SD, monitores), utiliza nuestro buscador de oportunidades:</p>
 <div class="max-w-2xl mx-auto relative mb-12">
-<input aria-label="Buscar productos en el catálogo" class="w-full bg-slate-900 border-2 border-pink-500/50 rounded-2xl pl-12 pr-28 py-3.5 text-sm text-slate-100 focus:outline-none focus:border-pink-400 shadow-xl font-medium" id="boutique-search-input" onkeyup="filtrarRefacciones()" placeholder="Escribe lo que buscas: DDR3, DDR4, DDR5 8000, SSD M.2 PCIe 5.0, Monitor, Teclado, Cámara, USB..." type="text"/>
+<input aria-label="Buscar productos en el catálogo" class="w-full bg-slate-900 border-2 border-pink-500/50 rounded-2xl pl-12 pr-36 py-3.5 text-sm text-slate-100 focus:outline-none focus:border-pink-400 shadow-xl font-medium" id="boutique-search-input" onkeyup="filtrarRefacciones()" placeholder="Escribe lo que buscas: DDR3, DDR4, DDR5 8000, SSD M.2 PCIe 5.0, Monitor, Teclado, Cámara, USB..." type="text"/>
 <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-pink-400 text-lg"></i>
-<button aria-label="Buscar" class="absolute right-2 top-2 bg-pink-600 hover:bg-pink-500 text-white px-5 py-2 rounded-xl text-xs font-bold transition" onclick="filtrarRefacciones()">Buscar</button>
+<div class="absolute right-2 top-2 flex items-center gap-1.5">
+<button type="button" onclick="startVoiceBoutiqueSearch()" id="voice-boutique-btn" class="text-slate-400 hover:text-pink-400 p-2 flex items-center justify-center transition" aria-label="Dictar búsqueda"><i class="fa-solid fa-microphone text-base"></i></button>
+<button aria-label="Buscar" class="bg-pink-600 hover:bg-pink-500 text-white px-5 py-2 rounded-xl text-xs font-bold transition" onclick="filtrarRefacciones()">Buscar</button>
+</div>
 </div>
 </div>
 <!-- CARRUSEL DINÁMICO DE LA MASCOTA TIGRE -->
@@ -987,6 +991,7 @@ header.relative { height: 600px; background-color: #020617; }
 </div>
 <div class="p-3 bg-slate-950 border-t border-slate-800 flex gap-2">
 <input class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500" id="chat-input" onkeypress="handleKeyPress(event)" placeholder="Escribe aquí tu proyecto o duda..." type="text"/>
+<button type="button" onclick="startVoiceChat()" id="voice-chat-btn" class="text-slate-400 hover:text-blue-500 p-2.5 flex items-center justify-center transition" aria-label="Dictar mensaje"><i class="fa-solid fa-microphone text-base"></i></button>
 <button class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-3 rounded-xl text-sm transition" onclick="enviarMensaje()"><i class="fa-solid fa-paper-plane"></i></button>
 </div>
 </div>
@@ -1650,7 +1655,125 @@ function enviarMensaje() {
     const text = input.value.trim();
     if (!text) return;
     const messages = document.getElementById('chat-messages');
-    messages.innerHTML += `<div class="bg-blue-600 text-white p-3.5 rounded-2xl rounded-tr-none max-w-[85%] ml-auto font-medium shadow-md">${text}</div>`;
+    messages.innerHTML += `<div class="bg-blue-600 text-white p-3.5 rounded-2xl rounded-tr-none max-w-[85%] ml-auto font-medium shadow-md">${text}
+            
+// Módulos de dictado por voz (Speech Recognition API)
+function startVoiceHeroSearch() {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+        alert("El dictado por voz no es compatible con este navegador. Te recomendamos usar Google Chrome.");
+        return;
+    }
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'es-MX';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+    
+    const btn = document.getElementById("voice-hero-btn");
+    if (btn) btn.innerHTML = '<i class="fa-solid fa-circle-dot text-red-500 animate-ping"></i>';
+    
+    recognition.start();
+    
+    recognition.onresult = (event) => {
+        const speechResult = event.results[0][0].transcript;
+        const input = document.getElementById("hero-search-input");
+        if (input) {
+            input.value = speechResult;
+            buscarHero();
+        }
+    };
+    
+    recognition.onspeechend = () => {
+        recognition.stop();
+        if (btn) btn.innerHTML = '<i class="fa-solid fa-microphone"></i>';
+    };
+    
+    recognition.onerror = (event) => {
+        console.log("Error de voz:", event.error);
+        if (btn) btn.innerHTML = '<i class="fa-solid fa-microphone"></i>';
+        if (event.error === 'not-allowed') {
+            alert("Permiso de micrófono denegado. Habilita los permisos del micrófono en la barra de direcciones del navegador.");
+        }
+    };
+}
+
+function startVoiceBoutiqueSearch() {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+        alert("El dictado por voz no es compatible con este navegador. Te recomendamos usar Google Chrome.");
+        return;
+    }
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'es-MX';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+    
+    const btn = document.getElementById("voice-boutique-btn");
+    if (btn) btn.innerHTML = '<i class="fa-solid fa-circle-dot text-red-500 animate-ping"></i>';
+    
+    recognition.start();
+    
+    recognition.onresult = (event) => {
+        const speechResult = event.results[0][0].transcript;
+        const input = document.getElementById("boutique-search-input");
+        if (input) {
+            input.value = speechResult;
+            filtrarRefacciones();
+        }
+    };
+    
+    recognition.onspeechend = () => {
+        recognition.stop();
+        if (btn) btn.innerHTML = '<i class="fa-solid fa-microphone"></i>';
+    };
+    
+    recognition.onerror = (event) => {
+        console.log("Error de voz:", event.error);
+        if (btn) btn.innerHTML = '<i class="fa-solid fa-microphone"></i>';
+        if (event.error === 'not-allowed') {
+            alert("Permiso de micrófono denegado. Habilita los permisos del micrófono en la barra de direcciones del navegador.");
+        }
+    };
+}
+
+function startVoiceChat() {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+        alert("El dictado por voz no es compatible con este navegador. Te recomendamos usar Google Chrome.");
+        return;
+    }
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'es-MX';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+    
+    const btn = document.getElementById("voice-chat-btn");
+    if (btn) btn.innerHTML = '<i class="fa-solid fa-circle-dot text-red-500 animate-ping"></i>';
+    
+    recognition.start();
+    
+    recognition.onresult = (event) => {
+        const speechResult = event.results[0][0].transcript;
+        const input = document.getElementById("chat-input");
+        if (input) {
+            input.value = speechResult;
+        }
+    };
+    
+    recognition.onspeechend = () => {
+        recognition.stop();
+        if (btn) btn.innerHTML = '<i class="fa-solid fa-microphone"></i>';
+    };
+    
+    recognition.onerror = (event) => {
+        console.log("Error de voz:", event.error);
+        if (btn) btn.innerHTML = '<i class="fa-solid fa-microphone"></i>';
+        if (event.error === 'not-allowed') {
+            alert("Permiso de micrófono denegado. Habilita los permisos del micrófono en la barra de direcciones del navegador.");
+        }
+    };
+}
+</div>`;
     input.value = '';
     setTimeout(() => {
         messages.innerHTML += `<div class="bg-slate-800 text-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-700 leading-relaxed space-y-3">
