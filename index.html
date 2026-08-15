@@ -344,94 +344,101 @@ header.relative { height: 600px; background-color: #020617; }
 </div>
 </div>
 <!-- HERO SLIDER SECTION -->
-<header class="relative w-full h-[600px] sm:h-[650px] overflow-hidden border-b border-slate-800 bg-slate-950">
-<!-- Slides Container -->
-<div class="relative w-full h-full" id="hero-slider">
-<!-- Slide 1 -->
-<div class="hero-slide active absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000 ease-in-out z-10 bg-cover bg-center" style="background-image: url('assets/img/slider_ia_human.webp?v=1.0.2');">
-<div class="absolute inset-0 bg-slate-950/70"></div>
-<div class="relative z-10 max-w-5xl mx-auto h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 pb-20">
-<span class="px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
-                        El Futuro del Ensamble: Humano + IA
-                    </span>
-<h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
-                        Precisión de IA, <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Toque Humano</span>
-</h1>
-<p class="text-sm sm:text-lg text-slate-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
-                        Computadoras a la medida con la precisión de la inteligencia artificial y el toque personal que tú eliges.
-                    </p>
-<a class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-black px-8 py-3.5 rounded-xl shadow-xl transition text-sm flex items-center gap-2 border border-amber-500/50" href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/">
-<i class="fa-solid fa-store text-slate-900"></i> Puesto de Revistas &amp; Bazar NFL.GDL
-                    </a>
+<header class="w-full bg-slate-950 border-b border-slate-800 pt-3 pb-3 px-4 flex flex-col gap-2.5 relative z-[100] text-slate-100">
+<!-- Nivel 1: Izquierda (Sesi?n, Software) | Centro (Enlaces Ecosistema) | Derecha (Marca, Logo, Direcci?n) -->
+<div class="w-full flex flex-col xl:flex-row justify-between items-center gap-4 border-b border-slate-800/40 pb-3 px-2">
+<!-- IZQUIERDA: Sesi?n y Descarga (Carrito removido) -->
+<div class="flex items-center gap-4 shrink-0 flex-wrap justify-center">
+<div class="hidden flex items-center gap-1.5 text-[10px] cursor-pointer hover:underline text-slate-300 transition" id="header-delivery-prompt" onclick="const isPc = window.location.pathname.includes('pc-custom-lab'); window.location.href = isPc ? '../mi-puesto-bazar/checkout.html' : 'checkout.html'"></div>
+<a class="text-[10px] font-bold text-slate-300 hover:text-amber-400 transition" href="https://gemini.google.com" rel="noopener noreferrer" target="_blank">Inicia sesi?n Gemini</a>
+<span class="text-slate-800">|</span>
+<a class="bg-blue-600 hover:bg-blue-500 text-white font-black px-2.5 py-1 rounded-md transition text-[9px] uppercase tracking-wider" href="https://github.com/google-deepmind" rel="noopener noreferrer" target="_blank">Descargar Anti-Gravity</a>
+</div>
+<!-- CENTRO: Enlaces Ecosistema -->
+<div class="flex flex-wrap justify-center items-center gap-x-2.5 gap-y-1 text-[11px] font-semibold text-slate-400">
+<a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/kiosco-digital/">Kiosco Digital</a>
+<span class="text-slate-800">|</span>
+<a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/dulces-bazar/">Dulcer?a &amp; Botanas</a>
+<span class="text-slate-800">|</span>
+<a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/cigarros-bazar/">Cigarros &amp; Accesorios</a>
+<span class="text-slate-800">|</span>
+<a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/pc-custom-lab/">PC Custom Lab</a>
+<span class="text-slate-800">|</span>
+<a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/">Puesto de Revistas &amp; Bazar</a>
+</div>
+<!-- DERECHA: Marca, Logo y Direcci?n -->
+<div class="flex items-center gap-4 shrink-0 flex-wrap justify-center">
+<div class="flex items-center gap-2 bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 shadow-md">
+<i class="fa-solid fa-location-dot text-amber-500 text-xs animate-bounce"></i>
+<div class="text-[10px]" id="delivery-address-display">
+<span>? ?En d?nde quieres que llegue tu producto? </span>
+<button aria-label="Registrar direcci?n" class="text-amber-400 hover:text-amber-300 font-black underline ml-1 cursor-pointer" onclick="openDeliveryModal()">Registrar direcci?n</button>
 </div>
 </div>
-<!-- Slide 2 -->
-<div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 bg-cover bg-center" style="background-image: url('assets/img/slider_warehouse.webp?v=1.0.2');">
-<div class="absolute inset-0 bg-slate-950/70"></div>
-<div class="relative z-10 max-w-5xl mx-auto h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 pb-20">
-<span class="px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
-                        Tu Almacén Virtual: Catálogo Inmenso
-                    </span>
-<h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
-                        Miles de Piezas &amp; <span class="bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">Refacciones Sueltas</span>
-</h2>
-<p class="text-sm sm:text-lg text-slate-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
-                        Accede a componentes de oportunidad al mejor precio de mayoreo y entrega inmediata.
-                    </p>
-<a class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-3.5 rounded-xl shadow-xl transition text-sm flex items-center gap-2" href="#refacciones">
-<i class="fa-solid fa-tags"></i> Explorar Boutique de Refacciones
-                    </a>
+<div class="flex items-center gap-2.5">
+<div class="flex flex-col text-right">
+<span class="text-base font-black text-amber-400 tracking-wide uppercase leading-tight">Anti-Gravity Copilot</span>
+<span class="text-[10px] font-bold text-slate-400 leading-none">PC Custom Lab</span>
 </div>
-</div>
-<!-- Slide 3 -->
-<div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 bg-cover bg-center" style="background-image: url('assets/img/slider_service.webp?v=1.0.2');">
-<div class="absolute inset-0 bg-slate-950/70"></div>
-<div class="relative z-10 max-w-5xl mx-auto h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 pb-20">
-<span class="px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
-                        Soporte Modular &amp; Soluciones Tecnológicas
-                    </span>
-<h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
-                        No Solo Vendemos, <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent">Damos Solución Total</span>
-</h2>
-<p class="text-sm sm:text-lg text-slate-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
-                        Desde equipos Extreme hasta redes empresariales. Soporte técnico garantizado en Guadalajara.
-                    </p>
-<button aria-label="Solicitar Atención Directa" class="bg-purple-600 hover:bg-purple-500 text-white font-bold px-8 py-3.5 rounded-xl shadow-xl transition text-sm flex items-center gap-2" onclick="abrirChatbotConMensaje('Hola, me gustaría solicitar atención técnica directa para un proyecto o soporte.')">
-<i class="fa-solid fa-headset"></i> Solicitar Atención Directa
-                    </button>
+<img alt="Mascota del proyecto Anti-Gravity" class="w-11 h-11 rounded-full object-cover border-2 border-amber-500 shadow-md" decoding="async" loading="lazy" src="https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp"/>
 </div>
 </div>
 </div>
-<!-- Slider Controls -->
-<button aria-label="Botón de acción interactiva" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-slate-900/50 hover:bg-slate-900 text-slate-300 hover:text-white border border-slate-800 transition flex items-center justify-center" onclick="prevSlide()">
-<i class="fa-solid fa-chevron-left"></i>
-</button>
-<button aria-label="Botón de acción interactiva" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-slate-900/50 hover:bg-slate-900 text-slate-300 hover:text-white border border-slate-800 transition flex items-center justify-center" onclick="nextSlide()">
-<i class="fa-solid fa-chevron-right"></i>
-</button>
-<!-- Slider Pagination Dots -->
-<div class="absolute bottom-28 left-0 right-0 z-20 flex justify-center gap-2.5">
-<button aria-label="Botón de acción interactiva" class="hero-dot w-3 h-3 rounded-full bg-blue-500 transition-all duration-300" onclick="goToSlide(0)"></button>
-<button aria-label="Botón de acción interactiva" class="hero-dot w-3 h-3 rounded-full bg-slate-600 transition-all duration-300" onclick="goToSlide(1)"></button>
-<button aria-label="Botón de acción interactiva" class="hero-dot w-3 h-3 rounded-full bg-slate-600 transition-all duration-300" onclick="goToSlide(2)"></button>
+<!-- Nivel 2: Barra de B?squeda Estilizada y Carrito Unificado -->
+<div class="w-full max-w-4xl mx-auto flex flex-row items-center gap-3 mt-1.5 px-4 md:px-0">
+    <div class="flex-1">
+        <form class="flex items-center gap-2 p-1.5 rounded-xl bg-white w-full border border-slate-800/40 shadow-sm" onsubmit="handleSearchSubmit(event);" role="search">
+            <label class="sr-only" for="siteSearch">?Qu? deseas buscar hoy?</label>
+            <input aria-label="Buscar productos en el cat?logo" autocomplete="off" class="flex-1 bg-transparent border-0 outline-none text-slate-900 font-bold text-xs px-2.5 placeholder-slate-400" id="siteSearch" name="q" placeholder="?Qu? deseas buscar hoy? Escribe aqu?..." type="text"/>
+            <button aria-label="Buscar" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-4 py-2 rounded-lg text-xs transition shadow-sm hover:scale-103 shrink-0" type="submit">Buscar</button>
+        </form>
+    </div>
+    <div class="shrink-0">
+        <button onclick="toggleCartDrawer()" class="flex items-center justify-center gap-3 bg-slate-900 hover:bg-slate-850 text-white border border-slate-800 rounded-xl px-4 py-2 shadow-lg transition active:scale-95 group cursor-pointer h-[38px] min-w-[125px]" id="header-cart-button" aria-label="Ver carrito">
+            <div class="relative">
+                <i class="fa-solid fa-cart-shopping text-base text-amber-500 group-hover:text-amber-400 transition"></i>
+                <span class="absolute -top-2.5 -right-2.5 bg-amber-500 text-slate-950 text-[10px] font-black rounded-full px-1.5 py-0.2 min-w-[16px] text-center shadow-md shadow-amber-500/20" id="cart-badge-count">0</span>
+            </div>
+            <span class="text-xs font-extrabold tracking-wide uppercase text-slate-100 group-hover:text-white transition hidden sm:inline">Mi Carrito</span>
+        </button>
+    </div>
 </div>
-<!-- Fixed Search Bar Overlapping Slider Bottom -->
-<div class="absolute bottom-6 left-0 right-0 z-20 px-4 sm:px-6">
-<div class="max-w-3xl mx-auto bg-slate-950/90 border-2 border-blue-500 rounded-2xl p-4 shadow-[0_0_25px_rgba(59,130,246,0.7)]">
-<div class="flex flex-col sm:flex-row gap-3">
-<select class="bg-slate-900 border border-blue-500/30 text-slate-200 rounded-xl px-4 py-2.5 text-xs font-bold focus:outline-none focus:border-blue-400" aria-label="Filtrar por tipo de búsqueda" id="tipo-busqueda">
-<option selected="" value="pc">Computadora Completa</option>
-<option value="refaccion">Refacción / Periférico</option>
-</select>
-<input aria-label="Buscar productos en el catálogo" class="flex-1 bg-slate-900 border border-blue-500/30 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-blue-400 focus:shadow-[0_0_10px_rgba(59,130,246,0.4)]" id="hero-search-input" onkeypress="ejecutarBusquedaHero(event)" placeholder="¿Qué producto, pieza o antojo buscas hoy? Escribe aquí..." type="text"/>
-<button type="button" onclick="startVoiceHeroSearch()" id="voice-hero-btn" class="text-slate-400 hover:text-amber-500 px-2 flex items-center justify-center transition mr-1" aria-label="Dictar búsqueda"><i class="fa-solid fa-microphone text-base"></i></button>
-<button aria-label="Buscar" class="bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-slate-955 text-slate-950 font-black px-6 py-2.5 rounded-xl transition text-xs whitespace-nowrap shadow-[0_0_12px_rgba(245,158,11,0.6)] hover:shadow-[0_0_18px_rgba(245,158,11,0.9)] hover:scale-102" onclick="buscarHero()">
-<i class="fa-solid fa-magnifying-glass mr-1"></i> Buscar
-                    </button>
-</div>
-</div>
+<!-- Nivel 3: Atajos de Categor?a/Departamentos (Sub-Navegaci?n) -->
+<div class="w-full flex justify-center items-center gap-4 text-[10px] font-bold text-slate-400 border-t border-slate-900 pt-2 mt-1 flex-wrap">
+<span class="text-slate-500">Categor?as:</span>
+<button aria-label="? Electr?nica" class="hover:text-amber-400 transition" onclick="changePage(1, document.querySelectorAll('.pagination-btn')[0]);">? Electr?nica &amp; Gadgets</button>
+<span class="text-slate-800">?</span>
+<button aria-label="? Cables" class="hover:text-amber-400 transition" onclick="changePage(2, document.querySelectorAll('.pagination-btn')[1]);">? Cables y Accesorios</button>
+<span class="text-slate-800">?</span>
+<button aria-label="? Audio" class="hover:text-amber-400 transition" onclick="changePage(3, document.querySelectorAll('.pagination-btn')[2]);">? Audio y Bocinas</button>
 </div>
 </header>
+
+<!-- CART DRAWER (Slide-in right to left) -->
+<div class="fixed inset-0 z-[250] hidden" id="cartDrawer">
+    <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" onclick="closeCartDrawer()"></div>
+    <div class="absolute right-0 top-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col justify-between text-slate-100 p-6 transition-transform duration-300">
+        <div>
+            <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-6">
+                <h3 class="text-base font-black text-white flex items-center gap-2"><i class="fa-solid fa-cart-shopping text-amber-500"></i> Tu Carrito</h3>
+                <button class="text-2xl text-slate-400 hover:text-white cursor-pointer" onclick="closeCartDrawer()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] pr-1" id="drawer-cart-items"></div>
+        </div>
+        <div class="border-t border-slate-800 pt-6 mt-6 flex flex-col gap-4">
+            <div class="flex justify-between items-center">
+                <span class="text-xs font-mono text-slate-400 uppercase font-bold">Subtotal:</span>
+                <span class="text-lg font-black text-white" id="drawer-subtotal">$0.00 MXN</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <button class="bg-slate-850 hover:bg-slate-800 text-slate-300 border border-slate-800 hover:text-white font-bold py-3 rounded-xl text-xs transition" onclick="closeCartDrawer()">Seguir comprando</button>
+                <a class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 rounded-xl text-xs text-center transition flex items-center justify-center gap-1.5" href="checkout.html" id="drawer-checkout-btn">Comprar ahora <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <main id="main-content">
 
 <!-- BOUTIQUE DE REFACCIONES & PERIFÉRICOS SUELTOS -->
@@ -1944,34 +1951,8 @@ import { listen } from 'https://unpkg.com/quicklink@2.3.0/dist/quicklink.mjs';
 window.addEventListener('load', () => { listen({ priority: true }); });
     </script>
 <!-- CARRITO SLIDE-OVER DRAWER -->
-<div class="fixed inset-0 z-[250] hidden" id="cartDrawer">
-<div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" onclick="closeCartDrawer()"></div>
-<div class="absolute right-0 top-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col justify-between text-slate-100 p-6 transition-transform duration-300">
-<div>
-<div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-6">
-<h3 class="text-base font-black text-white flex items-center gap-2"><i class="fa-solid fa-cart-shopping text-amber-500"></i> Tu Carrito</h3>
-<button class="text-2xl text-slate-400 hover:text-white cursor-pointer" onclick="closeCartDrawer()"><i class="fa-solid fa-xmark"></i></button>
-</div>
-<div class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] pr-1" id="drawer-cart-items"></div>
-</div>
-<div class="border-t border-slate-800 pt-6 mt-6 flex flex-col gap-4">
-<div class="flex justify-between items-center">
-<span class="text-xs font-mono text-slate-400 uppercase font-bold">Subtotal:</span>
-<span class="text-lg font-black text-white" id="drawer-subtotal">$0.00 MXN</span>
-</div>
-<div class="grid grid-cols-2 gap-3">
-<button class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-3 rounded-xl text-xs transition" onclick="closeCartDrawer()">Seguir Comprando</button>
-<a class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 rounded-xl text-xs text-center transition flex items-center justify-center gap-1.5" href="checkout.html">Proceder al Pago <i class="fa-solid fa-arrow-right"></i></a>
-</div>
-</div>
-</div>
-</div>
+
 <!-- BOTÓN DE CARRITO FLOTANTE -->
-<div class="fixed bottom-6 right-24 z-[9990] text-white" id="floating-cart-button">
-<button class="relative bg-slate-950 border border-blue-500/40 hover:border-blue-400 text-white w-12 h-12 rounded-full shadow-lg shadow-blue-500/20 flex items-center justify-center transition active:scale-95 cursor-pointer hover:scale-105 group" onclick="window.location.href='checkout.html'">
-<i class="fa-solid fa-cart-shopping text-base group-hover:text-amber-400 transition"></i>
-<span class="absolute -top-1.5 -right-1.5 bg-amber-500 text-slate-950 text-[9px] font-black rounded-full px-1.5 py-0.2 min-w-[15px] text-center" id="floating-cart-badge">0</span>
-</button>
-</div>
+
 </body>
 </html>

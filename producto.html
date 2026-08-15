@@ -229,85 +229,100 @@
 <!-- FRANJA NEGRA DE NAVEGACIÓN SUPERIOR AMPLIADA -->
 <!-- FRANJA NEGRA DE NAVEGACIÓN SUPERIOR AMPLIADA (ECOSISTEMA & AI CO-PILOT) -->
 <header class="w-full bg-slate-950 border-b border-slate-800 pt-3 pb-3 px-4 flex flex-col gap-2.5 relative z-[100] text-slate-100">
-<!-- Nivel 1: Izquierda (Carrito, Sesión, Software) | Centro (Enlaces Ecosistema) | Derecha (Marca, Logo, Dirección) -->
+<!-- Nivel 1: Izquierda (Sesi?n, Software) | Centro (Enlaces Ecosistema) | Derecha (Marca, Logo, Direcci?n) -->
 <div class="w-full flex flex-col xl:flex-row justify-between items-center gap-4 border-b border-slate-800/40 pb-3 px-2">
-<!-- IZQUIERDA: Carrito, Sesión y Descarga -->
+<!-- IZQUIERDA: Sesi?n y Descarga (Carrito removido) -->
 <div class="flex items-center gap-4 shrink-0 flex-wrap justify-center">
-<!-- Letrero dinámico de Domicilio para estimular el registro -->
 <div class="hidden flex items-center gap-1.5 text-[10px] cursor-pointer hover:underline text-slate-300 transition" id="header-delivery-prompt" onclick="const isPc = window.location.pathname.includes('pc-custom-lab'); window.location.href = isPc ? '../mi-puesto-bazar/checkout.html' : 'checkout.html'"></div>
-<!-- Carrito de Compras Estilo Amazon -->
-<div class="flex items-center gap-2 cursor-pointer group" onclick="openCartDrawer()">
-<div class="relative">
-<i class="fa-solid fa-cart-shopping text-slate-100 text-lg hover:text-amber-400 transition"></i>
-<span class="absolute -top-2 -right-2 bg-amber-500 text-slate-950 text-[9px] font-black rounded-full px-1.5 py-0.2 min-w-[15px] text-center" id="cart-badge-count">0</span>
-</div>
-<span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition">Carrito</span>
-</div>
-<span class="text-slate-100">|</span>
-<a class="text-[10px] font-bold text-slate-300 hover:text-amber-400 transition" href="https://gemini.google.com" rel="noopener noreferrer" target="_blank">Inicia sesión Gemini</a>
-<span class="text-slate-100">|</span>
+<a class="text-[10px] font-bold text-slate-300 hover:text-amber-400 transition" href="https://gemini.google.com" rel="noopener noreferrer" target="_blank">Inicia sesi?n Gemini</a>
+<span class="text-slate-800">|</span>
 <a class="bg-blue-600 hover:bg-blue-500 text-white font-black px-2.5 py-1 rounded-md transition text-[9px] uppercase tracking-wider" href="https://github.com/google-deepmind" rel="noopener noreferrer" target="_blank">Descargar Anti-Gravity</a>
 </div>
 <!-- CENTRO: Enlaces Ecosistema -->
 <div class="flex flex-wrap justify-center items-center gap-x-2.5 gap-y-1 text-[11px] font-semibold text-slate-400">
 <a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/kiosco-digital/">Kiosco Digital</a>
-<span class="text-slate-100">|</span>
-<a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/dulces-bazar/">Dulcería &amp; Botanas</a>
-<span class="text-slate-100">|</span>
+<span class="text-slate-800">|</span>
+<a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/dulces-bazar/">Dulcer?a &amp; Botanas</a>
+<span class="text-slate-800">|</span>
 <a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/cigarros-bazar/">Cigarros &amp; Accesorios</a>
-<span class="text-slate-100">|</span>
+<span class="text-slate-800">|</span>
 <a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/pc-custom-lab/">PC Custom Lab</a>
-<span class="text-slate-100">|</span>
+<span class="text-slate-800">|</span>
 <a class="hover:text-amber-400 transition" href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/">Puesto de Revistas &amp; Bazar</a>
 </div>
-<!-- DERECHA: Marca, Logo y Dirección -->
+<!-- DERECHA: Marca, Logo y Direcci?n -->
 <div class="flex items-center gap-4 shrink-0 flex-wrap justify-center">
-<!-- Dirección de Entrega -->
 <div class="flex items-center gap-2 bg-slate-900 border border-slate-800 rounded-xl px-3 py-1.5 shadow-md">
 <i class="fa-solid fa-location-dot text-amber-500 text-xs animate-bounce"></i>
 <div class="text-[10px]" id="delivery-address-display">
-<span>📍 ¿En dónde quieres que llegue tu producto? </span>
-<button aria-label="Registrar dirección" class="text-amber-400 hover:text-amber-300 font-black underline ml-1 cursor-pointer" onclick="openDeliveryModal()">Registrar dirección</button>
+<span>? ?En d?nde quieres que llegue tu producto? </span>
+<button aria-label="Registrar direcci?n" class="text-amber-400 hover:text-amber-300 font-black underline ml-1 cursor-pointer" onclick="openDeliveryModal()">Registrar direcci?n</button>
 </div>
 </div>
-<!-- Logo y Marca -->
 <div class="flex items-center gap-2.5">
 <div class="flex flex-col text-right">
 <span class="text-base font-black text-amber-400 tracking-wide uppercase leading-tight">Anti-Gravity Copilot</span>
-<span class="text-[10px] font-bold text-slate-400 leading-none">Ofertas y Liquidaciones</span>
+<span class="text-[10px] font-bold text-slate-400 leading-none">PC Custom Lab</span>
 </div>
-<img alt="Mascota oficial Tigre inteligente de PC Custom Lab en Guadalajara" class="w-11 h-11 rounded-full object-cover border-2 border-amber-500 shadow-md" decoding="async" loading="lazy" src="assets/img/mascota_tigre.webp"/>
+<img alt="Mascota del proyecto Anti-Gravity" class="w-11 h-11 rounded-full object-cover border-2 border-amber-500 shadow-md" decoding="async" loading="lazy" src="https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp"/>
 </div>
 </div>
 </div>
-<!-- Nivel 2: Barra de Búsqueda Centrada de 6 Columnas -->
-<div class="w-full grid grid-cols-1 md:grid-cols-8 gap-0 mt-1">
-<div class="hidden md:block col-span-1"></div>
-<div class="col-span-1 md:col-span-6 px-4 md:px-0">
-<form class="flex items-center gap-2 p-2.5 rounded-2xl bg-slate-950/80 w-full neon-search-frame" onsubmit="return false;" role="search">
-<label class="sr-only" for="siteSearch">¿Qué deseas buscar hoy?</label>
-<input aria-label="Buscar productos en el catálogo" autocomplete="off" class="flex-1 bg-transparent border-0 outline-none text-white font-bold text-sm px-3 placeholder-slate-400" id="siteSearch" name="q" placeholder="¿Qué deseas buscar hoy? Escribe aquí..." type="text"/>
-<button aria-label="Buscar" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-6 py-3 rounded-xl text-xs transition shadow-md hover:scale-103 shrink-0" type="submit">Buscar</button>
-</form>
+<!-- Nivel 2: Barra de B?squeda Estilizada y Carrito Unificado -->
+<div class="w-full max-w-4xl mx-auto flex flex-row items-center gap-3 mt-1.5 px-4 md:px-0">
+    <div class="flex-1">
+        <form class="flex items-center gap-2 p-1.5 rounded-xl bg-white w-full border border-slate-800/40 shadow-sm" onsubmit="handleSearchSubmit(event);" role="search">
+            <label class="sr-only" for="siteSearch">?Qu? deseas buscar hoy?</label>
+            <input aria-label="Buscar productos en el cat?logo" autocomplete="off" class="flex-1 bg-transparent border-0 outline-none text-slate-900 font-bold text-xs px-2.5 placeholder-slate-400" id="siteSearch" name="q" placeholder="?Qu? deseas buscar hoy? Escribe aqu?..." type="text"/>
+            <button aria-label="Buscar" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-4 py-2 rounded-lg text-xs transition shadow-sm hover:scale-103 shrink-0" type="submit">Buscar</button>
+        </form>
+    </div>
+    <div class="shrink-0">
+        <button onclick="toggleCartDrawer()" class="flex items-center justify-center gap-3 bg-slate-900 hover:bg-slate-850 text-white border border-slate-800 rounded-xl px-4 py-2 shadow-lg transition active:scale-95 group cursor-pointer h-[38px] min-w-[125px]" id="header-cart-button" aria-label="Ver carrito">
+            <div class="relative">
+                <i class="fa-solid fa-cart-shopping text-base text-amber-500 group-hover:text-amber-400 transition"></i>
+                <span class="absolute -top-2.5 -right-2.5 bg-amber-500 text-slate-950 text-[10px] font-black rounded-full px-1.5 py-0.2 min-w-[16px] text-center shadow-md shadow-amber-500/20" id="cart-badge-count">0</span>
+            </div>
+            <span class="text-xs font-extrabold tracking-wide uppercase text-slate-100 group-hover:text-white transition hidden sm:inline">Mi Carrito</span>
+        </button>
+    </div>
 </div>
-<div class="hidden md:block col-span-1"></div>
-</div>
-<!-- Nivel 3: Atajos de Categoría/Departamentos (Sub-Navegación) -->
+<!-- Nivel 3: Atajos de Categor?a/Departamentos (Sub-Navegaci?n) -->
 <div class="w-full flex justify-center items-center gap-4 text-[10px] font-bold text-slate-400 border-t border-slate-900 pt-2 mt-1 flex-wrap">
-<span class="text-slate-400">Departamentos:</span>
-<button aria-label="📖 Revistas Físicas" class="hover:text-amber-400 transition" onclick="window.location.href='index.html?cat=Primer'">📖 Revistas Físicas</button>
-<span class="text-slate-100">•</span>
-<button aria-label="📱 Digitales" class="hover:text-amber-400 transition" onclick="window.location.href='index.html'">📱 Digitales</button>
-<span class="text-slate-100">•</span>
-<button aria-label="🍬 Dulces" class="hover:text-amber-400 transition" onclick="window.location.href='index.html#featured-grid-container'">🍬 Dulces</button>
-<span class="text-slate-100">•</span>
-<button aria-label="🚬 Cigarros" class="hover:text-amber-400 transition" onclick="window.location.href='index.html#featured-grid-container'">🚬 Cigarros</button>
-<span class="text-slate-100">•</span>
-<button aria-label="🔌 Cables &amp; Gadgets" class="hover:text-amber-400 transition" onclick="window.location.href='index.html#featured-grid-container'">🔌 Cables &amp; Gadgets</button>
-<span class="text-slate-100">•</span>
-<button aria-label="📦 Segundo Mercado" class="hover:text-amber-400 transition" onclick="window.location.href='index.html?cat=Segundo'">📦 Segundo Mercado</button>
+<span class="text-slate-500">Categor?as:</span>
+<button aria-label="? Electr?nica" class="hover:text-amber-400 transition" onclick="changePage(1, document.querySelectorAll('.pagination-btn')[0]);">? Electr?nica &amp; Gadgets</button>
+<span class="text-slate-800">?</span>
+<button aria-label="? Cables" class="hover:text-amber-400 transition" onclick="changePage(2, document.querySelectorAll('.pagination-btn')[1]);">? Cables y Accesorios</button>
+<span class="text-slate-800">?</span>
+<button aria-label="? Audio" class="hover:text-amber-400 transition" onclick="changePage(3, document.querySelectorAll('.pagination-btn')[2]);">? Audio y Bocinas</button>
 </div>
 </header>
+
+<!-- CART DRAWER (Slide-in right to left) -->
+<div class="fixed inset-0 z-[250] hidden" id="cartDrawer">
+    <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" onclick="closeCartDrawer()"></div>
+    <div class="absolute right-0 top-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col justify-between text-slate-100 p-6 transition-transform duration-300">
+        <div>
+            <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-6">
+                <h3 class="text-base font-black text-white flex items-center gap-2"><i class="fa-solid fa-cart-shopping text-amber-500"></i> Tu Carrito</h3>
+                <button class="text-2xl text-slate-400 hover:text-white cursor-pointer" onclick="closeCartDrawer()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] pr-1" id="drawer-cart-items"></div>
+        </div>
+        <div class="border-t border-slate-800 pt-6 mt-6 flex flex-col gap-4">
+            <div class="flex justify-between items-center">
+                <span class="text-xs font-mono text-slate-400 uppercase font-bold">Subtotal:</span>
+                <span class="text-lg font-black text-white" id="drawer-subtotal">$0.00 MXN</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <button class="bg-slate-850 hover:bg-slate-800 text-slate-300 border border-slate-800 hover:text-white font-bold py-3 rounded-xl text-xs transition" onclick="closeCartDrawer()">Seguir comprando</button>
+                <a class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 rounded-xl text-xs text-center transition flex items-center justify-center gap-1.5" href="checkout.html" id="drawer-checkout-btn">Comprar ahora <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- MODAL DE REGISTRO DE DIRECCIÓN (GLASSMORPHISM) -->
 <div class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-slate-950/80 backdrop-blur-md px-4" id="deliveryModal">
 <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative overflow-hidden text-slate-100">
@@ -1257,48 +1272,8 @@
         });
     </script>
 <!-- CARRITO SLIDE-OVER DRAWER (GLASSMORPHISM) -->
-<div class="fixed inset-0 z-[250] hidden" id="cartDrawer">
-<!-- Backdrop -->
-<div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" onclick="closeCartDrawer()"></div>
-<!-- Drawer Content -->
-<div class="absolute right-0 top-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col justify-between text-slate-100 p-6 transition-transform duration-300">
-<div>
-<div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-6">
-<h3 class="text-base font-black text-white flex items-center gap-2">
-<i class="fa-solid fa-cart-shopping text-amber-500"></i> Tu Carrito de Compra
-                </h3>
-<button aria-label="Botón de acción interactiva" class="text-2xl text-slate-400 hover:text-white cursor-pointer" onclick="closeCartDrawer()">
-<i class="fa-solid fa-xmark"></i>
-</button>
-</div>
-<!-- Cart Items List Container -->
-<div class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] pr-1" id="drawer-cart-items">
-<!-- Cart items will be loaded dynamically -->
-</div>
-</div>
-<!-- Drawer Footer -->
-<div class="border-t border-slate-800 pt-6 mt-6 flex flex-col gap-4">
-<div class="flex justify-between items-center">
-<span class="text-xs font-mono text-slate-400 uppercase font-bold">Subtotal:</span>
-<span class="text-lg font-black text-white" id="drawer-subtotal">$0.00 MXN</span>
-</div>
-<div class="grid grid-cols-2 gap-3">
-<button aria-label="Seguir Comprando" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-3 rounded-xl text-xs transition" onclick="closeCartDrawer()">
-                    Seguir Comprando
-                </button>
-<a class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 rounded-xl text-xs text-center transition flex items-center justify-center gap-1.5" href="checkout.html">
-                    Proceder al Pago <i class="fa-solid fa-arrow-right"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
+
 <!-- BOTÓN DE CARRITO FLOTANTE FIJO (PC CUSTOM LAB STYLE) -->
-<div class="fixed bottom-6 right-24 z-[9990] text-white" id="floating-cart-button">
-<button aria-label="0" class="relative bg-slate-950 border border-blue-500/40 hover:border-blue-400 text-white w-12 h-12 rounded-full shadow-lg shadow-blue-500/20 flex items-center justify-center transition active:scale-95 cursor-pointer hover:scale-105 group" onclick="window.location.href='checkout.html'">
-<i class="fa-solid fa-cart-shopping text-base group-hover:text-amber-400 transition"></i>
-<span class="absolute -top-1.5 -right-1.5 bg-amber-500 text-slate-950 text-[9px] font-black rounded-full px-1.5 py-0.2 min-w-[15px] text-center" id="floating-cart-badge">0</span>
-</button>
-</div>
+
 </body>
 </html>
