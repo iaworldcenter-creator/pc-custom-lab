@@ -1,18 +1,18 @@
-const CACHE_NAME = 'pc-custom-lab-cache-v1.0.8';
+const CACHE_NAME = 'pc-custom-lab-cache-v1.0.9';
 const ASSETS_TO_CACHE = [
   './index.html',
   './producto.html',
   './checkout.html',
-  './assets/css/tailwind-built.css?v=1.0.8',
-  './assets/css/fontawesome-all.min.css?v=1.0.8',
-  './assets/img/mascota_tigre_thumb.webp?v=1.0.8',
-  './assets/img/slider_ia_human_thumb.webp?v=1.0.8',
-  './assets/img/slider_warehouse_thumb.webp?v=1.0.8',
-  './assets/img/slider_service_thumb.webp?v=1.0.8',
-  './assets/img/slider_ia_human.webp?v=1.0.8',
-  './assets/img/slider_warehouse.webp?v=1.0.8',
-  './assets/img/slider_service.webp?v=1.0.8',
-  './assets/img/fachada-oficial.webp?v=1.0.8'
+  './assets/css/tailwind-built.css?v=1.0.9',
+  './assets/css/fontawesome-all.min.css?v=1.0.9',
+  './assets/img/mascota_tigre_thumb.webp?v=1.0.9',
+  './assets/img/slider_ia_human_thumb.webp?v=1.0.9',
+  './assets/img/slider_warehouse_thumb.webp?v=1.0.9',
+  './assets/img/slider_service_thumb.webp?v=1.0.9',
+  './assets/img/slider_ia_human.webp?v=1.0.9',
+  './assets/img/slider_warehouse.webp?v=1.0.9',
+  './assets/img/slider_service.webp?v=1.0.9',
+  './assets/img/fachada-oficial.webp?v=1.0.9'
 ];
 
 self.addEventListener('install', (event) => {
