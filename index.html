@@ -2454,8 +2454,9 @@ try {
     };
 
     // Ensure slider runs safely & exports on window
-    let currentSlide = 0;
-    let sliderInterval = null;
+    // (We namespace slide state on window object to avoid Redeclaration errors in script blocks)
+    if (typeof window.currentSlide === 'undefined') window.currentSlide = 0;
+    if (typeof window.sliderInterval === 'undefined') window.sliderInterval = null;
 
     window.showSlide = function(index) {
         const slides = document.querySelectorAll('.hero-slide');
@@ -2463,26 +2464,26 @@ try {
         if (slides.length === 0) return;
         
         // Hide current
-        const current = slides[currentSlide];
+        const current = slides[window.currentSlide];
         if (current) {
             current.classList.remove('active', 'opacity-100', 'z-10');
             current.classList.add('opacity-0', 'z-0');
         }
-        const currentDot = dots[currentSlide];
+        const currentDot = dots[window.currentSlide];
         if (currentDot) {
             currentDot.classList.remove('bg-blue-500');
             currentDot.classList.add('bg-slate-600');
         }
         
-        currentSlide = (index + slides.length) % slides.length;
+        window.currentSlide = (index + slides.length) % slides.length;
         
         // Show next
-        const next = slides[currentSlide];
+        const next = slides[window.currentSlide];
         if (next) {
             next.classList.remove('opacity-0', 'z-0');
             next.classList.add('active', 'opacity-100', 'z-10');
         }
-        const nextDot = dots[currentSlide];
+        const nextDot = dots[window.currentSlide];
         if (nextDot) {
             nextDot.classList.remove('bg-slate-600');
             nextDot.classList.add('bg-blue-500');
@@ -2491,18 +2492,18 @@ try {
     };
 
     window.resetSliderInterval = function() {
-        if (sliderInterval) clearInterval(sliderInterval);
-        sliderInterval = setInterval(() => {
+        if (window.sliderInterval) clearInterval(window.sliderInterval);
+        window.sliderInterval = setInterval(() => {
             window.nextSlide();
         }, 5000);
     };
 
     window.nextSlide = function() {
-        window.showSlide(currentSlide + 1);
+        window.showSlide(window.currentSlide + 1);
     };
 
     window.prevSlide = function() {
-        window.showSlide(currentSlide - 1);
+        window.showSlide(window.currentSlide - 1);
     };
 
     window.goToSlide = function(index) {
