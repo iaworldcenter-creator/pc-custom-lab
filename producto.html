@@ -238,21 +238,27 @@
         <span class="text-slate-800">|</span>
         <button onclick="openPaymentModal()" class="hover:text-amber-400 transition cursor-pointer">Elige tu forma de pago</button>
         <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" class="hover:text-amber-400 transition">Cigarros Bazar</a>
+        <button onclick="openOrdersModal()" class="hover:text-amber-400 transition cursor-pointer text-cyan-400 flex items-center gap-1"><i class="fa-solid fa-clock-rotate-left"></i> Mis Pedidos</button>
         <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" class="hover:text-amber-400 transition">Dulces Bazar</a>
+        
+        <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" onclick="const isCig = window.location.pathname.includes('cigarros-bazar'); if (isCig) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Cigarros Bazar</a>
         <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" class="hover:text-amber-400 transition">Kiosco Digital</a>
+        <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" onclick="const isDul = window.location.pathname.includes('dulces-bazar'); if (isDul) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Dulces Bazar</a>
         <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" class="hover:text-amber-400 transition">Puesto Bazar</a>
+        <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" onclick="const isKio = window.location.pathname.includes('kiosco-digital'); if (isKio) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Kiosco Digital</a>
         <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="hover:text-amber-400 transition">PC Custom Lab</a>
+        <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" onclick="const isPue = window.location.pathname.includes('mi-puesto-bazar'); if (isPue) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Puesto Bazar</a>
         <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" class="hover:text-amber-400 transition">Liquidaciones y Ofertas</a>
+        <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" onclick="const isPc = window.location.pathname.includes('pc-custom-lab'); if (isPc) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">PC Custom Lab</a>
         <span class="text-slate-800">|</span>
-      <a onclick="goToCatalogCategory(4);" class="hover:text-amber-400 transition">Boutique de Refacciones</a>
+        <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" onclick="const isOf = window.location.pathname.includes('ofertas-y-liquidaciones-') || window.location.pathname.includes('ofertas-y-liquidaciones'); if (isOf) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Liquidaciones y Ofertas</a>
+    
+        <span class="text-slate-800">|</span>
+      <button onclick="goToCatalogCategory(4)" class="hover:text-amber-400 transition cursor-pointer">Boutique de Refacciones</button>
       <span class="text-slate-800">|</span>
-      <button onclick="goToCatalogCategory(1)" class="hover:text-amber-400 transition cursor-pointer">Electrónica Gemini</button>
+      <a href="#cotizador" class="hover:text-amber-400 transition">Cotizador de Ensambles</a>
+      <span class="text-slate-800">|</span>
+      <button onclick="abrirChatbotConMensaje('Hola, me gustaría solicitar atención técnica directa para un proyecto o soporte.')" class="hover:text-amber-400 transition cursor-pointer">Contacto Soporte</button>
         <span class="text-slate-800">|</span>
         <a href="https://antigravity.google/download" target="_blank" class="hover:text-amber-400 transition">Descargar Anti-Gravity</a>
     </div>
@@ -289,7 +295,7 @@
 
 <!-- CART DRAWER (Slide-in right to left) -->
 <div class="fixed inset-0 z-[250]" id="cartDrawer" style="display: none !important;">
-    <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" onclick="closeCartDrawer()"></div>
+    <div class="absolute inset-0 bg-slate-950/60" onclick="closeCartDrawer()"></div>
     <div class="absolute right-0 top-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col justify-between text-slate-100 p-6 transition-transform duration-300">
         <div>
             <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-6">
@@ -347,7 +353,6 @@
     </div>
 </div>
 
-<!-- PAYMENT METHOD MODAL -->
 <!-- PAYMENT METHOD MODAL (Functional Options) -->
 <div class="fixed inset-0 z-[300] hidden flex items-center justify-center bg-slate-950/80 px-4" id="paymentMethodModal">
     <div class="absolute inset-0 bg-slate-950/80" onclick="closePaymentModal()"></div>
@@ -436,6 +441,29 @@
         </div>
     </div>
 </div>
+
+<!-- ORDERS HISTORY MODAL -->
+<div class="fixed inset-0 z-[300] hidden flex items-center justify-center bg-slate-950/80 px-4" id="ordersHistoryModal">
+    <div class="absolute inset-0 bg-slate-950/80" onclick="closeOrdersModal()"></div>
+    <div class="relative w-full max-w-xl bg-slate-900 border border-slate-800 rounded-3xl p-6 text-slate-100 shadow-2xl z-10">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-4">
+            <h3 class="text-sm font-black text-white flex items-center gap-2"><i class="fa-solid fa-clock-rotate-left text-cyan-400"></i> Historial de Mis Pedidos</h3>
+            <button class="text-slate-400 hover:text-white cursor-pointer text-xl" onclick="closeOrdersModal()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="flex flex-col gap-4 max-h-[60vh] overflow-y-auto pr-1" id="orders-modal-content">
+            <!-- Rendered dynamically -->
+        </div>
+    </div>
+</div>
+
+
+
+<!-- CART DRAWER (Slide-in right to left) -->
+
+
+<!-- PAYMENT METHOD MODAL -->
+<!-- PAYMENT METHOD MODAL (Functional Options) -->
+
 
 
 

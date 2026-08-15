@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pc-custom-lab-cache-v1.0.5';
+const CACHE_NAME = 'pc-custom-lab-cache-v1.0.6';
 const ASSETS_TO_CACHE = [
   './index.html',
   './assets/css/tailwind-built.css?v=1.0.2',

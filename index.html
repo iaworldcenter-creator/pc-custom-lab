@@ -354,21 +354,27 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
         <span class="text-slate-800">|</span>
         <button onclick="openPaymentModal()" class="hover:text-amber-400 transition cursor-pointer">Elige tu forma de pago</button>
         <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" class="hover:text-amber-400 transition">Cigarros Bazar</a>
+        <button onclick="openOrdersModal()" class="hover:text-amber-400 transition cursor-pointer text-cyan-400 flex items-center gap-1"><i class="fa-solid fa-clock-rotate-left"></i> Mis Pedidos</button>
         <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" class="hover:text-amber-400 transition">Dulces Bazar</a>
+        
+        <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" onclick="const isCig = window.location.pathname.includes('cigarros-bazar'); if (isCig) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Cigarros Bazar</a>
         <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" class="hover:text-amber-400 transition">Kiosco Digital</a>
+        <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" onclick="const isDul = window.location.pathname.includes('dulces-bazar'); if (isDul) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Dulces Bazar</a>
         <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" class="hover:text-amber-400 transition">Puesto Bazar</a>
+        <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" onclick="const isKio = window.location.pathname.includes('kiosco-digital'); if (isKio) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Kiosco Digital</a>
         <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="hover:text-amber-400 transition">PC Custom Lab</a>
+        <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" onclick="const isPue = window.location.pathname.includes('mi-puesto-bazar'); if (isPue) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Puesto Bazar</a>
         <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" class="hover:text-amber-400 transition">Liquidaciones y Ofertas</a>
+        <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" onclick="const isPc = window.location.pathname.includes('pc-custom-lab'); if (isPc) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">PC Custom Lab</a>
         <span class="text-slate-800">|</span>
-      <a onclick="goToCatalogCategory(4);" class="hover:text-amber-400 transition">Boutique de Refacciones</a>
+        <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" onclick="const isOf = window.location.pathname.includes('ofertas-y-liquidaciones-') || window.location.pathname.includes('ofertas-y-liquidaciones'); if (isOf) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Liquidaciones y Ofertas</a>
+    
+        <span class="text-slate-800">|</span>
+      <button onclick="goToCatalogCategory(4)" class="hover:text-amber-400 transition cursor-pointer">Boutique de Refacciones</button>
       <span class="text-slate-800">|</span>
-      <button onclick="goToCatalogCategory(1)" class="hover:text-amber-400 transition cursor-pointer">Electrónica Gemini</button>
+      <a href="#cotizador" class="hover:text-amber-400 transition">Cotizador de Ensambles</a>
+      <span class="text-slate-800">|</span>
+      <button onclick="abrirChatbotConMensaje('Hola, me gustaría solicitar atención técnica directa para un proyecto o soporte.')" class="hover:text-amber-400 transition cursor-pointer">Contacto Soporte</button>
         <span class="text-slate-800">|</span>
         <a href="https://antigravity.google/download" target="_blank" class="hover:text-amber-400 transition">Descargar Anti-Gravity</a>
     </div>
@@ -405,7 +411,7 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
 
 <!-- CART DRAWER (Slide-in right to left) -->
 <div class="fixed inset-0 z-[250]" id="cartDrawer" style="display: none !important;">
-    <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" onclick="closeCartDrawer()"></div>
+    <div class="absolute inset-0 bg-slate-950/60" onclick="closeCartDrawer()"></div>
     <div class="absolute right-0 top-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col justify-between text-slate-100 p-6 transition-transform duration-300">
         <div>
             <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-6">
@@ -463,7 +469,6 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
     </div>
 </div>
 
-<!-- PAYMENT METHOD MODAL -->
 <!-- PAYMENT METHOD MODAL (Functional Options) -->
 <div class="fixed inset-0 z-[300] hidden flex items-center justify-center bg-slate-950/80 px-4" id="paymentMethodModal">
     <div class="absolute inset-0 bg-slate-950/80" onclick="closePaymentModal()"></div>
@@ -552,6 +557,104 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
         </div>
     </div>
 </div>
+
+<!-- ORDERS HISTORY MODAL -->
+<div class="fixed inset-0 z-[300] hidden flex items-center justify-center bg-slate-950/80 px-4" id="ordersHistoryModal">
+    <div class="absolute inset-0 bg-slate-950/80" onclick="closeOrdersModal()"></div>
+    <div class="relative w-full max-w-xl bg-slate-900 border border-slate-800 rounded-3xl p-6 text-slate-100 shadow-2xl z-10">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-4">
+            <h3 class="text-sm font-black text-white flex items-center gap-2"><i class="fa-solid fa-clock-rotate-left text-cyan-400"></i> Historial de Mis Pedidos</h3>
+            <button class="text-slate-400 hover:text-white cursor-pointer text-xl" onclick="closeOrdersModal()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="flex flex-col gap-4 max-h-[60vh] overflow-y-auto pr-1" id="orders-modal-content">
+            <!-- Rendered dynamically -->
+        </div>
+    </div>
+</div>
+
+<!-- HERO SLIDER SECTION (Restored & Cleaned) -->
+<div class="relative w-full h-[600px] sm:h-[650px] overflow-hidden border-b border-slate-800 bg-slate-950 hero-slider-container">
+    <!-- Slides Container -->
+    <div class="relative w-full h-full" id="hero-slider" class="hero-slider-container">
+        <!-- Slide 1 -->
+        <div class="hero-slide active absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000 ease-in-out z-10 bg-cover bg-center" style="background-image: url('assets/img/slider_ia_human.webp?v=1.0.6');">
+            <div class="absolute inset-0 bg-slate-950/70"></div>
+            <div class="relative z-10 max-w-5xl mx-auto h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 pb-20">
+                <span class="px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
+                    El Futuro del Ensamble: Humano + IA
+                </span>
+                <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
+                    Precisión de IA, <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Toque Humano</span>
+                </h1>
+                <p class="text-sm sm:text-lg text-slate-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
+                    Computadoras a la medida con la precisión de la inteligencia artificial y el toque personal que tú eliges.
+                </p>
+                <a class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-black px-8 py-3.5 rounded-xl shadow-xl transition text-sm flex items-center gap-2 border border-amber-500/50" href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/">
+                    <i class="fa-solid fa-store text-slate-900"></i> Puesto de Revistas &amp; Bazar NFL.GDL
+                </a>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 bg-cover bg-center" style="background-image: url('assets/img/slider_warehouse.webp?v=1.0.6');">
+            <div class="absolute inset-0 bg-slate-950/70"></div>
+            <div class="relative z-10 max-w-5xl mx-auto h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 pb-20">
+                <span class="px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
+                    Tu Almacén Virtual: Catálogo Inmenso
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
+                    Miles de Piezas &amp; <span class="bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">Refacciones Sueltas</span>
+                </h2>
+                <p class="text-sm sm:text-lg text-slate-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
+                    Accede a componentes de oportunidad al mejor precio de mayoreo y entrega inmediata.
+                </p>
+                <button onclick="goToCatalogCategory(4)" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-3.5 rounded-xl shadow-xl transition text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-tags"></i> Explorar Boutique de Refacciones
+                </button>
+            </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 bg-cover bg-center" style="background-image: url('assets/img/slider_service.webp?v=1.0.6');">
+            <div class="absolute inset-0 bg-slate-950/70"></div>
+            <div class="relative z-10 max-w-5xl mx-auto h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 pb-20">
+                <span class="px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
+                    Soporte Modular &amp; Soluciones Tecnológicas
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
+                    No Solo Vendemos, <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent">Damos Solución Total</span>
+                </h2>
+                <p class="text-sm sm:text-lg text-slate-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
+                    Desde equipos Extreme hasta redes empresariales. Soporte técnico garantizado en Guadalajara.
+                </p>
+                <button aria-label="Solicitar Atención Directa" class="bg-purple-600 hover:bg-purple-500 text-white font-bold px-8 py-3.5 rounded-xl shadow-xl transition text-sm flex items-center gap-2" onclick="abrirChatbotConMensaje('Hola, me gustaría solicitar atención técnica directa para un proyecto o soporte.')">
+                    <i class="fa-solid fa-headset"></i> Solicitar Atención Directa
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Slider Controls -->
+    <button aria-label="Botón de acción interactiva" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-slate-900/50 hover:bg-slate-900 text-slate-300 hover:text-white border border-slate-800 transition flex items-center justify-center" onclick="prevSlide()">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button aria-label="Botón de acción interactiva" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-slate-900/50 hover:bg-slate-900 text-slate-300 hover:text-white border border-slate-800 transition flex items-center justify-center" onclick="nextSlide()">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    <!-- Slider Pagination Dots -->
+    <div class="absolute bottom-8 left-0 right-0 z-20 flex justify-center gap-2.5">
+        <button aria-label="Botón de acción interactiva" class="hero-dot w-3 h-3 rounded-full bg-blue-500 transition-all duration-300" onclick="goToSlide(0)"></button>
+        <button aria-label="Botón de acción interactiva" class="hero-dot w-3 h-3 rounded-full bg-slate-600 transition-all duration-300" onclick="goToSlide(1)"></button>
+        <button aria-label="Botón de acción interactiva" class="hero-dot w-3 h-3 rounded-full bg-slate-600 transition-all duration-300" onclick="goToSlide(2)"></button>
+    </div>
+</div>
+
+
+
+
+<!-- CART DRAWER (Slide-in right to left) -->
+
+
+<!-- PAYMENT METHOD MODAL -->
+<!-- PAYMENT METHOD MODAL (Functional Options) -->
+
 
 <!-- HERO SLIDER SECTION (Restored & Cleaned) -->
 <div class="relative w-full h-[600px] sm:h-[650px] overflow-hidden border-b border-slate-800 bg-slate-950 hero-slider-container">
