@@ -232,7 +232,7 @@
     <!-- Nivel 1: Barra Superior Deslizable Universal (Top Bar Racional) -->
     <div class="w-full bg-slate-950 border-b border-slate-900 py-3 px-4 flex items-center justify-start md:justify-center overflow-x-auto whitespace-nowrap gap-4 text-xs font-bold text-slate-300" style="scrollbar-width: none; -ms-overflow-style: none;">
         <style>::-webkit-scrollbar { display: none; }</style>
-        <a href="https://gemini.google.com" target="_blank" class="hover:text-amber-400 transition">Iniciar sesión con Yelenay</a>
+        <a href="https://gemini.google.com" target="_blank" class="hover:text-amber-400 transition">Iniciar sesión con Google Gemini</a>
         <span class="text-slate-800">|</span>
         <button onclick="openDeliveryModal()" class="hover:text-amber-400 transition cursor-pointer">Registra tu domicilio de entrega</button>
         <span class="text-slate-800">|</span>
@@ -250,9 +250,9 @@
         <span class="text-slate-800">|</span>
         <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" class="hover:text-amber-400 transition">Liquidaciones y Ofertas</a>
         <span class="text-slate-800">|</span>
-      <a href="#refacciones" class="hover:text-amber-400 transition">Boutique de Refacciones</a>
+      <a onclick="goToCatalogCategory(4);" class="hover:text-amber-400 transition">Boutique de Refacciones</a>
       <span class="text-slate-800">|</span>
-      <button onclick="changePage(1, document.querySelectorAll('.pagination-btn')[0])" class="hover:text-amber-400 transition cursor-pointer">Electrónica Gemini</button>
+      <button onclick="goToCatalogCategory(1)" class="hover:text-amber-400 transition cursor-pointer">Electrónica Gemini</button>
         <span class="text-slate-800">|</span>
         <a href="https://antigravity.google/download" target="_blank" class="hover:text-amber-400 transition">Descargar Anti-Gravity</a>
     </div>
@@ -288,7 +288,7 @@
 </header>
 
 <!-- CART DRAWER (Slide-in right to left) -->
-<div class="fixed inset-0 z-[250] hidden" id="cartDrawer">
+<div class="fixed inset-0 z-[250]" id="cartDrawer" style="display: none !important;">
     <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" onclick="closeCartDrawer()"></div>
     <div class="absolute right-0 top-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col justify-between text-slate-100 p-6 transition-transform duration-300">
         <div>
@@ -348,35 +348,91 @@
 </div>
 
 <!-- PAYMENT METHOD MODAL -->
-<div class="fixed inset-0 z-[300] hidden flex items-center justify-center px-4" id="paymentMethodModal">
-    <div class="absolute inset-0 bg-slate-950/80 backdrop-blur-sm" onclick="closePaymentModal()"></div>
+<!-- PAYMENT METHOD MODAL (Functional Options) -->
+<div class="fixed inset-0 z-[300] hidden flex items-center justify-center bg-slate-950/80 px-4" id="paymentMethodModal">
+    <div class="absolute inset-0 bg-slate-950/80" onclick="closePaymentModal()"></div>
     <div class="relative w-full max-w-md bg-slate-900 border border-slate-800 rounded-3xl p-6 text-slate-100 shadow-2xl z-10">
         <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-4">
             <h3 class="text-sm font-black text-white flex items-center gap-2"><i class="fa-solid fa-credit-card text-cyan-400"></i> Elige tu forma de pago</h3>
             <button class="text-slate-400 hover:text-white cursor-pointer text-xl" onclick="closePaymentModal()"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <div class="flex flex-col gap-3">
-            <button onclick="selectPaymentMethod('Efectivo contra entrega')" class="w-full text-left p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500 rounded-xl transition flex items-center justify-between group">
+        
+        <!-- Step 1: Option List -->
+        <div id="payment-options" class="flex flex-col gap-3">
+            <button onclick="confirmPaymentMethod('Efectivo contra entrega')" class="w-full text-left p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500 rounded-xl transition flex items-center justify-between group">
                 <div>
                     <h4 class="text-xs font-black text-white group-hover:text-cyan-400 transition">Efectivo contra entrega (Uber)</h4>
                     <p class="text-[10px] text-slate-400">Paga en efectivo al recibir tu pedido.</p>
                 </div>
                 <i class="fa-solid fa-money-bill-wave text-green-500 text-base"></i>
             </button>
-            <button onclick="selectPaymentMethod('Tarjeta Crédito / Débito')" class="w-full text-left p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500 rounded-xl transition flex items-center justify-between group">
+            <button onclick="showCardForm()" class="w-full text-left p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500 rounded-xl transition flex items-center justify-between group">
                 <div>
                     <h4 class="text-xs font-black text-white group-hover:text-cyan-400 transition">Tarjeta de Crédito / Débito</h4>
-                    <p class="text-[10px] text-slate-400">Pago en línea seguro con Visa, Mastercard o Amex.</p>
+                    <p class="text-[10px] text-slate-400">Pago seguro en línea con Visa o Mastercard.</p>
                 </div>
                 <i class="fa-solid fa-credit-card text-blue-500 text-base"></i>
             </button>
-            <button onclick="selectPaymentMethod('Transferencia SPEI')" class="w-full text-left p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500 rounded-xl transition flex items-center justify-between group">
+            <button onclick="showSPEIInfo()" class="w-full text-left p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500 rounded-xl transition flex items-center justify-between group">
                 <div>
                     <h4 class="text-xs font-black text-white group-hover:text-cyan-400 transition">Transferencia SPEI</h4>
-                    <p class="text-[10px] text-slate-400">Clave interbancaria para pago directo.</p>
+                    <p class="text-[10px] text-slate-400">Depósito bancario directo con CLABE.</p>
                 </div>
                 <i class="fa-solid fa-building-columns text-amber-500 text-base"></i>
             </button>
+        </div>
+        
+        <!-- Step 2a: Card Form -->
+        <div id="payment-card-form" class="hidden flex flex-col gap-3">
+            <div class="text-xs flex flex-col gap-1.5">
+                <label class="text-slate-400 font-bold">Número de Tarjeta</label>
+                <input type="text" id="pay-card-num" placeholder="XXXX XXXX XXXX XXXX" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-cyan-500 text-xs font-mono"/>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <div class="text-xs flex flex-col gap-1.5">
+                    <label class="text-slate-400 font-bold">Vencimiento</label>
+                    <input type="text" id="pay-card-expiry" placeholder="MM/AA" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-cyan-500 text-xs font-mono"/>
+                </div>
+                <div class="text-xs flex flex-col gap-1.5">
+                    <label class="text-slate-400 font-bold">CVV</label>
+                    <input type="password" id="pay-card-cvv" placeholder="***" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-cyan-500 text-xs font-mono"/>
+                </div>
+            </div>
+            <div class="text-xs flex flex-col gap-1.5">
+                <label class="text-slate-400 font-bold">Nombre del Titular</label>
+                <input type="text" id="pay-card-name" placeholder="Nombre completo" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-cyan-500 text-xs"/>
+            </div>
+            <div class="flex gap-2.5 mt-2">
+                <button onclick="backToPaymentOptions()" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-2 rounded-xl text-xs transition">Regresar</button>
+                <button onclick="confirmCardPayment()" class="flex-1 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2 rounded-xl text-xs transition">Confirmar Pago</button>
+            </div>
+        </div>
+        
+        <!-- Step 2b: SPEI Info -->
+        <div id="payment-spei-info" class="hidden flex flex-col gap-3">
+            <div class="bg-slate-950 p-4 border border-slate-800 rounded-xl flex flex-col gap-2 text-xs">
+                <div class="flex justify-between">
+                    <span class="text-slate-400">Banco:</span>
+                    <span class="text-white font-bold">Banco Gemini</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-400">Beneficiario:</span>
+                    <span class="text-white font-bold">Anti-Gravity Ecosistema</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-400">CLABE:</span>
+                    <span class="text-white font-mono font-bold">0123 4567 8901 2345 67</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-400">Referencia:</span>
+                    <span class="text-white font-mono font-bold">AGY-8899</span>
+                </div>
+            </div>
+            <p class="text-[10px] text-slate-400 font-semibold">Realiza tu transferencia desde tu banca móvil y pulsa confirmar para registrar tu forma de pago.</p>
+            <div class="flex gap-2.5 mt-2">
+                <button onclick="backToPaymentOptions()" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-2 rounded-xl text-xs transition">Regresar</button>
+                <button onclick="confirmSPEIPayment()" class="flex-1 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2 rounded-xl text-xs transition">Confirmar SPEI</button>
+            </div>
         </div>
     </div>
 </div>
@@ -408,7 +464,7 @@
 
 
 <!-- MODAL DE REGISTRO DE DIRECCIÓN (GLASSMORPHISM) -->
-<div class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-slate-950/80 backdrop-blur-md px-4" id="deliveryModal">
+<div class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-slate-950/80 px-4" id="deliveryModal">
 <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative overflow-hidden text-slate-100">
 <h2 class="text-lg font-black text-white mb-2 flex items-center gap-2">
 <i class="fa-solid fa-map-location-dot text-amber-500"></i> Registrar Domicilio de Entrega

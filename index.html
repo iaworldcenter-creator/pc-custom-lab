@@ -36,8 +36,8 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
 .items-center { align-items: center; }
 .justify-center { justify-content: center; }
 .justify-between { justify-content: space-between; }
-header.relative { height: 600px; background-color: #020617; }
-@media (min-width: 640px) { header.relative { height: 650px; } }
+.hero-slider-container { height: 600px; background-color: #020617; }
+@media (min-width: 640px) { .hero-slider-container { height: 650px; } }
 .object-cover { object-fit: cover; }
 .grid { display: grid; }
 .gap-6 { gap: 1.5rem; }
@@ -81,8 +81,8 @@ header.relative { height: 600px; background-color: #020617; }
 .pt-2\.5 { padding-top: 0.625rem; }
 .border-t { border-top-width: 1px; }
 </style>
-<link rel="preload" href="assets/css/tailwind-built.css?v=1.0.2" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-<noscript><link href="assets/css/tailwind-built.css?v=1.0.2" rel="stylesheet" /></noscript>
+<link rel="preload" href="assets/css/tailwind-built.css?v=1.0.5" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link href="assets/css/tailwind-built.css?v=1.0.5" rel="stylesheet" /></noscript>
 <script>
 
 
@@ -109,8 +109,8 @@ header.relative { height: 600px; background-color: #020617; }
     });
 
 </script>
-<link rel="preload" href="assets/css/fontawesome-all.min.css?v=1.0.2" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-<noscript><link href="assets/css/fontawesome-all.min.css?v=1.0.2" rel="stylesheet" /></noscript>
+<link rel="preload" href="assets/css/fontawesome-all.min.css?v=1.0.5" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link href="assets/css/fontawesome-all.min.css?v=1.0.5" rel="stylesheet" /></noscript>
 
 
 <style>
@@ -152,7 +152,7 @@ header.relative { height: 600px; background-color: #020617; }
 <!-- Datos estructurados de Schema.org para Google, Bing y Apple Search -->
 
 <link as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
-<link as="image" href="assets/img/slider_ia_human.webp?v=1.0.2" rel="preload"/>
+<link as="image" href="assets/img/slider_ia_human.webp?v=1.0.5" rel="preload"/>
 <style>
         @media (max-width: 768px) {
             video { display: none !important; }
@@ -208,7 +208,7 @@ header.relative { height: 600px; background-color: #020617; }
 <div class="max-w-full mx-auto px-6 md:px-10 h-20 flex items-center justify-between gap-4">
 <!-- Izquierda: Logo y Nombre de Marca Limpios -->
 <div class="flex items-center space-x-3 shrink-0">
-<img alt="Mascota oficial Tigre inteligente de PC Custom Lab en Guadalajara" class="w-11 h-11 rounded-full object-cover border border-blue-500 shadow-md shadow-blue-500/20" decoding="async" loading="lazy" src="assets/img/mascota_tigre_thumb.webp?v=1.0.2"/>
+<img alt="Mascota oficial Tigre inteligente de PC Custom Lab en Guadalajara" class="w-11 h-11 rounded-full object-cover border border-blue-500 shadow-md shadow-blue-500/20" decoding="async" loading="lazy" src="assets/img/mascota_tigre_thumb.webp?v=1.0.5"/>
 <div>
 <span class="text-xl sm:text-2xl font-black tracking-wider text-blue-500 block leading-tight">PC CUSTOM LAB</span>
 <span class="text-[10px] sm:text-xs block text-slate-400 font-mono tracking-widest uppercase">Tech Service</span>
@@ -240,10 +240,10 @@ header.relative { height: 600px; background-color: #020617; }
 <div class="relative group">
 <button class="bg-blue-600 hover:bg-blue-500 text-white px-2.5 py-1.5 text-[11px] rounded-xl transition flex items-center gap-1 shadow-md shadow-blue-900/20"><i class="fa-solid fa-store"></i> Refacciones <i class="fa-solid fa-chevron-down text-[8px] ml-1"></i></button>
 <div class="absolute left-0 top-full mt-1 w-48 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-<a href="#refacciones" class="block px-4 py-2.5 text-[11px] text-slate-300 hover:bg-slate-800 hover:text-white transition rounded-t-xl">Memoria RAM</a>
-<a href="#refacciones" class="block px-4 py-2.5 text-[11px] text-slate-300 hover:bg-slate-800 hover:text-white transition">Almacenamiento SSD</a>
-<a href="#refacciones" class="block px-4 py-2.5 text-[11px] text-slate-300 hover:bg-slate-800 hover:text-white transition">Tarjetas de Video GPU</a>
-<a href="#refacciones" class="block px-4 py-2.5 text-[11px] text-slate-300 hover:bg-slate-800 hover:text-white transition rounded-b-xl">Periféricos</a>
+<a onclick="goToCatalogCategory(4);" class="block px-4 py-2.5 text-[11px] text-slate-300 hover:bg-slate-800 hover:text-white transition rounded-t-xl">Memoria RAM</a>
+<a onclick="goToCatalogCategory(4);" class="block px-4 py-2.5 text-[11px] text-slate-300 hover:bg-slate-800 hover:text-white transition">Almacenamiento SSD</a>
+<a onclick="goToCatalogCategory(4);" class="block px-4 py-2.5 text-[11px] text-slate-300 hover:bg-slate-800 hover:text-white transition">Tarjetas de Video GPU</a>
+<a onclick="goToCatalogCategory(4);" class="block px-4 py-2.5 text-[11px] text-slate-300 hover:bg-slate-800 hover:text-white transition rounded-b-xl">Periféricos</a>
 </div>
 </div>
 <a class="bg-blue-600 hover:bg-blue-500 text-white px-2.5 py-1.5 text-[11px] rounded-xl transition flex items-center gap-1 shadow-md shadow-blue-900/20" href="#cotizador"><i class="fa-solid fa-sliders"></i> Arma tu PC</a>
@@ -312,10 +312,10 @@ header.relative { height: 600px; background-color: #020617; }
 <i class="fa-solid fa-chevron-down text-sm transition-transform"></i>
 </button>
 <div class="hidden pl-12 mt-1 space-y-2 text-sm border-l border-slate-800">
-<a href="#refacciones" onclick="toggleMenu();" class="block py-1.5 text-slate-400 hover:text-pink-400">Memoria RAM</a>
-<a href="#refacciones" onclick="toggleMenu();" class="block py-1.5 text-slate-400 hover:text-pink-400">Almacenamiento SSD</a>
-<a href="#refacciones" onclick="toggleMenu();" class="block py-1.5 text-slate-400 hover:text-pink-400">Tarjetas de Video GPU</a>
-<a href="#refacciones" onclick="toggleMenu();" class="block py-1.5 text-slate-400 hover:text-pink-400">Periféricos</a>
+<a onclick="goToCatalogCategory(4);" onclick="toggleMenu();" class="block py-1.5 text-slate-400 hover:text-pink-400">Memoria RAM</a>
+<a onclick="goToCatalogCategory(4);" onclick="toggleMenu();" class="block py-1.5 text-slate-400 hover:text-pink-400">Almacenamiento SSD</a>
+<a onclick="goToCatalogCategory(4);" onclick="toggleMenu();" class="block py-1.5 text-slate-400 hover:text-pink-400">Tarjetas de Video GPU</a>
+<a onclick="goToCatalogCategory(4);" onclick="toggleMenu();" class="block py-1.5 text-slate-400 hover:text-pink-400">Periféricos</a>
 </div>
 </div>
 <a class="mobile-link py-3 px-4 rounded-xl hover:bg-slate-800 text-slate-200 flex items-center gap-3" href="#cotizador">
@@ -348,7 +348,7 @@ header.relative { height: 600px; background-color: #020617; }
     <!-- Nivel 1: Barra Superior Deslizable Universal (Top Bar Racional) -->
     <div class="w-full bg-slate-950 border-b border-slate-900 py-3 px-4 flex items-center justify-start md:justify-center overflow-x-auto whitespace-nowrap gap-4 text-xs font-bold text-slate-300" style="scrollbar-width: none; -ms-overflow-style: none;">
         <style>::-webkit-scrollbar { display: none; }</style>
-        <a href="https://gemini.google.com" target="_blank" class="hover:text-amber-400 transition">Iniciar sesión con Yelenay</a>
+        <a href="https://gemini.google.com" target="_blank" class="hover:text-amber-400 transition">Iniciar sesión con Google Gemini</a>
         <span class="text-slate-800">|</span>
         <button onclick="openDeliveryModal()" class="hover:text-amber-400 transition cursor-pointer">Registra tu domicilio de entrega</button>
         <span class="text-slate-800">|</span>
@@ -366,9 +366,9 @@ header.relative { height: 600px; background-color: #020617; }
         <span class="text-slate-800">|</span>
         <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" class="hover:text-amber-400 transition">Liquidaciones y Ofertas</a>
         <span class="text-slate-800">|</span>
-      <a href="#refacciones" class="hover:text-amber-400 transition">Boutique de Refacciones</a>
+      <a onclick="goToCatalogCategory(4);" class="hover:text-amber-400 transition">Boutique de Refacciones</a>
       <span class="text-slate-800">|</span>
-      <button onclick="changePage(1, document.querySelectorAll('.pagination-btn')[0])" class="hover:text-amber-400 transition cursor-pointer">Electrónica Gemini</button>
+      <button onclick="goToCatalogCategory(1)" class="hover:text-amber-400 transition cursor-pointer">Electrónica Gemini</button>
         <span class="text-slate-800">|</span>
         <a href="https://antigravity.google/download" target="_blank" class="hover:text-amber-400 transition">Descargar Anti-Gravity</a>
     </div>
@@ -404,7 +404,7 @@ header.relative { height: 600px; background-color: #020617; }
 </header>
 
 <!-- CART DRAWER (Slide-in right to left) -->
-<div class="fixed inset-0 z-[250] hidden" id="cartDrawer">
+<div class="fixed inset-0 z-[250]" id="cartDrawer" style="display: none !important;">
     <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm" onclick="closeCartDrawer()"></div>
     <div class="absolute right-0 top-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col justify-between text-slate-100 p-6 transition-transform duration-300">
         <div>
@@ -464,45 +464,101 @@ header.relative { height: 600px; background-color: #020617; }
 </div>
 
 <!-- PAYMENT METHOD MODAL -->
-<div class="fixed inset-0 z-[300] hidden flex items-center justify-center px-4" id="paymentMethodModal">
-    <div class="absolute inset-0 bg-slate-950/80 backdrop-blur-sm" onclick="closePaymentModal()"></div>
+<!-- PAYMENT METHOD MODAL (Functional Options) -->
+<div class="fixed inset-0 z-[300] hidden flex items-center justify-center bg-slate-950/80 px-4" id="paymentMethodModal">
+    <div class="absolute inset-0 bg-slate-950/80" onclick="closePaymentModal()"></div>
     <div class="relative w-full max-w-md bg-slate-900 border border-slate-800 rounded-3xl p-6 text-slate-100 shadow-2xl z-10">
         <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-4">
             <h3 class="text-sm font-black text-white flex items-center gap-2"><i class="fa-solid fa-credit-card text-cyan-400"></i> Elige tu forma de pago</h3>
             <button class="text-slate-400 hover:text-white cursor-pointer text-xl" onclick="closePaymentModal()"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <div class="flex flex-col gap-3">
-            <button onclick="selectPaymentMethod('Efectivo contra entrega')" class="w-full text-left p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500 rounded-xl transition flex items-center justify-between group">
+        
+        <!-- Step 1: Option List -->
+        <div id="payment-options" class="flex flex-col gap-3">
+            <button onclick="confirmPaymentMethod('Efectivo contra entrega')" class="w-full text-left p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500 rounded-xl transition flex items-center justify-between group">
                 <div>
                     <h4 class="text-xs font-black text-white group-hover:text-cyan-400 transition">Efectivo contra entrega (Uber)</h4>
                     <p class="text-[10px] text-slate-400">Paga en efectivo al recibir tu pedido.</p>
                 </div>
                 <i class="fa-solid fa-money-bill-wave text-green-500 text-base"></i>
             </button>
-            <button onclick="selectPaymentMethod('Tarjeta Crédito / Débito')" class="w-full text-left p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500 rounded-xl transition flex items-center justify-between group">
+            <button onclick="showCardForm()" class="w-full text-left p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500 rounded-xl transition flex items-center justify-between group">
                 <div>
                     <h4 class="text-xs font-black text-white group-hover:text-cyan-400 transition">Tarjeta de Crédito / Débito</h4>
-                    <p class="text-[10px] text-slate-400">Pago en línea seguro con Visa, Mastercard o Amex.</p>
+                    <p class="text-[10px] text-slate-400">Pago seguro en línea con Visa o Mastercard.</p>
                 </div>
                 <i class="fa-solid fa-credit-card text-blue-500 text-base"></i>
             </button>
-            <button onclick="selectPaymentMethod('Transferencia SPEI')" class="w-full text-left p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500 rounded-xl transition flex items-center justify-between group">
+            <button onclick="showSPEIInfo()" class="w-full text-left p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500 rounded-xl transition flex items-center justify-between group">
                 <div>
                     <h4 class="text-xs font-black text-white group-hover:text-cyan-400 transition">Transferencia SPEI</h4>
-                    <p class="text-[10px] text-slate-400">Clave interbancaria para pago directo.</p>
+                    <p class="text-[10px] text-slate-400">Depósito bancario directo con CLABE.</p>
                 </div>
                 <i class="fa-solid fa-building-columns text-amber-500 text-base"></i>
             </button>
+        </div>
+        
+        <!-- Step 2a: Card Form -->
+        <div id="payment-card-form" class="hidden flex flex-col gap-3">
+            <div class="text-xs flex flex-col gap-1.5">
+                <label class="text-slate-400 font-bold">Número de Tarjeta</label>
+                <input type="text" id="pay-card-num" placeholder="XXXX XXXX XXXX XXXX" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-cyan-500 text-xs font-mono"/>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <div class="text-xs flex flex-col gap-1.5">
+                    <label class="text-slate-400 font-bold">Vencimiento</label>
+                    <input type="text" id="pay-card-expiry" placeholder="MM/AA" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-cyan-500 text-xs font-mono"/>
+                </div>
+                <div class="text-xs flex flex-col gap-1.5">
+                    <label class="text-slate-400 font-bold">CVV</label>
+                    <input type="password" id="pay-card-cvv" placeholder="***" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-cyan-500 text-xs font-mono"/>
+                </div>
+            </div>
+            <div class="text-xs flex flex-col gap-1.5">
+                <label class="text-slate-400 font-bold">Nombre del Titular</label>
+                <input type="text" id="pay-card-name" placeholder="Nombre completo" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-cyan-500 text-xs"/>
+            </div>
+            <div class="flex gap-2.5 mt-2">
+                <button onclick="backToPaymentOptions()" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-2 rounded-xl text-xs transition">Regresar</button>
+                <button onclick="confirmCardPayment()" class="flex-1 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2 rounded-xl text-xs transition">Confirmar Pago</button>
+            </div>
+        </div>
+        
+        <!-- Step 2b: SPEI Info -->
+        <div id="payment-spei-info" class="hidden flex flex-col gap-3">
+            <div class="bg-slate-950 p-4 border border-slate-800 rounded-xl flex flex-col gap-2 text-xs">
+                <div class="flex justify-between">
+                    <span class="text-slate-400">Banco:</span>
+                    <span class="text-white font-bold">Banco Gemini</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-400">Beneficiario:</span>
+                    <span class="text-white font-bold">Anti-Gravity Ecosistema</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-400">CLABE:</span>
+                    <span class="text-white font-mono font-bold">0123 4567 8901 2345 67</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-slate-400">Referencia:</span>
+                    <span class="text-white font-mono font-bold">AGY-8899</span>
+                </div>
+            </div>
+            <p class="text-[10px] text-slate-400 font-semibold">Realiza tu transferencia desde tu banca móvil y pulsa confirmar para registrar tu forma de pago.</p>
+            <div class="flex gap-2.5 mt-2">
+                <button onclick="backToPaymentOptions()" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-2 rounded-xl text-xs transition">Regresar</button>
+                <button onclick="confirmSPEIPayment()" class="flex-1 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2 rounded-xl text-xs transition">Confirmar SPEI</button>
+            </div>
         </div>
     </div>
 </div>
 
 <!-- HERO SLIDER SECTION (Restored & Cleaned) -->
-<div class="relative w-full h-[600px] sm:h-[650px] overflow-hidden border-b border-slate-800 bg-slate-950">
+<div class="relative w-full h-[600px] sm:h-[650px] overflow-hidden border-b border-slate-800 bg-slate-950 hero-slider-container">
     <!-- Slides Container -->
-    <div class="relative w-full h-full" id="hero-slider">
+    <div class="relative w-full h-full" id="hero-slider" class="hero-slider-container">
         <!-- Slide 1 -->
-        <div class="hero-slide active absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000 ease-in-out z-10 bg-cover bg-center" style="background-image: url('assets/img/slider_ia_human.webp?v=1.0.2');">
+        <div class="hero-slide active absolute inset-0 w-full h-full opacity-100 transition-opacity duration-1000 ease-in-out z-10 bg-cover bg-center" style="background-image: url('assets/img/slider_ia_human.webp?v=1.0.5');">
             <div class="absolute inset-0 bg-slate-950/70"></div>
             <div class="relative z-10 max-w-5xl mx-auto h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 pb-20">
                 <span class="px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
@@ -520,7 +576,7 @@ header.relative { height: 600px; background-color: #020617; }
             </div>
         </div>
         <!-- Slide 2 -->
-        <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 bg-cover bg-center" style="background-image: url('assets/img/slider_warehouse.webp?v=1.0.2');">
+        <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 bg-cover bg-center" style="background-image: url('assets/img/slider_warehouse.webp?v=1.0.5');">
             <div class="absolute inset-0 bg-slate-950/70"></div>
             <div class="relative z-10 max-w-5xl mx-auto h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 pb-20">
                 <span class="px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
@@ -532,13 +588,13 @@ header.relative { height: 600px; background-color: #020617; }
                 <p class="text-sm sm:text-lg text-slate-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
                     Accede a componentes de oportunidad al mejor precio de mayoreo y entrega inmediata.
                 </p>
-                <a class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-3.5 rounded-xl shadow-xl transition text-sm flex items-center gap-2" href="#refacciones">
+                <a class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-8 py-3.5 rounded-xl shadow-xl transition text-sm flex items-center gap-2" onclick="goToCatalogCategory(4);">
                     <i class="fa-solid fa-tags"></i> Explorar Boutique de Refacciones
                 </a>
             </div>
         </div>
         <!-- Slide 3 -->
-        <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 bg-cover bg-center" style="background-image: url('assets/img/slider_service.webp?v=1.0.2');">
+        <div class="hero-slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out z-0 bg-cover bg-center" style="background-image: url('assets/img/slider_service.webp?v=1.0.5');">
             <div class="absolute inset-0 bg-slate-950/70"></div>
             <div class="relative z-10 max-w-5xl mx-auto h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 pb-20">
                 <span class="px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 font-mono text-xs uppercase tracking-widest inline-block mb-4">
@@ -631,37 +687,37 @@ header.relative { height: 600px; background-color: #020617; }
 <div class="animate-marquee flex">
 <div class="flex flex-nowrap">
 <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
-<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Componentes certificados" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_6jn16r6jn16r6jn1.webp?v=1.0.2" width="300" height="300"/></div>
+<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Componentes certificados" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_6jn16r6jn16r6jn1.webp?v=1.0.5" width="300" height="300"/></div>
 <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center"><span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">MURO DE MARCAS GLOBAL<br/>COMPONENTES ORIGINALES CERTIFICADOS</span></div>
 </div>
 <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
-<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Periféricos" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_om0amuom0amuom0a.webp?v=1.0.2" width="300" height="300"/></div>
+<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Periféricos" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_om0amuom0amuom0a.webp?v=1.0.5" width="300" height="300"/></div>
 <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center"><span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">PERIFÉRICOS &amp; ACCESORIOS<br/>DISEÑO ERGONÓMICO Y ALTA PRECISIÓN</span></div>
 </div>
 <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
-<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Calidad certificada" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_e3hrtre3hrtre3hr.webp?v=1.0.2" width="300" height="168"/></div>
+<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Calidad certificada" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_e3hrtre3hrtre3hr.webp?v=1.0.5" width="300" height="168"/></div>
 <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center"><span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">PC CUSTOM LAB | TECH SERVICE<br/>CALIDAD CORPORATIVA CERTIFICADA</span></div>
 </div>
 <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
-<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Servicio técnico" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_9u70jp9u70jp9u70.webp?v=1.0.2" width="300" height="168"/></div>
+<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Servicio técnico" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_9u70jp9u70jp9u70.webp?v=1.0.5" width="300" height="168"/></div>
 <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center"><span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">HONESTIDAD | TRANSPARENCIA<br/>SERVICIO TÉCNICO ESPECIALIZADO</span></div>
 </div>
 </div>
 <div class="flex flex-nowrap">
 <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
-<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Componentes" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_6jn16r6jn16r6jn1.webp?v=1.0.2" width="300" height="300"/></div>
+<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Componentes" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_6jn16r6jn16r6jn1.webp?v=1.0.5" width="300" height="300"/></div>
 <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center"><span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">MURO DE MARCAS GLOBAL<br/>COMPONENTES ORIGINALES CERTIFICADOS</span></div>
 </div>
 <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
-<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Periféricos" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_om0amuom0amuom0a.webp?v=1.0.2" width="300" height="300"/></div>
+<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Periféricos" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_om0amuom0amuom0a.webp?v=1.0.5" width="300" height="300"/></div>
 <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center"><span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">PERIFÉRICOS &amp; ACCESORIOS<br/>DISEÑO ERGONÓMICO Y ALTA PRECISIÓN</span></div>
 </div>
 <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
-<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Calidad" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_e3hrtre3hrtre3hr.webp?v=1.0.2" width="300" height="168"/></div>
+<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Calidad" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_e3hrtre3hrtre3hr.webp?v=1.0.5" width="300" height="168"/></div>
 <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center"><span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">PC CUSTOM LAB | TECH SERVICE<br/>CALIDAD CORPORATIVA CERTIFICADA</span></div>
 </div>
 <div class="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden mx-4 flex flex-col justify-between hover:border-teal-500 transition shadow-xl">
-<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Servicio" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_9u70jp9u70jp9u70.webp?v=1.0.2" width="300" height="168"/></div>
+<div class="w-full h-64 overflow-hidden bg-slate-950"><img alt="Servicio" class="w-full h-full object-cover" loading="lazy" src="assets/img/Gemini_Generated_Image_9u70jp9u70jp9u70.webp?v=1.0.5" width="300" height="168"/></div>
 <div class="bg-teal-950/80 border-t border-teal-500/30 p-4 min-h-[90px] flex items-center justify-center text-center"><span class="text-xs font-mono font-bold text-teal-300 uppercase tracking-wide leading-relaxed">HONESTIDAD | TRANSPARENCIA<br/>SERVICIO TÉCNICO ESPECIALIZADO</span></div>
 </div>
 </div>
@@ -681,7 +737,7 @@ header.relative { height: 600px; background-color: #020617; }
 <div class="lg:col-span-6 relative rounded-3xl overflow-hidden border border-teal-500/30 shadow-2xl shadow-teal-950/20 bg-slate-900/40 p-1 flex items-center justify-center min-h-[300px] sm:min-h-[450px]">
 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-slate-950/40 z-10"></div>
 <div class="w-full h-full object-cover rounded-2xl absolute inset-0 overflow-hidden" id="video-container-1">
-    <img src="assets/img/Female_technician_assembling_gam_202608041518_thumb.webp?v=1.0.2" alt="Ensamble de Computadora" class="w-full h-full object-cover" loading="lazy" width="300" height="168" />
+    <img src="assets/img/Female_technician_assembling_gam_202608041518_thumb.webp?v=1.0.5" alt="Ensamble de Computadora" class="w-full h-full object-cover" loading="lazy" width="300" height="168" />
 </div>
 <div class="absolute bottom-6 left-6 right-6 bg-slate-950/80 backdrop-blur-md border border-teal-500/30 p-4 rounded-xl flex items-center gap-3 z-20">
 <div class="w-2.5 h-2.5 rounded-full bg-teal-400 animate-ping shrink-0"></div>
@@ -1117,7 +1173,7 @@ header.relative { height: 600px; background-color: #020617; }
 </div>
 <div class="space-y-6">
 <div class="relative rounded-2xl overflow-hidden border border-teal-500/25 shadow-2xl bg-slate-950/80 group">
-<img alt="Fachada oficial" class="w-full h-48 sm:h-56 object-cover transition duration-500 group-hover:scale-105" src="assets/img/fachada-oficial.webp?v=1.0.2"/>
+<img alt="Fachada oficial" class="w-full h-48 sm:h-56 object-cover transition duration-500 group-hover:scale-105" src="assets/img/fachada-oficial.webp?v=1.0.5"/>
 </div>
 <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 text-center">
 <i class="fa-solid fa-clock-rotate-left text-4xl text-amber-400 mb-4 block"></i>
@@ -1169,16 +1225,16 @@ header.relative { height: 600px; background-color: #020617; }
 // IMÁGENES REPRESENTATIVAS POR CATEGORÍA (Assets existentes del proyecto)
 // ========================================================================
 const IMG = {
-    gpu: 'assets/img/tigre_gamer_thumb.webp?v=1.0.2',
-    motherboards: 'assets/img/Female_technician_assembling_gam_202608041518_thumb.webp?v=1.0.2',
-    ram: 'assets/img/tigre_mosaico_thumb.webp?v=1.0.2',
-    procesadores: 'assets/img/tigre_atlas_thumb.webp?v=1.0.2',
-    almacenamiento: 'assets/img/slider_warehouse_thumb.webp?v=1.0.2',
-    gabinetes: 'assets/img/tigre_gemini_thumb.webp?v=1.0.2',
-    fuentes: 'assets/img/tigre_corporativo_thumb.webp?v=1.0.2',
-    enfriamiento: 'assets/img/tigre_mantenimiento_thumb.webp?v=1.0.2',
-    monitores: 'assets/img/slider_ia_human_thumb.webp?v=1.0.2',
-    perifericos: 'assets/img/tigre_software_thumb.webp?v=1.0.2',
+    gpu: 'assets/img/tigre_gamer_thumb.webp?v=1.0.5',
+    motherboards: 'assets/img/Female_technician_assembling_gam_202608041518_thumb.webp?v=1.0.5',
+    ram: 'assets/img/tigre_mosaico_thumb.webp?v=1.0.5',
+    procesadores: 'assets/img/tigre_atlas_thumb.webp?v=1.0.5',
+    almacenamiento: 'assets/img/slider_warehouse_thumb.webp?v=1.0.5',
+    gabinetes: 'assets/img/tigre_gemini_thumb.webp?v=1.0.5',
+    fuentes: 'assets/img/tigre_corporativo_thumb.webp?v=1.0.5',
+    enfriamiento: 'assets/img/tigre_mantenimiento_thumb.webp?v=1.0.5',
+    monitores: 'assets/img/slider_ia_human_thumb.webp?v=1.0.5',
+    perifericos: 'assets/img/tigre_software_thumb.webp?v=1.0.5',
 };
 
 // ========================================================================
