@@ -241,18 +241,18 @@
         <button onclick="openOrdersModal()" class="hover:text-amber-400 transition cursor-pointer text-cyan-400 flex items-center gap-1"><i class="fa-solid fa-clock-rotate-left"></i> Mis Pedidos</button>
         <span class="text-slate-800">|</span>
         
-        <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" onclick="const isCig = window.location.pathname.includes('cigarros-bazar'); if (isCig) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Cigarros Bazar</a>
-        <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" onclick="const isDul = window.location.pathname.includes('dulces-bazar'); if (isDul) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Dulces Bazar</a>
-        <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" onclick="const isKio = window.location.pathname.includes('kiosco-digital'); if (isKio) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Kiosco Digital</a>
-        <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" onclick="const isPue = window.location.pathname.includes('mi-puesto-bazar'); if (isPue) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Puesto Bazar</a>
-        <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" onclick="const isPc = window.location.pathname.includes('pc-custom-lab'); if (isPc) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">PC Custom Lab</a>
-        <span class="text-slate-800">|</span>
-        <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" onclick="const isOf = window.location.pathname.includes('ofertas-y-liquidaciones-') || window.location.pathname.includes('ofertas-y-liquidaciones'); if (isOf) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Liquidaciones y Ofertas</a>
-    
+    <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" onclick="const isCig = window.location.pathname.includes('cigarros-bazar'); if (isCig) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Cigarros Bazar</a>
+    <span class="text-slate-800">|</span>
+    <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" onclick="const isDul = window.location.pathname.includes('dulces-bazar'); if (isDul) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Dulces Bazar</a>
+    <span class="text-slate-800">|</span>
+    <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" onclick="const isKio = window.location.pathname.includes('kiosco-digital'); if (isKio) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Kiosco Digital</a>
+    <span class="text-slate-800">|</span>
+    <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" onclick="const isPue = window.location.pathname.includes('mi-puesto-bazar'); if (isPue) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Puesto Bazar</a>
+    <span class="text-slate-800">|</span>
+    <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" onclick="const isPc = window.location.pathname.includes('pc-custom-lab'); if (isPc) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">PC Custom Lab</a>
+    <span class="text-slate-800">|</span>
+    <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" onclick="const isOf = window.location.pathname.includes('ofertas-y-liquidaciones-') || window.location.pathname.includes('ofertas-y-liquidaciones'); if (isOf) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Liquidaciones y Ofertas</a>
+
         <span class="text-slate-800">|</span>
       <button onclick="goToCatalogCategory(4)" class="hover:text-amber-400 transition cursor-pointer">Boutique de Refacciones</button>
       <span class="text-slate-800">|</span>
@@ -450,11 +450,35 @@
             <h3 class="text-sm font-black text-white flex items-center gap-2"><i class="fa-solid fa-clock-rotate-left text-cyan-400"></i> Historial de Mis Pedidos</h3>
             <button class="text-slate-400 hover:text-white cursor-pointer text-xl" onclick="closeOrdersModal()"><i class="fa-solid fa-xmark"></i></button>
         </div>
-        <div class="flex flex-col gap-4 max-h-[60vh] overflow-y-auto pr-1" id="orders-modal-content">
+        <div class="flex flex-col gap-4 max-h-[65vh] overflow-y-auto pr-2 custom-orders-scrollbar" id="orders-modal-content" style="scrollbar-width: thin; scrollbar-color: #06b6d4 #1e293b;">
+            <style>
+                .custom-orders-scrollbar::-webkit-scrollbar {
+                    width: 6px;
+                }
+                .custom-orders-scrollbar::-webkit-scrollbar-track {
+                    background: #1e293b;
+                    border-radius: 9999px;
+                }
+                .custom-orders-scrollbar::-webkit-scrollbar-thumb {
+                    background: #06b6d4;
+                    border-radius: 9999px;
+                }
+            </style>
             <!-- Rendered dynamically -->
         </div>
     </div>
 </div>
+
+
+
+<!-- CART DRAWER (Slide-in right to left) -->
+
+
+<!-- PAYMENT METHOD MODAL (Functional Options) -->
+
+
+<!-- ORDERS HISTORY MODAL -->
+
 
 
 
