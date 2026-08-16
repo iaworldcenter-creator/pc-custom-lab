@@ -1931,17 +1931,6 @@ function startVoiceChat() {
 }
 function handleKeyPress(e) { if (e.key === 'Enter') enviarMensaje(); }
 
-
-}
-function resetSliderInterval() {
-    if (sliderInterval) clearInterval(sliderInterval);
-    sliderInterval = setInterval(nextSlide, 5000);
-}
-function nextSlide() { showSlide(currentSlide + 1); }
-function prevSlide() { showSlide(currentSlide - 1); }
-function goToSlide(index) { showSlide(index); }
-resetSliderInterval();
-
 function registrarLealtad(event) {
     event.preventDefault();
     const email = document.getElementById('lealtad-email').value;
