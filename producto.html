@@ -33,27 +33,47 @@
         const stored = localStorage.getItem("ecosystem_global_cart");
         return stored ? JSON.parse(stored) : [];
     }
-    function saveCart(cart) {
+        function saveCart(cart) {
+        localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
+        updateCartBadge();
+    }
+    
     // FUNCIONES DEL CARRITO SLIDE-OVER DRAWER
     window.openCartDrawer = function() {
         const drawer = document.getElementById("cartDrawer");
         if (drawer) {
+            drawer.style.setProperty("display", "block", "important");
             drawer.classList.remove("hidden");
             renderDrawerCart();
         }
-    }
+    };
     
     window.closeCartDrawer = function() {
         const drawer = document.getElementById("cartDrawer");
-        if (drawer) drawer.classList.add("hidden");
-    }
+        if (drawer) {
+            drawer.style.setProperty("display", "none", "important");
+            drawer.classList.add("hidden");
+        }
+    };
+
+    window.toggleCartDrawer = function() {
+        const drawer = document.getElementById("cartDrawer");
+        if (drawer) {
+            const isHidden = drawer.style.display === 'none' || drawer.classList.contains('hidden');
+            if (isHidden) {
+                window.openCartDrawer();
+            } else {
+                window.closeCartDrawer();
+            }
+        }
+    };
     
     window.removeFromCart = function(sku) {
         let cart = getCart();
         cart = cart.filter(item => item.sku !== sku);
         saveCart(cart);
         renderDrawerCart();
-    }
+    };
     
     window.changeQuantity = function(sku, amount) {
         let cart = getCart();
@@ -66,7 +86,7 @@
         }
         saveCart(cart);
         renderDrawerCart();
-    }
+    };
     
     window.renderDrawerCart = function() {
         const container = document.getElementById("drawer-cart-items");
@@ -78,7 +98,7 @@
         
         if (cart.length === 0) {
             container.innerHTML = `
-                <div class="text-center py-12 text-slate-400">
+                <div class="text-center py-12 text-slate-500">
                     <i class="fa-solid fa-cart-flatbed text-4xl mb-3 block opacity-40"></i>
                     <p class="text-xs font-semibold">Tu carrito está vacío.</p>
                 </div>
@@ -98,12 +118,12 @@
             div.className = "flex items-center gap-3.5 bg-slate-950 border border-slate-800/80 rounded-2xl p-3 shadow-md";
             div.innerHTML = `
                 <div class="w-12 h-16 rounded-lg overflow-hidden bg-slate-900 border border-slate-800 shrink-0">
-                    <img loading="lazy" src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-cover">
+                    <img loading="lazy" src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-contain p-1 bg-slate-50">
                 </div>
                 <div class="flex-1 flex flex-col justify-between min-h-[50px]">
                     <div class="flex justify-between items-start gap-1">
                         <h4 class="text-[11px] font-black text-white leading-tight line-clamp-2">${item.nombre}</h4>
-                        <button onclick="removeFromCart('${item.sku}')" class="text-slate-400 hover:text-red-400 text-xs cursor-pointer">
+                        <button onclick="removeFromCart('${item.sku}')" class="text-slate-500 hover:text-red-400 text-xs cursor-pointer">
                             <i class="fa-solid fa-trash-can"></i>
                         </button>
                     </div>
@@ -121,11 +141,7 @@
         });
         
         if (subtotalDisplay) subtotalDisplay.innerText = `$${subtotal.toFixed(2)} MXN`;
-    }
-
-        localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
-        updateCartBadge();
-    }
+    };
     function updateCartBadge() {
         const cart = getCart();
         let totalQty = 0;
@@ -1192,27 +1208,47 @@
         const stored = localStorage.getItem("ecosystem_global_cart");
         return stored ? JSON.parse(stored) : [];
     }
-    function saveCart(cart) {
+        function saveCart(cart) {
+        localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
+        updateCartBadge();
+    }
+    
     // FUNCIONES DEL CARRITO SLIDE-OVER DRAWER
     window.openCartDrawer = function() {
         const drawer = document.getElementById("cartDrawer");
         if (drawer) {
+            drawer.style.setProperty("display", "block", "important");
             drawer.classList.remove("hidden");
             renderDrawerCart();
         }
-    }
+    };
     
     window.closeCartDrawer = function() {
         const drawer = document.getElementById("cartDrawer");
-        if (drawer) drawer.classList.add("hidden");
-    }
+        if (drawer) {
+            drawer.style.setProperty("display", "none", "important");
+            drawer.classList.add("hidden");
+        }
+    };
+
+    window.toggleCartDrawer = function() {
+        const drawer = document.getElementById("cartDrawer");
+        if (drawer) {
+            const isHidden = drawer.style.display === 'none' || drawer.classList.contains('hidden');
+            if (isHidden) {
+                window.openCartDrawer();
+            } else {
+                window.closeCartDrawer();
+            }
+        }
+    };
     
     window.removeFromCart = function(sku) {
         let cart = getCart();
         cart = cart.filter(item => item.sku !== sku);
         saveCart(cart);
         renderDrawerCart();
-    }
+    };
     
     window.changeQuantity = function(sku, amount) {
         let cart = getCart();
@@ -1225,7 +1261,7 @@
         }
         saveCart(cart);
         renderDrawerCart();
-    }
+    };
     
     window.renderDrawerCart = function() {
         const container = document.getElementById("drawer-cart-items");
@@ -1237,7 +1273,7 @@
         
         if (cart.length === 0) {
             container.innerHTML = `
-                <div class="text-center py-12 text-slate-400">
+                <div class="text-center py-12 text-slate-500">
                     <i class="fa-solid fa-cart-flatbed text-4xl mb-3 block opacity-40"></i>
                     <p class="text-xs font-semibold">Tu carrito está vacío.</p>
                 </div>
@@ -1257,12 +1293,12 @@
             div.className = "flex items-center gap-3.5 bg-slate-950 border border-slate-800/80 rounded-2xl p-3 shadow-md";
             div.innerHTML = `
                 <div class="w-12 h-16 rounded-lg overflow-hidden bg-slate-900 border border-slate-800 shrink-0">
-                    <img loading="lazy" src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-cover">
+                    <img loading="lazy" src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-contain p-1 bg-slate-50">
                 </div>
                 <div class="flex-1 flex flex-col justify-between min-h-[50px]">
                     <div class="flex justify-between items-start gap-1">
                         <h4 class="text-[11px] font-black text-white leading-tight line-clamp-2">${item.nombre}</h4>
-                        <button onclick="removeFromCart('${item.sku}')" class="text-slate-400 hover:text-red-400 text-xs cursor-pointer">
+                        <button onclick="removeFromCart('${item.sku}')" class="text-slate-500 hover:text-red-400 text-xs cursor-pointer">
                             <i class="fa-solid fa-trash-can"></i>
                         </button>
                     </div>
@@ -1280,11 +1316,7 @@
         });
         
         if (subtotalDisplay) subtotalDisplay.innerText = `$${subtotal.toFixed(2)} MXN`;
-    }
-
-        localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
-        updateCartBadge();
-    }
+    };
     function updateCartBadge() {
         const cart = getCart();
         let totalQty = 0;
