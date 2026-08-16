@@ -1681,7 +1681,9 @@ function ejecutarPagoSeguro() {
 // LÓGICA DE COTIZADOR POR NIVELES
 // ========================================================================
 function actualizarPrefiltroNivel() {
-    const nivel = document.getElementById('select-nivel-filtro').value;
+    const selectNivel = document.getElementById('select-nivel-filtro');
+    if (!selectNivel) return;
+    const nivel = selectNivel.value;
     const gabineteSelect = document.getElementById('select-gabinete');
     const psuSelect = document.getElementById('select-psu');
     const moboSelect = document.getElementById('select-mobo');
