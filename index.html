@@ -2057,7 +2057,7 @@ try {
             description: "Obtiene los productos actualmente en el carrito de compras",
             inputSchema: { type: "object", properties: {} },
             execute: async () => {
-                const cart = localStorage.getItem("cart") || sessionStorage.getItem("cart") || "[]";
+                const cart = localStorage.getItem("ecosystem_global_cart") || "[]";
                 return { success: true, cart: JSON.parse(cart) };
             }
         });
@@ -2635,6 +2635,7 @@ window.addEventListener('load', () => { listen({ priority: true }); });
 
 </body>
 </html>
+
 
 
 

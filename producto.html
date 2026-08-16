@@ -30,7 +30,7 @@
 </style>
 <link href="assets/css/tailwind-built.css" rel="stylesheet" />
 <script>    function getCart() {
-        const stored = sessionStorage.getItem("shopping_cart");
+        const stored = localStorage.getItem("ecosystem_global_cart");
         return stored ? JSON.parse(stored) : [];
     }
     function saveCart(cart) {
@@ -123,7 +123,7 @@
         if (subtotalDisplay) subtotalDisplay.innerText = `$${subtotal.toFixed(2)} MXN`;
     }
 
-        sessionStorage.setItem("shopping_cart", JSON.stringify(cart));
+        localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
         updateCartBadge();
     }
     function updateCartBadge() {
@@ -489,30 +489,6 @@
 <!-- PAYMENT METHOD MODAL (Functional Options) -->
 
 
-
-
-<!-- CART DRAWER (Slide-in right to left) -->
-
-    <div class="absolute right-0 top-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col justify-between text-slate-100 p-6 transition-transform duration-300">
-        <div>
-            <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-6">
-                <h3 class="text-base font-black text-white flex items-center gap-2"><i class="fa-solid fa-cart-shopping text-amber-500"></i> Tu Carrito</h3>
-                <button class="text-2xl text-slate-400 hover:text-white cursor-pointer" onclick="closeCartDrawer()"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div class="flex flex-col gap-4 overflow-y-auto max-h-[60vh] pr-1" id="drawer-cart-items"></div>
-        </div>
-        <div class="border-t border-slate-800 pt-6 mt-6 flex flex-col gap-4">
-            <div class="flex justify-between items-center">
-                <span class="text-xs font-mono text-slate-400 uppercase font-bold">Subtotal:</span>
-                <span class="text-lg font-black text-white" id="drawer-subtotal">$0.00 MXN</span>
-            </div>
-            <div class="grid grid-cols-2 gap-3">
-                <button class="bg-slate-850 hover:bg-slate-800 text-slate-300 border border-slate-800 hover:text-white font-bold py-3 rounded-xl text-xs transition" onclick="closeCartDrawer()">Seguir comprando</button>
-                <a class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 rounded-xl text-xs text-center transition flex items-center justify-center gap-1.5" href="checkout.html" id="drawer-checkout-btn">Comprar ahora <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <!-- MODAL DE REGISTRO DE DIRECCIÓN (GLASSMORPHISM) -->
@@ -1213,7 +1189,7 @@
         renderProductDetail();
     });
     function getCart() {
-        const stored = sessionStorage.getItem("shopping_cart");
+        const stored = localStorage.getItem("ecosystem_global_cart");
         return stored ? JSON.parse(stored) : [];
     }
     function saveCart(cart) {
@@ -1306,7 +1282,7 @@
         if (subtotalDisplay) subtotalDisplay.innerText = `$${subtotal.toFixed(2)} MXN`;
     }
 
-        sessionStorage.setItem("shopping_cart", JSON.stringify(cart));
+        localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
         updateCartBadge();
     }
     function updateCartBadge() {
@@ -1469,3 +1445,4 @@
 
 </body>
 </html>
+
