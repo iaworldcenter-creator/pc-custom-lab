@@ -5,8 +5,21 @@
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js')
-      .then(reg => console.log('Service Worker registered successfully'))
+    navigator.serviceWorker.register('./sw.js?v=1.0.9')
+      .then(reg => {
+        console.log('Service Worker registered successfully');
+        reg.onupdatefound = () => {
+          const installingWorker = reg.installing;
+          if (installingWorker) {
+            installingWorker.onstatechange = () => {
+              if (installingWorker.state === 'activated') {
+                console.log('New Service Worker activated. Reloading page...');
+                window.location.reload();
+              }
+            };
+          }
+        };
+      })
       .catch(err => console.log('Service Worker registration failed:', err));
   });
 }
