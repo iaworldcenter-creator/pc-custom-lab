@@ -5,16 +5,18 @@
 <script>
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js?v=1.0.9')
+    navigator.serviceWorker.register('./sw.js')
       .then(reg => {
         console.log('Service Worker registered successfully');
         reg.onupdatefound = () => {
           const installingWorker = reg.installing;
           if (installingWorker) {
             installingWorker.onstatechange = () => {
-              if (installingWorker.state === 'activated') {
-                console.log('New Service Worker activated. Reloading page...');
-                window.location.reload();
+              if (installingWorker.state === 'installed') {
+                if (navigator.serviceWorker.controller) {
+                  console.log('New content is available, auto-reloading page...');
+                  window.location.reload();
+                }
               }
             };
           }
