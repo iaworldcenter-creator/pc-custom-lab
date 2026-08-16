@@ -1629,20 +1629,21 @@ const menuBackdrop = document.getElementById('menu-backdrop');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 
 function toggleMenu() {
+    if (!mobileMenu) return;
     if (mobileMenu.classList.contains('menu-closed')) {
         mobileMenu.classList.remove('menu-closed');
         mobileMenu.classList.add('menu-open');
-        menuBackdrop.classList.remove('hidden');
+        if (menuBackdrop) menuBackdrop.classList.remove('hidden');
     } else {
         mobileMenu.classList.remove('menu-open');
         mobileMenu.classList.add('menu-closed');
-        menuBackdrop.classList.add('hidden');
+        if (menuBackdrop) menuBackdrop.classList.add('hidden');
     }
 }
 
-menuBtn.addEventListener('click', toggleMenu);
-closeBtn.addEventListener('click', toggleMenu);
-menuBackdrop.addEventListener('click', toggleMenu);
+if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
+if (menuBackdrop) menuBackdrop.addEventListener('click', toggleMenu);
 mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
 
 // ========================================================================
