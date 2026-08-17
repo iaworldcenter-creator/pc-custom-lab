@@ -294,7 +294,7 @@
     // Usa localStorage con clave global unificada para conservar los artículos en todo el ecosistema
     function getCart() {
         const stored = localStorage.getItem("ecosystem_global_cart");
-        return stored ? JSON.parse(stored) : [];
+        return stored ? JSON.parse(stored).filter(item => (typeof item.quantity === 'number' ? item.quantity : 1) > 0) : [];
     }
 
     function saveCart(cart) {

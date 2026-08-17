@@ -1427,7 +1427,10 @@ function saveCart(cart) {
 function updateCartBadge() {
     const cart = getCart();
     let totalQty = 0;
-    cart.forEach(item => totalQty += (item.quantity || 1));
+    cart.forEach(item => {
+        const qty = typeof item.quantity === 'number' ? item.quantity : 1;
+        totalQty += qty;
+    });
     const badge = document.getElementById("cart-badge-count");
     if (badge) badge.innerText = totalQty;
     const badgeMobile = document.getElementById("cart-badge-count-mobile");
@@ -1465,62 +1468,71 @@ window.removeFromCart = function(sku) {
     renderDrawerCart();
 }
 window.changeQuantity = function(sku, amount) {
-    let cart = getCart();
-    const item = cart.find(i => i.sku === sku);
-    if (item) {
-        item.quantity = (item.quantity || 1) + amount;
-        if (item.quantity <= 0) {
-            cart = cart.filter(i => i.sku !== sku);
+        let cart = getCart();
+        const item = cart.find(i => i.sku === sku);
+        if (item) {
+            item.quantity = Math.max(0, (item.quantity || 1) + amount);
         }
+        saveCart(cart);
+        renderDrawerCart();
     }
-    saveCart(cart);
-    renderDrawerCart();
-}
 
 window.renderDrawerCart = function() {
-    const container = document.getElementById("drawer-cart-items");
-    const subtotalDisplay = document.getElementById("drawer-subtotal");
-    if (!container) return;
-    
-    const cart = getCart();
-    container.innerHTML = "";
-    
-    if (cart.length === 0) {
-        container.innerHTML = `<div class="text-center py-12 text-slate-500"><i class="fa-solid fa-cart-flatbed text-4xl mb-3 block opacity-40"></i><p class="text-xs font-semibold">Tu carrito está vacío.</p></div>`;
-        if (subtotalDisplay) subtotalDisplay.innerText = "$0.00 MXN";
-        return;
-    }
-    
-    let subtotal = 0;
-    cart.forEach(item => {
-        const price = parseFloat(item.precio);
-        const qty = item.quantity || 1;
-        subtotal += price * qty;
-        const div = document.createElement("div");
-        div.className = "flex items-center gap-3.5 bg-slate-950 border border-slate-800/80 rounded-2xl p-3 shadow-md";
-        div.innerHTML = `
-            <div class="w-12 h-16 rounded-lg overflow-hidden bg-slate-900 border border-slate-800 shrink-0">
-                <img loading="lazy" src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-contain p-1 bg-slate-950">
-            </div>
-            <div class="flex-1 flex flex-col justify-between min-h-[50px]">
-                <div class="flex justify-between items-start gap-1">
-                    <h4 class="text-[11px] font-black text-white leading-tight line-clamp-2">${item.nombre}</h4>
-                    <button onclick="removeFromCart('${item.sku}')" class="text-slate-500 hover:text-red-400 text-xs cursor-pointer"><i class="fa-solid fa-trash-can"></i></button>
+        const container = document.getElementById("drawer-cart-items");
+        const subtotalDisplay = document.getElementById("drawer-subtotal");
+        if (!container) return;
+        
+        const cart = getCart();
+        container.innerHTML = "";
+        
+        if (cart.length === 0) {
+            container.innerHTML = `<div class="text-center py-12 text-slate-500"><i class="fa-solid fa-cart-flatbed text-4xl mb-3 block opacity-40"></i><p class="text-xs font-semibold">Tu carrito está vacío.</p></div>`;
+            if (subtotalDisplay) subtotalDisplay.innerText = "$0.00 MXN";
+            return;
+        }
+        
+        let subtotal = 0;
+        cart.forEach(item => {
+            const price = parseFloat(item.precio);
+            const qty = typeof item.quantity === 'number' ? item.quantity : 1;
+            if (qty > 0) {
+                subtotal += price * qty;
+            }
+            
+            const isZero = qty === 0;
+            const div = document.createElement("div");
+            if (isZero) {
+                div.className = "flex items-center gap-3.5 bg-slate-950 border border-slate-900 rounded-2xl p-3 shadow-md opacity-40 text-slate-500";
+            } else {
+                div.className = "flex items-center gap-3.5 bg-slate-950 border border-slate-800/80 rounded-2xl p-3 shadow-md";
+            }
+            
+            div.innerHTML = `
+                <div class="w-12 h-16 rounded-lg overflow-hidden bg-slate-900 border border-slate-800 shrink-0">
+                    <img loading="lazy" src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-contain p-1 bg-slate-950">
                 </div>
-                <div class="flex justify-between items-center mt-1">
-                    <span class="text-xs font-black text-amber-400">$${price.toFixed(2)}</span>
-                    <div class="flex items-center gap-2.5 bg-slate-900 border border-slate-800 rounded-lg px-2 py-0.5">
-                        <button onclick="changeQuantity('${item.sku}', -1)" class="text-[10px] text-slate-400 hover:text-white cursor-pointer"><i class="fa-solid fa-minus"></i></button>
-                        <span class="text-[11px] font-mono font-bold w-3 text-center">${qty}</span>
-                        <button onclick="changeQuantity('${item.sku}', 1)" class="text-[10px] text-slate-400 hover:text-white cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+                <div class="flex-1 flex flex-col justify-between min-h-[50px]">
+                    <div class="flex justify-between items-start gap-1">
+                        <h4 class="text-[11px] font-black ${isZero ? 'text-slate-500' : 'text-white'} leading-tight line-clamp-2">${item.nombre}</h4>
+                        <button onclick="removeFromCart('${item.sku}')" class="text-slate-500 hover:text-red-400 text-xs cursor-pointer"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                    <div class="flex justify-between items-center mt-1">
+                        <span class="text-xs font-black ${isZero ? 'text-slate-500 line-through' : 'text-amber-400'}">$${price.toFixed(2)}</span>
+                        <div class="flex items-center gap-2.5 bg-slate-900 border border-slate-800 rounded-lg px-2 py-0.5">
+                            <button onclick="changeQuantity('${item.sku}', -1)" class="text-[10px] text-slate-400 hover:text-white cursor-pointer"><i class="fa-solid fa-minus"></i></button>
+                            <span class="text-[11px] font-mono font-bold w-3 text-center ${isZero ? 'text-red-400 font-black' : 'text-slate-300'}">${qty}</span>
+                            <button onclick="changeQuantity('${item.sku}', 1)" class="text-[10px] text-slate-400 hover:text-white cursor-pointer"><i class="fa-solid fa-plus"></i></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        `;
-        container.appendChild(div);
-    });
-    if (subtotalDisplay) subtotalDisplay.innerText = `$${subtotal.toFixed(2)} MXN`;
-}
+            `;
+            container.appendChild(div);
+        });
+        
+        if (subtotalDisplay) {
+            subtotalDisplay.innerText = `$${subtotal.toFixed(2)} MXN`;
+        }
+    }
 
 // ========================================================================
 // ESTADO GLOBAL: PAGINACIÓN ACTUAL
