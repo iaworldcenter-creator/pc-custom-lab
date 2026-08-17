@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PC Custom Lab | Venta y Catálogo en Guadalajara</title>
+<link href="assets/css/tailwind-built.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        :root { 
+            --crema: #FFFDF9; 
+            --texto: #1F2937; 
+        }
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; 
+            background: #05070f; 
+            color: #f3f4f6; 
+            font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+<style>
+        @media (max-width: 768px) {
+            video { display: none !important; }
+            .mobile-video-fallback { display: block !important; }
+        }
+    </style>
+<meta content="Bienvenido a PC Custom Lab. Compra en línea con entrega local express en Guadalajara Centro. Pedro Moreno 501 A." name="description"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ComputerStore",
+  "name": "PC Custom Lab",
+  "image": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp",
+  "telephone": "+52 33 3727 1440",
+  "url": "https://iaworldcenter-creator.github.io/pc-custom-lab/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Pedro Moreno 501 A",
+    "addressLocality": "Guadalajara",
+    "addressRegion": "Jalisco",
+    "postalCode": "44100",
+    "addressCountry": "MX"
+  }
+}</script></head>
+<body class="bg-[#05070f] text-slate-100 min-h-screen flex flex-col"><h1 class="sr-only">PC Custom Lab</h1>
+<!-- HEADER DE CHECKOUT ESTILO TECH / PC CUSTOM LAB -->
+<header class="w-full bg-slate-950 text-white py-3.5 px-6 md:px-12 flex justify-between items-center border-b border-slate-800 sticky top-0 z-50 shadow-lg">
+<!-- LOGO Y MARCA (ENLACE PURO A INDEX.HTML) -->
+<a class="flex items-center gap-3 group" href="index.html">
+<img alt="Mascota oficial Tigre inteligente de PC Custom Lab en Guadalajara" class="w-10 h-10 rounded-full object-cover border border-amber-500 group-hover:scale-105 transition" decoding="async" loading="lazy" src="assets/img/mascota_tigre.webp"/>
+<span class="text-sm md:text-base font-black text-amber-400 tracking-wider uppercase group-hover:text-amber-300 transition">Anti-Gravity Checkout</span>
+</a>
+<!-- ACCESO RÁPIDO AL CARRITO DE COMPRAS -->
+<a class="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 px-3.5 py-1.5 rounded-xl transition group" href="#seccion-carrito">
+<div class="relative">
+<i class="fa-solid fa-cart-shopping text-amber-400 text-base group-hover:scale-110 transition"></i>
+<span class="absolute -top-2 -right-2 bg-amber-500 text-slate-950 text-[10px] font-black rounded-full px-1.5 py-0.2 min-w-[16px] text-center" id="header-cart-badge">0</span>
+</div>
+<span class="text-xs font-bold text-slate-200">Ver mi Pedido</span>
+</a>
+<!-- ENLACE DIRECTO AL CATÁLOGO -->
+<a class="text-xs text-slate-400 hover:text-white transition" href="index.html">Volver al catálogo</a>
+</header>
+<main class="flex-1 w-full max-w-6xl mx-auto py-8 px-4">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- Columna Izquierda (Spans 8/12) -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- SECCIÓN 1: DOMICILIO DE ENTREGA Y REGISTRO -->
+<div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm flex flex-col gap-4">
+<div class="flex justify-between items-center border-b border-slate-800 pb-3">
+<h2 class="text-base font-black text-white flex items-center gap-2">
+<span class="text-amber-400">1.</span> Domicilio de entrega y registro
+                    </h2>
+<button aria-label="Cambiar" class="hidden text-xs font-bold text-blue-400 hover:underline" id="btn-edit-address" onclick="toggleAddressForm()" type="button">Cambiar</button>
+</div>
+<!-- Vista Resumen de Dirección Guardada -->
+<div class="hidden bg-slate-900/60 border border-slate-800 rounded-xl p-4 text-sm flex flex-col gap-1.5" id="address-summary-view">
+<span class="font-bold text-white" id="summary-address-name"></span>
+<span class="text-slate-300" id="summary-address-street"></span>
+<span class="text-slate-400 font-mono" id="summary-address-phone"></span>
+</div>
+<!-- Formulario de Registro de Domicilio -->
+<form class="flex flex-col gap-3.5" id="addressForm" onsubmit="saveDeliveryAddress(event)">
+<p class="text-xs text-slate-400 mb-1">Registra tus datos de entrega para recibir tu pedido de manera efectiva.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Nombre Completo</label>
+<input aria-label="Nombre completo del comprador" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputName" placeholder="Ej. Juan Pérez" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Teléfono (10 DÍGITOS)</label>
+<input aria-label="Número de teléfono a 10 dígitos" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputPhone" placeholder="Ej. 3337271440" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Correo Electrónico</label>
+<input aria-label="Correo electrónico de contacto" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputEmail" placeholder="Ej. cliente@correo.com" required="" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Calle de Entrega</label>
+<input aria-label="Calle y número de domicilio" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputStreet" placeholder="Ej. Av. Juárez 450" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Número (EXT/INT)</label>
+<input aria-label="Ej. 450 Int 3" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputNum" placeholder="Ej. 450 Int 3" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Colonia</label>
+<input aria-label="Colonia de entrega" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputColonia" placeholder="Ej. Centro" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Código Postal</label>
+<input aria-label="Código postal de 5 dígitos" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputZip" placeholder="Ej. 44100" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Ciudad y Estado</label>
+<input aria-label="Ciudad y estado de la entrega" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputCity" placeholder="Ej. Guadalajara, Jalisco" required="" type="text"/>
+</div>
+<button aria-label="Registrar Datos de Envío" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-3 rounded-xl uppercase text-xs tracking-wider transition shadow-md mt-2 cursor-pointer" type="submit">
+                        Registrar Datos de Envío
+                    </button>
+</form>
+</div>
+<!-- SECCIÓN 2: MÉTODO DE PAGO -->
+<div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm flex flex-col gap-4">
+<div class="flex justify-between items-center border-b border-slate-800 pb-3">
+<h3 class="text-base font-black text-white flex items-center gap-2">
+<span class="text-amber-400">2.</span> Método de pago
+                    </h3>
+<button aria-label="Cambiar" class="text-xs font-bold text-blue-400 hover:underline" onclick="openPaymentModal()" type="button">Cambiar</button>
+</div>
+<!-- Resumen del Método Seleccionado -->
+<div class="text-sm text-slate-400" id="payment-status-display">
+                    No se ha registrado un método de pago. Haz clic en "Cambiar" para agregar uno.
+                </div>
+<button aria-label="Registrar Método de Pago" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-3 rounded-xl uppercase text-xs tracking-wider transition shadow-md cursor-pointer" onclick="openPaymentModal()" type="button">
+                    Registrar Método de Pago
+                </button>
+</div>
+<!-- SECCIÓN 3: REVISAR PRODUCTOS Y OPCIONES DE ENVÍO -->
+<div class="bg-slate-950/80 p-6 rounded-2xl border-2 border-amber-500/60 shadow-md flex flex-col gap-5 scroll-mt-20" id="seccion-carrito">
+<div class="border-b border-slate-800 pb-3 flex justify-between items-center">
+<h3 class="text-lg font-black text-white flex items-center gap-2">
+<i class="fa-solid fa-cart-shopping text-amber-400"></i>
+<span class="text-amber-400">3.</span> Revisar productos seleccionados
+                    </h3>
+</div>
+<!-- Contenedor Dinámico de Productos en el Carrito -->
+<div class="flex flex-col gap-4" id="checkout-products-container">
+<!-- Las filas de productos se renderizan dinámicamente vía JavaScript -->
+</div>
+<!-- CONTADOR Y DESGLOSE LOCAL EN SECCIÓN 3 -->
+<div class="border-t-2 border-slate-800 pt-5 flex flex-col gap-4">
+<div class="text-base font-black text-slate-200" id="active-items-count">
+                        Cargando productos...
+                    </div>
+<!-- CUADRO DE PRECIO PREVIO Y TOTAL EN GRANDE -->
+<div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col gap-3 shadow-inner">
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-400 font-semibold">Subtotal de artículos:</span>
+<span class="font-bold text-white text-base" id="section3-subtotal">$0.00 MXN</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-400 font-semibold">Costo de Envío:</span>
+<span class="font-bold text-emerald-400 text-base" id="section3-shipping">Gratis</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-slate-400 font-semibold">Descuento Cashback (5%):</span>
+<span class="font-bold text-emerald-400 text-base" id="section3-cashback">-$0.00 MXN</span>
+</div>
+<div class="border-t border-slate-800 pt-3 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+<div>
+<span class="text-xs uppercase tracking-wider font-mono font-bold text-slate-400 block">Total Final a Pagar:</span>
+<span class="text-3xl font-black text-red-500" id="section3-total">$0.00 MXN</span>
+</div>
+<span class="bg-emerald-950/80 text-emerald-300 font-bold text-xs px-3 py-1 rounded-full border border-emerald-700" id="section3-savings-tag">
+                                ¡Ahorro del 5% aplicado!
+                            </span>
+</div>
+</div>
+<!-- BOTONES DE ACCIÓN FINAL EN SECCIÓN 3 -->
+<div class="flex flex-col gap-3 mt-2">
+<!-- Botón Amarillo Principal de Cierre de Compra -->
+<button aria-label="Completar pedido y autorizar cargo de compra" class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-[#0F1111] font-black py-4 px-6 rounded-2xl text-base text-center shadow-lg border-2 border-[#FCD200] transition active:scale-98 cursor-pointer flex items-center justify-center gap-2.5" onclick="processFinalOrder()" type="button">
+                            🚀 ¡Proceder al Pago y Finalizar Compra! <i class="fa-solid fa-arrow-right text-lg"></i>
+</button>
+<!-- ENLACE PURO Y DIRECTO AL CATÁLOGO -->
+<a class="w-full bg-slate-900 hover:bg-slate-800 text-slate-200 font-bold py-3.5 px-6 rounded-xl text-sm text-center border border-slate-700 transition flex items-center justify-center gap-2 cursor-pointer" href="index.html">
+<i class="fa-solid fa-cart-plus"></i> Seguir comprando en el catálogo
+                        </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Columna Derecha: Resumen de Pedido (Spans 4/12) -->
+<div class="lg:col-span-4 flex flex-col gap-4 sticky top-20">
+<div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm flex flex-col gap-4">
+<button aria-label="Completar pedido y autorizar cargo de compra" class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-[#0F1111] font-black py-3.5 rounded-full text-sm text-center border border-[#FCD200] shadow transition active:scale-97 cursor-pointer" onclick="processFinalOrder()" type="button">
+                    🚀 ¡Autorizar Cargo y Completar Compra! 🚀
+                </button>
+<a class="w-full bg-slate-900 hover:bg-slate-800 text-slate-100 font-bold py-2.5 rounded-full text-xs text-center border border-slate-700 shadow-sm transition active:scale-97 block" href="index.html">
+                    Seguir comprando
+                </a>
+<p class="text-[11px] text-slate-400 text-center leading-tight">
+                    Al realizar tu pedido, aceptas nuestro aviso de privacidad y las condiciones de uso local de Anti-Gravity.
+                </p>
+<!-- Banner precio especial mayoreo -->
+<div class="bg-blue-950/30 border border-blue-900/50 rounded-xl p-3.5 text-xs text-blue-200 leading-relaxed flex flex-col gap-1">
+<strong class="font-black text-blue-300 flex items-center gap-1">
+<i class="fa-solid fa-tag"></i> Descuento de Mayoreo Activo
+                    </strong>
+<span>Compra 10 artículos o más del catálogo y recibe precio especial preferencial con un 15% de descuento sobre el subtotal directo.</span>
+</div>
+<div class="border-t border-slate-800/80 pt-4 flex flex-col gap-2.5">
+<h4 class="text-sm font-black text-white">Resumen del pedido</h4>
+<div class="flex justify-between text-xs text-slate-300">
+<span>Productos:</span>
+<span class="font-bold text-white" id="summary-subtotal">$0.00 MXN</span>
+</div>
+<div class="flex justify-between text-xs text-slate-300">
+<span>Envío:</span>
+<span class="font-bold text-emerald-400" id="summary-shipping">Gratis</span>
+</div>
+<div class="flex justify-between text-xs text-emerald-400 font-bold">
+<span>Cashback (5%):</span>
+<span id="summary-cashback">-$0.00 MXN</span>
+</div>
+<div class="border-t border-slate-800/80 pt-2 flex justify-between text-base font-black text-red-500">
+<span>Total del pedido:</span>
+<span id="summary-total">$0.00 MXN</span>
+</div>
+</div>
+<div class="bg-amber-950/40 border border-amber-800/60 rounded-xl p-3 text-xs text-amber-200 leading-relaxed">
+                    🎉 <strong>Ahorro Total:</strong> Te estás ahorrando <strong class="text-amber-400" id="summary-savings">$0.00 MXN</strong> (5% Cashback aplicado inmediatamente).
+                </div>
+</div>
+</div>
+</div>
+</main>
+<!-- MODAL REGISTRAR MÉTODO DE PAGO -->
+<div class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-slate-950/80 px-4" id="paymentModal">
+<div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-md w-full shadow-2xl relative text-slate-100">
+<h3 class="text-base font-black text-white mb-3 flex items-center gap-2">
+<i class="fa-solid fa-credit-card text-amber-500"></i> Registrar Método de Pago
+        </h3>
+<p class="text-xs text-slate-400 mb-4">Selecciona tu método de pago preferido para liquidar tus compras.</p>
+<form class="flex flex-col gap-3" id="paymentForm" onsubmit="savePaymentMethod(event)">
+<div class="flex gap-4 mb-2">
+<label class="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
+<input aria-label="Campo de entrada de texto" checked="" class="text-amber-500" name="payType" onchange="togglePaymentFields()" type="radio" value="card"/>
+<span>Tarjeta (Crédito/Débito)</span>
+</label>
+<label class="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
+<input aria-label="Campo de entrada de texto" class="text-amber-500" name="payType" onchange="togglePaymentFields()" type="radio" value="cash"/>
+<span>Efectivo / Transferencia</span>
+</label>
+</div>
+<div class="flex flex-col gap-3" id="cardFields">
+<div>
+<label class="block text-xs uppercase font-mono text-slate-400 mb-1">Nombre del Titular</label>
+<input aria-label="Nombre del titular impreso en la tarjeta" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500" id="payHolder" placeholder="Ej. Juan Pérez" type="text"/>
+</div>
+<div>
+<label class="block text-xs uppercase font-mono text-slate-400 mb-1">Número de Tarjeta</label>
+<input aria-label="Número de tarjeta de 16 dígitos" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500" id="payNumber" maxlength="16" placeholder="4532 XXXX XXXX 1234" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block text-xs uppercase font-mono text-slate-400 mb-1">Vencimiento (MM/AA)</label>
+<input aria-label="Fecha de vencimiento en formato Mes Mes Año Año" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500" id="payExp" placeholder="12/29" type="text"/>
+</div>
+<div>
+<label class="block text-xs uppercase font-mono text-slate-400 mb-1">CVV</label>
+<input aria-label="Código de seguridad de 3 dígitos de la tarjeta" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500" id="payCvv" maxlength="4" placeholder="123" type="password"/>
+</div>
+</div>
+</div>
+<div class="flex gap-3 mt-4">
+<button aria-label="Cancelar" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-2.5 rounded-xl text-xs transition cursor-pointer" onclick="closePaymentModal()" type="button">Cancelar</button>
+<button aria-label="Guardar Método" class="flex-1 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2.5 rounded-xl text-xs transition cursor-pointer" type="submit">Guardar Método</button>
+</div>
+</form>
+</div>
+</div>
+<!-- LÓGICA JAVASCRIPT CON MEMORIA DE SESIÓN (sessionStorage) -->
+<script>
+    // Usa localStorage con clave global unificada para conservar los artículos en todo el ecosistema
+    function getCart() {
+        const stored = localStorage.getItem("ecosystem_global_cart");
+        return stored ? JSON.parse(stored).filter(item => (typeof item.quantity === 'number' ? item.quantity : 1) > 0) : [];
+    }
+
+    function saveCart(cart) {
+        localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
+        renderCheckoutProducts();
+    }
+
+    // RENDERIZADO DE PRODUCTOS EN LA SECCIÓN 3
+    function renderCheckoutProducts() {
+        const container = document.getElementById("checkout-products-container");
+        if (!container) return;
+
+        const cart = getCart();
+        container.innerHTML = "";
+
+        let totalCartQuantity = 0;
+
+        if (cart.length === 0) {
+            container.innerHTML = `
+                <div class="text-center py-12 text-slate-400 bg-slate-900/60 rounded-2xl border border-slate-800">
+                    <i class="fa-solid fa-cart-shopping text-4xl mb-3 opacity-30 block"></i>
+                    <p class="text-sm font-semibold">Tu carrito de compras está vacío.</p>
+                </div>
+            `;
+            updateHeaderBadge(0);
+            updateOrderSummary();
+            return;
+        }
+
+        let activeItemsCount = 0;
+
+        cart.forEach(item => {
+            const qty = item.quantity !== undefined ? item.quantity : 1;
+            const isZero = qty <= 0;
+            const price = parseFloat(item.precio || 0);
+            const totalItemPrice = price * qty;
+
+            if (!isZero) {
+                activeItemsCount += qty;
+                totalCartQuantity += qty;
+            }
+
+            let imgPath = item.imagen || 'assets/img/mascota_tigre.webp';
+
+            const card = document.createElement("div");
+            card.className = `flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-5 rounded-2xl border transition duration-200 ${
+                isZero ? 'bg-slate-900/40 border-slate-800 opacity-50 grayscale' : 'bg-slate-900/70 border-slate-800 shadow-sm'
+            }`;
+
+            card.innerHTML = `
+                <!-- Foto y Detalles Principales -->
+                <div class="flex items-start gap-4 w-full md:w-auto flex-1">
+                    <div class="w-20 h-24 rounded-xl overflow-hidden bg-slate-950 border border-slate-800 shrink-0 p-1 flex items-center justify-center">
+                        <img loading="lazy" src="${imgPath}" alt="${item.nombre}" class="w-full h-full object-contain">
+                    </div>
+                    
+                    <div class="flex flex-col gap-1 flex-1">
+                        <span class="text-xs font-mono font-bold text-slate-400">${item.sku || 'SKU'}</span>
+                        <h4 class="text-base font-black text-white leading-tight">${item.nombre}</h4>
+                        <p class="text-sm text-slate-300 leading-snug">${item.descripcion || ''}</p>
+                        
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="text-xs font-bold text-slate-400">Precio unitario:</span>
+                            <span class="text-sm font-black text-white">$${price.toFixed(2)} MXN</span>
+                            ${item.descuento ? `<span class="bg-red-950/80 text-red-400 font-bold text-xs px-2 py-0.5 rounded border border-red-800/80">${item.descuento}</span>` : ''}
+                        </div>
+
+                        <!-- CONTROLES PEGADOS ABAJO DE LAS LETRAS DE DESCRIPCIÓN -->
+                        <div class="flex items-center gap-3 mt-3">
+                            <div class="flex items-center gap-2 bg-slate-950 border border-slate-800 rounded-xl px-3 py-1">
+                                <button onclick="updateQty('${item.sku}', -1)" type="button" class="text-sm font-bold text-slate-400 hover:text-white cursor-pointer">
+                                    <i class="fa-solid fa-minus"></i>
+                                </button>
+                                <span class="text-sm font-mono font-bold text-white w-6 text-center">${qty}</span>
+                                <button onclick="updateQty('${item.sku}', 1)" type="button" class="text-sm font-bold text-slate-400 hover:text-white cursor-pointer">
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </div>
+
+                            ${isZero ? `
+                                <button onclick="toggleItemZeroState('${item.sku}')" type="button" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-3.5 py-1.5 rounded-xl text-xs transition shadow-sm cursor-pointer flex items-center gap-1.5">
+                                    <i class="fa-solid fa-plus"></i> Volver a agregar
+                                </button>
+                            ` : `
+                                <button onclick="toggleItemZeroState('${item.sku}')" type="button" class="bg-red-600 hover:bg-red-500 text-white font-bold px-3.5 py-1.5 rounded-xl text-xs transition shadow-sm cursor-pointer flex items-center gap-1.5">
+                                    <i class="fa-solid fa-trash-can"></i> Eliminar
+                                </button>
+                            `}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRECIO TOTAL DE ESTE PRODUCTO A LA DERECHA -->
+                <div class="flex flex-row md:flex-col items-center md:items-end justify-between w-full md:w-auto border-t md:border-t-0 pt-3 md:pt-0 border-slate-800 shrink-0">
+                    <span class="text-xs uppercase font-mono font-bold text-slate-400">Importe:</span>
+                    <span class="text-xl font-black text-white">$${totalItemPrice.toFixed(2)} MXN</span>
+                </div>
+            `;
+
+            container.appendChild(card);
+        });
+
+        // Actualizar contador superior de badge
+        updateHeaderBadge(totalCartQuantity);
+
+        // Actualizar contador de productos activos
+        const countDisplay = document.getElementById("active-items-count");
+        if (countDisplay) {
+            countDisplay.innerText = `Llevas ${activeItemsCount} producto(s) activo(s) en tu carrito de compra.`;
+        }
+
+        updateOrderSummary();
+    }
+
+    function updateHeaderBadge(count) {
+        const badge = document.getElementById("header-cart-badge");
+        if (badge) badge.innerText = count;
+    }
+
+    // LÓGICA DE INCREMENTO / DECREMENTO Y ESTADO CERO
+    function updateQty(sku, amount) {
+        let cart = getCart();
+        const item = cart.find(i => i.sku === sku);
+        if (item) {
+            let current = item.quantity !== undefined ? item.quantity : 1;
+            item.quantity = Math.max(0, current + amount);
+        }
+        saveCart(cart);
+    }
+
+    function toggleItemZeroState(sku) {
+        let cart = getCart();
+        const item = cart.find(i => i.sku === sku);
+        if (item) {
+            let current = item.quantity !== undefined ? item.quantity : 1;
+            item.quantity = current > 0 ? 0 : 1;
+        }
+        saveCart(cart);
+    }
+
+    // CÁLCULO DEL RESUMEN FINANCIERO (SECCIÓN 3 Y COLUMNA DERECHA)
+    function updateOrderSummary() {
+        const cart = getCart();
+        let subtotal = 0;
+
+        cart.forEach(item => {
+            const qty = item.quantity !== undefined ? item.quantity : 1;
+            if (qty > 0) {
+                subtotal += (parseFloat(item.precio || 0) * qty);
+            }
+        });
+
+        // Regla de Envío: < $500 MXN es $50.00 MXN, >= $500 MXN es Gratis ($0.00)
+        let shipping = 0;
+        if (subtotal > 0 && subtotal < 500) {
+            shipping = 50;
+        }
+
+        // Cashback del 5%
+        const cashback = subtotal * 0.05;
+        const total = Math.max(0, subtotal + shipping - cashback);
+
+        // 1. ACTUALIZAR RECUADRO LOCAL EN SECCIÓN 3
+        document.getElementById("section3-subtotal").innerText = `$${subtotal.toFixed(2)} MXN`;
+        
+        const sec3Shipping = document.getElementById("section3-shipping");
+        if (shipping > 0) {
+            sec3Shipping.innerText = `$${shipping.toFixed(2)} MXN`;
+            sec3Shipping.className = "font-bold text-white text-base";
+        } else {
+            sec3Shipping.innerText = "¡Gratis! (Compra mayor a $500)";
+            sec3Shipping.className = "font-bold text-emerald-400 text-base";
+        }
+
+        document.getElementById("section3-cashback").innerText = `-$${cashback.toFixed(2)} MXN`;
+        document.getElementById("section3-total").innerText = `$${total.toFixed(2)} MXN`;
+        document.getElementById("section3-savings-tag").innerText = `¡Te estás ahorrando $${cashback.toFixed(2)} MXN en esta compra!`;
+
+        // 2. ACTUALIZAR BARRA LATERAL DERECHA
+        document.getElementById("summary-subtotal").innerText = `$${subtotal.toFixed(2)} MXN`;
+        
+        const shippingEl = document.getElementById("summary-shipping");
+        if (shipping > 0) {
+            shippingEl.innerText = `$${shipping.toFixed(2)} MXN`;
+            shippingEl.className = "font-bold text-white";
+        } else {
+            shippingEl.innerText = "Gratis";
+            shippingEl.className = "font-bold text-emerald-400";
+        }
+
+        document.getElementById("summary-cashback").innerText = `-$${cashback.toFixed(2)} MXN`;
+        document.getElementById("summary-total").innerText = `$${total.toFixed(2)} MXN`;
+        
+        const summarySavingsEl = document.getElementById("summary-savings");
+        if (summarySavingsEl) summarySavingsEl.innerText = `$${cashback.toFixed(2)} MXN`;
+    }
+
+    // SECCIÓN 1: LÓGICA DE DIRECCIÓN Y DOMICILIO
+    function saveDeliveryAddress(e) {
+        e.preventDefault();
+        const address = {
+            name: document.getElementById("inputName").value,
+            phone: document.getElementById("inputPhone").value,
+            email: document.getElementById("inputEmail").value,
+            street: document.getElementById("inputStreet").value,
+            num: document.getElementById("inputNum").value,
+            colonia: document.getElementById("inputColonia").value,
+            zip: document.getElementById("inputZip").value,
+            city: document.getElementById("inputCity").value
+        };
+
+        localStorage.setItem("user_delivery_address", JSON.stringify(address));
+        loadSavedAddress();
+    }
+
+    function loadSavedAddress() {
+        const stored = localStorage.getItem("user_delivery_address");
+        const form = document.getElementById("addressForm");
+        const summary = document.getElementById("address-summary-view");
+        const btnEdit = document.getElementById("btn-edit-address");
+
+        if (stored) {
+            const data = JSON.parse(stored);
+            document.getElementById("summary-address-name").innerText = `👤 ${data.name}`;
+            document.getElementById("summary-address-street").innerText = `📍 ${data.street} ${data.num || ''}, Col. ${data.colonia}, ${data.city} (CP ${data.zip})`;
+            document.getElementById("summary-address-phone").innerText = `📞 Tel: ${data.phone} | ✉️ Email: ${data.email}`;
+
+            form.classList.add("hidden");
+            summary.classList.remove("hidden");
+            btnEdit.classList.remove("hidden");
+        } else {
+            form.classList.remove("hidden");
+            summary.classList.add("hidden");
+            btnEdit.classList.add("hidden");
+        }
+    }
+
+    function toggleAddressForm() {
+        document.getElementById("addressForm").classList.remove("hidden");
+        document.getElementById("address-summary-view").classList.add("hidden");
+    }
+
+    // SECCIÓN 2: LÓGICA DEL MÉTODO DE PAGO Y MODAL
+    function openPaymentModal() {
+        document.getElementById("paymentModal").classList.remove("hidden");
+    }
+
+    function closePaymentModal() {
+        document.getElementById("paymentModal").classList.add("hidden");
+    }
+
+    function togglePaymentFields() {
+        const type = document.querySelector('input[name="payType"]:checked').value;
+        const cardFields = document.getElementById("cardFields");
+        if (type === "card") {
+            cardFields.classList.remove("hidden");
+        } else {
+            cardFields.classList.add("hidden");
+        }
+    }
+
+    function savePaymentMethod(e) {
+        e.preventDefault();
+        const type = document.querySelector('input[name="payType"]:checked').value;
+        let payData = { type: type };
+
+        if (type === "card") {
+            payData.holder = document.getElementById("payHolder").value;
+            payData.number = document.getElementById("payNumber").value;
+            payData.exp = document.getElementById("payExp").value;
+        }
+
+        localStorage.setItem("user_payment_method", JSON.stringify(payData));
+        closePaymentModal();
+        loadSavedPayment();
+    }
+
+    function loadSavedPayment() {
+        const stored = localStorage.getItem("user_payment_method");
+        const display = document.getElementById("payment-status-display");
+
+        if (stored) {
+            const data = JSON.parse(stored);
+            if (data.type === "card") {
+                const last4 = data.number ? data.number.slice(-4) : 'XXXX';
+                display.innerHTML = `
+                    <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3.5 text-sm text-slate-200 flex items-center gap-3">
+                        <i class="fa-solid fa-credit-card text-emerald-400 text-lg"></i>
+                        <div>
+                            <span class="font-bold block">Tarjeta registrada: **** ${last4}</span>
+                            <span class="text-xs text-slate-400">Titular: ${data.holder || 'Cliente'}</span>
+                        </div>
+                    </div>
+                `;
+            } else {
+                display.innerHTML = `
+                    <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3.5 text-sm text-slate-200 flex items-center gap-3">
+                        <i class="fa-solid fa-money-bill-wave text-emerald-400 text-lg"></i>
+                        <span class="font-bold">Pago contra entrega / Transferencia bancaria</span>
+                    </div>
+                `;
+            }
+        }
+    }
+
+    // ENVÍO DE LA ORDEN DE COMPRA A WHATSAPP Y REGISTRO DE PEDIDO
+        function clearEntireCart() {
+        if (confirm("¿Estás seguro de que deseas vaciar todo el carrito?")) {
+            localStorage.removeItem("ecosystem_global_cart");
+            if (typeof renderCheckoutProducts === 'function') renderCheckoutProducts();
+            if (typeof updateOrderSummary === 'function') updateOrderSummary();
+            if (typeof updateHeaderBadge === 'function') updateHeaderBadge();
+        }
+    }
+
+    function processFinalOrder() {
+        const addressStored = localStorage.getItem("user_delivery_address");
+        if (!addressStored) {
+            alert("Por favor registra primero tu domicilio de entrega en la Sección 1.");
+            toggleAddressForm();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+        }
+
+        const cart = getCart();
+        const activeCart = cart.filter(i => (i.quantity || 1) > 0);
+
+        if (activeCart.length === 0) {
+            alert("Tu carrito no tiene artículos activos para comprar.");
+            return;
+        }
+
+        const address = JSON.parse(addressStored);
+        const paymentStored = localStorage.getItem("user_payment_method");
+        const payment = paymentStored ? JSON.parse(paymentStored) : { type: "Efectivo/Transferencia" };
+
+        let subtotal = 0;
+        let productListText = "";
+
+        activeCart.forEach((item, index) => {
+            const qty = item.quantity || 1;
+            const price = parseFloat(item.precio || 0);
+            subtotal += (price * qty);
+            productListText += `${index + 1}. ${item.nombre} (x${qty}) - $${(price * qty).toFixed(2)} MXN\n`;
+        });
+
+        let shipping = (subtotal > 0 && subtotal < 500) ? 50 : 0;
+        let cashback = subtotal * 0.05;
+        let total = subtotal + shipping - cashback;
+
+        // Guardar el historial del pedido con timestamp de expiración (3 días)
+        const orderHistoryItem = {
+            id: "ORD-" + Math.floor(100000 + Math.random() * 900000),
+            date: new Date().toISOString(),
+            expiresAt: Date.now() + (3 * 24 * 60 * 60 * 1000), // 72 horas de vigencia
+            items: activeCart,
+            total: total,
+            address: address
+        };
+
+        let existingOrders = JSON.parse(localStorage.getItem("user_order_history") || "[]");
+        existingOrders.push(orderHistoryItem);
+        localStorage.setItem("user_order_history", JSON.stringify(existingOrders));
+
+        let msg = `Hola, quiero confirmar mi compra en PC Custom Lab:\n\n`;
+        msg += `📦 *PRODUCTOS SOLICITADOS:*\n${productListText}\n`;
+        msg += `💰 Subtotal: $${subtotal.toFixed(2)} MXN\n`;
+        msg += `🚚 Envío: ${shipping > 0 ? `$${shipping.toFixed(2)} MXN` : 'Gratis'}\n`;
+        msg += `🎁 Cashback 5%: -$${cashback.toFixed(2)} MXN\n`;
+        msg += `💳 *TOTAL A PAGAR: $${total.toFixed(2)} MXN*\n\n`;
+        msg += `📍 *DOMICILIO DE ENTREGA:*\n${address.name}\n${address.street} ${address.num || ''}, Col. ${address.colonia}, ${address.city}\nTel: ${address.phone}\n\n`;
+        msg += `💳 Método de pago: ${payment.type === 'card' ? 'Tarjeta Registrada' : 'Efectivo / Transferencia'}`;
+
+        const waUrl = `https://wa.me/523337271440?text=${encodeURIComponent(msg)}`;
+        window.open(waUrl, "_blank");
+    }
+
+    // INICIALIZACIÓN AL CARGAR LA PÁGINA Y LIMPIDEZ DE PEDIDOS EXPIRADOS
+    document.addEventListener("DOMContentLoaded", () => {
+        // Limpiar pedidos mayores a 3 días
+        let orders = JSON.parse(localStorage.getItem("user_order_history") || "[]");
+        const now = Date.now();
+        orders = orders.filter(o => o.expiresAt && o.expiresAt > now);
+        localStorage.setItem("user_order_history", JSON.stringify(orders));
+
+        loadSavedAddress();
+        loadSavedPayment();
+        renderCheckoutProducts();
+
+        if (window.location.hash === '#seccion-carrito' || window.location.hash === '#carrito') {
+            setTimeout(() => {
+                const el = document.getElementById('seccion-carrito');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+        }
+    });
+</script>
+</body>
+</html>
