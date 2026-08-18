@@ -315,159 +315,189 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
 <main class="flex-grow py-8 px-4 md:px-12 bg-slate-950 text-slate-100">
     <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        <!-- Lado Izquierdo: Formularios Pasos 1 y 2 (Colapsables) -->
+        <!-- Lado Izquierdo: Pasos 1 y 2 (Colapsables) -->
         <div class="lg:col-span-7 flex flex-col gap-6">
             
             <!-- SECCIÓN 1: Domicilio de Entrega -->
             <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-md transition-all duration-300" id="step-delivery-card">
-                <div class="flex justify-between items-center mb-4">
+                <div class="flex justify-between items-center mb-4 border-b border-slate-850 pb-2">
                     <h2 class="text-base font-black text-white flex items-center gap-2">
                         <span class="w-6 h-6 rounded-full bg-cyan-500 text-slate-950 flex items-center justify-center text-xs font-black">1</span>
                         Domicilio de Entrega (Registro Obligatorio)
                     </h2>
-                    <button onclick="editDelivery()" id="delivery-edit-btn" class="hidden text-xs text-cyan-400 hover:underline font-bold focus:outline-none">Editar</button>
+                    <button onclick="editDelivery()" id="delivery-edit-btn" class="hidden text-xs text-cyan-400 hover:underline font-bold focus:outline-none min-h-[32px]">Editar</button>
                 </div>
                 
                 <!-- Formulario -->
                 <form id="delivery-form" onsubmit="saveDelivery(event)" class="flex flex-col gap-3">
                     <div>
                         <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Nombre Completo</label>
-                        <input type="text" id="devName" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                        <input type="text" id="devName" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500 min-h-[48px]">
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div>
                             <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Teléfono (10 dígitos)</label>
-                            <input type="tel" id="devPhone" required pattern="[0-9]{10}" placeholder="Ej: 3337271440" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                            <input type="tel" id="devPhone" required pattern="[0-9]{10}" title="Por favor ingresa un número de 10 dígitos sin espacios" placeholder="Ej: 3337271440" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500 min-h-[48px]">
                         </div>
                         <div>
-                            <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Correo Electrónico</label>
-                            <input type="email" id="devEmail" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                            <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Correo electrónico (Acumula 5% de cashback - Opcional)</label>
+                            <input type="email" id="devEmail" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500 min-h-[48px]">
                         </div>
                     </div>
                     <div>
                         <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Calle y Número</label>
-                        <input type="text" id="devStreet" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                        <input type="text" id="devStreet" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500 min-h-[48px]">
                     </div>
                     <div class="grid grid-cols-3 gap-3">
                         <div class="col-span-2">
                             <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Colonia</label>
-                            <input type="text" id="devColonia" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                            <input type="text" id="devColonia" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500 min-h-[48px]">
                         </div>
                         <div>
                             <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Código Postal</label>
-                            <input type="text" id="devCp" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                            <input type="text" id="devCp" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500 min-h-[48px]">
                         </div>
                     </div>
                     <div>
                         <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Ciudad / Estado</label>
-                        <input type="text" id="devCity" required value="Guadalajara, Jalisco" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                        <input type="text" id="devCity" required value="Guadalajara, Jalisco" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500 min-h-[48px]">
                     </div>
-                    <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider transition mt-2 cursor-pointer">Guardar Datos de Entrega</button>
+                    <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider transition mt-2 cursor-pointer min-h-[48px]">Guardar Datos de Entrega</button>
                 </form>
                 
                 <!-- Resumen Colapsado -->
-                <div id="delivery-summary" class="hidden flex flex-col gap-1.5 text-xs text-slate-300">
-                    <div class="font-bold text-white" id="sum-name"></div>
+                <div id="delivery-summary" class="hidden flex flex-col gap-1.5 text-xs text-slate-300 bg-slate-950/60 p-4 rounded-xl border border-slate-850">
+                    <div class="font-bold text-white flex items-center gap-1.5"><i class="fa-solid fa-user text-cyan-400"></i> <span id="sum-name"></span></div>
                     <div id="sum-phone-email"></div>
                     <div id="sum-address"></div>
                 </div>
             </div>
 
-            <!-- SECCIÓN 2: Método de Pago -->
-            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-md transition-all duration-300 opacity-60" id="step-payment-card">
-                <div class="flex justify-between items-center mb-4">
+            <!-- SECCIÓN 2: Método de Pago (Interactivo con Acordeón) -->
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-md transition-all duration-300 opacity-60 flex flex-col gap-4" id="step-payment-card">
+                <div class="flex justify-between items-center border-b border-slate-850 pb-2">
                     <h2 class="text-base font-black text-white flex items-center gap-2">
                         <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 flex items-center justify-center text-xs font-black" id="step-payment-badge">2</span>
                         Método de Pago
                     </h2>
-                    <button onclick="editPayment()" id="payment-edit-btn" class="hidden text-xs text-cyan-400 hover:underline font-bold focus:outline-none">Editar</button>
+                    <button onclick="editPayment()" id="payment-edit-btn" class="hidden text-xs text-cyan-400 hover:underline font-bold focus:outline-none min-h-[32px]">Editar</button>
                 </div>
                 
-                <!-- Selectores de pago -->
-                <div id="payment-options" class="hidden flex-col gap-4">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <button onclick="selectPaymentMethod('Efectivo')" class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 hover:border-cyan-500 transition cursor-pointer active:scale-95">
-                            <i class="fa-solid fa-money-bill-1 text-emerald-400 text-2xl"></i>
-                            <span class="text-xs font-bold text-white">Efectivo / OXXO / Depósito</span>
-                        </button>
-                        <button onclick="toggleCardForm()" class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 hover:border-cyan-500 transition cursor-pointer active:scale-95">
-                            <i class="fa-solid fa-credit-card text-cyan-400 text-2xl"></i>
-                            <span class="text-xs font-bold text-white">Tarjeta de Crédito / Débito</span>
-                        </button>
-                    </div>
+                <!-- Selector Acordeón Interactivo -->
+                <div id="payment-options" class="hidden flex flex-col gap-4">
+                    <p class="text-[11px] text-slate-400 leading-tight">Elige tu forma de pago preferida:</p>
                     
-                    <!-- Tarjeta Formulario -->
-                    <form id="card-payment-form" onsubmit="saveCardDetails(event)" class="hidden border-t border-slate-800 pt-4 flex flex-col gap-3">
-                        <div>
-                            <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Nombre en la Tarjeta</label>
-                            <input type="text" id="cardName" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400">
-                        </div>
-                        <div>
-                            <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Número de Tarjeta</label>
-                            <input type="text" id="cardNum" placeholder="4152 ...." required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400">
-                        </div>
-                        <div class="grid grid-cols-2 gap-3">
+                    <!-- Opción 1: Tarjeta -->
+                    <div class="border border-slate-800 rounded-2xl overflow-hidden bg-slate-950/40">
+                        <button type="button" onclick="togglePaymentAccordion('card')" class="w-full px-4 py-3 flex items-center justify-between hover:bg-slate-950/60 transition cursor-pointer text-left min-h-[48px]">
+                            <span class="flex items-center gap-2.5 text-xs font-bold text-white">
+                                <i class="fa-solid fa-credit-card text-cyan-400 text-base"></i> Tarjeta de Crédito / Débito
+                            </span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-[10px]" id="arrow-card"></i>
+                        </button>
+                        <div id="accordion-card-form" class="hidden border-t border-slate-850 p-4 flex flex-col gap-3">
                             <div>
-                                <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Vencimiento</label>
-                                <input type="text" id="cardExp" placeholder="MM/AA" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400">
+                                <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Nombre del Titular</label>
+                                <input type="text" id="cardName" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400 min-h-[48px]">
                             </div>
                             <div>
-                                <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">CVV</label>
-                                <input type="text" id="cardCvv2" placeholder="123" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400">
+                                <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Número de Tarjeta</label>
+                                <input type="text" id="cardNum" placeholder="4152 ...." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400 min-h-[48px]">
                             </div>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Vencimiento</label>
+                                    <input type="text" id="cardExp" placeholder="MM/AA" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400 min-h-[48px]">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">CVV</label>
+                                    <input type="text" id="cardCvv2" placeholder="123" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400 min-h-[48px]">
+                                </div>
+                            </div>
+                            <button type="button" onclick="saveCardDetails(event)" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider transition cursor-pointer min-h-[48px]">Confirmar Tarjeta</button>
                         </div>
-                        <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider transition cursor-pointer">Registrar Tarjeta</button>
-                    </form>
+                    </div>
+
+                    <!-- Opción 2: Efectivo OXXO -->
+                    <div class="border border-slate-800 rounded-2xl overflow-hidden bg-slate-950/40">
+                        <button type="button" onclick="togglePaymentAccordion('cash')" class="w-full px-4 py-3 flex items-center justify-between hover:bg-slate-950/60 transition cursor-pointer text-left min-h-[48px]">
+                            <span class="flex items-center gap-2.5 text-xs font-bold text-white">
+                                <i class="fa-solid fa-money-bill-1 text-emerald-400 text-base"></i> Efectivo contra entrega / Depósito OXXO
+                            </span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-[10px]" id="arrow-cash"></i>
+                        </button>
+                        <div id="accordion-cash-form" class="hidden border-t border-slate-850 p-4 flex flex-col gap-2 text-xs text-slate-300">
+                            <p>Realiza tu pago en efectivo directamente al repartidor o genera un código para pagar en caja en cualquier tienda OXXO.</p>
+                            <button type="button" onclick="selectPaymentMethod('Efectivo OXXO')" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider transition mt-2 cursor-pointer min-h-[48px]">Confirmar Efectivo</button>
+                        </div>
+                    </div>
+
+                    <!-- Opción 3: SPEI -->
+                    <div class="border border-slate-800 rounded-2xl overflow-hidden bg-slate-950/40">
+                        <button type="button" onclick="togglePaymentAccordion('spei')" class="w-full px-4 py-3 flex items-center justify-between hover:bg-slate-950/60 transition cursor-pointer text-left min-h-[48px]">
+                            <span class="flex items-center gap-2.5 text-xs font-bold text-white">
+                                <i class="fa-solid fa-building-columns text-blue-400 text-base"></i> Transferencia Bancaria (SPEI)
+                            </span>
+                            <i class="fa-solid fa-chevron-down text-slate-400 text-[10px]" id="arrow-spei"></i>
+                        </button>
+                        <div id="accordion-spei-form" class="hidden border-t border-slate-850 p-4 flex flex-col gap-2 text-xs text-slate-300">
+                            <p>Transfiere desde tu aplicación bancaria. Te mostraremos la CLABE de 18 dígitos para registrar el depósito de inmediato.</p>
+                            <button type="button" onclick="selectPaymentMethod('Transferencia SPEI')" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider transition mt-2 cursor-pointer min-h-[48px]">Confirmar Transferencia (SPEI)</button>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Resumen Pago -->
-                <div id="payment-summary" class="hidden text-xs text-emerald-400 font-bold"></div>
+                <div id="payment-summary" class="hidden text-xs text-emerald-400 font-bold bg-slate-950/60 p-4 rounded-xl border border-slate-850"></div>
             </div>
         </div>
         
-        <!-- Lado Derecho: Carrito y Resumen de Totales (Pasos 3) -->
-        <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-md flex flex-col gap-5 text-slate-100">
+        <!-- Lado Derecho: Carrito y Resumen (Paso 3) -->
+        <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-md flex flex-col gap-5 text-slate-100 w-full">
             <h2 class="text-base font-black text-white flex items-center gap-2 border-b border-slate-800 pb-3">
                 <span class="w-6 h-6 rounded-full bg-cyan-500 text-slate-950 flex items-center justify-center text-xs font-black">3</span>
                 Revisión e Importes
             </h2>
             
             <!-- Lista de productos -->
-            <div class="flex flex-col gap-3 overflow-y-auto max-h-[30vh] pr-1" id="checkout-cart-items">
+            <div class="flex flex-col gap-3 overflow-y-auto max-h-[35vh] pr-1" id="checkout-cart-items">
                 <!-- Dinámico -->
             </div>
             
-            <!-- Totales -->
-            <div class="border-t border-slate-800 pt-4 flex flex-col gap-2.5 text-xs text-slate-300">
-                <div class="flex justify-between">
-                    <span>Subtotal de Artículos:</span>
-                    <span class="font-bold text-white" id="co-subtotal">$0.00 MXN</span>
+            <!-- Totales y Botones de Cierre -->
+            <div class="border-t border-slate-800 pt-4 mt-2 flex flex-col gap-6 w-full">
+                <!-- Desglose Alineado a la Derecha -->
+                <div class="flex flex-col gap-2.5 w-full text-right border-b border-slate-800/60 pb-4">
+                    <div class="flex justify-between text-xs text-slate-400">
+                        <span>Subtotal de Artículos:</span>
+                        <span class="font-bold text-white text-xs" id="co-subtotal">$0.00 MXN</span>
+                    </div>
+                    <div class="flex justify-between text-xs text-amber-500 hidden animate-fade-in" id="co-wholesale-row">
+                        <span>Descuento de Mayoreo (15%):</span>
+                        <span class="font-bold" id="co-wholesale-disc">-$0.00 MXN</span>
+                    </div>
+                    <div class="flex justify-between text-xs text-slate-400">
+                        <span>Gastos de Envío Local:</span>
+                        <span class="font-bold text-white text-xs" id="co-shipping">$0.00 MXN</span>
+                    </div>
+                    <div class="flex flex-col gap-1 border-t border-slate-850 pt-2.5 mt-1" id="co-cashback-row">
+                        <!-- Dinámico -->
+                    </div>
+                    <div class="flex justify-between items-center border-t border-slate-850 pt-3 mt-1 text-right">
+                        <span class="text-xs font-black text-white uppercase tracking-wider">TOTAL A PAGAR:</span>
+                        <span class="text-lg font-black text-cyan-400 text-right" id="co-total">$0.00 MXN</span>
+                    </div>
                 </div>
-                <div class="flex justify-between hidden" id="co-wholesale-row">
-                    <span class="text-amber-500 font-bold">Descuento de Mayoreo (15%):</span>
-                    <span class="text-amber-500 font-bold" id="co-wholesale-disc">-$0.00 MXN</span>
+
+                <!-- Botones de Acción Alineados a la Izquierda -->
+                <div class="flex flex-row gap-3 w-full items-center justify-start">
+                    <button onclick="window.location.href='index.html'" class="bg-slate-800 hover:bg-slate-750 text-white font-bold px-4 py-3.5 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1.5 active:scale-95 min-h-[48px]">
+                        Seguir comprando
+                    </button>
+                    <button onclick="finalizePurchase()" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-5 py-3.5 rounded-xl text-xs uppercase tracking-wider transition cursor-pointer flex items-center justify-center gap-1.5 active:scale-95 shadow-md shadow-amber-500/10 min-h-[48px]">
+                        Autorizar Cargo y Completar Compra <i class="fa-solid fa-circle-check"></i>
+                    </button>
                 </div>
-                <div class="flex justify-between">
-                    <span>Gastos de Envío Local:</span>
-                    <span class="font-bold text-white" id="co-shipping">$0.00 MXN</span>
-                </div>
-                <div class="flex flex-col gap-1 border-t border-slate-850 pt-2.5 mt-1" id="co-cashback-row">
-                    <!-- Dinámico -->
-                </div>
-                <div class="flex justify-between items-center border-t border-slate-800 pt-3 mt-1">
-                    <span class="text-sm font-black text-white uppercase tracking-wider">Total a Pagar:</span>
-                    <span class="text-xl font-black text-cyan-400" id="co-total">$0.00 MXN</span>
-                </div>
-            </div>
-            
-            <!-- Botones de Acción -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
-                <button onclick="window.location.href='index.html'" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3.5 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1.5 active:scale-95">
-                    <i class="fa-solid fa-arrow-left"></i> Seguir comprando
-                </button>
-                <button onclick="finalizePurchase()" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3.5 rounded-xl text-xs uppercase tracking-wider transition cursor-pointer flex items-center justify-center gap-1.5 active:scale-95 shadow-md shadow-amber-500/10">
-                    Confirmar Compra <i class="fa-solid fa-circle-check"></i>
-                </button>
             </div>
         </div>
     </div>
@@ -781,7 +811,8 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
             document.getElementById("delivery-edit-btn").classList.remove("hidden");
             
             document.getElementById("sum-name").innerText = data.name;
-            document.getElementById("sum-phone-email").innerText = `📞 ${data.phone}  |  ✉️ ${data.email}`;
+            const displayEmail = data.email ? data.email : "No registrado";
+            document.getElementById("sum-phone-email").innerHTML = `📞 ${data.phone}  |  ✉️ ${displayEmail}`;
             document.getElementById("sum-address").innerText = `📍 ${data.street}, Col. ${data.colonia}, CP ${data.cp}, ${data.city}`;
         }
     }
@@ -799,26 +830,48 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
         }
     }
 
+    // ACCORDION TOGGLE METHOD
+    window.togglePaymentAccordion = function(type) {
+        const sections = ['card', 'cash', 'spei'];
+        sections.forEach(s => {
+            const form = document.getElementById(`accordion-${s}-form`);
+            const arrow = document.getElementById(`arrow-${s}`);
+            if (form && arrow) {
+                if (s === type) {
+                    const isHidden = form.classList.contains("hidden");
+                    if (isHidden) {
+                        form.classList.remove("hidden");
+                        arrow.classList.replace("fa-chevron-down", "fa-chevron-up");
+                    } else {
+                        form.classList.add("hidden");
+                        arrow.classList.replace("fa-chevron-up", "fa-chevron-down");
+                    }
+                } else {
+                    form.classList.add("hidden");
+                    arrow.classList.replace("fa-chevron-up", "fa-chevron-down");
+                }
+            }
+        });
+    };
+
     // STEP 2: PAYMENT METHOD HANDLERS
     window.selectPaymentMethod = function(method) {
         localStorage.setItem("user_payment_method", method);
         showPaymentSummary();
     };
     
-    window.toggleCardForm = function() {
-        document.getElementById("card-payment-form").classList.remove("hidden");
-    };
-    
     window.saveCardDetails = function(event) {
         event.preventDefault();
         const name = document.getElementById("cardName").value;
         const num = document.getElementById("cardNum").value;
-        const last4 = num.replace(/\\s/g, '').slice(-4) || "4152";
-        
+        if (!name || !num) {
+            alert("Completa los datos de la tarjeta.");
+            return;
+        }
+        const last4 = num.replace(/\s/g, '').slice(-4) || "4152";
         const type = num.startsWith("5") ? "Mastercard" : "Visa";
-        localStorage.setItem("user_payment_method", `${type} (**** ${last4})`);
         
-        document.getElementById("card-payment-form").classList.add("hidden");
+        localStorage.setItem("user_payment_method", `${type} (**** ${last4}) - ${name}`);
         showPaymentSummary();
     };
     
@@ -836,26 +889,27 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
             document.getElementById("payment-edit-btn").classList.remove("hidden");
             
             document.getElementById("payment-summary").innerHTML = `
-                <div class="flex items-center gap-2 bg-slate-950/60 p-4 rounded-xl border border-slate-800">
-                    <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
                     <div>
-                        <span class="text-[10px] text-slate-500 uppercase tracking-wider block font-bold">Forma Registrada</span>
-                        <span class="text-white font-bold">${method}</span>
+                        <span class="text-[9px] text-slate-500 uppercase tracking-wider block font-bold">Forma Registrada</span>
+                        <span class="text-white font-bold text-xs">${method}</span>
                     </div>
                 </div>
             `;
         }
     }
 
-    // STEP 3: RENDER CHECKOUT CART
+    // STEP 3: RENDER CHECKOUT CART WITH SOFT DELETE RULE
     window.changeQty = function(sku, amount) {
         let cart = getCart();
         const item = cart.find(i => i.sku === sku);
         if (item) {
-            item.quantity += amount;
-            if (item.quantity < 0) item.quantity = 0;
-            if (item.quantity === 0) {
-                cart = cart.filter(i => i.sku !== sku);
+            if (item.quantity === 0 && amount > 0) {
+                item.quantity = 1;
+            } else {
+                item.quantity += amount;
+                if (item.quantity < 0) item.quantity = 0;
             }
         }
         saveCart(cart);
@@ -863,7 +917,10 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
     
     window.deleteItem = function(sku) {
         let cart = getCart();
-        cart = cart.filter(i => i.sku !== sku);
+        const item = cart.find(i => i.sku === sku);
+        if (item) {
+            item.quantity = 0;
+        }
         saveCart(cart);
     };
     
@@ -885,38 +942,61 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
         let totalItemsQty = 0;
         
         cart.forEach(item => {
+            const isInactive = (item.quantity === 0);
             const sub = parseFloat(item.precio) * item.quantity;
             subtotal += sub;
-            totalItemsQty += item.quantity;
+            
+            if (!isInactive) {
+                totalItemsQty += item.quantity;
+            }
             
             let imgUrl = item.imagen;
             if (imgUrl && imgUrl.startsWith('assets/img')) {
                 imgUrl = './' + imgUrl;
             }
             
-            let minusButtonHtml = `<button onclick="changeQty('${item.sku}', -1)" class="w-5 h-5 rounded bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer">-</button>`;
-            if (item.quantity === 1) {
-                minusButtonHtml = `<button onclick="changeQty('${item.sku}', -1)" class="w-5 h-5 rounded bg-red-655 text-white hover:bg-red-600 transition flex items-center justify-center text-[10px] cursor-pointer" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>`;
+            let rowClass = "flex items-center justify-between gap-3 bg-slate-950/40 p-2.5 rounded-xl border border-slate-850 transition-all duration-300 animate-fade-in";
+            let controlsHtml = "";
+            let statusTagHtml = "";
+            
+            if (isInactive) {
+                rowClass += " opacity-40 grayscale";
+                statusTagHtml = `<span class="bg-red-500/10 border border-red-500/30 text-red-500 font-bold px-1.5 py-0.5 rounded text-[8px] uppercase tracking-wider block mt-0.5 w-max">Producto desactivado</span>`;
+                controlsHtml = `
+                    <button onclick="changeQty('${item.sku}', 1)" class="px-2.5 py-1.5 rounded bg-emerald-500 hover:bg-emerald-450 text-slate-950 font-black text-[10px] transition cursor-pointer flex items-center gap-1 active:scale-95 min-h-[32px]">
+                        Reactivar <i class="fa-solid fa-plus text-[9px]"></i>
+                    </button>
+                `;
+            } else {
+                let minusButtonHtml = `<button onclick="changeQty('${item.sku}', -1)" class="w-8 h-8 rounded bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer min-w-[32px] min-h-[32px]">-</button>`;
+                if (item.quantity === 1) {
+                    minusButtonHtml = `<button onclick="deleteItem('${item.sku}')" class="w-8 h-8 rounded bg-red-650 text-white hover:bg-red-600 transition flex items-center justify-center text-[10px] cursor-pointer min-w-[32px] min-h-[32px]" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>`;
+                }
+                
+                controlsHtml = `
+                    <div class="flex items-center gap-1 bg-slate-900 border border-slate-800 rounded p-0.5">
+                        ${minusButtonHtml}
+                        <span class="text-white font-black text-xs w-4 text-center">${item.quantity}</span>
+                        <button onclick="changeQty('${item.sku}', 1)" class="w-8 h-8 rounded bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer min-w-[32px] min-h-[32px]">+</button>
+                    </div>
+                    <span class="text-cyan-400 font-bold min-w-[70px] text-right text-xs">$${sub.toFixed(2)}</span>
+                    <button onclick="deleteItem('${item.sku}')" class="text-slate-500 hover:text-red-500 text-xs cursor-pointer shrink-0 transition min-w-[32px] min-h-[32px]" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>
+                `;
             }
             
             const div = document.createElement("div");
-            div.className = "flex items-center justify-between gap-3 bg-slate-950/40 p-2.5 rounded-xl border border-slate-850";
+            div.className = rowClass;
             div.innerHTML = `
                 <div class="flex items-center gap-2.5 min-w-0 flex-1">
                     <img src="${imgUrl}" class="w-8 h-8 object-contain bg-white rounded p-0.5 shrink-0" />
                     <div class="min-w-0 flex-1">
                         <span class="text-white font-bold block truncate text-xs">${item.nombre}</span>
-                        <span class="text-[9px] font-mono text-slate-500 uppercase">${item.sku}</span>
+                        <span class="text-[9px] font-mono text-slate-500 uppercase block">${item.sku}</span>
+                        ${statusTagHtml}
                     </div>
                 </div>
                 <div class="flex items-center gap-2.5 shrink-0">
-                    <div class="flex items-center gap-1 bg-slate-900 border border-slate-800 rounded p-0.5">
-                        ${minusButtonHtml}
-                        <span class="text-white font-black text-xs w-4 text-center">${item.quantity}</span>
-                        <button onclick="changeQty('${item.sku}', 1)" class="w-5 h-5 rounded bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer">+</button>
-                    </div>
-                    <span class="text-cyan-400 font-bold min-w-[70px] text-right">$${sub.toFixed(2)} MXN</span>
-                    <button onclick="deleteItem('${item.sku}')" class="text-slate-500 hover:text-red-500 text-xs cursor-pointer shrink-0 transition"><i class="fa-solid fa-trash-can"></i></button>
+                    ${controlsHtml}
                 </div>
             `;
             container.appendChild(div);
@@ -978,9 +1058,10 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
         const address = localStorage.getItem("user_delivery_address");
         const method = localStorage.getItem("user_payment_method");
         const cart = getCart();
+        const activeItems = cart.filter(i => i.quantity > 0);
         
-        if (cart.length === 0) {
-            alert("⚠️ El carrito de compras está vacío.");
+        if (activeItems.length === 0) {
+            alert("⚠️ El carrito de compras no contiene productos activos.");
             return;
         }
         if (!address) {
@@ -1001,7 +1082,7 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
             date: dateStr,
             status: "Preparando",
             deliveryTime: "Listo para entrega en 30 min",
-            items: cart
+            items: activeItems
         };
         
         let history = [];

@@ -1,35 +1,180 @@
-<!DOCTYPE html>
-
-<html class="scroll-smooth" lang="es">
 <head>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then(reg => {
+        console.log('Service Worker registered successfully');
+        reg.onupdatefound = () => {
+          const installingWorker = reg.installing;
+          if (installingWorker) {
+            installingWorker.onstatechange = () => {
+              if (installingWorker.state === 'installed') {
+                if (navigator.serviceWorker.controller) {
+                  console.log('New content is available, auto-reloading page...');
+                  window.location.reload();
+                }
+              }
+            };
+          }
+        };
+      })
+      .catch(err => console.log('Service Worker registration failed:', err));
+  });
+}
+</script>
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="llms" href="llms.txt" />
+<link rel="llms-txt" href="llms.txt" />
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="BwSy5nNuFFrHJUtxe189nJtPxM4h5QY-SxK1V8wqYDE" name="google-site-verification">
 <title>PC Custom Lab | Venta y Catálogo en Guadalajara</title>
-<link href="assets/css/tailwind-built.css" rel="stylesheet" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<style>
-        :root { 
-            --crema: #FFFDF9; 
-            --texto: #1F2937; 
+<meta content="Bienvenido a PC Custom Lab. Compra en línea con entrega local express en Guadalajara Centro. Pedro Moreno 501 A." name="description"/>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+<style id="critical-css">
+/* Critical CSS - Above the Fold rendering (LCP & CLS prevention) */
+body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system-ui, -apple-system, sans-serif; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.overflow-hidden { overflow: hidden; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.hero-slider-container { height: 600px; background-color: #020617; }
+@media (min-width: 640px) { .hero-slider-container { height: 650px; } }@media (max-width: 639px) {
+  .hero-slide { background-image: url('assets/img/slider_ia_human_thumb.webp?v=1.0.9') !important; }
+  .hero-slider-control, .hero-slider-dots { display: none; }
+}
+.object-cover { object-fit: cover; }
+.grid { display: grid; }
+.gap-6 { gap: 1.5rem; }
+.grid-cols-8 { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+.col-span-8 { grid-column: span 8 / span 8; }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 768px) {
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+    .lg\:col-span-1 { grid-column: span 1 / span 1; }
+    .lg\:col-span-5 { grid-column: span 5 / span 5; }
+    .lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+.animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+.bg-slate-950\/80 { background-color: rgba(2, 6, 23, 0.8); }
+.border-slate-800\/80 { border-color: rgba(30, 41, 59, 0.8); }
+.border { border-width: 1px; border-style: solid; }
+.p-3\.5 { padding: 0.875rem; }
+.rounded-2xl { border-radius: 1rem; }
+.h-\[320px\] { height: 320px; }
+@media (min-width: 768px) {
+    .md\:h-\[360px\] { height: 360px; }
+}
+.bg-slate-900 { background-color: #0f172a; }
+.border-slate-800 { border-color: #1e293b; }
+.rounded-xl { border-radius: 0.75rem; }
+.w-1\/3 { width: 33.333333%; }
+.w-3\/4 { width: 75%; }
+.h-3 { height: 0.75rem; }
+.h-4 { height: 1rem; }
+.h-8 { height: 2rem; }
+.h-32 { height: 8rem; }
+@media (min-width: 768px) {
+    .md\:h-40 { height: 10rem; }
+}
+.mt-2 { margin-top: 0.5rem; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-4 { margin-top: 1rem; }
+.pt-2\.5 { padding-top: 0.625rem; }
+.border-t { border-top-width: 1px; }
+</style>
+<link rel="preload" href="assets/css/tailwind-built.css?v=1.0.9" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link href="assets/css/tailwind-built.css?v=1.0.9" rel="stylesheet" /></noscript>
+<script>
+
+
+    function updateHeaderDeliveryPrompt() {
+        const promptDiv = document.getElementById("header-delivery-prompt");
+        if (!promptDiv) return;
+        const stored = localStorage.getItem("user_delivery_address");
+        // Check if we are inside pc-custom-lab (uses relative path for checkout)
+        const isPcCustomLab = window.location.pathname.includes("pc-custom-lab");
+        const checkoutUrl = isPcCustomLab ? "checkout.html" : "checkout.html";
+        
+        if (stored) {
+            const data = JSON.parse(stored);
+            promptDiv.innerHTML = `<i class="fa-solid fa-location-dot text-emerald-400 animate-bounce"></i> <span class="text-emerald-400 font-bold">Enviar a ${data.name.split(' ')[0]} (${data.city.split(',')[0]})</span>`;
+        } else {
+            promptDiv.innerHTML = `<i class="fa-solid fa-circle-exclamation text-amber-500 animate-pulse"></i> <span class="text-amber-500 font-black uppercase tracking-wider text-[9px] bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">¡Registra tu domicilio de entrega aquí!</span>`;
         }
-        * { box-sizing: border-box; }
-        body { 
-            margin: 0; 
-            background: #05070f; 
-            color: #f3f4f6; 
-            font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif; 
-            min-height: 100vh;
+        promptDiv.classList.remove("hidden");
+    }
+    
+    // Auto-run on load
+    document.addEventListener("DOMContentLoaded", () => {
+        updateHeaderDeliveryPrompt();
+    });
+
+</script>
+<link rel="preload" href="assets/css/fontawesome-all.min.css?v=1.0.9" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link href="assets/css/fontawesome-all.min.css?v=1.0.9" rel="stylesheet" /></noscript>
+
+
+<style>
+        .gradient-hero { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%); }
+        .gradient-card-1 { background: linear-gradient(145deg, #1e293b, #0f172a); border: 1px solid #334155; }
+        .gradient-card-2 { background: linear-gradient(145deg, #1e1b4b, #0f172a); border: 1px solid #4338ca; }
+        .gradient-card-amber { background: linear-gradient(145deg, #451a03, #18181b); border: 1px solid #f59e0b; }
+        .object-tiger-loyalty { object-fit: cover; object-position: 75% 15%; }
+        
+        #mobile-menu { transition: transform 0.3s ease-in-out; }
+        .menu-closed { transform: translateX(100%); }
+        .menu-open { transform: translateX(0); }
+
+        #chatbot-window { height: 520px; max-height: 85vh; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
             display: flex;
-            flex-direction: column;
+            width: max-content;
+            animation: marquee 25s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
         }
     </style>
+<!-- Open Graph para Applebot, Siri, Spotlight, Facebook, Discord -->
+<meta content="PC Custom Lab | Ensamble y Venta de Computadoras Completas Guadalajara" property="og:title">
+<meta content="Servicios de soporte computacional, gadgets, periféricos y accesorios personalizados." property="og:description">
+<meta content="https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp" property="og:image"/>
+<meta content="https://iaworldcenter-creator.github.io/pc-custom-lab/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<meta content="Puesto de Revistas &amp; Bazar" property="og:site_name"/>
+<!-- Datos estructurados de Schema.org para Google, Bing y Apple Search -->
+
+<link as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<link as="image" href="assets/img/slider_ia_human.webp?v=1.0.9" rel="preload"/>
 <style>
         @media (max-width: 768px) {
             video { display: none !important; }
             .mobile-video-fallback { display: block !important; }
         }
     </style>
-<meta content="Bienvenido a PC Custom Lab. Compra en línea con entrega local express en Guadalajara Centro. Pedro Moreno 501 A." name="description"/><script type="application/ld+json">{
+</meta></meta></meta><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "ComputerStore",
   "name": "PC Custom Lab",
@@ -45,652 +190,889 @@
     "addressCountry": "MX"
   }
 }</script></head>
-<body class="bg-[#05070f] text-slate-100 min-h-screen flex flex-col"><h1 class="sr-only">PC Custom Lab</h1>
-<!-- HEADER DE CHECKOUT ESTILO TECH / PC CUSTOM LAB -->
-<header class="w-full bg-slate-950 text-white py-3.5 px-6 md:px-12 flex justify-between items-center border-b border-slate-800 sticky top-0 z-50 shadow-lg">
-<!-- LOGO Y MARCA (ENLACE PURO A INDEX.HTML) -->
-<a class="flex items-center gap-3 group" href="index.html">
-<img alt="Mascota oficial Tigre inteligente de PC Custom Lab en Guadalajara" class="w-10 h-10 rounded-full object-cover border border-amber-500 group-hover:scale-105 transition" decoding="async" loading="lazy" src="assets/img/mascota_tigre.webp"/>
-<span class="text-sm md:text-base font-black text-amber-400 tracking-wider uppercase group-hover:text-amber-300 transition">Anti-Gravity Checkout</span>
-</a>
-<!-- ACCESO RÁPIDO AL CARRITO DE COMPRAS -->
-<a class="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 px-3.5 py-1.5 rounded-xl transition group" href="#seccion-carrito">
-<div class="relative">
-<i class="fa-solid fa-cart-shopping text-amber-400 text-base group-hover:scale-110 transition"></i>
-<span class="absolute -top-2 -right-2 bg-amber-500 text-slate-950 text-[10px] font-black rounded-full px-1.5 py-0.2 min-w-[16px] text-center" id="header-cart-badge">0</span>
-</div>
-<span class="text-xs font-bold text-slate-200">Ver mi Pedido</span>
-</a>
-<!-- ENLACE DIRECTO AL CATÁLOGO -->
-<a class="text-xs text-slate-400 hover:text-white transition" href="index.html">Volver al catálogo</a>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col">
+
+<header class="w-full bg-slate-950 border-b border-slate-900 flex flex-col relative z-[100] text-slate-100">
+    <!-- Nivel 1: Barra Superior Deslizable Universal (Top Bar Racional) -->
+    <div class="w-full bg-slate-950 border-b border-slate-900 py-3 px-4 flex items-center justify-start md:justify-center overflow-x-auto whitespace-nowrap gap-4 text-xs font-bold text-slate-300" style="scrollbar-width: none; -ms-overflow-style: none;">
+        <style>::-webkit-scrollbar { display: none; }</style>
+        <a href="https://gemini.google.com" target="_blank" class="hover:text-amber-400 transition">Iniciar sesión con Google Gemini</a>
+        <span class="text-slate-800">|</span>
+        <button onclick="openDeliveryModal()" class="hover:text-amber-400 transition cursor-pointer">Registra tu domicilio de entrega</button>
+        <span class="text-slate-800">|</span>
+        <button onclick="openPaymentModal()" class="hover:text-amber-400 transition cursor-pointer">Elige tu forma de pago</button>
+        <span class="text-slate-800">|</span>
+        <button onclick="openOrdersModal()" class="hover:text-amber-400 transition cursor-pointer text-cyan-400 flex items-center gap-1"><i class="fa-solid fa-clock-rotate-left"></i> Mis Pedidos</button>
+        <span class="text-slate-800">|</span>
+        
+    <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" onclick="const isCig = window.location.pathname.includes('cigarros-bazar'); if (isCig) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Cigarros Bazar</a>
+    <span class="text-slate-800">|</span>
+    <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" onclick="const isDul = window.location.pathname.includes('dulces-bazar'); if (isDul) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Dulces Bazar</a>
+    <span class="text-slate-800">|</span>
+    <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" onclick="const isKio = window.location.pathname.includes('kiosco-digital'); if (isKio) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Kiosco Digital</a>
+    <span class="text-slate-800">|</span>
+    <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" onclick="const isPue = window.location.pathname.includes('mi-puesto-bazar'); if (isPue) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Puesto Bazar</a>
+    <span class="text-slate-800">|</span>
+    <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" onclick="const isPc = window.location.pathname.includes('pc-custom-lab'); if (isPc) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">PC Custom Lab</a>
+    <span class="text-slate-800">|</span>
+    <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" onclick="const isOf = window.location.pathname.includes('ofertas-y-liquidaciones-') || window.location.pathname.includes('ofertas-y-liquidaciones'); if (isOf) { event.preventDefault(); window.location.reload(); }" class="hover:text-amber-400 transition">Liquidaciones y Ofertas</a>
+
+        <span class="text-slate-800">|</span>
+      <button onclick="goToCatalogCategory(4)" class="hover:text-amber-400 transition cursor-pointer">Boutique de Refacciones</button>
+      <span class="text-slate-800">|</span>
+      <a href="#cotizador" class="hover:text-amber-400 transition">Cotizador de Ensambles</a>
+      <span class="text-slate-800">|</span>
+      <button onclick="abrirChatbotConMensaje('Hola, me gustaría solicitar atención técnica directa para un proyecto o soporte.')" class="hover:text-amber-400 transition cursor-pointer">Contacto Soporte</button>
+        <span class="text-slate-800">|</span>
+        <a href="https://antigravity.google/download" target="_blank" class="hover:text-amber-400 transition">Descargar Anti-Gravity</a>
+    </div>
+
+    <!-- Nivel 2: Fila Principal de Identidad, Búsqueda y Carrito -->
+    <div class="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 py-4 px-6 md:px-12">
+        <!-- Lado Izquierdo: Logo y Nombre del sitio -->
+        <div class="flex items-center gap-3 shrink-0">
+            <img alt="Logo Oficial Anti-Gravity" class="w-11 h-11 rounded-full object-cover border-2 border-cyan-500 shadow-md" src="https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp"/>
+            <span class="text-xl md:text-2xl font-black text-white tracking-wider uppercase">PC CUSTOM LAB</span>
+        </div>
+        
+        <!-- Centro: La Súper-Barra de Búsqueda (Esbelta con marco fluorescente cyan) -->
+        <div class="flex-1 max-w-2xl mx-auto w-full px-4 md:px-0">
+            <form class="flex items-center bg-slate-950/60 rounded-full border border-cyan-500/80 shadow-[0_0_15px_rgba(6,182,212,0.6)] w-full px-2 py-1 gap-2" onsubmit="handleSearchSubmit(event);" role="search">
+                <label class="sr-only" for="siteSearch">¿Qué deseas buscar hoy?</label>
+                <input aria-label="Buscar productos en el catálogo" autocomplete="off" class="flex-1 bg-transparent border-0 outline-none text-white font-bold text-xs px-4 placeholder-slate-500" id="siteSearch" name="q" placeholder="¿Qué producto, pieza o antojo buscas hoy? Escribe aquí..." type="text"/>
+                <button aria-label="Buscar" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black px-6 py-1.5 rounded-full text-xs uppercase tracking-wider transition active:scale-95 shrink-0" type="submit">BUSCAR</button>
+            </form>
+        </div>
+
+        <!-- Lado Derecho: Botón unificado del Carrito de Compras -->
+        <div class="shrink-0 flex items-center justify-end">
+            <button onclick="toggleCartDrawer()" class="flex items-center gap-3 bg-transparent border-0 hover:text-cyan-400 text-white font-black transition active:scale-95 group cursor-pointer" aria-label="Ver carrito">
+                <div class="relative">
+                    <i class="fa-solid fa-cart-shopping text-2xl text-slate-100 group-hover:text-cyan-400 transition"></i>
+                    <span class="absolute -top-2.5 -right-2.5 bg-cyan-500 text-white text-[10px] font-black rounded-full px-1.5 py-0.2 min-w-[18px] text-center shadow-lg shadow-cyan-500/20" id="cart-badge-count">0</span>
+                </div>
+                <span class="text-xs font-black tracking-wide uppercase text-slate-100 group-hover:text-cyan-400 transition hidden sm:inline">Mi Carrito</span>
+            </button>
+        </div>
+    </div>
 </header>
-<main class="flex-1 w-full max-w-6xl mx-auto py-8 px-4">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-<!-- Columna Izquierda (Spans 8/12) -->
-<div class="lg:col-span-8 flex flex-col gap-6">
-<!-- SECCIÓN 1: DOMICILIO DE ENTREGA Y REGISTRO -->
-<div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm flex flex-col gap-4">
-<div class="flex justify-between items-center border-b border-slate-800 pb-3">
-<h2 class="text-base font-black text-white flex items-center gap-2">
-<span class="text-amber-400">1.</span> Domicilio de entrega y registro
-                    </h2>
-<button aria-label="Cambiar" class="hidden text-xs font-bold text-blue-400 hover:underline" id="btn-edit-address" onclick="toggleAddressForm()" type="button">Cambiar</button>
-</div>
-<!-- Vista Resumen de Dirección Guardada -->
-<div class="hidden bg-slate-900/60 border border-slate-800 rounded-xl p-4 text-sm flex flex-col gap-1.5" id="address-summary-view">
-<span class="font-bold text-white" id="summary-address-name"></span>
-<span class="text-slate-300" id="summary-address-street"></span>
-<span class="text-slate-400 font-mono" id="summary-address-phone"></span>
-</div>
-<!-- Formulario de Registro de Domicilio -->
-<form class="flex flex-col gap-3.5" id="addressForm" onsubmit="saveDeliveryAddress(event)">
-<p class="text-xs text-slate-400 mb-1">Registra tus datos de entrega para recibir tu pedido de manera efectiva.</p>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-<div>
-<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Nombre Completo</label>
-<input aria-label="Nombre completo del comprador" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputName" placeholder="Ej. Juan Pérez" required="" type="text"/>
-</div>
-<div>
-<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Teléfono (10 DÍGITOS)</label>
-<input aria-label="Número de teléfono a 10 dígitos" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputPhone" placeholder="Ej. 3337271440" required="" type="tel"/>
-</div>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-<div>
-<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Correo Electrónico</label>
-<input aria-label="Correo electrónico de contacto" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputEmail" placeholder="Ej. cliente@correo.com" required="" type="email"/>
-</div>
-<div>
-<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Calle de Entrega</label>
-<input aria-label="Calle y número de domicilio" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputStreet" placeholder="Ej. Av. Juárez 450" required="" type="text"/>
-</div>
-</div>
-<div class="grid grid-cols-3 gap-3">
-<div>
-<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Número (EXT/INT)</label>
-<input aria-label="Ej. 450 Int 3" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputNum" placeholder="Ej. 450 Int 3" type="text"/>
-</div>
-<div>
-<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Colonia</label>
-<input aria-label="Colonia de entrega" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputColonia" placeholder="Ej. Centro" required="" type="text"/>
-</div>
-<div>
-<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Código Postal</label>
-<input aria-label="Código postal de 5 dígitos" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputZip" placeholder="Ej. 44100" required="" type="text"/>
-</div>
-</div>
-<div>
-<label class="block text-xs font-bold uppercase text-slate-400 mb-1">Ciudad y Estado</label>
-<input aria-label="Ciudad y estado de la entrega" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-500" id="inputCity" placeholder="Ej. Guadalajara, Jalisco" required="" type="text"/>
-</div>
-<button aria-label="Registrar Datos de Envío" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-3 rounded-xl uppercase text-xs tracking-wider transition shadow-md mt-2 cursor-pointer" type="submit">
-                        Registrar Datos de Envío
-                    </button>
-</form>
-</div>
-<!-- SECCIÓN 2: MÉTODO DE PAGO -->
-<div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm flex flex-col gap-4">
-<div class="flex justify-between items-center border-b border-slate-800 pb-3">
-<h3 class="text-base font-black text-white flex items-center gap-2">
-<span class="text-amber-400">2.</span> Método de pago
-                    </h3>
-<button aria-label="Cambiar" class="text-xs font-bold text-blue-400 hover:underline" onclick="openPaymentModal()" type="button">Cambiar</button>
-</div>
-<!-- Resumen del Método Seleccionado -->
-<div class="text-sm text-slate-400" id="payment-status-display">
-                    No se ha registrado un método de pago. Haz clic en "Cambiar" para agregar uno.
-                </div>
-<button aria-label="Registrar Método de Pago" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-3 rounded-xl uppercase text-xs tracking-wider transition shadow-md cursor-pointer" onclick="openPaymentModal()" type="button">
-                    Registrar Método de Pago
-                </button>
-</div>
-<!-- SECCIÓN 3: REVISAR PRODUCTOS Y OPCIONES DE ENVÍO -->
-<div class="bg-slate-950/80 p-6 rounded-2xl border-2 border-amber-500/60 shadow-md flex flex-col gap-5 scroll-mt-20" id="seccion-carrito">
-<div class="border-b border-slate-800 pb-3 flex justify-between items-center">
-<h3 class="text-lg font-black text-white flex items-center gap-2">
-<i class="fa-solid fa-cart-shopping text-amber-400"></i>
-<span class="text-amber-400">3.</span> Revisar productos seleccionados
-                    </h3>
-</div>
-<!-- Contenedor Dinámico de Productos en el Carrito -->
-<div class="flex flex-col gap-4" id="checkout-products-container">
-<!-- Las filas de productos se renderizan dinámicamente vía JavaScript -->
-</div>
-<!-- CONTADOR Y DESGLOSE LOCAL EN SECCIÓN 3 -->
-<div class="border-t-2 border-slate-800 pt-5 flex flex-col gap-4">
-<div class="text-base font-black text-slate-200" id="active-items-count">
-                        Cargando productos...
-                    </div>
-<!-- CUADRO DE PRECIO PREVIO Y TOTAL EN GRANDE -->
-<div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 flex flex-col gap-3 shadow-inner">
-<div class="flex justify-between items-center text-sm">
-<span class="text-slate-400 font-semibold">Subtotal de artículos:</span>
-<span class="font-bold text-white text-base" id="section3-subtotal">$0.00 MXN</span>
-</div>
-<div class="flex justify-between items-center text-sm">
-<span class="text-slate-400 font-semibold">Costo de Envío:</span>
-<span class="font-bold text-emerald-400 text-base" id="section3-shipping">Gratis</span>
-</div>
-<div class="flex justify-between items-center text-sm">
-<span class="text-slate-400 font-semibold">Descuento Cashback (5%):</span>
-<span class="font-bold text-emerald-400 text-base" id="section3-cashback">-$0.00 MXN</span>
-</div>
-<div class="border-t border-slate-800 pt-3 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-<div>
-<span class="text-xs uppercase tracking-wider font-mono font-bold text-slate-400 block">Total Final a Pagar:</span>
-<span class="text-3xl font-black text-red-500" id="section3-total">$0.00 MXN</span>
-</div>
-<span class="bg-emerald-950/80 text-emerald-300 font-bold text-xs px-3 py-1 rounded-full border border-emerald-700" id="section3-savings-tag">
-                                ¡Ahorro del 5% aplicado!
-                            </span>
-</div>
-</div>
-<!-- BOTONES DE ACCIÓN FINAL EN SECCIÓN 3 -->
-<div class="flex flex-col gap-3 mt-2">
-<!-- Botón Amarillo Principal de Cierre de Compra -->
-<button aria-label="Completar pedido y autorizar cargo de compra" class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-[#0F1111] font-black py-4 px-6 rounded-2xl text-base text-center shadow-lg border-2 border-[#FCD200] transition active:scale-98 cursor-pointer flex items-center justify-center gap-2.5" onclick="processFinalOrder()" type="button">
-                            🚀 ¡Proceder al Pago y Finalizar Compra! <i class="fa-solid fa-arrow-right text-lg"></i>
-</button>
-<!-- ENLACE PURO Y DIRECTO AL CATÁLOGO -->
-<a class="w-full bg-slate-900 hover:bg-slate-800 text-slate-200 font-bold py-3.5 px-6 rounded-xl text-sm text-center border border-slate-700 transition flex items-center justify-center gap-2 cursor-pointer" href="index.html">
-<i class="fa-solid fa-cart-plus"></i> Seguir comprando en el catálogo
-                        </a>
-</div>
-</div>
-</div>
-</div>
-<!-- Columna Derecha: Resumen de Pedido (Spans 4/12) -->
-<div class="lg:col-span-4 flex flex-col gap-4 sticky top-20">
-<div class="bg-slate-950/80 p-6 rounded-2xl border border-slate-800/80 shadow-sm flex flex-col gap-4">
-<button aria-label="Completar pedido y autorizar cargo de compra" class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-[#0F1111] font-black py-3.5 rounded-full text-sm text-center border border-[#FCD200] shadow transition active:scale-97 cursor-pointer" onclick="processFinalOrder()" type="button">
-                    🚀 ¡Autorizar Cargo y Completar Compra! 🚀
-                </button>
-<a class="w-full bg-slate-900 hover:bg-slate-800 text-slate-100 font-bold py-2.5 rounded-full text-xs text-center border border-slate-700 shadow-sm transition active:scale-97 block" href="index.html">
-                    Seguir comprando
-                </a>
-<p class="text-[11px] text-slate-400 text-center leading-tight">
-                    Al realizar tu pedido, aceptas nuestro aviso de privacidad y las condiciones de uso local de Anti-Gravity.
-                </p>
-<!-- Banner precio especial mayoreo -->
-<div class="bg-blue-950/30 border border-blue-900/50 rounded-xl p-3.5 text-xs text-blue-200 leading-relaxed flex flex-col gap-1">
-<strong class="font-black text-blue-300 flex items-center gap-1">
-<i class="fa-solid fa-tag"></i> Descuento de Mayoreo Activo
-                    </strong>
-<span>Compra 10 artículos o más del catálogo y recibe precio especial preferencial con un 15% de descuento sobre el subtotal directo.</span>
-</div>
-<div class="border-t border-slate-800/80 pt-4 flex flex-col gap-2.5">
-<h4 class="text-sm font-black text-white">Resumen del pedido</h4>
-<div class="flex justify-between text-xs text-slate-300">
-<span>Productos:</span>
-<span class="font-bold text-white" id="summary-subtotal">$0.00 MXN</span>
-</div>
-<div class="flex justify-between text-xs text-slate-300">
-<span>Envío:</span>
-<span class="font-bold text-emerald-400" id="summary-shipping">Gratis</span>
-</div>
-<div class="flex justify-between text-xs text-emerald-400 font-bold">
-<span>Cashback (5%):</span>
-<span id="summary-cashback">-$0.00 MXN</span>
-</div>
-<div class="border-t border-slate-800/80 pt-2 flex justify-between text-base font-black text-red-500">
-<span>Total del pedido:</span>
-<span id="summary-total">$0.00 MXN</span>
-</div>
-</div>
-<div class="bg-amber-950/40 border border-amber-800/60 rounded-xl p-3 text-xs text-amber-200 leading-relaxed">
-                    🎉 <strong>Ahorro Total:</strong> Te estás ahorrando <strong class="text-amber-400" id="summary-savings">$0.00 MXN</strong> (5% Cashback aplicado inmediatamente).
-                </div>
-</div>
-</div>
-</div>
-</main>
-<!-- MODAL REGISTRAR MÉTODO DE PAGO -->
-<div class="fixed inset-0 z-[200] hidden flex items-center justify-center bg-slate-950/80 px-4" id="paymentModal">
-<div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-md w-full shadow-2xl relative text-slate-100">
-<h3 class="text-base font-black text-white mb-3 flex items-center gap-2">
-<i class="fa-solid fa-credit-card text-amber-500"></i> Registrar Método de Pago
-        </h3>
-<p class="text-xs text-slate-400 mb-4">Selecciona tu método de pago preferido para liquidar tus compras.</p>
-<form class="flex flex-col gap-3" id="paymentForm" onsubmit="savePaymentMethod(event)">
-<div class="flex gap-4 mb-2">
-<label class="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
-<input aria-label="Campo de entrada de texto" checked="" class="text-amber-500" name="payType" onchange="togglePaymentFields()" type="radio" value="card"/>
-<span>Tarjeta (Crédito/Débito)</span>
-</label>
-<label class="flex items-center gap-2 text-xs text-slate-300 cursor-pointer">
-<input aria-label="Campo de entrada de texto" class="text-amber-500" name="payType" onchange="togglePaymentFields()" type="radio" value="cash"/>
-<span>Efectivo / Transferencia</span>
-</label>
-</div>
-<div class="flex flex-col gap-3" id="cardFields">
-<div>
-<label class="block text-xs uppercase font-mono text-slate-400 mb-1">Nombre del Titular</label>
-<input aria-label="Nombre del titular impreso en la tarjeta" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500" id="payHolder" placeholder="Ej. Juan Pérez" type="text"/>
-</div>
-<div>
-<label class="block text-xs uppercase font-mono text-slate-400 mb-1">Número de Tarjeta</label>
-<input aria-label="Número de tarjeta de 16 dígitos" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500" id="payNumber" maxlength="16" placeholder="4532 XXXX XXXX 1234" type="text"/>
-</div>
-<div class="grid grid-cols-2 gap-3">
-<div>
-<label class="block text-xs uppercase font-mono text-slate-400 mb-1">Vencimiento (MM/AA)</label>
-<input aria-label="Fecha de vencimiento en formato Mes Mes Año Año" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500" id="payExp" placeholder="12/29" type="text"/>
-</div>
-<div>
-<label class="block text-xs uppercase font-mono text-slate-400 mb-1">CVV</label>
-<input aria-label="Código de seguridad de 3 dígitos de la tarjeta" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white outline-none focus:border-amber-500" id="payCvv" maxlength="4" placeholder="123" type="password"/>
-</div>
-</div>
-</div>
-<div class="flex gap-3 mt-4">
-<button aria-label="Cancelar" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold py-2.5 rounded-xl text-xs transition cursor-pointer" onclick="closePaymentModal()" type="button">Cancelar</button>
-<button aria-label="Guardar Método" class="flex-1 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2.5 rounded-xl text-xs transition cursor-pointer" type="submit">Guardar Método</button>
-</div>
-</form>
-</div>
-</div>
-<!-- LÓGICA JAVASCRIPT CON MEMORIA DE SESIÓN (sessionStorage) -->
-<script>
-    // Usa localStorage con clave global unificada para conservar los artículos en todo el ecosistema
-    function getCart() {
-        const stored = localStorage.getItem("ecosystem_global_cart");
-        return stored ? JSON.parse(stored).filter(item => (typeof item.quantity === 'number' ? item.quantity : 1) > 0) : [];
-    }
 
-    function saveCart(cart) {
-        localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
-        renderCheckoutProducts();
-    }
 
-    // RENDERIZADO DE PRODUCTOS EN LA SECCIÓN 3
-    function renderCheckoutProducts() {
-        const container = document.getElementById("checkout-products-container");
-        if (!container) return;
-
-        const cart = getCart();
-        container.innerHTML = "";
-
-        let totalCartQuantity = 0;
-
-        if (cart.length === 0) {
-            container.innerHTML = `
-                <div class="text-center py-12 text-slate-400 bg-slate-900/60 rounded-2xl border border-slate-800">
-                    <i class="fa-solid fa-cart-shopping text-4xl mb-3 opacity-30 block"></i>
-                    <p class="text-sm font-semibold">Tu carrito de compras está vacío.</p>
-                </div>
-            `;
-            updateHeaderBadge(0);
-            updateOrderSummary();
-            return;
+<!-- BANDA PROMOCIONAL MARQUEE -->
+<div class="w-full bg-[#f0c14b] border-b border-[#ddb347] text-slate-950 py-2.5 overflow-hidden relative z-50 select-none shadow-sm">
+    <div class="whitespace-nowrap flex gap-8 items-center text-xs font-black uppercase tracking-widest animate-marquee-move">
+        <span class="flex items-center gap-1.5">🚚 ¡ENVÍO GRATIS en compras a partir de $1,500 MXN!</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">💰 5% DE CASHBACK acumulable únicamente con registro activo de correo y teléfono.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">📦 PRECIO DE MAYOREO: 15% de descuento directo a partir de 10 piezas.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">⚠️ CONDICIÓN ESTRICTA: Sin registro no hay cashback ni saldo acumulable.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">🛒 6 BOUTIQUES ESPECIALIZADAS, UN SOLO CARRITO GLOBAL.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">🔔 Mantén activa tu suscripción para no perder tu porcentaje de cashback.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">💳 Aceptamos pagos con tarjeta bancaria y depósitos en efectivo.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">⭐ Productos con garantía y soporte directo en zona Centro.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <!-- Repeated items for a seamless loop -->
+        <span class="flex items-center gap-1.5">🚚 ¡ENVÍO GRATIS en compras a partir de $1,500 MXN!</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">💰 5% DE CASHBACK acumulable únicamente con registro activo de correo y teléfono.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">📦 PRECIO DE MAYOREO: 15% de descuento directo a partir de 10 piezas.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">⚠️ CONDICIÓN ESTRICTA: Sin registro no hay cashback ni saldo acumulable.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">🛒 6 BOUTIQUES ESPECIALIZADAS, UN SOLO CARRITO GLOBAL.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">🔔 Mantén activa tu suscripción para no perder tu porcentaje de cashback.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">💳 Aceptamos pagos con tarjeta bancaria y depósitos en efectivo.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">⭐ Productos con garantía y soporte directo en zona Centro.</span>
+    </div>
+    <style>
+        @keyframes marqueeMove {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
         }
+        .animate-marquee-move {
+            display: flex;
+            width: max-content;
+            animation: marqueeMove 45s linear infinite;
+        }
+        .animate-marquee-move:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</div>
+<!-- FIN BANDA PROMOCIONAL MARQUEE -->
 
-        let activeItemsCount = 0;
 
-        cart.forEach(item => {
-            const qty = item.quantity !== undefined ? item.quantity : 1;
-            const isZero = qty <= 0;
-            const price = parseFloat(item.precio || 0);
-            const totalItemPrice = price * qty;
+<main class="flex-grow py-8 px-4 md:px-12 bg-slate-950 text-slate-100">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Lado Izquierdo: Formularios Pasos 1 y 2 (Colapsables) -->
+        <div class="lg:col-span-7 flex flex-col gap-6">
+            
+            <!-- SECCIÓN 1: Domicilio de Entrega -->
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-md transition-all duration-300" id="step-delivery-card">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-base font-black text-white flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-cyan-500 text-slate-950 flex items-center justify-center text-xs font-black">1</span>
+                        Domicilio de Entrega (Registro Obligatorio)
+                    </h2>
+                    <button onclick="editDelivery()" id="delivery-edit-btn" class="hidden text-xs text-cyan-400 hover:underline font-bold focus:outline-none">Editar</button>
+                </div>
+                
+                <!-- Formulario -->
+                <form id="delivery-form" onsubmit="saveDelivery(event)" class="flex flex-col gap-3">
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Nombre Completo</label>
+                        <input type="text" id="devName" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Teléfono (10 dígitos)</label>
+                            <input type="tel" id="devPhone" required pattern="[0-9]{10}" placeholder="Ej: 3337271440" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Correo Electrónico</label>
+                            <input type="email" id="devEmail" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Calle y Número</label>
+                        <input type="text" id="devStreet" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                    </div>
+                    <div class="grid grid-cols-3 gap-3">
+                        <div class="col-span-2">
+                            <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Colonia</label>
+                            <input type="text" id="devColonia" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Código Postal</label>
+                            <input type="text" id="devCp" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Ciudad / Estado</label>
+                        <input type="text" id="devCity" required value="Guadalajara, Jalisco" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                    </div>
+                    <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider transition mt-2 cursor-pointer">Guardar Datos de Entrega</button>
+                </form>
+                
+                <!-- Resumen Colapsado -->
+                <div id="delivery-summary" class="hidden flex flex-col gap-1.5 text-xs text-slate-300">
+                    <div class="font-bold text-white" id="sum-name"></div>
+                    <div id="sum-phone-email"></div>
+                    <div id="sum-address"></div>
+                </div>
+            </div>
 
-            if (!isZero) {
-                activeItemsCount += qty;
-                totalCartQuantity += qty;
-            }
-
-            let imgPath = item.imagen || 'assets/img/mascota_tigre.webp';
-
-            const card = document.createElement("div");
-            card.className = `flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-5 rounded-2xl border transition duration-200 ${
-                isZero ? 'bg-slate-900/40 border-slate-800 opacity-50 grayscale' : 'bg-slate-900/70 border-slate-800 shadow-sm'
-            }`;
-
-            card.innerHTML = `
-                <!-- Foto y Detalles Principales -->
-                <div class="flex items-start gap-4 w-full md:w-auto flex-1">
-                    <div class="w-20 h-24 rounded-xl overflow-hidden bg-slate-950 border border-slate-800 shrink-0 p-1 flex items-center justify-center">
-                        <img loading="lazy" src="${imgPath}" alt="${item.nombre}" class="w-full h-full object-contain">
+            <!-- SECCIÓN 2: Método de Pago -->
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-md transition-all duration-300 opacity-60" id="step-payment-card">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-base font-black text-white flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-slate-800 text-slate-400 flex items-center justify-center text-xs font-black" id="step-payment-badge">2</span>
+                        Método de Pago
+                    </h2>
+                    <button onclick="editPayment()" id="payment-edit-btn" class="hidden text-xs text-cyan-400 hover:underline font-bold focus:outline-none">Editar</button>
+                </div>
+                
+                <!-- Selectores de pago -->
+                <div id="payment-options" class="hidden flex-col gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <button onclick="selectPaymentMethod('Efectivo')" class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 hover:border-cyan-500 transition cursor-pointer active:scale-95">
+                            <i class="fa-solid fa-money-bill-1 text-emerald-400 text-2xl"></i>
+                            <span class="text-xs font-bold text-white">Efectivo / OXXO / Depósito</span>
+                        </button>
+                        <button onclick="toggleCardForm()" class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 hover:border-cyan-500 transition cursor-pointer active:scale-95">
+                            <i class="fa-solid fa-credit-card text-cyan-400 text-2xl"></i>
+                            <span class="text-xs font-bold text-white">Tarjeta de Crédito / Débito</span>
+                        </button>
                     </div>
                     
-                    <div class="flex flex-col gap-1 flex-1">
-                        <span class="text-xs font-mono font-bold text-slate-400">${item.sku || 'SKU'}</span>
-                        <h4 class="text-base font-black text-white leading-tight">${item.nombre}</h4>
-                        <p class="text-sm text-slate-300 leading-snug">${item.descripcion || ''}</p>
-                        
-                        <div class="flex items-center gap-2 mt-1">
-                            <span class="text-xs font-bold text-slate-400">Precio unitario:</span>
-                            <span class="text-sm font-black text-white">$${price.toFixed(2)} MXN</span>
-                            ${item.descuento ? `<span class="bg-red-950/80 text-red-400 font-bold text-xs px-2 py-0.5 rounded border border-red-800/80">${item.descuento}</span>` : ''}
+                    <!-- Tarjeta Formulario -->
+                    <form id="card-payment-form" onsubmit="saveCardDetails(event)" class="hidden border-t border-slate-800 pt-4 flex flex-col gap-3">
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Nombre en la Tarjeta</label>
+                            <input type="text" id="cardName" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400">
                         </div>
-
-                        <!-- CONTROLES PEGADOS ABAJO DE LAS LETRAS DE DESCRIPCIÓN -->
-                        <div class="flex items-center gap-3 mt-3">
-                            <div class="flex items-center gap-2 bg-slate-950 border border-slate-800 rounded-xl px-3 py-1">
-                                <button onclick="updateQty('${item.sku}', -1)" type="button" class="text-sm font-bold text-slate-400 hover:text-white cursor-pointer">
-                                    <i class="fa-solid fa-minus"></i>
-                                </button>
-                                <span class="text-sm font-mono font-bold text-white w-6 text-center">${qty}</span>
-                                <button onclick="updateQty('${item.sku}', 1)" type="button" class="text-sm font-bold text-slate-400 hover:text-white cursor-pointer">
-                                    <i class="fa-solid fa-plus"></i>
-                                </button>
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Número de Tarjeta</label>
+                            <input type="text" id="cardNum" placeholder="4152 ...." required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400">
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Vencimiento</label>
+                                <input type="text" id="cardExp" placeholder="MM/AA" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400">
                             </div>
-
-                            ${isZero ? `
-                                <button onclick="toggleItemZeroState('${item.sku}')" type="button" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-3.5 py-1.5 rounded-xl text-xs transition shadow-sm cursor-pointer flex items-center gap-1.5">
-                                    <i class="fa-solid fa-plus"></i> Volver a agregar
-                                </button>
-                            ` : `
-                                <button onclick="toggleItemZeroState('${item.sku}')" type="button" class="bg-red-600 hover:bg-red-500 text-white font-bold px-3.5 py-1.5 rounded-xl text-xs transition shadow-sm cursor-pointer flex items-center gap-1.5">
-                                    <i class="fa-solid fa-trash-can"></i> Eliminar
-                                </button>
-                            `}
+                            <div>
+                                <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">CVV</label>
+                                <input type="text" id="cardCvv2" placeholder="123" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400">
+                            </div>
                         </div>
-                    </div>
+                        <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider transition cursor-pointer">Registrar Tarjeta</button>
+                    </form>
                 </div>
+                
+                <!-- Resumen Pago -->
+                <div id="payment-summary" class="hidden text-xs text-emerald-400 font-bold"></div>
+            </div>
+        </div>
+        
+        <!-- Lado Derecho: Carrito y Resumen de Totales (Pasos 3) -->
+        <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-md flex flex-col gap-5 text-slate-100">
+            <h2 class="text-base font-black text-white flex items-center gap-2 border-b border-slate-800 pb-3">
+                <span class="w-6 h-6 rounded-full bg-cyan-500 text-slate-950 flex items-center justify-center text-xs font-black">3</span>
+                Revisión e Importes
+            </h2>
+            
+            <!-- Lista de productos -->
+            <div class="flex flex-col gap-3 overflow-y-auto max-h-[30vh] pr-1" id="checkout-cart-items">
+                <!-- Dinámico -->
+            </div>
+            
+            <!-- Totales -->
+            <div class="border-t border-slate-800 pt-4 flex flex-col gap-2.5 text-xs text-slate-300">
+                <div class="flex justify-between">
+                    <span>Subtotal de Artículos:</span>
+                    <span class="font-bold text-white" id="co-subtotal">$0.00 MXN</span>
+                </div>
+                <div class="flex justify-between hidden" id="co-wholesale-row">
+                    <span class="text-amber-500 font-bold">Descuento de Mayoreo (15%):</span>
+                    <span class="text-amber-500 font-bold" id="co-wholesale-disc">-$0.00 MXN</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Gastos de Envío Local:</span>
+                    <span class="font-bold text-white" id="co-shipping">$0.00 MXN</span>
+                </div>
+                <div class="flex flex-col gap-1 border-t border-slate-850 pt-2.5 mt-1" id="co-cashback-row">
+                    <!-- Dinámico -->
+                </div>
+                <div class="flex justify-between items-center border-t border-slate-800 pt-3 mt-1">
+                    <span class="text-sm font-black text-white uppercase tracking-wider">Total a Pagar:</span>
+                    <span class="text-xl font-black text-cyan-400" id="co-total">$0.00 MXN</span>
+                </div>
+            </div>
+            
+            <!-- Botones de Acción -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
+                <button onclick="window.location.href='index.html'" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3.5 rounded-xl text-xs transition cursor-pointer flex items-center justify-center gap-1.5 active:scale-95">
+                    <i class="fa-solid fa-arrow-left"></i> Seguir comprando
+                </button>
+                <button onclick="finalizePurchase()" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3.5 rounded-xl text-xs uppercase tracking-wider transition cursor-pointer flex items-center justify-center gap-1.5 active:scale-95 shadow-md shadow-amber-500/10">
+                    Confirmar Compra <i class="fa-solid fa-circle-check"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
 
-                <!-- PRECIO TOTAL DE ESTE PRODUCTO A LA DERECHA -->
-                <div class="flex flex-row md:flex-col items-center md:items-end justify-between w-full md:w-auto border-t md:border-t-0 pt-3 md:pt-0 border-slate-800 shrink-0">
-                    <span class="text-xs uppercase font-mono font-bold text-slate-400">Importe:</span>
-                    <span class="text-xl font-black text-white">$${totalItemPrice.toFixed(2)} MXN</span>
+<footer class="py-8 bg-slate-950 border-t border-slate-900 text-center text-slate-500 text-sm font-mono">
+<p>© 2026 PC Custom Lab. Pedro Moreno 501 A, Guadalajara Centro. Todos los derechos reservados.</p>
+</footer>
+
+<!-- CHATBOT FLOTANTE -->
+<div class="fixed bottom-6 right-6 z-[9999] text-slate-100 font-sans">
+    <button aria-label="Botón del chatbot" onclick="toggleChatbot()" class="w-14 h-14 rounded-full bg-cyan-500 hover:bg-cyan-400 flex items-center justify-center shadow-lg shadow-cyan-500/20 active:scale-95 transition cursor-pointer relative z-[10000]">
+        <i class="fa-solid fa-comments text-2xl text-slate-950"></i>
+    </button>
+    <div id="chatbot-window" class="hidden absolute bottom-16 right-0 w-80 bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden flex flex-col justify-between">
+        <div class="bg-slate-950 border-b border-slate-800 px-4 py-3 flex items-center gap-2">
+            <div class="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></div>
+            <span class="text-xs font-black text-white">Soporte IA Copilot</span>
+        </div>
+        <div id="chat-messages" class="flex-grow p-4 flex flex-col gap-3 overflow-y-auto text-[11px] max-h-[350px]">
+            <div class="bg-slate-950 border border-slate-800 p-2.5 rounded-2xl text-slate-300">
+                Hola, soy el asistente IA del Ecosistema de Tiendas. ¿En qué puedo ayudarte hoy en el checkout?
+            </div>
+        </div>
+        <div class="p-3 border-t border-slate-800 flex gap-2">
+            <input type="text" id="chatInput" placeholder="Pregunta algo..." onkeypress="handleChatKeyPress(event)" class="flex-grow bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400">
+            <button onclick="enviarMensajeChatbot()" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-3 rounded-xl text-xs cursor-pointer"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // BASE DE DATOS DE IMÁGENES
+    const IMG = {
+    gpu: 'assets/img/tigre_gamer_thumb.webp?v=1.0.9',
+    motherboards: 'assets/img/Female_technician_assembling_gam_202608041518_thumb.webp?v=1.0.9',
+    ram: 'assets/img/tigre_mosaico_thumb.webp?v=1.0.9',
+    procesadores: 'assets/img/tigre_atlas_thumb.webp?v=1.0.9',
+    almacenamiento: 'assets/img/slider_warehouse_thumb.webp?v=1.0.9',
+    gabinetes: 'assets/img/tigre_gemini_thumb.webp?v=1.0.9',
+    fuentes: 'assets/img/tigre_corporativo_thumb.webp?v=1.0.9',
+    enfriamiento: 'assets/img/tigre_mantenimiento_thumb.webp?v=1.0.9',
+    monitores: 'assets/img/slider_ia_human_thumb.webp?v=1.0.9',
+    perifericos: 'assets/img/tigre_software_thumb.webp?v=1.0.9',
+};
+
+    // BASE DE DATOS DE PRODUCTOS DE LA TIENDA LOCAL
+    const productCatalog = [
+    // ========== PÁGINA 1: TARJETAS DE VIDEO (GPU) — 20 modelos ==========
+    {sku:'GPU-001',nombre:'NVIDIA RTX 4060 8GB Ventus 2X OC',imagen:IMG.gpu,precio:'8500',descripcion:'Tarjeta gráfica NVIDIA RTX 4060 con 8GB GDDR6. Arquitectura Ada Lovelace, soporte DLSS 3 y Ray Tracing de tercera generación para gaming 1080p.',categoria:'gpu'},
+    {sku:'GPU-002',nombre:'NVIDIA RTX 4060 Ti 8GB Gaming X Trio',imagen:IMG.gpu,precio:'12500',descripcion:'RTX 4060 Ti con 8GB GDDR6 y triple ventilador TORX 5.0. Boost clock 2625MHz, ideal para gaming 1440p con DLSS 3.',categoria:'gpu'},
+    {sku:'GPU-003',nombre:'NVIDIA RTX 4060 Ti 16GB AORUS Elite',imagen:IMG.gpu,precio:'15800',descripcion:'RTX 4060 Ti edición 16GB GDDR6 para cargas de trabajo de IA y texturas de alta resolución. Disipador WINDFORCE con cámara de vapor.',categoria:'gpu'},
+    {sku:'GPU-004',nombre:'NVIDIA RTX 4070 12GB TUF Gaming OC',imagen:IMG.gpu,precio:'18500',descripcion:'RTX 4070 12GB GDDR6X con 5888 CUDA cores. Diseño TUF con componentes de grado militar y ventiladores axiales de doble rodamiento.',categoria:'gpu'},
+    {sku:'GPU-005',nombre:'NVIDIA RTX 4070 Super 12GB Strix OC',imagen:IMG.gpu,precio:'21000',descripcion:'RTX 4070 Super con 7168 CUDA cores y 12GB GDDR6X. ROG Strix con refrigeración de 3.15 slots y RGB Aura Sync direccionable.',categoria:'gpu'},
+    {sku:'GPU-006',nombre:'NVIDIA RTX 4070 Ti 12GB Gaming X Slim',imagen:IMG.gpu,precio:'22500',descripcion:'RTX 4070 Ti de bajo perfil con 7680 CUDA cores. Perfecta para chasis compactos sin sacrificar rendimiento 1440p/4K.',categoria:'gpu'},
+    {sku:'GPU-007',nombre:'NVIDIA RTX 4070 Ti Super 16GB AORUS Master',imagen:IMG.gpu,precio:'27000',descripcion:'RTX 4070 Ti Super con 16GB GDDR6X y bus de 256-bit. LCD Edge View personalizable y PCB reforzado con nanocarbono.',categoria:'gpu'},
+    {sku:'GPU-008',nombre:'NVIDIA RTX 4080 16GB TUF Gaming OC',imagen:IMG.gpu,precio:'32000',descripcion:'RTX 4080 con 9728 CUDA cores y 16GB GDDR6X. Gaming 4K sin compromiso con DLSS 3 Frame Generation.',categoria:'gpu'},
+    {sku:'GPU-009',nombre:'NVIDIA RTX 4080 Super 16GB Strix OC',imagen:IMG.gpu,precio:'35000',descripcion:'RTX 4080 Super con 10240 CUDA cores. La variante tope de gama de Ada Lovelace para gaming 4K y creación de contenido.',categoria:'gpu'},
+    {sku:'GPU-010',nombre:'NVIDIA RTX 4090 24GB Gaming X Trio',imagen:IMG.gpu,precio:'58000',descripcion:'RTX 4090 con 16384 CUDA cores y 24GB GDDR6X. La GPU de consumo más potente del mundo para gaming 4K/8K y AI.',categoria:'gpu'},
+    {sku:'GPU-011',nombre:'NVIDIA RTX 5070 12GB Ventus 3X OC',imagen:IMG.gpu,precio:'22000',descripcion:'RTX 5070 de nueva generación Blackwell con 12GB GDDR7. Soporte DLSS 4 Multi Frame Generation y Ray Tracing mejorado.',categoria:'gpu'},
+    {sku:'GPU-012',nombre:'NVIDIA RTX 5070 Ti 16GB AORUS Elite',imagen:IMG.gpu,precio:'28500',descripcion:'RTX 5070 Ti Blackwell con 16GB GDDR7 y ancho de banda mejorado. Ideal para gaming 4K con trazado de rayos completo.',categoria:'gpu'},
+    {sku:'GPU-013',nombre:'NVIDIA RTX 5080 16GB TUF Gaming OC',imagen:IMG.gpu,precio:'38000',descripcion:'RTX 5080 Blackwell con 10752 CUDA cores y 16GB GDDR7 a 30Gbps. Rendimiento 4K extremo y productividad IA avanzada.',categoria:'gpu'},
+    {sku:'GPU-014',nombre:'NVIDIA RTX 5090 32GB Strix OC',imagen:IMG.gpu,precio:'65000',descripcion:'RTX 5090 flagship con 21760 CUDA cores y 32GB GDDR7. La GPU más potente para entusiastas, 8K gaming y LLMs locales.',categoria:'gpu'},
+    {sku:'GPU-015',nombre:'AMD Radeon RX 7600 8GB Challenger',imagen:IMG.gpu,precio:'6800',descripcion:'RX 7600 con 8GB GDDR6 y arquitectura RDNA 3. Excelente relación precio/rendimiento para gaming 1080p con FSR 3.',categoria:'gpu'},
+    {sku:'GPU-016',nombre:'AMD Radeon RX 7700 XT 12GB Red Devil',imagen:IMG.gpu,precio:'13500',descripcion:'RX 7700 XT con 12GB GDDR6 y 3456 stream processors. Gaming 1440p fluido con PowerColor Red Devil premium.',categoria:'gpu'},
+    {sku:'GPU-017',nombre:'AMD Radeon RX 7800 XT 16GB Nitro+',imagen:IMG.gpu,precio:'17000',descripcion:'RX 7800 XT con 16GB GDDR6 y 3840 SP. Rendimiento 1440p/4K con Sapphire Nitro+ y RGB addressable.',categoria:'gpu'},
+    {sku:'GPU-018',nombre:'AMD Radeon RX 7900 XT 20GB AORUS Elite',imagen:IMG.gpu,precio:'24000',descripcion:'RX 7900 XT con 20GB GDDR6 y 5376 SP. Gaming 4K de alta gama con Gigabyte AORUS y backplate metálico.',categoria:'gpu'},
+    {sku:'GPU-019',nombre:'AMD Radeon RX 7900 XTX 24GB Taichi',imagen:IMG.gpu,precio:'32000',descripcion:'RX 7900 XTX flagship con 24GB GDDR6 y 6144 SP. La GPU RDNA 3 más potente de AMD para gaming 4K extremo.',categoria:'gpu'},
+    {sku:'GPU-020',nombre:'AMD Radeon RX 9070 XT 16GB Red Devil',imagen:IMG.gpu,precio:'19500',descripcion:'RX 9070 XT RDNA 4 con 16GB GDDR6 y Ray Tracing mejorado. Competidor directo de RTX 5070 con FSR 4.',categoria:'gpu'},
+
+    // ========== PÁGINA 2: TARJETAS MADRE (MOTHERBOARDS) — 20 modelos ==========
+    {sku:'MOBO-001',nombre:'ASUS ROG Maximus Z790 Hero',imagen:IMG.motherboards,precio:'14500',descripcion:'Placa base Intel Z790 ATX con VRM 20+1 etapas 105A, WiFi 6E, 5x M.2, Thunderbolt 4 y audio ROG SupremeFX 7.1.',categoria:'motherboards'},
+    {sku:'MOBO-002',nombre:'MSI MPG Z790 Carbon WiFi',imagen:IMG.motherboards,precio:'8500',descripcion:'Z790 ATX con VRM 19+1+1 etapas, WiFi 6E, DDR5-7200+ OC, 4x M.2 con disipadores Shield Frozr y RGB Mystic Light.',categoria:'motherboards'},
+    {sku:'MOBO-003',nombre:'Gigabyte Z790 Aorus Elite AX',imagen:IMG.motherboards,precio:'7200',descripcion:'Z790 ATX con VRM 16+1+2 etapas, WiFi 6E, 4x M.2, DDR5-7600 OC. Diseño térmico avanzado con Fins-Array.',categoria:'motherboards'},
+    {sku:'MOBO-004',nombre:'ASUS TUF Gaming Z790-Plus WiFi',imagen:IMG.motherboards,precio:'6500',descripcion:'Z790 ATX durable con VRM 16+1 etapas, WiFi 6, 4x M.2, 2.5G LAN. Componentes TUF de grado militar certificados.',categoria:'motherboards'},
+    {sku:'MOBO-005',nombre:'MSI PRO B760-P WiFi DDR5',imagen:IMG.motherboards,precio:'4800',descripcion:'B760 ATX profesional con WiFi 6E, DDR5-6400, 2x M.2, 2.5G LAN. Ideal para estaciones de trabajo y oficina.',categoria:'motherboards'},
+    {sku:'MOBO-006',nombre:'Gigabyte B760M Aorus Elite AX',imagen:IMG.motherboards,precio:'3800',descripcion:'B760 Micro-ATX con WiFi 6E, DDR5-6400, 2x M.2. Formato compacto con características premium para builds mid-range.',categoria:'motherboards'},
+    {sku:'MOBO-007',nombre:'ASUS Prime B760M-A WiFi DDR4',imagen:IMG.motherboards,precio:'3200',descripcion:'B760 Micro-ATX con WiFi 6, DDR4-4800, 2x M.2. Solución económica y confiable para Intel 12th/13th/14th Gen.',categoria:'motherboards'},
+    {sku:'MOBO-008',nombre:'MSI PRO H610M-G DDR4',imagen:IMG.motherboards,precio:'1800',descripcion:'H610 Micro-ATX de entrada con DDR4-3200, 1x M.2, Gigabit LAN. Perfecta para PCs de oficina y hogar.',categoria:'motherboards'},
+    {sku:'MOBO-009',nombre:'ASUS ROG Crosshair X670E Hero',imagen:IMG.motherboards,precio:'16000',descripcion:'X670E ATX flagship AMD AM5 con VRM 18+2 etapas 110A, PCIe 5.0 x16, 4x M.2 PCIe 5.0, USB4 y WiFi 6E.',categoria:'motherboards'},
+    {sku:'MOBO-010',nombre:'MSI MEG X670E Ace',imagen:IMG.motherboards,precio:'14500',descripcion:'X670E ATX E-ATX premium con VRM 22+2+2 etapas, PCIe 5.0, 4x M.2 PCIe 5.0, dual LAN 10G + 2.5G y WiFi 6E.',categoria:'motherboards'},
+    {sku:'MOBO-011',nombre:'Gigabyte X670E Aorus Master',imagen:IMG.motherboards,precio:'12000',descripcion:'X670E ATX con VRM 16+2+2 etapas, PCIe 5.0 GPU + M.2, DDR5-8000+ OC, WiFi 6E y audio ALC1220-VB.',categoria:'motherboards'},
+    {sku:'MOBO-012',nombre:'ASUS TUF Gaming X670-Plus WiFi',imagen:IMG.motherboards,precio:'8500',descripcion:'X670 ATX durable con PCIe 5.0, DDR5-6400, 3x M.2, WiFi 6. Componentes TUF certificados para AM5.',categoria:'motherboards'},
+    {sku:'MOBO-013',nombre:'MSI MAG B650 Tomahawk WiFi',imagen:IMG.motherboards,precio:'5800',descripcion:'B650 ATX con VRM 14+2+1 etapas, DDR5-6400, 3x M.2, WiFi 6E. Excelente placa AM5 mid-range para Ryzen 7000/9000.',categoria:'motherboards'},
+    {sku:'MOBO-014',nombre:'Gigabyte B650 Aorus Elite AX',imagen:IMG.motherboards,precio:'4800',descripcion:'B650 ATX con VRM 12+2+1 etapas, DDR5-6400, 2x M.2 PCIe 5.0, WiFi 6E. Diseño Aorus gaming con RGB.',categoria:'motherboards'},
+    {sku:'MOBO-015',nombre:'ASUS TUF Gaming B650-Plus WiFi',imagen:IMG.motherboards,precio:'5200',descripcion:'B650 ATX durable con PCIe 4.0, DDR5-6400, 2x M.2, WiFi 6. Construcción TUF para AMD AM5 de largo plazo.',categoria:'motherboards'},
+    {sku:'MOBO-016',nombre:'MSI PRO B650M-A WiFi',imagen:IMG.motherboards,precio:'3800',descripcion:'B650 Micro-ATX con DDR5-6400, 2x M.2, WiFi 6E. Formato compacto con soporte completo para Ryzen 7000/9000.',categoria:'motherboards'},
+    {sku:'MOBO-017',nombre:'ASUS ROG Strix B650E-E Gaming WiFi',imagen:IMG.motherboards,precio:'8000',descripcion:'B650E ATX con PCIe 5.0 GPU + M.2, VRM 14+2 etapas, DDR5-6400+, WiFi 6E. Overclocking avanzado para AM5.',categoria:'motherboards'},
+    {sku:'MOBO-018',nombre:'Gigabyte X870E Aorus Master',imagen:IMG.motherboards,precio:'15500',descripcion:'X870E ATX nueva generación con PCIe 5.0 x16, USB4 40Gbps, DDR5-8000+, WiFi 7 y VRM 18+2+2 etapas.',categoria:'motherboards'},
+    {sku:'MOBO-019',nombre:'MSI MAG X870 Tomahawk WiFi',imagen:IMG.motherboards,precio:'9500',descripcion:'X870 ATX con USB4 40Gbps, PCIe 5.0, DDR5-8000, WiFi 7. Placa base moderna para Ryzen 9000 series.',categoria:'motherboards'},
+    {sku:'MOBO-020',nombre:'ASUS ProArt B650-Creator',imagen:IMG.motherboards,precio:'6500',descripcion:'B650 ATX para creadores con USB4 40Gbps, DDR5-6400, 2x M.2, 2.5G LAN. Diseño elegante y silencioso.',categoria:'motherboards'},
+
+    // ========== PÁGINA 3: MEMORIA RAM — 20 modelos ==========
+    {sku:'RAM-001',nombre:'Kingston FURY Beast 16GB DDR4 3200MHz (2x8GB)',imagen:IMG.ram,precio:'1200',descripcion:'Kit dual channel 16GB DDR4 3200MHz CL16. Disipador de aluminio bajo perfil, compatible con Intel XMP 2.0.',categoria:'ram'},
+    {sku:'RAM-002',nombre:'Corsair Vengeance LPX 32GB DDR4 3600MHz (2x16GB)',imagen:IMG.ram,precio:'2500',descripcion:'32GB DDR4 3600MHz CL18 bajo perfil (34mm). PCB de 8 capas y disipador de aluminio anodizado.',categoria:'ram'},
+    {sku:'RAM-003',nombre:'G.Skill Ripjaws V 32GB DDR4 3600MHz (2x16GB)',imagen:IMG.ram,precio:'2400',descripcion:'32GB DDR4 3600MHz CL18. Disipador de aluminio con diseño agresivo y chips Samsung B-Die seleccionados.',categoria:'ram'},
+    {sku:'RAM-004',nombre:'Kingston FURY Beast 64GB DDR4 3600MHz (2x32GB)',imagen:IMG.ram,precio:'4800',descripcion:'64GB DDR4 3600MHz CL18 para estaciones de trabajo y virtualización. Kit dual channel certificado.',categoria:'ram'},
+    {sku:'RAM-005',nombre:'Corsair Vengeance RGB 32GB DDR5 6000MHz (2x16GB)',imagen:IMG.ram,precio:'3800',descripcion:'32GB DDR5 6000MHz CL36 con iluminación RGB iCUE de 10 zonas. Compatible con Intel XMP 3.0.',categoria:'ram'},
+    {sku:'RAM-006',nombre:'G.Skill Trident Z5 RGB 32GB DDR5 6400MHz (2x16GB)',imagen:IMG.ram,precio:'4500',descripcion:'32GB DDR5 6400MHz CL32 Trident Z5 con RGB direccionable. Chips SK Hynix A-Die para OC extremo.',categoria:'ram'},
+    {sku:'RAM-007',nombre:'Kingston FURY Renegade 64GB DDR5 6400MHz (2x32GB)',imagen:IMG.ram,precio:'7500',descripcion:'64GB DDR5 6400MHz CL32 con disipador de aluminio agresivo. Perfiles Intel XMP 3.0 certificados.',categoria:'ram'},
+    {sku:'RAM-008',nombre:'Corsair Dominator Platinum 64GB DDR5 7200MHz (2x32GB)',imagen:IMG.ram,precio:'10500',descripcion:'64GB DDR5 7200MHz CL34 Dominator Platinum con RGB Capellix. La línea premium de Corsair para entusiastas.',categoria:'ram'},
+    {sku:'RAM-009',nombre:'G.Skill Trident Z5 RGB 64GB DDR5 7200MHz (2x32GB)',imagen:IMG.ram,precio:'9800',descripcion:'64GB DDR5 7200MHz CL34 Trident Z5 RGB. El kit DDR5 más rápido de G.Skill con chips Hynix A-Die.',categoria:'ram'},
+    {sku:'RAM-010',nombre:'Corsair Vengeance 32GB DDR5 5600MHz (2x16GB)',imagen:IMG.ram,precio:'2800',descripcion:'32GB DDR5 5600MHz CL36 sin RGB. Solución DDR5 económica y confiable para builds de nueva generación.',categoria:'ram'},
+    {sku:'RAM-011',nombre:'Kingston FURY Impact 32GB DDR5 5600MHz SO-DIMM',imagen:IMG.ram,precio:'3200',descripcion:'32GB DDR5 5600MHz SO-DIMM para laptops y mini-PCs. Compatible con Intel XMP y AMD EXPO.',categoria:'ram'},
+    {sku:'RAM-012',nombre:'G.Skill Ripjaws S5 32GB DDR5 6000MHz (2x16GB)',imagen:IMG.ram,precio:'3200',descripcion:'32GB DDR5 6000MHz CL30 bajo perfil (33mm). Ideal para builds con disipadores de CPU grandes.',categoria:'ram'},
+    {sku:'RAM-013',nombre:'Corsair Vengeance 16GB DDR5 5200MHz (2x8GB)',imagen:IMG.ram,precio:'1500',descripcion:'16GB DDR5 5200MHz CL40 de entrada. Upgrade moderno para sistemas Intel 12th+ y AMD AM5.',categoria:'ram'},
+    {sku:'RAM-014',nombre:'Kingston FURY Beast 8GB DDR4 3200MHz (1x8GB)',imagen:IMG.ram,precio:'600',descripcion:'8GB DDR4 3200MHz CL16 módulo individual. Ideal para upgrades de laptops y PCs de oficina.',categoria:'ram'},
+    {sku:'RAM-015',nombre:'Corsair Vengeance LPX 16GB DDR4 3200MHz (2x8GB)',imagen:IMG.ram,precio:'1200',descripcion:'16GB DDR4 3200MHz CL16 dual channel. El estándar de oro para gaming 1080p/1440p.',categoria:'ram'},
+    {sku:'RAM-016',nombre:'G.Skill Ripjaws V 64GB DDR4 3600MHz (2x32GB)',imagen:IMG.ram,precio:'4800',descripcion:'64GB DDR4 3600MHz CL18 para virtualización y edición de video 4K. Kit dual channel de alta capacidad.',categoria:'ram'},
+    {sku:'RAM-017',nombre:'Kingston FURY Renegade 32GB DDR5 7200MHz (2x16GB)',imagen:IMG.ram,precio:'5500',descripcion:'32GB DDR5 7200MHz CL34 Renegade. Overclocking extremo con disipador de aluminio agresivo.',categoria:'ram'},
+    {sku:'RAM-018',nombre:'Corsair Dominator Titanium 64GB DDR5 6600MHz (2x32GB)',imagen:IMG.ram,precio:'9000',descripcion:'64GB DDR5 6600MHz CL32 Dominator Titanium con RGB DHX. El kit más premium de Corsair con Swappable Light Pipes.',categoria:'ram'},
+    {sku:'RAM-019',nombre:'G.Skill Trident Z5 Neo 32GB DDR5 6000MHz AMD EXPO (2x16GB)',imagen:IMG.ram,precio:'4000',descripcion:'32GB DDR5 6000MHz CL30 optimizado para AMD Ryzen 7000/9000 con perfiles EXPO certificados.',categoria:'ram'},
+    {sku:'RAM-020',nombre:'Kingston FURY Beast 128GB DDR5 5600MHz (4x32GB)',imagen:IMG.ram,precio:'12000',descripcion:'128GB DDR5 5600MHz quad channel para workstations y servidores. Máxima capacidad DDR5 disponible.',categoria:'ram'},
+
+    // ========== PÁGINA 4: PROCESADORES (CPU) — 20 modelos ==========
+    {sku:'CPU-001',nombre:'Intel Core i3-14100 4C/8T hasta 4.7GHz LGA 1700',imagen:IMG.procesadores,precio:'3200',descripcion:'4 núcleos P-core, 8 hilos, 12MB Smart Cache. Frecuencia turbo 4.7GHz, TDP 60W. Ideal para oficina y hogar.',categoria:'procesadores'},
+    {sku:'CPU-002',nombre:'Intel Core i5-13400F 10C/16T hasta 4.6GHz',imagen:IMG.procesadores,precio:'5500',descripcion:'10 núcleos (6P+4E), 16 hilos, 20MB cache. Turbo 4.6GHz, sin gráficos integrados. Excelente valor gaming.',categoria:'procesadores'},
+    {sku:'CPU-003',nombre:'Intel Core i5-14400F 10C/16T hasta 4.7GHz',imagen:IMG.procesadores,precio:'5800',descripcion:'Refresco Raptor Lake con 10 núcleos (6P+4E), 20MB cache. Turbo 4.7GHz, TDP 65W para gaming fluido.',categoria:'procesadores'},
+    {sku:'CPU-004',nombre:'Intel Core i5-14600K 14C/20T hasta 5.3GHz',imagen:IMG.procesadores,precio:'8500',descripcion:'14 núcleos (6P+8E), 20 hilos, 24MB cache. Turbo 5.3GHz, desbloqueado para overclocking. TDP 125W.',categoria:'procesadores'},
+    {sku:'CPU-005',nombre:'Intel Core i7-13700K 16C/24T hasta 5.4GHz',imagen:IMG.procesadores,precio:'11000',descripcion:'16 núcleos (8P+8E), 24 hilos, 30MB cache. Turbo 5.4GHz, rendimiento gaming y productividad extremo.',categoria:'procesadores'},
+    {sku:'CPU-006',nombre:'Intel Core i7-14700K 20C/28T hasta 5.6GHz',imagen:IMG.procesadores,precio:'12000',descripcion:'20 núcleos (8P+12E), 28 hilos, 33MB cache. Turbo 5.6GHz, el mejor i7 para gaming y creación de contenido.',categoria:'procesadores'},
+    {sku:'CPU-007',nombre:'Intel Core i9-13900K 24C/32T hasta 5.8GHz',imagen:IMG.procesadores,precio:'16000',descripcion:'24 núcleos (8P+16E), 32 hilos, 36MB cache. Turbo 5.8GHz, el monarca gaming/productividad de 13th Gen.',categoria:'procesadores'},
+    {sku:'CPU-008',nombre:'Intel Core i9-14900K 24C/32T hasta 6.0GHz',imagen:IMG.procesadores,precio:'17500',descripcion:'24 núcleos (8P+16E), 32 hilos, 36MB cache. Turbo 6.0GHz, el primer CPU de consumo en alcanzar 6GHz.',categoria:'procesadores'},
+    {sku:'CPU-009',nombre:'Intel Core Ultra 5 245K 14C/14T hasta 5.2GHz',imagen:IMG.procesadores,precio:'9000',descripcion:'Arrow Lake 14 núcleos (6P+8E), NPU integrada para IA. Socket LGA 1851, DDR5 y PCIe 5.0.',categoria:'procesadores'},
+    {sku:'CPU-010',nombre:'Intel Core Ultra 7 265K 20C/20T hasta 5.5GHz',imagen:IMG.procesadores,precio:'13000',descripcion:'Arrow Lake 20 núcleos (8P+12E) con NPU dedicada. Gaming e IA local con eficiencia mejorada.',categoria:'procesadores'},
+    {sku:'CPU-011',nombre:'Intel Core Ultra 9 285K 24C/24T hasta 5.7GHz',imagen:IMG.procesadores,precio:'18000',descripcion:'Arrow Lake flagship 24 núcleos (8P+16E), NPU de 13 TOPS. El sucesor del i9-14900K en LGA 1851.',categoria:'procesadores'},
+    {sku:'CPU-012',nombre:'AMD Ryzen 5 5600 6C/12T hasta 4.4GHz AM4',imagen:IMG.procesadores,precio:'4000',descripcion:'6 núcleos Zen 3, 12 hilos, 32MB cache. Turbo 4.4GHz, TDP 65W. El mejor valor para AM4 gaming.',categoria:'procesadores'},
+    {sku:'CPU-013',nombre:'AMD Ryzen 5 7600X 6C/12T hasta 5.3GHz AM5',imagen:IMG.procesadores,precio:'6500',descripcion:'6 núcleos Zen 4, 12 hilos, 32MB cache. Turbo 5.3GHz, TDP 105W. Excelente gaming en AM5.',categoria:'procesadores'},
+    {sku:'CPU-014',nombre:'AMD Ryzen 5 9600X 6C/12T hasta 5.4GHz AM5',imagen:IMG.procesadores,precio:'8000',descripcion:'6 núcleos Zen 5, 12 hilos, 32MB cache. Turbo 5.4GHz, TDP 65W. Nueva generación con IPC mejorado 16%.',categoria:'procesadores'},
+    {sku:'CPU-015',nombre:'AMD Ryzen 7 5800X3D 8C/16T 96MB 3D V-Cache',imagen:IMG.procesadores,precio:'8500',descripcion:'8 núcleos Zen 3 con 96MB 3D V-Cache. El rey indiscutible del gaming en socket AM4.',categoria:'procesadores'},
+    {sku:'CPU-016',nombre:'AMD Ryzen 7 7700X 8C/16T hasta 5.4GHz AM5',imagen:IMG.procesadores,precio:'9500',descripcion:'8 núcleos Zen 4, 16 hilos, 32MB cache. Turbo 5.4GHz, TDP 105W. Gaming y productividad balanceada.',categoria:'procesadores'},
+    {sku:'CPU-017',nombre:'AMD Ryzen 7 7800X3D 8C/16T 96MB 3D V-Cache',imagen:IMG.procesadores,precio:'12000',descripcion:'8 núcleos Zen 4 con 96MB 3D V-Cache. El CPU gaming más rápido del mundo en su lanzamiento.',categoria:'procesadores'},
+    {sku:'CPU-018',nombre:'AMD Ryzen 7 9700X 8C/16T hasta 5.5GHz AM5',imagen:IMG.procesadores,precio:'11500',descripcion:'8 núcleos Zen 5, 16 hilos, 32MB cache. Turbo 5.5GHz, TDP 65W. Eficiencia energética líder.',categoria:'procesadores'},
+    {sku:'CPU-019',nombre:'AMD Ryzen 9 7900X 12C/24T hasta 5.6GHz AM5',imagen:IMG.procesadores,precio:'14000',descripcion:'12 núcleos Zen 4, 24 hilos, 64MB cache. Turbo 5.6GHz, TDP 170W. Potencia para creadores y gaming.',categoria:'procesadores'},
+    {sku:'CPU-020',nombre:'AMD Ryzen 9 9950X 16C/32T hasta 5.7GHz AM5',imagen:IMG.procesadores,precio:'18500',descripcion:'16 núcleos Zen 5, 32 hilos, 64MB cache. Turbo 5.7GHz, TDP 170W. El flagship AM5 para productividad.',categoria:'procesadores'},
+
+    // ========== PÁGINA 5: ALMACENAMIENTO SSD — 20 modelos ==========
+    {sku:'SSD-001',nombre:'Kingston A400 240GB SATA III 2.5"',imagen:IMG.almacenamiento,precio:'450',descripcion:'SSD SATA III 240GB, lectura 500MB/s, escritura 350MB/s. Upgrade económico para revivir PCs antiguas.',categoria:'almacenamiento'},
+    {sku:'SSD-002',nombre:'WD Blue 500GB SATA III 2.5"',imagen:IMG.almacenamiento,precio:'800',descripcion:'SSD WD Blue 500GB SATA III, lectura 560MB/s. Confiabilidad WD con 5 años de garantía.',categoria:'almacenamiento'},
+    {sku:'SSD-003',nombre:'Samsung 870 EVO 1TB SATA III 2.5"',imagen:IMG.almacenamiento,precio:'1800',descripcion:'SSD SATA líder con 1TB, lectura 560MB/s, escritura 530MB/s. V-NAND 3bit MLC y controlador MKX.',categoria:'almacenamiento'},
+    {sku:'SSD-004',nombre:'Kingston NV2 500GB NVMe M.2 PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'900',descripcion:'NVMe M.2 2280 PCIe 4.0 x4, lectura 3500MB/s, escritura 2100MB/s. Solución NVMe económica.',categoria:'almacenamiento'},
+    {sku:'SSD-005',nombre:'WD Black SN770 1TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'1800',descripcion:'NVMe 1TB PCIe 4.0, lectura 5150MB/s, escritura 4900MB/s. Gaming SSD con nCache 4.0 y HMB.',categoria:'almacenamiento'},
+    {sku:'SSD-006',nombre:'Samsung 980 1TB NVMe M.2 PCIe 3.0 x4',imagen:IMG.almacenamiento,precio:'1600',descripcion:'NVMe 1TB PCIe 3.0, lectura 3500MB/s, escritura 3000MB/s. DRAM-less con HBM para eficiencia.',categoria:'almacenamiento'},
+    {sku:'SSD-007',nombre:'Samsung 980 PRO 1TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'2400',descripcion:'NVMe 1TB PCIe 4.0, lectura 7000MB/s, escritura 5000MB/s. Controlador Elpis con disipador integrado.',categoria:'almacenamiento'},
+    {sku:'SSD-008',nombre:'Samsung 990 PRO 1TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'2800',descripcion:'NVMe 1TB PCIe 4.0, lectura 7450MB/s, escritura 6900MB/s. El SSD PCIe 4.0 más rápido de Samsung.',categoria:'almacenamiento'},
+    {sku:'SSD-009',nombre:'Samsung 990 PRO 2TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'5000',descripcion:'NVMe 2TB PCIe 4.0 con disipador de calor incluido. Ideal para PS5 y gaming de alta capacidad.',categoria:'almacenamiento'},
+    {sku:'SSD-010',nombre:'WD Black SN850X 1TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'2500',descripcion:'NVMe 1TB PCIe 4.0, lectura 7300MB/s, escritura 6600MB/s. SSD gaming top de Western Digital.',categoria:'almacenamiento'},
+    {sku:'SSD-011',nombre:'WD Black SN850X 2TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'4500',descripcion:'NVMe 2TB PCIe 4.0 con disipador opcional. Gaming de alto rendimiento con Game Mode 2.0.',categoria:'almacenamiento'},
+    {sku:'SSD-012',nombre:'Kingston KC3000 1TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'2200',descripcion:'NVMe 1TB PCIe 4.0, lectura 7000MB/s, escritura 6000MB/s. Controlador Phison E18 con 3D TLC NAND.',categoria:'almacenamiento'},
+    {sku:'SSD-013',nombre:'Kingston KC3000 2TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'4000',descripcion:'NVMe 2TB PCIe 4.0, lectura 7000MB/s. Alto rendimiento con disipador de grafeno integrado.',categoria:'almacenamiento'},
+    {sku:'SSD-014',nombre:'Seagate FireCuda 530 2TB NVMe PCIe 4.0',imagen:IMG.almacenamiento,precio:'4800',descripcion:'NVMe 2TB PCIe 4.0, lectura 7300MB/s. Con disipador incluido y 5 años de Rescue Data Recovery.',categoria:'almacenamiento'},
+    {sku:'SSD-015',nombre:'Samsung 990 PRO 4TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'9500',descripcion:'NVMe 4TB PCIe 4.0 flagship. La capacidad máxima del 990 PRO para creadores y profesionales.',categoria:'almacenamiento'},
+    {sku:'SSD-016',nombre:'Crucial T700 1TB NVMe PCIe 5.0 x4',imagen:IMG.almacenamiento,precio:'3500',descripcion:'NVMe 1TB PCIe 5.0, lectura 11700MB/s, escritura 9500MB/s. El primer SSD PCIe 5.0 consumer.',categoria:'almacenamiento'},
+    {sku:'SSD-017',nombre:'Crucial T700 2TB NVMe PCIe 5.0 x4',imagen:IMG.almacenamiento,precio:'6500',descripcion:'NVMe 2TB PCIe 5.0, lectura 12400MB/s. Rendimiento extremo con disipador de calor incluido.',categoria:'almacenamiento'},
+    {sku:'SSD-018',nombre:'WD Black SN850X 4TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'8500',descripcion:'NVMe 4TB PCIe 4.0, la mayor capacidad del SN850X. Para bibliotecas de juegos masivas.',categoria:'almacenamiento'},
+    {sku:'SSD-019',nombre:'Seagate FireCuda 540 2TB NVMe PCIe 5.0',imagen:IMG.almacenamiento,precio:'7500',descripcion:'NVMe 2TB PCIe 5.0, lectura 10000MB/s. SSD de nueva generación con disipador avanzado.',categoria:'almacenamiento'},
+    {sku:'SSD-020',nombre:'Samsung 990 EVO 1TB NVMe PCIe 5.0 x4',imagen:IMG.almacenamiento,precio:'2200',descripcion:'NVMe 1TB PCIe 5.0 de consumo, lectura 5000MB/s. Diseño eficiente con TDP bajo para laptops.',categoria:'almacenamiento'},
+
+    // ========== PÁGINA 6: GABINETES (CASES) — 20 modelos ==========
+    {sku:'CASE-001',nombre:'NZXT H5 Flow Mid-Tower ATX',imagen:IMG.gabinetes,precio:'2200',descripcion:'Mid-tower ATX con panel perforado frontal para flujo de aire máximo. Soporta GPUs hasta 365mm y radiadores 280mm.',categoria:'gabinetes'},
+    {sku:'CASE-002',nombre:'Corsair 4000D Airflow Mid-Tower ATX',imagen:IMG.gabinetes,precio:'2000',descripcion:'Mid-tower con panel frontal mesh de alta ventilación. 2 ventiladores incluidos, soporta E-ATX y radiadores 360mm.',categoria:'gabinetes'},
+    {sku:'CASE-003',nombre:'Lian Li Lancool 216 Mid-Tower ATX',imagen:IMG.gabinetes,precio:'2800',descripcion:'Mid-tower con dos ventiladores frontales de 160mm incluidos. Excelente flujo de aire y gestión de cables.',categoria:'gabinetes'},
+    {sku:'CASE-004',nombre:'Fractal Design North Mid-Tower ATX',imagen:IMG.gabinetes,precio:'3200',descripcion:'Mid-tower con acabado de madera real y diseño escandinavo. Elegante con panel mesh frontal opcional.',categoria:'gabinetes'},
+    {sku:'CASE-005',nombre:'Phanteks Eclipse G360A Mid-Tower ATX',imagen:IMG.gabinetes,precio:'2200',descripcion:'Mid-tower con panel frontal mesh ultra-fino y 3 ventiladores D-RGB de 120mm incluidos.',categoria:'gabinetes'},
+    {sku:'CASE-006',nombre:'be quiet! Pure Base 500DX Mid-Tower ATX',imagen:IMG.gabinetes,precio:'2500',descripcion:'Mid-tower silencioso con 3 ventiladores Pure Wings 2 y iluminación ARGB. Balance perfecto entre airflow y silencio.',categoria:'gabinetes'},
+    {sku:'CASE-007',nombre:'NZXT H7 Flow Mid-Tower ATX',imagen:IMG.gabinetes,precio:'3000',descripcion:'Mid-tower premium con panel frontal perforado y vidrio templado lateral. Espacioso para builds complejas.',categoria:'gabinetes'},
+    {sku:'CASE-008',nombre:'Corsair 5000D Airflow Mid-Tower ATX',imagen:IMG.gabinetes,precio:'3800',descripcion:'Mid-tower espacioso con soporte E-ATX, múltiples radiadores y panel mesh frontal de alta ventilación.',categoria:'gabinetes'},
+    {sku:'CASE-009',nombre:'Lian Li O11 Dynamic EVO Mid-Tower ATX',imagen:IMG.gabinetes,precio:'4200',descripcion:'El legendario O11 EVO con diseño dual-chamber modular. Configurable en 6 modos diferentes. Estándar de la industria.',categoria:'gabinetes'},
+    {sku:'CASE-010',nombre:'Fractal Design Torrent Mid-Tower ATX',imagen:IMG.gabinetes,precio:'5000',descripcion:'Mid-tower con dos ventiladores frontales de 180mm incluidos. El gabinete con mejor airflow del mercado.',categoria:'gabinetes'},
+    {sku:'CASE-011',nombre:'Phanteks Enthoo Pro Full-Tower ATX',imagen:IMG.gabinetes,precio:'4500',descripcion:'Full-tower con capacidad masiva, 8 bahías de 3.5" y soporte para múltiples radiadores. Clásico entusiasta.',categoria:'gabinetes'},
+    {sku:'CASE-012',nombre:'be quiet! Dark Base Pro 900 Full-Tower',imagen:IMG.gabinetes,precio:'6000',descripcion:'Full-tower premium con base motherboard ajustable, 3 Silent Wings 3 y Qi wireless charging en el panel.',categoria:'gabinetes'},
+    {sku:'CASE-013',nombre:'Corsair 7000D Airflow Full-Tower ATX',imagen:IMG.gabinetes,precio:'5500',descripcion:'Full-tower espacioso con soporte para radiadores 420mm triples y hasta 10 ventiladores. Para builds extremas.',categoria:'gabinetes'},
+    {sku:'CASE-014',nombre:'Lian Li V3000 Plus Full-Tower E-ATX',imagen:IMG.gabinetes,precio:'7500',descripcion:'Full-tower flagship con soporte para 4 GPUs, radiador 480mm y diseño de aluminio premium. Para HEDT.',categoria:'gabinetes'},
+    {sku:'CASE-015',nombre:'NZXT H1 V2 Mini-ITX con PSU 750W',imagen:IMG.gabinetes,precio:'4500',descripcion:'Mini-ITX vertical con fuente SFX 750W 80+ Gold y AIO 140mm incluidos. Diseño elegante y compacto.',categoria:'gabinetes'},
+    {sku:'CASE-016',nombre:'Fractal Design Terra Mini-ITX',imagen:IMG.gabinetes,precio:'4000',descripcion:'Mini-ITX premium con acabado de aluminio anodizado y madera real. El mini-ITX más elegante del mercado.',categoria:'gabinetes'},
+    {sku:'CASE-017',nombre:'Cooler Master NR200 Mini-ITX',imagen:IMG.gabinetes,precio:'1800',descripcion:'Mini-ITX compacto con soporte para GPUs de 330mm y radiador 240mm. El mejor valor en mini-ITX.',categoria:'gabinetes'},
+    {sku:'CASE-018',nombre:'Hyte Y60 Mid-Tower ATX con Vidrio Panorámico',imagen:IMG.gabinetes,precio:'4800',descripcion:'Mid-tower con vidrio panorámico de 3 paneles y soporte para PCIe 4.0 riser incluido. Diseño futurista.',categoria:'gabinetes'},
+    {sku:'CASE-019',nombre:'Hyte Y70 Touch Mid-Tower con Pantalla IPS',imagen:IMG.gabinetes,precio:'8500',descripcion:'Mid-tower con pantalla IPS táctil de 14" integrada para telemetría y personalización. El gabinete más innovador.',categoria:'gabinetes'},
+    {sku:'CASE-020',nombre:'Corsair 3500X Mid-Tower ATX Reverse',imagen:IMG.gabinetes,precio:'2800',descripcion:'Mid-tower con diseño reverse ATX para exhibición lateral y airflow optimizado. Soporte para ARGB fans.',categoria:'gabinetes'},
+
+    // ========== PÁGINA 7: FUENTES DE PODER (PSU) — 20 modelos ==========
+    {sku:'PSU-001',nombre:'EVGA 500W 80+ Bronze No-Modular',imagen:IMG.fuentes,precio:'1200',descripcion:'Fuente 500W certificada 80+ Bronze, no modular. Solución confiable de entrada con 3 años de garantía.',categoria:'fuentes'},
+    {sku:'PSU-002',nombre:'Corsair CV550 550W 80+ Bronze',imagen:IMG.fuentes,precio:'1400',descripcion:'Fuente 550W 80+ Bronze, semi-modular. Compacta 125mm con ventilador silencioso de 120mm.',categoria:'fuentes'},
+    {sku:'PSU-003',nombre:'Cooler Master MWE 650W 80+ Bronze V2',imagen:IMG.fuentes,precio:'1500',descripcion:'Fuente 650W 80+ Bronze V2, full modular. Diseño DC-DC con capacitores japoneses para mayor estabilidad.',categoria:'fuentes'},
+    {sku:'PSU-004',nombre:'Corsair RM650 650W 80+ Gold Full Modular',imagen:IMG.fuentes,precio:'2200',descripcion:'Fuente 650W 80+ Gold, full modular con modo Zero RPM. 10 años de garantía Corsair premium.',categoria:'fuentes'},
+    {sku:'PSU-005',nombre:'Seasonic Focus GX-750 750W 80+ Gold',imagen:IMG.fuentes,precio:'2500',descripcion:'Fuente 750W 80+ Gold full modular. Seasonic Focus con diseño híbrido y 10 años de garantía.',categoria:'fuentes'},
+    {sku:'PSU-006',nombre:'Corsair RM750e 750W 80+ Gold ATX 3.0',imagen:IMG.fuentes,precio:'2400',descripcion:'Fuente 750W 80+ Gold ATX 3.0 con conector 12VHPWR nativo para RTX 4000/5000. Full modular.',categoria:'fuentes'},
+    {sku:'PSU-007',nombre:'EVGA SuperNOVA 750 G6 750W 80+ Gold',imagen:IMG.fuentes,precio:'2600',descripcion:'Fuente 750W 80+ Gold full modular compacta (150mm). Ventilador FDB silencioso con modo ECO.',categoria:'fuentes'},
+    {sku:'PSU-008',nombre:'be quiet! Straight Power 11 850W 80+ Gold',imagen:IMG.fuentes,precio:'3200',descripcion:'Fuente 850W 80+ Gold full modular con ventilador Silent Wings 3. Certificación Cybenetics ETA-A.',categoria:'fuentes'},
+    {sku:'PSU-009',nombre:'Corsair RM850x 850W 80+ Gold ATX 3.0',imagen:IMG.fuentes,precio:'3000',descripcion:'Fuente 850W 80+ Gold ATX 3.0 con 12VHPWR y condensadores japoneses 105°C. La serie premium de Corsair.',categoria:'fuentes'},
+    {sku:'PSU-010',nombre:'Seasonic Focus GX-850 850W 80+ Gold',imagen:IMG.fuentes,precio:'2800',descripcion:'Fuente 850W 80+ Gold full modular. Seasonic Focus con 10 años de garantía y modo silencioso.',categoria:'fuentes'},
+    {sku:'PSU-011',nombre:'Corsair RM1000x 1000W 80+ Gold ATX 3.0',imagen:IMG.fuentes,precio:'4200',descripcion:'Fuente 1000W 80+ Gold ATX 3.0 con 12VHPWR para RTX 4090/5090. La opción ideal para builds de gama alta.',categoria:'fuentes'},
+    {sku:'PSU-012',nombre:'EVGA SuperNOVA 1000 G7 1000W 80+ Gold',imagen:IMG.fuentes,precio:'4000',descripcion:'Fuente 1000W 80+ Gold full modular con FDB fan y diseño compacto 150mm. Excelente regulación.',categoria:'fuentes'},
+    {sku:'PSU-013',nombre:'be quiet! Dark Power 13 1000W 80+ Titanium',imagen:IMG.fuentes,precio:'7500',descripcion:'Fuente 1000W 80+ Titanium full modular. La línea premium de be quiet! con eficiencia de nivel superior.',categoria:'fuentes'},
+    {sku:'PSU-014',nombre:'Corsair HX1200 1200W 80+ Platinum',imagen:IMG.fuentes,precio:'6500',descripcion:'Fuente 1200W 80+ Platinum full modular con modo Zero RPM. Para estaciones de trabajo y gaming extremo.',categoria:'fuentes'},
+    {sku:'PSU-015',nombre:'Seasonic Prime TX-1300 1300W 80+ Titanium',imagen:IMG.fuentes,precio:'8000',descripcion:'Fuente 1300W 80+ Titanium full modular. La joya de Seasonic con 12 años de garantía.',categoria:'fuentes'},
+    {sku:'PSU-016',nombre:'Corsair AX1600i 1600W 80+ Titanium Digital',imagen:IMG.fuentes,precio:'12000',descripcion:'Fuente 1600W 80+ Titanium digital con iCUE Link. La PSU más avanzada del mundo con monitoreo en tiempo real.',categoria:'fuentes'},
+    {sku:'PSU-017',nombre:'EVGA SuperNOVA 1600 T2 1600W 80+ Titanium',imagen:IMG.fuentes,precio:'15000',descripcion:'Fuente 1600W 80+ Titanium full modular. Para multi-GPU, servidores y mining rigs de alto consumo.',categoria:'fuentes'},
+    {sku:'PSU-018',nombre:'ASUS ROG Thor 1200P2 1200W 80+ Platinum',imagen:IMG.fuentes,precio:'8500',descripcion:'Fuente 1200W 80+ Platinum con pantalla OLED integrada y Aura Sync. Diseño ROG premium.',categoria:'fuentes'},
+    {sku:'PSU-019',nombre:'MSI MPG A850G 850W 80+ Gold ATX 3.0',imagen:IMG.fuentes,precio:'3200',descripcion:'Fuente 850W 80+ Gold ATX 3.0 con 12VHPWR nativo. Diseño compacto 150mm y full modular.',categoria:'fuentes'},
+    {sku:'PSU-020',nombre:'Thermaltake Toughpower GF3 1000W 80+ Gold ATX 3.0',imagen:IMG.fuentes,precio:'3800',descripcion:'Fuente 1000W 80+ Gold ATX 3.0 con 12VHPWR y ventilador Smart Zero Fan. Excelente relación calidad/precio.',categoria:'fuentes'},
+
+    // ========== PÁGINA 8: SISTEMAS DE ENFRIAMIENTO (COOLING) — 20 modelos ==========
+    {sku:'COOL-001',nombre:'Cooler Master Hyper 212 Black Edition',imagen:IMG.enfriamiento,precio:'800',descripcion:'Disipador de torre con 4 heat pipes de contacto directo y ventilador SickleFlow 120mm. El estándar de oro en aire.',categoria:'enfriamiento'},
+    {sku:'COOL-002',nombre:'be quiet! Pure Rock 2 150W TDP',imagen:IMG.enfriamiento,precio:'900',descripcion:'Disipador de torre silencioso con 3 heat pipes y ventilador Pure Wings 2 120mm. Máximo 25dB(A).',categoria:'enfriamiento'},
+    {sku:'COOL-003',nombre:'Noctua NH-U12S Redux 120mm',imagen:IMG.enfriamiento,precio:'1200',descripcion:'Disipador Noctua single-tower con NF-P12 redux fan. Calidad austríaca a precio accesible.',categoria:'enfriamiento'},
+    {sku:'COOL-004',nombre:'Thermalright Peerless Assassin 120 SE',imagen:IMG.enfriamiento,precio:'1000',descripcion:'Disipador dual-tower con 6 heat pipes y 2 ventiladores 120mm. El mejor valor en enfriamiento por aire.',categoria:'enfriamiento'},
+    {sku:'COOL-005',nombre:'Noctua NH-D15 chromax.black Dual Tower',imagen:IMG.enfriamiento,precio:'2800',descripcion:'El legendario NH-D15 en negro completo. Dual-tower con 2x NF-A15 140mm. El rey del enfriamiento por aire.',categoria:'enfriamiento'},
+    {sku:'COOL-006',nombre:'be quiet! Dark Rock Pro 4 250W TDP',imagen:IMG.enfriamiento,precio:'2200',descripcion:'Disipador dual-tower con 7 heat pipes y 2 Silent Wings 3. 250W TDP para CPUs de alta gama.',categoria:'enfriamiento'},
+    {sku:'COOL-007',nombre:'DeepCool AK620 Dual Tower',imagen:IMG.enfriamiento,precio:'1200',descripcion:'Disipador dual-tower con 6 heat pipes y 2 ventiladores FK120. Rendimiento comparable al NH-D15 a mitad de precio.',categoria:'enfriamiento'},
+    {sku:'COOL-008',nombre:'Thermalright Phantom Spirit 120 EVO',imagen:IMG.enfriamiento,precio:'1100',descripcion:'Disipador dual-tower con 7 heat pipes y 2 ventiladores TL-C12. El sucesor del Peerless Assassin mejorado.',categoria:'enfriamiento'},
+    {sku:'COOL-009',nombre:'Cooler Master MasterLiquid ML240L V2 ARGB',imagen:IMG.enfriamiento,precio:'1800',descripcion:'AIO 240mm con radiador de aluminio y 2 ventiladores SickleFlow 120 ARGB. Bomba de baja resistencia.',categoria:'enfriamiento'},
+    {sku:'COOL-010',nombre:'Corsair iCUE H100x RGB Elite 240mm',imagen:IMG.enfriamiento,precio:'2500',descripcion:'AIO 240mm con 2 ventiladores SP120 RGB Elite y bomba con iluminación. Controlado por iCUE.',categoria:'enfriamiento'},
+    {sku:'COOL-011',nombre:'NZXT Kraken X53 RGB 240mm',imagen:IMG.enfriamiento,precio:'2800',descripcion:'AIO 240mm con bomba LCD personalizable y 2 Aer RGB 2 120mm. Diseño premium con CAM software.',categoria:'enfriamiento'},
+    {sku:'COOL-012',nombre:'Arctic Liquid Freezer II 280mm',imagen:IMG.enfriamiento,precio:'2500',descripcion:'AIO 280mm con VRM fan integrado y radiador de 38mm de grosor. El AIO con mejor relación rendimiento/precio.',categoria:'enfriamiento'},
+    {sku:'COOL-013',nombre:'Corsair iCUE H150i Elite LCD 360mm',imagen:IMG.enfriamiento,precio:'4500',descripcion:'AIO 360mm con bomba LCD IPS personalizable y 3 ML120 RGB Elite. Premium para entusiastas.',categoria:'enfriamiento'},
+    {sku:'COOL-014',nombre:'NZXT Kraken Z73 RGB 360mm con LCD',imagen:IMG.enfriamiento,precio:'5500',descripcion:'AIO 360mm con bomba LCD de 2.36" para GIFs y telemetría. El AIO más personalizable de NZXT.',categoria:'enfriamiento'},
+    {sku:'COOL-015',nombre:'Arctic Liquid Freezer II 360mm',imagen:IMG.enfriamiento,precio:'3000',descripcion:'AIO 360mm con radiador grueso de 38mm y VRM fan. El AIO de 360mm más eficiente del mercado.',categoria:'enfriamiento'},
+    {sku:'COOL-016',nombre:'be quiet! Silent Loop 2 360mm ARGB',imagen:IMG.enfriamiento,precio:'3800',descripcion:'AIO 360mm con bomba de 3 cámaras y 3 Silent Wings 3 120mm ARGB. Silencio absoluto be quiet!',categoria:'enfriamiento'},
+    {sku:'COOL-017',nombre:'ASUS ROG Ryujin III 360 ARGB con LCD',imagen:IMG.enfriamiento,precio:'6000',descripcion:'AIO 360mm premium con bomba LCD 3.5" y ventiladores Noctua Industrial. El AIO ROG flagship.',categoria:'enfriamiento'},
+    {sku:'COOL-018',nombre:'Corsair iCUE H170i Elite 420mm',imagen:IMG.enfriamiento,precio:'5500',descripcion:'AIO 420mm masivo con 3x ML140 RGB Elite. Para CPUs de 200W+ TDP como i9-14900K y Ryzen 9 7950X.',categoria:'enfriamiento'},
+    {sku:'COOL-019',nombre:'DeepCool LT720 360mm ARGB',imagen:IMG.enfriamiento,precio:'2800',descripcion:'AIO 360mm con bomba de 4ª generación y 3 FK120 ARGB. Diseño moderno con excelente rendimiento.',categoria:'enfriamiento'},
+    {sku:'COOL-020',nombre:'Thermalright Frozen Magic 360 Scenic V3',imagen:IMG.enfriamiento,precio:'1800',descripcion:'AIO 360mm económico con 3 ventiladores TL-C12C ARGB. Excelente valor para enfriamiento líquido.',categoria:'enfriamiento'},
+
+    // ========== PÁGINA 9: MONITORES — 20 modelos ==========
+    {sku:'MON-001',nombre:'AOC 24G2 24" IPS 144Hz 1ms FreeSync',imagen:IMG.monitores,precio:'3500',descripcion:'Monitor gaming 24" IPS Full HD 1920x1080, 144Hz, 1ms MPRT, FreeSync Premium. Excelente entrada al gaming.',categoria:'monitores'},
+    {sku:'MON-002',nombre:'ASUS VG248QG 24" TN 165Hz 0.5ms G-Sync',imagen:IMG.monitores,precio:'3800',descripcion:'Monitor 24" TN 165Hz, 0.5ms, compatible G-Sync. Para eSports competitivos con respuesta ultra-rápida.',categoria:'monitores'},
+    {sku:'MON-003',nombre:'BenQ ZOWIE XL2411P 24" TN 144Hz 1ms',imagen:IMG.monitores,precio:'4500',descripcion:'Monitor eSports ZOWIE 24" TN 144Hz con Black eQualizer y Color Vibrance. Estándar de torneos FPS.',categoria:'monitores'},
+    {sku:'MON-004',nombre:'MSI Optix MAG274QRF-QD 27" IPS QHD 165Hz',imagen:IMG.monitores,precio:'7500',descripcion:'Monitor 27" IPS QHD 2560x1440, 165Hz, Quantum Dot, 1ms. Colores vivos y gaming fluido.',categoria:'monitores'},
+    {sku:'MON-005',nombre:'LG UltraGear 27GP850-B 27" Nano IPS QHD 180Hz',imagen:IMG.monitores,precio:'8500',descripcion:'Monitor 27" Nano IPS QHD 180Hz OC, 1ms, G-Sync Compatible, HDR 400. El estándar mid-range gaming.',categoria:'monitores'},
+    {sku:'MON-006',nombre:'ASUS TUF Gaming VG27AQ 27" IPS QHD 170Hz',imagen:IMG.monitores,precio:'6500',descripcion:'Monitor 27" IPS QHD 170Hz OC, 1ms MPRT, ELMB Sync, G-Sync Compatible. Valor premium ASUS.',categoria:'monitores'},
+    {sku:'MON-007',nombre:'Samsung Odyssey G5 27" VA QHD 240Hz Curvo',imagen:IMG.monitores,precio:'7000',descripcion:'Monitor 27" VA curvo 1000R, QHD 240Hz, 1ms. Inmersión total con FreeSync Premium.',categoria:'monitores'},
+    {sku:'MON-008',nombre:'Dell S2722DGM 27" VA QHD 165Hz Curvo',imagen:IMG.monitores,precio:'5500',descripcion:'Monitor 27" VA curvo QHD 165Hz, 1ms, FreeSync. Diseño elegante Dell con excelente contraste.',categoria:'monitores'},
+    {sku:'MON-009',nombre:'LG UltraGear 27GR83Q-B 27" IPS QHD 240Hz',imagen:IMG.monitores,precio:'11000',descripcion:'Monitor 27" IPS QHD 240Hz, 1ms, G-Sync Compatible. Gaming de alta gama con colores precisos.',categoria:'monitores'},
+    {sku:'MON-010',nombre:'ASUS ROG Swift PG279QM 27" IPS QHD 240Hz',imagen:IMG.monitores,precio:'15000',descripcion:'Monitor ROG 27" IPS QHD 240Hz con G-Sync ULTIMATE y HDR 400. Para eSports profesionales.',categoria:'monitores'},
+    {sku:'MON-011',nombre:'Samsung Odyssey G7 32" VA QHD 240Hz Curvo',imagen:IMG.monitores,precio:'12000',descripcion:'Monitor 32" VA curvo 1000R, QHD 240Hz, 1ms, G-Sync Compatible. Inmersión cinematográfica gaming.',categoria:'monitores'},
+    {sku:'MON-012',nombre:'ASUS ROG Swift PG32UQX 32" IPS 4K 144Hz Mini-LED',imagen:IMG.monitores,precio:'28000',descripcion:'Monitor 32" IPS 4K 144Hz Mini-LED con 1152 zonas HDR 1400. El mejor monitor gaming 4K.',categoria:'monitores'},
+    {sku:'MON-013',nombre:'LG UltraGear 32GQ950-B 32" Nano IPS 4K 160Hz',imagen:IMG.monitores,precio:'18000',descripcion:'Monitor 32" Nano IPS 4K 160Hz con ATWO y G-Sync ULTIMATE. Colores perfectos y gaming 4K.',categoria:'monitores'},
+    {sku:'MON-014',nombre:'Dell Alienware AW3423DWF 34" QD-OLED UW 165Hz',imagen:IMG.monitores,precio:'25000',descripcion:'Monitor ultrawide 34" QD-OLED QHD 165Hz, 0.1ms, G-Sync ULTIMATE. El OLED gaming más popular.',categoria:'monitores'},
+    {sku:'MON-015',nombre:'Samsung Odyssey OLED G9 49" QD-OLED 240Hz',imagen:IMG.monitores,precio:'35000',descripcion:'Monitor ultrawide 49" QD-OLED DQHD 240Hz, 0.03ms. La experiencia gaming definitiva en formato super ultra-wide.',categoria:'monitores'},
+    {sku:'MON-016',nombre:'LG UltraWide 34WN80C-B 34" IPS UW 75Hz',imagen:IMG.monitores,precio:'8500',descripcion:'Monitor ultrawide 34" IPS UWQHD 75Hz con USB-C 60W PD. Perfecto para productividad y multitarea.',categoria:'monitores'},
+    {sku:'MON-017',nombre:'ASUS ProArt PA278CV 27" IPS 4K 75Hz',imagen:IMG.monitores,precio:'9000',descripcion:'Monitor 27" IPS 4K calibrado de fábrica (Delta E < 2) con 100% sRGB/Rec.709. Para creadores.',categoria:'monitores'},
+    {sku:'MON-018',nombre:'Dell UltraSharp U2723QE 27" IPS 4K USB-C Hub',imagen:IMG.monitores,precio:'12000',descripcion:'Monitor 27" IPS 4K con USB-C 90W PD y hub integrado. El estándar de oficina premium.',categoria:'monitores'},
+    {sku:'MON-019',nombre:'BenQ PD3220U 32" IPS 4K Thunderbolt 3',imagen:IMG.monitores,precio:'18000',descripcion:'Monitor 32" IPS 4K con Thunderbolt 3, P3 y calibración factory. Para diseñadores y editores profesionales.',categoria:'monitores'},
+    {sku:'MON-020',nombre:'ASUS ROG Swift OLED PG27AQDM 27" OLED QHD 240Hz',imagen:IMG.monitores,precio:'22000',descripcion:'Monitor 27" OLED QHD 240Hz, 0.03ms, G-Sync Compatible. El monitor gaming OLED más rápido.',categoria:'monitores'},
+
+    // ========== PÁGINA 10: PERIFÉRICOS (TECLADO Y MOUSE) — 20 modelos ==========
+    {sku:'PERI-001',nombre:'Logitech G Pro X Superlight 2 Wireless',imagen:IMG.perifericos,precio:'2800',descripcion:'Mouse gaming inalámbrico 60g con sensor HERO 2, 32K DPI, 95 horas de batería. El estándar de eSports.',categoria:'perifericos'},
+    {sku:'PERI-002',nombre:'Razer DeathAdder V3 Pro Wireless',imagen:IMG.perifericos,precio:'2600',descripcion:'Mouse ergonómico inalámbrico 63g con sensor Focus Pro 30K. Diseño icónico refinado para FPS.',categoria:'perifericos'},
+    {sku:'PERI-003',nombre:'SteelSeries Aerox 5 Wireless',imagen:IMG.perifericos,precio:'2200',descripcion:'Mouse inalámbrico 74g con diseño honeycomb, 9 botones programables y sensor TrueMove Air.',categoria:'perifericos'},
+    {sku:'PERI-004',nombre:'Logitech G502 X Plus Wireless Lightspeed',imagen:IMG.perifericos,precio:'2800',descripcion:'Mouse inalámbrico con HERO 25K, 13 botones, RGB LIGHTSYNC y pesas ajustables. El multiusos premium.',categoria:'perifericos'},
+    {sku:'PERI-005',nombre:'Razer Viper V3 Pro Wireless',imagen:IMG.perifericos,precio:'3200',descripcion:'Mouse simétrico inalámbrico 54g con sensor Focus Pro 36K. El mouse eSports más ligero de Razer.',categoria:'perifericos'},
+    {sku:'PERI-006',nombre:'Corsair K70 RGB Pro Mechanical Wired',imagen:IMG.perifericos,precio:'2500',descripcion:'Teclado mecánico cableado con switches Cherry MX Red, chasis aluminio y RGB por tecla.',categoria:'perifericos'},
+    {sku:'PERI-007',nombre:'Razer Huntsman V3 Pro Analog',imagen:IMG.perifericos,precio:'4500',descripcion:'Teclado mecánico con switches ópticos analógicos ajustables 0.1-4.0mm. Tecnología Rapid Trigger.',categoria:'perifericos'},
+    {sku:'PERI-008',nombre:'Logitech G915 TKL Lightspeed Wireless',imagen:IMG.perifericos,precio:'4800',descripcion:'Teclado inalámbrico low-profile con GL switches, RGB LIGHTSYNC y 40 horas de batería.',categoria:'perifericos'},
+    {sku:'PERI-009',nombre:'Ducky One 3 TKL Hot-Swap Mechanical',imagen:IMG.perifericos,precio:'2500',descripcion:'Teclado TKL con hot-swap, PBT double-shot keycaps y switches intercambiables. Calidad entusiasta.',categoria:'perifericos'},
+    {sku:'PERI-010',nombre:'Keychron Q1 Pro Wireless QMK/VIA',imagen:IMG.perifericos,precio:'3500',descripcion:'Teclado 75% inalámbrico con chasis CNC aluminio, hot-swap, QMK/VIA y gasket mount. Custom premium.',categoria:'perifericos'},
+    {sku:'PERI-011',nombre:'SteelSeries Apex Pro TKL (2023) OmniPoint 2.0',imagen:IMG.perifericos,precio:'4000',descripcion:'Teclado TKL con switches OmniPoint 2.0 ajustables 0.2-7.0mm y Rapid Trigger. Para eSports competitivos.',categoria:'perifericos'},
+    {sku:'PERI-012',nombre:'Corsair K100 RGB Optical-Mechanical',imagen:IMG.perifericos,precio:'5500',descripcion:'Teclado flagship con OPX optical switches, iCUE Control Wheel y reposamuñecas magnético.',categoria:'perifericos'},
+    {sku:'PERI-013',nombre:'Razer BlackWidow V4 Pro Mechanical',imagen:IMG.perifericos,precio:'5800',descripcion:'Teclado full-size con Green switches, command dial, reposamuñecas RGB y macro keys.',categoria:'perifericos'},
+    {sku:'PERI-014',nombre:'Logitech G Pro X Keyboard TKL',imagen:IMG.perifericos,precio:'2800',descripcion:'Teclado TKL con GX switches intercambiables, diseño compacto para torneos y cable desmontable.',categoria:'perifericos'},
+    {sku:'PERI-015',nombre:'HyperX Cloud III Wireless Headset',imagen:IMG.perifericos,precio:'2500',descripcion:'Auriculares inalámbricos con drivers 53mm, DTS:X Spatial Audio y 120 horas de batería.',categoria:'perifericos'},
+    {sku:'PERI-016',nombre:'SteelSeries Arctis Nova Pro Wireless',imagen:IMG.perifericos,precio:'5500',descripcion:'Auriculares flagship con Active Noise Cancelling, Hi-Res Audio y batería dual hot-swappable.',categoria:'perifericos'},
+    {sku:'PERI-017',nombre:'Logitech Brio 500 Webcam 4K HDR',imagen:IMG.perifericos,precio:'2200',descripcion:'Webcam 4K 30fps / 1080p 60fps con HDR, autoenfoque y campo visual ajustable 65°/78°/90°.',categoria:'perifericos'},
+    {sku:'PERI-018',nombre:'Elgato Wave:3 Condenser Microphone USB',imagen:IMG.perifericos,precio:'3000',descripcion:'Micrófono condensador USB con 24-bit/96kHz, Clipguard y control por app Wave Link. Para streaming.',categoria:'perifericos'},
+    {sku:'PERI-019',nombre:'Razer Kiyo Pro Ultra 4K Webcam',imagen:IMG.perifericos,precio:'4500',descripcion:'Webcam 4K con sensor Sony STARVIS 2 de 1/1.2" (el más grande del mercado), HDR y low-light.',categoria:'perifericos'},
+    {sku:'PERI-020',nombre:'Logitech MX Master 3S Wireless Productivity',imagen:IMG.perifericos,precio:'2200',descripcion:'Mouse ergonómico productividad con sensor 8K DPI, MagSpeed scroll, clics silenciosos y Flow multi-PC.',categoria:'perifericos'},
+];
+
+    function getCart() {
+        const stored = localStorage.getItem("ecosystem_global_cart");
+        return stored ? JSON.parse(stored) : [];
+    }
+    
+    function saveCart(cart) {
+        localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
+        renderCheckout();
+    }
+
+    // STEP 1: DELIVERY HANDLERS
+    window.saveDelivery = function(event) {
+        event.preventDefault();
+        const name = document.getElementById("devName").value;
+        const phone = document.getElementById("devPhone").value;
+        const email = document.getElementById("devEmail").value;
+        const street = document.getElementById("devStreet").value;
+        const colonia = document.getElementById("devColonia").value;
+        const cp = document.getElementById("devCp").value;
+        const city = document.getElementById("devCity").value;
+        
+        const data = { name, phone, email, street, colonia, cp, city };
+        localStorage.setItem("user_delivery_address", JSON.stringify(data));
+        
+        showDeliverySummary();
+        unlockPaymentStep();
+        renderCheckout();
+    };
+    
+    window.editDelivery = function() {
+        document.getElementById("delivery-form").classList.remove("hidden");
+        document.getElementById("delivery-summary").classList.add("hidden");
+        document.getElementById("delivery-edit-btn").classList.add("hidden");
+    };
+    
+    function showDeliverySummary() {
+        const stored = localStorage.getItem("user_delivery_address");
+        if (stored) {
+            const data = JSON.parse(stored);
+            document.getElementById("delivery-form").classList.add("hidden");
+            document.getElementById("delivery-summary").classList.remove("hidden");
+            document.getElementById("delivery-edit-btn").classList.remove("hidden");
+            
+            document.getElementById("sum-name").innerText = data.name;
+            document.getElementById("sum-phone-email").innerText = `📞 ${data.phone}  |  ✉️ ${data.email}`;
+            document.getElementById("sum-address").innerText = `📍 ${data.street}, Col. ${data.colonia}, CP ${data.cp}, ${data.city}`;
+        }
+    }
+    
+    function unlockPaymentStep() {
+        const stepCard = document.getElementById("step-payment-card");
+        const badge = document.getElementById("step-payment-badge");
+        const options = document.getElementById("payment-options");
+        
+        if (stepCard && badge && options) {
+            stepCard.classList.remove("opacity-60");
+            badge.classList.remove("bg-slate-800", "text-slate-400");
+            badge.classList.add("bg-cyan-500", "text-slate-950");
+            options.classList.remove("hidden");
+        }
+    }
+
+    // STEP 2: PAYMENT METHOD HANDLERS
+    window.selectPaymentMethod = function(method) {
+        localStorage.setItem("user_payment_method", method);
+        showPaymentSummary();
+    };
+    
+    window.toggleCardForm = function() {
+        document.getElementById("card-payment-form").classList.remove("hidden");
+    };
+    
+    window.saveCardDetails = function(event) {
+        event.preventDefault();
+        const name = document.getElementById("cardName").value;
+        const num = document.getElementById("cardNum").value;
+        const last4 = num.replace(/\\s/g, '').slice(-4) || "4152";
+        
+        const type = num.startsWith("5") ? "Mastercard" : "Visa";
+        localStorage.setItem("user_payment_method", `${type} (**** ${last4})`);
+        
+        document.getElementById("card-payment-form").classList.add("hidden");
+        showPaymentSummary();
+    };
+    
+    window.editPayment = function() {
+        document.getElementById("payment-options").classList.remove("hidden");
+        document.getElementById("payment-summary").classList.add("hidden");
+        document.getElementById("payment-edit-btn").classList.add("hidden");
+    };
+    
+    function showPaymentSummary() {
+        const method = localStorage.getItem("user_payment_method");
+        if (method) {
+            document.getElementById("payment-options").classList.add("hidden");
+            document.getElementById("payment-summary").classList.remove("hidden");
+            document.getElementById("payment-edit-btn").classList.remove("hidden");
+            
+            document.getElementById("payment-summary").innerHTML = `
+                <div class="flex items-center gap-2 bg-slate-950/60 p-4 rounded-xl border border-slate-800">
+                    <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                    <div>
+                        <span class="text-[10px] text-slate-500 uppercase tracking-wider block font-bold">Forma Registrada</span>
+                        <span class="text-white font-bold">${method}</span>
+                    </div>
                 </div>
             `;
-
-            container.appendChild(card);
-        });
-
-        // Actualizar contador superior de badge
-        updateHeaderBadge(totalCartQuantity);
-
-        // Actualizar contador de productos activos
-        const countDisplay = document.getElementById("active-items-count");
-        if (countDisplay) {
-            countDisplay.innerText = `Llevas ${activeItemsCount} producto(s) activo(s) en tu carrito de compra.`;
         }
-
-        updateOrderSummary();
     }
 
-    function updateHeaderBadge(count) {
-        const badge = document.getElementById("header-cart-badge");
-        if (badge) badge.innerText = count;
-    }
-
-    // LÓGICA DE INCREMENTO / DECREMENTO Y ESTADO CERO
-    function updateQty(sku, amount) {
+    // STEP 3: RENDER CHECKOUT CART
+    window.changeQty = function(sku, amount) {
         let cart = getCart();
         const item = cart.find(i => i.sku === sku);
         if (item) {
-            let current = item.quantity !== undefined ? item.quantity : 1;
-            item.quantity = Math.max(0, current + amount);
+            item.quantity += amount;
+            if (item.quantity < 0) item.quantity = 0;
+            if (item.quantity === 0) {
+                cart = cart.filter(i => i.sku !== sku);
+            }
         }
         saveCart(cart);
-    }
-
-    function toggleItemZeroState(sku) {
+    };
+    
+    window.deleteItem = function(sku) {
         let cart = getCart();
-        const item = cart.find(i => i.sku === sku);
-        if (item) {
-            let current = item.quantity !== undefined ? item.quantity : 1;
-            item.quantity = current > 0 ? 0 : 1;
-        }
+        cart = cart.filter(i => i.sku !== sku);
         saveCart(cart);
-    }
-
-    // CÁLCULO DEL RESUMEN FINANCIERO (SECCIÓN 3 Y COLUMNA DERECHA)
-    function updateOrderSummary() {
+    };
+    
+    window.renderCheckout = function() {
+        const container = document.getElementById("checkout-cart-items");
+        const subtotalDisp = document.getElementById("co-subtotal");
+        const wholesaleRow = document.getElementById("co-wholesale-row");
+        const wholesaleDiscDisp = document.getElementById("co-wholesale-disc");
+        const shippingDisp = document.getElementById("co-shipping");
+        const cashbackRow = document.getElementById("co-cashback-row");
+        const totalDisp = document.getElementById("co-total");
+        
+        if (!container) return;
+        
         const cart = getCart();
+        container.innerHTML = "";
+        
         let subtotal = 0;
-
+        let totalItemsQty = 0;
+        
         cart.forEach(item => {
-            const qty = item.quantity !== undefined ? item.quantity : 1;
-            if (qty > 0) {
-                subtotal += (parseFloat(item.precio || 0) * qty);
+            const sub = parseFloat(item.precio) * item.quantity;
+            subtotal += sub;
+            totalItemsQty += item.quantity;
+            
+            let imgUrl = item.imagen;
+            if (imgUrl && imgUrl.startsWith('assets/img')) {
+                imgUrl = './' + imgUrl;
             }
+            
+            let minusButtonHtml = `<button onclick="changeQty('${item.sku}', -1)" class="w-5 h-5 rounded bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer">-</button>`;
+            if (item.quantity === 1) {
+                minusButtonHtml = `<button onclick="changeQty('${item.sku}', -1)" class="w-5 h-5 rounded bg-red-655 text-white hover:bg-red-600 transition flex items-center justify-center text-[10px] cursor-pointer" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>`;
+            }
+            
+            const div = document.createElement("div");
+            div.className = "flex items-center justify-between gap-3 bg-slate-950/40 p-2.5 rounded-xl border border-slate-850";
+            div.innerHTML = `
+                <div class="flex items-center gap-2.5 min-w-0 flex-1">
+                    <img src="${imgUrl}" class="w-8 h-8 object-contain bg-white rounded p-0.5 shrink-0" />
+                    <div class="min-w-0 flex-1">
+                        <span class="text-white font-bold block truncate text-xs">${item.nombre}</span>
+                        <span class="text-[9px] font-mono text-slate-500 uppercase">${item.sku}</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2.5 shrink-0">
+                    <div class="flex items-center gap-1 bg-slate-900 border border-slate-800 rounded p-0.5">
+                        ${minusButtonHtml}
+                        <span class="text-white font-black text-xs w-4 text-center">${item.quantity}</span>
+                        <button onclick="changeQty('${item.sku}', 1)" class="w-5 h-5 rounded bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer">+</button>
+                    </div>
+                    <span class="text-cyan-400 font-bold min-w-[70px] text-right">$${sub.toFixed(2)} MXN</span>
+                    <button onclick="deleteItem('${item.sku}')" class="text-slate-500 hover:text-red-500 text-xs cursor-pointer shrink-0 transition"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            `;
+            container.appendChild(div);
         });
-
-        // Regla de Envío: < $500 MXN es $50.00 MXN, >= $500 MXN es Gratis ($0.00)
-        let shipping = 0;
-        if (subtotal > 0 && subtotal < 500) {
-            shipping = 50;
-        }
-
-        // Cashback del 5%
-        const cashback = subtotal * 0.05;
-        const total = Math.max(0, subtotal + shipping - cashback);
-
-        // 1. ACTUALIZAR RECUADRO LOCAL EN SECCIÓN 3
-        document.getElementById("section3-subtotal").innerText = `$${subtotal.toFixed(2)} MXN`;
         
-        const sec3Shipping = document.getElementById("section3-shipping");
-        if (shipping > 0) {
-            sec3Shipping.innerText = `$${shipping.toFixed(2)} MXN`;
-            sec3Shipping.className = "font-bold text-white text-base";
-        } else {
-            sec3Shipping.innerText = "¡Gratis! (Compra mayor a $500)";
-            sec3Shipping.className = "font-bold text-emerald-400 text-base";
-        }
-
-        document.getElementById("section3-cashback").innerText = `-$${cashback.toFixed(2)} MXN`;
-        document.getElementById("section3-total").innerText = `$${total.toFixed(2)} MXN`;
-        document.getElementById("section3-savings-tag").innerText = `¡Te estás ahorrando $${cashback.toFixed(2)} MXN en esta compra!`;
-
-        // 2. ACTUALIZAR BARRA LATERAL DERECHA
-        document.getElementById("summary-subtotal").innerText = `$${subtotal.toFixed(2)} MXN`;
+        subtotalDisp.innerText = `$${subtotal.toFixed(2)} MXN`;
         
-        const shippingEl = document.getElementById("summary-shipping");
-        if (shipping > 0) {
-            shippingEl.innerText = `$${shipping.toFixed(2)} MXN`;
-            shippingEl.className = "font-bold text-white";
+        // Wholesale check
+        let wholesaleDiscount = 0;
+        if (totalItemsQty >= 10) {
+            wholesaleDiscount = subtotal * 0.15;
+            wholesaleRow.classList.remove("hidden");
+            wholesaleDiscDisp.innerText = `-$${wholesaleDiscount.toFixed(2)} MXN`;
         } else {
-            shippingEl.innerText = "Gratis";
-            shippingEl.className = "font-bold text-emerald-400";
+            wholesaleRow.classList.add("hidden");
         }
-
-        document.getElementById("summary-cashback").innerText = `-$${cashback.toFixed(2)} MXN`;
-        document.getElementById("summary-total").innerText = `$${total.toFixed(2)} MXN`;
         
-        const summarySavingsEl = document.getElementById("summary-savings");
-        if (summarySavingsEl) summarySavingsEl.innerText = `$${cashback.toFixed(2)} MXN`;
-    }
-
-    // SECCIÓN 1: LÓGICA DE DIRECCIÓN Y DOMICILIO
-    function saveDeliveryAddress(e) {
-        e.preventDefault();
-        const address = {
-            name: document.getElementById("inputName").value,
-            phone: document.getElementById("inputPhone").value,
-            email: document.getElementById("inputEmail").value,
-            street: document.getElementById("inputStreet").value,
-            num: document.getElementById("inputNum").value,
-            colonia: document.getElementById("inputColonia").value,
-            zip: document.getElementById("inputZip").value,
-            city: document.getElementById("inputCity").value
-        };
-
-        localStorage.setItem("user_delivery_address", JSON.stringify(address));
-        loadSavedAddress();
-    }
-
-    function loadSavedAddress() {
-        const stored = localStorage.getItem("user_delivery_address");
-        const form = document.getElementById("addressForm");
-        const summary = document.getElementById("address-summary-view");
-        const btnEdit = document.getElementById("btn-edit-address");
-
-        if (stored) {
-            const data = JSON.parse(stored);
-            document.getElementById("summary-address-name").innerText = `👤 ${data.name}`;
-            document.getElementById("summary-address-street").innerText = `📍 ${data.street} ${data.num || ''}, Col. ${data.colonia}, ${data.city} (CP ${data.zip})`;
-            document.getElementById("summary-address-phone").innerText = `📞 Tel: ${data.phone} | ✉️ Email: ${data.email}`;
-
-            form.classList.add("hidden");
-            summary.classList.remove("hidden");
-            btnEdit.classList.remove("hidden");
-        } else {
-            form.classList.remove("hidden");
-            summary.classList.add("hidden");
-            btnEdit.classList.add("hidden");
-        }
-    }
-
-    function toggleAddressForm() {
-        document.getElementById("addressForm").classList.remove("hidden");
-        document.getElementById("address-summary-view").classList.add("hidden");
-    }
-
-    // SECCIÓN 2: LÓGICA DEL MÉTODO DE PAGO Y MODAL
-    function openPaymentModal() {
-        document.getElementById("paymentModal").classList.remove("hidden");
-    }
-
-    function closePaymentModal() {
-        document.getElementById("paymentModal").classList.add("hidden");
-    }
-
-    function togglePaymentFields() {
-        const type = document.querySelector('input[name="payType"]:checked').value;
-        const cardFields = document.getElementById("cardFields");
-        if (type === "card") {
-            cardFields.classList.remove("hidden");
-        } else {
-            cardFields.classList.add("hidden");
-        }
-    }
-
-    function savePaymentMethod(e) {
-        e.preventDefault();
-        const type = document.querySelector('input[name="payType"]:checked').value;
-        let payData = { type: type };
-
-        if (type === "card") {
-            payData.holder = document.getElementById("payHolder").value;
-            payData.number = document.getElementById("payNumber").value;
-            payData.exp = document.getElementById("payExp").value;
-        }
-
-        localStorage.setItem("user_payment_method", JSON.stringify(payData));
-        closePaymentModal();
-        loadSavedPayment();
-    }
-
-    function loadSavedPayment() {
-        const stored = localStorage.getItem("user_payment_method");
-        const display = document.getElementById("payment-status-display");
-
-        if (stored) {
-            const data = JSON.parse(stored);
-            if (data.type === "card") {
-                const last4 = data.number ? data.number.slice(-4) : 'XXXX';
-                display.innerHTML = `
-                    <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3.5 text-sm text-slate-200 flex items-center gap-3">
-                        <i class="fa-solid fa-credit-card text-emerald-400 text-lg"></i>
-                        <div>
-                            <span class="font-bold block">Tarjeta registrada: **** ${last4}</span>
-                            <span class="text-xs text-slate-400">Titular: ${data.holder || 'Cliente'}</span>
-                        </div>
-                    </div>
-                `;
-            } else {
-                display.innerHTML = `
-                    <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-3.5 text-sm text-slate-200 flex items-center gap-3">
-                        <i class="fa-solid fa-money-bill-wave text-emerald-400 text-lg"></i>
-                        <span class="font-bold">Pago contra entrega / Transferencia bancaria</span>
-                    </div>
-                `;
+        // Shipping check
+        const baseSub = subtotal - wholesaleDiscount;
+        const shippingFee = (baseSub >= 1500 || subtotal === 0) ? 0 : 49;
+        shippingDisp.innerText = shippingFee === 0 ? "GRATIS" : `$${shippingFee.toFixed(2)} MXN`;
+        
+        // Cashback check
+        const storedAddress = localStorage.getItem("user_delivery_address");
+        let hasRegister = false;
+        if (storedAddress) {
+            const addr = JSON.parse(storedAddress);
+            if (addr.email && addr.phone) {
+                hasRegister = true;
             }
         }
-    }
-
-    // ENVÍO DE LA ORDEN DE COMPRA A WHATSAPP Y REGISTRO DE PEDIDO
-        function clearEntireCart() {
-        if (confirm("¿Estás seguro de que deseas vaciar todo el carrito?")) {
-            localStorage.removeItem("ecosystem_global_cart");
-            if (typeof renderCheckoutProducts === 'function') renderCheckoutProducts();
-            if (typeof updateOrderSummary === 'function') updateOrderSummary();
-            if (typeof updateHeaderBadge === 'function') updateHeaderBadge();
+        
+        let cashbackVal = 0;
+        if (hasRegister) {
+            cashbackVal = baseSub * 0.05;
+            cashbackRow.innerHTML = `
+                <div class="flex justify-between text-emerald-400 font-black">
+                    <span>Cashback 5% Aplicado:</span>
+                    <span>-$${cashbackVal.toFixed(2)} MXN</span>
+                </div>
+                <span class="text-[9px] text-emerald-500 font-semibold leading-tight">✓ Recompensa activa. Saldo descontado del total a pagar.</span>
+            `;
+        } else {
+            cashbackRow.innerHTML = `
+                <div class="flex justify-between text-slate-500 font-bold">
+                    <span>Cashback Acumulable:</span>
+                    <span>$0.00 MXN</span>
+                </div>
+                <span class="text-[9px] text-amber-500 font-semibold leading-tight">⚠️ Sin registro no aplica cashback. Completa el Paso 1 para activar tu 5%.</span>
+            `;
         }
-    }
+        
+        const totalCost = Math.max(0, baseSub - cashbackVal + shippingFee);
+        totalDisp.innerText = `$${totalCost.toFixed(2)} MXN`;
+    };
 
-    function processFinalOrder() {
-        const addressStored = localStorage.getItem("user_delivery_address");
-        if (!addressStored) {
-            alert("Por favor registra primero tu domicilio de entrega en la Sección 1.");
-            toggleAddressForm();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            return;
-        }
-
+    // FINALIZE PURCHASE
+    window.finalizePurchase = function() {
+        const address = localStorage.getItem("user_delivery_address");
+        const method = localStorage.getItem("user_payment_method");
         const cart = getCart();
-        const activeCart = cart.filter(i => (i.quantity || 1) > 0);
-
-        if (activeCart.length === 0) {
-            alert("Tu carrito no tiene artículos activos para comprar.");
+        
+        if (cart.length === 0) {
+            alert("⚠️ El carrito de compras está vacío.");
             return;
         }
-
-        const address = JSON.parse(addressStored);
-        const paymentStored = localStorage.getItem("user_payment_method");
-        const payment = paymentStored ? JSON.parse(paymentStored) : { type: "Efectivo/Transferencia" };
-
-        let subtotal = 0;
-        let productListText = "";
-
-        activeCart.forEach((item, index) => {
-            const qty = item.quantity || 1;
-            const price = parseFloat(item.precio || 0);
-            subtotal += (price * qty);
-            productListText += `${index + 1}. ${item.nombre} (x${qty}) - $${(price * qty).toFixed(2)} MXN\n`;
-        });
-
-        let shipping = (subtotal > 0 && subtotal < 500) ? 50 : 0;
-        let cashback = subtotal * 0.05;
-        let total = subtotal + shipping - cashback;
-
-        // Guardar el historial del pedido con timestamp de expiración (3 días)
-        const orderHistoryItem = {
-            id: "ORD-" + Math.floor(100000 + Math.random() * 900000),
-            date: new Date().toISOString(),
-            expiresAt: Date.now() + (3 * 24 * 60 * 60 * 1000), // 72 horas de vigencia
-            items: activeCart,
-            total: total,
-            address: address
-        };
-
-        let existingOrders = JSON.parse(localStorage.getItem("user_order_history") || "[]");
-        existingOrders.push(orderHistoryItem);
-        localStorage.setItem("user_order_history", JSON.stringify(existingOrders));
-
-        let msg = `Hola, quiero confirmar mi compra en PC Custom Lab:\n\n`;
-        msg += `📦 *PRODUCTOS SOLICITADOS:*\n${productListText}\n`;
-        msg += `💰 Subtotal: $${subtotal.toFixed(2)} MXN\n`;
-        msg += `🚚 Envío: ${shipping > 0 ? `$${shipping.toFixed(2)} MXN` : 'Gratis'}\n`;
-        msg += `🎁 Cashback 5%: -$${cashback.toFixed(2)} MXN\n`;
-        msg += `💳 *TOTAL A PAGAR: $${total.toFixed(2)} MXN*\n\n`;
-        msg += `📍 *DOMICILIO DE ENTREGA:*\n${address.name}\n${address.street} ${address.num || ''}, Col. ${address.colonia}, ${address.city}\nTel: ${address.phone}\n\n`;
-        msg += `💳 Método de pago: ${payment.type === 'card' ? 'Tarjeta Registrada' : 'Efectivo / Transferencia'}`;
-
-        const waUrl = `https://wa.me/523337271440?text=${encodeURIComponent(msg)}`;
-        window.open(waUrl, "_blank");
-    }
-
-    // INICIALIZACIÓN AL CARGAR LA PÁGINA Y LIMPIDEZ DE PEDIDOS EXPIRADOS
-    document.addEventListener("DOMContentLoaded", () => {
-        // Limpiar pedidos mayores a 3 días
-        let orders = JSON.parse(localStorage.getItem("user_order_history") || "[]");
-        const now = Date.now();
-        orders = orders.filter(o => o.expiresAt && o.expiresAt > now);
-        localStorage.setItem("user_order_history", JSON.stringify(orders));
-
-        loadSavedAddress();
-        loadSavedPayment();
-        renderCheckoutProducts();
-
-        if (window.location.hash === '#seccion-carrito' || window.location.hash === '#carrito') {
-            setTimeout(() => {
-                const el = document.getElementById('seccion-carrito');
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }, 300);
+        if (!address) {
+            alert("⚠️ Registra el Domicilio de Entrega (Paso 1) antes de continuar.");
+            return;
         }
+        if (!method) {
+            alert("⚠️ Selecciona un Método de Pago (Paso 2) antes de continuar.");
+            return;
+        }
+        
+        // Create order history item
+        const orderId = "EC-" + Math.floor(1000 + Math.random() * 9000);
+        const dateStr = "Hoy, " + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        
+        const newOrder = {
+            orderId: orderId,
+            date: dateStr,
+            status: "Preparando",
+            deliveryTime: "Listo para entrega en 30 min",
+            items: cart
+        };
+        
+        let history = [];
+        try {
+            const stored = localStorage.getItem("user_purchases_history");
+            if (stored) history = JSON.parse(stored);
+        } catch(e) {}
+        
+        history.unshift(newOrder);
+        localStorage.setItem("user_purchases_history", JSON.stringify(history));
+        
+        // Clear cart
+        localStorage.setItem("ecosystem_global_cart", JSON.stringify([]));
+        
+        alert(`🎉 ¡COMPRA COMPLETADA CON ÉXITO!\\n\\nPedido #${orderId} registrado.\\nForma de Pago: ${method}\\n\\nEl repartidor llegará en menos de 30 minutos.`);
+        window.location.href = "index.html";
+    };
+
+    // CHATBOT LOGIC
+    window.toggleChatbot = function() {
+        const win = document.getElementById("chatbot-window");
+        if (win) win.classList.toggle("hidden");
+    };
+    
+    window.handleChatKeyPress = function(event) {
+        if (event.key === "Enter") enviarMensajeChatbot();
+    };
+    
+    window.enviarMensajeChatbot = function() {
+        const input = document.getElementById("chatInput");
+        const messages = document.getElementById("chat-messages");
+        if (!input || !messages || !input.value.trim()) return;
+        
+        const txt = input.value.trim();
+        input.value = "";
+        
+        const uDiv = document.createElement("div");
+        uDiv.className = "bg-cyan-500/10 border border-cyan-500/20 p-2.5 rounded-2xl text-slate-200 self-end max-w-[85%]";
+        uDiv.innerText = txt;
+        messages.appendChild(uDiv);
+        messages.scrollTop = messages.scrollHeight;
+        
+        setTimeout(() => {
+            let resp = "Hola, estoy para ayudarte en el proceso de pago. Asegúrate de registrar tu dirección en el Paso 1 para activar el cashback.";
+            const low = txt.toLowerCase();
+            if (low.includes("envio") || low.includes("entrega") || low.includes("costo")) {
+                resp = "El costo de envío local es de $49.00 MXN. ¡Consigues Envío GRATIS si tu compra supera los $1,500.00 MXN!";
+            } else if (low.includes("cashback") || low.includes("recompensa") || low.includes("descuento")) {
+                resp = "Ofrecemos un 5% de cashback sobre el total de tu compra, descontándose de inmediato si tienes registrada tu dirección, teléfono y correo.";
+            } else if (low.includes("mayoreo") || low.includes("mayorista")) {
+                resp = "¡Sí! Si compras 10 o más artículos en total, obtendrás un descuento del 15% automático en tu subtotal.";
+            }
+            
+            const bDiv = document.createElement("div");
+            bDiv.className = "bg-slate-950 border border-slate-800 p-2.5 rounded-2xl text-slate-300 self-start max-w-[85%]";
+            bDiv.innerText = resp;
+            messages.appendChild(bDiv);
+            messages.scrollTop = messages.scrollHeight;
+        }, 600);
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+        showDeliverySummary();
+        const address = localStorage.getItem("user_delivery_address");
+        if (address) {
+            unlockPaymentStep();
+            showPaymentSummary();
+        }
+        renderCheckout();
     });
 </script>
+
 </body>
 </html>

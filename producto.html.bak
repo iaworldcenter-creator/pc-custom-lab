@@ -491,7 +491,7 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-3">
-                <button class="bg-slate-850 hover:bg-slate-800 text-slate-300 border border-slate-800 hover:text-white font-bold py-3 rounded-xl text-xs transition cursor-pointer active:scale-95" onclick="closeCartDrawerAndGoToBoutique()">
+                <button class="bg-slate-855 hover:bg-slate-800 text-slate-300 border border-slate-800 hover:text-white font-bold py-3 rounded-xl text-xs transition cursor-pointer active:scale-95" onclick="closeCartDrawerAndGoToBoutique()">
                     <i class="fa-solid fa-arrow-left"></i> Seguir comprando
                 </button>
                 <a class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 rounded-xl text-xs text-center transition flex items-center justify-center gap-1.5 cursor-pointer active:scale-95" href="checkout.html" id="drawer-checkout-btn">
@@ -950,7 +950,7 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
         event.preventDefault();
         const cardNum = document.getElementById("cardNumber").value;
         if (cardNum) {
-            const last4 = cardNum.replace(/\s/g, '').slice(-4);
+            const last4 = cardNum.replace(/\\s/g, '').slice(-4);
             localStorage.setItem("user_payment_method", "Tarjeta (**** " + last4 + ")");
             closePaymentModal();
             renderDrawerCart();

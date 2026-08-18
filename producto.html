@@ -334,35 +334,35 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
         <form onsubmit="saveDeliveryAddress(event)" class="flex flex-col gap-3">
             <div>
                 <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Nombre Completo</label>
-                <input type="text" id="deliveryName" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                <input type="text" id="deliveryName" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500 min-h-[48px]">
             </div>
             <div class="grid grid-cols-2 gap-3">
                 <div>
                     <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Teléfono</label>
-                    <input type="tel" id="deliveryPhone" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                    <input type="tel" id="deliveryPhone" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500 min-h-[48px]">
                 </div>
                 <div>
                     <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Correo Electrónico</label>
-                    <input type="email" id="deliveryEmail" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                    <input type="email" id="deliveryEmail" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500 min-h-[48px]">
                 </div>
             </div>
             <div>
                 <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Calle y Número</label>
-                <input type="text" id="deliveryStreet" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                <input type="text" id="deliveryStreet" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500 min-h-[48px]">
             </div>
             <div class="grid grid-cols-2 gap-3">
                 <div>
                     <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Colonia</label>
-                    <input type="text" id="deliveryColonia" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                    <input type="text" id="deliveryColonia" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500 min-h-[48px]">
                 </div>
                 <div>
                     <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Ciudad / Estado</label>
-                    <input type="text" id="deliveryCity" required value="Guadalajara, Jalisco" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+                    <input type="text" id="deliveryCity" required value="Guadalajara, Jalisco" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500 min-h-[48px]">
                 </div>
             </div>
             <div class="flex justify-end gap-2.5 mt-2">
-                <button type="button" onclick="closeDeliveryModal()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold px-4 py-2 rounded-xl text-xs transition cursor-pointer">Cancelar</button>
-                <button type="submit" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black px-5 py-2 rounded-xl text-xs transition cursor-pointer">Registrar</button>
+                <button type="button" onclick="closeDeliveryModal()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold px-4 py-2 rounded-xl text-xs transition cursor-pointer min-h-[48px]">Cancelar</button>
+                <button type="submit" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black px-5 py-2 rounded-xl text-xs transition cursor-pointer min-h-[48px]">Registrar</button>
             </div>
         </form>
     </div>
@@ -375,19 +375,19 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
             <i class="fa-solid fa-credit-card text-cyan-400"></i> Registrar Forma de Pago
         </h2>
         <div class="grid grid-cols-2 gap-3">
-            <button onclick="savePaymentMethod('Efectivo')" class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 hover:border-cyan-400 transition cursor-pointer">
+            <button onclick="savePaymentMethod('Efectivo')" class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 hover:border-cyan-400 transition cursor-pointer min-h-[48px]">
                 <i class="fa-solid fa-money-bill-1 text-emerald-400 text-2xl"></i>
                 <span class="text-xs font-bold">Efectivo local</span>
             </button>
-            <button onclick="savePaymentMethod('Kueski')" class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 hover:border-cyan-400 transition cursor-pointer">
+            <button onclick="savePaymentMethod('Kueski')" class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 hover:border-cyan-400 transition cursor-pointer min-h-[48px]">
                 <i class="fa-solid fa-bolt text-amber-400 text-2xl"></i>
                 <span class="text-xs font-bold">Kueski Pay</span>
             </button>
-            <button onclick="savePaymentMethod('Transferencia')" class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 hover:border-cyan-400 transition cursor-pointer">
+            <button onclick="savePaymentMethod('Transferencia')" class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 hover:border-cyan-400 transition cursor-pointer min-h-[48px]">
                 <i class="fa-solid fa-building-columns text-blue-400 text-2xl"></i>
                 <span class="text-xs font-bold">Transferencia</span>
             </button>
-            <button onclick="document.getElementById('payment-card-form').classList.remove('hidden')" class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 hover:border-cyan-400 transition cursor-pointer">
+            <button onclick="document.getElementById('payment-card-form').classList.remove('hidden')" class="bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col items-center justify-center gap-2 hover:border-cyan-400 transition cursor-pointer min-h-[48px]">
                 <i class="fa-solid fa-credit-card text-purple-400 text-2xl"></i>
                 <span class="text-xs font-bold">Tarjeta</span>
             </button>
@@ -395,21 +395,21 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
         <form id="payment-card-form" onsubmit="confirmCardPayment(event)" class="hidden border-t border-slate-800 pt-4 flex flex-col gap-3">
             <div>
                 <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Número de Tarjeta</label>
-                <input type="text" id="cardNumber" placeholder="1234 5678 1234 5678" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400">
+                <input type="text" id="cardNumber" placeholder="1234 5678 1234 5678" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400 min-h-[48px]">
             </div>
             <div class="grid grid-cols-2 gap-3">
                 <div>
                     <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">Vencimiento</label>
-                    <input type="text" id="cardExpiry" placeholder="MM/AA" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400">
+                    <input type="text" id="cardExpiry" placeholder="MM/AA" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400 min-h-[48px]">
                 </div>
                 <div>
                     <label class="block text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1">CVV</label>
-                    <input type="text" id="cardCvv" placeholder="123" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400">
+                    <input type="text" id="cardCvv" placeholder="123" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400 min-h-[48px]">
                 </div>
             </div>
             <div class="flex justify-end gap-2 mt-1">
-                <button type="button" onclick="closePaymentModal()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold px-4 py-2 rounded-xl text-xs transition cursor-pointer">Cancelar</button>
-                <button type="submit" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black px-5 py-2 rounded-xl text-xs transition cursor-pointer">Confirmar</button>
+                <button type="button" onclick="closePaymentModal()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold px-4 py-2 rounded-xl text-xs transition cursor-pointer min-h-[48px]">Cancelar</button>
+                <button type="submit" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black px-5 py-2 rounded-xl text-xs transition cursor-pointer min-h-[48px]">Confirmar</button>
             </div>
         </form>
     </div>
@@ -491,10 +491,10 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-3">
-                <button class="bg-slate-855 hover:bg-slate-800 text-slate-300 border border-slate-800 hover:text-white font-bold py-3 rounded-xl text-xs transition cursor-pointer active:scale-95" onclick="closeCartDrawerAndGoToBoutique()">
+                <button class="bg-slate-850 hover:bg-slate-800 text-slate-300 border border-slate-800 hover:text-white font-bold py-3 rounded-xl text-xs transition cursor-pointer active:scale-95 min-h-[48px]" onclick="closeCartDrawerAndGoToBoutique()">
                     <i class="fa-solid fa-arrow-left"></i> Seguir comprando
                 </button>
-                <a class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 rounded-xl text-xs text-center transition flex items-center justify-center gap-1.5 cursor-pointer active:scale-95" href="checkout.html" id="drawer-checkout-btn">
+                <a class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3 rounded-xl text-xs text-center transition flex items-center justify-center gap-1.5 cursor-pointer active:scale-95 min-h-[48px]" href="checkout.html" id="drawer-checkout-btn">
                     Comprar ahora <i class="fa-solid fa-credit-card"></i>
                 </a>
             </div>
@@ -837,26 +837,26 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
                 imgPath = './' + imgPath;
             }
             
-            let minusButtonHtml = `<button onclick="changeQuantity('${item.sku}', -1)" class="w-5 h-5 rounded bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer">-</button>`;
+            let minusButtonHtml = `<button onclick="changeQuantity('${item.sku}', -1)" class="w-8 h-8 rounded bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer min-w-[32px] min-h-[32px]">-</button>`;
             if (item.quantity === 1) {
-                minusButtonHtml = `<button onclick="changeQuantity('${item.sku}', -1)" class="w-5 h-5 rounded bg-red-650 text-white hover:bg-red-600 transition flex items-center justify-center text-[10px] cursor-pointer" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>`;
+                minusButtonHtml = `<button onclick="changeQuantity('${item.sku}', -1)" class="w-8 h-8 rounded bg-red-650 text-white hover:bg-red-600 transition flex items-center justify-center text-[10px] cursor-pointer min-w-[32px] min-h-[32px]" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>`;
             }
             
             const div = document.createElement("div");
-            div.className = "flex items-center justify-between gap-3 bg-slate-950/60 p-2.5 rounded-xl border border-slate-800";
+            div.className = "flex items-center justify-between gap-3 bg-slate-950/60 p-2.5 rounded-xl border border-slate-800 animate-fade-in";
             div.innerHTML = `
                 <div class="flex items-center gap-2 min-w-0 flex-1">
                     <img src="${imgPath}" class="w-8 h-8 object-contain bg-white rounded p-0.5 shrink-0" />
-                    <span class="text-white font-semibold truncate flex-1">${item.nombre}</span>
+                    <span class="text-white font-semibold truncate flex-1 text-xs">${item.nombre}</span>
                 </div>
                 <div class="flex items-center gap-2 shrink-0">
                     <div class="flex items-center gap-1 bg-slate-900 border border-slate-800 rounded p-0.5">
                         ${minusButtonHtml}
                         <span class="text-white font-black text-xs w-4 text-center">${item.quantity}</span>
-                        <button onclick="changeQuantity('${item.sku}', 1)" class="w-5 h-5 rounded bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer">+</button>
+                        <button onclick="changeQuantity('${item.sku}', 1)" class="w-8 h-8 rounded bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer min-w-[32px] min-h-[32px]">+</button>
                     </div>
-                    <span class="text-cyan-400 font-bold min-w-[70px] text-right">$${sub.toFixed(2)} MXN</span>
-                    <button onclick="removeFromCart('${item.sku}')" class="text-slate-400 hover:text-red-500 text-xs transition cursor-pointer" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>
+                    <span class="text-cyan-400 font-bold min-w-[70px] text-right text-xs">$${sub.toFixed(2)}</span>
+                    <button onclick="removeFromCart('${item.sku}')" class="text-slate-400 hover:text-red-500 text-xs transition cursor-pointer min-w-[32px] min-h-[32px]" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>
                 </div>
             `;
             container.appendChild(div);
@@ -876,7 +876,7 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
     function updateCartBadge() {
         const cart = getCart();
         let totalQty = 0;
-        cart.forEach(item => totalQty += (item.quantity || 1));
+        cart.forEach(item => totalQty += (item.quantity || 0));
         const badge = document.getElementById("cart-badge-count");
         if (badge) {
             badge.innerText = totalQty;
@@ -1056,7 +1056,7 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
                     if (item.quantity === 0) {
                         opacityClass = "opacity-40 grayscale text-slate-500 border-red-500/30 bg-red-950/5";
                         trashBtnHtml = `
-                            <button onclick="deleteHistoricalItem('${item.sku}')" class="text-red-500 hover:text-red-400 text-sm cursor-pointer shrink-0 transition flex items-center justify-center w-8 h-8 rounded-lg bg-red-500/10 hover:bg-red-500/20" title="Eliminar del historial">
+                            <button onclick="deleteHistoricalItem('${item.sku}')" class="text-red-500 hover:text-red-400 text-sm cursor-pointer shrink-0 transition flex items-center justify-center w-8 h-8 rounded-lg bg-red-500/10 hover:bg-red-500/20 min-h-[48px]" title="Eliminar del historial">
                                 <i class="fa-solid fa-trash-can"></i>
                             </button>
                         `;
@@ -1071,9 +1071,9 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
                             <div class="flex items-center gap-2.5 shrink-0">
                                 ${trashBtnHtml}
                                 <div class="flex items-center gap-1.5 bg-slate-950 border border-slate-800 rounded-lg p-0.5">
-                                    <button onclick="changeReorderQty('${item.sku}', -1)" class="w-8 h-8 rounded bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-sm cursor-pointer select-none">-</button>
+                                    <button onclick="changeReorderQty('${item.sku}', -1)" class="w-8 h-8 rounded bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-sm cursor-pointer select-none min-w-[32px] min-h-[32px]">-</button>
                                     <span class="text-white font-black text-sm w-5 text-center">${item.quantity}</span>
-                                    <button onclick="changeReorderQty('${item.sku}', 1)" class="w-8 h-8 rounded bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-sm cursor-pointer select-none">+</button>
+                                    <button onclick="changeReorderQty('${item.sku}', 1)" class="w-8 h-8 rounded bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-sm cursor-pointer select-none min-w-[32px] min-h-[32px]">+</button>
                                 </div>
                                 <span class="text-amber-500 font-bold min-w-[75px] text-right">$${sub.toFixed(2)} MXN</span>
                             </div>
@@ -1088,18 +1088,18 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
                             ${reorderRows || '<div class="text-center py-4 text-slate-500 text-xs">No hay productos seleccionados.</div>'}
                         </div>
                         ${reorderItems.length > 0 ? `
-                        <div class="flex flex-col sm:flex-row justify-between items-center bg-slate-900 border border-slate-800 rounded-xl p-3.5 mt-1 gap-3">
+                        <div class="flex flex-row justify-between items-center bg-slate-900 border border-slate-850 rounded-xl p-4 mt-2 gap-4 w-full">
                             <div class="flex items-center gap-2">
-                                <button onclick="closeOrdersModal(); window.location.href='index.html';" class="bg-slate-800 hover:bg-slate-700 text-white font-bold px-4 py-2.5 rounded-xl text-xs transition cursor-pointer flex items-center gap-1.5 active:scale-95">
-                                    <i class="fa-solid fa-arrow-left"></i> Seguir comprando
+                                <button onclick="closeOrdersModal(); window.location.href='index.html';" class="bg-slate-800 hover:bg-slate-750 text-white font-bold px-4 py-3 rounded-xl text-xs transition cursor-pointer flex items-center gap-1.5 active:scale-95 min-h-[48px]">
+                                    Seguir comprando
                                 </button>
-                                <button onclick="addReorderToCart()" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-4 py-2.5 rounded-xl text-xs transition active:scale-95 cursor-pointer flex items-center gap-1.5">
+                                <button onclick="addReorderToCart()" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black px-4 py-3 rounded-xl text-xs transition active:scale-95 cursor-pointer flex items-center gap-1.5 min-h-[48px]">
                                     Agregar al Carrito <i class="fa-solid fa-cart-plus"></i>
                                 </button>
                             </div>
-                            <div class="flex flex-col text-right">
-                                <span class="text-[10px] text-slate-400 font-bold uppercase">Total del Pedido:</span>
-                                <span class="text-sm font-black text-cyan-400">$${reorderSubtotal.toFixed(2)} MXN</span>
+                            <div class="text-right">
+                                <span class="text-[9px] text-slate-400 font-bold uppercase block tracking-wider">Total del Pedido</span>
+                                <span class="text-base font-black text-cyan-400">$${reorderSubtotal.toFixed(2)} MXN</span>
                             </div>
                         </div>
                         ` : ''}
@@ -1162,6 +1162,7 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
             }
         });
         saveCart(cart);
+        updateCartBadge();
         closeOrdersModal();
         window.openCartDrawer();
     };
@@ -1207,7 +1208,7 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
                 <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3.5 flex flex-col gap-2 text-[11px] text-slate-400">
                     <span class="text-amber-500 font-black flex items-center gap-1.5"><i class="fa-solid fa-gift"></i> Desbloquear 5% de Cashback</span>
                     <span>Obtén <strong class="text-white">$${cashbackAmount} MXN</strong> de saldo de regalo en esta compra. Regístrate gratis o ingresa tus datos en el newsletter para activar el beneficio.</span>
-                    <button onclick="openDeliveryModal()" class="bg-slate-800 hover:bg-slate-750 text-white font-bold py-1.5 rounded-lg text-[10px] transition cursor-pointer text-center">Registrar Cuenta Gratis</button>
+                    <button onclick="openDeliveryModal()" class="bg-slate-800 hover:bg-slate-750 text-white font-bold py-1.5 rounded-lg text-[10px] transition cursor-pointer text-center min-h-[48px] w-full">Registrar Cuenta Gratis</button>
                     <span class="text-[9px] text-slate-500 leading-tight">Nota: Sin registro de correo y teléfono no se genera cashback.</span>
                 </div>
             `;
@@ -1310,15 +1311,15 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
                     <span>Agrega más productos a tu pedido y supera los $1,500 MXN para conseguir **Envío Gratis** a domicilio.</span>
                 </div>
                 
-                <!-- Botones de compra -->
+                <!-- Botones de compra (Amber buttons contrast and min-h-48px) -->
                 <div class="flex flex-col gap-2.5 mt-2">
-                    <a href="checkout.html?sku=${product.sku}" class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-slate-950 font-black py-3 rounded-xl text-xs transition active:scale-95 text-center flex items-center justify-center gap-2 border border-[#FCD200]">
+                    <a href="checkout.html?sku=${product.sku}" class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-slate-950 font-black py-3 rounded-xl text-xs transition active:scale-95 text-center flex items-center justify-center gap-2 border border-[#FCD200] min-h-[48px]">
                         Pagar ahora <i class="fa-solid fa-credit-card text-xs"></i>
                     </a>
-                    <button onclick="addToCart('${product.sku}')" class="w-full bg-cyan-550 hover:bg-cyan-500 text-slate-950 font-black py-3 rounded-xl text-xs transition active:scale-95 cursor-pointer flex items-center justify-center gap-2">
+                    <button onclick="addToCart('${product.sku}')" class="w-full bg-[#f59e0b] hover:bg-[#e08e00] text-[#111827] font-black py-3 rounded-xl text-xs transition active:scale-95 cursor-pointer flex items-center justify-center gap-2 min-h-[48px] border-none shadow-sm">
                         Agregar al carrito <i class="fa-solid fa-cart-plus text-sm"></i>
                     </button>
-                    <a href="index.html" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-xl text-xs transition text-center flex items-center justify-center gap-2">
+                    <a href="index.html" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-xl text-xs transition text-center flex items-center justify-center gap-2 min-h-[48px]">
                         <i class="fa-solid fa-arrow-left text-xs"></i> Seguir comprando
                     </a>
                 </div>
