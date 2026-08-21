@@ -1008,19 +1008,23 @@
             const div = document.createElement("div");
             div.className = rowClass;
             div.innerHTML = `
-                <div class="w-[170px] h-[170px] min-w-[170px] max-w-[170px] rounded-2xl overflow-hidden bg-slate-950 border border-slate-700/80 shrink-0 p-1 flex items-center justify-center"><img src="" class="w-full h-full object-cover rounded-xl" alt="" loading="lazy" /></div>
-                <div style="display:none;width:150px;height:150px;min-width:150px" class="bg-slate-900 rounded-xl border border-slate-700 items-center justify-center shrink-0">
-                    <i class="fa-solid fa-image text-slate-600 text-3xl"></i>
-                </div>
-                <div class="flex-1 flex flex-col gap-1.5 min-w-0">
-                    <span class="text-white font-bold text-sm leading-snug">${item.nombre}</span>
-                    <span class="text-[10px] font-mono text-slate-500 uppercase">${item.sku}</span>
-                    ${statusTagHtml}
-                    <div class="flex items-center gap-3 flex-wrap mt-1">
-                        ${controlsHtml}
-                    </div>
-                </div>
-            `;
+    <div class="w-[170px] h-[170px] min-w-[170px] max-w-[170px] rounded-2xl overflow-hidden bg-slate-950 border border-slate-700/80 shrink-0 p-1 flex items-center justify-center">
+        <img src="${imgUrl}" class="w-full h-full object-cover rounded-xl" alt="${item.nombre}" loading="lazy" onerror="this.src='assets/img/slider_ia_human_thumb.webp?v=1.1.0';" />
+    </div>
+    <div class="flex-1 flex flex-col gap-1.5 min-w-0">
+        <div class="flex justify-between items-start gap-2">
+            <div>
+                <span class="text-white font-bold text-sm sm:text-base leading-snug block">${item.nombre}</span>
+                <span class="text-[10px] font-mono text-slate-500 uppercase block mt-0.5">${item.sku}</span>
+            </div>
+            <span class="text-slate-400 font-bold text-xs shrink-0">$$${parseFloat(item.precio).toLocaleString()} c/u</span>
+        </div>
+        ${statusTagHtml}
+        <div class="flex items-center justify-between gap-3 flex-wrap mt-2 pt-2 border-t border-slate-800/60">
+            ${controlsHtml}
+        </div>
+    </div>
+`;
             container.appendChild(div);
         });
 
