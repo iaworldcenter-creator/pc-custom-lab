@@ -1,8 +1,8 @@
-const CACHE_NAME = 'pc-custom-lab-cache-v1.0.9';
+const CACHE_NAME = 'ecosystem-cache-v1.1.0';
 const ASSETS_TO_CACHE = [
   './index.html',
-  './assets/css/tailwind-built.css?v=1.0.9',
-  './assets/css/fontawesome-all.min.css?v=1.0.9'
+  './assets/css/tailwind-built.css?v=1.1.0',
+  './assets/css/fontawesome-all.min.css?v=1.1.0'
 ];
 
 self.addEventListener('install', (event) => {
