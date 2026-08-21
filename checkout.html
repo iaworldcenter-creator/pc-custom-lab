@@ -274,9 +274,37 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
         </div>
     </div>
 </header>
-<!-- BANDA PROMOCIONAL MARQUEE UNIVERSAL -->
-<div class="w-full bg-[#f0c14b] border-b border-[#ddb347] text-slate-950 py-2 overflow-hidden select-none shadow-sm relative z-40">
-    <div class="marquee-track flex gap-8 items-center text-xs font-black uppercase tracking-wider whitespace-nowrap">
+<!-- BANDA PROMOCIONAL MARQUEE ANIMADA -->
+<div class="w-full bg-[#f0c14b] border-b border-[#ddb347] text-slate-950 py-2.5 overflow-hidden select-none shadow-sm relative z-40">
+    <style>
+        @keyframes marqueeContinuousMove {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-track-active {
+            display: flex;
+            width: max-content;
+            animation: marqueeContinuousMove 30s linear infinite;
+            will-change: transform;
+        }
+        .marquee-track-active:hover {
+            animation-play-state: paused;
+        }
+    </style>
+    <div class="marquee-track-active flex gap-8 items-center text-xs font-black uppercase tracking-wider whitespace-nowrap">
+        <span class="flex items-center gap-1.5">🚚 ¡ENVÍO GRATIS en compras a partir de ,500 MXN!</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">💰 5% DE CASHBACK acumulable con registro activo.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">📦 PRECIO DE MAYOREO: 15% de descuento directo a partir de 10 piezas.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">⚠️ CONDICIÓN: Sin registro no hay cashback acumulable.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">🛒 BOUTIQUES ESPECIALIZADAS, UN SOLO CARRITO GLOBAL.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <span class="flex items-center gap-1.5">💳 Pagos con tarjeta bancaria y transferencias SPEI.</span>
+        <span class="text-slate-900 font-bold">•</span>
+        <!-- Bucle duplicado para ciclo continuo -->
         <span class="flex items-center gap-1.5">🚚 ¡ENVÍO GRATIS en compras a partir de ,500 MXN!</span>
         <span class="text-slate-900 font-bold">•</span>
         <span class="flex items-center gap-1.5">💰 5% DE CASHBACK acumulable con registro activo.</span>
@@ -290,6 +318,7 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
         <span class="flex items-center gap-1.5">💳 Pagos con tarjeta bancaria y transferencias SPEI.</span>
     </div>
 </div>
+
 
 
 
