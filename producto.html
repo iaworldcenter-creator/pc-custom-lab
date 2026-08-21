@@ -22,6 +22,46 @@ if ('serviceWorker' in navigator) {
       .catch(err => console.log('Service Worker registration failed:', err));
   });
 }
+
+// Función de compra directa desde producto individual
+window.comprarAhoraDirecto = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const sku = urlParams.get('sku');
+    
+    if (sku) {
+        let cart = [];
+        try {
+            const stored = localStorage.getItem("ecosystem_global_cart");
+            if (stored) cart = JSON.parse(stored);
+        } catch(e) {}
+        
+        const existing = cart.find(item => item.sku === sku);
+        if (existing) {
+            if (!existing.quantity || existing.quantity < 1) existing.quantity = 1;
+        } else {
+            let prodObj = null;
+            if (typeof productCatalog !== 'undefined') {
+                prodObj = productCatalog.find(p => p.sku === sku);
+            }
+            if (prodObj) {
+                cart.push({ ...prodObj, quantity: 1 });
+            } else {
+                const titleEl = document.querySelector('h1') || document.querySelector('h2');
+                const priceEl = document.querySelector('[data-precio]') || document.querySelector('.text-amber-400');
+                const name = titleEl ? titleEl.innerText.trim() : 'Producto ' + sku;
+                let price = 100;
+                if (priceEl) {
+                    const cleanP = priceEl.innerText.replace(/[^0-9.]/g, '');
+                    if (cleanP) price = parseFloat(cleanP);
+                }
+                cart.push({ sku: sku, nombre: name, precio: price, quantity: 1, imagen: '' });
+            }
+        }
+        localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
+    }
+    window.location.href = "checkout.html";
+};
+
 </script>
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin />
