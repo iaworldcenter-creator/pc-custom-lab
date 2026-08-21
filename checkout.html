@@ -189,7 +189,25 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
     "postalCode": "44100",
     "addressCountry": "MX"
   }
-}</script></head>
+}</script><script>
+(function() {
+    try {
+        const vKey = "ecosystem_reset_v2026_clean";
+        if (!localStorage.getItem(vKey)) {
+            const cart = localStorage.getItem("ecosystem_global_cart");
+            if (cart && (cart.includes("GPU-001") || cart === "[object Object]")) {
+                localStorage.setItem("ecosystem_global_cart", "[]");
+            }
+            const history = localStorage.getItem("user_purchases_history");
+            if (history && history.includes("AGY-4982")) {
+                localStorage.setItem("user_purchases_history", "[]");
+            }
+            localStorage.setItem(vKey, "true");
+        }
+    } catch(e) {}
+})();
+</script>
+</head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col">
 
 <header class="w-full bg-slate-950 border-b border-slate-900 flex flex-col relative z-[100] text-slate-100">
@@ -1178,7 +1196,7 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
             const div = document.createElement("div");
             div.className = rowClass;
             div.innerHTML = `
-                <img src="${imgUrl}" style="width:150px;height:150px;min-width:150px;max-width:150px;max-height:150px;object-fit:contain;" class="bg-slate-950 p-2 rounded-xl border border-slate-700 shrink-0" alt="${item.nombre}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                <div class="w-[170px] h-[170px] min-w-[170px] max-w-[170px] rounded-2xl overflow-hidden bg-slate-950 border border-slate-700/80 shrink-0 p-1 flex items-center justify-center"><img src="" class="w-full h-full object-cover rounded-xl" alt="" loading="lazy" /></div>
                 <div style="display:none;width:150px;height:150px;min-width:150px" class="bg-slate-900 rounded-xl border border-slate-700 items-center justify-center shrink-0">
                     <i class="fa-solid fa-image text-slate-600 text-3xl"></i>
                 </div>
