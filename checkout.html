@@ -709,6 +709,29 @@
     
     function saveCart(cart) {
         localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
+        
+        // Lector y auto-insertador de SKU desde URL (?sku=...)
+        try {
+            const urlParams = new URLSearchParams(window.location.search);
+            const skuParam = urlParams.get('sku');
+            if (skuParam) {
+                let cart = getCart();
+                let item = cart.find(i => i.sku && i.sku.toUpperCase() === skuParam.toUpperCase());
+                if (!item) {
+                    let prod = (typeof productCatalog !== 'undefined') ? productCatalog.find(p => p.sku && p.sku.toUpperCase() === skuParam.toUpperCase()) : null;
+                    if (prod) {
+                        cart.push({ ...prod, quantity: 1 });
+                    } else {
+                        cart.push({ sku: skuParam, nombre: 'Producto ' + skuParam, precio: 100, imagen: '', quantity: 1 });
+                    }
+                    localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
+                } else if (item.quantity === 0) {
+                    item.quantity = 1;
+                    localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
+                }
+            }
+        } catch(e) { console.warn("Error cargando SKU URL:", e); }
+
         renderCheckout();
     }
 

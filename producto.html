@@ -1349,9 +1349,7 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
                 
                 <!-- Botones de compra (Amber buttons contrast and min-h-48px) -->
                 <div class="flex flex-col gap-2.5 mt-2">
-                    <a href="checkout.html?sku=${product.sku}" class="w-full bg-[#FFD814] hover:bg-[#F7CA00] text-slate-950 font-black py-3 rounded-xl text-xs transition active:scale-95 text-center flex items-center justify-center gap-2 border border-[#FCD200] min-h-[48px]">
-                        Pagar ahora <i class="fa-solid fa-credit-card text-xs"></i>
-                    </a>
+                    <button onclick="comprarAhora()" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-3.5 rounded-xl text-xs uppercase tracking-wider transition cursor-pointer flex items-center justify-center gap-2 active:scale-95 shadow-md">Pagar ahora <i class="fa-solid fa-credit-card"></i></button>
                     <button onclick="addToCart('${product.sku}')" class="w-full bg-[#f59e0b] hover:bg-[#e08e00] text-[#111827] font-black py-3 rounded-xl text-xs transition active:scale-95 cursor-pointer flex items-center justify-center gap-2 min-h-[48px] border-none shadow-sm">
                         Agregar al carrito <i class="fa-solid fa-cart-plus text-sm"></i>
                     </button>
