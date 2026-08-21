@@ -464,822 +464,37 @@
     </div>
 </div>
 
-<script>
-    // BASE DE DATOS DE IMÁGENES
-    const IMG = {
-    gpu: 'assets/img/tigre_gamer_thumb.webp?v=1.1.0',
-    motherboards: 'assets/img/Female_technician_assembling_gam_202608041518_thumb.webp?v=1.1.0',
-    ram: 'assets/img/tigre_mosaico_thumb.webp?v=1.1.0',
-    procesadores: 'assets/img/tigre_atlas_thumb.webp?v=1.1.0',
-    almacenamiento: 'assets/img/slider_warehouse_thumb.webp?v=1.1.0',
-    gabinetes: 'assets/img/tigre_gemini_thumb.webp?v=1.1.0',
-    fuentes: 'assets/img/tigre_corporativo_thumb.webp?v=1.1.0',
-    enfriamiento: 'assets/img/tigre_mantenimiento_thumb.webp?v=1.1.0',
-    monitores: 'assets/img/slider_ia_human_thumb.webp?v=1.1.0',
-    perifericos: 'assets/img/tigre_software_thumb.webp?v=1.1.0',
-};
-
-    // BASE DE DATOS DE PRODUCTOS DE LA TIENDA LOCAL
-    const productCatalog = [
-    // ========== PÁGINA 1: TARJETAS DE VIDEO (GPU) — 20 modelos ==========
-    {sku:'GPU-001',nombre:'NVIDIA RTX 4060 8GB Ventus 2X OC',imagen:IMG.gpu,precio:'8500',descripcion:'Tarjeta gráfica NVIDIA RTX 4060 con 8GB GDDR6. Arquitectura Ada Lovelace, soporte DLSS 3 y Ray Tracing de tercera generación para gaming 1080p.',categoria:'gpu'},
-    {sku:'GPU-002',nombre:'NVIDIA RTX 4060 Ti 8GB Gaming X Trio',imagen:IMG.gpu,precio:'12500',descripcion:'RTX 4060 Ti con 8GB GDDR6 y triple ventilador TORX 5.0. Boost clock 2625MHz, ideal para gaming 1440p con DLSS 3.',categoria:'gpu'},
-    {sku:'GPU-003',nombre:'NVIDIA RTX 4060 Ti 16GB AORUS Elite',imagen:IMG.gpu,precio:'15800',descripcion:'RTX 4060 Ti edición 16GB GDDR6 para cargas de trabajo de IA y texturas de alta resolución. Disipador WINDFORCE con cámara de vapor.',categoria:'gpu'},
-    {sku:'GPU-004',nombre:'NVIDIA RTX 4070 12GB TUF Gaming OC',imagen:IMG.gpu,precio:'18500',descripcion:'RTX 4070 12GB GDDR6X con 5888 CUDA cores. Diseño TUF con componentes de grado militar y ventiladores axiales de doble rodamiento.',categoria:'gpu'},
-    {sku:'GPU-005',nombre:'NVIDIA RTX 4070 Super 12GB Strix OC',imagen:IMG.gpu,precio:'21000',descripcion:'RTX 4070 Super con 7168 CUDA cores y 12GB GDDR6X. ROG Strix con refrigeración de 3.15 slots y RGB Aura Sync direccionable.',categoria:'gpu'},
-    {sku:'GPU-006',nombre:'NVIDIA RTX 4070 Ti 12GB Gaming X Slim',imagen:IMG.gpu,precio:'22500',descripcion:'RTX 4070 Ti de bajo perfil con 7680 CUDA cores. Perfecta para chasis compactos sin sacrificar rendimiento 1440p/4K.',categoria:'gpu'},
-    {sku:'GPU-007',nombre:'NVIDIA RTX 4070 Ti Super 16GB AORUS Master',imagen:IMG.gpu,precio:'27000',descripcion:'RTX 4070 Ti Super con 16GB GDDR6X y bus de 256-bit. LCD Edge View personalizable y PCB reforzado con nanocarbono.',categoria:'gpu'},
-    {sku:'GPU-008',nombre:'NVIDIA RTX 4080 16GB TUF Gaming OC',imagen:IMG.gpu,precio:'32000',descripcion:'RTX 4080 con 9728 CUDA cores y 16GB GDDR6X. Gaming 4K sin compromiso con DLSS 3 Frame Generation.',categoria:'gpu'},
-    {sku:'GPU-009',nombre:'NVIDIA RTX 4080 Super 16GB Strix OC',imagen:IMG.gpu,precio:'35000',descripcion:'RTX 4080 Super con 10240 CUDA cores. La variante tope de gama de Ada Lovelace para gaming 4K y creación de contenido.',categoria:'gpu'},
-    {sku:'GPU-010',nombre:'NVIDIA RTX 4090 24GB Gaming X Trio',imagen:IMG.gpu,precio:'58000',descripcion:'RTX 4090 con 16384 CUDA cores y 24GB GDDR6X. La GPU de consumo más potente del mundo para gaming 4K/8K y AI.',categoria:'gpu'},
-    {sku:'GPU-011',nombre:'NVIDIA RTX 5070 12GB Ventus 3X OC',imagen:IMG.gpu,precio:'22000',descripcion:'RTX 5070 de nueva generación Blackwell con 12GB GDDR7. Soporte DLSS 4 Multi Frame Generation y Ray Tracing mejorado.',categoria:'gpu'},
-    {sku:'GPU-012',nombre:'NVIDIA RTX 5070 Ti 16GB AORUS Elite',imagen:IMG.gpu,precio:'28500',descripcion:'RTX 5070 Ti Blackwell con 16GB GDDR7 y ancho de banda mejorado. Ideal para gaming 4K con trazado de rayos completo.',categoria:'gpu'},
-    {sku:'GPU-013',nombre:'NVIDIA RTX 5080 16GB TUF Gaming OC',imagen:IMG.gpu,precio:'38000',descripcion:'RTX 5080 Blackwell con 10752 CUDA cores y 16GB GDDR7 a 30Gbps. Rendimiento 4K extremo y productividad IA avanzada.',categoria:'gpu'},
-    {sku:'GPU-014',nombre:'NVIDIA RTX 5090 32GB Strix OC',imagen:IMG.gpu,precio:'65000',descripcion:'RTX 5090 flagship con 21760 CUDA cores y 32GB GDDR7. La GPU más potente para entusiastas, 8K gaming y LLMs locales.',categoria:'gpu'},
-    {sku:'GPU-015',nombre:'AMD Radeon RX 7600 8GB Challenger',imagen:IMG.gpu,precio:'6800',descripcion:'RX 7600 con 8GB GDDR6 y arquitectura RDNA 3. Excelente relación precio/rendimiento para gaming 1080p con FSR 3.',categoria:'gpu'},
-    {sku:'GPU-016',nombre:'AMD Radeon RX 7700 XT 12GB Red Devil',imagen:IMG.gpu,precio:'13500',descripcion:'RX 7700 XT con 12GB GDDR6 y 3456 stream processors. Gaming 1440p fluido con PowerColor Red Devil premium.',categoria:'gpu'},
-    {sku:'GPU-017',nombre:'AMD Radeon RX 7800 XT 16GB Nitro+',imagen:IMG.gpu,precio:'17000',descripcion:'RX 7800 XT con 16GB GDDR6 y 3840 SP. Rendimiento 1440p/4K con Sapphire Nitro+ y RGB addressable.',categoria:'gpu'},
-    {sku:'GPU-018',nombre:'AMD Radeon RX 7900 XT 20GB AORUS Elite',imagen:IMG.gpu,precio:'24000',descripcion:'RX 7900 XT con 20GB GDDR6 y 5376 SP. Gaming 4K de alta gama con Gigabyte AORUS y backplate metálico.',categoria:'gpu'},
-    {sku:'GPU-019',nombre:'AMD Radeon RX 7900 XTX 24GB Taichi',imagen:IMG.gpu,precio:'32000',descripcion:'RX 7900 XTX flagship con 24GB GDDR6 y 6144 SP. La GPU RDNA 3 más potente de AMD para gaming 4K extremo.',categoria:'gpu'},
-    {sku:'GPU-020',nombre:'AMD Radeon RX 9070 XT 16GB Red Devil',imagen:IMG.gpu,precio:'19500',descripcion:'RX 9070 XT RDNA 4 con 16GB GDDR6 y Ray Tracing mejorado. Competidor directo de RTX 5070 con FSR 4.',categoria:'gpu'},
-
-    // ========== PÁGINA 2: TARJETAS MADRE (MOTHERBOARDS) — 20 modelos ==========
-    {sku:'MOBO-001',nombre:'ASUS ROG Maximus Z790 Hero',imagen:IMG.motherboards,precio:'14500',descripcion:'Placa base Intel Z790 ATX con VRM 20+1 etapas 105A, WiFi 6E, 5x M.2, Thunderbolt 4 y audio ROG SupremeFX 7.1.',categoria:'motherboards'},
-    {sku:'MOBO-002',nombre:'MSI MPG Z790 Carbon WiFi',imagen:IMG.motherboards,precio:'8500',descripcion:'Z790 ATX con VRM 19+1+1 etapas, WiFi 6E, DDR5-7200+ OC, 4x M.2 con disipadores Shield Frozr y RGB Mystic Light.',categoria:'motherboards'},
-    {sku:'MOBO-003',nombre:'Gigabyte Z790 Aorus Elite AX',imagen:IMG.motherboards,precio:'7200',descripcion:'Z790 ATX con VRM 16+1+2 etapas, WiFi 6E, 4x M.2, DDR5-7600 OC. Diseño térmico avanzado con Fins-Array.',categoria:'motherboards'},
-    {sku:'MOBO-004',nombre:'ASUS TUF Gaming Z790-Plus WiFi',imagen:IMG.motherboards,precio:'6500',descripcion:'Z790 ATX durable con VRM 16+1 etapas, WiFi 6, 4x M.2, 2.5G LAN. Componentes TUF de grado militar certificados.',categoria:'motherboards'},
-    {sku:'MOBO-005',nombre:'MSI PRO B760-P WiFi DDR5',imagen:IMG.motherboards,precio:'4800',descripcion:'B760 ATX profesional con WiFi 6E, DDR5-6400, 2x M.2, 2.5G LAN. Ideal para estaciones de trabajo y oficina.',categoria:'motherboards'},
-    {sku:'MOBO-006',nombre:'Gigabyte B760M Aorus Elite AX',imagen:IMG.motherboards,precio:'3800',descripcion:'B760 Micro-ATX con WiFi 6E, DDR5-6400, 2x M.2. Formato compacto con características premium para builds mid-range.',categoria:'motherboards'},
-    {sku:'MOBO-007',nombre:'ASUS Prime B760M-A WiFi DDR4',imagen:IMG.motherboards,precio:'3200',descripcion:'B760 Micro-ATX con WiFi 6, DDR4-4800, 2x M.2. Solución económica y confiable para Intel 12th/13th/14th Gen.',categoria:'motherboards'},
-    {sku:'MOBO-008',nombre:'MSI PRO H610M-G DDR4',imagen:IMG.motherboards,precio:'1800',descripcion:'H610 Micro-ATX de entrada con DDR4-3200, 1x M.2, Gigabit LAN. Perfecta para PCs de oficina y hogar.',categoria:'motherboards'},
-    {sku:'MOBO-009',nombre:'ASUS ROG Crosshair X670E Hero',imagen:IMG.motherboards,precio:'16000',descripcion:'X670E ATX flagship AMD AM5 con VRM 18+2 etapas 110A, PCIe 5.0 x16, 4x M.2 PCIe 5.0, USB4 y WiFi 6E.',categoria:'motherboards'},
-    {sku:'MOBO-010',nombre:'MSI MEG X670E Ace',imagen:IMG.motherboards,precio:'14500',descripcion:'X670E ATX E-ATX premium con VRM 22+2+2 etapas, PCIe 5.0, 4x M.2 PCIe 5.0, dual LAN 10G + 2.5G y WiFi 6E.',categoria:'motherboards'},
-    {sku:'MOBO-011',nombre:'Gigabyte X670E Aorus Master',imagen:IMG.motherboards,precio:'12000',descripcion:'X670E ATX con VRM 16+2+2 etapas, PCIe 5.0 GPU + M.2, DDR5-8000+ OC, WiFi 6E y audio ALC1220-VB.',categoria:'motherboards'},
-    {sku:'MOBO-012',nombre:'ASUS TUF Gaming X670-Plus WiFi',imagen:IMG.motherboards,precio:'8500',descripcion:'X670 ATX durable con PCIe 5.0, DDR5-6400, 3x M.2, WiFi 6. Componentes TUF certificados para AM5.',categoria:'motherboards'},
-    {sku:'MOBO-013',nombre:'MSI MAG B650 Tomahawk WiFi',imagen:IMG.motherboards,precio:'5800',descripcion:'B650 ATX con VRM 14+2+1 etapas, DDR5-6400, 3x M.2, WiFi 6E. Excelente placa AM5 mid-range para Ryzen 7000/9000.',categoria:'motherboards'},
-    {sku:'MOBO-014',nombre:'Gigabyte B650 Aorus Elite AX',imagen:IMG.motherboards,precio:'4800',descripcion:'B650 ATX con VRM 12+2+1 etapas, DDR5-6400, 2x M.2 PCIe 5.0, WiFi 6E. Diseño Aorus gaming con RGB.',categoria:'motherboards'},
-    {sku:'MOBO-015',nombre:'ASUS TUF Gaming B650-Plus WiFi',imagen:IMG.motherboards,precio:'5200',descripcion:'B650 ATX durable con PCIe 4.0, DDR5-6400, 2x M.2, WiFi 6. Construcción TUF para AMD AM5 de largo plazo.',categoria:'motherboards'},
-    {sku:'MOBO-016',nombre:'MSI PRO B650M-A WiFi',imagen:IMG.motherboards,precio:'3800',descripcion:'B650 Micro-ATX con DDR5-6400, 2x M.2, WiFi 6E. Formato compacto con soporte completo para Ryzen 7000/9000.',categoria:'motherboards'},
-    {sku:'MOBO-017',nombre:'ASUS ROG Strix B650E-E Gaming WiFi',imagen:IMG.motherboards,precio:'8000',descripcion:'B650E ATX con PCIe 5.0 GPU + M.2, VRM 14+2 etapas, DDR5-6400+, WiFi 6E. Overclocking avanzado para AM5.',categoria:'motherboards'},
-    {sku:'MOBO-018',nombre:'Gigabyte X870E Aorus Master',imagen:IMG.motherboards,precio:'15500',descripcion:'X870E ATX nueva generación con PCIe 5.0 x16, USB4 40Gbps, DDR5-8000+, WiFi 7 y VRM 18+2+2 etapas.',categoria:'motherboards'},
-    {sku:'MOBO-019',nombre:'MSI MAG X870 Tomahawk WiFi',imagen:IMG.motherboards,precio:'9500',descripcion:'X870 ATX con USB4 40Gbps, PCIe 5.0, DDR5-8000, WiFi 7. Placa base moderna para Ryzen 9000 series.',categoria:'motherboards'},
-    {sku:'MOBO-020',nombre:'ASUS ProArt B650-Creator',imagen:IMG.motherboards,precio:'6500',descripcion:'B650 ATX para creadores con USB4 40Gbps, DDR5-6400, 2x M.2, 2.5G LAN. Diseño elegante y silencioso.',categoria:'motherboards'},
-
-    // ========== PÁGINA 3: MEMORIA RAM — 20 modelos ==========
-    {sku:'RAM-001',nombre:'Kingston FURY Beast 16GB DDR4 3200MHz (2x8GB)',imagen:IMG.ram,precio:'1200',descripcion:'Kit dual channel 16GB DDR4 3200MHz CL16. Disipador de aluminio bajo perfil, compatible con Intel XMP 2.0.',categoria:'ram'},
-    {sku:'RAM-002',nombre:'Corsair Vengeance LPX 32GB DDR4 3600MHz (2x16GB)',imagen:IMG.ram,precio:'2500',descripcion:'32GB DDR4 3600MHz CL18 bajo perfil (34mm). PCB de 8 capas y disipador de aluminio anodizado.',categoria:'ram'},
-    {sku:'RAM-003',nombre:'G.Skill Ripjaws V 32GB DDR4 3600MHz (2x16GB)',imagen:IMG.ram,precio:'2400',descripcion:'32GB DDR4 3600MHz CL18. Disipador de aluminio con diseño agresivo y chips Samsung B-Die seleccionados.',categoria:'ram'},
-    {sku:'RAM-004',nombre:'Kingston FURY Beast 64GB DDR4 3600MHz (2x32GB)',imagen:IMG.ram,precio:'4800',descripcion:'64GB DDR4 3600MHz CL18 para estaciones de trabajo y virtualización. Kit dual channel certificado.',categoria:'ram'},
-    {sku:'RAM-005',nombre:'Corsair Vengeance RGB 32GB DDR5 6000MHz (2x16GB)',imagen:IMG.ram,precio:'3800',descripcion:'32GB DDR5 6000MHz CL36 con iluminación RGB iCUE de 10 zonas. Compatible con Intel XMP 3.0.',categoria:'ram'},
-    {sku:'RAM-006',nombre:'G.Skill Trident Z5 RGB 32GB DDR5 6400MHz (2x16GB)',imagen:IMG.ram,precio:'4500',descripcion:'32GB DDR5 6400MHz CL32 Trident Z5 con RGB direccionable. Chips SK Hynix A-Die para OC extremo.',categoria:'ram'},
-    {sku:'RAM-007',nombre:'Kingston FURY Renegade 64GB DDR5 6400MHz (2x32GB)',imagen:IMG.ram,precio:'7500',descripcion:'64GB DDR5 6400MHz CL32 con disipador de aluminio agresivo. Perfiles Intel XMP 3.0 certificados.',categoria:'ram'},
-    {sku:'RAM-008',nombre:'Corsair Dominator Platinum 64GB DDR5 7200MHz (2x32GB)',imagen:IMG.ram,precio:'10500',descripcion:'64GB DDR5 7200MHz CL34 Dominator Platinum con RGB Capellix. La línea premium de Corsair para entusiastas.',categoria:'ram'},
-    {sku:'RAM-009',nombre:'G.Skill Trident Z5 RGB 64GB DDR5 7200MHz (2x32GB)',imagen:IMG.ram,precio:'9800',descripcion:'64GB DDR5 7200MHz CL34 Trident Z5 RGB. El kit DDR5 más rápido de G.Skill con chips Hynix A-Die.',categoria:'ram'},
-    {sku:'RAM-010',nombre:'Corsair Vengeance 32GB DDR5 5600MHz (2x16GB)',imagen:IMG.ram,precio:'2800',descripcion:'32GB DDR5 5600MHz CL36 sin RGB. Solución DDR5 económica y confiable para builds de nueva generación.',categoria:'ram'},
-    {sku:'RAM-011',nombre:'Kingston FURY Impact 32GB DDR5 5600MHz SO-DIMM',imagen:IMG.ram,precio:'3200',descripcion:'32GB DDR5 5600MHz SO-DIMM para laptops y mini-PCs. Compatible con Intel XMP y AMD EXPO.',categoria:'ram'},
-    {sku:'RAM-012',nombre:'G.Skill Ripjaws S5 32GB DDR5 6000MHz (2x16GB)',imagen:IMG.ram,precio:'3200',descripcion:'32GB DDR5 6000MHz CL30 bajo perfil (33mm). Ideal para builds con disipadores de CPU grandes.',categoria:'ram'},
-    {sku:'RAM-013',nombre:'Corsair Vengeance 16GB DDR5 5200MHz (2x8GB)',imagen:IMG.ram,precio:'1500',descripcion:'16GB DDR5 5200MHz CL40 de entrada. Upgrade moderno para sistemas Intel 12th+ y AMD AM5.',categoria:'ram'},
-    {sku:'RAM-014',nombre:'Kingston FURY Beast 8GB DDR4 3200MHz (1x8GB)',imagen:IMG.ram,precio:'600',descripcion:'8GB DDR4 3200MHz CL16 módulo individual. Ideal para upgrades de laptops y PCs de oficina.',categoria:'ram'},
-    {sku:'RAM-015',nombre:'Corsair Vengeance LPX 16GB DDR4 3200MHz (2x8GB)',imagen:IMG.ram,precio:'1200',descripcion:'16GB DDR4 3200MHz CL16 dual channel. El estándar de oro para gaming 1080p/1440p.',categoria:'ram'},
-    {sku:'RAM-016',nombre:'G.Skill Ripjaws V 64GB DDR4 3600MHz (2x32GB)',imagen:IMG.ram,precio:'4800',descripcion:'64GB DDR4 3600MHz CL18 para virtualización y edición de video 4K. Kit dual channel de alta capacidad.',categoria:'ram'},
-    {sku:'RAM-017',nombre:'Kingston FURY Renegade 32GB DDR5 7200MHz (2x16GB)',imagen:IMG.ram,precio:'5500',descripcion:'32GB DDR5 7200MHz CL34 Renegade. Overclocking extremo con disipador de aluminio agresivo.',categoria:'ram'},
-    {sku:'RAM-018',nombre:'Corsair Dominator Titanium 64GB DDR5 6600MHz (2x32GB)',imagen:IMG.ram,precio:'9000',descripcion:'64GB DDR5 6600MHz CL32 Dominator Titanium con RGB DHX. El kit más premium de Corsair con Swappable Light Pipes.',categoria:'ram'},
-    {sku:'RAM-019',nombre:'G.Skill Trident Z5 Neo 32GB DDR5 6000MHz AMD EXPO (2x16GB)',imagen:IMG.ram,precio:'4000',descripcion:'32GB DDR5 6000MHz CL30 optimizado para AMD Ryzen 7000/9000 con perfiles EXPO certificados.',categoria:'ram'},
-    {sku:'RAM-020',nombre:'Kingston FURY Beast 128GB DDR5 5600MHz (4x32GB)',imagen:IMG.ram,precio:'12000',descripcion:'128GB DDR5 5600MHz quad channel para workstations y servidores. Máxima capacidad DDR5 disponible.',categoria:'ram'},
-
-    // ========== PÁGINA 4: PROCESADORES (CPU) — 20 modelos ==========
-    {sku:'CPU-001',nombre:'Intel Core i3-14100 4C/8T hasta 4.7GHz LGA 1700',imagen:IMG.procesadores,precio:'3200',descripcion:'4 núcleos P-core, 8 hilos, 12MB Smart Cache. Frecuencia turbo 4.7GHz, TDP 60W. Ideal para oficina y hogar.',categoria:'procesadores'},
-    {sku:'CPU-002',nombre:'Intel Core i5-13400F 10C/16T hasta 4.6GHz',imagen:IMG.procesadores,precio:'5500',descripcion:'10 núcleos (6P+4E), 16 hilos, 20MB cache. Turbo 4.6GHz, sin gráficos integrados. Excelente valor gaming.',categoria:'procesadores'},
-    {sku:'CPU-003',nombre:'Intel Core i5-14400F 10C/16T hasta 4.7GHz',imagen:IMG.procesadores,precio:'5800',descripcion:'Refresco Raptor Lake con 10 núcleos (6P+4E), 20MB cache. Turbo 4.7GHz, TDP 65W para gaming fluido.',categoria:'procesadores'},
-    {sku:'CPU-004',nombre:'Intel Core i5-14600K 14C/20T hasta 5.3GHz',imagen:IMG.procesadores,precio:'8500',descripcion:'14 núcleos (6P+8E), 20 hilos, 24MB cache. Turbo 5.3GHz, desbloqueado para overclocking. TDP 125W.',categoria:'procesadores'},
-    {sku:'CPU-005',nombre:'Intel Core i7-13700K 16C/24T hasta 5.4GHz',imagen:IMG.procesadores,precio:'11000',descripcion:'16 núcleos (8P+8E), 24 hilos, 30MB cache. Turbo 5.4GHz, rendimiento gaming y productividad extremo.',categoria:'procesadores'},
-    {sku:'CPU-006',nombre:'Intel Core i7-14700K 20C/28T hasta 5.6GHz',imagen:IMG.procesadores,precio:'12000',descripcion:'20 núcleos (8P+12E), 28 hilos, 33MB cache. Turbo 5.6GHz, el mejor i7 para gaming y creación de contenido.',categoria:'procesadores'},
-    {sku:'CPU-007',nombre:'Intel Core i9-13900K 24C/32T hasta 5.8GHz',imagen:IMG.procesadores,precio:'16000',descripcion:'24 núcleos (8P+16E), 32 hilos, 36MB cache. Turbo 5.8GHz, el monarca gaming/productividad de 13th Gen.',categoria:'procesadores'},
-    {sku:'CPU-008',nombre:'Intel Core i9-14900K 24C/32T hasta 6.0GHz',imagen:IMG.procesadores,precio:'17500',descripcion:'24 núcleos (8P+16E), 32 hilos, 36MB cache. Turbo 6.0GHz, el primer CPU de consumo en alcanzar 6GHz.',categoria:'procesadores'},
-    {sku:'CPU-009',nombre:'Intel Core Ultra 5 245K 14C/14T hasta 5.2GHz',imagen:IMG.procesadores,precio:'9000',descripcion:'Arrow Lake 14 núcleos (6P+8E), NPU integrada para IA. Socket LGA 1851, DDR5 y PCIe 5.0.',categoria:'procesadores'},
-    {sku:'CPU-010',nombre:'Intel Core Ultra 7 265K 20C/20T hasta 5.5GHz',imagen:IMG.procesadores,precio:'13000',descripcion:'Arrow Lake 20 núcleos (8P+12E) con NPU dedicada. Gaming e IA local con eficiencia mejorada.',categoria:'procesadores'},
-    {sku:'CPU-011',nombre:'Intel Core Ultra 9 285K 24C/24T hasta 5.7GHz',imagen:IMG.procesadores,precio:'18000',descripcion:'Arrow Lake flagship 24 núcleos (8P+16E), NPU de 13 TOPS. El sucesor del i9-14900K en LGA 1851.',categoria:'procesadores'},
-    {sku:'CPU-012',nombre:'AMD Ryzen 5 5600 6C/12T hasta 4.4GHz AM4',imagen:IMG.procesadores,precio:'4000',descripcion:'6 núcleos Zen 3, 12 hilos, 32MB cache. Turbo 4.4GHz, TDP 65W. El mejor valor para AM4 gaming.',categoria:'procesadores'},
-    {sku:'CPU-013',nombre:'AMD Ryzen 5 7600X 6C/12T hasta 5.3GHz AM5',imagen:IMG.procesadores,precio:'6500',descripcion:'6 núcleos Zen 4, 12 hilos, 32MB cache. Turbo 5.3GHz, TDP 105W. Excelente gaming en AM5.',categoria:'procesadores'},
-    {sku:'CPU-014',nombre:'AMD Ryzen 5 9600X 6C/12T hasta 5.4GHz AM5',imagen:IMG.procesadores,precio:'8000',descripcion:'6 núcleos Zen 5, 12 hilos, 32MB cache. Turbo 5.4GHz, TDP 65W. Nueva generación con IPC mejorado 16%.',categoria:'procesadores'},
-    {sku:'CPU-015',nombre:'AMD Ryzen 7 5800X3D 8C/16T 96MB 3D V-Cache',imagen:IMG.procesadores,precio:'8500',descripcion:'8 núcleos Zen 3 con 96MB 3D V-Cache. El rey indiscutible del gaming en socket AM4.',categoria:'procesadores'},
-    {sku:'CPU-016',nombre:'AMD Ryzen 7 7700X 8C/16T hasta 5.4GHz AM5',imagen:IMG.procesadores,precio:'9500',descripcion:'8 núcleos Zen 4, 16 hilos, 32MB cache. Turbo 5.4GHz, TDP 105W. Gaming y productividad balanceada.',categoria:'procesadores'},
-    {sku:'CPU-017',nombre:'AMD Ryzen 7 7800X3D 8C/16T 96MB 3D V-Cache',imagen:IMG.procesadores,precio:'12000',descripcion:'8 núcleos Zen 4 con 96MB 3D V-Cache. El CPU gaming más rápido del mundo en su lanzamiento.',categoria:'procesadores'},
-    {sku:'CPU-018',nombre:'AMD Ryzen 7 9700X 8C/16T hasta 5.5GHz AM5',imagen:IMG.procesadores,precio:'11500',descripcion:'8 núcleos Zen 5, 16 hilos, 32MB cache. Turbo 5.5GHz, TDP 65W. Eficiencia energética líder.',categoria:'procesadores'},
-    {sku:'CPU-019',nombre:'AMD Ryzen 9 7900X 12C/24T hasta 5.6GHz AM5',imagen:IMG.procesadores,precio:'14000',descripcion:'12 núcleos Zen 4, 24 hilos, 64MB cache. Turbo 5.6GHz, TDP 170W. Potencia para creadores y gaming.',categoria:'procesadores'},
-    {sku:'CPU-020',nombre:'AMD Ryzen 9 9950X 16C/32T hasta 5.7GHz AM5',imagen:IMG.procesadores,precio:'18500',descripcion:'16 núcleos Zen 5, 32 hilos, 64MB cache. Turbo 5.7GHz, TDP 170W. El flagship AM5 para productividad.',categoria:'procesadores'},
-
-    // ========== PÁGINA 5: ALMACENAMIENTO SSD — 20 modelos ==========
-    {sku:'SSD-001',nombre:'Kingston A400 240GB SATA III 2.5"',imagen:IMG.almacenamiento,precio:'450',descripcion:'SSD SATA III 240GB, lectura 500MB/s, escritura 350MB/s. Upgrade económico para revivir PCs antiguas.',categoria:'almacenamiento'},
-    {sku:'SSD-002',nombre:'WD Blue 500GB SATA III 2.5"',imagen:IMG.almacenamiento,precio:'800',descripcion:'SSD WD Blue 500GB SATA III, lectura 560MB/s. Confiabilidad WD con 5 años de garantía.',categoria:'almacenamiento'},
-    {sku:'SSD-003',nombre:'Samsung 870 EVO 1TB SATA III 2.5"',imagen:IMG.almacenamiento,precio:'1800',descripcion:'SSD SATA líder con 1TB, lectura 560MB/s, escritura 530MB/s. V-NAND 3bit MLC y controlador MKX.',categoria:'almacenamiento'},
-    {sku:'SSD-004',nombre:'Kingston NV2 500GB NVMe M.2 PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'900',descripcion:'NVMe M.2 2280 PCIe 4.0 x4, lectura 3500MB/s, escritura 2100MB/s. Solución NVMe económica.',categoria:'almacenamiento'},
-    {sku:'SSD-005',nombre:'WD Black SN770 1TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'1800',descripcion:'NVMe 1TB PCIe 4.0, lectura 5150MB/s, escritura 4900MB/s. Gaming SSD con nCache 4.0 y HMB.',categoria:'almacenamiento'},
-    {sku:'SSD-006',nombre:'Samsung 980 1TB NVMe M.2 PCIe 3.0 x4',imagen:IMG.almacenamiento,precio:'1600',descripcion:'NVMe 1TB PCIe 3.0, lectura 3500MB/s, escritura 3000MB/s. DRAM-less con HBM para eficiencia.',categoria:'almacenamiento'},
-    {sku:'SSD-007',nombre:'Samsung 980 PRO 1TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'2400',descripcion:'NVMe 1TB PCIe 4.0, lectura 7000MB/s, escritura 5000MB/s. Controlador Elpis con disipador integrado.',categoria:'almacenamiento'},
-    {sku:'SSD-008',nombre:'Samsung 990 PRO 1TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'2800',descripcion:'NVMe 1TB PCIe 4.0, lectura 7450MB/s, escritura 6900MB/s. El SSD PCIe 4.0 más rápido de Samsung.',categoria:'almacenamiento'},
-    {sku:'SSD-009',nombre:'Samsung 990 PRO 2TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'5000',descripcion:'NVMe 2TB PCIe 4.0 con disipador de calor incluido. Ideal para PS5 y gaming de alta capacidad.',categoria:'almacenamiento'},
-    {sku:'SSD-010',nombre:'WD Black SN850X 1TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'2500',descripcion:'NVMe 1TB PCIe 4.0, lectura 7300MB/s, escritura 6600MB/s. SSD gaming top de Western Digital.',categoria:'almacenamiento'},
-    {sku:'SSD-011',nombre:'WD Black SN850X 2TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'4500',descripcion:'NVMe 2TB PCIe 4.0 con disipador opcional. Gaming de alto rendimiento con Game Mode 2.0.',categoria:'almacenamiento'},
-    {sku:'SSD-012',nombre:'Kingston KC3000 1TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'2200',descripcion:'NVMe 1TB PCIe 4.0, lectura 7000MB/s, escritura 6000MB/s. Controlador Phison E18 con 3D TLC NAND.',categoria:'almacenamiento'},
-    {sku:'SSD-013',nombre:'Kingston KC3000 2TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'4000',descripcion:'NVMe 2TB PCIe 4.0, lectura 7000MB/s. Alto rendimiento con disipador de grafeno integrado.',categoria:'almacenamiento'},
-    {sku:'SSD-014',nombre:'Seagate FireCuda 530 2TB NVMe PCIe 4.0',imagen:IMG.almacenamiento,precio:'4800',descripcion:'NVMe 2TB PCIe 4.0, lectura 7300MB/s. Con disipador incluido y 5 años de Rescue Data Recovery.',categoria:'almacenamiento'},
-    {sku:'SSD-015',nombre:'Samsung 990 PRO 4TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'9500',descripcion:'NVMe 4TB PCIe 4.0 flagship. La capacidad máxima del 990 PRO para creadores y profesionales.',categoria:'almacenamiento'},
-    {sku:'SSD-016',nombre:'Crucial T700 1TB NVMe PCIe 5.0 x4',imagen:IMG.almacenamiento,precio:'3500',descripcion:'NVMe 1TB PCIe 5.0, lectura 11700MB/s, escritura 9500MB/s. El primer SSD PCIe 5.0 consumer.',categoria:'almacenamiento'},
-    {sku:'SSD-017',nombre:'Crucial T700 2TB NVMe PCIe 5.0 x4',imagen:IMG.almacenamiento,precio:'6500',descripcion:'NVMe 2TB PCIe 5.0, lectura 12400MB/s. Rendimiento extremo con disipador de calor incluido.',categoria:'almacenamiento'},
-    {sku:'SSD-018',nombre:'WD Black SN850X 4TB NVMe PCIe 4.0 x4',imagen:IMG.almacenamiento,precio:'8500',descripcion:'NVMe 4TB PCIe 4.0, la mayor capacidad del SN850X. Para bibliotecas de juegos masivas.',categoria:'almacenamiento'},
-    {sku:'SSD-019',nombre:'Seagate FireCuda 540 2TB NVMe PCIe 5.0',imagen:IMG.almacenamiento,precio:'7500',descripcion:'NVMe 2TB PCIe 5.0, lectura 10000MB/s. SSD de nueva generación con disipador avanzado.',categoria:'almacenamiento'},
-    {sku:'SSD-020',nombre:'Samsung 990 EVO 1TB NVMe PCIe 5.0 x4',imagen:IMG.almacenamiento,precio:'2200',descripcion:'NVMe 1TB PCIe 5.0 de consumo, lectura 5000MB/s. Diseño eficiente con TDP bajo para laptops.',categoria:'almacenamiento'},
-
-    // ========== PÁGINA 6: GABINETES (CASES) — 20 modelos ==========
-    {sku:'CASE-001',nombre:'NZXT H5 Flow Mid-Tower ATX',imagen:IMG.gabinetes,precio:'2200',descripcion:'Mid-tower ATX con panel perforado frontal para flujo de aire máximo. Soporta GPUs hasta 365mm y radiadores 280mm.',categoria:'gabinetes'},
-    {sku:'CASE-002',nombre:'Corsair 4000D Airflow Mid-Tower ATX',imagen:IMG.gabinetes,precio:'2000',descripcion:'Mid-tower con panel frontal mesh de alta ventilación. 2 ventiladores incluidos, soporta E-ATX y radiadores 360mm.',categoria:'gabinetes'},
-    {sku:'CASE-003',nombre:'Lian Li Lancool 216 Mid-Tower ATX',imagen:IMG.gabinetes,precio:'2800',descripcion:'Mid-tower con dos ventiladores frontales de 160mm incluidos. Excelente flujo de aire y gestión de cables.',categoria:'gabinetes'},
-    {sku:'CASE-004',nombre:'Fractal Design North Mid-Tower ATX',imagen:IMG.gabinetes,precio:'3200',descripcion:'Mid-tower con acabado de madera real y diseño escandinavo. Elegante con panel mesh frontal opcional.',categoria:'gabinetes'},
-    {sku:'CASE-005',nombre:'Phanteks Eclipse G360A Mid-Tower ATX',imagen:IMG.gabinetes,precio:'2200',descripcion:'Mid-tower con panel frontal mesh ultra-fino y 3 ventiladores D-RGB de 120mm incluidos.',categoria:'gabinetes'},
-    {sku:'CASE-006',nombre:'be quiet! Pure Base 500DX Mid-Tower ATX',imagen:IMG.gabinetes,precio:'2500',descripcion:'Mid-tower silencioso con 3 ventiladores Pure Wings 2 y iluminación ARGB. Balance perfecto entre airflow y silencio.',categoria:'gabinetes'},
-    {sku:'CASE-007',nombre:'NZXT H7 Flow Mid-Tower ATX',imagen:IMG.gabinetes,precio:'3000',descripcion:'Mid-tower premium con panel frontal perforado y vidrio templado lateral. Espacioso para builds complejas.',categoria:'gabinetes'},
-    {sku:'CASE-008',nombre:'Corsair 5000D Airflow Mid-Tower ATX',imagen:IMG.gabinetes,precio:'3800',descripcion:'Mid-tower espacioso con soporte E-ATX, múltiples radiadores y panel mesh frontal de alta ventilación.',categoria:'gabinetes'},
-    {sku:'CASE-009',nombre:'Lian Li O11 Dynamic EVO Mid-Tower ATX',imagen:IMG.gabinetes,precio:'4200',descripcion:'El legendario O11 EVO con diseño dual-chamber modular. Configurable en 6 modos diferentes. Estándar de la industria.',categoria:'gabinetes'},
-    {sku:'CASE-010',nombre:'Fractal Design Torrent Mid-Tower ATX',imagen:IMG.gabinetes,precio:'5000',descripcion:'Mid-tower con dos ventiladores frontales de 180mm incluidos. El gabinete con mejor airflow del mercado.',categoria:'gabinetes'},
-    {sku:'CASE-011',nombre:'Phanteks Enthoo Pro Full-Tower ATX',imagen:IMG.gabinetes,precio:'4500',descripcion:'Full-tower con capacidad masiva, 8 bahías de 3.5" y soporte para múltiples radiadores. Clásico entusiasta.',categoria:'gabinetes'},
-    {sku:'CASE-012',nombre:'be quiet! Dark Base Pro 900 Full-Tower',imagen:IMG.gabinetes,precio:'6000',descripcion:'Full-tower premium con base motherboard ajustable, 3 Silent Wings 3 y Qi wireless charging en el panel.',categoria:'gabinetes'},
-    {sku:'CASE-013',nombre:'Corsair 7000D Airflow Full-Tower ATX',imagen:IMG.gabinetes,precio:'5500',descripcion:'Full-tower espacioso con soporte para radiadores 420mm triples y hasta 10 ventiladores. Para builds extremas.',categoria:'gabinetes'},
-    {sku:'CASE-014',nombre:'Lian Li V3000 Plus Full-Tower E-ATX',imagen:IMG.gabinetes,precio:'7500',descripcion:'Full-tower flagship con soporte para 4 GPUs, radiador 480mm y diseño de aluminio premium. Para HEDT.',categoria:'gabinetes'},
-    {sku:'CASE-015',nombre:'NZXT H1 V2 Mini-ITX con PSU 750W',imagen:IMG.gabinetes,precio:'4500',descripcion:'Mini-ITX vertical con fuente SFX 750W 80+ Gold y AIO 140mm incluidos. Diseño elegante y compacto.',categoria:'gabinetes'},
-    {sku:'CASE-016',nombre:'Fractal Design Terra Mini-ITX',imagen:IMG.gabinetes,precio:'4000',descripcion:'Mini-ITX premium con acabado de aluminio anodizado y madera real. El mini-ITX más elegante del mercado.',categoria:'gabinetes'},
-    {sku:'CASE-017',nombre:'Cooler Master NR200 Mini-ITX',imagen:IMG.gabinetes,precio:'1800',descripcion:'Mini-ITX compacto con soporte para GPUs de 330mm y radiador 240mm. El mejor valor en mini-ITX.',categoria:'gabinetes'},
-    {sku:'CASE-018',nombre:'Hyte Y60 Mid-Tower ATX con Vidrio Panorámico',imagen:IMG.gabinetes,precio:'4800',descripcion:'Mid-tower con vidrio panorámico de 3 paneles y soporte para PCIe 4.0 riser incluido. Diseño futurista.',categoria:'gabinetes'},
-    {sku:'CASE-019',nombre:'Hyte Y70 Touch Mid-Tower con Pantalla IPS',imagen:IMG.gabinetes,precio:'8500',descripcion:'Mid-tower con pantalla IPS táctil de 14" integrada para telemetría y personalización. El gabinete más innovador.',categoria:'gabinetes'},
-    {sku:'CASE-020',nombre:'Corsair 3500X Mid-Tower ATX Reverse',imagen:IMG.gabinetes,precio:'2800',descripcion:'Mid-tower con diseño reverse ATX para exhibición lateral y airflow optimizado. Soporte para ARGB fans.',categoria:'gabinetes'},
-
-    // ========== PÁGINA 7: FUENTES DE PODER (PSU) — 20 modelos ==========
-    {sku:'PSU-001',nombre:'EVGA 500W 80+ Bronze No-Modular',imagen:IMG.fuentes,precio:'1200',descripcion:'Fuente 500W certificada 80+ Bronze, no modular. Solución confiable de entrada con 3 años de garantía.',categoria:'fuentes'},
-    {sku:'PSU-002',nombre:'Corsair CV550 550W 80+ Bronze',imagen:IMG.fuentes,precio:'1400',descripcion:'Fuente 550W 80+ Bronze, semi-modular. Compacta 125mm con ventilador silencioso de 120mm.',categoria:'fuentes'},
-    {sku:'PSU-003',nombre:'Cooler Master MWE 650W 80+ Bronze V2',imagen:IMG.fuentes,precio:'1500',descripcion:'Fuente 650W 80+ Bronze V2, full modular. Diseño DC-DC con capacitores japoneses para mayor estabilidad.',categoria:'fuentes'},
-    {sku:'PSU-004',nombre:'Corsair RM650 650W 80+ Gold Full Modular',imagen:IMG.fuentes,precio:'2200',descripcion:'Fuente 650W 80+ Gold, full modular con modo Zero RPM. 10 años de garantía Corsair premium.',categoria:'fuentes'},
-    {sku:'PSU-005',nombre:'Seasonic Focus GX-750 750W 80+ Gold',imagen:IMG.fuentes,precio:'2500',descripcion:'Fuente 750W 80+ Gold full modular. Seasonic Focus con diseño híbrido y 10 años de garantía.',categoria:'fuentes'},
-    {sku:'PSU-006',nombre:'Corsair RM750e 750W 80+ Gold ATX 3.0',imagen:IMG.fuentes,precio:'2400',descripcion:'Fuente 750W 80+ Gold ATX 3.0 con conector 12VHPWR nativo para RTX 4000/5000. Full modular.',categoria:'fuentes'},
-    {sku:'PSU-007',nombre:'EVGA SuperNOVA 750 G6 750W 80+ Gold',imagen:IMG.fuentes,precio:'2600',descripcion:'Fuente 750W 80+ Gold full modular compacta (150mm). Ventilador FDB silencioso con modo ECO.',categoria:'fuentes'},
-    {sku:'PSU-008',nombre:'be quiet! Straight Power 11 850W 80+ Gold',imagen:IMG.fuentes,precio:'3200',descripcion:'Fuente 850W 80+ Gold full modular con ventilador Silent Wings 3. Certificación Cybenetics ETA-A.',categoria:'fuentes'},
-    {sku:'PSU-009',nombre:'Corsair RM850x 850W 80+ Gold ATX 3.0',imagen:IMG.fuentes,precio:'3000',descripcion:'Fuente 850W 80+ Gold ATX 3.0 con 12VHPWR y condensadores japoneses 105°C. La serie premium de Corsair.',categoria:'fuentes'},
-    {sku:'PSU-010',nombre:'Seasonic Focus GX-850 850W 80+ Gold',imagen:IMG.fuentes,precio:'2800',descripcion:'Fuente 850W 80+ Gold full modular. Seasonic Focus con 10 años de garantía y modo silencioso.',categoria:'fuentes'},
-    {sku:'PSU-011',nombre:'Corsair RM1000x 1000W 80+ Gold ATX 3.0',imagen:IMG.fuentes,precio:'4200',descripcion:'Fuente 1000W 80+ Gold ATX 3.0 con 12VHPWR para RTX 4090/5090. La opción ideal para builds de gama alta.',categoria:'fuentes'},
-    {sku:'PSU-012',nombre:'EVGA SuperNOVA 1000 G7 1000W 80+ Gold',imagen:IMG.fuentes,precio:'4000',descripcion:'Fuente 1000W 80+ Gold full modular con FDB fan y diseño compacto 150mm. Excelente regulación.',categoria:'fuentes'},
-    {sku:'PSU-013',nombre:'be quiet! Dark Power 13 1000W 80+ Titanium',imagen:IMG.fuentes,precio:'7500',descripcion:'Fuente 1000W 80+ Titanium full modular. La línea premium de be quiet! con eficiencia de nivel superior.',categoria:'fuentes'},
-    {sku:'PSU-014',nombre:'Corsair HX1200 1200W 80+ Platinum',imagen:IMG.fuentes,precio:'6500',descripcion:'Fuente 1200W 80+ Platinum full modular con modo Zero RPM. Para estaciones de trabajo y gaming extremo.',categoria:'fuentes'},
-    {sku:'PSU-015',nombre:'Seasonic Prime TX-1300 1300W 80+ Titanium',imagen:IMG.fuentes,precio:'8000',descripcion:'Fuente 1300W 80+ Titanium full modular. La joya de Seasonic con 12 años de garantía.',categoria:'fuentes'},
-    {sku:'PSU-016',nombre:'Corsair AX1600i 1600W 80+ Titanium Digital',imagen:IMG.fuentes,precio:'12000',descripcion:'Fuente 1600W 80+ Titanium digital con iCUE Link. La PSU más avanzada del mundo con monitoreo en tiempo real.',categoria:'fuentes'},
-    {sku:'PSU-017',nombre:'EVGA SuperNOVA 1600 T2 1600W 80+ Titanium',imagen:IMG.fuentes,precio:'15000',descripcion:'Fuente 1600W 80+ Titanium full modular. Para multi-GPU, servidores y mining rigs de alto consumo.',categoria:'fuentes'},
-    {sku:'PSU-018',nombre:'ASUS ROG Thor 1200P2 1200W 80+ Platinum',imagen:IMG.fuentes,precio:'8500',descripcion:'Fuente 1200W 80+ Platinum con pantalla OLED integrada y Aura Sync. Diseño ROG premium.',categoria:'fuentes'},
-    {sku:'PSU-019',nombre:'MSI MPG A850G 850W 80+ Gold ATX 3.0',imagen:IMG.fuentes,precio:'3200',descripcion:'Fuente 850W 80+ Gold ATX 3.0 con 12VHPWR nativo. Diseño compacto 150mm y full modular.',categoria:'fuentes'},
-    {sku:'PSU-020',nombre:'Thermaltake Toughpower GF3 1000W 80+ Gold ATX 3.0',imagen:IMG.fuentes,precio:'3800',descripcion:'Fuente 1000W 80+ Gold ATX 3.0 con 12VHPWR y ventilador Smart Zero Fan. Excelente relación calidad/precio.',categoria:'fuentes'},
-
-    // ========== PÁGINA 8: SISTEMAS DE ENFRIAMIENTO (COOLING) — 20 modelos ==========
-    {sku:'COOL-001',nombre:'Cooler Master Hyper 212 Black Edition',imagen:IMG.enfriamiento,precio:'800',descripcion:'Disipador de torre con 4 heat pipes de contacto directo y ventilador SickleFlow 120mm. El estándar de oro en aire.',categoria:'enfriamiento'},
-    {sku:'COOL-002',nombre:'be quiet! Pure Rock 2 150W TDP',imagen:IMG.enfriamiento,precio:'900',descripcion:'Disipador de torre silencioso con 3 heat pipes y ventilador Pure Wings 2 120mm. Máximo 25dB(A).',categoria:'enfriamiento'},
-    {sku:'COOL-003',nombre:'Noctua NH-U12S Redux 120mm',imagen:IMG.enfriamiento,precio:'1200',descripcion:'Disipador Noctua single-tower con NF-P12 redux fan. Calidad austríaca a precio accesible.',categoria:'enfriamiento'},
-    {sku:'COOL-004',nombre:'Thermalright Peerless Assassin 120 SE',imagen:IMG.enfriamiento,precio:'1000',descripcion:'Disipador dual-tower con 6 heat pipes y 2 ventiladores 120mm. El mejor valor en enfriamiento por aire.',categoria:'enfriamiento'},
-    {sku:'COOL-005',nombre:'Noctua NH-D15 chromax.black Dual Tower',imagen:IMG.enfriamiento,precio:'2800',descripcion:'El legendario NH-D15 en negro completo. Dual-tower con 2x NF-A15 140mm. El rey del enfriamiento por aire.',categoria:'enfriamiento'},
-    {sku:'COOL-006',nombre:'be quiet! Dark Rock Pro 4 250W TDP',imagen:IMG.enfriamiento,precio:'2200',descripcion:'Disipador dual-tower con 7 heat pipes y 2 Silent Wings 3. 250W TDP para CPUs de alta gama.',categoria:'enfriamiento'},
-    {sku:'COOL-007',nombre:'DeepCool AK620 Dual Tower',imagen:IMG.enfriamiento,precio:'1200',descripcion:'Disipador dual-tower con 6 heat pipes y 2 ventiladores FK120. Rendimiento comparable al NH-D15 a mitad de precio.',categoria:'enfriamiento'},
-    {sku:'COOL-008',nombre:'Thermalright Phantom Spirit 120 EVO',imagen:IMG.enfriamiento,precio:'1100',descripcion:'Disipador dual-tower con 7 heat pipes y 2 ventiladores TL-C12. El sucesor del Peerless Assassin mejorado.',categoria:'enfriamiento'},
-    {sku:'COOL-009',nombre:'Cooler Master MasterLiquid ML240L V2 ARGB',imagen:IMG.enfriamiento,precio:'1800',descripcion:'AIO 240mm con radiador de aluminio y 2 ventiladores SickleFlow 120 ARGB. Bomba de baja resistencia.',categoria:'enfriamiento'},
-    {sku:'COOL-010',nombre:'Corsair iCUE H100x RGB Elite 240mm',imagen:IMG.enfriamiento,precio:'2500',descripcion:'AIO 240mm con 2 ventiladores SP120 RGB Elite y bomba con iluminación. Controlado por iCUE.',categoria:'enfriamiento'},
-    {sku:'COOL-011',nombre:'NZXT Kraken X53 RGB 240mm',imagen:IMG.enfriamiento,precio:'2800',descripcion:'AIO 240mm con bomba LCD personalizable y 2 Aer RGB 2 120mm. Diseño premium con CAM software.',categoria:'enfriamiento'},
-    {sku:'COOL-012',nombre:'Arctic Liquid Freezer II 280mm',imagen:IMG.enfriamiento,precio:'2500',descripcion:'AIO 280mm con VRM fan integrado y radiador de 38mm de grosor. El AIO con mejor relación rendimiento/precio.',categoria:'enfriamiento'},
-    {sku:'COOL-013',nombre:'Corsair iCUE H150i Elite LCD 360mm',imagen:IMG.enfriamiento,precio:'4500',descripcion:'AIO 360mm con bomba LCD IPS personalizable y 3 ML120 RGB Elite. Premium para entusiastas.',categoria:'enfriamiento'},
-    {sku:'COOL-014',nombre:'NZXT Kraken Z73 RGB 360mm con LCD',imagen:IMG.enfriamiento,precio:'5500',descripcion:'AIO 360mm con bomba LCD de 2.36" para GIFs y telemetría. El AIO más personalizable de NZXT.',categoria:'enfriamiento'},
-    {sku:'COOL-015',nombre:'Arctic Liquid Freezer II 360mm',imagen:IMG.enfriamiento,precio:'3000',descripcion:'AIO 360mm con radiador grueso de 38mm y VRM fan. El AIO de 360mm más eficiente del mercado.',categoria:'enfriamiento'},
-    {sku:'COOL-016',nombre:'be quiet! Silent Loop 2 360mm ARGB',imagen:IMG.enfriamiento,precio:'3800',descripcion:'AIO 360mm con bomba de 3 cámaras y 3 Silent Wings 3 120mm ARGB. Silencio absoluto be quiet!',categoria:'enfriamiento'},
-    {sku:'COOL-017',nombre:'ASUS ROG Ryujin III 360 ARGB con LCD',imagen:IMG.enfriamiento,precio:'6000',descripcion:'AIO 360mm premium con bomba LCD 3.5" y ventiladores Noctua Industrial. El AIO ROG flagship.',categoria:'enfriamiento'},
-    {sku:'COOL-018',nombre:'Corsair iCUE H170i Elite 420mm',imagen:IMG.enfriamiento,precio:'5500',descripcion:'AIO 420mm masivo con 3x ML140 RGB Elite. Para CPUs de 200W+ TDP como i9-14900K y Ryzen 9 7950X.',categoria:'enfriamiento'},
-    {sku:'COOL-019',nombre:'DeepCool LT720 360mm ARGB',imagen:IMG.enfriamiento,precio:'2800',descripcion:'AIO 360mm con bomba de 4ª generación y 3 FK120 ARGB. Diseño moderno con excelente rendimiento.',categoria:'enfriamiento'},
-    {sku:'COOL-020',nombre:'Thermalright Frozen Magic 360 Scenic V3',imagen:IMG.enfriamiento,precio:'1800',descripcion:'AIO 360mm económico con 3 ventiladores TL-C12C ARGB. Excelente valor para enfriamiento líquido.',categoria:'enfriamiento'},
-
-    // ========== PÁGINA 9: MONITORES — 20 modelos ==========
-    {sku:'MON-001',nombre:'AOC 24G2 24" IPS 144Hz 1ms FreeSync',imagen:IMG.monitores,precio:'3500',descripcion:'Monitor gaming 24" IPS Full HD 1920x1080, 144Hz, 1ms MPRT, FreeSync Premium. Excelente entrada al gaming.',categoria:'monitores'},
-    {sku:'MON-002',nombre:'ASUS VG248QG 24" TN 165Hz 0.5ms G-Sync',imagen:IMG.monitores,precio:'3800',descripcion:'Monitor 24" TN 165Hz, 0.5ms, compatible G-Sync. Para eSports competitivos con respuesta ultra-rápida.',categoria:'monitores'},
-    {sku:'MON-003',nombre:'BenQ ZOWIE XL2411P 24" TN 144Hz 1ms',imagen:IMG.monitores,precio:'4500',descripcion:'Monitor eSports ZOWIE 24" TN 144Hz con Black eQualizer y Color Vibrance. Estándar de torneos FPS.',categoria:'monitores'},
-    {sku:'MON-004',nombre:'MSI Optix MAG274QRF-QD 27" IPS QHD 165Hz',imagen:IMG.monitores,precio:'7500',descripcion:'Monitor 27" IPS QHD 2560x1440, 165Hz, Quantum Dot, 1ms. Colores vivos y gaming fluido.',categoria:'monitores'},
-    {sku:'MON-005',nombre:'LG UltraGear 27GP850-B 27" Nano IPS QHD 180Hz',imagen:IMG.monitores,precio:'8500',descripcion:'Monitor 27" Nano IPS QHD 180Hz OC, 1ms, G-Sync Compatible, HDR 400. El estándar mid-range gaming.',categoria:'monitores'},
-    {sku:'MON-006',nombre:'ASUS TUF Gaming VG27AQ 27" IPS QHD 170Hz',imagen:IMG.monitores,precio:'6500',descripcion:'Monitor 27" IPS QHD 170Hz OC, 1ms MPRT, ELMB Sync, G-Sync Compatible. Valor premium ASUS.',categoria:'monitores'},
-    {sku:'MON-007',nombre:'Samsung Odyssey G5 27" VA QHD 240Hz Curvo',imagen:IMG.monitores,precio:'7000',descripcion:'Monitor 27" VA curvo 1000R, QHD 240Hz, 1ms. Inmersión total con FreeSync Premium.',categoria:'monitores'},
-    {sku:'MON-008',nombre:'Dell S2722DGM 27" VA QHD 165Hz Curvo',imagen:IMG.monitores,precio:'5500',descripcion:'Monitor 27" VA curvo QHD 165Hz, 1ms, FreeSync. Diseño elegante Dell con excelente contraste.',categoria:'monitores'},
-    {sku:'MON-009',nombre:'LG UltraGear 27GR83Q-B 27" IPS QHD 240Hz',imagen:IMG.monitores,precio:'11000',descripcion:'Monitor 27" IPS QHD 240Hz, 1ms, G-Sync Compatible. Gaming de alta gama con colores precisos.',categoria:'monitores'},
-    {sku:'MON-010',nombre:'ASUS ROG Swift PG279QM 27" IPS QHD 240Hz',imagen:IMG.monitores,precio:'15000',descripcion:'Monitor ROG 27" IPS QHD 240Hz con G-Sync ULTIMATE y HDR 400. Para eSports profesionales.',categoria:'monitores'},
-    {sku:'MON-011',nombre:'Samsung Odyssey G7 32" VA QHD 240Hz Curvo',imagen:IMG.monitores,precio:'12000',descripcion:'Monitor 32" VA curvo 1000R, QHD 240Hz, 1ms, G-Sync Compatible. Inmersión cinematográfica gaming.',categoria:'monitores'},
-    {sku:'MON-012',nombre:'ASUS ROG Swift PG32UQX 32" IPS 4K 144Hz Mini-LED',imagen:IMG.monitores,precio:'28000',descripcion:'Monitor 32" IPS 4K 144Hz Mini-LED con 1152 zonas HDR 1400. El mejor monitor gaming 4K.',categoria:'monitores'},
-    {sku:'MON-013',nombre:'LG UltraGear 32GQ950-B 32" Nano IPS 4K 160Hz',imagen:IMG.monitores,precio:'18000',descripcion:'Monitor 32" Nano IPS 4K 160Hz con ATWO y G-Sync ULTIMATE. Colores perfectos y gaming 4K.',categoria:'monitores'},
-    {sku:'MON-014',nombre:'Dell Alienware AW3423DWF 34" QD-OLED UW 165Hz',imagen:IMG.monitores,precio:'25000',descripcion:'Monitor ultrawide 34" QD-OLED QHD 165Hz, 0.1ms, G-Sync ULTIMATE. El OLED gaming más popular.',categoria:'monitores'},
-    {sku:'MON-015',nombre:'Samsung Odyssey OLED G9 49" QD-OLED 240Hz',imagen:IMG.monitores,precio:'35000',descripcion:'Monitor ultrawide 49" QD-OLED DQHD 240Hz, 0.03ms. La experiencia gaming definitiva en formato super ultra-wide.',categoria:'monitores'},
-    {sku:'MON-016',nombre:'LG UltraWide 34WN80C-B 34" IPS UW 75Hz',imagen:IMG.monitores,precio:'8500',descripcion:'Monitor ultrawide 34" IPS UWQHD 75Hz con USB-C 60W PD. Perfecto para productividad y multitarea.',categoria:'monitores'},
-    {sku:'MON-017',nombre:'ASUS ProArt PA278CV 27" IPS 4K 75Hz',imagen:IMG.monitores,precio:'9000',descripcion:'Monitor 27" IPS 4K calibrado de fábrica (Delta E < 2) con 100% sRGB/Rec.709. Para creadores.',categoria:'monitores'},
-    {sku:'MON-018',nombre:'Dell UltraSharp U2723QE 27" IPS 4K USB-C Hub',imagen:IMG.monitores,precio:'12000',descripcion:'Monitor 27" IPS 4K con USB-C 90W PD y hub integrado. El estándar de oficina premium.',categoria:'monitores'},
-    {sku:'MON-019',nombre:'BenQ PD3220U 32" IPS 4K Thunderbolt 3',imagen:IMG.monitores,precio:'18000',descripcion:'Monitor 32" IPS 4K con Thunderbolt 3, P3 y calibración factory. Para diseñadores y editores profesionales.',categoria:'monitores'},
-    {sku:'MON-020',nombre:'ASUS ROG Swift OLED PG27AQDM 27" OLED QHD 240Hz',imagen:IMG.monitores,precio:'22000',descripcion:'Monitor 27" OLED QHD 240Hz, 0.03ms, G-Sync Compatible. El monitor gaming OLED más rápido.',categoria:'monitores'},
-
-    // ========== PÁGINA 10: PERIFÉRICOS (TECLADO Y MOUSE) — 20 modelos ==========
-    {sku:'PERI-001',nombre:'Logitech G Pro X Superlight 2 Wireless',imagen:IMG.perifericos,precio:'2800',descripcion:'Mouse gaming inalámbrico 60g con sensor HERO 2, 32K DPI, 95 horas de batería. El estándar de eSports.',categoria:'perifericos'},
-    {sku:'PERI-002',nombre:'Razer DeathAdder V3 Pro Wireless',imagen:IMG.perifericos,precio:'2600',descripcion:'Mouse ergonómico inalámbrico 63g con sensor Focus Pro 30K. Diseño icónico refinado para FPS.',categoria:'perifericos'},
-    {sku:'PERI-003',nombre:'SteelSeries Aerox 5 Wireless',imagen:IMG.perifericos,precio:'2200',descripcion:'Mouse inalámbrico 74g con diseño honeycomb, 9 botones programables y sensor TrueMove Air.',categoria:'perifericos'},
-    {sku:'PERI-004',nombre:'Logitech G502 X Plus Wireless Lightspeed',imagen:IMG.perifericos,precio:'2800',descripcion:'Mouse inalámbrico con HERO 25K, 13 botones, RGB LIGHTSYNC y pesas ajustables. El multiusos premium.',categoria:'perifericos'},
-    {sku:'PERI-005',nombre:'Razer Viper V3 Pro Wireless',imagen:IMG.perifericos,precio:'3200',descripcion:'Mouse simétrico inalámbrico 54g con sensor Focus Pro 36K. El mouse eSports más ligero de Razer.',categoria:'perifericos'},
-    {sku:'PERI-006',nombre:'Corsair K70 RGB Pro Mechanical Wired',imagen:IMG.perifericos,precio:'2500',descripcion:'Teclado mecánico cableado con switches Cherry MX Red, chasis aluminio y RGB por tecla.',categoria:'perifericos'},
-    {sku:'PERI-007',nombre:'Razer Huntsman V3 Pro Analog',imagen:IMG.perifericos,precio:'4500',descripcion:'Teclado mecánico con switches ópticos analógicos ajustables 0.1-4.0mm. Tecnología Rapid Trigger.',categoria:'perifericos'},
-    {sku:'PERI-008',nombre:'Logitech G915 TKL Lightspeed Wireless',imagen:IMG.perifericos,precio:'4800',descripcion:'Teclado inalámbrico low-profile con GL switches, RGB LIGHTSYNC y 40 horas de batería.',categoria:'perifericos'},
-    {sku:'PERI-009',nombre:'Ducky One 3 TKL Hot-Swap Mechanical',imagen:IMG.perifericos,precio:'2500',descripcion:'Teclado TKL con hot-swap, PBT double-shot keycaps y switches intercambiables. Calidad entusiasta.',categoria:'perifericos'},
-    {sku:'PERI-010',nombre:'Keychron Q1 Pro Wireless QMK/VIA',imagen:IMG.perifericos,precio:'3500',descripcion:'Teclado 75% inalámbrico con chasis CNC aluminio, hot-swap, QMK/VIA y gasket mount. Custom premium.',categoria:'perifericos'},
-    {sku:'PERI-011',nombre:'SteelSeries Apex Pro TKL (2023) OmniPoint 2.0',imagen:IMG.perifericos,precio:'4000',descripcion:'Teclado TKL con switches OmniPoint 2.0 ajustables 0.2-7.0mm y Rapid Trigger. Para eSports competitivos.',categoria:'perifericos'},
-    {sku:'PERI-012',nombre:'Corsair K100 RGB Optical-Mechanical',imagen:IMG.perifericos,precio:'5500',descripcion:'Teclado flagship con OPX optical switches, iCUE Control Wheel y reposamuñecas magnético.',categoria:'perifericos'},
-    {sku:'PERI-013',nombre:'Razer BlackWidow V4 Pro Mechanical',imagen:IMG.perifericos,precio:'5800',descripcion:'Teclado full-size con Green switches, command dial, reposamuñecas RGB y macro keys.',categoria:'perifericos'},
-    {sku:'PERI-014',nombre:'Logitech G Pro X Keyboard TKL',imagen:IMG.perifericos,precio:'2800',descripcion:'Teclado TKL con GX switches intercambiables, diseño compacto para torneos y cable desmontable.',categoria:'perifericos'},
-    {sku:'PERI-015',nombre:'HyperX Cloud III Wireless Headset',imagen:IMG.perifericos,precio:'2500',descripcion:'Auriculares inalámbricos con drivers 53mm, DTS:X Spatial Audio y 120 horas de batería.',categoria:'perifericos'},
-    {sku:'PERI-016',nombre:'SteelSeries Arctis Nova Pro Wireless',imagen:IMG.perifericos,precio:'5500',descripcion:'Auriculares flagship con Active Noise Cancelling, Hi-Res Audio y batería dual hot-swappable.',categoria:'perifericos'},
-    {sku:'PERI-017',nombre:'Logitech Brio 500 Webcam 4K HDR',imagen:IMG.perifericos,precio:'2200',descripcion:'Webcam 4K 30fps / 1080p 60fps con HDR, autoenfoque y campo visual ajustable 65°/78°/90°.',categoria:'perifericos'},
-    {sku:'PERI-018',nombre:'Elgato Wave:3 Condenser Microphone USB',imagen:IMG.perifericos,precio:'3000',descripcion:'Micrófono condensador USB con 24-bit/96kHz, Clipguard y control por app Wave Link. Para streaming.',categoria:'perifericos'},
-    {sku:'PERI-019',nombre:'Razer Kiyo Pro Ultra 4K Webcam',imagen:IMG.perifericos,precio:'4500',descripcion:'Webcam 4K con sensor Sony STARVIS 2 de 1/1.2" (el más grande del mercado), HDR y low-light.',categoria:'perifericos'},
-    {sku:'PERI-020',nombre:'Logitech MX Master 3S Wireless Productivity',imagen:IMG.perifericos,precio:'2200',descripcion:'Mouse ergonómico productividad con sensor 8K DPI, MagSpeed scroll, clics silenciosos y Flow multi-PC.',categoria:'perifericos'},
-];
-
-    function getCart() {
-        const stored = localStorage.getItem("ecosystem_global_cart");
-        return stored ? JSON.parse(stored) : [];
-    }
-    
-    function saveCart(cart) {
-        localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
-        
-        // Lector y auto-insertador de SKU desde URL (?sku=...)
-        try {
-            const urlParams = new URLSearchParams(window.location.search);
-            const skuParam = urlParams.get('sku');
-            if (skuParam) {
-                let cart = getCart();
-                let item = cart.find(i => i.sku && i.sku.toUpperCase() === skuParam.toUpperCase());
-                if (!item) {
-                    let prod = (typeof productCatalog !== 'undefined') ? productCatalog.find(p => p.sku && p.sku.toUpperCase() === skuParam.toUpperCase()) : null;
-                    if (prod) {
-                        cart.push({ ...prod, quantity: 1 });
-                    } else {
-                        cart.push({ sku: skuParam, nombre: 'Producto ' + skuParam, precio: 100, imagen: '', quantity: 1 });
-                    }
-                    localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
-                } else if (item.quantity === 0) {
-                    item.quantity = 1;
-                    localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
-                }
-            }
-        } catch(e) { console.warn("Error cargando SKU URL:", e); }
-
-        renderCheckout();
-    }
-
-    // STEP 1: DELIVERY HANDLERS
-    window.saveDelivery = function(event) {
-        event.preventDefault();
-        const name = document.getElementById("devName").value;
-        const phone = document.getElementById("devPhone").value;
-        const email = document.getElementById("devEmail").value;
-        const street = document.getElementById("devStreet").value;
-        const colonia = document.getElementById("devColonia").value;
-        const cp = document.getElementById("devCp").value;
-        const city = document.getElementById("devCity").value;
-        const refs = document.getElementById("devRefs") ? document.getElementById("devRefs").value : "";
-
-        const data = { name, phone, email, street, colonia, cp, city, refs };
-        localStorage.setItem("user_delivery_address", JSON.stringify(data));
-
-        showDeliverySummary();
-        unlockPaymentStep();
-        renderCheckout();
-        if (typeof updateHeaderDeliveryPrompt === "function") updateHeaderDeliveryPrompt();
-    };
-
-    window.editDelivery = function() {
-        document.getElementById("delivery-form").classList.remove("hidden");
-        document.getElementById("delivery-summary").classList.add("hidden");
-        document.getElementById("delivery-edit-btn").classList.add("hidden");
-    };
-
-    function showDeliverySummary() {
-        const stored = localStorage.getItem("user_delivery_address");
-        if (stored) {
-            const data = JSON.parse(stored);
-            document.getElementById("delivery-form").classList.add("hidden");
-            document.getElementById("delivery-summary").classList.remove("hidden");
-            document.getElementById("delivery-edit-btn").classList.remove("hidden");
-
-            document.getElementById("sum-name").innerText = data.name;
-            const displayEmail = data.email ? data.email : "No registrado";
-            document.getElementById("sum-phone-email").innerHTML = `📞 ${data.phone}  |  ✉️ ${displayEmail}`;
-            document.getElementById("sum-address").innerText = `📍 ${data.street}, Col. ${data.colonia}, CP ${data.cp}, ${data.city}`;
-
-            const refsEl = document.getElementById("sum-refs");
-            if (refsEl) {
-                if (data.refs && data.refs.trim()) {
-                    refsEl.innerText = `📝 Ref: ${data.refs}`;
-                    refsEl.classList.remove("hidden");
-                } else {
-                    refsEl.classList.add("hidden");
-                }
-            }
-        }
-    }
-
-    function unlockPaymentStep() {
-        const stepCard = document.getElementById("step-payment-card");
-        const badge = document.getElementById("step-payment-badge");
-        const options = document.getElementById("payment-options");
-
-        if (stepCard && badge && options) {
-            stepCard.classList.remove("opacity-60");
-            badge.classList.remove("bg-slate-800", "text-slate-400");
-            badge.classList.add("bg-cyan-500", "text-slate-950");
-            options.classList.remove("hidden");
-        }
-    }
-
-    // REFERENCE CODE GENERATORS
-    function generateOxxoFolio() {
-        const digits = Array.from({length:14}, () => Math.floor(Math.random()*10));
-        const folio = digits.join('');
-        const el = document.getElementById('oxxo-folio');
-        if (el) el.innerText = folio.replace(/(\d{4})(?=\d)/g, '$1-');
-        const bc = document.getElementById('oxxo-barcode');
-        if (bc) {
-            bc.innerHTML = folio.split('').map(function(d, i) {
-                var n = parseInt(d) || 0;
-                var h = 26 + n * 2;
-                var w = (n % 3) + 1;
-                return '<div style="width:'+w+'px;height:'+h+'px;background:#f59e0b"></div>';
-            }).join('');
-            bc.classList.remove('hidden');
-        }
-        return folio;
-    }
-
-    function generateSpeiRef() {
-        const ref = 'SP-' + Math.floor(10000 + Math.random() * 90000);
-        const el = document.getElementById('spei-ref');
-        if (el) el.innerText = ref;
-        return ref;
-    }
-
-    window.generateAndSelectOxxo = function() {
-        generateOxxoFolio();
-        selectPaymentMethod('Efectivo OXXO / Tienda de Conveniencia');
-    };
-
-    window.generateAndSelectSpei = function() {
-        generateSpeiRef();
-        selectPaymentMethod('Transferencia SPEI / CoDi / Clip');
-    };
-
-    // ACCORDION TOGGLE METHOD (4 opciones)
-    window.togglePaymentAccordion = function(type) {
-        const sections = ['card', 'oxxo', 'spei', 'cod'];
-        sections.forEach(s => {
-            const form = document.getElementById(`accordion-${s}-form`);
-            const arrow = document.getElementById(`arrow-${s}`);
-            if (form && arrow) {
-                if (s === type) {
-                    const isHidden = form.classList.contains("hidden");
-                    if (isHidden) {
-                        form.classList.remove("hidden");
-                        arrow.classList.replace("fa-chevron-down", "fa-chevron-up");
-                    } else {
-                        form.classList.add("hidden");
-                        arrow.classList.replace("fa-chevron-up", "fa-chevron-down");
-                    }
-                } else {
-                    form.classList.add("hidden");
-                    arrow.classList.replace("fa-chevron-up", "fa-chevron-down");
-                }
-            }
-        });
-    };
-
-    // STEP 2: PAYMENT METHOD HANDLERS
-    window.selectPaymentMethod = function(method) {
-        localStorage.setItem("user_payment_method", method);
-        showPaymentSummary();
-    };
-
-    window.saveCardDetails = function(event) {
-        event.preventDefault();
-        const name = document.getElementById("cardName").value;
-        const num = document.getElementById("cardNum").value;
-        if (!name || !num) {
-            alert("Completa los datos de la tarjeta.");
-            return;
-        }
-        const last4 = num.replace(/\s/g, '').slice(-4) || "4152";
-        const type = num.startsWith("5") ? "Mastercard" : "Visa";
-
-        localStorage.setItem("user_payment_method", `${type} (**** ${last4}) - ${name}`);
-        showPaymentSummary();
-    };
-
-    window.editPayment = function() {
-        document.getElementById("payment-options").classList.remove("hidden");
-        document.getElementById("payment-summary").classList.add("hidden");
-        document.getElementById("payment-edit-btn").classList.add("hidden");
-    };
-
-    function showPaymentSummary() {
-        const method = localStorage.getItem("user_payment_method");
-        if (method) {
-            document.getElementById("payment-options").classList.add("hidden");
-            document.getElementById("payment-summary").classList.remove("hidden");
-            document.getElementById("payment-edit-btn").classList.remove("hidden");
-
-            let icon = 'fa-circle-check';
-            let iconColor = 'text-emerald-400';
-            if (method.includes('OXXO')) { icon = 'fa-store'; iconColor = 'text-amber-400'; }
-            else if (method.includes('SPEI') || method.includes('CoDi')) { icon = 'fa-building-columns'; iconColor = 'text-blue-400'; }
-            else if (method.includes('Contra Entrega')) { icon = 'fa-money-bill-wave'; iconColor = 'text-emerald-400'; }
-            else if (method.includes('Visa') || method.includes('Mastercard')) { icon = 'fa-credit-card'; iconColor = 'text-cyan-400'; }
-
-            document.getElementById("payment-summary").innerHTML = `
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid ${icon} ${iconColor} text-base"></i>
-                    <div>
-                        <span class="text-[9px] text-slate-500 uppercase tracking-wider block font-bold">Forma de Pago Registrada</span>
-                        <span class="text-white font-bold text-xs">${method}</span>
-                    </div>
-                </div>
-            `;
-        }
-    }
-
-    // STEP 3: RENDER CHECKOUT CART WITH SOFT DELETE RULE
-    window.changeQty = function(sku, amount) {
-        let cart = getCart();
-        const item = cart.find(i => i.sku === sku);
-        if (item) {
-            if (item.quantity === 0 && amount > 0) {
-                item.quantity = 1;
-            } else {
-                item.quantity += amount;
-                if (item.quantity < 0) item.quantity = 0;
-            }
-        }
-        saveCart(cart);
-    };
-
-    window.deleteItem = function(sku) {
-        let cart = getCart();
-        const item = cart.find(i => i.sku === sku);
-        if (item) {
-            item.quantity = 0;
-        }
-        saveCart(cart);
-    };
-
-    window.renderCheckout = function() {
-        const container = document.getElementById("checkout-cart-items");
-        const subtotalDisp = document.getElementById("co-subtotal");
-        const wholesaleRow = document.getElementById("co-wholesale-row");
-        const wholesaleDiscDisp = document.getElementById("co-wholesale-disc");
-        const shippingDisp = document.getElementById("co-shipping");
-        const shippingMsg = document.getElementById("co-shipping-msg");
-        const cashbackRow = document.getElementById("co-cashback-row");
-        const totalDisp = document.getElementById("co-total");
-        const cartCountLabel = document.getElementById("cart-items-count-label");
-        const cartEmptyMsg = document.getElementById("cart-empty-msg");
-
-        if (!container) return;
-
-        const cart = getCart();
-        container.innerHTML = "";
-
-        let subtotal = 0;
-        let totalItemsQty = 0;
-        let activeCount = 0;
-
-        cart.forEach(item => {
-            const isInactive = (item.quantity === 0);
-            const sub = parseFloat(item.precio) * item.quantity;
-            subtotal += sub;
-
-            if (!isInactive) {
-                totalItemsQty += item.quantity;
-                activeCount++;
-            }
-
-            let imgUrl = item.imagen;
-            if (imgUrl && imgUrl.startsWith('assets/img')) {
-                imgUrl = './' + imgUrl;
-            }
-
-            let globalImg = getGlobalProductImage(item.sku, item.imagen);
-            let rowClass = "flex flex-col sm:flex-row items-center sm:items-stretch gap-4 p-4 bg-slate-900 border border-slate-800 rounded-2xl mb-3 shadow-md transition-all duration-300";
-            let controlsHtml = "";
-
-            if (isInactive) {
-                rowClass += " opacity-50 grayscale";
-                controlsHtml = `
-                    <div class="flex items-center justify-between w-full mt-2 pt-2 border-t border-slate-800">
-                        <span class="bg-red-500/10 border border-red-500/30 text-red-400 font-bold px-2 py-0.5 rounded text-[10px] uppercase tracking-wider">Desactivado</span>
-                        <button onclick="changeQty('${item.sku}', 1)" class="px-3 py-1.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs transition cursor-pointer flex items-center gap-1.5 active:scale-95 shadow-md">
-                            Reactivar +
-                        </button>
-                    </div>
-                `;
-            } else {
-                let minusBtn = `<button onclick="changeQty('${item.sku}', -1)" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer">-</button>`;
-                if (item.quantity === 1) {
-                    minusBtn = `<button onclick="deleteItem('${item.sku}')" class="w-8 h-8 rounded-lg bg-red-950/80 text-red-400 hover:bg-red-900 hover:text-red-200 transition flex items-center justify-center text-xs cursor-pointer" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>`;
-                }
-                controlsHtml = `
-                    <div class="flex items-center justify-between w-full mt-2 pt-2 border-t border-slate-800">
-                        <div class="flex items-center gap-1.5 bg-slate-950 border border-slate-800 rounded-xl p-1">
-                            ${minusBtn}
-                            <span class="text-white font-black text-xs w-7 text-center font-mono">${item.quantity}</span>
-                            <button onclick="changeQty('${item.sku}', 1)" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer">+</button>
-                        </div>
-                        <div class="flex flex-col items-end">
-                            <span class="text-[10px] text-slate-400 font-semibold">$${parseFloat(item.precio).toLocaleString()} c/u</span>
-                            <span class="text-cyan-400 font-black text-sm">$${sub.toFixed(2)} MXN</span>
-                        </div>
-                        <button onclick="deleteItem('${item.sku}')" class="text-slate-500 hover:text-red-400 text-sm cursor-pointer shrink-0 transition p-1.5 ml-1" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>
-                    </div>
-                `;
-            }
-
-            const div = document.createElement("div");
-            div.className = rowClass;
-            div.innerHTML = `
-                <div class="w-[170px] h-[170px] min-w-[170px] max-w-[170px] min-h-[170px] max-h-[170px] rounded-xl overflow-hidden bg-slate-950 border border-slate-700/80 shrink-0 p-2 flex items-center justify-center">
-                    <img src="${globalImg}" class="w-full h-full object-contain rounded-lg" alt="${item.nombre}" loading="lazy" onerror="this.onerror=null;this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/slider_ia_human_thumb.webp';" />
-                </div>
-                <div class="flex-1 flex flex-col justify-between min-w-0 w-full py-1">
-                    <div>
-                        <h3 class="text-white font-bold text-sm sm:text-base leading-snug">${item.nombre}</h3>
-                        <span class="text-[10px] font-mono text-slate-400 uppercase font-bold tracking-wider block mt-1">${item.sku}</span>
-                    </div>
-                    ${controlsHtml}
-                </div>
-            `;
-            container.appendChild(div);
-        });
-
-        // Update cart count label
-        if (cartCountLabel) {
-            cartCountLabel.innerText = `${activeCount} producto${activeCount !== 1 ? 's' : ''}`;
-        }
-
-        // Update header cart badge
-        const badge = document.getElementById("cart-badge-count");
-        if (badge) badge.innerText = totalItemsQty;
-
-        // Show/hide empty message
-        if (cartEmptyMsg) {
-            if (cart.length === 0) {
-                cartEmptyMsg.classList.remove("hidden");
-                container.classList.add("hidden");
-            } else {
-                cartEmptyMsg.classList.add("hidden");
-                container.classList.remove("hidden");
-            }
-        }
-
-        subtotalDisp.innerText = `$${subtotal.toFixed(2)} MXN`;
-
-        // Wholesale check (15% a partir de 10 piezas)
-        let wholesaleDiscount = 0;
-        if (totalItemsQty >= 10) {
-            wholesaleDiscount = subtotal * 0.15;
-            wholesaleRow.classList.remove("hidden");
-            wholesaleDiscDisp.innerText = `-$${wholesaleDiscount.toFixed(2)} MXN`;
-        } else {
-            wholesaleRow.classList.add("hidden");
-        }
-
-        // Shipping check (GRATIS >= $1,500 MXN; $49 MXN si menor)
-        const baseSub = subtotal - wholesaleDiscount;
-        const shippingFee = (baseSub >= 1500 || subtotal === 0) ? 0 : 49;
-        shippingDisp.innerText = shippingFee === 0 ? "GRATIS" : `$${shippingFee.toFixed(2)} MXN`;
-
-        if (shippingMsg) {
-            if (subtotal === 0) {
-                shippingMsg.innerText = "";
-            } else if (shippingFee === 0) {
-                shippingMsg.innerText = "🎉 ¡Envío GRATIS aplicado! (Compra ≥ $1,500 MXN)";
-            } else {
-                const faltan = 1500 - baseSub;
-                shippingMsg.innerText = `💡 Agrega $${Math.ceil(faltan)} MXN más para envío GRATIS`;
-            }
-        }
-
-        // Cashback check (5% con registro activo de correo y teléfono)
-        const storedAddress = localStorage.getItem("user_delivery_address");
-        let hasRegister = false;
-        if (storedAddress) {
-            const addr = JSON.parse(storedAddress);
-            if (addr.email && addr.phone) {
-                hasRegister = true;
-            }
-        }
-
-        let cashbackVal = 0;
-        if (hasRegister) {
-            cashbackVal = baseSub * 0.05;
-            cashbackRow.innerHTML = `
-                <div class="flex justify-between text-emerald-400 font-black text-xs">
-                    <span>Cashback 5% Aplicado:</span>
-                    <span>-$${cashbackVal.toFixed(2)} MXN</span>
-                </div>
-                <span class="text-[9px] text-emerald-500 font-semibold leading-tight">✓ Recompensa activa. Saldo descontado del total a pagar.</span>
-            `;
-        } else {
-            cashbackRow.innerHTML = `
-                <div class="flex justify-between text-slate-500 font-bold text-xs">
-                    <span>Cashback Acumulable 5%:</span>
-                    <span>$0.00 MXN</span>
-                </div>
-                <span class="text-[9px] text-amber-500 font-semibold leading-tight">⚠️ Registra correo y teléfono en el Paso 1 para activar tu 5% de cashback. ¡Suscríbete al newsletter!</span>
-            `;
-        }
-
-        const totalCost = Math.max(0, baseSub - cashbackVal + shippingFee);
-        totalDisp.innerText = `$${totalCost.toFixed(2)} MXN`;
-    };
-
-    // FINALIZE PURCHASE
-    window.finalizePurchase = function() {
-        const address = localStorage.getItem("user_delivery_address");
-        const method = localStorage.getItem("user_payment_method");
-        const cart = getCart();
-        const activeItems = cart.filter(i => i.quantity > 0);
-
-        if (activeItems.length === 0) {
-            alert("⚠️ El carrito de compras no contiene productos activos.");
-            return;
-        }
-        if (!address) {
-            alert("⚠️ Registra el Domicilio de Entrega (Paso 1) antes de continuar.");
-            return;
-        }
-        if (!method) {
-            alert("⚠️ Selecciona un Método de Pago (Paso 2) antes de continuar.");
-            return;
-        }
-
-        // Create order history item
-        const orderId = "EC-" + Math.floor(1000 + Math.random() * 9000);
-        const dateStr = "Hoy, " + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-
-        const shipSpeed = document.querySelector('input[name="shippingSpeed"]:checked');
-        const deliveryTime = shipSpeed && shipSpeed.value === 'express' ? "Express 24h" : "Estándar 3-5 días";
-
-        const newOrder = {
-            orderId: orderId,
-            date: dateStr,
-            status: "Preparando",
-            deliveryTime: deliveryTime,
-            items: activeItems
-        };
-
-        let history = [];
-        try {
-            const stored = localStorage.getItem("user_purchases_history");
-            if (stored) history = JSON.parse(stored);
-        } catch(e) {}
-
-        history.unshift(newOrder);
-        localStorage.setItem("user_purchases_history", JSON.stringify(history));
-
-        // Clear cart
-        localStorage.setItem("ecosystem_global_cart", JSON.stringify([]));
-
-        alert(`🎉 ¡COMPRA COMPLETADA CON ÉXITO!\n\nPedido #${orderId} registrado.\nForma de Pago: ${method}\nEntrega: ${deliveryTime}\n\nGracias por tu compra en PC Custom Lab.`);
-        window.location.href = "index.html";
-    };
-
-    // CHATBOT LOGIC
-    window.toggleChatbot = function() {
-        const win = document.getElementById("chatbot-window");
-        if (win) win.classList.toggle("hidden");
-    };
-
-    window.handleChatKeyPress = function(event) {
-        if (event.key === "Enter") enviarMensajeChatbot();
-    };
-
-    window.enviarMensajeChatbot = function() {
-        const input = document.getElementById("chatInput");
-        const messages = document.getElementById("chat-messages");
-        if (!input || !messages || !input.value.trim()) return;
-
-        const txt = input.value.trim();
-        input.value = "";
-
-        const uDiv = document.createElement("div");
-        uDiv.className = "bg-cyan-500/10 border border-cyan-500/20 p-2.5 rounded-2xl text-slate-200 self-end max-w-[85%]";
-        uDiv.innerText = txt;
-        messages.appendChild(uDiv);
-        messages.scrollTop = messages.scrollHeight;
-
-        setTimeout(() => {
-            let resp = "Hola, estoy para ayudarte en el proceso de pago. Asegúrate de registrar tu dirección en el Paso 1 para activar el cashback.";
-            const low = txt.toLowerCase();
-            if (low.includes("envio") || low.includes("entrega") || low.includes("costo")) {
-                resp = "El costo de envío local es de $49.00 MXN. ¡Consigues Envío GRATIS si tu compra supera los $1,500.00 MXN!";
-            } else if (low.includes("cashback") || low.includes("recompensa") || low.includes("descuento")) {
-                resp = "Ofrecemos un 5% de cashback sobre el total de tu compra, descontándose de inmediato si tienes registrada tu dirección, teléfono y correo.";
-            } else if (low.includes("mayoreo") || low.includes("mayorista")) {
-                resp = "¡Sí! Si compras 10 o más artículos en total, obtendrás un descuento del 15% automático en tu subtotal.";
-            } else if (low.includes("oxxo") || low.includes("efectivo")) {
-                resp = "Puedes pagar en efectivo en cualquier OXXO con tu folio de referencia, o directamente al repartidor con Pago Contra Entrega.";
-            } else if (low.includes("spei") || low.includes("transferencia") || low.includes("clabe")) {
-                resp = "Para pagar por SPEI, selecciona Transferencia Bancaria en el Paso 2. Te proporcionaremos la CLABE y referencia única.";
-            } else if (low.includes("tarjeta") || low.includes("visa") || low.includes("mastercard")) {
-                resp = "Aceptamos Visa y Mastercard. Ingresa los datos de tu tarjeta en el Paso 2 para completar el pago de forma segura.";
-            }
-
-            const bDiv = document.createElement("div");
-            bDiv.className = "bg-slate-950 border border-slate-800 p-2.5 rounded-2xl text-slate-300 self-start max-w-[85%]";
-            bDiv.innerText = resp;
-            messages.appendChild(bDiv);
-            messages.scrollTop = messages.scrollHeight;
-        }, 600);
-    };
-
-    document.addEventListener("DOMContentLoaded", () => {
-        // Restore saved delivery data if exists
-        const savedAddr = localStorage.getItem("user_delivery_address");
-        if (savedAddr) {
-            try {
-                const data = JSON.parse(savedAddr);
-                if (document.getElementById("devName")) document.getElementById("devName").value = data.name || "";
-                if (document.getElementById("devPhone")) document.getElementById("devPhone").value = data.phone || "";
-                if (document.getElementById("devEmail")) document.getElementById("devEmail").value = data.email || "";
-                if (document.getElementById("devStreet")) document.getElementById("devStreet").value = data.street || "";
-                if (document.getElementById("devColonia")) document.getElementById("devColonia").value = data.colonia || "";
-                if (document.getElementById("devCp")) document.getElementById("devCp").value = data.cp || "";
-                if (document.getElementById("devCity")) document.getElementById("devCity").value = data.city || "";
-                if (document.getElementById("devRefs")) document.getElementById("devRefs").value = data.refs || "";
-            } catch(e) {}
-        }
-
-        showDeliverySummary();
-        const address = localStorage.getItem("user_delivery_address");
-        if (address) {
-            unlockPaymentStep();
-            showPaymentSummary();
-        }
-        renderCheckout();
-
-        // Pre-generate reference codes
-        generateOxxoFolio();
-        generateSpeiRef();
-    });
-
-function getGlobalProductImage(sku, localImg) {
-    if (localImg && (localImg.startsWith('http://') || localImg.startsWith('https://'))) {
-        return localImg;
-    }
-    const cleanSku = (sku || '').toUpperCase();
-    let storeDomain = 'pc-custom-lab';
-    if (cleanSku.startsWith('GPU-') || cleanSku.startsWith('PC-')) storeDomain = 'pc-custom-lab';
-    else if (cleanSku.startsWith('CN-') || cleanSku.startsWith('CB-')) storeDomain = 'cigarros-bazar';
-    else if (cleanSku.startsWith('DB-') || cleanSku.startsWith('DUL-')) storeDomain = 'dulces-bazar';
-    else if (cleanSku.startsWith('KD-') || cleanSku.startsWith('KIO-')) storeDomain = 'kiosco-digital';
-    else if (cleanSku.startsWith('PB-') || cleanSku.startsWith('PUE-')) storeDomain = 'mi-puesto-bazar';
-    else if (cleanSku.startsWith('OLG-') || cleanSku.startsWith('LIQ-')) storeDomain = 'ofertas-y-liquidaciones';
-    else if (cleanSku.startsWith('NFL-') || cleanSku.startsWith('VIA-')) storeDomain = 'bazar-viamx-nfl.gdl';
-
-    let path = localImg || 'assets/img/slider_ia_human_thumb.webp';
-    path = path.replace(/^(\.\/|\/)/, '');
-    return 'https://iaworldcenter-creator.github.io/' + storeDomain + '/' + path;
-}
-
-</script>
-
 
 <script>
-// ==========================================
-// MOTOR DE CHECKOUT INTELIGENTE Y CARRITO LIMPIO
-// ==========================================
+// ============================================================
+// MOTOR UNIFICADO DE CHECKOUT CON PURGA INMEDIATA DE PRODUCTOS
+// ============================================================
 
-function getGlobalCart() {
+function getCleanCart() {
     try {
         const raw = localStorage.getItem('ecosystem_global_cart');
         if (!raw) return [];
-        let parsed = JSON.parse(raw);
-        // Filtrado estricto: Solo productos válidos con cantidad >= 1
-        return Array.isArray(parsed) ? parsed.filter(item => item && parseInt(item.quantity) > 0) : [];
+        const parsed = JSON.parse(raw);
+        if (!Array.isArray(parsed)) return [];
+        return parsed.filter(item => item && item.sku && parseInt(item.quantity) > 0);
     } catch(e) {
         return [];
     }
 }
 
-function saveGlobalCart(cart) {
-    const cleanCart = cart.filter(item => item && parseInt(item.quantity) > 0);
-    localStorage.setItem('ecosystem_global_cart', JSON.stringify(cleanCart));
+function saveCleanCart(cart) {
+    const valid = cart.filter(item => item && item.sku && parseInt(item.quantity) > 0);
+    localStorage.setItem('ecosystem_global_cart', JSON.stringify(valid));
     window.dispatchEvent(new Event('storage'));
+}
+
+function clearUrlSkuParam() {
+    try {
+        if (window.location.search.includes('sku=')) {
+            const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            window.history.replaceState({ path: cleanUrl }, '', cleanUrl);
+        }
+    } catch(e) {}
 }
 
 function resolveProductImage(sku, localImg) {
@@ -1299,38 +514,43 @@ function resolveProductImage(sku, localImg) {
     return 'https://iaworldcenter-creator.github.io/' + storeDomain + '/' + path;
 }
 
-// 1. ELIMINACIÓN Y MODIFICACIÓN ESTRICTA
+// 1. ELIMINACIÓN TOTAL Y DEFINITIVA
 window.deleteItem = function(sku) {
-    let cart = getGlobalCart();
-    cart = cart.filter(i => i.sku.toUpperCase() !== sku.toUpperCase());
-    saveGlobalCart(cart);
+    if (!sku) return;
+    clearUrlSkuParam();
+    let cart = getCleanCart();
+    cart = cart.filter(i => (i.sku || '').toUpperCase().trim() !== sku.toUpperCase().trim());
+    saveCleanCart(cart);
     renderSmartCheckout();
 };
+window.removeItem = window.deleteItem;
 
+// 2. MODIFICACIÓN DE CANTIDADES
 window.changeQty = function(sku, delta) {
-    let cart = getGlobalCart();
-    let item = cart.find(i => i.sku.toUpperCase() === sku.toUpperCase());
+    if (!sku) return;
+    let cart = getCleanCart();
+    let item = cart.find(i => (i.sku || '').toUpperCase().trim() === sku.toUpperCase().trim());
     if (item) {
         item.quantity = (parseInt(item.quantity) || 1) + delta;
         if (item.quantity <= 0) {
-            cart = cart.filter(i => i.sku.toUpperCase() !== sku.toUpperCase());
+            clearUrlSkuParam();
+            cart = cart.filter(i => (i.sku || '').toUpperCase().trim() !== sku.toUpperCase().trim());
         }
     }
-    saveGlobalCart(cart);
+    saveCleanCart(cart);
     renderSmartCheckout();
 };
 
-// 2. ACORDEÓN PASO 1: DOMICILIO DE ENTREGA
+// 3. ACORDEÓN PASO 1 (DOMICILIO) Y PASO 2 (PAGO)
 window.guardarDomicilio = function(e) {
     if (e) e.preventDefault();
-    const nombre = document.getElementById('input-nombre')?.value || document.querySelector('input[placeholder*="Juan"]')?.value || 'Cliente General';
+    const nombre = document.getElementById('input-nombre')?.value || document.querySelector('input[placeholder*="Juan"]')?.value || 'Cliente Registrado';
     const tel = document.getElementById('input-tel')?.value || document.querySelector('input[placeholder*="33"]')?.value || '';
     const calle = document.getElementById('input-calle')?.value || document.querySelector('input[placeholder*="Moreno"]')?.value || 'Av. Pedro Moreno';
     const col = document.getElementById('input-colonia')?.value || 'Centro';
     const cd = document.getElementById('input-ciudad')?.value || 'Guadalajara';
 
-    const shippingData = { nombre, tel, calle, col, cd, guardado: true };
-    localStorage.setItem('ecosystem_shipping_data', JSON.stringify(shippingData));
+    localStorage.setItem('ecosystem_shipping_data', JSON.stringify({ nombre, tel, calle, col, cd }));
     toggleDomicilioView(true);
 };
 
@@ -1360,7 +580,6 @@ window.toggleDomicilioView = function(colapsar) {
     }
 };
 
-// 3. ACORDEÓN PASO 2: FORMA DE PAGO
 window.seleccionarPago = function(metodo) {
     localStorage.setItem('ecosystem_payment_method', metodo);
     togglePagoView(true);
@@ -1390,10 +609,10 @@ window.togglePagoView = function(colapsar) {
     }
 };
 
-// 4. RENDERIZADO DEL CHECKOUT Y TOTALES
+// 4. RENDERIZADO VISUAL
 window.renderSmartCheckout = function() {
-    const cart = getGlobalCart();
-    const container = document.getElementById('cart-items-container') || document.querySelector('[data-cart-container]');
+    const cart = getCleanCart();
+    const container = document.getElementById('cart-items-container') || document.querySelector('[data-cart-container]') || document.querySelector('#cart-items');
     const countBadge = document.querySelector('[data-item-count]') || document.getElementById('cart-count-badge');
     
     const totalItems = cart.reduce((sum, i) => sum + (parseInt(i.quantity) || 0), 0);
@@ -1407,7 +626,7 @@ window.renderSmartCheckout = function() {
             <div class="text-center py-12 px-4 bg-slate-900/40 border border-slate-800/80 rounded-2xl">
                 <i class="fa-solid fa-cart-shopping text-4xl text-slate-600 mb-3 block"></i>
                 <p class="text-slate-400 font-semibold text-sm">Tu carrito está vacío.</p>
-                <a href="index.html" class="inline-block mt-4 px-6 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl text-xs uppercase tracking-wider transition">Explorar catálogo</a>
+                <a href="index.html" class="inline-block mt-4 px-6 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl text-xs uppercase tracking-wider transition">Ir a la tienda</a>
             </div>
         `;
         actualizarTotales(0, 0);
@@ -1420,15 +639,23 @@ window.renderSmartCheckout = function() {
         subtotal += itemSub;
         const imgUrl = resolveProductImage(item.sku, item.imagen);
 
-        const minusBtn = item.quantity === 1 
-            ? `<button onclick="deleteItem('${item.sku}')" class="w-8 h-8 rounded-lg bg-red-950/80 text-red-400 hover:bg-red-900 transition flex items-center justify-center text-xs cursor-pointer" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>`
-            : `<button onclick="changeQty('${item.sku}', -1)" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer">-</button>`;
+        const minusAction = item.quantity === 1 
+            ? `deleteItem('${item.sku}')` 
+            : `changeQty('${item.sku}', -1)`;
+
+        const minusIcon = item.quantity === 1 
+            ? `<i class="fa-solid fa-trash-can pointer-events-none"></i>` 
+            : `-`;
+
+        const minusBtnClass = item.quantity === 1
+            ? `w-8 h-8 rounded-lg bg-red-950/80 text-red-400 hover:bg-red-900 hover:text-red-200 transition flex items-center justify-center text-xs cursor-pointer`
+            : `w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer`;
 
         const div = document.createElement('div');
         div.className = "flex flex-col sm:flex-row items-center sm:items-stretch gap-4 p-4 bg-slate-900 border border-slate-800 rounded-2xl mb-3 shadow-md transition-all";
         div.innerHTML = `
             <div class="w-[170px] h-[170px] min-w-[170px] max-w-[170px] min-h-[170px] max-h-[170px] rounded-xl overflow-hidden bg-slate-950 border border-slate-700/80 shrink-0 p-2 flex items-center justify-center">
-                <img src="${imgUrl}" class="w-full h-full object-contain rounded-lg" alt="${item.nombre}" loading="lazy" onerror="this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/slider_ia_human_thumb.webp';" />
+                <img src="${imgUrl}" class="w-full h-full object-contain rounded-lg" alt="${item.nombre}" loading="lazy" onerror="this.onerror=null;this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/slider_ia_human_thumb.webp';" />
             </div>
             <div class="flex-1 flex flex-col justify-between min-w-0 w-full py-1">
                 <div>
@@ -1437,7 +664,7 @@ window.renderSmartCheckout = function() {
                 </div>
                 <div class="flex items-center justify-between w-full mt-3 pt-3 border-t border-slate-800">
                     <div class="flex items-center gap-1.5 bg-slate-950 border border-slate-800 rounded-xl p-1">
-                        ${minusBtn}
+                        <button onclick="${minusAction}" class="${minusBtnClass}" title="Reducir / Eliminar">${minusIcon}</button>
                         <span class="text-white font-black text-xs w-7 text-center font-mono">${item.quantity}</span>
                         <button onclick="changeQty('${item.sku}', 1)" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer">+</button>
                     </div>
@@ -1445,7 +672,7 @@ window.renderSmartCheckout = function() {
                         <span class="text-[10px] text-slate-400 font-semibold">$${parseFloat(item.precio).toLocaleString()} c/u</span>
                         <span class="text-cyan-400 font-black text-sm">$${itemSub.toFixed(2)} MXN</span>
                     </div>
-                    <button onclick="deleteItem('${item.sku}')" class="text-slate-500 hover:text-red-400 text-sm cursor-pointer shrink-0 transition p-1.5 ml-1" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>
+                    <button onclick="deleteItem('${item.sku}')" class="text-slate-500 hover:text-red-400 text-sm cursor-pointer shrink-0 transition p-2 ml-1" title="Eliminar"><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
                 </div>
             </div>
         `;
@@ -1469,32 +696,292 @@ function actualizarTotales(subtotal, totalItems) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Si viene SKU por URL, agregarlo antes de pintar
+    // Si viene SKU por URL, añadirlo únicamente si no fue borrado previamente
     const urlParams = new URLSearchParams(window.location.search);
     const skuParam = urlParams.get('sku');
     if (skuParam) {
-        let cart = getGlobalCart();
-        let existing = cart.find(i => i.sku.toUpperCase() === skuParam.toUpperCase());
+        let cart = getCleanCart();
+        let existing = cart.find(i => (i.sku || '').toUpperCase() === skuParam.toUpperCase());
         if (!existing) {
-            let prod = (typeof productCatalog !== 'undefined') ? productCatalog.find(p => p.sku.toUpperCase() === skuParam.toUpperCase()) : null;
+            let prod = (typeof productCatalog !== 'undefined') ? productCatalog.find(p => (p.sku || '').toUpperCase() === skuParam.toUpperCase()) : null;
             if (prod) {
                 cart.push({ ...prod, quantity: 1 });
             } else {
                 cart.push({ sku: skuParam, nombre: 'Producto ' + skuParam, precio: 100, imagen: '', quantity: 1 });
             }
-            saveGlobalCart(cart);
+            saveCleanCart(cart);
         }
     }
 
     renderSmartCheckout();
 
-    // Comprobar si ya había datos guardados para iniciar colapsado
     const savedShipping = localStorage.getItem('ecosystem_shipping_data');
     if (savedShipping) toggleDomicilioView(true);
     const savedPayment = localStorage.getItem('ecosystem_payment_method');
     if (savedPayment) togglePagoView(true);
 });
 </script>
+
+
+
+
+<script>
+// ============================================================
+// MOTOR UNIFICADO DE CHECKOUT CON PURGA INMEDIATA DE PRODUCTOS
+// ============================================================
+
+function getCleanCart() {
+    try {
+        const raw = localStorage.getItem('ecosystem_global_cart');
+        if (!raw) return [];
+        const parsed = JSON.parse(raw);
+        if (!Array.isArray(parsed)) return [];
+        return parsed.filter(item => item && item.sku && parseInt(item.quantity) > 0);
+    } catch(e) {
+        return [];
+    }
+}
+
+function saveCleanCart(cart) {
+    const valid = cart.filter(item => item && item.sku && parseInt(item.quantity) > 0);
+    localStorage.setItem('ecosystem_global_cart', JSON.stringify(valid));
+    window.dispatchEvent(new Event('storage'));
+}
+
+function clearUrlSkuParam() {
+    try {
+        if (window.location.search.includes('sku=')) {
+            const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            window.history.replaceState({ path: cleanUrl }, '', cleanUrl);
+        }
+    } catch(e) {}
+}
+
+function resolveProductImage(sku, localImg) {
+    if (localImg && (localImg.startsWith('http://') || localImg.startsWith('https://'))) return localImg;
+    const cleanSku = (sku || '').toUpperCase();
+    let storeDomain = 'pc-custom-lab';
+    if (cleanSku.startsWith('GPU-') || cleanSku.startsWith('PC-')) storeDomain = 'pc-custom-lab';
+    else if (cleanSku.startsWith('CN-') || cleanSku.startsWith('CB-')) storeDomain = 'cigarros-bazar';
+    else if (cleanSku.startsWith('DB-') || cleanSku.startsWith('DUL-')) storeDomain = 'dulces-bazar';
+    else if (cleanSku.startsWith('KD-') || cleanSku.startsWith('KIO-')) storeDomain = 'kiosco-digital';
+    else if (cleanSku.startsWith('PB-') || cleanSku.startsWith('PUE-')) storeDomain = 'mi-puesto-bazar';
+    else if (cleanSku.startsWith('OLG-') || cleanSku.startsWith('LIQ-')) storeDomain = 'ofertas-y-liquidaciones';
+    else if (cleanSku.startsWith('NFL-') || cleanSku.startsWith('VIA-')) storeDomain = 'bazar-viamx-nfl.gdl';
+
+    let path = localImg || 'assets/img/slider_ia_human_thumb.webp';
+    path = path.replace(/^(\.\/|\/)/, '');
+    return 'https://iaworldcenter-creator.github.io/' + storeDomain + '/' + path;
+}
+
+// 1. ELIMINACIÓN TOTAL Y DEFINITIVA
+window.deleteItem = function(sku) {
+    if (!sku) return;
+    clearUrlSkuParam();
+    let cart = getCleanCart();
+    cart = cart.filter(i => (i.sku || '').toUpperCase().trim() !== sku.toUpperCase().trim());
+    saveCleanCart(cart);
+    renderSmartCheckout();
+};
+window.removeItem = window.deleteItem;
+
+// 2. MODIFICACIÓN DE CANTIDADES
+window.changeQty = function(sku, delta) {
+    if (!sku) return;
+    let cart = getCleanCart();
+    let item = cart.find(i => (i.sku || '').toUpperCase().trim() === sku.toUpperCase().trim());
+    if (item) {
+        item.quantity = (parseInt(item.quantity) || 1) + delta;
+        if (item.quantity <= 0) {
+            clearUrlSkuParam();
+            cart = cart.filter(i => (i.sku || '').toUpperCase().trim() !== sku.toUpperCase().trim());
+        }
+    }
+    saveCleanCart(cart);
+    renderSmartCheckout();
+};
+
+// 3. ACORDEÓN PASO 1 (DOMICILIO) Y PASO 2 (PAGO)
+window.guardarDomicilio = function(e) {
+    if (e) e.preventDefault();
+    const nombre = document.getElementById('input-nombre')?.value || document.querySelector('input[placeholder*="Juan"]')?.value || 'Cliente Registrado';
+    const tel = document.getElementById('input-tel')?.value || document.querySelector('input[placeholder*="33"]')?.value || '';
+    const calle = document.getElementById('input-calle')?.value || document.querySelector('input[placeholder*="Moreno"]')?.value || 'Av. Pedro Moreno';
+    const col = document.getElementById('input-colonia')?.value || 'Centro';
+    const cd = document.getElementById('input-ciudad')?.value || 'Guadalajara';
+
+    localStorage.setItem('ecosystem_shipping_data', JSON.stringify({ nombre, tel, calle, col, cd }));
+    toggleDomicilioView(true);
+};
+
+window.toggleDomicilioView = function(colapsar) {
+    const formBox = document.querySelector('[data-step="1-form"]') || document.getElementById('step-1-form');
+    const summaryBox = document.querySelector('[data-step="1-summary"]') || document.getElementById('step-1-summary');
+    if (formBox && summaryBox) {
+        if (colapsar) {
+            formBox.classList.add('hidden');
+            summaryBox.classList.remove('hidden');
+            const data = JSON.parse(localStorage.getItem('ecosystem_shipping_data') || '{}');
+            summaryBox.innerHTML = `
+                <div class="flex items-center justify-between p-3.5 bg-slate-900/90 border border-slate-800 rounded-xl text-xs">
+                    <div class="flex items-center gap-2.5 min-w-0">
+                        <i class="fa-solid fa-location-dot text-amber-400 text-sm"></i>
+                        <div class="truncate text-slate-200">
+                            <strong>${data.nombre || 'Datos guardados'}</strong> &bull; ${data.calle || ''}, ${data.col || ''} (${data.tel || ''})
+                        </div>
+                    </div>
+                    <button onclick="toggleDomicilioView(false)" class="text-cyan-400 hover:text-cyan-300 font-bold ml-2 underline cursor-pointer shrink-0">Editar</button>
+                </div>
+            `;
+        } else {
+            formBox.classList.remove('hidden');
+            summaryBox.classList.add('hidden');
+        }
+    }
+};
+
+window.seleccionarPago = function(metodo) {
+    localStorage.setItem('ecosystem_payment_method', metodo);
+    togglePagoView(true);
+};
+
+window.togglePagoView = function(colapsar) {
+    const formBox = document.querySelector('[data-step="2-form"]') || document.getElementById('step-2-form');
+    const summaryBox = document.querySelector('[data-step="2-summary"]') || document.getElementById('step-2-summary');
+    if (formBox && summaryBox) {
+        if (colapsar) {
+            formBox.classList.add('hidden');
+            summaryBox.classList.remove('hidden');
+            const metodo = localStorage.getItem('ecosystem_payment_method') || 'Tarjeta de Crédito / Débito';
+            summaryBox.innerHTML = `
+                <div class="flex items-center justify-between p-3.5 bg-slate-900/90 border border-slate-800 rounded-xl text-xs">
+                    <div class="flex items-center gap-2.5">
+                        <i class="fa-solid fa-credit-card text-emerald-400 text-sm"></i>
+                        <span class="text-slate-200">Método: <strong>${metodo}</strong></span>
+                    </div>
+                    <button onclick="togglePagoView(false)" class="text-cyan-400 hover:text-cyan-300 font-bold ml-2 underline cursor-pointer shrink-0">Editar</button>
+                </div>
+            `;
+        } else {
+            formBox.classList.remove('hidden');
+            summaryBox.classList.add('hidden');
+        }
+    }
+};
+
+// 4. RENDERIZADO VISUAL
+window.renderSmartCheckout = function() {
+    const cart = getCleanCart();
+    const container = document.getElementById('cart-items-container') || document.querySelector('[data-cart-container]') || document.querySelector('#cart-items');
+    const countBadge = document.querySelector('[data-item-count]') || document.getElementById('cart-count-badge');
+    
+    const totalItems = cart.reduce((sum, i) => sum + (parseInt(i.quantity) || 0), 0);
+    if (countBadge) countBadge.innerText = `${totalItems} producto${totalItems === 1 ? '' : 's'}`;
+
+    if (!container) return;
+    container.innerHTML = '';
+
+    if (cart.length === 0) {
+        container.innerHTML = `
+            <div class="text-center py-12 px-4 bg-slate-900/40 border border-slate-800/80 rounded-2xl">
+                <i class="fa-solid fa-cart-shopping text-4xl text-slate-600 mb-3 block"></i>
+                <p class="text-slate-400 font-semibold text-sm">Tu carrito está vacío.</p>
+                <a href="index.html" class="inline-block mt-4 px-6 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl text-xs uppercase tracking-wider transition">Ir a la tienda</a>
+            </div>
+        `;
+        actualizarTotales(0, 0);
+        return;
+    }
+
+    let subtotal = 0;
+    cart.forEach(item => {
+        const itemSub = (parseFloat(item.precio) || 0) * (parseInt(item.quantity) || 1);
+        subtotal += itemSub;
+        const imgUrl = resolveProductImage(item.sku, item.imagen);
+
+        const minusAction = item.quantity === 1 
+            ? `deleteItem('${item.sku}')` 
+            : `changeQty('${item.sku}', -1)`;
+
+        const minusIcon = item.quantity === 1 
+            ? `<i class="fa-solid fa-trash-can pointer-events-none"></i>` 
+            : `-`;
+
+        const minusBtnClass = item.quantity === 1
+            ? `w-8 h-8 rounded-lg bg-red-950/80 text-red-400 hover:bg-red-900 hover:text-red-200 transition flex items-center justify-center text-xs cursor-pointer`
+            : `w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer`;
+
+        const div = document.createElement('div');
+        div.className = "flex flex-col sm:flex-row items-center sm:items-stretch gap-4 p-4 bg-slate-900 border border-slate-800 rounded-2xl mb-3 shadow-md transition-all";
+        div.innerHTML = `
+            <div class="w-[170px] h-[170px] min-w-[170px] max-w-[170px] min-h-[170px] max-h-[170px] rounded-xl overflow-hidden bg-slate-950 border border-slate-700/80 shrink-0 p-2 flex items-center justify-center">
+                <img src="${imgUrl}" class="w-full h-full object-contain rounded-lg" alt="${item.nombre}" loading="lazy" onerror="this.onerror=null;this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/slider_ia_human_thumb.webp';" />
+            </div>
+            <div class="flex-1 flex flex-col justify-between min-w-0 w-full py-1">
+                <div>
+                    <h3 class="text-white font-bold text-sm sm:text-base leading-snug">${item.nombre}</h3>
+                    <span class="text-[10px] font-mono text-slate-400 uppercase font-bold tracking-wider block mt-1">${item.sku}</span>
+                </div>
+                <div class="flex items-center justify-between w-full mt-3 pt-3 border-t border-slate-800">
+                    <div class="flex items-center gap-1.5 bg-slate-950 border border-slate-800 rounded-xl p-1">
+                        <button onclick="${minusAction}" class="${minusBtnClass}" title="Reducir / Eliminar">${minusIcon}</button>
+                        <span class="text-white font-black text-xs w-7 text-center font-mono">${item.quantity}</span>
+                        <button onclick="changeQty('${item.sku}', 1)" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer">+</button>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <span class="text-[10px] text-slate-400 font-semibold">$${parseFloat(item.precio).toLocaleString()} c/u</span>
+                        <span class="text-cyan-400 font-black text-sm">$${itemSub.toFixed(2)} MXN</span>
+                    </div>
+                    <button onclick="deleteItem('${item.sku}')" class="text-slate-500 hover:text-red-400 text-sm cursor-pointer shrink-0 transition p-2 ml-1" title="Eliminar"><i class="fa-solid fa-trash-can pointer-events-none"></i></button>
+                </div>
+            </div>
+        `;
+        container.appendChild(div);
+    });
+
+    actualizarTotales(subtotal, totalItems);
+};
+
+function actualizarTotales(subtotal, totalItems) {
+    const envio = subtotal >= 1500 || subtotal === 0 ? 0 : 49;
+    const mayoreoDesc = totalItems >= 10 ? subtotal * 0.15 : 0;
+    const subConDescuento = subtotal - mayoreoDesc;
+    const total = subConDescuento > 0 ? subConDescuento + envio : 0;
+    const cashback = subConDescuento * 0.05;
+
+    document.querySelectorAll('[data-subtotal]').forEach(el => el.innerText = `$${subtotal.toFixed(2)} MXN`);
+    document.querySelectorAll('[data-envio]').forEach(el => el.innerText = envio === 0 ? 'GRATIS' : `$${envio.toFixed(2)} MXN`);
+    document.querySelectorAll('[data-total]').forEach(el => el.innerText = `$${total.toFixed(2)} MXN`);
+    document.querySelectorAll('[data-cashback]').forEach(el => el.innerText = `$${cashback.toFixed(2)} MXN`);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Si viene SKU por URL, añadirlo únicamente si no fue borrado previamente
+    const urlParams = new URLSearchParams(window.location.search);
+    const skuParam = urlParams.get('sku');
+    if (skuParam) {
+        let cart = getCleanCart();
+        let existing = cart.find(i => (i.sku || '').toUpperCase() === skuParam.toUpperCase());
+        if (!existing) {
+            let prod = (typeof productCatalog !== 'undefined') ? productCatalog.find(p => (p.sku || '').toUpperCase() === skuParam.toUpperCase()) : null;
+            if (prod) {
+                cart.push({ ...prod, quantity: 1 });
+            } else {
+                cart.push({ sku: skuParam, nombre: 'Producto ' + skuParam, precio: 100, imagen: '', quantity: 1 });
+            }
+            saveCleanCart(cart);
+        }
+    }
+
+    renderSmartCheckout();
+
+    const savedShipping = localStorage.getItem('ecosystem_shipping_data');
+    if (savedShipping) toggleDomicilioView(true);
+    const savedPayment = localStorage.getItem('ecosystem_payment_method');
+    if (savedPayment) togglePagoView(true);
+});
+</script>
+
 
 </body>
 </html>
