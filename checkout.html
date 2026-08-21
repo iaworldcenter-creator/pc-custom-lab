@@ -973,58 +973,55 @@
                 imgUrl = './' + imgUrl;
             }
 
-            let rowClass = "flex flex-row items-center gap-4 p-4 bg-slate-900/80 rounded-xl border border-slate-800 mb-3 transition-all duration-300";
+            let globalImg = getGlobalProductImage(item.sku, item.imagen);
+            let rowClass = "flex flex-col sm:flex-row items-center sm:items-stretch gap-4 p-4 bg-slate-900 border border-slate-800 rounded-2xl mb-3 shadow-md transition-all duration-300";
             let controlsHtml = "";
-            let statusTagHtml = "";
 
             if (isInactive) {
-                rowClass += " opacity-40 grayscale";
-                statusTagHtml = `<span class="bg-red-500/10 border border-red-500/30 text-red-500 font-bold px-1.5 py-0.5 rounded text-[8px] uppercase tracking-wider block mt-0.5 w-max">Desactivado</span>`;
+                rowClass += " opacity-50 grayscale";
                 controlsHtml = `
-                    <button onclick="changeQty('${item.sku}', 1)" class="px-2.5 py-1.5 rounded bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-[10px] transition cursor-pointer flex items-center gap-1 active:scale-95 min-h-[32px]">
-                        Reactivar <i class="fa-solid fa-plus text-[9px]"></i>
-                    </button>
+                    <div class="flex items-center justify-between w-full mt-2 pt-2 border-t border-slate-800">
+                        <span class="bg-red-500/10 border border-red-500/30 text-red-400 font-bold px-2 py-0.5 rounded text-[10px] uppercase tracking-wider">Desactivado</span>
+                        <button onclick="changeQty('${item.sku}', 1)" class="px-3 py-1.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xs transition cursor-pointer flex items-center gap-1.5 active:scale-95 shadow-md">
+                            Reactivar +
+                        </button>
+                    </div>
                 `;
             } else {
-                let minusButtonHtml = `<button onclick="changeQty('${item.sku}', -1)" class="w-8 h-8 rounded bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer min-w-[32px] min-h-[32px]">-</button>`;
+                let minusBtn = `<button onclick="changeQty('${item.sku}', -1)" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer">-</button>`;
                 if (item.quantity === 1) {
-                    minusButtonHtml = `<button onclick="deleteItem('${item.sku}')" class="w-8 h-8 rounded bg-red-950 text-red-400 hover:bg-red-900 hover:text-red-300 transition flex items-center justify-center text-[10px] cursor-pointer min-w-[32px] min-h-[32px]" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>`;
+                    minusBtn = `<button onclick="deleteItem('${item.sku}')" class="w-8 h-8 rounded-lg bg-red-950/80 text-red-400 hover:bg-red-900 hover:text-red-200 transition flex items-center justify-center text-xs cursor-pointer" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>`;
                 }
-
                 controlsHtml = `
-                    <div class="flex items-center gap-1 bg-slate-900 border border-slate-800 rounded p-0.5">
-                        ${minusButtonHtml}
-                        <span class="text-white font-black text-xs w-6 text-center">${item.quantity}</span>
-                        <button onclick="changeQty('${item.sku}', 1)" class="w-8 h-8 rounded bg-slate-800 text-slate-400 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer min-w-[32px] min-h-[32px]">+</button>
+                    <div class="flex items-center justify-between w-full mt-2 pt-2 border-t border-slate-800">
+                        <div class="flex items-center gap-1.5 bg-slate-950 border border-slate-800 rounded-xl p-1">
+                            ${minusBtn}
+                            <span class="text-white font-black text-xs w-7 text-center font-mono">${item.quantity}</span>
+                            <button onclick="changeQty('${item.sku}', 1)" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-300 hover:text-white transition flex items-center justify-center font-bold text-xs cursor-pointer">+</button>
+                        </div>
+                        <div class="flex flex-col items-end">
+                            <span class="text-[10px] text-slate-400 font-semibold">$${parseFloat(item.precio).toLocaleString()} c/u</span>
+                            <span class="text-cyan-400 font-black text-sm">$${sub.toFixed(2)} MXN</span>
+                        </div>
+                        <button onclick="deleteItem('${item.sku}')" class="text-slate-500 hover:text-red-400 text-sm cursor-pointer shrink-0 transition p-1.5 ml-1" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>
                     </div>
-                    <div class="flex flex-col items-end min-w-[65px]">
-                        <span class="text-[9px] text-slate-500">$${parseFloat(item.precio).toLocaleString()} c/u</span>
-                        <span class="text-cyan-400 font-bold text-xs">$${sub.toFixed(2)}</span>
-                    </div>
-                    <button onclick="deleteItem('${item.sku}')" class="text-slate-600 hover:text-red-500 text-xs cursor-pointer shrink-0 transition min-w-[28px] min-h-[28px] flex items-center justify-center" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>
                 `;
             }
 
             const div = document.createElement("div");
             div.className = rowClass;
             div.innerHTML = `
-    <div class="w-[170px] h-[170px] min-w-[170px] max-w-[170px] rounded-2xl overflow-hidden bg-slate-950 border border-slate-700/80 shrink-0 p-1 flex items-center justify-center">
-        <img src="${imgUrl}" class="w-full h-full object-cover rounded-xl" alt="${item.nombre}" loading="lazy" onerror="this.src='assets/img/slider_ia_human_thumb.webp?v=1.1.0';" />
-    </div>
-    <div class="flex-1 flex flex-col gap-1.5 min-w-0">
-        <div class="flex justify-between items-start gap-2">
-            <div>
-                <span class="text-white font-bold text-sm sm:text-base leading-snug block">${item.nombre}</span>
-                <span class="text-[10px] font-mono text-slate-500 uppercase block mt-0.5">${item.sku}</span>
-            </div>
-            <span class="text-slate-400 font-bold text-xs shrink-0">$$${parseFloat(item.precio).toLocaleString()} c/u</span>
-        </div>
-        ${statusTagHtml}
-        <div class="flex items-center justify-between gap-3 flex-wrap mt-2 pt-2 border-t border-slate-800/60">
-            ${controlsHtml}
-        </div>
-    </div>
-`;
+                <div class="w-[170px] h-[170px] min-w-[170px] max-w-[170px] min-h-[170px] max-h-[170px] rounded-xl overflow-hidden bg-slate-950 border border-slate-700/80 shrink-0 p-2 flex items-center justify-center">
+                    <img src="${globalImg}" class="w-full h-full object-contain rounded-lg" alt="${item.nombre}" loading="lazy" onerror="this.onerror=null;this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/slider_ia_human_thumb.webp';" />
+                </div>
+                <div class="flex-1 flex flex-col justify-between min-w-0 w-full py-1">
+                    <div>
+                        <h3 class="text-white font-bold text-sm sm:text-base leading-snug">${item.nombre}</h3>
+                        <span class="text-[10px] font-mono text-slate-400 uppercase font-bold tracking-wider block mt-1">${item.sku}</span>
+                    </div>
+                    ${controlsHtml}
+                </div>
+            `;
             container.appendChild(div);
         });
 
@@ -1239,6 +1236,26 @@
         generateOxxoFolio();
         generateSpeiRef();
     });
+
+function getGlobalProductImage(sku, localImg) {
+    if (localImg && (localImg.startsWith('http://') || localImg.startsWith('https://'))) {
+        return localImg;
+    }
+    const cleanSku = (sku || '').toUpperCase();
+    let storeDomain = 'pc-custom-lab';
+    if (cleanSku.startsWith('GPU-') || cleanSku.startsWith('PC-')) storeDomain = 'pc-custom-lab';
+    else if (cleanSku.startsWith('CN-') || cleanSku.startsWith('CB-')) storeDomain = 'cigarros-bazar';
+    else if (cleanSku.startsWith('DB-') || cleanSku.startsWith('DUL-')) storeDomain = 'dulces-bazar';
+    else if (cleanSku.startsWith('KD-') || cleanSku.startsWith('KIO-')) storeDomain = 'kiosco-digital';
+    else if (cleanSku.startsWith('PB-') || cleanSku.startsWith('PUE-')) storeDomain = 'mi-puesto-bazar';
+    else if (cleanSku.startsWith('OLG-') || cleanSku.startsWith('LIQ-')) storeDomain = 'ofertas-y-liquidaciones';
+    else if (cleanSku.startsWith('NFL-') || cleanSku.startsWith('VIA-')) storeDomain = 'bazar-viamx-nfl.gdl';
+
+    let path = localImg || 'assets/img/slider_ia_human_thumb.webp';
+    path = path.replace(/^(\.\/|\/)/, '');
+    return 'https://iaworldcenter-creator.github.io/' + storeDomain + '/' + path;
+}
+
 </script>
 
 </body>

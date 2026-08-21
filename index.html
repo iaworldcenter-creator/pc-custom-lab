@@ -2454,6 +2454,35 @@ window.addEventListener('load', () => { listen({ priority: true }); });
 
 <!-- BOTÓN DE CARRITO FLOTANTE -->
 
+
+<script>
+// Sincronización automática de contador y drawer de carrito
+function syncGlobalCartState() {
+    try {
+        let cart = [];
+        const raw = localStorage.getItem('ecosystem_global_cart');
+        if (raw) cart = JSON.parse(raw);
+        const activeItems = cart.filter(i => i && i.quantity > 0);
+        const totalCount = activeItems.reduce((sum, i) => sum + (parseInt(i.quantity) || 0), 0);
+
+        // Actualizar badges en la barra de navegación
+        document.querySelectorAll('#cart-count, .cart-counter, [data-cart-count]').forEach(el => {
+            el.innerText = totalCount;
+            el.style.display = totalCount > 0 ? 'inline-flex' : 'none';
+        });
+
+        // Actualizar header 'MI CARRITO (X)'
+        document.querySelectorAll('header a, header button').forEach(el => {
+            if (el.innerText && el.innerText.includes('MI CARRITO')) {
+                el.innerHTML = '<i class="fa-solid fa-cart-shopping"></i> MI CARRITO (' + totalCount + ')';
+            }
+        });
+    } catch(e) {}
+}
+document.addEventListener('DOMContentLoaded', syncGlobalCartState);
+window.addEventListener('storage', syncGlobalCartState);
+</script>
+
 </body>
 </html>
 
