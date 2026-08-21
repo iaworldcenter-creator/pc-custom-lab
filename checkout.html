@@ -60,7 +60,6 @@
             <span class="text-slate-900 font-bold">•</span>
             <span class="flex items-center gap-1.5">💳 Pagos con tarjeta bancaria y transferencias SPEI.</span>
             <span class="text-slate-900 font-bold">•</span>
-            <!-- Ciclo Continuo -->
             <span class="flex items-center gap-1.5">🚚 ¡ENVÍO GRATIS en compras a partir de $1,500 MXN!</span>
             <span class="text-slate-900 font-bold">•</span>
             <span class="flex items-center gap-1.5">💰 5% DE CASHBACK acumulable con registro activo.</span>
@@ -75,14 +74,14 @@
         </div>
     </div>
 
-    <!-- CONTENEDOR PRINCIPAL -->
+    <!-- CONTENIDO PRINCIPAL -->
     <main class="max-w-7xl mx-auto px-4 py-8 flex-1 w-full">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-            <!-- COLUMNA IZQUIERDA: PASOS 1, 2 Y ARTÍCULOS -->
+            <!-- COLUMNA IZQUIERDA -->
             <div class="lg:col-span-8 flex flex-col gap-6">
 
-                <!-- PASO 1: DOMICILIO DE ENTREGA (ACORDEÓN) -->
+                <!-- PASO 1: DOMICILIO DE ENTREGA -->
                 <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl relative">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center gap-3">
@@ -91,10 +90,8 @@
                         </div>
                     </div>
 
-                    <!-- Resumen colapsado -->
                     <div id="step-1-summary" class="hidden"></div>
 
-                    <!-- Formulario desplegado -->
                     <form id="step-1-form" onsubmit="guardarDomicilio(event)" class="flex flex-col gap-4">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
@@ -122,7 +119,7 @@
                     </form>
                 </div>
 
-                <!-- PASO 2: MÉTODO DE PAGO (ACORDEÓN) -->
+                <!-- PASO 2: MÉTODO DE PAGO MEJORADO -->
                 <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl relative">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center gap-3">
@@ -131,43 +128,124 @@
                         </div>
                     </div>
 
-                    <!-- Resumen colapsado -->
                     <div id="step-2-summary" class="hidden"></div>
 
-                    <!-- Opciones de pago -->
-                    <div id="step-2-form" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <button onclick="seleccionarPago('Tarjeta de Crédito / Débito')" class="p-4 bg-slate-950 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500 rounded-xl flex items-center gap-3 text-left transition cursor-pointer group">
-                            <i class="fa-solid fa-credit-card text-cyan-400 text-xl group-hover:scale-110 transition"></i>
-                            <div>
-                                <span class="text-xs font-bold text-white block">Tarjeta Bancaria</span>
-                                <span class="text-[10px] text-slate-400 block">Crédito o Débito</span>
+                    <div id="step-2-form" class="flex flex-col gap-4">
+                        <!-- Selector de botones -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                            <button type="button" onclick="mostrarDetallePago('spei')" id="btn-tab-spei" class="p-3 bg-slate-950 border border-emerald-500/60 rounded-xl flex flex-col items-center gap-1.5 text-center transition cursor-pointer hover:border-emerald-400">
+                                <i class="fa-solid fa-building-columns text-emerald-400 text-lg"></i>
+                                <span class="text-xs font-bold text-white leading-tight">Transferencia SPEI</span>
+                            </button>
+                            <button type="button" onclick="mostrarDetallePago('tarjeta')" id="btn-tab-tarjeta" class="p-3 bg-slate-950 border border-slate-800 rounded-xl flex flex-col items-center gap-1.5 text-center transition cursor-pointer hover:border-cyan-400">
+                                <i class="fa-solid fa-credit-card text-cyan-400 text-lg"></i>
+                                <span class="text-xs font-bold text-white leading-tight">Tarjeta Bancaria</span>
+                            </button>
+                            <button type="button" onclick="mostrarDetallePago('oxxo')" id="btn-tab-oxxo" class="p-3 bg-slate-950 border border-slate-800 rounded-xl flex flex-col items-center gap-1.5 text-center transition cursor-pointer hover:border-amber-400">
+                                <i class="fa-solid fa-store text-amber-400 text-lg"></i>
+                                <span class="text-xs font-bold text-white leading-tight">Efectivo OXXO</span>
+                            </button>
+                            <button type="button" onclick="mostrarDetallePago('entrega')" id="btn-tab-entrega" class="p-3 bg-slate-950 border border-slate-800 rounded-xl flex flex-col items-center gap-1.5 text-center transition cursor-pointer hover:border-purple-400">
+                                <i class="fa-solid fa-hand-holding-dollar text-purple-400 text-lg"></i>
+                                <span class="text-xs font-bold text-white leading-tight">Contra Entrega</span>
+                            </button>
+                        </div>
+
+                        <!-- PANEL 1: TRANSFERENCIA SPEI -->
+                        <div id="panel-spei" class="p-4 bg-slate-950 border border-emerald-500/40 rounded-xl flex flex-col gap-3">
+                            <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                                <span class="text-xs font-bold text-emerald-400 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-building-columns"></i> Datos de Transferencia Interbancaria (SPEI)
+                                </span>
+                                <span class="text-[10px] font-mono bg-emerald-500/10 text-emerald-300 px-2 py-0.5 rounded border border-emerald-500/30">Sin Comisión</span>
                             </div>
-                        </button>
-                        <button onclick="seleccionarPago('Transferencia SPEI / CoDi')" class="p-4 bg-slate-950 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500 rounded-xl flex items-center gap-3 text-left transition cursor-pointer group">
-                            <i class="fa-solid fa-building-columns text-emerald-400 text-xl group-hover:scale-110 transition"></i>
-                            <div>
-                                <span class="text-xs font-bold text-white block">Transferencia SPEI</span>
-                                <span class="text-[10px] text-slate-400 block">Acreditación Inmediata</span>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                                <div>
+                                    <span class="text-slate-400 block text-[11px]">Banco Receptor:</span>
+                                    <strong class="text-white text-sm">BBVA México</strong>
+                                </div>
+                                <div>
+                                    <span class="text-slate-400 block text-[11px]">Beneficiario:</span>
+                                    <strong class="text-white text-sm">Ecosistema Anti-Gravity</strong>
+                                </div>
                             </div>
-                        </button>
-                        <button onclick="seleccionarPago('Efectivo en OXXO')" class="p-4 bg-slate-950 hover:bg-slate-800 border border-slate-800 hover:border-amber-500 rounded-xl flex items-center gap-3 text-left transition cursor-pointer group">
-                            <i class="fa-solid fa-store text-amber-400 text-xl group-hover:scale-110 transition"></i>
-                            <div>
-                                <span class="text-xs font-bold text-white block">Efectivo en OXXO</span>
-                                <span class="text-[10px] text-slate-400 block">Tiendas de Conveniencia</span>
+
+                            <div class="p-3 bg-slate-900 border border-slate-800 rounded-lg flex flex-col sm:flex-row items-center justify-between gap-3">
+                                <div>
+                                    <span class="text-slate-400 text-[10px] uppercase font-mono block">CLABE Interbancaria:</span>
+                                    <span id="txt-clabe-val" class="text-amber-400 font-mono font-black text-base tracking-wider">012 180 01542584394 9</span>
+                                </div>
+                                <button type="button" onclick="copiarClabe()" id="btn-copiar-clabe" class="px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black rounded-lg text-xs transition cursor-pointer flex items-center gap-1.5 active:scale-95 shrink-0">
+                                    <i class="fa-regular fa-copy"></i> Copiar CLABE
+                                </button>
                             </div>
-                        </button>
-                        <button onclick="seleccionarPago('Pago Contra Entrega (Efectivo)')" class="p-4 bg-slate-950 hover:bg-slate-800 border border-slate-800 hover:border-purple-500 rounded-xl flex items-center gap-3 text-left transition cursor-pointer group">
-                            <i class="fa-solid fa-hand-holding-dollar text-purple-400 text-xl group-hover:scale-110 transition"></i>
-                            <div>
-                                <span class="text-xs font-bold text-white block">Contra Entrega</span>
-                                <span class="text-[10px] text-slate-400 block">Efectivo al recibir</span>
+
+                            <button type="button" onclick="confirmarMetodoPago('Transferencia SPEI (BBVA CLABE: 012180015425843949)')" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider transition cursor-pointer mt-1">
+                                Confirmar Transferencia SPEI
+                            </button>
+                        </div>
+
+                        <!-- PANEL 2: TARJETA DE CRÉDITO/DÉBITO -->
+                        <div id="panel-tarjeta" class="hidden p-4 bg-slate-950 border border-cyan-500/40 rounded-xl flex flex-col gap-3">
+                            <span class="text-xs font-bold text-cyan-400 flex items-center gap-1.5 border-b border-slate-800 pb-2">
+                                <i class="fa-solid fa-credit-card"></i> Ingresa los datos de tu Tarjeta
+                            </span>
+                            <div class="flex flex-col gap-3">
+                                <div>
+                                    <label class="text-[11px] font-mono text-slate-400 uppercase block mb-1">Número de Tarjeta (16 dígitos) *</label>
+                                    <input id="card-num" type="text" maxlength="19" placeholder="4500 0000 0000 0000" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2 text-sm text-white font-mono focus:border-cyan-500 focus:outline-none" />
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div>
+                                        <label class="text-[11px] font-mono text-slate-400 uppercase block mb-1">Vencimiento (MM/AA) *</label>
+                                        <input id="card-exp" type="text" maxlength="5" placeholder="12/28" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2 text-sm text-white font-mono focus:border-cyan-500 focus:outline-none" />
+                                    </div>
+                                    <div>
+                                        <label class="text-[11px] font-mono text-slate-400 uppercase block mb-1">CVV / CVC *</label>
+                                        <input id="card-cvv" type="password" maxlength="4" placeholder="123" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2 text-sm text-white font-mono focus:border-cyan-500 focus:outline-none" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="text-[11px] font-mono text-slate-400 uppercase block mb-1">Nombre en la Tarjeta *</label>
+                                    <input id="card-name" type="text" placeholder="Ej. Juan Pérez" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2 text-sm text-white focus:border-cyan-500 focus:outline-none" />
+                                </div>
                             </div>
-                        </button>
+                            <button type="button" onclick="confirmarMetodoPago('Tarjeta Bancaria (Débito/Crédito)')" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider transition cursor-pointer mt-1">
+                                Confirmar Tarjeta
+                            </button>
+                        </div>
+
+                        <!-- PANEL 3: OXXO -->
+                        <div id="panel-oxxo" class="hidden p-4 bg-slate-950 border border-amber-500/40 rounded-xl flex flex-col gap-3">
+                            <span class="text-xs font-bold text-amber-400 flex items-center gap-1.5 border-b border-slate-800 pb-2">
+                                <i class="fa-solid fa-store"></i> Pago en Efectivo en OXXO / 7-Eleven
+                            </span>
+                            <p class="text-xs text-slate-300">Dicta esta referencia numérica de 14 dígitos al cajero al momento de pagar:</p>
+                            <div class="p-3 bg-slate-900 border border-slate-800 rounded-lg text-center">
+                                <span class="text-[10px] font-mono text-slate-400 uppercase block">Referencia de Pago OXXO Pay:</span>
+                                <strong class="text-amber-400 font-mono text-lg tracking-widest block mt-1">9324 8102 4492 10</strong>
+                            </div>
+                            <button type="button" onclick="confirmarMetodoPago('Efectivo en Tienda OXXO (Ref: 93248102449210)')" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider transition cursor-pointer mt-1">
+                                Confirmar Pago en OXXO
+                            </button>
+                        </div>
+
+                        <!-- PANEL 4: CONTRA ENTREGA -->
+                        <div id="panel-entrega" class="hidden p-4 bg-slate-950 border border-purple-500/40 rounded-xl flex flex-col gap-3">
+                            <span class="text-xs font-bold text-purple-400 flex items-center gap-1.5 border-b border-slate-800 pb-2">
+                                <i class="fa-solid fa-hand-holding-dollar"></i> Pago en Efectivo Contra Entrega
+                            </span>
+                            <p class="text-xs text-slate-300">Pagas en efectivo al repartidor en el momento en que recibes tus paquetes en tu domicilio.</p>
+                            <button type="button" onclick="confirmarMetodoPago('Pago Contra Entrega (Efectivo al recibir)')" class="w-full bg-purple-500 hover:bg-purple-400 text-slate-950 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider transition cursor-pointer mt-1">
+                                Confirmar Pago Contra Entrega
+                            </button>
+                        </div>
+
                     </div>
                 </div>
 
-                <!-- PASO 3: ARTÍCULOS ACTIVOS EN TU CARRITO -->
+                <!-- PASO 3: ARTÍCULOS EN TU CARRITO -->
                 <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl">
                     <div class="flex items-center justify-between mb-4 border-b border-slate-800/80 pb-3">
                         <div class="flex items-center gap-3">
@@ -177,13 +255,12 @@
                         <span id="cart-count-badge" class="text-xs font-mono bg-slate-800 text-cyan-400 font-bold px-3 py-1 rounded-full">0 productos</span>
                     </div>
 
-                    <!-- Lista de productos -->
                     <div id="cart-items-container" class="flex flex-col gap-3"></div>
                 </div>
 
             </div>
 
-            <!-- COLUMNA DERECHA: RESUMEN FINANCIERO -->
+            <!-- COLUMNA DERECHA: TOTALES -->
             <div class="lg:col-span-4 sticky top-24">
                 <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl flex flex-col gap-5">
                     <h3 class="text-base font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
@@ -222,7 +299,6 @@
                         <i class="fa-solid fa-arrow-left"></i> Seguir comprando
                     </a>
 
-                    <!-- GARANTÍAS -->
                     <div class="pt-4 border-t border-slate-800/80 flex flex-col gap-2.5 text-[11px] text-slate-400">
                         <div class="flex items-center gap-2">
                             <i class="fa-solid fa-shield-halved text-cyan-400"></i>
@@ -244,7 +320,7 @@
         <p>&copy; 2026 PC CUSTOM LAB. Pedro Moreno 501 A, Guadalajara Centro. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- LÓGICA DE JAVASCRIPT ROBUSTA -->
+    <!-- JAVASCRIPT ROBUSTO -->
     <script>
     function getCleanCart() {
         try {
@@ -280,6 +356,74 @@
         path = path.replace(/^(\.\/|\/)/, '');
         return 'https://iaworldcenter-creator.github.io/' + storeDomain + '/' + path;
     }
+
+    window.copiarClabe = function() {
+        navigator.clipboard.writeText('012180015425843949').then(() => {
+            const btn = document.getElementById('btn-copiar-clabe');
+            if (btn) {
+                btn.innerHTML = '<i class="fa-solid fa-check"></i> ¡Copiada!';
+                btn.classList.remove('bg-emerald-500', 'text-slate-950');
+                btn.classList.add('bg-white', 'text-emerald-950');
+                setTimeout(() => {
+                    btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copiar CLABE';
+                    btn.classList.add('bg-emerald-500', 'text-slate-950');
+                    btn.classList.remove('bg-white', 'text-emerald-950');
+                }, 2500);
+            }
+        });
+    };
+
+    window.mostrarDetallePago = function(metodo) {
+        ['spei', 'tarjeta', 'oxxo', 'entrega'].forEach(m => {
+            const panel = document.getElementById('panel-' + m);
+            const tab = document.getElementById('btn-tab-' + m);
+            if (panel) panel.classList.add('hidden');
+            if (tab) {
+                tab.classList.remove('border-emerald-500', 'border-cyan-500', 'border-amber-500', 'border-purple-500');
+                tab.classList.add('border-slate-800');
+            }
+        });
+
+        const selPanel = document.getElementById('panel-' + metodo);
+        const selTab = document.getElementById('btn-tab-' + metodo);
+        if (selPanel) selPanel.classList.remove('hidden');
+        if (selTab) {
+            selTab.classList.remove('border-slate-800');
+            const color = metodo === 'spei' ? 'border-emerald-500' : metodo === 'tarjeta' ? 'border-cyan-500' : metodo === 'oxxo' ? 'border-amber-500' : 'border-purple-500';
+            selTab.classList.add(color);
+        }
+    };
+
+    window.confirmarMetodoPago = function(nombreMetodo) {
+        localStorage.setItem('ecosystem_payment_method', nombreMetodo);
+        togglePagoView(true);
+    };
+
+    window.togglePagoView = function(colapsar) {
+        const formBox = document.getElementById('step-2-form');
+        const summaryBox = document.getElementById('step-2-summary');
+        if (formBox && summaryBox) {
+            if (colapsar) {
+                formBox.classList.add('hidden');
+                summaryBox.classList.remove('hidden');
+                const metodo = localStorage.getItem('ecosystem_payment_method') || 'Transferencia SPEI';
+                summaryBox.innerHTML = `
+                    <div class="flex items-center justify-between p-3.5 bg-slate-950 border border-slate-800 rounded-xl text-xs">
+                        <div class="flex items-center gap-2.5 min-w-0">
+                            <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
+                            <div class="truncate text-slate-200">
+                                Pago: <strong>${metodo}</strong>
+                            </div>
+                        </div>
+                        <button onclick="togglePagoView(false)" class="text-cyan-400 hover:text-cyan-300 font-bold ml-2 underline cursor-pointer shrink-0">Editar</button>
+                    </div>
+                `;
+            } else {
+                formBox.classList.remove('hidden');
+                summaryBox.classList.add('hidden');
+            }
+        }
+    };
 
     window.deleteItem = function(sku) {
         if (!sku) return;
@@ -337,35 +481,6 @@
                             </div>
                         </div>
                         <button onclick="toggleDomicilioView(false)" class="text-cyan-400 hover:text-cyan-300 font-bold ml-2 underline cursor-pointer shrink-0">Editar</button>
-                    </div>
-                `;
-            } else {
-                formBox.classList.remove('hidden');
-                summaryBox.classList.add('hidden');
-            }
-        }
-    };
-
-    window.seleccionarPago = function(metodo) {
-        localStorage.setItem('ecosystem_payment_method', metodo);
-        togglePagoView(true);
-    };
-
-    window.togglePagoView = function(colapsar) {
-        const formBox = document.getElementById('step-2-form');
-        const summaryBox = document.getElementById('step-2-summary');
-        if (formBox && summaryBox) {
-            if (colapsar) {
-                formBox.classList.add('hidden');
-                summaryBox.classList.remove('hidden');
-                const metodo = localStorage.getItem('ecosystem_payment_method') || 'Tarjeta de Crédito / Débito';
-                summaryBox.innerHTML = `
-                    <div class="flex items-center justify-between p-3.5 bg-slate-950 border border-slate-800 rounded-xl text-xs">
-                        <div class="flex items-center gap-2.5">
-                            <i class="fa-solid fa-credit-card text-emerald-400 text-base"></i>
-                            <span class="text-slate-200">Método de pago: <strong>${metodo}</strong></span>
-                        </div>
-                        <button onclick="togglePagoView(false)" class="text-cyan-400 hover:text-cyan-300 font-bold ml-2 underline cursor-pointer shrink-0">Editar</button>
                     </div>
                 `;
             } else {
@@ -485,7 +600,12 @@
             alert('Por favor ingresa y guarda tu Domicilio de Entrega (Paso 1).');
             return;
         }
-        alert('¡Pedido registrado con éxito! Procesando orden en el Ecosistema...');
+        const payment = localStorage.getItem('ecosystem_payment_method');
+        if (!payment) {
+            alert('Por favor selecciona y confirma tu Método de Pago (Paso 2).');
+            return;
+        }
+        alert('¡Pedido registrado con éxito! Método: ' + payment + '. Procesando orden...');
     };
 
     document.addEventListener('DOMContentLoaded', () => {
