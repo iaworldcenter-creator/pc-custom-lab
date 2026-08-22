@@ -1569,8 +1569,10 @@ const productCatalog = [
 // ========================================================================
 // ESTADO GLOBAL DE PAGINACIÓN Y CATÁLOGO
 // ========================================================================
-let currentPage = 1;
-const PRODUCTS_PER_PAGE = 20;
+var currentPage = 1;
+window.currentPage = 1;
+var PRODUCTS_PER_PAGE = 20;
+window.PRODUCTS_PER_PAGE = 20;
 
 // ========================================================================
 // MAPEO DE PÁGINAS A CATEGORÍAS (10 PÁGINAS × 20 PRODUCTOS)
@@ -1835,6 +1837,50 @@ function filterByCategory(category, event) {
 // ========================================================================
 // RENDERIZADO DINÁMICO: 20 PRODUCTOS POR PÁGINA (TAMAÑO +20%)
 // ========================================================================
+
+// ========================================================================
+// REPRODUCTOR DE VIDEO AUTOMÁTICO PARA PC Y PANTALLAS DE TV (DESKTOP/TV)
+// ========================================================================
+function initDesktopVideos() {
+    try {
+        if (window.innerWidth > 768) {
+            const vc1 = document.getElementById("video-container-1");
+            if (vc1) {
+                if (!vc1.querySelector('video')) {
+                    vc1.innerHTML = `<video autoplay muted loop playsinline preload="auto" class="w-full h-full object-cover rounded-2xl">
+                        <source src="assets/img/Female_technician_assembling_gam_202608041518.mp4" type="video/mp4" />
+                    </video>`;
+                }
+                const v1 = vc1.querySelector('video');
+                if (v1) {
+                    v1.muted = true;
+                    v1.loop = true;
+                    v1.playbackRate = 0.8;
+                    const p1 = v1.play();
+                    if (p1 && typeof p1.catch === 'function') p1.catch(() => {});
+                }
+            }
+            const vc2 = document.getElementById("video-container-2");
+            if (vc2) {
+                if (!vc2.querySelector('video')) {
+                    vc2.innerHTML = `<video autoplay muted loop playsinline preload="auto" class="w-full h-full object-cover object-tiger-loyalty">
+                        <source src="assets/img/Tiger_walking_in_warehouse_202608072327.mp4" type="video/mp4" />
+                    </video>`;
+                }
+                const v2 = vc2.querySelector('video');
+                if (v2) {
+                    v2.muted = true;
+                    v2.loop = true;
+                    v2.playbackRate = 0.8;
+                    const p2 = v2.play();
+                    if (p2 && typeof p2.catch === 'function') p2.catch(() => {});
+                }
+            }
+        }
+    } catch(e) {}
+}
+window.initDesktopVideos = initDesktopVideos;
+
 function renderProductsGrid() {
     const grid = document.getElementById("pc-productos-grid");
     const statusEl = document.getElementById("pagination-status");
@@ -1886,6 +1932,22 @@ function renderProductsGrid() {
     });
     grid.appendChild(fragment);
 }
+
+// ========================================================================
+// EJECUCIÓN DIRECTA, INCONDICIONAL Y SÍNCRONA AL PARSEAR EL SCRIPT
+// ========================================================================
+try {
+    if (typeof renderProductsGrid === 'function') {
+        renderProductsGrid();
+    }
+    if (typeof updateCartBadge === 'function') {
+        updateCartBadge();
+    }
+    if (typeof initDesktopVideos === 'function') {
+        initDesktopVideos();
+    }
+} catch(e) {}
+
 
 // ========================================================================
 // MENÚ MÓVIL
@@ -2235,90 +2297,29 @@ window.initApp = initApp;
 window.renderProductsGrid = renderProductsGrid;
 
 function initApp() {
-    actualizarPrefiltroNivel();
-    renderProductsGrid();
-    updateCartBadge();
-    
-    // Initialize Slider if hero slides exist on page
-    if (document.querySelectorAll('.hero-slide').length > 0) {
-        if (typeof window.showSlide === 'function') {
-            window.showSlide(0);
-        }
-    }
-    
-    // Dynamic video load for desktop only (reduces page load size on mobile by 5MB)
-    if (window.innerWidth > 768) {
-        const vc1 = document.getElementById("video-container-1");
-        if (vc1) {
-            vc1.innerHTML = `<video autoplay muted playsinline class="w-full h-full object-cover rounded-2xl">
-                <source src="assets/img/Female_technician_assembling_gam_202608041518.mp4" type="video/mp4" />
-            </video>`;
-            const v1 = vc1.querySelector('video');
-            if (v1) {
-                v1.loop = false;
-                v1.playbackRate = 0.6;
-                v1.addEventListener('ended', () => {
-                    setTimeout(() => { v1.play().catch(err => {}); }, 5000);
-                });
+    try {
+        actualizarPrefiltroNivel();
+        renderProductsGrid();
+        updateCartBadge();
+        initDesktopVideos();
+        
+        // Initialize Slider if hero slides exist on page
+        if (document.querySelectorAll('.hero-slide').length > 0) {
+            if (typeof window.showSlide === 'function') {
+                window.showSlide(0);
             }
         }
-        const vc2 = document.getElementById("video-container-2");
-        if (vc2) {
-            vc2.innerHTML = `<video autoplay muted playsinline class="w-full h-full object-cover object-tiger-loyalty">
-                <source src="assets/img/Tiger_walking_in_warehouse_202608072327.mp4" type="video/mp4" />
-            </video>`;
-            const v2 = vc2.querySelector('video');
-            if (v2) {
-                v2.loop = false;
-                v2.playbackRate = 0.6;
-                v2.addEventListener('ended', () => {
-                    setTimeout(() => { v2.play().catch(err => {}); }, 5000);
-                });
-            }
-        }
-    } else {
-        // Celulares y tablets: la imagen estática ya viene renderizada en el DOM con dimensiones fijas para evitar CLS
-    }
-    
-    // Touch swipe gestures for products pagination on mobile
-    const productsGrid = document.getElementById("pc-productos-grid");
-    if (productsGrid) {
-        let touchStartX = 0;
-        let touchEndX = 0;
-        
-        productsGrid.addEventListener("touchstart", (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
-        
-        productsGrid.addEventListener("touchend", (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        }, { passive: true });
-        
-        function handleSwipe() {
-            const swipeThreshold = 60; // minimum swipe distance in pixels
-            if (touchStartX - touchEndX > swipeThreshold) {
-                // Swiped Left -> Go to Next Page
-                if (currentPage < 10) {
-                    currentPage++;
-                    renderProductsGrid();
-                    renderPagination();
-                }
-            } else if (touchEndX - touchStartX > swipeThreshold) {
-                // Swiped Right -> Go to Previous Page
-                if (currentPage > 1) {
-                    currentPage--;
-                    renderProductsGrid();
-                    renderPagination();
-                }
-            }
-        }
-    }
+    } catch(e) {}
 }
 
 // Iniciar la aplicación inmediatamente al cargar el DOM o si ya está listo
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initApp);
+
+window.addEventListener('resize', () => {
+    if (typeof initDesktopVideos === 'function') initDesktopVideos();
+}, { passive: true });
+
 } else {
     initApp();
 }
