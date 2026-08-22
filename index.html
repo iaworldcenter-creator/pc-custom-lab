@@ -1562,161 +1562,178 @@ const CATEGORY_NAMES = {
 // ========================================================================
 // LÓGICA DE TIENDA Y CARRITO DE COMPRAS
 // ========================================================================
+
+// ========================================================================
+// SISTEMA DE CARRITO GLOBAL UNIFICADO Y SINCRONIZACIÓN EN TIEMPO REAL
+// ========================================================================
 function getCart() {
-    const stored = localStorage.getItem("ecosystem_global_cart");
-    return stored ? JSON.parse(stored) : [];
+    try {
+        const stored = localStorage.getItem("ecosystem_global_cart");
+        const parsed = stored ? JSON.parse(stored) : [];
+        return Array.isArray(parsed) ? parsed.filter(i => i && (parseInt(i.quantity) || 0) > 0) : [];
+    } catch(e) {
+        return [];
+    }
 }
+
 function saveCart(cart) {
-    localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
+    const cleanCart = Array.isArray(cart) ? cart.filter(i => i && (parseInt(i.quantity) || 0) > 0) : [];
+    localStorage.setItem("ecosystem_global_cart", JSON.stringify(cleanCart));
     updateCartBadge();
+    syncGlobalCartState();
+    window.dispatchEvent(new Event('storage'));
 }
+
 function updateCartBadge() {
     const cart = getCart();
-    let totalQty = 0;
-    cart.forEach(item => {
-        const qty = typeof item.quantity === 'number' ? item.quantity : 1;
-        totalQty += qty;
-    });
+    const totalQty = cart.reduce((sum, item) => sum + (parseInt(item.quantity) || 0), 0);
+    
     const badge = document.getElementById("cart-badge-count");
     if (badge) badge.innerText = totalQty;
+    
     const badgeMobile = document.getElementById("cart-badge-count-mobile");
     if (badgeMobile) badgeMobile.innerText = totalQty;
 }
-function addToCart(sku) {
-    const prod = productCatalog.find(p => p.sku === sku);
-    if (!prod) return;
-    const cart = getCart();
-    const existing = cart.find(item => item.sku === sku);
-    if (existing) {
-        existing.quantity = (existing.quantity || 1) + 1;
-    } else {
-        cart.push({...prod, quantity: 1});
-    }
-    saveCart(cart);
-    openCartDrawer();
+
+function syncGlobalCartState() {
+    try {
+        const cart = getCart();
+        const totalCount = cart.reduce((sum, i) => sum + (parseInt(i.quantity) || 0), 0);
+
+        document.querySelectorAll('#cart-badge-count, #cart-count, .cart-counter, [data-cart-count]').forEach(el => {
+            el.innerText = totalCount;
+            el.style.display = totalCount > 0 ? 'inline-flex' : 'none';
+        });
+
+        document.querySelectorAll('header a, header button').forEach(el => {
+            if (el.innerText && el.innerText.includes('MI CARRITO')) {
+                el.innerHTML = '<i class="fa-solid fa-cart-shopping"></i> MI CARRITO (' + totalCount + ')';
+            }
+        });
+    } catch(e) {}
 }
 
-window.openCartDrawer = function() {
-    const drawer = document.getElementById("cartDrawer");
-    if (drawer) {
-        drawer.classList.remove("hidden");
-        renderDrawerCart();
+window.addToCart = function(sku) {
+    const prod = (typeof productCatalog !== 'undefined') ? productCatalog.find(p => p.sku === sku) : null;
+    let cart = getCart();
+    const existing = cart.find(item => item.sku === sku);
+    
+    if (existing) {
+        existing.quantity = (parseInt(existing.quantity) || 1) + 1;
+    } else if (prod) {
+        cart.push({...prod, quantity: 1});
+    } else {
+        cart.push({ sku: sku, nombre: 'Producto ' + sku, precio: 100, imagen: '', quantity: 1 });
     }
-}
-window.closeCartDrawer = function() {
-    const drawer = document.getElementById("cartDrawer");
-    if (drawer) drawer.classList.add("hidden");
-}
+    
+    saveCart(cart);
+    openCartDrawer();
+};
+
 window.removeFromCart = function(sku) {
     let cart = getCart();
     cart = cart.filter(item => item.sku !== sku);
     saveCart(cart);
     renderDrawerCart();
-}
+};
+
 window.changeQuantity = function(sku, amount) {
-        let cart = getCart();
-        const item = cart.find(i => i.sku === sku);
-        if (item) {
-            item.quantity = Math.max(0, (item.quantity || 1) + amount);
+    let cart = getCart();
+    const item = cart.find(i => i.sku === sku);
+    if (item) {
+        item.quantity = (parseInt(item.quantity) || 1) + amount;
+        if (item.quantity <= 0) {
+            cart = cart.filter(i => i.sku !== sku);
         }
-        saveCart(cart);
-        renderDrawerCart();
     }
+    saveCart(cart);
+    renderDrawerCart();
+};
 
 window.renderDrawerCart = function() {
-        const container = document.getElementById("drawer-cart-items");
-        const subtotalDisplay = document.getElementById("drawer-subtotal");
-        if (!container) return;
+    const container = document.getElementById("drawer-cart-items");
+    const subtotalDisplay = document.getElementById("drawer-subtotal");
+    const totalQtyDisplay = document.getElementById("drawer-total-qty");
+    const totalCostDisplay = document.getElementById("drawer-total-cost");
+    if (!container) return;
+    
+    const cart = getCart();
+    container.innerHTML = "";
+    
+    if (cart.length === 0) {
+        container.innerHTML = `<div class="text-center py-12 text-slate-500"><i class="fa-solid fa-cart-flatbed text-4xl mb-3 block opacity-40"></i><p class="text-xs font-semibold">Tu carrito está vacío.</p></div>`;
+        if (subtotalDisplay) subtotalDisplay.innerText = "$0.00 MXN";
+        if (totalQtyDisplay) totalQtyDisplay.innerText = "0";
+        if (totalCostDisplay) totalCostDisplay.innerText = "$0.00 MXN";
+        return;
+    }
+    
+    let subtotal = 0;
+    let totalItems = 0;
+
+    cart.forEach(item => {
+        const price = parseFloat(item.precio) || 0;
+        const qty = parseInt(item.quantity) || 1;
+        subtotal += price * qty;
+        totalItems += qty;
         
-        const cart = getCart();
-        container.innerHTML = "";
-        
-        if (cart.length === 0) {
-            container.innerHTML = `<div class="text-center py-12 text-slate-500"><i class="fa-solid fa-cart-flatbed text-4xl mb-3 block opacity-40"></i><p class="text-xs font-semibold">Tu carrito está vacío.</p></div>`;
-            if (subtotalDisplay) subtotalDisplay.innerText = "$0.00 MXN";
-            return;
-        }
-        
-        let subtotal = 0;
-        cart.forEach(item => {
-            const price = parseFloat(item.precio);
-            const qty = typeof item.quantity === 'number' ? item.quantity : 1;
-            if (qty > 0) {
-                subtotal += price * qty;
-            }
-            
-            const isZero = qty === 0;
-            const div = document.createElement("div");
-            if (isZero) {
-                div.className = "flex items-center gap-3.5 bg-slate-950 border border-slate-900 rounded-2xl p-3 shadow-md opacity-40 text-slate-500";
-            } else {
-                div.className = "flex items-center gap-3.5 bg-slate-950 border border-slate-800/80 rounded-2xl p-3 shadow-md";
-            }
-            
-            div.innerHTML = `
-                <div class="w-12 h-16 rounded-lg overflow-hidden bg-slate-900 border border-slate-800 shrink-0">
-                    <img loading="lazy" src="${item.imagen}" alt="${item.nombre}" class="w-full h-full object-contain p-1 bg-slate-950">
+        const div = document.createElement("div");
+        div.className = "flex items-center gap-3.5 bg-slate-950 border border-slate-800/80 rounded-2xl p-3 shadow-md";
+        div.innerHTML = `
+            <div class="w-12 h-16 rounded-lg overflow-hidden bg-slate-900 border border-slate-800 shrink-0">
+                <img loading="lazy" src="${item.imagen || ''}" alt="${item.nombre}" class="w-full h-full object-contain p-1 bg-slate-950" onerror="this.src='assets/img/slider_ia_human_thumb.webp'">
+            </div>
+            <div class="flex-1 flex flex-col justify-between min-h-[50px]">
+                <div class="flex justify-between items-start gap-1">
+                    <h4 class="text-[11px] font-black text-white leading-tight line-clamp-2">${item.nombre}</h4>
+                    <button onclick="removeFromCart('${item.sku}')" class="text-slate-500 hover:text-red-400 text-xs cursor-pointer p-1" title="Eliminar"><i class="fa-solid fa-trash-can"></i></button>
                 </div>
-                <div class="flex-1 flex flex-col justify-between min-h-[50px]">
-                    <div class="flex justify-between items-start gap-1">
-                        <h4 class="text-[11px] font-black ${isZero ? 'text-slate-500' : 'text-white'} leading-tight line-clamp-2">${item.nombre}</h4>
-                        <button onclick="removeFromCart('${item.sku}')" class="text-slate-500 hover:text-red-400 text-xs cursor-pointer"><i class="fa-solid fa-trash-can"></i></button>
-                    </div>
-                    <div class="flex justify-between items-center mt-1">
-                        <span class="text-xs font-black ${isZero ? 'text-slate-500 line-through' : 'text-amber-400'}">$${price.toFixed(2)}</span>
-                        <div class="flex items-center gap-2.5 bg-slate-900 border border-slate-800 rounded-lg px-2 py-0.5">
-                            <button onclick="changeQuantity('${item.sku}', -1)" class="text-[10px] text-slate-400 hover:text-white cursor-pointer"><i class="fa-solid fa-minus"></i></button>
-                            <span class="text-[11px] font-mono font-bold w-3 text-center ${isZero ? 'text-red-400 font-black' : 'text-slate-300'}">${qty}</span>
-                            <button onclick="changeQuantity('${item.sku}', 1)" class="text-[10px] text-slate-400 hover:text-white cursor-pointer"><i class="fa-solid fa-plus"></i></button>
-                        </div>
+                <div class="flex justify-between items-center mt-1">
+                    <span class="text-xs font-black text-amber-400">$${price.toFixed(2)}</span>
+                    <div class="flex items-center gap-2 bg-slate-900 border border-slate-800 rounded-lg px-2 py-0.5">
+                        <button onclick="changeQuantity('${item.sku}', -1)" class="text-[10px] text-slate-400 hover:text-white cursor-pointer px-1">-</button>
+                        <span class="text-[11px] font-mono font-bold w-4 text-center text-slate-300">${qty}</span>
+                        <button onclick="changeQuantity('${item.sku}', 1)" class="text-[10px] text-slate-400 hover:text-white cursor-pointer px-1">+</button>
                     </div>
                 </div>
-            `;
-            container.appendChild(div);
-        });
-        
-        if (subtotalDisplay) {
-            subtotalDisplay.innerText = `$${subtotal.toFixed(2)} MXN`;
+            </div>
+        `;
+        container.appendChild(div);
+    });
+    
+    if (subtotalDisplay) subtotalDisplay.innerText = `$${subtotal.toFixed(2)} MXN`;
+    if (totalQtyDisplay) totalQtyDisplay.innerText = totalItems.toString();
+    if (totalCostDisplay) totalCostDisplay.innerText = `$${subtotal.toFixed(2)} MXN`;
+};
+
+window.openCartDrawer = function() {
+    const drawer = document.getElementById("cartDrawer");
+    if (drawer) {
+        drawer.style.setProperty("display", "block", "important");
+        drawer.classList.remove("hidden");
+        renderDrawerCart();
+    }
+};
+
+window.closeCartDrawer = function() {
+    const drawer = document.getElementById("cartDrawer");
+    if (drawer) {
+        drawer.style.setProperty("display", "none", "important");
+        drawer.classList.add("hidden");
+    }
+};
+
+window.toggleCartDrawer = function() {
+    const drawer = document.getElementById("cartDrawer");
+    if (drawer) {
+        if (drawer.style.display === "block" && !drawer.classList.contains("hidden")) {
+            closeCartDrawer();
+        } else {
+            openCartDrawer();
         }
     }
-
-// ========================================================================
-// ESTADO GLOBAL: PAGINACIÓN ACTUAL
-// ========================================================================
-let currentPage = 1;
-const PRODUCTS_PER_PAGE = 20;
-
-// ========================================================================
-// CAMBIO DE PÁGINA (INTERACTIVO) — Cada página tiene categoría asignada
-// ========================================================================
-
-// ========================================================================
-// ENRUTADOR BIDIRECCIONAL A LA BOUTIQUE (10 PÁGINAS CATALAGO)
-// ========================================================================
-const BOUTIQUE_PAGE_MAP = {
-    'gpu': 1,
-    'tarjeta-video': 1,
-    'motherboards': 2,
-    'tarjeta-madre': 2,
-    'ram': 3,
-    'memoria-ram': 3,
-    'procesadores': 4,
-    'cpu': 4,
-    'almacenamiento': 5,
-    'ssd': 5,
-    'hdd': 5,
-    'gabinetes': 6,
-    'gabinete': 6,
-    'fuentes': 7,
-    'fuente': 7,
-    'enfriamiento': 8,
-    'cooling': 8,
-    'monitores': 9,
-    'monitor': 9,
-    'perifericos': 10,
-    'teclado': 10,
-    'mouse': 10
 };
+
 
 window.goToBoutiqueCategory = function(cat) {
     const targetPage = BOUTIQUE_PAGE_MAP[cat] || 1;
@@ -3436,6 +3453,17 @@ function syncGlobalCartState() {
 document.addEventListener('DOMContentLoaded', syncGlobalCartState);
 window.addEventListener('storage', syncGlobalCartState);
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        updateCartBadge();
+        syncGlobalCartState();
+    });
+    window.addEventListener('storage', () => {
+        updateCartBadge();
+        syncGlobalCartState();
+        if (typeof renderDrawerCart === 'function') renderDrawerCart();
+    });
+    </script>
 </body>
 </html>
 
