@@ -14,25 +14,39 @@
     <style>
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        .slide-right { animation: slideRight 0.12s cubic-bezier(0, 0, 0.2, 1) forwards; }
-        @keyframes slideRight { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: translateX(0); } }
         .cart-pop { animation: popBadge 0.25s ease-in-out; }
         @keyframes popBadge { 0% { transform: scale(1); } 50% { transform: scale(1.35); } 100% { transform: scale(1); } }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-cyan-500 selection:text-slate-950">
 
-    <!-- TOP BAR Y NAVEGACIÓN CRUZADA AL PORTAL MATRIZ -->
+    <!-- ========================================================================
+         1. CABECERA: NAVEGACIÓN CRUZADA DE LAS 8 BOUTIQUES + BUSCADOR SEARCH-FIRST
+         ======================================================================== -->
     <header class="bg-slate-900/95 backdrop-blur border-b border-slate-800 sticky top-0 z-50 shadow-2xl">
         
-        <!-- Nivel 1: Utilidades y Enlace al Hub Matriz -->
-        <div class="max-w-[99%] 2xl:max-w-[1850px] mx-auto px-4 py-2 flex items-center justify-between text-xs border-b border-slate-800/80">
+        <!-- Nivel 1: Barra de Navegación Cruzada Completa (Interconexión de las 8 Tiendas) -->
+        <div class="max-w-[99%] 2xl:max-w-[1850px] mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2 text-xs border-b border-slate-800/80">
             <div class="flex items-center gap-2">
-                <a href="https://iaworldcenter-creator.github.io/sitios-web/" class="px-2.5 py-0.5 rounded bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono font-bold text-[10px] uppercase hover:bg-amber-500 hover:text-slate-950 transition flex items-center gap-1">
-                    <i class="fa-solid fa-house text-[9px]"></i> Portal Matriz BAZAR NFL.GDL
-                </a>
-                <span class="text-slate-300 hidden sm:inline text-[11px] font-semibold">Envío Exprés el mismo día en Guadalajara • Carrito Unificado</span>
+                <span class="px-2.5 py-0.5 rounded bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono font-bold text-[10px] uppercase">
+                    Envío Exprés El Mismo Día
+                </span>
+                <span class="text-slate-300 hidden xl:inline text-[11px] font-semibold">Guadalajara Centro • Carrito Unificado</span>
             </div>
+
+            <!-- ENLACES DIRECTOS A LAS 8 BOUTIQUES -->
+            
+<nav class="hidden 2xl:flex items-center gap-1.5 text-[11px] font-bold text-slate-300">
+    <a href="https://iaworldcenter-creator.github.io/sitios-web/" class="px-2.5 py-1 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 hover:bg-amber-500 hover:text-slate-950 transition flex items-center gap-1"><i class="fa-solid fa-house text-[10px]"></i> Matriz</a>
+    <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="px-2 py-1 rounded-lg hover:bg-slate-800 hover:text-cyan-400 transition flex items-center gap-1"><i class="fa-solid fa-microchip text-[10px] text-cyan-400"></i> PC Custom</a>
+    <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" class="px-2 py-1 rounded-lg hover:bg-slate-800 hover:text-cyan-300 transition flex items-center gap-1"><i class="fa-solid fa-gem text-[10px] text-cyan-300"></i> Vía MX</a>
+    <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" class="px-2 py-1 rounded-lg hover:bg-slate-800 hover:text-amber-400 transition flex items-center gap-1"><i class="fa-solid fa-smoking text-[10px] text-amber-400"></i> Cigarros</a>
+    <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" class="px-2 py-1 rounded-lg hover:bg-slate-800 hover:text-pink-400 transition flex items-center gap-1"><i class="fa-solid fa-candy-cane text-[10px] text-pink-400"></i> Dulces</a>
+    <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" class="px-2 py-1 rounded-lg hover:bg-slate-800 hover:text-indigo-400 transition flex items-center gap-1"><i class="fa-solid fa-newspaper text-[10px] text-indigo-400"></i> Kiosco</a>
+    <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" class="px-2 py-1 rounded-lg hover:bg-slate-800 hover:text-emerald-400 transition flex items-center gap-1"><i class="fa-solid fa-store text-[10px] text-emerald-400"></i> Mi Puesto</a>
+    <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" class="px-2 py-1 rounded-lg hover:bg-slate-800 hover:text-red-400 transition flex items-center gap-1"><i class="fa-solid fa-tags text-[10px] text-red-400"></i> Liquidaciones</a>
+</nav>
+
 
             <div class="flex items-center gap-3 font-bold text-[11px]">
                 <a href="https://gemini.google.com" target="_blank" class="text-slate-300 hover:text-cyan-400 transition flex items-center gap-1">
@@ -54,7 +68,7 @@
                         src="https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp" 
                         alt="Logo Tigre PC CUSTOM LAB" 
                         class="w-12 h-12 rounded-full object-cover border-2 border-amber-400 shadow-[0_0_15px_rgba(251,191,36,0.5)]"
-                        onerror="this.src='assets/img/mascota_tigre_thumb.webp';"
+                        onerror="this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';"
                     />
                 </div>
                 <div class="flex flex-col">
@@ -65,7 +79,7 @@
                 </div>
             </div>
 
-            <!-- Súper-Buscador Blanco Multi-Token -->
+            <!-- Súper-Buscador Blanco Multi-Token con Botones Explícitos -->
             <div class="flex-1 max-w-3xl w-full relative">
                 <div class="flex items-center bg-white rounded-full border-2 border-cyan-400 shadow-[0_0_22px_rgba(6,182,212,0.4)] px-4 py-1.5 gap-2">
                     <i class="fa-solid fa-magnifying-glass text-slate-400 text-sm"></i>
@@ -86,8 +100,8 @@
                     </button>
                 </div>
 
-                <!-- Dropdown de Autocompletado con Compra Directa -->
-                <div id="boutique-autocomplete-box" class="hidden absolute top-full left-0 right-0 mt-2 bg-slate-900 border-2 border-cyan-500/60 rounded-2xl shadow-2xl z-50 p-2 flex flex-col gap-1.5 max-h-96 overflow-y-auto no-scrollbar"></div>
+                <!-- Dropdown de Autocompletado con Botones Explícitos (Agregar al Carrito / Comprar Ahora) -->
+                <div id="boutique-autocomplete-box" class="hidden absolute top-full left-0 right-0 mt-2 bg-slate-900 border-2 border-cyan-500/60 rounded-2xl shadow-2xl z-50 p-2.5 flex flex-col gap-2 max-h-96 overflow-y-auto no-scrollbar"></div>
             </div>
 
             <!-- Canasta Unificada con Badge Dinámico -->
@@ -125,7 +139,6 @@
                     </span>
                 </div>
 
-                <!-- Lista de Categorías -->
                 <nav class="flex flex-col gap-2" id="sidebar-categories-list">
                     <!-- Inyectado por JavaScript -->
                 </nav>
@@ -163,7 +176,7 @@
 
             </aside>
 
-            <!-- ESCAPARATE DE PRODUCTOS CON PRECIOS DE ALTO CONTRASTE Y SWIPE MÓVIL -->
+            <!-- ESCAPARATE DE PRODUCTOS CON PRECIOS DE ALTO CONTRASTE Y BOTONES CLAROS -->
             <section class="flex-1 w-full flex flex-col gap-6 min-w-0">
                 <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                     <span class="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider" id="results-count-txt">
@@ -250,7 +263,7 @@
                     <span id="drawer-total-txt" class="text-xl font-mono font-black text-amber-400">$0.00 MXN</span>
                 </div>
                 <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/checkout.html" class="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black py-3 rounded-xl text-xs uppercase tracking-wider transition active:scale-95 shadow-lg shadow-amber-500/20 cursor-pointer flex items-center justify-center gap-2 text-center">
-                    <i class="fa-solid fa-credit-card"></i> Pagar Ahora
+                    <i class="fa-solid fa-credit-card"></i> Finalizar Compra Ahora
                 </a>
             </div>
         </div>
@@ -352,8 +365,8 @@
 
     <!-- MOTOR JS INTEGRADO -->
     <script>
-    const boutiqueProducts = [{"sku": "PC-001", "nombre": "Gabinete Micro-ATX con Fuente 500W Incluida", "marca": "Acteck", "precio": 1250.0, "original": 1550.0, "desc": "Chasis esbelto con fuente certificada, puertos USB 3.0 frontales y bahías para SSD.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/gabinete_negro.webp", "tokens": ["gabinete", "fuente", "pc", "chasis"]}, {"sku": "PC-002", "nombre": "Tarjeta Madre ASUS Prime B760M-A WiFi DDR5", "marca": "ASUS", "precio": 3400.0, "original": 3950.0, "desc": "Placa base con soporte Intel Core 12va/13va/14va Gen y dual M.2 PCIe 4.0.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/motherboard_asus.webp", "tokens": ["tarjeta madre", "motherboard", "asus", "placa"]}, {"sku": "PC-003", "nombre": "Procesador Intel Core i5-14400F 10C/16T con Disipador", "marca": "Intel", "precio": 4350.0, "original": 4990.0, "desc": "10 núcleos híbridos de alto rendimiento con disipador silencioso de fábrica.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/cpu_intel_ultra.webp", "tokens": ["procesador", "cpu", "intel", "i5"]}, {"sku": "PC-004", "nombre": "Memoria RAM Kingston FURY Beast 16GB DDR5 5600MHz", "marca": "Kingston", "precio": 1250.0, "original": 1500.0, "desc": "Módulo DDR5 de alta velocidad con disipador térmico de aluminio negro.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/ram_caja.webp", "tokens": ["ram", "kingston", "fury", "ddr5", "memoria"]}, {"sku": "PC-005", "nombre": "Disco Sólido SSD Kingston NV2 1TB NVMe PCIe 4.0", "marca": "Kingston", "precio": 1350.0, "original": 1650.0, "desc": "3,500 MB/s de lectura secuencial para carga instantánea del sistema.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/disco_solido_m2.webp", "tokens": ["ssd", "kingston", "nvme", "disco", "m2"]}, {"sku": "PC-006", "nombre": "Tarjeta Gráfica NVIDIA RTX 4070 Ti Super 16GB", "marca": "NVIDIA", "precio": 17800.0, "original": 21500.0, "desc": "DLSS 3, Ray Tracing y 16GB GDDR6X para gaming y renderizado 4K.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/gpu_nvidia.webp", "tokens": ["gpu", "nvidia", "rtx", "4070", "grafica"]}];
-    const boutiqueCategories = [{"name": "Tarjetas de Video RTX & Radeon", "icon": "fa-microchip"}, {"name": "Procesadores Intel & AMD Ryzen", "icon": "fa-bolt"}, {"name": "Tarjetas Madre LGA1700 & AM5", "icon": "fa-server"}, {"name": "Memorias RAM DDR5 & DDR4", "icon": "fa-memory"}, {"name": "Discos SSD M.2 NVMe PCIe 4.0", "icon": "fa-hard-drive"}, {"name": "Gabinetes & Fuentes Modulares", "icon": "fa-cube"}, {"name": "Enfriamiento Líquido & Disipadores", "icon": "fa-fan"}, {"name": "Periféricos Gamer & Monitores", "icon": "fa-display"}];
+    const boutiqueProducts = [{"sku": "PC-001", "nombre": "Gabinete Micro-ATX con Fuente 500W Incluida", "marca": "Acteck", "precio": 1250.0, "original": 1550.0, "desc": "Chasis esbelto con fuente certificada, puertos USB 3.0 frontales y bahías SSD.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/gabinete_negro.webp", "tokens": ["gabinete", "fuente", "pc", "chasis"]}, {"sku": "PC-002", "nombre": "Tarjeta Madre ASUS Prime B760M-A WiFi DDR5", "marca": "ASUS", "precio": 3400.0, "original": 3950.0, "desc": "Placa base con soporte Intel Core 12va/13va/14va Gen y dual M.2 PCIe 4.0.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/motherboard_asus.webp", "tokens": ["tarjeta madre", "motherboard", "asus", "placa"]}, {"sku": "PC-003", "nombre": "Procesador Intel Core i5-14400F 10C/16T con Disipador", "marca": "Intel", "precio": 4350.0, "original": 4990.0, "desc": "10 núcleos híbridos de alto rendimiento con disipador silencioso de fábrica.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/cpu_intel_ultra.webp", "tokens": ["procesador", "cpu", "intel", "i5"]}, {"sku": "PC-004", "nombre": "Memoria RAM Kingston FURY Beast 16GB DDR5 5600MHz", "marca": "Kingston", "precio": 1250.0, "original": 1500.0, "desc": "Módulo DDR5 de alta velocidad con disipador térmico de aluminio negro.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/ram_caja.webp", "tokens": ["ram", "kingston", "fury", "ddr5", "memoria"]}, {"sku": "PC-005", "nombre": "Disco Sólido SSD Kingston NV2 1TB NVMe PCIe 4.0", "marca": "Kingston", "precio": 1350.0, "original": 1650.0, "desc": "3,500 MB/s de lectura secuencial para carga instantánea del sistema.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/disco_solido_m2.webp", "tokens": ["ssd", "kingston", "nvme", "disco", "m2"]}, {"sku": "PC-006", "nombre": "Tarjeta Gráfica NVIDIA RTX 4070 Ti Super 16GB", "marca": "NVIDIA", "precio": 17800.0, "original": 21500.0, "desc": "DLSS 3, Ray Tracing y 16GB GDDR6X para gaming y renderizado 4K.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/gpu_nvidia.webp", "tokens": ["gpu", "nvidia", "rtx", "4070", "grafica"]}];
+    const boutiqueCategories = [{"name": "Tarjetas de Video RTX & Radeon", "icon": "fa-microchip"}, {"name": "Procesadores Intel & AMD Ryzen", "icon": "fa-bolt"}, {"name": "Tarjetas Madre LGA1700 & AM5", "icon": "fa-server"}, {"name": "Memorias RAM DDR5 & DDR4", "icon": "fa-memory"}, {"name": "Discos SSD M.2 NVMe PCIe 4.0", "icon": "fa-hard-drive"}, {"name": "Gabinetes & Fuentes Modulares", "icon": "fa-cube"}];
 
     function renderBoutiqueSidebar() {
         const container = document.getElementById("sidebar-categories-list");
@@ -431,12 +444,13 @@
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-2 gap-1.5">
-                            <button onclick="addToCartDirect('${p.sku}', 1)" class="bg-slate-900 hover:bg-slate-800 text-cyan-300 font-bold py-2 px-1 rounded-xl text-[10px] flex items-center justify-center gap-1 transition active:scale-95 cursor-pointer shadow border border-cyan-500/30" title="Agregar a canasta">
-                                <i class="fa-solid fa-cart-plus text-[10px]"></i> <span class="truncate">Carrito</span>
+                        <!-- BOTONES EXPLÍCITOS: AGREGAR AL CARRITO / COMPRAR AHORA -->
+                        <div class="grid grid-cols-1 gap-2">
+                            <button onclick="addToCartDirect('${p.sku}', 1)" class="w-full bg-slate-900 hover:bg-slate-800 text-cyan-300 font-bold py-2 px-2 rounded-xl text-[11px] flex items-center justify-center gap-1.5 transition active:scale-95 cursor-pointer shadow border border-cyan-500/30" title="Agregar este producto a tu canasta">
+                                <i class="fa-solid fa-cart-plus text-xs"></i> <span>Agregar al Carrito</span>
                             </button>
-                            <button onclick="buyNowDirect('${p.sku}')" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black py-2 px-1 rounded-xl text-[10px] flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer" title="Comprar ahora">
-                                <i class="fa-solid fa-bolt text-[10px]"></i> <span class="truncate">Comprar</span>
+                            <button onclick="buyNowDirect('${p.sku}')" class="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black py-2 px-2 rounded-xl text-[11px] flex items-center justify-center gap-1.5 transition active:scale-95 shadow cursor-pointer" title="Comprar y pagar ahora mismo">
+                                <i class="fa-solid fa-bag-shopping text-xs"></i> <span>Comprar Ahora</span>
                             </button>
                         </div>
                     </div>
@@ -478,21 +492,24 @@
         }
 
         box.innerHTML = matches.slice(0, 5).map(item => `
-            <div class="bg-slate-950 rounded-xl p-2.5 flex items-center justify-between gap-3 transition shadow border border-slate-800/80">
+            <div class="bg-slate-950 rounded-xl p-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 transition shadow border border-slate-800/80">
                 <div class="flex items-center gap-2.5 min-w-0 flex-1">
-                    <img src="${item.img}" alt="${item.nombre}" class="w-9 h-9 object-contain rounded-lg bg-slate-900 p-0.5 shrink-0" onerror="this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';"/>
+                    <img src="${item.img}" alt="${item.nombre}" class="w-10 h-10 object-contain rounded-lg bg-slate-900 p-0.5 shrink-0" onerror="this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';"/>
                     <div class="min-w-0">
                         <span class="text-[9px] font-mono text-cyan-400 font-bold block">${item.sku} &bull; ${item.marca}</span>
                         <h5 class="text-xs font-bold text-white truncate">${item.nombre}</h5>
-                        <span class="text-amber-400 font-mono font-bold text-xs">$${item.precio.toFixed(2)} MXN</span>
+                        <div class="flex items-center gap-2 mt-0.5">
+                            <span class="text-amber-400 font-mono font-bold text-xs">$${item.precio.toFixed(2)} MXN</span>
+                            ${item.original ? `<span class="text-[10px] font-mono text-red-400 line-through">$${item.original.toFixed(2)}</span>` : ''}
+                        </div>
                     </div>
                 </div>
-                <div class="flex items-center gap-1.5 shrink-0">
-                    <button onclick="addToCartDirect('${item.sku}', 1)" class="bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold px-2 py-1.5 rounded-lg text-[10px] flex items-center gap-1 transition active:scale-95 shadow">
-                        <i class="fa-solid fa-cart-plus"></i>
+                <div class="flex items-center gap-2 w-full sm:w-auto justify-end shrink-0">
+                    <button onclick="addToCartDirect('${item.sku}', 1)" class="bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold px-3 py-1.5 rounded-lg text-[10px] flex items-center gap-1 transition active:scale-95 shadow border border-cyan-500/30">
+                        <i class="fa-solid fa-cart-plus"></i> <span>Agregar</span>
                     </button>
-                    <button onclick="buyNowDirect('${item.sku}')" class="bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black px-2.5 py-1.5 rounded-lg text-[10px] flex items-center gap-1 transition active:scale-95 shadow">
-                        <i class="fa-solid fa-bolt"></i>
+                    <button onclick="buyNowDirect('${item.sku}')" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-black px-3.5 py-1.5 rounded-lg text-[10px] flex items-center gap-1 transition active:scale-95 shadow">
+                        <i class="fa-solid fa-bag-shopping"></i> <span>Comprar Ahora</span>
                     </button>
                 </div>
             </div>
