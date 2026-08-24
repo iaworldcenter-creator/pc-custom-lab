@@ -5,45 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PC Custom Lab | Hardware, GPUs & Ensambles IA 2026</title>
     <meta name="description" content="Pedro Moreno 501 A • Hardware de Alto Rendimiento, GPUs & Ensambles IA" />
+    <meta name="google-site-verification" content="2xIPYIU_imoZjFogZhoFRuepS7PFhXQloOamPV7ex6Q" />
 
-    <!-- Preconnect & DNS-Prefetch para Acelerar Recursos Críticos -->
+    <!-- 1. Preconnect & DNS-Prefetch de Altísima Prioridad -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-    <link rel="preconnect" href="https://iaworldcenter-creator.github.io" />
-    <link rel="dns-prefetch" href="https://iaworldcenter-creator.github.io" />
 
-    <!-- CSS Compilado Local de Cero Bloqueo -->
+    <!-- 2. Descubrimiento Inmediato de Elemento LCP (Preload Prioritario con fetchpriority="high") -->
+    <link rel="preload" as="image" href="assets/img/mascota_tigre_thumb.webp" type="image/webp" fetchpriority="high" />
+
+    <!-- 3. Preload de Fuentes WebFont FontAwesome (Elimina Alerta de Visualización de Fuentes) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- 4. CSS Local Precompilado de Cero Bloqueo -->
     <link rel="stylesheet" href="assets/css/tailwind-built.css" />
 
-    <!-- FontAwesome Asíncrono Sin Bloquear Renderizado -->
+    <!-- 5. FontAwesome Asíncrono No Bloqueante -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
-    
+
     <style>
-    /* Optimización de Renderizado y Fuentes Font-Display Swap */
-    @font-face { font-family: 'Font Awesome 6 Free'; font-display: swap; }
-    @font-face { font-family: 'Font Awesome 6 Brands'; font-display: swap; }
-    
-    /* Clases de Alto Rendimiento y Eliminación de Layout Shift (CLS) */
+    /* Reglas de Fuente con font-display: swap */
+    @font-face {
+        font-family: 'Font Awesome 6 Free';
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2') format('woff2');
+    }
+    @font-face {
+        font-family: 'Font Awesome 6 Brands';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2') format('woff2');
+    }
+
+    /* Rendimiento, Animaciones y Prevención de Cumulative Layout Shift (CLS = 0) */
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     .cart-pop { animation: popBadge 0.25s ease-in-out; }
     @keyframes popBadge { 0% { transform: scale(1); } 50% { transform: scale(1.35); } 100% { transform: scale(1); } }
-    
-    .max-w-custom { max-width: 99%; }
-    @media (min-width: 1536px) { .max-w-custom { max-width: 1850px; } }
-    .w-sidebar { width: 100%; }
-    @media (min-width: 1024px) { .w-sidebar { width: 340px; } }
-    @media (min-width: 1280px) { .w-sidebar { width: 370px; } }
-    
-    .shadow-glow-amber { box-shadow: 0 0 15px rgba(251,191,36,0.5); }
-    .shadow-glow-cyan { box-shadow: 0 0 22px rgba(6,182,212,0.4); }
-    .shadow-glow-app { box-shadow: 0 0 25px rgba(6,182,212,0.25); }
-    
-    /* Prevenir salto de diseño en el grid de productos */
-    #products-grid-container { min-height: 480px; content-visibility: auto; contain-intrinsic-size: 1px 500px; }
-    #boutique-sidebar-root { content-visibility: auto; contain-intrinsic-size: 1px 600px; }
 
+    #products-grid-container { min-height: 440px; content-visibility: auto; contain-intrinsic-size: 1px 440px; }
+    #boutique-sidebar-root { content-visibility: auto; contain-intrinsic-size: 1px 500px; }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-cyan-500 selection:text-slate-950">
@@ -87,7 +93,7 @@
             <div class="flex items-center justify-between w-full md:w-auto gap-3">
                 <div class="flex items-center gap-3 cursor-pointer shrink-0" onclick="document.getElementById('pie-de-pagina').scrollIntoView({ behavior: 'smooth' });">
                     <div class="relative w-12 h-12 flex items-center justify-center">
-                        <img src="https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp" alt="Logo Tigre PC CUSTOM LAB" width="48" height="48" class="w-12 h-12 rounded-full object-cover border-2 border-amber-400 shadow-[0_0_15px_rgba(251,191,36,0.5)]" fetchpriority="high" decoding="async" onerror="this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';" />
+                        <img src="assets/img/mascota_tigre_thumb.webp" alt="Logo Tigre" width="48" height="48" fetchpriority="high" decoding="async" class="w-12 h-12 rounded-full object-cover border-2 border-amber-400 shadow-[0_0_15px_rgba(251,191,36,0.5)]" onerror="this.onerror=null;this.src='assets/img/mascota_tigre_thumb.webp';" />
                     </div>
                     <div class="flex flex-col">
                         <span class="font-black text-xl sm:text-2xl text-white tracking-wider uppercase leading-none">PC CUSTOM LAB</span>
@@ -151,9 +157,7 @@
         <span class="text-xs font-mono font-black text-white uppercase tracking-wider">App Móvil Pedidos Rápidos</span>
     </div>
     <div class="w-44 h-44 mx-auto bg-white p-2.5 rounded-2xl shadow-xl flex items-center justify-center">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A//iaworldcenter-creator.github.io/sitios-web/app.html&margin=1" alt="Código QR App BAZAR NFL" width="176" height="176" loading="lazy" decoding="async" class="w-full h-full object-contain rounded-lg"
-            onerror="this.onerror=null; this.src='https://quickchart.io/qr?text=https%3A//iaworldcenter-creator.github.io/sitios-web/app.html&size=300';"
-        />
+        <img src="assets/img/codigo_qr_bazar_nfl.png" alt="Código QR App BAZAR NFL" width="176" height="176" loading="lazy" decoding="async" class="w-full h-full object-contain rounded-lg" />
     </div>
     <div class="space-y-1">
         <strong class="text-xs text-amber-400 block font-bold uppercase">Entrega Directa a tu Domicilio</strong>
