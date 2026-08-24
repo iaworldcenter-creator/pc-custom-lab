@@ -88,6 +88,59 @@
     </header>
 
     <main class="w-full max-w-[99%] 2xl:max-w-[1850px] mx-auto px-2 sm:px-4 py-8 flex-1">
+        
+        <!-- COTIZADOR UBER COMPLETO EN TODAS LAS BOUTIQUES -->
+        
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-3xl shadow-xl space-y-3 mb-6">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+        <span class="text-xs font-mono font-bold text-white flex items-center gap-1.5">
+            <i class="fa-brands fa-uber text-white"></i> Cotizar Envío Uber Flash a tu Domicilio
+        </span>
+        <span id="shipping-rate-badge" class="text-xs font-mono font-bold text-slate-400 bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800">
+            Pendiente Cotizar
+        </span>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 text-xs">
+        <div>
+            <label class="text-[10px] font-mono text-slate-400 block mb-0.5">Calle / Avenida:</label>
+            <input type="text" id="inputCalle" placeholder="Ej. Av. Juárez, Hidalgo..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2 text-white outline-none focus:border-cyan-400" />
+        </div>
+        <div>
+            <label class="text-[10px] font-mono text-slate-400 block mb-0.5">Núm. Exterior / Interior:</label>
+            <input type="text" id="inputNum" placeholder="Ej. #501 int A" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2 text-white outline-none focus:border-cyan-400" />
+        </div>
+        <div>
+            <label class="text-[10px] font-mono text-slate-400 block mb-0.5">Colonia / Barrio:</label>
+            <input type="text" id="inputColonia" placeholder="Ej. Americana, Centro..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2 text-white outline-none focus:border-cyan-400" />
+        </div>
+        <div>
+            <label class="text-[10px] font-mono text-slate-400 block mb-0.5">Municipio / Zona:</label>
+            <select id="selectMunicipio" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2 text-white outline-none focus:border-cyan-400 font-medium">
+                <option value="">-- Selecciona Municipio --</option>
+                <option value="guadalajara">Guadalajara (Centro / Alrededores)</option>
+                <option value="zapopan">Zapopan (Minerva / Providencia / Poniente)</option>
+                <option value="tlaquepaque">Tlaquepaque (Centro / Alamo)</option>
+                <option value="tonala">Tonalá (Oriente / Periférico)</option>
+                <option value="tlajomulco">Tlajomulco de Zúñiga (Zona Sur / Payuca)</option>
+                <option value="elsalto">El Salto / Aeropuerto</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="address-error-box" class="hidden p-2.5 rounded-xl bg-amber-950/60 border border-amber-500/50 text-amber-300 text-xs font-mono leading-tight"></div>
+
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-1">
+        <span id="distance-calc-info" class="text-[11px] font-mono text-slate-400">
+            <i class="fa-solid fa-location-dot text-amber-400 mr-1"></i> Despacho directo desde Pedro Moreno 501 A
+        </span>
+        <button onclick="quoteShippingUniversal()" class="w-full sm:w-auto bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-black px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider transition active:scale-95 shadow cursor-pointer flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-calculator text-xs"></i> <span>Cotizar Flete de Envío</span>
+        </button>
+    </div>
+</div>
+
+
         <div class="flex flex-col lg:flex-row gap-8 items-start justify-center">
             
             <aside class="w-full lg:w-[340px] xl:w-[370px] shrink-0 bg-slate-900/90 rounded-3xl p-5 shadow-2xl relative" id="boutique-sidebar-root">
@@ -104,47 +157,47 @@
 
                 <nav class="flex flex-col gap-2" id="sidebar-categories-list"></nav>
 
-                <!-- UN SOLO CÓDIGO QR CON TEXTOS PERSUASIVOS -->
+                <!-- CÓDIGO QR PERSUASIVO -->
                 
-                <div class="mt-4 p-4 bg-slate-950 border-2 border-cyan-400 rounded-3xl shadow-[0_0_25px_rgba(6,182,212,0.25)] text-center space-y-3">
-                    <div class="flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-mobile-screen text-cyan-400 text-lg"></i>
-                        <span class="text-xs font-mono font-black text-white uppercase tracking-wider">App Móvil Pedidos Rápidos</span>
-                    </div>
+<div class="mt-4 p-4 bg-slate-950 border-2 border-cyan-400 rounded-3xl shadow-[0_0_25px_rgba(6,182,212,0.25)] text-center space-y-3">
+    <div class="flex items-center justify-center gap-2">
+        <i class="fa-solid fa-mobile-screen text-cyan-400 text-lg"></i>
+        <span class="text-xs font-mono font-black text-white uppercase tracking-wider">App Móvil Pedidos Rápidos</span>
+    </div>
 
-                    <div class="w-44 h-44 mx-auto bg-white p-2.5 rounded-2xl shadow-xl flex items-center justify-center">
-                        <img 
-                            src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A//iaworldcenter-creator.github.io/sitios-web/app.html&margin=1" 
-                            alt="Código QR App BAZAR NFL" 
-                            class="w-full h-full object-contain rounded-lg"
-                            onerror="this.onerror=null; this.src='https://quickchart.io/qr?text=https%3A//iaworldcenter-creator.github.io/sitios-web/app.html&size=300';"
-                        />
-                    </div>
+    <div class="w-44 h-44 mx-auto bg-white p-2.5 rounded-2xl shadow-xl flex items-center justify-center">
+        <img 
+            src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A//iaworldcenter-creator.github.io/sitios-web/app.html&margin=1" 
+            alt="Código QR App BAZAR NFL" 
+            class="w-full h-full object-contain rounded-lg"
+            onerror="this.onerror=null; this.src='https://quickchart.io/qr?text=https%3A//iaworldcenter-creator.github.io/sitios-web/app.html&size=300';"
+        />
+    </div>
 
-                    <div class="space-y-1">
-                        <strong class="text-xs text-amber-400 block font-bold uppercase">Entrega Directa a tu Domicilio</strong>
-                        <p class="text-[11px] text-slate-300 leading-snug">
-                            Utiliza nuestra App oficial para que tus compras lleguen volando a la puerta de tu casa o taller.
-                        </p>
-                    </div>
+    <div class="space-y-1">
+        <strong class="text-xs text-amber-400 block font-bold uppercase">Entrega Directa a tu Domicilio</strong>
+        <p class="text-[11px] text-slate-300 leading-snug">
+            Utiliza nuestra App oficial para que tus compras lleguen volando a la puerta de tu casa o taller.
+        </p>
+    </div>
 
-                    <div class="flex flex-col gap-2 pt-1">
-                        <a href="https://iaworldcenter-creator.github.io/sitios-web/app.html" target="_blank" class="flex items-center justify-center gap-3 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-emerald-400 py-2.5 px-3 rounded-xl text-left transition shadow group">
-                            <i class="fa-brands fa-google-play text-xl text-emerald-400 group-hover:scale-110 transition"></i>
-                            <div>
-                                <span class="text-[8px] font-mono text-slate-400 block uppercase leading-none">Disponible vía Web / PWA</span>
-                                <strong class="text-xs text-white block leading-none font-bold">Instalar en Android</strong>
-                            </div>
-                        </a>
-                        <a href="https://iaworldcenter-creator.github.io/sitios-web/app.html" target="_blank" class="flex items-center justify-center gap-3 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-400 py-2.5 px-3 rounded-xl text-left transition shadow group">
-                            <i class="fa-brands fa-apple text-2xl text-white group-hover:scale-110 transition"></i>
-                            <div>
-                                <span class="text-[8px] font-mono text-slate-400 block uppercase leading-none">Compatible con iPhone</span>
-                                <strong class="text-xs text-white block leading-none font-bold">Instalar en iOS / Apple</strong>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+    <div class="flex flex-col gap-2 pt-1">
+        <a href="https://iaworldcenter-creator.github.io/sitios-web/app.html" target="_blank" class="flex items-center justify-center gap-3 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-emerald-400 py-2.5 px-3 rounded-xl text-left transition shadow group">
+            <i class="fa-brands fa-google-play text-xl text-emerald-400 group-hover:scale-110 transition"></i>
+            <div>
+                <span class="text-[8px] font-mono text-slate-400 block uppercase leading-none">Disponible vía Web / PWA</span>
+                <strong class="text-xs text-white block leading-none font-bold">Instalar en Android</strong>
+            </div>
+        </a>
+        <a href="https://iaworldcenter-creator.github.io/sitios-web/app.html" target="_blank" class="flex items-center justify-center gap-3 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-400 py-2.5 px-3 rounded-xl text-left transition shadow group">
+            <i class="fa-brands fa-apple text-2xl text-white group-hover:scale-110 transition"></i>
+            <div>
+                <span class="text-[8px] font-mono text-slate-400 block uppercase leading-none">Compatible con iPhone</span>
+                <strong class="text-xs text-white block leading-none font-bold">Instalar en iOS / Apple</strong>
+            </div>
+        </a>
+    </div>
+</div>
 
 
                 <div class="mt-5 pt-5 border-t border-slate-800 flex flex-col gap-3">
@@ -167,8 +220,8 @@
                 </div>
             </aside>
 
-            <!-- CONTENEDOR DE PRODUCTOS CON SWIPE HORIZONTAL FORZADO EN MÓVILES -->
-            <section class="flex-1 w-full flex flex-col gap-6 min-w-0">
+            <!-- ESCAPARATE CON 2 PRODUCTOS EN MÓVIL + FLECHAS FLOTANTES -->
+            <section class="flex-1 w-full flex flex-col gap-4 min-w-0">
                 <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                     <span class="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider" id="results-count-txt">
                         Catálogo de Entrega Inmediata
@@ -176,8 +229,18 @@
                     <span class="text-xs font-mono text-slate-400">Pedro Moreno 501 A</span>
                 </div>
 
-                <!-- SWIPE FORZADO: flex-row overflow-x-auto en móvil, grid en desktop -->
-                <div id="products-grid-container" class="flex flex-row overflow-x-auto flex-nowrap lg:grid lg:grid-cols-5 lg:overflow-visible gap-4 pb-3 lg:pb-0 no-scrollbar snap-x snap-mandatory">
+                <div class="relative">
+                    <button onclick="scrollCarousel('products-grid-container', -1)" class="lg:hidden absolute -left-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-slate-900 border border-cyan-400 text-cyan-300 flex items-center justify-center shadow-lg active:scale-90">
+                        <i class="fa-solid fa-chevron-left text-xs"></i>
+                    </button>
+
+                    <!-- Carrusel de 2 productos por pantalla en móvil / 5 cols en desktop -->
+                    <div id="products-grid-container" class="flex flex-row overflow-x-auto flex-nowrap lg:grid lg:grid-cols-5 lg:overflow-visible gap-3 pb-3 lg:pb-0 no-scrollbar snap-x snap-mandatory scroll-smooth px-1">
+                    </div>
+
+                    <button onclick="scrollCarousel('products-grid-container', 1)" class="lg:hidden absolute -right-2 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-slate-900 border border-cyan-400 text-cyan-300 flex items-center justify-center shadow-lg active:scale-90">
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
                 </div>
             </section>
 
@@ -190,7 +253,7 @@
                 <div class="flex flex-col gap-3">
                     <h4 class="text-sm font-black text-white uppercase tracking-wider mb-1 flex items-center gap-2"><i class="fa-solid fa-location-dot text-amber-400"></i> Contacto Local</h4>
                     <p class="flex items-start gap-2 text-slate-300"><i class="fa-solid fa-map-pin text-slate-500 mt-0.5 shrink-0"></i><span>Pedro Moreno 501 A, Guadalajara Centro, Jalisco (CP 44100)</span></p>
-                    <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-cyan-400 shrink-0"></i><span>Teléfono Fijo: <a href="tel:3336136348" class="text-slate-200 hover:text-cyan-400 font-mono">(33) 3613 6348</a></span></p>
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-cyan-400 shrink-0"></i><span>Teléfono: <a href="tel:3336136348" class="text-slate-200 hover:text-cyan-400 font-mono">(33) 3613 6348</a></span></p>
                     <p class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-emerald-400 shrink-0 text-sm"></i><span>WhatsApp: <a href="https://wa.me/523337271440" target="_blank" class="text-slate-200 hover:text-emerald-400 font-mono">+52 33 3727 1440</a></span></p>
                 </div>
                 <div class="flex flex-col gap-3">
@@ -209,8 +272,51 @@
     </footer>
 
     <script>
-    const boutiqueProducts = [{"sku": "PC-001", "nombre": "Gabinete Micro-ATX con Fuente 500W Incluida", "marca": "Acteck", "precio": 1250.0, "original": 1550.0, "desc": "Chasis esbelto con fuente certificada, puertos USB 3.0 frontales y bahías SSD.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/gabinete_negro.webp", "tokens": ["gabinete", "fuente", "pc", "chasis"]}, {"sku": "PC-002", "nombre": "Tarjeta Madre ASUS Prime B760M-A WiFi DDR5", "marca": "ASUS", "precio": 3400.0, "original": 3950.0, "desc": "Placa base con soporte Intel Core 12va/13va/14va Gen y dual M.2 PCIe 4.0.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/motherboard_asus.webp", "tokens": ["tarjeta madre", "motherboard", "asus", "placa"]}, {"sku": "PC-003", "nombre": "Procesador Intel Core i5-14400F 10C/16T con Disipador", "marca": "Intel", "precio": 4350.0, "original": 4990.0, "desc": "10 núcleos híbridos de alto rendimiento con disipador silencioso de fábrica.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/cpu_intel_ultra.webp", "tokens": ["procesador", "cpu", "intel", "i5"]}, {"sku": "PC-004", "nombre": "Memoria RAM Kingston FURY Beast 16GB DDR5 5600MHz", "marca": "Kingston", "precio": 1250.0, "original": 1500.0, "desc": "Módulo DDR5 de alta velocidad con disipador térmico de aluminio negro.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/ram_caja.webp", "tokens": ["ram", "kingston", "fury", "ddr5", "memoria"]}, {"sku": "PC-005", "nombre": "Disco Sólido SSD Kingston NV2 1TB NVMe PCIe 4.0", "marca": "Kingston", "precio": 1350.0, "original": 1650.0, "desc": "3,500 MB/s de lectura secuencial para carga instantánea del sistema.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/disco_solido_m2.webp", "tokens": ["ssd", "kingston", "nvme", "disco", "m2"]}, {"sku": "PC-006", "nombre": "Tarjeta Gráfica NVIDIA RTX 4070 Ti Super 16GB", "marca": "NVIDIA", "precio": 17800.0, "original": 21500.0, "desc": "DLSS 3, Ray Tracing y 16GB GDDR6X para gaming y renderizado 4K.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/gpu_nvidia.webp", "tokens": ["gpu", "nvidia", "rtx", "4070", "grafica"]}];
+    const boutiqueProducts = [{"sku": "PC-001", "nombre": "Gabinete Micro-ATX con Fuente 500W Incluida", "marca": "Acteck", "precio": 1250.0, "original": 1550.0, "desc": "Chasis esbelto con fuente certificada y USB 3.0 frontal.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/gabinete_negro.webp", "tokens": ["gabinete", "fuente", "pc", "chasis"]}, {"sku": "PC-002", "nombre": "Tarjeta Madre ASUS Prime B760M-A WiFi DDR5", "marca": "ASUS", "precio": 3400.0, "original": 3950.0, "desc": "Soporte Intel 12va/13va/14va Gen y dual M.2 PCIe 4.0.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/motherboard_asus.webp", "tokens": ["tarjeta madre", "motherboard", "asus", "placa"]}, {"sku": "PC-003", "nombre": "Procesador Intel Core i5-14400F 10C/16T con Disipador", "marca": "Intel", "precio": 4350.0, "original": 4990.0, "desc": "10 núcleos híbridos de alto rendimiento con disipador silencioso.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/cpu_intel_ultra.webp", "tokens": ["procesador", "cpu", "intel", "i5"]}, {"sku": "PC-004", "nombre": "Memoria RAM Kingston FURY Beast 16GB DDR5 5600MHz", "marca": "Kingston", "precio": 1250.0, "original": 1500.0, "desc": "Módulo DDR5 de alta velocidad con disipador de aluminio negro.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/ram_caja.webp", "tokens": ["ram", "kingston", "fury", "ddr5", "memoria"]}, {"sku": "PC-005", "nombre": "Disco Sólido SSD Kingston NV2 1TB NVMe PCIe 4.0", "marca": "Kingston", "precio": 1350.0, "original": 1650.0, "desc": "3,500 MB/s de lectura secuencial para carga instantánea.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/disco_solido_m2.webp", "tokens": ["ssd", "kingston", "nvme", "disco", "m2"]}, {"sku": "PC-006", "nombre": "Tarjeta Gráfica NVIDIA RTX 4070 Ti Super 16GB", "marca": "NVIDIA", "precio": 17800.0, "original": 21500.0, "desc": "DLSS 3, Ray Tracing y 16GB GDDR6X para renderizado y gaming 4K.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/gpu_nvidia.webp", "tokens": ["gpu", "nvidia", "rtx", "4070", "grafica"]}];
     const boutiqueCategories = [{"name": "Tarjetas de Video RTX & Radeon", "icon": "fa-microchip"}, {"name": "Procesadores Intel & AMD Ryzen", "icon": "fa-bolt"}, {"name": "Tarjetas Madre LGA1700 & AM5", "icon": "fa-server"}, {"name": "Memorias RAM DDR5 & DDR4", "icon": "fa-memory"}, {"name": "Discos SSD M.2 NVMe PCIe 4.0", "icon": "fa-hard-drive"}, {"name": "Gabinetes & Fuentes Modulares", "icon": "fa-cube"}];
+
+    function scrollCarousel(id, direction) {
+        const el = document.getElementById(id);
+        if (el) {
+            const amount = el.clientWidth * 0.85;
+            el.scrollBy({ left: direction * amount, behavior: 'smooth' });
+        }
+    }
+
+    function quoteShippingUniversal() {
+        const calle = document.getElementById("inputCalle").value.trim();
+        const num = document.getElementById("inputNum").value.trim();
+        const col = document.getElementById("inputColonia").value.trim();
+        const mun = document.getElementById("selectMunicipio").value;
+        const errBox = document.getElementById("address-error-box");
+        const badge = document.getElementById("shipping-rate-badge");
+
+        if (!calle) { showErr("⚠️ Falta escribir la calle o avenida."); return; }
+        if (!num) { showErr("⚠️ Falta el número exterior / interior de tu domicilio o taller."); return; }
+        if (!col) { showErr("⚠️ Falta la colonia o barrio."); return; }
+        if (!mun) { showErr("⚠️ Falta seleccionar el municipio."); return; }
+
+        errBox.classList.add("hidden");
+        let rate = 35;
+        let dist = "1.8 km (Guadalajara Centro)";
+
+        if (mun === "zapopan") { rate = 52; dist = "4.8 km (Zapopan/Poniente)"; }
+        else if (mun === "tlaquepaque") { rate = 48; dist = "4.5 km (Tlaquepaque)"; }
+        else if (mun === "tonala") { rate = 70; dist = "9.2 km (Tonalá)"; }
+        else if (mun === "tlajomulco") { rate = 125; dist = "18.5 km (Tlajomulco Sur/Payuca)"; }
+        else if (mun === "elsalto") { rate = 135; dist = "21.0 km (El Salto)"; }
+
+        badge.innerText = `$${rate.toFixed(2)} MXN`;
+        badge.className = "text-xs font-mono font-black text-emerald-400 bg-emerald-950/60 px-3 py-1 rounded-lg border border-emerald-500/40";
+        document.getElementById("distance-calc-info").innerHTML = `🛵 <strong class="text-emerald-400">Uber Flash:</strong> ${calle} #${num}, Col. ${col} (~${dist})`;
+        localStorage.setItem("user_last_shipping_quote", JSON.stringify({ rate, calle, num, col, mun, dist }));
+    }
+
+    function showErr(msg) {
+        const box = document.getElementById("address-error-box");
+        box.innerText = msg;
+        box.classList.remove("hidden");
+    }
 
     function renderBoutiqueSidebar() {
         const container = document.getElementById("sidebar-categories-list");
@@ -235,35 +341,28 @@
         container.innerHTML = items.map(p => {
             const discountPct = p.original ? Math.round((1 - (p.precio / p.original)) * 100) : 0;
             return `
-                <div class="min-w-[240px] w-[240px] sm:w-[260px] lg:w-auto shrink-0 snap-start bg-slate-950/90 hover:bg-slate-950 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-[0_8px_30px_rgba(6,182,212,0.2)]">
+                <div class="w-[calc(50%-6px)] min-w-[155px] max-w-[210px] lg:w-auto lg:max-w-none shrink-0 snap-start bg-slate-950/90 hover:bg-slate-950 rounded-2xl p-3 flex flex-col justify-between transition group shadow-xl hover:shadow-[0_8px_30px_rgba(6,182,212,0.2)]">
                     <div>
-                        <div class="w-full h-40 sm:h-44 overflow-hidden rounded-xl bg-slate-900 flex items-center justify-center p-2 relative mb-2.5 shadow-inner">
+                        <div class="w-full h-32 sm:h-40 overflow-hidden rounded-xl bg-slate-900 flex items-center justify-center p-2 relative mb-2 shadow-inner">
                             <img src="${p.img}" alt="${p.nombre}" class="w-full h-full object-contain group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';" />
-                            ${discountPct > 0 ? `<span class="absolute top-2 left-2 bg-red-600 text-white text-[9px] font-mono font-black px-2 py-0.5 rounded-md shadow-md uppercase tracking-wider">-${discountPct}% Ahorro</span>` : `<span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[9px] font-mono font-black px-2 py-0.5 rounded-md shadow-md uppercase">Directo</span>`}
+                            ${discountPct > 0 ? `<span class="absolute top-1 left-1 bg-red-600 text-white text-[8px] font-mono font-black px-1.5 py-0.2 rounded shadow">-${discountPct}%</span>` : `<span class="absolute top-1 left-1 bg-amber-500/20 text-amber-300 text-[8px] font-mono font-black px-1.5 py-0.2 rounded">Directo</span>`}
                         </div>
-                        <div class="flex justify-between items-center text-[9px] font-mono mb-1">
-                            <span class="text-cyan-400 font-bold uppercase truncate">${p.marca}</span>
-                            <span class="text-slate-500 font-bold">${p.sku}</span>
-                        </div>
-                        <h4 class="text-white font-bold text-xs mb-1.5 line-clamp-2 leading-snug group-hover:text-cyan-300 transition" title="${p.nombre}">${p.nombre}</h4>
-                        <p class="text-slate-400 text-[11px] leading-relaxed line-clamp-2 mb-3 font-normal">${p.desc}</p>
+                        <span class="text-[8px] font-mono text-cyan-400 font-bold block truncate">${p.marca} &bull; ${p.sku}</span>
+                        <h4 class="text-xs font-bold text-white mb-1 line-clamp-2 leading-snug group-hover:text-cyan-300 transition" title="${p.nombre}">${p.nombre}</h4>
                     </div>
 
                     <div>
-                        <div class="pt-2.5 border-t border-slate-900 mb-2.5 flex flex-col gap-1">
-                            ${p.original ? `<div class="flex items-center justify-between gap-1 text-[11px] font-mono"><span class="text-slate-400 font-bold uppercase text-[10px]">Antes:</span><span class="text-red-400 font-bold line-through bg-red-950/50 border border-red-500/40 px-1.5 py-0.2 rounded">$${p.original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span></div>` : ''}
-                            <div class="flex items-baseline justify-between">
-                                <span class="text-[10px] font-mono text-emerald-400 font-bold uppercase">Oferta:</span>
-                                <span class="text-base sm:text-lg font-black font-mono text-amber-400">$${p.precio.toLocaleString('es-MX', { minimumFractionDigits: 2 })} <span class="text-[10px] text-amber-300/80 font-normal">MXN</span></span>
-                            </div>
+                        <div class="pt-2 border-t border-slate-900 mb-2 flex flex-col">
+                            ${p.original ? `<span class="text-[9px] font-mono text-red-400 line-through">$${p.original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>` : ''}
+                            <span class="text-sm sm:text-base font-black font-mono text-amber-400">$${p.precio.toLocaleString('es-MX', { minimumFractionDigits: 2 })} <span class="text-[9px] text-amber-300/80 font-normal">MXN</span></span>
                         </div>
 
-                        <div class="grid grid-cols-1 gap-2">
-                            <button onclick="addToCartDirect('${p.sku}', 1)" class="w-full bg-slate-900 hover:bg-slate-800 text-cyan-300 font-bold py-2 px-2 rounded-xl text-[11px] flex items-center justify-center gap-1.5 transition active:scale-95 cursor-pointer shadow border border-cyan-500/30">
-                                <i class="fa-solid fa-cart-plus text-xs"></i> <span>Agregar al Carrito</span>
+                        <div class="grid grid-cols-2 gap-1">
+                            <button onclick="addToCartDirect('${p.sku}', 1)" class="bg-slate-900 hover:bg-slate-800 text-cyan-300 font-bold py-1.5 px-1 rounded-lg text-[10px] flex items-center justify-center gap-1 transition active:scale-95 shadow border border-cyan-500/30" title="Carrito">
+                                <i class="fa-solid fa-cart-plus text-[10px]"></i> <span class="hidden sm:inline">Carrito</span>
                             </button>
-                            <button onclick="buyNowDirect('${p.sku}')" class="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-black py-2 px-2 rounded-xl text-[11px] flex items-center justify-center gap-1.5 transition active:scale-95 shadow cursor-pointer">
-                                <i class="fa-solid fa-bag-shopping text-xs"></i> <span>Comprar Ahora</span>
+                            <button onclick="buyNowDirect('${p.sku}')" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-black py-1.5 px-1 rounded-lg text-[10px] flex items-center justify-center gap-1 transition active:scale-95 shadow" title="Comprar">
+                                <i class="fa-solid fa-bolt text-[10px]"></i> <span class="hidden sm:inline">Comprar</span>
                             </button>
                         </div>
                     </div>
@@ -291,47 +390,32 @@
 
     function renderBoutiqueAutocomplete(val, matches) {
         const box = document.getElementById("boutique-autocomplete-box");
-        if (!val || val.length < 1) {
-            box.classList.add("hidden");
-            return;
-        }
+        if (!val || val.length < 1) { box.classList.add("hidden"); return; }
         if (matches.length === 0) {
             box.innerHTML = `<div class="p-3 text-center text-slate-400 text-xs">No hay coincidencias para "${val}"</div>`;
             box.classList.remove("hidden");
             return;
         }
         box.innerHTML = matches.slice(0, 5).map(item => `
-            <div class="bg-slate-950 rounded-xl p-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 transition shadow border border-slate-800/80">
-                <div class="flex items-center gap-2.5 min-w-0 flex-1">
-                    <img src="${item.img}" alt="${item.nombre}" class="w-10 h-10 object-contain rounded-lg bg-slate-900 p-0.5 shrink-0" onerror="this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';"/>
-                    <div class="min-w-0">
-                        <span class="text-[9px] font-mono text-cyan-400 font-bold block">${item.sku} &bull; ${item.marca}</span>
-                        <h5 class="text-xs font-bold text-white truncate">${item.nombre}</h5>
-                        <div class="flex items-center gap-2 mt-0.5">
-                            <span class="text-amber-400 font-mono font-bold text-xs">$${item.precio.toFixed(2)} MXN</span>
-                            ${item.original ? `<span class="text-[10px] font-mono text-red-400 line-through">$${item.original.toFixed(2)}</span>` : ''}
-                        </div>
-                    </div>
+            <div class="bg-slate-950 rounded-xl p-2.5 flex items-center justify-between gap-2 border border-slate-800">
+                <div class="min-w-0 flex-1">
+                    <h5 class="text-xs font-bold text-white truncate">${item.nombre}</h5>
+                    <span class="text-amber-400 font-mono font-bold text-xs">$${item.precio.toFixed(2)} MXN</span>
                 </div>
-                <div class="flex items-center gap-2 w-full sm:w-auto justify-end shrink-0">
-                    <button onclick="addToCartDirect('${item.sku}', 1)" class="bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold px-3 py-1.5 rounded-lg text-[10px] flex items-center gap-1 transition active:scale-95 shadow border border-cyan-500/30"><i class="fa-solid fa-cart-plus"></i> Agregar</button>
-                    <button onclick="buyNowDirect('${item.sku}')" class="bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black px-3.5 py-1.5 rounded-lg text-[10px] flex items-center gap-1 transition active:scale-95 shadow"><i class="fa-solid fa-bag-shopping"></i> Comprar Ahora</button>
-                </div>
+                <button onclick="addToCartDirect('${item.sku}', 1)" class="bg-slate-800 text-cyan-300 p-1.5 rounded-lg text-xs border border-cyan-500/30"><i class="fa-solid fa-cart-plus"></i></button>
             </div>
         `).join('');
         box.classList.remove("hidden");
     }
 
     function clearBoutiqueSearch() {
-        const input = document.getElementById("boutiqueSearchInput");
-        input.value = '';
+        document.getElementById("boutiqueSearchInput").value = '';
         document.getElementById("clear-search-btn").classList.add("hidden");
         document.getElementById("boutique-autocomplete-box").classList.add("hidden");
         renderBoutiqueGrid(boutiqueProducts);
     }
 
     function executeBoutiqueSearch() {
-        const input = document.getElementById("boutiqueSearchInput");
         document.getElementById("boutique-autocomplete-box").classList.add("hidden");
     }
 
@@ -344,19 +428,12 @@
             if (raw) cartStorage = JSON.parse(raw);
         } catch(e) {}
         const exist = cartStorage.find(i => i.sku === sku);
-        if (exist) {
-            exist.quantity = (parseInt(exist.quantity) || 1) + qty;
-        } else {
-            cartStorage.push({ ...item, quantity: qty });
-        }
+        if (exist) { exist.quantity = (parseInt(exist.quantity) || 1) + qty; }
+        else { cartStorage.push({ ...item, quantity: qty }); }
         localStorage.setItem('ecosystem_global_cart', JSON.stringify(cartStorage));
         syncBoutiqueCart();
         const badge = document.getElementById("boutique-cart-badge");
-        if (badge) {
-            badge.classList.remove("cart-pop");
-            void badge.offsetWidth;
-            badge.classList.add("cart-pop");
-        }
+        if (badge) { badge.classList.remove("cart-pop"); void badge.offsetWidth; badge.classList.add("cart-pop"); }
     }
 
     function buyNowDirect(sku) {
