@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PC Custom Lab | Hardware, GPUs & Ensambles IA 2026</title>
     <meta name="description" content="Pedro Moreno 501 A • Hardware de Alto Rendimiento, GPUs & Ensambles IA" />
-    <meta name="google-site-verification" content="2xIPYIU_imoZjFogZhoFRuepS7PFhXQloOamPV7ex6Q" />
     
-    <!-- Tailwind CSS y FontAwesome -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
@@ -20,12 +18,7 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-cyan-500 selection:text-slate-950">
 
-    <!-- ========================================================================
-         1. CABECERA: NAVEGACIÓN CRUZADA DE LAS 8 BOUTIQUES + BUSCADOR SEARCH-FIRST
-         ======================================================================== -->
     <header class="bg-slate-900/95 backdrop-blur border-b border-slate-800 sticky top-0 z-50 shadow-2xl">
-        
-        <!-- Nivel 1: Barra de Navegación Cruzada Completa (Interconexión de las 8 Tiendas) -->
         <div class="max-w-[99%] 2xl:max-w-[1850px] mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2 text-xs border-b border-slate-800/80">
             <div class="flex items-center gap-2">
                 <span class="px-2.5 py-0.5 rounded bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono font-bold text-[10px] uppercase">
@@ -34,17 +27,16 @@
                 <span class="text-slate-300 hidden xl:inline text-[11px] font-semibold">Guadalajara Centro • Carrito Unificado</span>
             </div>
 
-            <!-- ENLACES DIRECTOS A LAS 8 BOUTIQUES -->
             
-<nav class="hidden 2xl:flex items-center gap-1.5 text-[11px] font-bold text-slate-300">
-    <a href="https://iaworldcenter-creator.github.io/sitios-web/" class="px-2.5 py-1 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 hover:bg-amber-500 hover:text-slate-950 transition flex items-center gap-1"><i class="fa-solid fa-house text-[10px]"></i> Matriz</a>
-    <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="px-2 py-1 rounded-lg hover:bg-slate-800 hover:text-cyan-400 transition flex items-center gap-1"><i class="fa-solid fa-microchip text-[10px] text-cyan-400"></i> PC Custom</a>
-    <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" class="px-2 py-1 rounded-lg hover:bg-slate-800 hover:text-cyan-300 transition flex items-center gap-1"><i class="fa-solid fa-gem text-[10px] text-cyan-300"></i> Vía MX</a>
-    <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" class="px-2 py-1 rounded-lg hover:bg-slate-800 hover:text-amber-400 transition flex items-center gap-1"><i class="fa-solid fa-smoking text-[10px] text-amber-400"></i> Cigarros</a>
-    <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" class="px-2 py-1 rounded-lg hover:bg-slate-800 hover:text-pink-400 transition flex items-center gap-1"><i class="fa-solid fa-candy-cane text-[10px] text-pink-400"></i> Dulces</a>
-    <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" class="px-2 py-1 rounded-lg hover:bg-slate-800 hover:text-indigo-400 transition flex items-center gap-1"><i class="fa-solid fa-newspaper text-[10px] text-indigo-400"></i> Kiosco</a>
-    <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" class="px-2 py-1 rounded-lg hover:bg-slate-800 hover:text-emerald-400 transition flex items-center gap-1"><i class="fa-solid fa-store text-[10px] text-emerald-400"></i> Mi Puesto</a>
-    <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" class="px-2 py-1 rounded-lg hover:bg-slate-800 hover:text-red-400 transition flex items-center gap-1"><i class="fa-solid fa-tags text-[10px] text-red-400"></i> Liquidaciones</a>
+<nav class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1 w-full lg:w-auto text-[11px] font-bold text-slate-300 shrink-0">
+    <a href="https://iaworldcenter-creator.github.io/sitios-web/" class="px-2.5 py-1 rounded-lg bg-amber-500/15 border border-amber-500/40 text-amber-400 hover:bg-amber-500 hover:text-slate-950 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-house text-[10px]"></i> Matriz</a>
+    <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 hover:text-cyan-400 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-microchip text-[10px] text-cyan-400"></i> PC Custom</a>
+    <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" class="px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 hover:text-cyan-300 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-gem text-[10px] text-cyan-300"></i> Vía MX</a>
+    <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" class="px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 hover:text-amber-400 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-smoking text-[10px] text-amber-400"></i> Cigarros</a>
+    <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" class="px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 hover:text-pink-400 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-candy-cane text-[10px] text-pink-400"></i> Dulces</a>
+    <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" class="px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 hover:text-indigo-400 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-newspaper text-[10px] text-indigo-400"></i> Kiosco</a>
+    <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" class="px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 hover:text-emerald-400 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-store text-[10px] text-emerald-400"></i> Mi Puesto</a>
+    <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" class="px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-800 hover:text-red-400 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-tags text-[10px] text-red-400"></i> Liquidaciones</a>
 </nav>
 
 
@@ -59,17 +51,10 @@
             </div>
         </div>
 
-        <!-- Nivel 2: Marca de la Boutique + Súper-Barra Blanca + Carrito -->
         <div class="max-w-[99%] 2xl:max-w-[1850px] mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-4">
-            
             <div class="flex items-center gap-3.5 cursor-pointer shrink-0" onclick="document.getElementById('pie-de-pagina').scrollIntoView({ behavior: 'smooth' });">
                 <div class="relative w-12 h-12 flex items-center justify-center">
-                    <img 
-                        src="https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp" 
-                        alt="Logo Tigre PC CUSTOM LAB" 
-                        class="w-12 h-12 rounded-full object-cover border-2 border-amber-400 shadow-[0_0_15px_rgba(251,191,36,0.5)]"
-                        onerror="this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';"
-                    />
+                    <img src="https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp" alt="Logo Tigre PC CUSTOM LAB" class="w-12 h-12 rounded-full object-cover border-2 border-amber-400 shadow-[0_0_15px_rgba(251,191,36,0.5)]" onerror="this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';" />
                 </div>
                 <div class="flex flex-col">
                     <span class="font-black text-2xl text-white tracking-wider uppercase leading-none">PC CUSTOM LAB</span>
@@ -79,32 +64,16 @@
                 </div>
             </div>
 
-            <!-- Súper-Buscador Blanco Multi-Token con Botones Explícitos -->
             <div class="flex-1 max-w-3xl w-full relative">
                 <div class="flex items-center bg-white rounded-full border-2 border-cyan-400 shadow-[0_0_22px_rgba(6,182,212,0.4)] px-4 py-1.5 gap-2">
                     <i class="fa-solid fa-magnifying-glass text-slate-400 text-sm"></i>
-                    <input 
-                        type="text" 
-                        id="boutiqueSearchInput" 
-                        autocomplete="off"
-                        spellcheck="false"
-                        placeholder="Busca en PC CUSTOM LAB (ej. por producto, SKU, síntoma o marca)..." 
-                        class="flex-1 bg-transparent border-0 outline-none text-slate-950 font-bold text-sm placeholder-slate-400 selection:bg-cyan-500 selection:text-white"
-                        oninput="onBoutiqueSearch(event)"
-                    />
-                    <button onclick="clearBoutiqueSearch()" id="clear-search-btn" class="hidden text-slate-400 hover:text-slate-600 text-xs px-2 font-bold cursor-pointer">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                    <button onclick="executeBoutiqueSearch()" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black px-6 py-2 rounded-full text-xs uppercase tracking-wider transition active:scale-95 shrink-0 shadow cursor-pointer">
-                        BUSCAR
-                    </button>
+                    <input type="text" id="boutiqueSearchInput" autocomplete="off" spellcheck="false" placeholder="Busca en PC CUSTOM LAB (ej. por producto, SKU, síntoma o marca)..." class="flex-1 bg-transparent border-0 outline-none text-slate-950 font-bold text-sm placeholder-slate-400" oninput="onBoutiqueSearch(event)" />
+                    <button onclick="clearBoutiqueSearch()" id="clear-search-btn" class="hidden text-slate-400 hover:text-slate-600 text-xs px-2 font-bold cursor-pointer"><i class="fa-solid fa-xmark"></i></button>
+                    <button onclick="executeBoutiqueSearch()" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-black px-6 py-2 rounded-full text-xs uppercase tracking-wider transition active:scale-95 shrink-0 shadow cursor-pointer">BUSCAR</button>
                 </div>
-
-                <!-- Dropdown de Autocompletado con Botones Explícitos (Agregar al Carrito / Comprar Ahora) -->
                 <div id="boutique-autocomplete-box" class="hidden absolute top-full left-0 right-0 mt-2 bg-slate-900 border-2 border-cyan-500/60 rounded-2xl shadow-2xl z-50 p-2.5 flex flex-col gap-2 max-h-96 overflow-y-auto no-scrollbar"></div>
             </div>
 
-            <!-- Canasta Unificada con Badge Dinámico -->
             <button onclick="toggleCartDrawer()" class="flex items-center gap-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white px-4 py-2.5 rounded-xl transition cursor-pointer active:scale-95 shadow shrink-0 group">
                 <div class="relative">
                     <i class="fa-solid fa-cart-shopping text-cyan-400 text-base group-hover:scale-110 transition"></i>
@@ -115,42 +84,34 @@
                     <span id="boutique-cart-total" class="text-xs font-mono font-bold text-amber-400">$0.00 MXN</span>
                 </div>
             </button>
-
         </div>
     </header>
 
-    <!-- CUERPO PRINCIPAL: SIDEBAR + CRÉDITOS + CATÁLOGO EXPANDIDO -->
     <main class="w-full max-w-[99%] 2xl:max-w-[1850px] mx-auto px-2 sm:px-4 py-8 flex-1">
-        
         <div class="flex flex-col lg:flex-row gap-8 items-start justify-center">
             
-            <!-- SIDEBAR PROPORCIONAL: CATEGORÍAS + TARJETAS DE GEMINI Y ANTI-GRAVITY -->
             <aside class="w-full lg:w-[340px] xl:w-[370px] shrink-0 bg-slate-900/90 rounded-3xl p-5 shadow-2xl relative" id="boutique-sidebar-root">
-                
                 <div class="flex items-center justify-between border-b border-slate-800 pb-3.5 mb-3.5">
                     <h3 class="font-mono text-sm font-black text-white uppercase tracking-wider flex items-center gap-2 truncate">
                         <i class="fa-solid fa-layer-group text-amber-400"></i> Departamentos
                     </h3>
                 </div>
-                
                 <div class="mb-3.5">
                     <span class="text-[10px] font-mono text-cyan-400 font-bold bg-cyan-950/40 border border-cyan-500/30 px-3 py-1 rounded-xl block text-center uppercase tracking-widest">
                         Compras Rápidas
                     </span>
                 </div>
 
-                <nav class="flex flex-col gap-2" id="sidebar-categories-list">
-                    <!-- Inyectado por JavaScript -->
-                </nav>
+                <nav class="flex flex-col gap-2" id="sidebar-categories-list"></nav>
 
-                <!-- TARJETA CÓDIGO QR DIRECTO -->
+                <!-- UN SOLO CÓDIGO QR CON TEXTOS PERSUASIVOS -->
+                
                 <div class="mt-4 p-4 bg-slate-950 border-2 border-cyan-400 rounded-3xl shadow-[0_0_25px_rgba(6,182,212,0.25)] text-center space-y-3">
                     <div class="flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-qrcode text-cyan-400 text-lg"></i>
-                        <span class="text-xs font-mono font-black text-white uppercase tracking-wider">App Móvil para Talleres</span>
+                        <i class="fa-solid fa-mobile-screen text-cyan-400 text-lg"></i>
+                        <span class="text-xs font-mono font-black text-white uppercase tracking-wider">App Móvil Pedidos Rápidos</span>
                     </div>
 
-                    <!-- Cuadro del Código QR -->
                     <div class="w-44 h-44 mx-auto bg-white p-2.5 rounded-2xl shadow-xl flex items-center justify-center">
                         <img 
                             src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A//iaworldcenter-creator.github.io/sitios-web/app.html&margin=1" 
@@ -160,11 +121,13 @@
                         />
                     </div>
 
-                    <p class="text-[11px] text-slate-300 leading-snug font-medium">
-                        Apunta con la cámara de tu celular a este código para abrir e instalar la App en tu teléfono.
-                    </p>
+                    <div class="space-y-1">
+                        <strong class="text-xs text-amber-400 block font-bold uppercase">Entrega Directa a tu Domicilio</strong>
+                        <p class="text-[11px] text-slate-300 leading-snug">
+                            Utiliza nuestra App oficial para que tus compras lleguen volando a la puerta de tu casa o taller.
+                        </p>
+                    </div>
 
-                    <!-- Enlaces Directos PWA / Tiendas -->
                     <div class="flex flex-col gap-2 pt-1">
                         <a href="https://iaworldcenter-creator.github.io/sitios-web/app.html" target="_blank" class="flex items-center justify-center gap-3 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-emerald-400 py-2.5 px-3 rounded-xl text-left transition shadow group">
                             <i class="fa-brands fa-google-play text-xl text-emerald-400 group-hover:scale-110 transition"></i>
@@ -183,40 +146,28 @@
                     </div>
                 </div>
 
-                <!-- BLOQUE DE PRESTIGIO Y DESCARGA: GOOGLE GEMINI & ANTI-GRAVITY -->
+
                 <div class="mt-5 pt-5 border-t border-slate-800 flex flex-col gap-3">
-                    
-                    <div class="bg-gradient-to-b from-slate-950 to-slate-900 border border-cyan-500/40 rounded-2xl p-4 flex flex-col gap-2.5 shadow-lg relative overflow-hidden">
+                    <div class="bg-gradient-to-b from-slate-950 to-slate-900 border border-cyan-500/40 rounded-2xl p-4 flex flex-col gap-2 shadow-lg">
                         <div class="flex items-center gap-2">
                             <i class="fa-solid fa-wand-magic-sparkles text-cyan-400 text-sm"></i>
-                            <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-cyan-300">Creado por Google Gemini</span>
+                            <span class="text-[10px] font-mono font-bold uppercase text-cyan-300">Creado por Google Gemini</span>
                         </div>
-                        <p class="text-[11px] text-slate-300 leading-snug font-medium">
-                            Esta boutique fue concebida y programada con la Inteligencia Artificial de Google Gemini.
-                        </p>
-                        <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2.5 rounded-xl text-xs text-center uppercase tracking-wider transition active:scale-95 shadow-md flex items-center justify-center gap-2 cursor-pointer">
-                            <i class="fa-solid fa-sparkles text-xs"></i> Suscribirse a Gemini
-                        </a>
+                        <p class="text-[11px] text-slate-300 leading-snug">Concebido y programado con la Inteligencia Artificial de Google Gemini.</p>
+                        <a href="https://gemini.google.com" target="_blank" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2 rounded-xl text-xs text-center uppercase tracking-wider transition active:scale-95 shadow">Suscribirse a Gemini</a>
                     </div>
-
-                    <div class="bg-gradient-to-b from-slate-950 to-slate-900 border border-amber-500/40 rounded-2xl p-4 flex flex-col gap-2.5 shadow-lg relative overflow-hidden">
+                    <div class="bg-gradient-to-b from-slate-950 to-slate-900 border border-amber-500/40 rounded-2xl p-4 flex flex-col gap-2 shadow-lg">
                         <div class="flex items-center gap-2">
                             <i class="fa-solid fa-robot text-amber-400 text-sm"></i>
-                            <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-300">Desarrollado por Anti-Gravity</span>
+                            <span class="text-[10px] font-mono font-bold uppercase text-amber-300">Desarrollado por Anti-Gravity</span>
                         </div>
-                        <p class="text-[11px] text-slate-300 leading-snug font-medium">
-                            Desarrollado, optimizado y desplegado por el software de Anti-Gravity Copilot.
-                        </p>
-                        <a href="https://antigravity.google/download" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black py-2.5 rounded-xl text-xs text-center uppercase tracking-wider transition active:scale-95 shadow-md flex items-center justify-center gap-2 cursor-pointer">
-                            <i class="fa-solid fa-download text-xs text-slate-950"></i> Bajar Anti-Gravity Gratis
-                        </a>
+                        <p class="text-[11px] text-slate-300 leading-snug">Desarrollado, optimizado y desplegado por Anti-Gravity Copilot.</p>
+                        <a href="https://antigravity.google/download" target="_blank" class="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-black py-2 rounded-xl text-xs text-center uppercase tracking-wider transition active:scale-95 shadow">Bajar Anti-Gravity Gratis</a>
                     </div>
-
                 </div>
-
             </aside>
 
-            <!-- ESCAPARATE DE PRODUCTOS CON PRECIOS DE ALTO CONTRASTE Y BOTONES CLAROS -->
+            <!-- CONTENEDOR DE PRODUCTOS CON SWIPE HORIZONTAL FORZADO EN MÓVILES -->
             <section class="flex-1 w-full flex flex-col gap-6 min-w-0">
                 <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                     <span class="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider" id="results-count-txt">
@@ -225,185 +176,38 @@
                     <span class="text-xs font-mono text-slate-400">Pedro Moreno 501 A</span>
                 </div>
 
-                <div id="products-grid-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                    <!-- Inyectado por JavaScript -->
+                <!-- SWIPE FORZADO: flex-row overflow-x-auto en móvil, grid en desktop -->
+                <div id="products-grid-container" class="flex flex-row overflow-x-auto flex-nowrap lg:grid lg:grid-cols-5 lg:overflow-visible gap-4 pb-3 lg:pb-0 no-scrollbar snap-x snap-mandatory">
                 </div>
             </section>
 
         </div>
-
     </main>
 
-    <!-- LOS 3 PILARES UBICADOS JUSTO ANTES DEL PIE DE PÁGINA -->
-    <section class="max-w-[99%] 2xl:max-w-[1850px] mx-auto px-4 py-8 w-full border-t border-slate-800/80">
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="p-4 bg-slate-900/60 rounded-2xl flex items-center gap-3.5 shadow-md">
-                <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-lg shrink-0">
-                    <i class="fa-solid fa-truck-fast"></i>
-                </div>
-                <div>
-                    <strong class="text-white text-xs block font-bold">Envío Gratis Local</strong>
-                    <span class="text-slate-400 text-[11px]">En compras consolidadas desde $1,500 MXN</span>
-                </div>
-            </div>
-
-            <div class="p-4 bg-slate-900/60 rounded-2xl flex items-center gap-3.5 shadow-md">
-                <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg shrink-0">
-                    <i class="fa-solid fa-percent"></i>
-                </div>
-                <div>
-                    <strong class="text-white text-xs block font-bold">15% Mayoreo B2B</strong>
-                    <span class="text-slate-400 text-[11px]">Descuento automático en 10 o más piezas</span>
-                </div>
-            </div>
-
-            <div class="p-4 bg-slate-900/60 rounded-2xl flex items-center gap-3.5 shadow-md">
-                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg shrink-0">
-                    <i class="fa-solid fa-coins"></i>
-                </div>
-                <div>
-                    <strong class="text-white text-xs block font-bold">5% Cashback</strong>
-                    <span class="text-slate-400 text-[11px]">Acumulable con tu suscripción activa</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CART DRAWER LATERAL CON STEPPER -->
-    <div id="cartDrawer" class="fixed inset-0 z-[200] hidden">
-        <div class="absolute inset-0 bg-slate-950/70 backdrop-blur-sm" onclick="toggleCartDrawer()"></div>
-        <div class="absolute right-0 top-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl flex flex-col justify-between p-6 z-10">
-            <div>
-                <div class="flex justify-between items-center border-b border-slate-800 pb-3 mb-4">
-                    <h3 class="font-black text-white text-base flex items-center gap-2">
-                        <i class="fa-solid fa-cart-shopping text-cyan-400"></i> Canasta Unificada
-                    </h3>
-                    <button onclick="toggleCartDrawer()" class="text-slate-400 hover:text-white text-lg p-1 cursor-pointer">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-
-                <div class="bg-slate-950 p-3.5 rounded-2xl mb-4 space-y-2 shadow-inner">
-                    <div class="flex justify-between text-xs font-mono font-bold">
-                        <span id="shipping-progress-text" class="text-slate-300">Progreso Envío Gratis:</span>
-                        <span id="shipping-progress-pct" class="text-cyan-400">0%</span>
-                    </div>
-                    <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                        <div id="shipping-progress-bar" class="h-full bg-gradient-to-r from-amber-400 to-emerald-400 transition-all duration-300 w-0"></div>
-                    </div>
-                    <span id="shipping-msg" class="text-[10px] text-slate-400 block leading-tight font-medium">Agrega $1,500.00 MXN para desbloquear envío local gratis.</span>
-                </div>
-                
-                <div id="cart-items-container" class="flex flex-col gap-2.5 overflow-y-auto max-h-[45vh] pr-1 no-scrollbar"></div>
-            </div>
-
-            <div class="border-t border-slate-800 pt-4 flex flex-col gap-3">
-                <div class="flex justify-between items-baseline">
-                    <span class="text-xs text-slate-400 font-bold uppercase">Total del Pedido:</span>
-                    <span id="drawer-total-txt" class="text-xl font-mono font-black text-amber-400">$0.00 MXN</span>
-                </div>
-                <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/checkout.html" class="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black py-3 rounded-xl text-xs uppercase tracking-wider transition active:scale-95 shadow-lg shadow-amber-500/20 cursor-pointer flex items-center justify-center gap-2 text-center">
-                    <i class="fa-solid fa-credit-card"></i> Finalizar Compra Ahora
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- PIE DE PÁGINA UNIVERSAL -->
     <footer class="bg-slate-950 border-t border-slate-900 pt-16 pb-8 text-slate-400 text-xs" id="pie-de-pagina">
         <div class="max-w-[99%] 2xl:max-w-[1850px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-slate-800/80">
-                
                 <div class="flex flex-col gap-3">
-                    <h4 class="text-sm font-black text-white uppercase tracking-wider mb-1 flex items-center gap-2">
-                        <i class="fa-solid fa-location-dot text-amber-400"></i> Contacto Local
-                    </h4>
-                    <p class="flex items-start gap-2 text-slate-300">
-                        <i class="fa-solid fa-map-pin text-slate-500 mt-0.5 shrink-0"></i>
-                        <span>Pedro Moreno 501 A, Guadalajara Centro, Jalisco (CP 44100)</span>
-                    </p>
-                    <p class="flex items-center gap-2">
-                        <i class="fa-solid fa-phone text-cyan-400 shrink-0"></i>
-                        <span>Teléfono Fijo: <a href="tel:3336136348" class="text-slate-200 hover:text-cyan-400 font-mono">(33) 3613 6348</a></span>
-                    </p>
-                    <p class="flex items-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-emerald-400 shrink-0 text-sm"></i>
-                        <span>WhatsApp: <a href="https://wa.me/523337271440" target="_blank" rel="noopener" class="text-slate-200 hover:text-emerald-400 font-mono">+52 33 3727 1440</a></span>
-                    </p>
-                    
-                    <div class="flex flex-col gap-1.5 pt-2 border-t border-slate-900 text-[11px] text-slate-400">
-                        <a href="https://www.facebook.com/profile.php?id=61593020515115" target="_blank" rel="noopener" class="hover:text-blue-400 transition flex items-center gap-2">
-                            <i class="fa-brands fa-facebook text-blue-500 w-4 text-center"></i> Facebook: BAZAR NFL.GDL
-                        </a>
-                        <a href="https://www.instagram.com/pccustomlab/" target="_blank" rel="noopener" class="hover:text-pink-400 transition flex items-center gap-2">
-                            <i class="fa-brands fa-instagram text-pink-500 w-4 text-center"></i> Instagram: @pccustomlab
-                        </a>
-                        <a href="https://www.youtube.com/@IAWorldCenter" target="_blank" rel="noopener" class="hover:text-red-400 transition flex items-center gap-2">
-                            <i class="fa-brands fa-youtube text-red-500 w-4 text-center"></i> YouTube: IA World Center
-                        </a>
-                        <a href="https://t.me/pc_custom_lab" target="_blank" rel="noopener" class="hover:text-cyan-400 transition flex items-center gap-2">
-                            <i class="fa-brands fa-telegram text-cyan-400 w-4 text-center"></i> Telegram: pc_custom_lab
-                        </a>
-                        <a href="mailto:iaworldcenter@gmail.com" class="hover:text-amber-400 transition flex items-center gap-2">
-                            <i class="fa-solid fa-envelope text-amber-400 w-4 text-center"></i> Correo: iaworldcenter@gmail.com
-                        </a>
-                    </div>
+                    <h4 class="text-sm font-black text-white uppercase tracking-wider mb-1 flex items-center gap-2"><i class="fa-solid fa-location-dot text-amber-400"></i> Contacto Local</h4>
+                    <p class="flex items-start gap-2 text-slate-300"><i class="fa-solid fa-map-pin text-slate-500 mt-0.5 shrink-0"></i><span>Pedro Moreno 501 A, Guadalajara Centro, Jalisco (CP 44100)</span></p>
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-cyan-400 shrink-0"></i><span>Teléfono Fijo: <a href="tel:3336136348" class="text-slate-200 hover:text-cyan-400 font-mono">(33) 3613 6348</a></span></p>
+                    <p class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-emerald-400 shrink-0 text-sm"></i><span>WhatsApp: <a href="https://wa.me/523337271440" target="_blank" class="text-slate-200 hover:text-emerald-400 font-mono">+52 33 3727 1440</a></span></p>
                 </div>
-
                 <div class="flex flex-col gap-3">
-                    <h4 class="text-sm font-black text-white uppercase tracking-wider mb-1 flex items-center gap-2">
-                        <i class="fa-solid fa-shield-halved text-cyan-400"></i> Políticas de Compra
-                    </h4>
-                    <div class="flex items-start gap-2.5">
-                        <i class="fa-solid fa-rotate-left text-amber-400 mt-1 shrink-0"></i>
-                        <div>
-                            <strong class="text-slate-200 block text-xs">Devoluciones Directas:</strong>
-                            <span class="text-slate-400 text-[11px] leading-relaxed">Permitidas en tienda dentro de las 48 horas con empaque íntegro.</span>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-2.5">
-                        <i class="fa-solid fa-certificate text-emerald-400 mt-1 shrink-0"></i>
-                        <div>
-                            <strong class="text-slate-200 block text-xs">Garantía Certificada:</strong>
-                            <span class="text-slate-400 text-[11px] leading-relaxed">Calidad garantizada con soporte técnico local y reemplazo inmediato.</span>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-2.5">
-                        <i class="fa-solid fa-cookie-bite text-slate-500 mt-1 shrink-0"></i>
-                        <div>
-                            <strong class="text-slate-200 block text-xs">Políticas de Cookies:</strong>
-                            <span class="text-slate-400 text-[11px] leading-relaxed">Usadas exclusivamente para mantener activa la sesión de tu carrito.</span>
-                        </div>
-                    </div>
+                    <h4 class="text-sm font-black text-white uppercase tracking-wider mb-1 flex items-center gap-2"><i class="fa-solid fa-shield-halved text-cyan-400"></i> Políticas de Compra</h4>
+                    <p class="text-[11px] text-slate-400">Devoluciones en tienda dentro de las 48 horas con empaque íntegro. Soporte técnico local y reemplazo inmediato.</p>
                 </div>
-
                 <div class="flex flex-col gap-3">
-                    <h4 class="text-sm font-black text-white uppercase tracking-wider mb-1 flex items-center gap-2">
-                        <i class="fa-solid fa-coins text-emerald-400"></i> Ahorro y Cashback
-                    </h4>
-                    <p class="text-slate-300 font-bold flex items-center gap-2">
-                        <i class="fa-solid fa-piggy-bank text-amber-400 text-base shrink-0"></i>
-                        <span>5% de Cashback en cada compra de forma directa.</span>
-                    </p>
-                    <p class="text-[11px] text-slate-400 leading-relaxed bg-slate-900/60 p-3 rounded-xl">
-                        <strong class="text-slate-300 block mb-1">Aclaración Importante:</strong>
-                        El cashback es acumulable únicamente con registro activo.
-                    </p>
-                    <div class="pt-2 text-[10px] font-mono text-slate-500 flex items-center gap-2">
-                        <i class="fa-solid fa-robot text-cyan-400"></i>
-                        <span>Potenciado por la tecnología de Anti-Gravity Copilot.</span>
-                    </div>
+                    <h4 class="text-sm font-black text-white uppercase tracking-wider mb-1 flex items-center gap-2"><i class="fa-solid fa-coins text-emerald-400"></i> Ahorro y Cashback</h4>
+                    <p class="text-slate-300 font-bold">5% de Cashback en cada compra de forma directa.</p>
                 </div>
-
             </div>
-
             <div class="pt-8 text-center text-slate-500 text-[11px]">
                 <p>&copy; 2026 PC CUSTOM LAB & Ecosistema Comercial Pedro Moreno 501 A. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- MOTOR JS INTEGRADO -->
     <script>
     const boutiqueProducts = [{"sku": "PC-001", "nombre": "Gabinete Micro-ATX con Fuente 500W Incluida", "marca": "Acteck", "precio": 1250.0, "original": 1550.0, "desc": "Chasis esbelto con fuente certificada, puertos USB 3.0 frontales y bahías SSD.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/gabinete_negro.webp", "tokens": ["gabinete", "fuente", "pc", "chasis"]}, {"sku": "PC-002", "nombre": "Tarjeta Madre ASUS Prime B760M-A WiFi DDR5", "marca": "ASUS", "precio": 3400.0, "original": 3950.0, "desc": "Placa base con soporte Intel Core 12va/13va/14va Gen y dual M.2 PCIe 4.0.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/motherboard_asus.webp", "tokens": ["tarjeta madre", "motherboard", "asus", "placa"]}, {"sku": "PC-003", "nombre": "Procesador Intel Core i5-14400F 10C/16T con Disipador", "marca": "Intel", "precio": 4350.0, "original": 4990.0, "desc": "10 núcleos híbridos de alto rendimiento con disipador silencioso de fábrica.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/cpu_intel_ultra.webp", "tokens": ["procesador", "cpu", "intel", "i5"]}, {"sku": "PC-004", "nombre": "Memoria RAM Kingston FURY Beast 16GB DDR5 5600MHz", "marca": "Kingston", "precio": 1250.0, "original": 1500.0, "desc": "Módulo DDR5 de alta velocidad con disipador térmico de aluminio negro.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/ram_caja.webp", "tokens": ["ram", "kingston", "fury", "ddr5", "memoria"]}, {"sku": "PC-005", "nombre": "Disco Sólido SSD Kingston NV2 1TB NVMe PCIe 4.0", "marca": "Kingston", "precio": 1350.0, "original": 1650.0, "desc": "3,500 MB/s de lectura secuencial para carga instantánea del sistema.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/disco_solido_m2.webp", "tokens": ["ssd", "kingston", "nvme", "disco", "m2"]}, {"sku": "PC-006", "nombre": "Tarjeta Gráfica NVIDIA RTX 4070 Ti Super 16GB", "marca": "NVIDIA", "precio": 17800.0, "original": 21500.0, "desc": "DLSS 3, Ray Tracing y 16GB GDDR6X para gaming y renderizado 4K.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/gpu_nvidia.webp", "tokens": ["gpu", "nvidia", "rtx", "4070", "grafica"]}];
     const boutiqueCategories = [{"name": "Tarjetas de Video RTX & Radeon", "icon": "fa-microchip"}, {"name": "Procesadores Intel & AMD Ryzen", "icon": "fa-bolt"}, {"name": "Tarjetas Madre LGA1700 & AM5", "icon": "fa-server"}, {"name": "Memorias RAM DDR5 & DDR4", "icon": "fa-memory"}, {"name": "Discos SSD M.2 NVMe PCIe 4.0", "icon": "fa-hard-drive"}, {"name": "Gabinetes & Fuentes Modulares", "icon": "fa-cube"}];
@@ -411,16 +215,10 @@
     function renderBoutiqueSidebar() {
         const container = document.getElementById("sidebar-categories-list");
         if (!container) return;
-
         container.innerHTML = boutiqueCategories.map(c => `
-            <button 
-                onclick="filterCategory('${c.name}')"
-                class="w-full text-left p-3.5 rounded-2xl bg-slate-950/70 hover:bg-slate-800/90 shadow-md flex justify-between items-center transition group cursor-pointer"
-            >
+            <button onclick="filterCategory('${c.name}')" class="w-full text-left p-3.5 rounded-2xl bg-slate-950/70 hover:bg-slate-800/90 shadow-md flex justify-between items-center transition group cursor-pointer">
                 <div class="flex items-center gap-3.5 min-w-0">
-                    <div class="w-8 h-8 rounded-xl bg-slate-900 flex items-center justify-center text-cyan-400 shrink-0 shadow">
-                        <i class="fa-solid ${c.icon} text-sm"></i>
-                    </div>
+                    <div class="w-8 h-8 rounded-xl bg-slate-900 flex items-center justify-center text-cyan-400 shrink-0 shadow"><i class="fa-solid ${c.icon} text-sm"></i></div>
                     <strong class="text-white text-xs block group-hover:text-cyan-300 truncate font-bold">${c.name}</strong>
                 </div>
                 <i class="fa-solid fa-chevron-right text-[10px] text-slate-600 group-hover:text-cyan-400 transition group-hover:translate-x-0.5 shrink-0 ml-2"></i>
@@ -437,59 +235,34 @@
         container.innerHTML = items.map(p => {
             const discountPct = p.original ? Math.round((1 - (p.precio / p.original)) * 100) : 0;
             return `
-                <div class="bg-slate-950/90 hover:bg-slate-950 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-[0_8px_30px_rgba(6,182,212,0.2)]">
+                <div class="min-w-[240px] w-[240px] sm:w-[260px] lg:w-auto shrink-0 snap-start bg-slate-950/90 hover:bg-slate-950 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-[0_8px_30px_rgba(6,182,212,0.2)]">
                     <div>
                         <div class="w-full h-40 sm:h-44 overflow-hidden rounded-xl bg-slate-900 flex items-center justify-center p-2 relative mb-2.5 shadow-inner">
-                            <img 
-                                src="${p.img}" 
-                                alt="${p.nombre}" 
-                                class="w-full h-full object-contain group-hover:scale-105 transition duration-300"
-                                onerror="this.onerror=null; this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';"
-                            />
-                            ${discountPct > 0 ? `
-                                <span class="absolute top-2 left-2 bg-red-600 text-white text-[9px] font-mono font-black px-2 py-0.5 rounded-md shadow-md uppercase tracking-wider">
-                                    -${discountPct}% Ahorro
-                                </span>
-                            ` : `
-                                <span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[9px] font-mono font-black px-2 py-0.5 rounded-md shadow-md uppercase">
-                                    Directo
-                                </span>
-                            `}
+                            <img src="${p.img}" alt="${p.nombre}" class="w-full h-full object-contain group-hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';" />
+                            ${discountPct > 0 ? `<span class="absolute top-2 left-2 bg-red-600 text-white text-[9px] font-mono font-black px-2 py-0.5 rounded-md shadow-md uppercase tracking-wider">-${discountPct}% Ahorro</span>` : `<span class="absolute top-2 left-2 bg-amber-500/20 text-amber-300 text-[9px] font-mono font-black px-2 py-0.5 rounded-md shadow-md uppercase">Directo</span>`}
                         </div>
-
                         <div class="flex justify-between items-center text-[9px] font-mono mb-1">
                             <span class="text-cyan-400 font-bold uppercase truncate">${p.marca}</span>
                             <span class="text-slate-500 font-bold">${p.sku}</span>
                         </div>
-
                         <h4 class="text-white font-bold text-xs mb-1.5 line-clamp-2 leading-snug group-hover:text-cyan-300 transition" title="${p.nombre}">${p.nombre}</h4>
                         <p class="text-slate-400 text-[11px] leading-relaxed line-clamp-2 mb-3 font-normal">${p.desc}</p>
                     </div>
 
                     <div>
                         <div class="pt-2.5 border-t border-slate-900 mb-2.5 flex flex-col gap-1">
-                            ${p.original ? `
-                                <div class="flex items-center justify-between gap-1 text-[11px] font-mono">
-                                    <span class="text-slate-400 font-bold uppercase text-[10px]">Antes:</span>
-                                    <span class="text-red-400 font-bold line-through bg-red-950/50 border border-red-500/40 px-1.5 py-0.2 rounded">
-                                        $${p.original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}
-                                    </span>
-                                </div>
-                            ` : ''}
+                            ${p.original ? `<div class="flex items-center justify-between gap-1 text-[11px] font-mono"><span class="text-slate-400 font-bold uppercase text-[10px]">Antes:</span><span class="text-red-400 font-bold line-through bg-red-950/50 border border-red-500/40 px-1.5 py-0.2 rounded">$${p.original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span></div>` : ''}
                             <div class="flex items-baseline justify-between">
                                 <span class="text-[10px] font-mono text-emerald-400 font-bold uppercase">Oferta:</span>
-                                <span class="text-base sm:text-lg font-black font-mono text-amber-400">
-                                    $${p.precio.toLocaleString('es-MX', { minimumFractionDigits: 2 })} <span class="text-[10px] text-amber-300/80 font-normal">MXN</span>
-                                </span>
+                                <span class="text-base sm:text-lg font-black font-mono text-amber-400">$${p.precio.toLocaleString('es-MX', { minimumFractionDigits: 2 })} <span class="text-[10px] text-amber-300/80 font-normal">MXN</span></span>
                             </div>
                         </div>
 
-                        <!-- BOTONES EXPLÍCITOS: AGREGAR AL CARRITO / COMPRAR AHORA -->
                         <div class="grid grid-cols-1 gap-2">
-                            <button onclick="addToCartDirect('${p.sku}', 1)" class="w-full bg-slate-900 hover:bg-slate-800 text-cyan-300 font-bold py-2 px-2 rounded-xl text-[11px] flex items-center justify-center gap-1.5 transition active:scale-95 cursor-pointer shadow border border-cyan-500/30" title="Agregar este producto a tu canasta">
+                            <button onclick="addToCartDirect('${p.sku}', 1)" class="w-full bg-slate-900 hover:bg-slate-800 text-cyan-300 font-bold py-2 px-2 rounded-xl text-[11px] flex items-center justify-center gap-1.5 transition active:scale-95 cursor-pointer shadow border border-cyan-500/30">
                                 <i class="fa-solid fa-cart-plus text-xs"></i> <span>Agregar al Carrito</span>
                             </button>
-                            <button onclick="buyNowDirect('${p.sku}')" class="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black py-2 px-2 rounded-xl text-[11px] flex items-center justify-center gap-1.5 transition active:scale-95 shadow cursor-pointer" title="Comprar y pagar ahora mismo">
+                            <button onclick="buyNowDirect('${p.sku}')" class="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-black py-2 px-2 rounded-xl text-[11px] flex items-center justify-center gap-1.5 transition active:scale-95 shadow cursor-pointer">
                                 <i class="fa-solid fa-bag-shopping text-xs"></i> <span>Comprar Ahora</span>
                             </button>
                         </div>
@@ -508,12 +281,10 @@
         const q = e.target.value.toLowerCase().trim();
         const clearBtn = document.getElementById("clear-search-btn");
         if (clearBtn) clearBtn.classList.toggle("hidden", q.length === 0);
-
         const filtered = boutiqueProducts.filter(p => {
             const searchStr = `${p.sku} ${p.nombre} ${p.marca} ${p.desc} ${ (p.tokens || []).join(' ') }`.toLowerCase();
             return searchStr.includes(q);
         });
-
         renderBoutiqueAutocomplete(q, filtered);
         renderBoutiqueGrid(q ? filtered : boutiqueProducts);
     }
@@ -524,13 +295,11 @@
             box.classList.add("hidden");
             return;
         }
-
         if (matches.length === 0) {
             box.innerHTML = `<div class="p-3 text-center text-slate-400 text-xs">No hay coincidencias para "${val}"</div>`;
             box.classList.remove("hidden");
             return;
         }
-
         box.innerHTML = matches.slice(0, 5).map(item => `
             <div class="bg-slate-950 rounded-xl p-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 transition shadow border border-slate-800/80">
                 <div class="flex items-center gap-2.5 min-w-0 flex-1">
@@ -545,16 +314,11 @@
                     </div>
                 </div>
                 <div class="flex items-center gap-2 w-full sm:w-auto justify-end shrink-0">
-                    <button onclick="addToCartDirect('${item.sku}', 1)" class="bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold px-3 py-1.5 rounded-lg text-[10px] flex items-center gap-1 transition active:scale-95 shadow border border-cyan-500/30">
-                        <i class="fa-solid fa-cart-plus"></i> <span>Agregar</span>
-                    </button>
-                    <button onclick="buyNowDirect('${item.sku}')" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-black px-3.5 py-1.5 rounded-lg text-[10px] flex items-center gap-1 transition active:scale-95 shadow">
-                        <i class="fa-solid fa-bag-shopping"></i> <span>Comprar Ahora</span>
-                    </button>
+                    <button onclick="addToCartDirect('${item.sku}', 1)" class="bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold px-3 py-1.5 rounded-lg text-[10px] flex items-center gap-1 transition active:scale-95 shadow border border-cyan-500/30"><i class="fa-solid fa-cart-plus"></i> Agregar</button>
+                    <button onclick="buyNowDirect('${item.sku}')" class="bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black px-3.5 py-1.5 rounded-lg text-[10px] flex items-center gap-1 transition active:scale-95 shadow"><i class="fa-solid fa-bag-shopping"></i> Comprar Ahora</button>
                 </div>
             </div>
         `).join('');
-
         box.classList.remove("hidden");
     }
 
@@ -571,67 +335,33 @@
         document.getElementById("boutique-autocomplete-box").classList.add("hidden");
     }
 
-    // GESTIÓN DEL CARRITO GLOBAL SINCRONIZADO
     function addToCartDirect(sku, qty = 1) {
         const item = boutiqueProducts.find(p => p.sku === sku);
         if (!item) return;
-
         let cartStorage = [];
         try {
             const raw = localStorage.getItem('ecosystem_global_cart');
             if (raw) cartStorage = JSON.parse(raw);
         } catch(e) {}
-
         const exist = cartStorage.find(i => i.sku === sku);
         if (exist) {
             exist.quantity = (parseInt(exist.quantity) || 1) + qty;
         } else {
             cartStorage.push({ ...item, quantity: qty });
         }
-
         localStorage.setItem('ecosystem_global_cart', JSON.stringify(cartStorage));
         syncBoutiqueCart();
-
         const badge = document.getElementById("boutique-cart-badge");
-        badge.classList.remove("cart-pop");
-        void badge.offsetWidth;
-        badge.classList.add("cart-pop");
+        if (badge) {
+            badge.classList.remove("cart-pop");
+            void badge.offsetWidth;
+            badge.classList.add("cart-pop");
+        }
     }
 
     function buyNowDirect(sku) {
         addToCartDirect(sku, 1);
-        toggleCartDrawer();
-    }
-
-    function changeItemQty(sku, delta) {
-        let cartStorage = [];
-        try {
-            const raw = localStorage.getItem('ecosystem_global_cart');
-            if (raw) cartStorage = JSON.parse(raw);
-        } catch(e) {}
-
-        const item = cartStorage.find(i => i.sku === sku);
-        if (!item) return;
-
-        item.quantity = (parseInt(item.quantity) || 1) + delta;
-        if (item.quantity <= 0) {
-            cartStorage = cartStorage.filter(i => i.sku !== sku);
-        }
-
-        localStorage.setItem('ecosystem_global_cart', JSON.stringify(cartStorage));
-        syncBoutiqueCart();
-    }
-
-    function deleteItem(sku) {
-        let cartStorage = [];
-        try {
-            const raw = localStorage.getItem('ecosystem_global_cart');
-            if (raw) cartStorage = JSON.parse(raw);
-        } catch(e) {}
-
-        cartStorage = cartStorage.filter(i => i.sku !== sku);
-        localStorage.setItem('ecosystem_global_cart', JSON.stringify(cartStorage));
-        syncBoutiqueCart();
+        window.location.href = "https://iaworldcenter-creator.github.io/pc-custom-lab/checkout.html";
     }
 
     function syncBoutiqueCart() {
@@ -640,72 +370,16 @@
             const raw = localStorage.getItem('ecosystem_global_cart');
             if (raw) cartStorage = JSON.parse(raw);
         } catch(e) {}
-
         const totalCount = cartStorage.reduce((sum, i) => sum + (parseInt(i.quantity) || 0), 0);
         const totalMoney = cartStorage.reduce((sum, i) => sum + ((parseFloat(i.precio) || 0) * (parseInt(i.quantity) || 0)), 0);
-
         const badge = document.getElementById("boutique-cart-badge");
         const totalTxt = document.getElementById("boutique-cart-total");
-        const drawerTxt = document.getElementById("drawer-total-txt");
-
         if (badge) badge.innerText = totalCount;
         if (totalTxt) totalTxt.innerText = `$${totalMoney.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-        if (drawerTxt) drawerTxt.innerText = `$${totalMoney.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-
-        const freeShippingGoal = 1500;
-        const progressPct = Math.min(100, Math.round((totalMoney / freeShippingGoal) * 100));
-        const progressBar = document.getElementById("shipping-progress-bar");
-        const progressPctTxt = document.getElementById("shipping-progress-pct");
-        const shippingMsg = document.getElementById("shipping-msg");
-
-        if (progressBar && progressPctTxt && shippingMsg) {
-            progressBar.style.width = `${progressPct}%`;
-            progressPctTxt.innerText = `${progressPct}%`;
-
-            if (totalMoney >= freeShippingGoal) {
-                shippingMsg.innerHTML = '🎉 <strong class="text-emerald-400">¡Felicidades! Desbloqueaste Envío Gratis Local.</strong>';
-            } else {
-                const diff = (freeShippingGoal - totalMoney).toFixed(2);
-                shippingMsg.innerText = `Agrega $${diff} MXN más para obtener Envío Gratis a tu domicilio.`;
-            }
-        }
-
-        const container = document.getElementById("cart-items-container");
-        if (!container) return;
-
-        if (cartStorage.length === 0) {
-            container.innerHTML = '<div class="text-center py-8 text-slate-500 text-xs">Tu canasta está vacía.</div>';
-            return;
-        }
-
-        container.innerHTML = cartStorage.map(item => `
-            <div class="bg-slate-950 rounded-2xl p-3 flex flex-col gap-2 text-xs shadow-md border border-slate-800">
-                <div class="flex justify-between items-start gap-2">
-                    <div class="min-w-0 flex-1">
-                        <span class="font-mono text-[9px] text-cyan-400 font-bold block">${item.sku}</span>
-                        <h5 class="text-white font-bold line-clamp-1 leading-snug">${item.nombre}</h5>
-                        <span class="text-amber-400 font-mono font-bold text-xs">$${parseFloat(item.precio).toFixed(2)} MXN</span>
-                    </div>
-                    <button onclick="deleteItem('${item.sku}')" class="text-slate-500 hover:text-red-400 p-1 transition cursor-pointer" title="Eliminar del carrito">
-                        <i class="fa-solid fa-trash-can text-xs"></i>
-                    </button>
-                </div>
-
-                <div class="flex justify-between items-center pt-2 border-t border-slate-900">
-                    <div class="flex items-center gap-1 bg-slate-900 rounded-xl p-0.5 shadow-inner">
-                        <button onclick="changeItemQty('${item.sku}', -1)" class="w-6 h-6 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white font-black text-xs flex items-center justify-center transition active:scale-95 cursor-pointer">-</button>
-                        <span class="w-8 text-center font-mono font-bold text-xs text-white">${item.quantity}</span>
-                        <button onclick="changeItemQty('${item.sku}', 1)" class="w-6 h-6 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white font-black text-xs flex items-center justify-center transition active:scale-95 cursor-pointer">+</button>
-                    </div>
-                    <span class="font-mono font-black text-sm text-cyan-400">$${(parseFloat(item.precio) * parseInt(item.quantity)).toFixed(2)} MXN</span>
-                </div>
-            </div>
-        `).join('');
     }
 
     function toggleCartDrawer() {
-        document.getElementById("cartDrawer").classList.toggle("hidden");
-        syncBoutiqueCart();
+        window.location.href = "https://iaworldcenter-creator.github.io/pc-custom-lab/checkout.html";
     }
 
     document.addEventListener("DOMContentLoaded", () => {
