@@ -51,20 +51,28 @@
             </div>
         </div>
 
-        <div class="max-w-[99%] 2xl:max-w-[1850px] mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-3.5 cursor-pointer shrink-0" onclick="document.getElementById('pie-de-pagina').scrollIntoView({ behavior: 'smooth' });">
-                <div class="relative w-12 h-12 flex items-center justify-center">
-                    <img src="https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp" alt="Logo Tigre PC CUSTOM LAB" class="w-12 h-12 rounded-full object-cover border-2 border-amber-400 shadow-[0_0_15px_rgba(251,191,36,0.5)]" onerror="this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';" />
+        <!-- Nivel 2: Marca + Botón "Mi Cuenta / Cashback" + Buscador + Carrito -->
+        <div class="max-w-[99%] 2xl:max-w-[1850px] mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-3">
+            
+            <div class="flex items-center justify-between w-full md:w-auto gap-3">
+                <div class="flex items-center gap-3 cursor-pointer shrink-0" onclick="document.getElementById('pie-de-pagina').scrollIntoView({ behavior: 'smooth' });">
+                    <div class="relative w-12 h-12 flex items-center justify-center">
+                        <img src="https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp" alt="Logo Tigre PC CUSTOM LAB" class="w-12 h-12 rounded-full object-cover border-2 border-amber-400 shadow-[0_0_15px_rgba(251,191,36,0.5)]" onerror="this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';" />
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-black text-xl sm:text-2xl text-white tracking-wider uppercase leading-none">PC CUSTOM LAB</span>
+                        <span class="text-[10px] sm:text-[11px] font-mono text-cyan-400 uppercase tracking-tight mt-1 flex items-center gap-1">
+                            <i class="fa-solid fa-location-dot text-amber-400"></i> Pedro Moreno 501 A
+                        </span>
+                    </div>
                 </div>
-                <div class="flex flex-col">
-                    <span class="font-black text-2xl text-white tracking-wider uppercase leading-none">PC CUSTOM LAB</span>
-                    <span class="text-[11px] font-mono text-cyan-400 uppercase tracking-tight mt-1 flex items-center gap-1 hover:underline">
-                        <i class="fa-solid fa-location-dot text-amber-400"></i> Pedro Moreno 501 A, Guadalajara Centro
-                    </span>
-                </div>
+
+                <!-- Botón Compacto de Mi Cuenta / Cashback -->
+                <button id="header-account-btn" onclick="toggleAccountModal()" class="cursor-pointer active:scale-95 transition shrink-0"></button>
             </div>
 
-            <div class="flex-1 max-w-3xl w-full relative">
+            <!-- Buscador Search-First -->
+            <div class="flex-1 max-w-2xl w-full relative">
                 <div class="flex items-center bg-white rounded-full border-2 border-cyan-400 shadow-[0_0_22px_rgba(6,182,212,0.4)] px-4 py-1.5 gap-2">
                     <i class="fa-solid fa-magnifying-glass text-slate-400 text-sm"></i>
                     <input type="text" id="boutiqueSearchInput" autocomplete="off" spellcheck="false" placeholder="Busca en PC CUSTOM LAB (ej. por producto, SKU, síntoma o marca)..." class="flex-1 bg-transparent border-0 outline-none text-slate-950 font-bold text-sm placeholder-slate-400" oninput="onBoutiqueSearch(event)" />
@@ -87,60 +95,8 @@
         </div>
     </header>
 
-    <main class="w-full max-w-[99%] 2xl:max-w-[1850px] mx-auto px-2 sm:px-4 py-8 flex-1">
+    <main class="w-full max-w-[99%] 2xl:max-w-[1850px] mx-auto px-2 sm:px-4 py-6 flex-1">
         
-        <!-- COTIZADOR UBER COMPLETO EN TODAS LAS BOUTIQUES -->
-        
-<div class="bg-slate-900 border border-slate-800 p-4 rounded-3xl shadow-xl space-y-3 mb-6">
-    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-        <span class="text-xs font-mono font-bold text-white flex items-center gap-1.5">
-            <i class="fa-brands fa-uber text-white"></i> Cotizar Envío Uber Flash a tu Domicilio
-        </span>
-        <span id="shipping-rate-badge" class="text-xs font-mono font-bold text-slate-400 bg-slate-950 px-2.5 py-1 rounded-lg border border-slate-800">
-            Pendiente Cotizar
-        </span>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 text-xs">
-        <div>
-            <label class="text-[10px] font-mono text-slate-400 block mb-0.5">Calle / Avenida:</label>
-            <input type="text" id="inputCalle" placeholder="Ej. Av. Juárez, Hidalgo..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2 text-white outline-none focus:border-cyan-400" />
-        </div>
-        <div>
-            <label class="text-[10px] font-mono text-slate-400 block mb-0.5">Núm. Exterior / Interior:</label>
-            <input type="text" id="inputNum" placeholder="Ej. #501 int A" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2 text-white outline-none focus:border-cyan-400" />
-        </div>
-        <div>
-            <label class="text-[10px] font-mono text-slate-400 block mb-0.5">Colonia / Barrio:</label>
-            <input type="text" id="inputColonia" placeholder="Ej. Americana, Centro..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2 text-white outline-none focus:border-cyan-400" />
-        </div>
-        <div>
-            <label class="text-[10px] font-mono text-slate-400 block mb-0.5">Municipio / Zona:</label>
-            <select id="selectMunicipio" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2 text-white outline-none focus:border-cyan-400 font-medium">
-                <option value="">-- Selecciona Municipio --</option>
-                <option value="guadalajara">Guadalajara (Centro / Alrededores)</option>
-                <option value="zapopan">Zapopan (Minerva / Providencia / Poniente)</option>
-                <option value="tlaquepaque">Tlaquepaque (Centro / Alamo)</option>
-                <option value="tonala">Tonalá (Oriente / Periférico)</option>
-                <option value="tlajomulco">Tlajomulco de Zúñiga (Zona Sur / Payuca)</option>
-                <option value="elsalto">El Salto / Aeropuerto</option>
-            </select>
-        </div>
-    </div>
-
-    <div id="address-error-box" class="hidden p-2.5 rounded-xl bg-amber-950/60 border border-amber-500/50 text-amber-300 text-xs font-mono leading-tight"></div>
-
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-1">
-        <span id="distance-calc-info" class="text-[11px] font-mono text-slate-400">
-            <i class="fa-solid fa-location-dot text-amber-400 mr-1"></i> Despacho directo desde Pedro Moreno 501 A
-        </span>
-        <button onclick="quoteShippingUniversal()" class="w-full sm:w-auto bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-black px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider transition active:scale-95 shadow cursor-pointer flex items-center justify-center gap-1.5">
-            <i class="fa-solid fa-calculator text-xs"></i> <span>Cotizar Flete de Envío</span>
-        </button>
-    </div>
-</div>
-
-
         <div class="flex flex-col lg:flex-row gap-8 items-start justify-center">
             
             <aside class="w-full lg:w-[340px] xl:w-[370px] shrink-0 bg-slate-900/90 rounded-3xl p-5 shadow-2xl relative" id="boutique-sidebar-root">
@@ -164,7 +120,6 @@
         <i class="fa-solid fa-mobile-screen text-cyan-400 text-lg"></i>
         <span class="text-xs font-mono font-black text-white uppercase tracking-wider">App Móvil Pedidos Rápidos</span>
     </div>
-
     <div class="w-44 h-44 mx-auto bg-white p-2.5 rounded-2xl shadow-xl flex items-center justify-center">
         <img 
             src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A//iaworldcenter-creator.github.io/sitios-web/app.html&margin=1" 
@@ -173,14 +128,10 @@
             onerror="this.onerror=null; this.src='https://quickchart.io/qr?text=https%3A//iaworldcenter-creator.github.io/sitios-web/app.html&size=300';"
         />
     </div>
-
     <div class="space-y-1">
         <strong class="text-xs text-amber-400 block font-bold uppercase">Entrega Directa a tu Domicilio</strong>
-        <p class="text-[11px] text-slate-300 leading-snug">
-            Utiliza nuestra App oficial para que tus compras lleguen volando a la puerta de tu casa o taller.
-        </p>
+        <p class="text-[11px] text-slate-300 leading-snug">Utiliza nuestra App oficial para que tus compras lleguen volando a la puerta de tu casa o taller.</p>
     </div>
-
     <div class="flex flex-col gap-2 pt-1">
         <a href="https://iaworldcenter-creator.github.io/sitios-web/app.html" target="_blank" class="flex items-center justify-center gap-3 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-emerald-400 py-2.5 px-3 rounded-xl text-left transition shadow group">
             <i class="fa-brands fa-google-play text-xl text-emerald-400 group-hover:scale-110 transition"></i>
@@ -220,7 +171,7 @@
                 </div>
             </aside>
 
-            <!-- ESCAPARATE CON 2 PRODUCTOS EN MÓVIL + FLECHAS FLOTANTES -->
+            <!-- ESCAPARATE CON 2 PRODUCTOS EN MÓVIL + FLECHAS -->
             <section class="flex-1 w-full flex flex-col gap-4 min-w-0">
                 <div class="flex justify-between items-center border-b border-slate-800 pb-3">
                     <span class="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider" id="results-count-txt">
@@ -234,7 +185,6 @@
                         <i class="fa-solid fa-chevron-left text-xs"></i>
                     </button>
 
-                    <!-- Carrusel de 2 productos por pantalla en móvil / 5 cols en desktop -->
                     <div id="products-grid-container" class="flex flex-row overflow-x-auto flex-nowrap lg:grid lg:grid-cols-5 lg:overflow-visible gap-3 pb-3 lg:pb-0 no-scrollbar snap-x snap-mandatory scroll-smooth px-1">
                     </div>
 
@@ -246,6 +196,108 @@
 
         </div>
     </main>
+
+    
+<!-- MODAL FLOTANTE: MI CUENTA / DOMICILIO & CASHBACK -->
+<div id="accountModal" class="fixed inset-0 z-[300] hidden">
+    <div class="absolute inset-0 bg-slate-950/80 backdrop-blur-sm" onclick="toggleAccountModal()"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] max-w-lg bg-slate-900 border-2 border-cyan-400 rounded-3xl shadow-2xl p-5 sm:p-6 z-10 max-h-[90vh] overflow-y-auto no-scrollbar space-y-4">
+        
+        <div class="flex justify-between items-start border-b border-slate-800 pb-3">
+            <div>
+                <span class="text-[10px] font-mono text-amber-400 uppercase font-bold tracking-widest block">Beneficio Exclusivo</span>
+                <h3 class="font-black text-white text-base sm:text-lg flex items-center gap-2">
+                    <i class="fa-solid fa-address-card text-cyan-400"></i> Mi Cuenta & Domicilio de Entrega
+                </h3>
+            </div>
+            <button onclick="toggleAccountModal()" class="text-slate-400 hover:text-white p-1 text-lg cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Banner Explicativo de Cashback -->
+        <div class="p-3 bg-gradient-to-r from-emerald-950/60 to-slate-950 border border-emerald-500/40 rounded-2xl space-y-1">
+            <div class="flex items-center gap-2 text-emerald-400 text-xs font-bold font-mono">
+                <i class="fa-solid fa-coins text-sm"></i>
+                <span>5% DE CASHBACK EN CADA PEDIDO</span>
+            </div>
+            <p class="text-[11px] text-slate-300 leading-tight">
+                <strong>Importante:</strong> Llena todos tus datos completos (Nombre, WhatsApp, Correo y Domicilio) para activar tu <strong>5% de Cashback acumulable</strong> y habilitar entregas directas con Uber Flash.
+            </p>
+        </div>
+
+        <!-- Formulario de Cuenta y Dirección -->
+        <div class="space-y-3 text-xs">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <div>
+                    <label class="text-[10px] font-mono text-slate-400 font-bold block mb-1">Nombre Completo / Taller:</label>
+                    <input type="text" id="accName" placeholder="Ej. Juan Pérez / Taller Silva" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium" />
+                </div>
+                <div>
+                    <label class="text-[10px] font-mono text-slate-400 font-bold block mb-1">WhatsApp de Contacto:</label>
+                    <input type="tel" id="accPhone" placeholder="Ej. 33 3727 1440" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium font-mono" />
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                <div class="sm:col-span-2">
+                    <label class="text-[10px] font-mono text-slate-400 font-bold block mb-1">Correo Electrónico:</label>
+                    <input type="email" id="accEmail" placeholder="tu_correo@ejemplo.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium" />
+                </div>
+                <div>
+                    <label class="text-[10px] font-mono text-slate-400 font-bold block mb-1">Código Postal:</label>
+                    <input type="text" id="accCP" placeholder="Ej. 44100" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-mono font-bold" />
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                <div class="sm:col-span-2">
+                    <label class="text-[10px] font-mono text-slate-400 font-bold block mb-1">Calle / Avenida:</label>
+                    <input type="text" id="accCalle" placeholder="Ej. Av. Juárez, Hidalgo..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium" />
+                </div>
+                <div>
+                    <label class="text-[10px] font-mono text-slate-400 font-bold block mb-1">Núm. Ext / Int:</label>
+                    <input type="text" id="accNum" placeholder="Ej. #501 int A" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium" />
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <div>
+                    <label class="text-[10px] font-mono text-slate-400 font-bold block mb-1">Colonia / Barrio:</label>
+                    <input type="text" id="accColonia" placeholder="Ej. Americana, Centro, Vallarta..." class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium" />
+                </div>
+                <div>
+                    <label class="text-[10px] font-mono text-slate-400 font-bold block mb-1">Municipio / Zona:</label>
+                    <select id="accMunicipio" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium">
+                        <option value="">-- Selecciona Municipio --</option>
+                        <option value="guadalajara">Guadalajara (Centro / Alrededores)</option>
+                        <option value="zapopan">Zapopan (Minerva / Providencia / Poniente)</option>
+                        <option value="tlaquepaque">Tlaquepaque (Centro / Alamo)</option>
+                        <option value="tonala">Tonalá (Oriente / Periférico)</option>
+                        <option value="tlajomulco">Tlajomulco de Zúñiga (Zona Sur / Payuca)</option>
+                        <option value="elsalto">El Salto / Aeropuerto</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="text-[10px] font-mono text-slate-400 font-bold block mb-1">Referencias de Entrega (Opcional):</label>
+                <input type="text" id="accRef" placeholder="Ej. Portón blanco, entre calle Galeana y Colón" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-white outline-none focus:border-cyan-400 font-medium" />
+            </div>
+
+            <!-- Caja de Estado / Alerta -->
+            <div id="accAlertBox" class="hidden p-3 rounded-xl text-xs font-mono leading-tight"></div>
+        </div>
+
+        <div class="pt-2 border-t border-slate-800 flex flex-col sm:flex-row gap-2">
+            <button onclick="saveUserProfile()" class="flex-1 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black py-3 rounded-xl text-xs uppercase tracking-wider transition active:scale-95 shadow-lg flex items-center justify-center gap-2 cursor-pointer">
+                <i class="fa-solid fa-floppy-disk text-sm"></i> <span>Guardar Domicilio & Activar Cashback</span>
+            </button>
+        </div>
+
+    </div>
+</div>
+
 
     <footer class="bg-slate-950 border-t border-slate-900 pt-16 pb-8 text-slate-400 text-xs" id="pie-de-pagina">
         <div class="max-w-[99%] 2xl:max-w-[1850px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -262,7 +314,7 @@
                 </div>
                 <div class="flex flex-col gap-3">
                     <h4 class="text-sm font-black text-white uppercase tracking-wider mb-1 flex items-center gap-2"><i class="fa-solid fa-coins text-emerald-400"></i> Ahorro y Cashback</h4>
-                    <p class="text-slate-300 font-bold">5% de Cashback en cada compra de forma directa.</p>
+                    <p class="text-slate-300 font-bold">5% de Cashback acumulable con tu cuenta registrada.</p>
                 </div>
             </div>
             <div class="pt-8 text-center text-slate-500 text-[11px]">
@@ -272,8 +324,118 @@
     </footer>
 
     <script>
-    const boutiqueProducts = [{"sku": "PC-001", "nombre": "Gabinete Micro-ATX con Fuente 500W Incluida", "marca": "Acteck", "precio": 1250.0, "original": 1550.0, "desc": "Chasis esbelto con fuente certificada y USB 3.0 frontal.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/gabinete_negro.webp", "tokens": ["gabinete", "fuente", "pc", "chasis"]}, {"sku": "PC-002", "nombre": "Tarjeta Madre ASUS Prime B760M-A WiFi DDR5", "marca": "ASUS", "precio": 3400.0, "original": 3950.0, "desc": "Soporte Intel 12va/13va/14va Gen y dual M.2 PCIe 4.0.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/motherboard_asus.webp", "tokens": ["tarjeta madre", "motherboard", "asus", "placa"]}, {"sku": "PC-003", "nombre": "Procesador Intel Core i5-14400F 10C/16T con Disipador", "marca": "Intel", "precio": 4350.0, "original": 4990.0, "desc": "10 núcleos híbridos de alto rendimiento con disipador silencioso.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/cpu_intel_ultra.webp", "tokens": ["procesador", "cpu", "intel", "i5"]}, {"sku": "PC-004", "nombre": "Memoria RAM Kingston FURY Beast 16GB DDR5 5600MHz", "marca": "Kingston", "precio": 1250.0, "original": 1500.0, "desc": "Módulo DDR5 de alta velocidad con disipador de aluminio negro.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/ram_caja.webp", "tokens": ["ram", "kingston", "fury", "ddr5", "memoria"]}, {"sku": "PC-005", "nombre": "Disco Sólido SSD Kingston NV2 1TB NVMe PCIe 4.0", "marca": "Kingston", "precio": 1350.0, "original": 1650.0, "desc": "3,500 MB/s de lectura secuencial para carga instantánea.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/disco_solido_m2.webp", "tokens": ["ssd", "kingston", "nvme", "disco", "m2"]}, {"sku": "PC-006", "nombre": "Tarjeta Gráfica NVIDIA RTX 4070 Ti Super 16GB", "marca": "NVIDIA", "precio": 17800.0, "original": 21500.0, "desc": "DLSS 3, Ray Tracing y 16GB GDDR6X para renderizado y gaming 4K.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/gpu_nvidia.webp", "tokens": ["gpu", "nvidia", "rtx", "4070", "grafica"]}];
+    const boutiqueProducts = [{"sku": "PC-001", "nombre": "Gabinete Micro-ATX con Fuente 500W Incluida", "marca": "Acteck", "precio": 1250.0, "original": 1550.0, "desc": "Chasis esbelto con fuente certificada y USB 3.0 frontal.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/gabinete_negro.webp", "tokens": ["gabinete", "fuente", "pc", "chasis"]}, {"sku": "PC-002", "nombre": "Tarjeta Madre ASUS Prime B760M-A WiFi DDR5", "marca": "ASUS", "precio": 3400.0, "original": 3950.0, "desc": "Soporte Intel 12va/13va/14va Gen y dual M.2 PCIe 4.0.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/motherboard_asus.webp", "tokens": ["tarjeta madre", "motherboard", "asus", "placa"]}, {"sku": "PC-003", "nombre": "Procesador Intel Core i5-14400F 10C/16T con Disipador", "marca": "Intel", "precio": 4350.0, "original": 4990.0, "desc": "10 núcleos híbridos de alto rendimiento con disipador silencioso.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/cpu_intel_ultra.webp", "tokens": ["procesador", "cpu", "intel", "i5"]}, {"sku": "PC-004", "nombre": "Memoria RAM Kingston FURY Beast 16GB DDR5 5600MHz", "marca": "Kingston", "precio": 1250.0, "original": 1500.0, "desc": "Módulo DDR5 de alta velocidad con disipador de aluminio negro.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/ram_caja.webp", "tokens": ["ram", "kingston", "fury", "ddr5", "memoria"]}, {"sku": "PC-005", "nombre": "Disco Sólido SSD Kingston NV2 1TB NVMe PCIe 4.0", "marca": "Kingston", "precio": 1350.0, "original": 1650.0, "desc": "3,500 MB/s de lectura secuencial para carga instantánea.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/disco_solido_m2.webp", "tokens": ["ssd", "kingston", "nvme", "disco", "m2"]}, {"sku": "PC-006", "nombre": "Tarjeta Gráfica NVIDIA RTX 4070 Ti Super 16GB", "marca": "NVIDIA", "precio": 17800.0, "original": 21500.0, "desc": "DLSS 3, Ray Tracing y 16GB GDDR6X para gaming 4K.", "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/catalog/gpu_nvidia.webp", "tokens": ["gpu", "nvidia", "rtx", "4070", "grafica"]}];
     const boutiqueCategories = [{"name": "Tarjetas de Video RTX & Radeon", "icon": "fa-microchip"}, {"name": "Procesadores Intel & AMD Ryzen", "icon": "fa-bolt"}, {"name": "Tarjetas Madre LGA1700 & AM5", "icon": "fa-server"}, {"name": "Memorias RAM DDR5 & DDR4", "icon": "fa-memory"}, {"name": "Discos SSD M.2 NVMe PCIe 4.0", "icon": "fa-hard-drive"}, {"name": "Gabinetes & Fuentes Modulares", "icon": "fa-cube"}];
+
+    
+function getSavedProfile() {
+    try {
+        const raw = localStorage.getItem('bazar_user_profile');
+        return raw ? JSON.parse(raw) : null;
+    } catch(e) { return null; }
+}
+
+function updateAccountBadgeUI() {
+    const profile = getSavedProfile();
+    const btn = document.getElementById("header-account-btn");
+    if (!btn) return;
+
+    if (profile && profile.isComplete) {
+        btn.innerHTML = `
+            <div class="flex items-center gap-2 bg-emerald-950/60 border border-emerald-500/50 px-3 py-1.5 rounded-xl text-emerald-300 text-xs font-mono font-bold shadow-md hover:bg-emerald-900/60 transition">
+                <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+                <div class="flex flex-col text-left">
+                    <span class="text-[9px] text-emerald-400 leading-none uppercase">5% Cashback Activo</span>
+                    <span class="text-white text-[11px] leading-tight truncate max-w-[120px] sm:max-w-[180px]">${profile.name || 'Mi Cuenta'}</span>
+                </div>
+            </div>
+        `;
+    } else {
+        btn.innerHTML = `
+            <div class="flex items-center gap-2 bg-slate-800/90 hover:bg-slate-700 border border-cyan-500/40 px-3 py-1.5 rounded-xl text-white text-xs font-mono font-bold shadow-md transition">
+                <i class="fa-solid fa-user-plus text-cyan-400 text-sm"></i>
+                <div class="flex flex-col text-left">
+                    <span class="text-[9px] text-amber-400 leading-none uppercase">5% Cashback</span>
+                    <span class="text-slate-200 text-[11px] leading-tight">Registra tu Domicilio</span>
+                </div>
+            </div>
+        `;
+    }
+}
+
+function toggleAccountModal() {
+    const modal = document.getElementById("accountModal");
+    if (!modal) return;
+    modal.classList.toggle("hidden");
+
+    if (!modal.classList.contains("hidden")) {
+        loadProfileIntoModal();
+    }
+}
+
+function loadProfileIntoModal() {
+    const p = getSavedProfile() || {};
+    document.getElementById("accName").value = p.name || '';
+    document.getElementById("accPhone").value = p.phone || '';
+    document.getElementById("accEmail").value = p.email || '';
+    document.getElementById("accCP").value = p.cp || '';
+    document.getElementById("accCalle").value = p.calle || '';
+    document.getElementById("accNum").value = p.num || '';
+    document.getElementById("accColonia").value = p.colonia || '';
+    document.getElementById("accMunicipio").value = p.municipio || '';
+    document.getElementById("accRef").value = p.ref || '';
+
+    const alertBox = document.getElementById("accAlertBox");
+    if (p.isComplete) {
+        alertBox.className = "p-3 rounded-xl text-xs font-mono leading-tight bg-emerald-950/60 border border-emerald-500/50 text-emerald-300 block";
+        alertBox.innerHTML = '🎉 <strong>¡Felicidades!</strong> Tu perfil está completo y tienes <strong>5% de Cashback activo</strong> en todas tus compras.';
+    } else {
+        alertBox.className = "hidden";
+    }
+}
+
+function saveUserProfile() {
+    const name = document.getElementById("accName").value.trim();
+    const phone = document.getElementById("accPhone").value.trim();
+    const email = document.getElementById("accEmail").value.trim();
+    const cp = document.getElementById("accCP").value.trim();
+    const calle = document.getElementById("accCalle").value.trim();
+    const num = document.getElementById("accNum").value.trim();
+    const colonia = document.getElementById("accColonia").value.trim();
+    const municipio = document.getElementById("accMunicipio").value;
+    const ref = document.getElementById("accRef").value.trim();
+    const alertBox = document.getElementById("accAlertBox");
+
+    if (!name || !phone || !email || !cp || !calle || !num || !colonia || !municipio) {
+        alertBox.className = "p-3 rounded-xl text-xs font-mono leading-tight bg-amber-950/70 border border-amber-500/60 text-amber-300 block";
+        alertBox.innerHTML = '⚠️ <strong>Perfil Incompleto:</strong> Para acumular tu 5% de Cashback y habilitar envíos Uber Flash, es obligatorio llenar todos los campos de contacto y domicilio.';
+        return;
+    }
+
+    let rate = 35;
+    let dist = "1.8 km (Guadalajara Centro)";
+    if (municipio === "zapopan") { rate = 52; dist = "4.8 km (Zapopan)"; }
+    else if (municipio === "tlaquepaque") { rate = 48; dist = "4.5 km (Tlaquepaque)"; }
+    else if (municipio === "tonala") { rate = 70; dist = "9.2 km (Tonalá)"; }
+    else if (municipio === "tlajomulco") { rate = 125; dist = "18.5 km (Tlajomulco Sur/Payuca)"; }
+    else if (municipio === "elsalto") { rate = 135; dist = "21.0 km (El Salto)"; }
+
+    const profile = {
+        name, phone, email, cp, calle, num, colonia, municipio, ref,
+        rate, dist, isComplete: true, updatedAt: new Date().toISOString()
+    };
+
+    localStorage.setItem('bazar_user_profile', JSON.stringify(profile));
+    updateAccountBadgeUI();
+
+    alertBox.className = "p-3 rounded-xl text-xs font-mono leading-tight bg-emerald-950/60 border border-emerald-500/50 text-emerald-300 block";
+    alertBox.innerHTML = '🎉 <strong>¡Domicilio Guardado Exitosamente!</strong> Tu 5% de Cashback está activo. El costo estimado de flete Uber Flash a tu zona es de <strong>$' + rate.toFixed(2) + ' MXN</strong>.';
+
+    setTimeout(() => {
+        toggleAccountModal();
+    }, 1200);
+}
+
 
     function scrollCarousel(id, direction) {
         const el = document.getElementById(id);
@@ -281,41 +443,6 @@
             const amount = el.clientWidth * 0.85;
             el.scrollBy({ left: direction * amount, behavior: 'smooth' });
         }
-    }
-
-    function quoteShippingUniversal() {
-        const calle = document.getElementById("inputCalle").value.trim();
-        const num = document.getElementById("inputNum").value.trim();
-        const col = document.getElementById("inputColonia").value.trim();
-        const mun = document.getElementById("selectMunicipio").value;
-        const errBox = document.getElementById("address-error-box");
-        const badge = document.getElementById("shipping-rate-badge");
-
-        if (!calle) { showErr("⚠️ Falta escribir la calle o avenida."); return; }
-        if (!num) { showErr("⚠️ Falta el número exterior / interior de tu domicilio o taller."); return; }
-        if (!col) { showErr("⚠️ Falta la colonia o barrio."); return; }
-        if (!mun) { showErr("⚠️ Falta seleccionar el municipio."); return; }
-
-        errBox.classList.add("hidden");
-        let rate = 35;
-        let dist = "1.8 km (Guadalajara Centro)";
-
-        if (mun === "zapopan") { rate = 52; dist = "4.8 km (Zapopan/Poniente)"; }
-        else if (mun === "tlaquepaque") { rate = 48; dist = "4.5 km (Tlaquepaque)"; }
-        else if (mun === "tonala") { rate = 70; dist = "9.2 km (Tonalá)"; }
-        else if (mun === "tlajomulco") { rate = 125; dist = "18.5 km (Tlajomulco Sur/Payuca)"; }
-        else if (mun === "elsalto") { rate = 135; dist = "21.0 km (El Salto)"; }
-
-        badge.innerText = `$${rate.toFixed(2)} MXN`;
-        badge.className = "text-xs font-mono font-black text-emerald-400 bg-emerald-950/60 px-3 py-1 rounded-lg border border-emerald-500/40";
-        document.getElementById("distance-calc-info").innerHTML = `🛵 <strong class="text-emerald-400">Uber Flash:</strong> ${calle} #${num}, Col. ${col} (~${dist})`;
-        localStorage.setItem("user_last_shipping_quote", JSON.stringify({ rate, calle, num, col, mun, dist }));
-    }
-
-    function showErr(msg) {
-        const box = document.getElementById("address-error-box");
-        box.innerText = msg;
-        box.classList.remove("hidden");
     }
 
     function renderBoutiqueSidebar() {
@@ -460,11 +587,15 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
+        updateAccountBadgeUI();
         renderBoutiqueSidebar();
         renderBoutiqueGrid();
         syncBoutiqueCart();
     });
-    window.addEventListener("storage", syncBoutiqueCart);
+    window.addEventListener("storage", () => {
+        updateAccountBadgeUI();
+        syncBoutiqueCart();
+    });
     </script>
 </body>
 </html>
