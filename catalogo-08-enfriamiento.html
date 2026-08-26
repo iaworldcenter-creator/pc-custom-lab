@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enfriamiento y Ventiladores (Cooling) — Catálogo PC Custom Lab</title>
+    <meta name="description" content="Kits de refrigeración líquida AIO, disipadores por aire de doble torre y ventiladores ARGB en PC Custom Lab. Cotiza componentes gamer y de workstation al mejor precio.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, .font-heading { font-family: 'Outfit', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#0b0f19] text-slate-100 min-h-screen flex flex-col selection:bg-cyan-500 selection:text-black">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-cyan-500 to-emerald-400 p-0.5 shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center text-cyan-400 font-black text-xl">
+                        ⚡
+                    </div>
+                </div>
+                <div>
+                    <span class="text-lg font-black tracking-wider text-white flex items-center gap-1.5 font-heading">
+                        PC CUSTOM LAB <span class="px-1.5 py-0.5 rounded text-[10px] bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">PRO</span>
+                    </span>
+                    <p class="text-[11px] text-slate-400 font-medium">Armado Profesional & Hardware de Vanguardia</p>
+                </div>
+            </a>
+
+            <!-- Quick Links -->
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-300">
+                <a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a>
+                <a href="catalogo-01-tarjetas-madre.html" class="text-cyan-400 font-bold">Catálogo (11 Secciones)</a>
+                <a href="producto.html" class="hover:text-cyan-400 transition-colors">Configurador</a>
+                <a href="checkout.html" class="hover:text-cyan-400 transition-colors">Carrito / Checkout</a>
+            </nav>
+
+            <!-- Cart Trigger Button -->
+            <button onclick="toggleCartDrawer()" class="relative px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700/80 hover:border-cyan-500 text-white flex items-center gap-2.5 font-semibold text-sm transition-all shadow-md">
+                <span>🛒 Carrito</span>
+                <span id="cartCountBadge" class="w-5 h-5 rounded-full bg-cyan-500 text-black text-xs font-black flex items-center justify-center">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Top Categories Tabs Bar -->
+    <section class="bg-slate-950/60 border-b border-slate-800/60 py-3.5 px-4 sticky top-20 z-30 backdrop-blur-md overflow-x-auto scrollbar-thin">
+        <div class="max-w-7xl mx-auto flex items-center gap-2 overflow-x-auto pb-1">
+            
+        <a href="catalogo-01-tarjetas-madre.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>🔲</span>
+            <span>1. Tarjetas Madre</span>
+        </a>
+        
+        <a href="catalogo-02-procesadores.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>⚡</span>
+            <span>2. Procesadores</span>
+        </a>
+        
+        <a href="catalogo-03-tarjetas-de-video.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>🎮</span>
+            <span>3. Tarjetas de Video</span>
+        </a>
+        
+        <a href="catalogo-04-memorias-ram.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>⚡</span>
+            <span>4. Memorias RAM</span>
+        </a>
+        
+        <a href="catalogo-05-discos-duros.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>💾</span>
+            <span>5. Almacenamiento</span>
+        </a>
+        
+        <a href="catalogo-06-fuentes-de-poder.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>🔌</span>
+            <span>6. Fuentes de Poder</span>
+        </a>
+        
+        <a href="catalogo-07-gabinetes.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>🏰</span>
+            <span>7. Gabinetes y Chasis</span>
+        </a>
+        
+        <a href="catalogo-08-enfriamiento.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-cyan-500 text-black font-bold shadow-lg shadow-cyan-500/30 scale-105 border-cyan-400">
+            <span>❄️</span>
+            <span>8. Enfriamiento y Ventiladores</span>
+        </a>
+        
+        <a href="catalogo-09-perifericos.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>🎧</span>
+            <span>9. Periféricos y Accesorios</span>
+        </a>
+        
+        <a href="catalogo-10-conectividad-redes.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>📶</span>
+            <span>10. Conectividad, Redes y Adaptadores</span>
+        </a>
+        
+        <a href="catalogo-11-monitores-software.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>🖥️</span>
+            <span>11. Monitores y Software</span>
+        </a>
+        
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
+        <!-- Hero Section Header -->
+        <div class="mb-8 p-6 md:p-8 rounded-3xl bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-slate-950 border border-slate-800/80 shadow-2xl relative overflow-hidden flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-wider mb-2">
+                    <span>❄️</span> SECCIÓN 8 DE 11
+                </div>
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight font-heading">
+                    Enfriamiento y Ventiladores (Cooling)
+                </h1>
+                <p class="text-sm md:text-base text-slate-400 max-w-2xl mt-1">
+                    Kits de refrigeración líquida AIO, disipadores por aire de doble torre y ventiladores ARGB
+                </p>
+            </div>
+            <div class="flex items-center gap-3 bg-slate-950/80 border border-slate-800 px-4 py-3 rounded-2xl">
+                <span class="text-xs text-slate-400 font-medium">Mostrando:</span>
+                <span class="text-sm font-bold text-white bg-slate-800 px-2.5 py-1 rounded-lg border border-slate-700">20 Productos (5x4)</span>
+            </div>
+        </div>
+
+        <!-- 5 Columns x 4 Rows Products Grid -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-5 mb-12">
+            
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">NZXT</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 6
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/3CbQvnlSHuIdzoQqlw6ueyTE9eGKDIsz1MrlH4pV.webp" alt="Kraken Elite 360 RGB con Pantalla LCD 2.36&quot;" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">NZXT</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Kraken Elite 360 RGB con Pantalla LCD 2.36&quot;">
+                    Kraken Elite 360 RGB con Pantalla LCD 2.36"
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Radiador 360mm Triple Fan</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">LCD 640x640 60Hz Personalizable</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Bomba Asetek 7th Gen</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $6,399 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-01', 'Kraken Elite 360 RGB con Pantalla LCD 2.36&quot;', 'NZXT', 6399, 'assets/gallery/3CbQvnlSHuIdzoQqlw6ueyTE9eGKDIsz1MrlH4pV.webp', 'Radiador 360mm Triple Fan, LCD 640x640 60Hz Personalizable, Bomba Asetek 7th Gen')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-01', 'Kraken Elite 360 RGB con Pantalla LCD 2.36&quot;', 6399, 'assets/gallery/3CbQvnlSHuIdzoQqlw6ueyTE9eGKDIsz1MrlH4pV.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">MSI</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 12
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/9rRTvmRc5y3f0kIjMruFaNZO2ysoP0a42659Gj50.png.webp" alt="MAG CORELIQUID C360 V2 ARGB" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">MSI</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="MAG CORELIQUID C360 V2 ARGB">
+                    MAG CORELIQUID C360 V2 ARGB
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Radiador 360mm</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Bomba Integrada en Radiador</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Tubos Antievaporación</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $2,799 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-02', 'MAG CORELIQUID C360 V2 ARGB', 'MSI', 2799, 'assets/gallery/9rRTvmRc5y3f0kIjMruFaNZO2ysoP0a42659Gj50.png.webp', 'Radiador 360mm, Bomba Integrada en Radiador, Tubos Antievaporación')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-02', 'MAG CORELIQUID C360 V2 ARGB', 2799, 'assets/gallery/9rRTvmRc5y3f0kIjMruFaNZO2ysoP0a42659Gj50.png.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">DeepCool</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 14
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/AIR-100-1.webp" alt="LT720 360mm Infinity Mirror Liquid Cooler" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">DeepCool</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="LT720 360mm Infinity Mirror Liquid Cooler">
+                    LT720 360mm Infinity Mirror Liquid Cooler
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Bloque Espejo Infinito 3D</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Bomba 4ta Gen 3100 RPM</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Tecnología Anti-Leak</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $2,699 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-03', 'LT720 360mm Infinity Mirror Liquid Cooler', 'DeepCool', 2699, 'assets/gallery/AIR-100-1.webp', 'Bloque Espejo Infinito 3D, Bomba 4ta Gen 3100 RPM, Tecnología Anti-Leak')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-03', 'LT720 360mm Infinity Mirror Liquid Cooler', 2699, 'assets/gallery/AIR-100-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Corsair</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 5
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/AIR-100-2.webp" alt="iCUE H150i ELITE LCD XT 360mm" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Corsair</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="iCUE H150i ELITE LCD XT 360mm">
+                    iCUE H150i ELITE LCD XT 360mm
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Pantalla IPS 2.1" 480x480</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">3x AF120 RGB ELITE Fans</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Modo Zero RPM</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $5,799 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-04', 'iCUE H150i ELITE LCD XT 360mm', 'Corsair', 5799, 'assets/gallery/AIR-100-2.webp', 'Pantalla IPS 2.1" 480x480, 3x AF120 RGB ELITE Fans, Modo Zero RPM')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-04', 'iCUE H150i ELITE LCD XT 360mm', 5799, 'assets/gallery/AIR-100-2.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Thermalright</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 30
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/MAG CORELIQUID C360 V2 WHITE-1.webp" alt="Peerless Assassin 120 SE Doble Torre" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Thermalright</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Peerless Assassin 120 SE Doble Torre">
+                    Peerless Assassin 120 SE Doble Torre
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Doble Torre 6 Heatpipes</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">2x TL-C12C PWM Fans</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Rendimiento Top a Precio Imbatible</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $899 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-05', 'Peerless Assassin 120 SE Doble Torre', 'Thermalright', 899, 'assets/gallery/MAG CORELIQUID C360 V2 WHITE-1.webp', 'Doble Torre 6 Heatpipes, 2x TL-C12C PWM Fans, Rendimiento Top a Precio Imbatible')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-05', 'Peerless Assassin 120 SE Doble Torre', 899, 'assets/gallery/MAG CORELIQUID C360 V2 WHITE-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">DeepCool</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 18
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/MAG CORELIQUID C360 V2 WHITE-2.webp" alt="AK620 Digital con Display LED de Temperatura" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">DeepCool</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="AK620 Digital con Display LED de Temperatura">
+                    AK620 Digital con Display LED de Temperatura
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Doble Torre 260W TDP</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Display Tiempo Real CPU Temp/Uso</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">FDB Fans Silenciosos</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $1,699 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-06', 'AK620 Digital con Display LED de Temperatura', 'DeepCool', 1699, 'assets/gallery/MAG CORELIQUID C360 V2 WHITE-2.webp', 'Doble Torre 260W TDP, Display Tiempo Real CPU Temp/Uso, FDB Fans Silenciosos')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-06', 'AK620 Digital con Display LED de Temperatura', 1699, 'assets/gallery/MAG CORELIQUID C360 V2 WHITE-2.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Noctua</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 8
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/MAG CORELIQUID C360 V2-1.webp" alt="NH-D15 chromax.black Dual-Tower Cooler" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Noctua</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="NH-D15 chromax.black Dual-Tower Cooler">
+                    NH-D15 chromax.black Dual-Tower Cooler
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">2x NF-A15 HS-PWM Fans</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Recubrimiento Cerámico Negro</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Pasta Térmica NT-H1 Incluida</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $2,799 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-07', 'NH-D15 chromax.black Dual-Tower Cooler', 'Noctua', 2799, 'assets/gallery/MAG CORELIQUID C360 V2-1.webp', '2x NF-A15 HS-PWM Fans, Recubrimiento Cerámico Negro, Pasta Térmica NT-H1 Incluida')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-07', 'NH-D15 chromax.black Dual-Tower Cooler', 2799, 'assets/gallery/MAG CORELIQUID C360 V2-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Thermalright</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 20
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/MAG CORELIQUID C360 V2-2.webp" alt="Aqua Elite 240 V3 ARGB Liquid Cooler White" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Thermalright</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Aqua Elite 240 V3 ARGB Liquid Cooler White">
+                    Aqua Elite 240 V3 ARGB Liquid Cooler White
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Radiador 240mm Blanco</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Bomba Halo ARGB</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Soporta LGA1700 & AM5</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $1,499 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-08', 'Aqua Elite 240 V3 ARGB Liquid Cooler White', 'Thermalright', 1499, 'assets/gallery/MAG CORELIQUID C360 V2-2.webp', 'Radiador 240mm Blanco, Bomba Halo ARGB, Soporta LGA1700 & AM5')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-08', 'Aqua Elite 240 V3 ARGB Liquid Cooler White', 1499, 'assets/gallery/MAG CORELIQUID C360 V2-2.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Lian Li</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 7
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/MAG CORELIQUID E240-1.webp" alt="Galahad II Trinity SL-INF 360mm White" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Lian Li</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Galahad II Trinity SL-INF 360mm White">
+                    Galahad II Trinity SL-INF 360mm White
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Tapas de Bomba Intercambiables</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Fans SL-Infinity Daisy Chain</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Bomba 3200 RPM</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $4,399 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-09', 'Galahad II Trinity SL-INF 360mm White', 'Lian Li', 4399, 'assets/gallery/MAG CORELIQUID E240-1.webp', 'Tapas de Bomba Intercambiables, Fans SL-Infinity Daisy Chain, Bomba 3200 RPM')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-09', 'Galahad II Trinity SL-INF 360mm White', 4399, 'assets/gallery/MAG CORELIQUID E240-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">DeepCool</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 25
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/MAG CORELIQUID E240-2.webp" alt="AG400 Digital Plus Single Tower ARGB" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">DeepCool</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="AG400 Digital Plus Single Tower ARGB">
+                    AG400 Digital Plus Single Tower ARGB
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">4 Heatpipes Contacto Directo</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Display Digital de Estado</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">2x 120mm PWM Fans</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $949 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-10', 'AG400 Digital Plus Single Tower ARGB', 'DeepCool', 949, 'assets/gallery/MAG CORELIQUID E240-2.webp', '4 Heatpipes Contacto Directo, Display Digital de Estado, 2x 120mm PWM Fans')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-10', 'AG400 Digital Plus Single Tower ARGB', 949, 'assets/gallery/MAG CORELIQUID E240-2.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Corsair</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 10
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/MAG CORELIQUID E360-1.webp" alt="iCUE LINK QX120 RGB Pack 3 Ventiladores + Hub" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Corsair</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="iCUE LINK QX120 RGB Pack 3 Ventiladores + Hub">
+                    iCUE LINK QX120 RGB Pack 3 Ventiladores + Hub
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Conexión Serial de 1 Solo Cable</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">34 LEDs RGB por Fan</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Sensor de Temp Integrado</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $3,299 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-11', 'iCUE LINK QX120 RGB Pack 3 Ventiladores + Hub', 'Corsair', 3299, 'assets/gallery/MAG CORELIQUID E360-1.webp', 'Conexión Serial de 1 Solo Cable, 34 LEDs RGB por Fan, Sensor de Temp Integrado')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-11', 'iCUE LINK QX120 RGB Pack 3 Ventiladores + Hub', 3299, 'assets/gallery/MAG CORELIQUID E360-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Lian Li</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 15
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/MAG CORELIQUID E360-2.webp" alt="UNI FAN SL-INFINITY 120 Triple Pack Negro" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Lian Li</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="UNI FAN SL-INFINITY 120 Triple Pack Negro">
+                    UNI FAN SL-INFINITY 120 Triple Pack Negro
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Espejo Infinito Lateral/Centro</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Conexión Pin-to-Pin sin Cables</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Controlador L-Connect 3</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $2,399 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-12', 'UNI FAN SL-INFINITY 120 Triple Pack Negro', 'Lian Li', 2399, 'assets/gallery/MAG CORELIQUID E360-2.webp', 'Espejo Infinito Lateral/Centro, Conexión Pin-to-Pin sin Cables, Controlador L-Connect 3')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-12', 'UNI FAN SL-INFINITY 120 Triple Pack Negro', 2399, 'assets/gallery/MAG CORELIQUID E360-2.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Thermalright</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 40
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/MPG CORELIQUID D240-1.webp" alt="TL-C12C-S X3 Pack 3 Ventiladores 120mm ARGB" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Thermalright</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="TL-C12C-S X3 Pack 3 Ventiladores 120mm ARGB">
+                    TL-C12C-S X3 Pack 3 Ventiladores 120mm ARGB
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">3x 120mm PWM Fans</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Iluminación ARGB 5V 3-Pin</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Cojinete S-FDB Larga Vida</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $499 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-13', 'TL-C12C-S X3 Pack 3 Ventiladores 120mm ARGB', 'Thermalright', 499, 'assets/gallery/MPG CORELIQUID D240-1.webp', '3x 120mm PWM Fans, Iluminación ARGB 5V 3-Pin, Cojinete S-FDB Larga Vida')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-13', 'TL-C12C-S X3 Pack 3 Ventiladores 120mm ARGB', 499, 'assets/gallery/MPG CORELIQUID D240-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Arctic</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 11
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/MPG CORELIQUID D240-2.webp" alt="Liquid Freezer III 360 A-RGB Black" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Arctic</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Liquid Freezer III 360 A-RGB Black">
+                    Liquid Freezer III 360 A-RGB Black
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Radiador Grueso 38mm</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Fan Dedicado VRM en Bomba</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Presión Estática Optimizada P12</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $2,899 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-14', 'Liquid Freezer III 360 A-RGB Black', 'Arctic', 2899, 'assets/gallery/MPG CORELIQUID D240-2.webp', 'Radiador Grueso 38mm, Fan Dedicado VRM en Bomba, Presión Estática Optimizada P12')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-14', 'Liquid Freezer III 360 A-RGB Black', 2899, 'assets/gallery/MPG CORELIQUID D240-2.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Be Quiet!</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 9
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/MPG CORELIQUID D360-1.webp" alt="Dark Rock Pro 5 Disipador de Aire" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Be Quiet!</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Dark Rock Pro 5 Disipador de Aire">
+                    Dark Rock Pro 5 Disipador de Aire
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">7 Heatpipes de Alto Rendimiento</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Interruptor de Modo Silencioso/Velocidad</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Silent Wings Fan</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $2,199 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-15', 'Dark Rock Pro 5 Disipador de Aire', 'Be Quiet!', 2199, 'assets/gallery/MPG CORELIQUID D360-1.webp', '7 Heatpipes de Alto Rendimiento, Interruptor de Modo Silencioso/Velocidad, Silent Wings Fan')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-15', 'Dark Rock Pro 5 Disipador de Aire', 2199, 'assets/gallery/MPG CORELIQUID D360-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Cooler Master</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 28
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/MPG CORELIQUID D360-2.webp" alt="Hyper 212 Halo Black Edition" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Cooler Master</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Hyper 212 Halo Black Edition">
+                    Hyper 212 Halo Black Edition
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Diseño Halo ARGB Dual Loop</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">4 Heatpipes Acabado Negro</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Instalación Simplificada</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $799 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-16', 'Hyper 212 Halo Black Edition', 'Cooler Master', 799, 'assets/gallery/MPG CORELIQUID D360-2.webp', 'Diseño Halo ARGB Dual Loop, 4 Heatpipes Acabado Negro, Instalación Simplificada')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-16', 'Hyper 212 Halo Black Edition', 799, 'assets/gallery/MPG CORELIQUID D360-2.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">NZXT</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 12
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/NVR12-16400PFAN(1U)-1.webp" alt="F120 RGB Duo Triple Pack con Controlador" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">NZXT</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="F120 RGB Duo Triple Pack con Controlador">
+                    F120 RGB Duo Triple Pack con Controlador
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Iluminación Doble Cara</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Aspas Diseñadas para Presión/Flujo</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Software NZXT CAM</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $2,199 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-17', 'F120 RGB Duo Triple Pack con Controlador', 'NZXT', 2199, 'assets/gallery/NVR12-16400PFAN(1U)-1.webp', 'Iluminación Doble Cara, Aspas Diseñadas para Presión/Flujo, Software NZXT CAM')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-17', 'F120 RGB Duo Triple Pack con Controlador', 2199, 'assets/gallery/NVR12-16400PFAN(1U)-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Arctic</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 50
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/NVR12-16400PFAN(1U)-2.webp" alt="MX-6 Pasta Térmica de Alto Rendimiento 4g" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Arctic</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="MX-6 Pasta Térmica de Alto Rendimiento 4g">
+                    MX-6 Pasta Térmica de Alto Rendimiento 4g
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Jeringa 4g con Espátula</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Conductividad Térmica Extrema</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">No Conductora de Electricidad</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $249 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-18', 'MX-6 Pasta Térmica de Alto Rendimiento 4g', 'Arctic', 249, 'assets/gallery/NVR12-16400PFAN(1U)-2.webp', 'Jeringa 4g con Espátula, Conductividad Térmica Extrema, No Conductora de Electricidad')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-18', 'MX-6 Pasta Térmica de Alto Rendimiento 4g', 249, 'assets/gallery/NVR12-16400PFAN(1U)-2.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Thermal Grizzly</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 45
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/NVR12-16400PFAN(1U)-3.webp" alt="Kryonaut Pasta Térmica Premium 1g" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Thermal Grizzly</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Kryonaut Pasta Térmica Premium 1g">
+                    Kryonaut Pasta Térmica Premium 1g
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">1g Ultra High Thermal Conductivity</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Ideal para Overclocking Extremo</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Estructura Estable a 80°C</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $299 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-19', 'Kryonaut Pasta Térmica Premium 1g', 'Thermal Grizzly', 299, 'assets/gallery/NVR12-16400PFAN(1U)-3.webp', '1g Ultra High Thermal Conductivity, Ideal para Overclocking Extremo, Estructura Estable a 80°C')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-19', 'Kryonaut Pasta Térmica Premium 1g', 299, 'assets/gallery/NVR12-16400PFAN(1U)-3.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Yeyian</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 60
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/0.01L4863ZAKFR-1.webp" alt="Storm 1200 Ventilador Individual ARGB 120mm" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Yeyian</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Storm 1200 Ventilador Individual ARGB 120mm">
+                    Storm 1200 Ventilador Individual ARGB 120mm
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">120mm 1200 RPM</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Almohadillas Antivibración</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Conector ARGB 3-Pin</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $189 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-08-20', 'Storm 1200 Ventilador Individual ARGB 120mm', 'Yeyian', 189, 'assets/gallery/0.01L4863ZAKFR-1.webp', '120mm 1200 RPM, Almohadillas Antivibración, Conector ARGB 3-Pin')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-08-20', 'Storm 1200 Ventilador Individual ARGB 120mm', 189, 'assets/gallery/0.01L4863ZAKFR-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        </section>
+
+        <!-- Pagination Section -->
+        <section class="border-t border-slate-800/80 pt-8 pb-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <a href="catalogo-07-gabinetes.html" class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white font-semibold text-sm flex items-center gap-2 transition-all">
+                ← Sección Anterior
+            </a>
+
+            <!-- Numbered Links 1..11 -->
+            <div class="flex items-center gap-1.5 flex-wrap justify-center">
+                <a href="catalogo-01-tarjetas-madre.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">1</a><a href="catalogo-02-procesadores.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">2</a><a href="catalogo-03-tarjetas-de-video.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">3</a><a href="catalogo-04-memorias-ram.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">4</a><a href="catalogo-05-discos-duros.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">5</a><a href="catalogo-06-fuentes-de-poder.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">6</a><a href="catalogo-07-gabinetes.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">7</a><a href="catalogo-08-enfriamiento.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-cyan-500 text-black shadow-lg shadow-cyan-500/30 scale-110 border border-cyan-400">8</a><a href="catalogo-09-perifericos.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">9</a><a href="catalogo-10-conectividad-redes.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">10</a><a href="catalogo-11-monitores-software.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">11</a>
+            </div>
+
+            <a href="catalogo-09-perifericos.html" class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white font-semibold text-sm flex items-center gap-2 transition-all">
+                Siguiente Sección →
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-10 px-4 mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-slate-400">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-cyan-500 text-black flex items-center justify-center font-black">⚡</div>
+                <span class="font-bold text-white">PC CUSTOM LAB © 2026</span> — Armado y Distribución de Hardware
+            </div>
+            <div class="flex gap-6 text-xs text-slate-400">
+                <span>📍 Guadalajara, Jalisco, México</span>
+                <span>💬 WhatsApp Cotizaciones: +52 33 1234 5678</span>
+                <span>🛡️ Garantía Oficial</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-lg w-full p-6 relative shadow-2xl">
+            <button onclick="cerrarDetalle()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center font-bold">✕</button>
+            <div class="w-full h-56 bg-slate-950 rounded-2xl flex items-center justify-center p-4 mb-4 border border-slate-800">
+                <img id="modalImg" src="" class="max-h-full max-w-full object-contain">
+            </div>
+            <span id="modalBrand" class="px-2.5 py-1 rounded-md bg-cyan-500/20 text-cyan-400 text-xs font-bold uppercase"></span>
+            <h3 id="modalTitle" class="text-xl font-bold text-white mt-2 mb-3"></h3>
+            <p class="text-xs text-slate-400 mb-4" id="modalSpecs"></p>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
+                <span id="modalPrice" class="text-2xl font-black text-emerald-400"></span>
+                <button id="modalAddBtn" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-black font-bold text-sm shadow-lg shadow-cyan-500/20 hover:opacity-95">
+                    🛒 Agregar al Carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div id="cartDrawer" class="fixed inset-y-0 right-0 w-full max-w-md bg-slate-950 border-l border-slate-800 shadow-2xl z-50 translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-5 border-b border-slate-800 flex items-center justify-between">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">🛒 Tu Carrito de Cotización</h3>
+            <button onclick="toggleCartDrawer()" class="w-8 h-8 rounded-lg bg-slate-900 text-slate-400 hover:text-white flex items-center justify-center">✕</button>
+        </div>
+        <div id="cartItemsList" class="flex-1 overflow-y-auto p-5 space-y-4">
+            <!-- Items injected by JS -->
+        </div>
+        <div class="p-5 border-t border-slate-800 bg-slate-900/60">
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-sm text-slate-400">Total Estimado:</span>
+                <span id="cartTotalSum" class="text-xl font-black text-cyan-400">$0 MXN</span>
+            </div>
+            <a href="checkout.html" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-black font-black text-center text-sm block shadow-lg shadow-cyan-500/20 hover:opacity-95 transition-opacity">
+                Proceder al Checkout / Cotizar por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('pccustom_cart') || '[]');
+
+        function updateCartUI() {
+            const badge = document.getElementById('cartCountBadge');
+            const list = document.getElementById('cartItemsList');
+            const totalEl = document.getElementById('cartTotalSum');
+            
+            const totalQty = cart.reduce((acc, item) => acc + item.qty, 0);
+            badge.innerText = totalQty;
+            
+            if (cart.length === 0) {
+                list.innerHTML = '<div class="text-center py-12 text-slate-500 text-sm">Tu carrito está vacío.<br>Agrega componentes para cotizar.</div>';
+                totalEl.innerText = '$0 MXN';
+                return;
+            }
+            
+            let total = 0;
+            list.innerHTML = cart.map((item, idx) => {
+                total += item.price * item.qty;
+                return `
+                <div class="flex items-center gap-3 bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                    <img src="${item.img}" class="w-12 h-12 object-contain bg-slate-950 rounded-lg p-1">
+                    <div class="flex-1 min-w-0">
+                        <h4 class="text-xs font-bold text-white truncate">${item.title}</h4>
+                        <div class="text-xs text-cyan-400 font-bold">$${item.price.toLocaleString()} MXN</div>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <button onclick="cambiarQty(${idx}, -1)" class="w-6 h-6 rounded bg-slate-800 text-slate-300 font-bold flex items-center justify-center">-</button>
+                        <span class="text-xs font-bold text-white px-1">${item.qty}</span>
+                        <button onclick="cambiarQty(${idx}, 1)" class="w-6 h-6 rounded bg-slate-800 text-slate-300 font-bold flex items-center justify-center">+</button>
+                    </div>
+                </div>
+                `;
+            }).join('');
+            
+            totalEl.innerText = '$' + total.toLocaleString() + ' MXN';
+            localStorage.setItem('pccustom_cart', JSON.stringify(cart));
+        }
+
+        function agregarAlCarrito(id, title, price, img) {
+            const existing = cart.find(x => x.id === id);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ id, title, price, img, qty: 1 });
+            }
+            updateCartUI();
+            toggleCartDrawer(true);
+        }
+
+        function cambiarQty(idx, delta) {
+            cart[idx].qty += delta;
+            if (cart[idx].qty <= 0) cart.splice(idx, 1);
+            updateCartUI();
+        }
+
+        function toggleCartDrawer(open = null) {
+            const drawer = document.getElementById('cartDrawer');
+            if (open === true) drawer.classList.remove('translate-x-full');
+            else if (open === false) drawer.classList.add('translate-x-full');
+            else drawer.classList.toggle('translate-x-full');
+        }
+
+        function verDetalle(id, title, brand, price, img, specs) {
+            document.getElementById('modalImg').src = img;
+            document.getElementById('modalBrand').innerText = brand;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalSpecs').innerText = 'Especificaciones clave: ' + specs;
+            document.getElementById('modalPrice').innerText = '$' + price.toLocaleString() + ' MXN';
+            document.getElementById('modalAddBtn').onclick = () => {
+                agregarAlCarrito(id, title, price, img);
+                cerrarDetalle();
+            };
+            document.getElementById('quickViewModal').classList.remove('hidden');
+            document.getElementById('quickViewModal').classList.add('flex');
+        }
+
+        function cerrarDetalle() {
+            document.getElementById('quickViewModal').classList.add('hidden');
+            document.getElementById('quickViewModal').classList.remove('flex');
+        }
+
+        // Inicializar carrito
+        updateCartUI();
+    </script>
+</body>
+</html>

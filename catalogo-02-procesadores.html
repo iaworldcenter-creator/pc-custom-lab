@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesadores (CPUs) — Catálogo PC Custom Lab</title>
+    <meta name="description" content="Microprocesadores AMD Ryzen 7000/9000 e Intel Core 13ª/14ª Generación en PC Custom Lab. Cotiza componentes gamer y de workstation al mejor precio.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, .font-heading { font-family: 'Outfit', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#0b0f19] text-slate-100 min-h-screen flex flex-col selection:bg-cyan-500 selection:text-black">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-cyan-500 to-emerald-400 p-0.5 shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center text-cyan-400 font-black text-xl">
+                        ⚡
+                    </div>
+                </div>
+                <div>
+                    <span class="text-lg font-black tracking-wider text-white flex items-center gap-1.5 font-heading">
+                        PC CUSTOM LAB <span class="px-1.5 py-0.5 rounded text-[10px] bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">PRO</span>
+                    </span>
+                    <p class="text-[11px] text-slate-400 font-medium">Armado Profesional & Hardware de Vanguardia</p>
+                </div>
+            </a>
+
+            <!-- Quick Links -->
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-300">
+                <a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a>
+                <a href="catalogo-01-tarjetas-madre.html" class="text-cyan-400 font-bold">Catálogo (11 Secciones)</a>
+                <a href="producto.html" class="hover:text-cyan-400 transition-colors">Configurador</a>
+                <a href="checkout.html" class="hover:text-cyan-400 transition-colors">Carrito / Checkout</a>
+            </nav>
+
+            <!-- Cart Trigger Button -->
+            <button onclick="toggleCartDrawer()" class="relative px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700/80 hover:border-cyan-500 text-white flex items-center gap-2.5 font-semibold text-sm transition-all shadow-md">
+                <span>🛒 Carrito</span>
+                <span id="cartCountBadge" class="w-5 h-5 rounded-full bg-cyan-500 text-black text-xs font-black flex items-center justify-center">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Top Categories Tabs Bar -->
+    <section class="bg-slate-950/60 border-b border-slate-800/60 py-3.5 px-4 sticky top-20 z-30 backdrop-blur-md overflow-x-auto scrollbar-thin">
+        <div class="max-w-7xl mx-auto flex items-center gap-2 overflow-x-auto pb-1">
+            
+        <a href="catalogo-01-tarjetas-madre.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>🔲</span>
+            <span>1. Tarjetas Madre</span>
+        </a>
+        
+        <a href="catalogo-02-procesadores.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-cyan-500 text-black font-bold shadow-lg shadow-cyan-500/30 scale-105 border-cyan-400">
+            <span>⚡</span>
+            <span>2. Procesadores</span>
+        </a>
+        
+        <a href="catalogo-03-tarjetas-de-video.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>🎮</span>
+            <span>3. Tarjetas de Video</span>
+        </a>
+        
+        <a href="catalogo-04-memorias-ram.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>⚡</span>
+            <span>4. Memorias RAM</span>
+        </a>
+        
+        <a href="catalogo-05-discos-duros.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>💾</span>
+            <span>5. Almacenamiento</span>
+        </a>
+        
+        <a href="catalogo-06-fuentes-de-poder.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>🔌</span>
+            <span>6. Fuentes de Poder</span>
+        </a>
+        
+        <a href="catalogo-07-gabinetes.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>🏰</span>
+            <span>7. Gabinetes y Chasis</span>
+        </a>
+        
+        <a href="catalogo-08-enfriamiento.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>❄️</span>
+            <span>8. Enfriamiento y Ventiladores</span>
+        </a>
+        
+        <a href="catalogo-09-perifericos.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>🎧</span>
+            <span>9. Periféricos y Accesorios</span>
+        </a>
+        
+        <a href="catalogo-10-conectividad-redes.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>📶</span>
+            <span>10. Conectividad, Redes y Adaptadores</span>
+        </a>
+        
+        <a href="catalogo-11-monitores-software.html" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60">
+            <span>🖥️</span>
+            <span>11. Monitores y Software</span>
+        </a>
+        
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
+        <!-- Hero Section Header -->
+        <div class="mb-8 p-6 md:p-8 rounded-3xl bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-slate-950 border border-slate-800/80 shadow-2xl relative overflow-hidden flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-wider mb-2">
+                    <span>⚡</span> SECCIÓN 2 DE 11
+                </div>
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight font-heading">
+                    Procesadores (CPUs)
+                </h1>
+                <p class="text-sm md:text-base text-slate-400 max-w-2xl mt-1">
+                    Microprocesadores AMD Ryzen 7000/9000 e Intel Core 13ª/14ª Generación
+                </p>
+            </div>
+            <div class="flex items-center gap-3 bg-slate-950/80 border border-slate-800 px-4 py-3 rounded-2xl">
+                <span class="text-xs text-slate-400 font-medium">Mostrando:</span>
+                <span class="text-sm font-bold text-white bg-slate-800 px-2.5 py-1 rounded-lg border border-slate-700">20 Productos (5x4)</span>
+            </div>
+        </div>
+
+        <!-- 5 Columns x 4 Rows Products Grid -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-5 mb-12">
+            
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">AMD</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 8
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/10G4G0Hg3s6gxOPtg0cDIB2tWQi7ZTIYKL3nodCR.webp" alt="Ryzen 7 7800X3D (3D V-Cache)" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">AMD</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Ryzen 7 7800X3D (3D V-Cache)">
+                    Ryzen 7 7800X3D (3D V-Cache)
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">8 Núcleos / 16 Hilos</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 5.0 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">96MB L3 Cache</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $8,799 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-01', 'Ryzen 7 7800X3D (3D V-Cache)', 'AMD', 8799, 'assets/gallery/10G4G0Hg3s6gxOPtg0cDIB2tWQi7ZTIYKL3nodCR.webp', '8 Núcleos / 16 Hilos, Hasta 5.0 GHz, 96MB L3 Cache')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-01', 'Ryzen 7 7800X3D (3D V-Cache)', 8799, 'assets/gallery/10G4G0Hg3s6gxOPtg0cDIB2tWQi7ZTIYKL3nodCR.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Intel</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 10
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/10GAI9901-1.webp" alt="Core i7-14700K Desbloqueado" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Intel</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Core i7-14700K Desbloqueado">
+                    Core i7-14700K Desbloqueado
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">20 Núcleos (8P+12E)</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 5.6 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">UHD Graphics 770</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $8,999 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-02', 'Core i7-14700K Desbloqueado', 'Intel', 8999, 'assets/gallery/10GAI9901-1.webp', '20 Núcleos (8P+12E), Hasta 5.6 GHz, UHD Graphics 770')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-02', 'Core i7-14700K Desbloqueado', 8999, 'assets/gallery/10GAI9901-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">AMD</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 16
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/10GAI9901-2.webp" alt="Ryzen 5 7600X Gaming" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">AMD</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Ryzen 5 7600X Gaming">
+                    Ryzen 5 7600X Gaming
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">6 Núcleos / 12 Hilos</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 5.3 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Zen 4 5nm</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $4,599 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-03', 'Ryzen 5 7600X Gaming', 'AMD', 4599, 'assets/gallery/10GAI9901-2.webp', '6 Núcleos / 12 Hilos, Hasta 5.3 GHz, Zen 4 5nm')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-03', 'Ryzen 5 7600X Gaming', 4599, 'assets/gallery/10GAI9901-2.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Intel</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 14
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/192545378000-H-1.webp" alt="Core i5-14600K 14th Gen" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Intel</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Core i5-14600K 14th Gen">
+                    Core i5-14600K 14th Gen
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">14 Núcleos (6P+8E)</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 5.3 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">24MB Smart Cache</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $6,399 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-04', 'Core i5-14600K 14th Gen', 'Intel', 6399, 'assets/gallery/192545378000-H-1.webp', '14 Núcleos (6P+8E), Hasta 5.3 GHz, 24MB Smart Cache')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-04', 'Core i5-14600K 14th Gen', 6399, 'assets/gallery/192545378000-H-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">AMD</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 4
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/1iI8qhYfT1vQrEfAkB6i9edDvryplPIpIVkjbxKA.jpg.webp" alt="Ryzen 9 7950X3D Flagship" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">AMD</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Ryzen 9 7950X3D Flagship">
+                    Ryzen 9 7950X3D Flagship
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">16 Núcleos / 32 Hilos</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 5.7 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">128MB 3D V-Cache</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $13,899 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-05', 'Ryzen 9 7950X3D Flagship', 'AMD', 13899, 'assets/gallery/1iI8qhYfT1vQrEfAkB6i9edDvryplPIpIVkjbxKA.jpg.webp', '16 Núcleos / 32 Hilos, Hasta 5.7 GHz, 128MB 3D V-Cache')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-05', 'Ryzen 9 7950X3D Flagship', 13899, 'assets/gallery/1iI8qhYfT1vQrEfAkB6i9edDvryplPIpIVkjbxKA.jpg.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Intel</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 5
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/2Cx5IcatAqFFQgI4Ng4ND2SJTavrQlYNDHDvI78K.jpg.webp" alt="Core i9-14900K Ultra High-End" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Intel</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Core i9-14900K Ultra High-End">
+                    Core i9-14900K Ultra High-End
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">24 Núcleos (8P+16E)</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 6.0 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">36MB Cache</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $13,499 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-06', 'Core i9-14900K Ultra High-End', 'Intel', 13499, 'assets/gallery/2Cx5IcatAqFFQgI4Ng4ND2SJTavrQlYNDHDvI78K.jpg.webp', '24 Núcleos (8P+16E), Hasta 6.0 GHz, 36MB Cache')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-06', 'Core i9-14900K Ultra High-End', 13499, 'assets/gallery/2Cx5IcatAqFFQgI4Ng4ND2SJTavrQlYNDHDvI78K.jpg.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">AMD</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 24
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/4hvGbS7DEQnhgByg5tbAjcTSrsWOLsr7Ai5IKczb.webp" alt="Ryzen 5 5600X Socket AM4" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">AMD</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Ryzen 5 5600X Socket AM4">
+                    Ryzen 5 5600X Socket AM4
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">6 Núcleos / 12 Hilos</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 4.6 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">35MB GameCache</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $2,899 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-07', 'Ryzen 5 5600X Socket AM4', 'AMD', 2899, 'assets/gallery/4hvGbS7DEQnhgByg5tbAjcTSrsWOLsr7Ai5IKczb.webp', '6 Núcleos / 12 Hilos, Hasta 4.6 GHz, 35MB GameCache')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-07', 'Ryzen 5 5600X Socket AM4', 2899, 'assets/gallery/4hvGbS7DEQnhgByg5tbAjcTSrsWOLsr7Ai5IKczb.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">AMD</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 11
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/4sEe46OpII9ydpOMpU2JQAot5ByWp7gAkiiSTprC.webp" alt="Ryzen 7 5700X3D AM4" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">AMD</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Ryzen 7 5700X3D AM4">
+                    Ryzen 7 5700X3D AM4
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">8 Núcleos / 16 Hilos</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 4.1 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">96MB L3 V-Cache</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $4,899 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-08', 'Ryzen 7 5700X3D AM4', 'AMD', 4899, 'assets/gallery/4sEe46OpII9ydpOMpU2JQAot5ByWp7gAkiiSTprC.webp', '8 Núcleos / 16 Hilos, Hasta 4.1 GHz, 96MB L3 V-Cache')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-08', 'Ryzen 7 5700X3D AM4', 4899, 'assets/gallery/4sEe46OpII9ydpOMpU2JQAot5ByWp7gAkiiSTprC.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Intel</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 19
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/50UR7800PSB-1.webp" alt="Core i5-13400F 10-Core" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Intel</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Core i5-13400F 10-Core">
+                    Core i5-13400F 10-Core
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">10 Núcleos (6P+4E)</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 4.6 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Sin Gráficos Integ.</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $4,199 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-09', 'Core i5-13400F 10-Core', 'Intel', 4199, 'assets/gallery/50UR7800PSB-1.webp', '10 Núcleos (6P+4E), Hasta 4.6 GHz, Sin Gráficos Integ.')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-09', 'Core i5-13400F 10-Core', 4199, 'assets/gallery/50UR7800PSB-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Intel</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 28
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/55UR7800PSB-1.webp" alt="Core i3-14100F Quad-Core" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Intel</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Core i3-14100F Quad-Core">
+                    Core i3-14100F Quad-Core
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">4 Núcleos / 8 Hilos</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 4.7 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">12MB Cache</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $2,199 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-10', 'Core i3-14100F Quad-Core', 'Intel', 2199, 'assets/gallery/55UR7800PSB-1.webp', '4 Núcleos / 8 Hilos, Hasta 4.7 GHz, 12MB Cache')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-10', 'Core i3-14100F Quad-Core', 2199, 'assets/gallery/55UR7800PSB-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">AMD</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 7
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/55UR7800PSB-2.webp" alt="Ryzen 9 7900X Workstation" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">AMD</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Ryzen 9 7900X Workstation">
+                    Ryzen 9 7900X Workstation
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">12 Núcleos / 24 Hilos</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 5.6 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">76MB Cache</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $9,199 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-11', 'Ryzen 9 7900X Workstation', 'AMD', 9199, 'assets/gallery/55UR7800PSB-2.webp', '12 Núcleos / 24 Hilos, Hasta 5.6 GHz, 76MB Cache')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-11', 'Ryzen 9 7900X Workstation', 9199, 'assets/gallery/55UR7800PSB-2.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Intel</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 9
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/5IUapoiOEJxHlBuDGmCi3M2KzANLvr04L4T7hCCR.jpg.webp" alt="Core i7-13700KF Raptor Lake" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Intel</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Core i7-13700KF Raptor Lake">
+                    Core i7-13700KF Raptor Lake
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">16 Núcleos (8P+8E)</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 5.4 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">30MB Cache</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $7,699 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-12', 'Core i7-13700KF Raptor Lake', 'Intel', 7699, 'assets/gallery/5IUapoiOEJxHlBuDGmCi3M2KzANLvr04L4T7hCCR.jpg.webp', '16 Núcleos (8P+8E), Hasta 5.4 GHz, 30MB Cache')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-12', 'Core i7-13700KF Raptor Lake', 7699, 'assets/gallery/5IUapoiOEJxHlBuDGmCi3M2KzANLvr04L4T7hCCR.jpg.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">AMD</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 12
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/7502266678007-G-1.webp" alt="Ryzen 5 8600G con Radeon 760M" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">AMD</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Ryzen 5 8600G con Radeon 760M">
+                    Ryzen 5 8600G con Radeon 760M
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">6 Núcleos / 12 Hilos</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 5.0 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">NPU Ryzen AI</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $4,499 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-13', 'Ryzen 5 8600G con Radeon 760M', 'AMD', 4499, 'assets/gallery/7502266678007-G-1.webp', '6 Núcleos / 12 Hilos, Hasta 5.0 GHz, NPU Ryzen AI')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-13', 'Ryzen 5 8600G con Radeon 760M', 4499, 'assets/gallery/7502266678007-G-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">AMD</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 6
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/766623300179-M-1.webp" alt="Ryzen 7 8700G con Radeon 780M" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">AMD</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Ryzen 7 8700G con Radeon 780M">
+                    Ryzen 7 8700G con Radeon 780M
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">8 Núcleos / 16 Hilos</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 5.1 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">IA Generativa NPU</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $6,799 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-14', 'Ryzen 7 8700G con Radeon 780M', 'AMD', 6799, 'assets/gallery/766623300179-M-1.webp', '8 Núcleos / 16 Hilos, Hasta 5.1 GHz, IA Generativa NPU')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-14', 'Ryzen 7 8700G con Radeon 780M', 6799, 'assets/gallery/766623300179-M-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Intel</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 30
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/766623304955-M-1.webp" alt="Core i5-12400F Alder Lake" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Intel</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Core i5-12400F Alder Lake">
+                    Core i5-12400F Alder Lake
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">6 Núcleos / 12 Hilos</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 4.4 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">18MB Cache</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $2,799 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-15', 'Core i5-12400F Alder Lake', 'Intel', 2799, 'assets/gallery/766623304955-M-1.webp', '6 Núcleos / 12 Hilos, Hasta 4.4 GHz, 18MB Cache')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-15', 'Core i5-12400F Alder Lake', 2799, 'assets/gallery/766623304955-M-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">AMD</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 35
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/766623304955-M-2.webp" alt="Ryzen 5 5500 Presupuesto" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">AMD</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Ryzen 5 5500 Presupuesto">
+                    Ryzen 5 5500 Presupuesto
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">6 Núcleos / 12 Hilos</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 4.2 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">19MB Cache</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $1,999 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-16', 'Ryzen 5 5500 Presupuesto', 'AMD', 1999, 'assets/gallery/766623304955-M-2.webp', '6 Núcleos / 12 Hilos, Hasta 4.2 GHz, 19MB Cache')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-16', 'Ryzen 5 5500 Presupuesto', 1999, 'assets/gallery/766623304955-M-2.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Intel</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 4
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/766623305808-M-1.webp" alt="Core i9-13900K 24-Core" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Intel</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Core i9-13900K 24-Core">
+                    Core i9-13900K 24-Core
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">24 Núcleos (8P+16E)</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 5.8 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">UHD Graphics 770</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $11,999 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-17', 'Core i9-13900K 24-Core', 'Intel', 11999, 'assets/gallery/766623305808-M-1.webp', '24 Núcleos (8P+16E), Hasta 5.8 GHz, UHD Graphics 770')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-17', 'Core i9-13900K 24-Core', 11999, 'assets/gallery/766623305808-M-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">AMD</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 10
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/766623305808-M-2.webp" alt="Ryzen 7 7700X AM5" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">AMD</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Ryzen 7 7700X AM5">
+                    Ryzen 7 7700X AM5
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">8 Núcleos / 16 Hilos</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 5.4 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">40MB Cache</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $6,499 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-18', 'Ryzen 7 7700X AM5', 'AMD', 6499, 'assets/gallery/766623305808-M-2.webp', '8 Núcleos / 16 Hilos, Hasta 5.4 GHz, 40MB Cache')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-18', 'Ryzen 7 7700X AM5', 6499, 'assets/gallery/766623305808-M-2.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">Intel</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 15
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/766623306089-M-1.webp" alt="Core i5-14400 10-Core" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Intel</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Core i5-14400 10-Core">
+                    Core i5-14400 10-Core
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">10 Núcleos (6P+4E)</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 4.7 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">UHD 730 Gráficos</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $4,799 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-19', 'Core i5-14400 10-Core', 'Intel', 4799, 'assets/gallery/766623306089-M-1.webp', '10 Núcleos (6P+4E), Hasta 4.7 GHz, UHD 730 Gráficos')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-19', 'Core i5-14400 10-Core', 4799, 'assets/gallery/766623306089-M-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">AMD</span>
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: 8
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="assets/gallery/766623306119-M-1.webp" alt="Ryzen 9 5900X AM4" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">AMD</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="Ryzen 9 5900X AM4">
+                    Ryzen 9 5900X AM4
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">12 Núcleos / 24 Hilos</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">Hasta 4.8 GHz</span><span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">70MB GameCache</span>
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        $6,199 <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('PCC-02-20', 'Ryzen 9 5900X AM4', 'AMD', 6199, 'assets/gallery/766623306119-M-1.webp', '12 Núcleos / 24 Hilos, Hasta 4.8 GHz, 70MB GameCache')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('PCC-02-20', 'Ryzen 9 5900X AM4', 6199, 'assets/gallery/766623306119-M-1.webp')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        </section>
+
+        <!-- Pagination Section -->
+        <section class="border-t border-slate-800/80 pt-8 pb-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <a href="catalogo-01-tarjetas-madre.html" class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white font-semibold text-sm flex items-center gap-2 transition-all">
+                ← Sección Anterior
+            </a>
+
+            <!-- Numbered Links 1..11 -->
+            <div class="flex items-center gap-1.5 flex-wrap justify-center">
+                <a href="catalogo-01-tarjetas-madre.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">1</a><a href="catalogo-02-procesadores.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-cyan-500 text-black shadow-lg shadow-cyan-500/30 scale-110 border border-cyan-400">2</a><a href="catalogo-03-tarjetas-de-video.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">3</a><a href="catalogo-04-memorias-ram.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">4</a><a href="catalogo-05-discos-duros.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">5</a><a href="catalogo-06-fuentes-de-poder.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">6</a><a href="catalogo-07-gabinetes.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">7</a><a href="catalogo-08-enfriamiento.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">8</a><a href="catalogo-09-perifericos.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">9</a><a href="catalogo-10-conectividad-redes.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">10</a><a href="catalogo-11-monitores-software.html" class="w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white">11</a>
+            </div>
+
+            <a href="catalogo-03-tarjetas-de-video.html" class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white font-semibold text-sm flex items-center gap-2 transition-all">
+                Siguiente Sección →
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-10 px-4 mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-slate-400">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-cyan-500 text-black flex items-center justify-center font-black">⚡</div>
+                <span class="font-bold text-white">PC CUSTOM LAB © 2026</span> — Armado y Distribución de Hardware
+            </div>
+            <div class="flex gap-6 text-xs text-slate-400">
+                <span>📍 Guadalajara, Jalisco, México</span>
+                <span>💬 WhatsApp Cotizaciones: +52 33 1234 5678</span>
+                <span>🛡️ Garantía Oficial</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-lg w-full p-6 relative shadow-2xl">
+            <button onclick="cerrarDetalle()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center font-bold">✕</button>
+            <div class="w-full h-56 bg-slate-950 rounded-2xl flex items-center justify-center p-4 mb-4 border border-slate-800">
+                <img id="modalImg" src="" class="max-h-full max-w-full object-contain">
+            </div>
+            <span id="modalBrand" class="px-2.5 py-1 rounded-md bg-cyan-500/20 text-cyan-400 text-xs font-bold uppercase"></span>
+            <h3 id="modalTitle" class="text-xl font-bold text-white mt-2 mb-3"></h3>
+            <p class="text-xs text-slate-400 mb-4" id="modalSpecs"></p>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
+                <span id="modalPrice" class="text-2xl font-black text-emerald-400"></span>
+                <button id="modalAddBtn" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-black font-bold text-sm shadow-lg shadow-cyan-500/20 hover:opacity-95">
+                    🛒 Agregar al Carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div id="cartDrawer" class="fixed inset-y-0 right-0 w-full max-w-md bg-slate-950 border-l border-slate-800 shadow-2xl z-50 translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-5 border-b border-slate-800 flex items-center justify-between">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">🛒 Tu Carrito de Cotización</h3>
+            <button onclick="toggleCartDrawer()" class="w-8 h-8 rounded-lg bg-slate-900 text-slate-400 hover:text-white flex items-center justify-center">✕</button>
+        </div>
+        <div id="cartItemsList" class="flex-1 overflow-y-auto p-5 space-y-4">
+            <!-- Items injected by JS -->
+        </div>
+        <div class="p-5 border-t border-slate-800 bg-slate-900/60">
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-sm text-slate-400">Total Estimado:</span>
+                <span id="cartTotalSum" class="text-xl font-black text-cyan-400">$0 MXN</span>
+            </div>
+            <a href="checkout.html" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-black font-black text-center text-sm block shadow-lg shadow-cyan-500/20 hover:opacity-95 transition-opacity">
+                Proceder al Checkout / Cotizar por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('pccustom_cart') || '[]');
+
+        function updateCartUI() {
+            const badge = document.getElementById('cartCountBadge');
+            const list = document.getElementById('cartItemsList');
+            const totalEl = document.getElementById('cartTotalSum');
+            
+            const totalQty = cart.reduce((acc, item) => acc + item.qty, 0);
+            badge.innerText = totalQty;
+            
+            if (cart.length === 0) {
+                list.innerHTML = '<div class="text-center py-12 text-slate-500 text-sm">Tu carrito está vacío.<br>Agrega componentes para cotizar.</div>';
+                totalEl.innerText = '$0 MXN';
+                return;
+            }
+            
+            let total = 0;
+            list.innerHTML = cart.map((item, idx) => {
+                total += item.price * item.qty;
+                return `
+                <div class="flex items-center gap-3 bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                    <img src="${item.img}" class="w-12 h-12 object-contain bg-slate-950 rounded-lg p-1">
+                    <div class="flex-1 min-w-0">
+                        <h4 class="text-xs font-bold text-white truncate">${item.title}</h4>
+                        <div class="text-xs text-cyan-400 font-bold">$${item.price.toLocaleString()} MXN</div>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <button onclick="cambiarQty(${idx}, -1)" class="w-6 h-6 rounded bg-slate-800 text-slate-300 font-bold flex items-center justify-center">-</button>
+                        <span class="text-xs font-bold text-white px-1">${item.qty}</span>
+                        <button onclick="cambiarQty(${idx}, 1)" class="w-6 h-6 rounded bg-slate-800 text-slate-300 font-bold flex items-center justify-center">+</button>
+                    </div>
+                </div>
+                `;
+            }).join('');
+            
+            totalEl.innerText = '$' + total.toLocaleString() + ' MXN';
+            localStorage.setItem('pccustom_cart', JSON.stringify(cart));
+        }
+
+        function agregarAlCarrito(id, title, price, img) {
+            const existing = cart.find(x => x.id === id);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ id, title, price, img, qty: 1 });
+            }
+            updateCartUI();
+            toggleCartDrawer(true);
+        }
+
+        function cambiarQty(idx, delta) {
+            cart[idx].qty += delta;
+            if (cart[idx].qty <= 0) cart.splice(idx, 1);
+            updateCartUI();
+        }
+
+        function toggleCartDrawer(open = null) {
+            const drawer = document.getElementById('cartDrawer');
+            if (open === true) drawer.classList.remove('translate-x-full');
+            else if (open === false) drawer.classList.add('translate-x-full');
+            else drawer.classList.toggle('translate-x-full');
+        }
+
+        function verDetalle(id, title, brand, price, img, specs) {
+            document.getElementById('modalImg').src = img;
+            document.getElementById('modalBrand').innerText = brand;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalSpecs').innerText = 'Especificaciones clave: ' + specs;
+            document.getElementById('modalPrice').innerText = '$' + price.toLocaleString() + ' MXN';
+            document.getElementById('modalAddBtn').onclick = () => {
+                agregarAlCarrito(id, title, price, img);
+                cerrarDetalle();
+            };
+            document.getElementById('quickViewModal').classList.remove('hidden');
+            document.getElementById('quickViewModal').classList.add('flex');
+        }
+
+        function cerrarDetalle() {
+            document.getElementById('quickViewModal').classList.add('hidden');
+            document.getElementById('quickViewModal').classList.remove('flex');
+        }
+
+        // Inicializar carrito
+        updateCartUI();
+    </script>
+</body>
+</html>
