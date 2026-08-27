@@ -47,9 +47,9 @@ html, body { margin: 0; padding: 0; box-sizing: border-box; }
 .max-h-\[45vh\] { max-height: 45vh !important; }
 
 /* Layout Grid & Flex */
-.flex { display: flex !important; }
+.flex { display: flex; }
 .inline-flex { display: inline-flex !important; }
-.grid { display: grid !important; }
+.grid { display: grid; }
 .hidden { display: none !important; }
 .block { display: block !important; }
 .inline-block { display: inline-block !important; }
@@ -475,7 +475,7 @@ if ('serviceWorker' in navigator) {
                 </div>
 
                 <!-- Grid de 5 Columnas x 4 Filas -->
-                <div id="products-grid-container" class="flex overflow-x-auto snap-x snap-mandatory gap-3 pb-4 no-scrollbar sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 sm:gap-4 sm:overflow-visible">
+                <div id="products-grid-container" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 pb-4">
                     <!-- Inyectado por JS -->
                 </div>
 
