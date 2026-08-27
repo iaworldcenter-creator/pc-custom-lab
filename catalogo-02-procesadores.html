@@ -26,37 +26,38 @@ if ('serviceWorker' in navigator) {
 <body class="bg-[#0b0f19] text-slate-100 min-h-screen flex flex-col selection:bg-cyan-500 selection:text-black">
 
     <!-- Header Navigation -->
-        <header class="bg-slate-900/95 backdrop-blur border-b border-slate-800 sticky top-0 z-50 shadow-2xl">
-        <!-- LÍNEA 1: Barra Horizontal Desplazable de Ecosistema & Tiendas (1 Sola Fila) -->
-        <div class="w-full border-b border-slate-800/80 bg-slate-950/80 px-2 sm:px-4 py-1.5 flex items-center justify-between gap-2 text-xs overflow-hidden">
-            <nav class="flex items-center gap-1.5 overflow-x-auto no-scrollbar whitespace-nowrap flex-1 py-0.5 scroll-smooth text-[11px] font-bold text-slate-300">
-                <span class="px-2 py-0.5 rounded bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono font-bold text-[10px] uppercase shrink-0">
+            <header class="bg-slate-900/95 backdrop-blur border-b border-slate-800 sticky top-0 z-50 shadow-2xl">
+        <!-- LÍNEA 1: Barra Horizontal de Ecosistema con Desplazamiento Táctil Neón (Touch Scroll Horizontal) -->
+        <div class="w-full border-b border-slate-800/80 bg-slate-950/90 px-2 sm:px-4 py-1.5 flex items-center justify-between gap-2 text-xs overflow-hidden">
+            <div class="flex items-center gap-2 overflow-x-auto no-scrollbar whitespace-nowrap flex-1 py-0.5 scroll-smooth" style="touch-action: pan-x; -webkit-overflow-scrolling: touch;">
+                <span class="px-2.5 py-1 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 font-mono font-black text-[10px] uppercase shrink-0">
                     ⚡ Envío Exprés El Mismo Día
                 </span>
-                <a href="https://iaworldcenter-creator.github.io/sitios-web/" class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 hover:bg-slate-800 text-amber-400 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-house text-[10px]"></i> Matriz</a>
-                <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 hover:bg-slate-800 text-cyan-400 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-microchip text-[10px]"></i> PC Custom</a>
-                <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 hover:bg-slate-800 text-cyan-300 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-gem text-[10px]"></i> Vía MX</a>
-                <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 hover:bg-slate-800 text-amber-400 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-smoking text-[10px]"></i> Cigarros</a>
-                <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 hover:bg-slate-800 text-pink-400 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-candy-cane text-[10px]"></i> Dulces</a>
-                <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 hover:bg-slate-800 text-indigo-400 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-newspaper text-[10px]"></i> Kiosco</a>
-                <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 hover:bg-slate-800 text-emerald-400 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-store text-[10px]"></i> Mi Puesto</a>
-                <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" class="px-2.5 py-0.5 rounded-lg bg-slate-800/80 hover:bg-slate-800 text-red-400 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-tags text-[10px]"></i> Liquidaciones</a>
-                <span class="text-slate-600 shrink-0">|</span>
-                <a href="https://gemini.google.com" target="_blank" class="text-slate-300 hover:text-cyan-400 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i> Gemini AI</a>
-                <a href="https://antigravity.google/download" target="_blank" class="text-slate-300 hover:text-amber-400 transition flex items-center gap-1 shrink-0"><i class="fa-solid fa-download text-amber-400"></i> Anti-Gravity</a>
-            </nav>
-            <div class="shrink-0 flex items-center ml-1">
+                <a href="catalogo.html" class="px-3 py-1 rounded-xl bg-cyan-950/80 border border-cyan-400 text-cyan-300 text-xs font-black shadow-[0_0_12px_rgba(6,182,212,0.4)] flex items-center gap-1.5 shrink-0"><i class="fa-solid fa-layer-group text-[10px]"></i> ⚡ Catálogo (11 Secciones)</a>
+            <a href="https://iaworldcenter-creator.github.io/sitios-web/" class="px-2.5 py-1 rounded-xl bg-slate-950/90 hover:bg-slate-900 border border-slate-800 hover:border-amber-400 text-amber-400 text-xs font-bold flex items-center gap-1.5 shrink-0 transition"><i class="fa-solid fa-house text-[11px]"></i> Matriz</a>
+            <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="px-3 py-1 rounded-xl bg-slate-900 border-2 border-cyan-400 text-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.5)] text-xs font-black flex items-center gap-1.5 shrink-0 scale-105 transition"><i class="fa-solid fa-microchip text-[11px]"></i> PC Custom</a>
+            <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" class="px-2.5 py-1 rounded-xl bg-slate-950/90 hover:bg-slate-900 border border-slate-800 hover:border-cyan-300 text-cyan-300 text-xs font-bold flex items-center gap-1.5 shrink-0 transition"><i class="fa-solid fa-gem text-[11px]"></i> Vía MX</a>
+            <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" class="px-2.5 py-1 rounded-xl bg-slate-950/90 hover:bg-slate-900 border border-slate-800 hover:border-amber-500 text-amber-500 text-xs font-bold flex items-center gap-1.5 shrink-0 transition"><i class="fa-solid fa-smoking text-[11px]"></i> Cigarros</a>
+            <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" class="px-2.5 py-1 rounded-xl bg-slate-950/90 hover:bg-slate-900 border border-slate-800 hover:border-pink-400 text-pink-400 text-xs font-bold flex items-center gap-1.5 shrink-0 transition"><i class="fa-solid fa-candy-cane text-[11px]"></i> Dulces</a>
+            <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" class="px-2.5 py-1 rounded-xl bg-slate-950/90 hover:bg-slate-900 border border-slate-800 hover:border-indigo-400 text-indigo-400 text-xs font-bold flex items-center gap-1.5 shrink-0 transition"><i class="fa-solid fa-newspaper text-[11px]"></i> Kiosco</a>
+            <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" class="px-2.5 py-1 rounded-xl bg-slate-950/90 hover:bg-slate-900 border border-slate-800 hover:border-emerald-400 text-emerald-400 text-xs font-bold flex items-center gap-1.5 shrink-0 transition"><i class="fa-solid fa-store text-[11px]"></i> Mi Puesto</a>
+            <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" class="px-2.5 py-1 rounded-xl bg-slate-950/90 hover:bg-slate-900 border border-slate-800 hover:border-red-400 text-red-400 text-xs font-bold flex items-center gap-1.5 shrink-0 transition"><i class="fa-solid fa-tags text-[11px]"></i> Liquidaciones</a>
+            <span class="text-slate-700 shrink-0">|</span>
+            <a href="https://gemini.google.com" target="_blank" rel="noopener" class="px-2.5 py-1 rounded-xl bg-slate-950 border border-slate-800 hover:border-cyan-400 text-cyan-300 text-xs font-bold flex items-center gap-1.5 shrink-0 transition"><i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i> Gemini AI</a>
+            <a href="https://antigravity.google/download" target="_blank" rel="noopener" class="px-2.5 py-1 rounded-xl bg-slate-950 border border-slate-800 hover:border-amber-400 text-amber-300 text-xs font-bold flex items-center gap-1.5 shrink-0 transition"><i class="fa-solid fa-download text-amber-400"></i> Anti-Gravity</a>
+            </div>
+            <div class="shrink-0 flex items-center pl-1 border-l border-slate-800">
                 <button id="header-account-btn" onclick="toggleAccountModal()" aria-label="Mi Cuenta, Domicilio y Cashback" title="Mi Cuenta y Cashback" class="cursor-pointer active:scale-95 transition"></button>
             </div>
         </div>
 
-        <!-- LÍNEA 2: Barra Principal Compacta en 1 Sola Fila (Logo + Buscador + Carrito) -->
-        <div class="max-w-[99%] 2xl:max-w-[1850px] mx-auto px-2 sm:px-4 py-2 flex flex-row items-center justify-between gap-2 sm:gap-4">
+        <!-- LÍNEA 2: Barra Principal de Búsqueda Instantánea con Fondo Blanco y Botón Comprar (1 Sola Fila) -->
+        <div class="max-w-[99%] 2xl:max-w-[1850px] mx-auto px-2 sm:px-4 py-2.5 flex flex-row items-center justify-between gap-2 sm:gap-4">
             
-            <!-- Logo y Marca Compactos -->
-            <div class="flex items-center gap-2 cursor-pointer shrink-0" onclick="document.getElementById('pie-de-pagina').scrollIntoView({ behavior: 'smooth' });">
-                <div class="relative w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center shrink-0">
-                    <img src="assets/img/mascota_tigre_thumb.webp" alt="Logo PC CUSTOM LAB" width="40" height="40" fetchpriority="high" decoding="async" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-amber-400 shadow shrink-0" onerror="this.onerror=null;this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';" />
+            <!-- Logo y Título Semántico H1 -->
+            <div class="flex items-center gap-2.5 cursor-pointer shrink-0" onclick="document.getElementById('pie-de-pagina').scrollIntoView({ behavior: 'smooth' });">
+                <div class="relative w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center shrink-0">
+                    <img src="assets/img/mascota_tigre_thumb.webp" alt="Logo PC CUSTOM LAB" width="44" height="44" fetchpriority="high" decoding="async" class="w-9 h-9 sm:w-11 sm:h-11 rounded-full object-cover border-2 border-amber-400 shadow-[0_0_12px_rgba(251,191,36,0.5)] shrink-0" onerror="this.onerror=null;this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';" />
                 </div>
                 <div class="flex flex-col min-w-0">
                     <h1 class="font-black text-xs sm:text-lg text-white tracking-wider uppercase leading-tight truncate max-w-[110px] sm:max-w-none">PC CUSTOM LAB</h1>
@@ -66,29 +67,29 @@ if ('serviceWorker' in navigator) {
                 </div>
             </div>
 
-            <!-- Buscador Search-First en el centro -->
+            <!-- Buscador Search-First Blanco con Botón BUSCAR -->
             <div class="flex-1 min-w-0 relative">
-                <div class="flex items-center bg-white rounded-full border-2 border-cyan-400 shadow px-2.5 sm:px-4 py-1 gap-1.5 sm:gap-2">
-                    <i class="fa-solid fa-magnifying-glass text-slate-400 text-xs shrink-0"></i>
+                <div class="flex items-center bg-white rounded-full border-2 border-cyan-400 shadow-[0_0_20px_rgba(6,182,212,0.35)] px-3 sm:px-4 py-1 gap-2">
+                    <i class="fa-solid fa-magnifying-glass text-slate-500 text-sm shrink-0"></i>
                     <input type="text" id="boutiqueSearchInput" name="q" aria-label="Buscar en PC CUSTOM LAB" autocomplete="off" spellcheck="false" placeholder="Busca en PC CUSTOM LAB (ej. RTX 4070, Core i5, RAM DDR5, SSD)..." class="flex-1 min-w-0 bg-transparent border-0 outline-none text-slate-950 font-bold text-xs sm:text-sm placeholder-slate-400" oninput="typeof onBoutiqueSearch==='function'?onBoutiqueSearch(event):typeof onMasterSearch==='function'?onMasterSearch(event):null" />
-                    <button onclick="typeof clearBoutiqueSearch==='function'?clearBoutiqueSearch():typeof clearMasterSearch==='function'?clearMasterSearch():null" id="clear-search-btn" aria-label="Limpiar búsqueda" class="hidden text-slate-400 hover:text-slate-600 text-xs px-1 font-bold cursor-pointer shrink-0"><i class="fa-solid fa-xmark"></i></button>
-                    <button onclick="typeof executeBoutiqueSearch==='function'?executeBoutiqueSearch():typeof executeMasterSearch==='function'?executeMasterSearch():null" aria-label="Buscar" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-black px-3 sm:px-5 py-1 rounded-full text-[10px] sm:text-xs uppercase tracking-wider transition active:scale-95 shrink-0 shadow cursor-pointer">BUSCAR</button>
+                    <button onclick="typeof clearBoutiqueSearch==='function'?clearBoutiqueSearch():typeof clearMasterSearch==='function'?clearMasterSearch():null" id="clear-search-btn" aria-label="Limpiar búsqueda" class="hidden text-slate-400 hover:text-slate-700 text-xs px-1 font-bold cursor-pointer shrink-0"><i class="fa-solid fa-xmark"></i></button>
+                    <button onclick="typeof executeBoutiqueSearch==='function'?executeBoutiqueSearch():typeof executeMasterSearch==='function'?executeMasterSearch():null" aria-label="Buscar" class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-black px-3.5 sm:px-6 py-1.5 rounded-full text-[10px] sm:text-xs uppercase tracking-wider transition active:scale-95 shrink-0 shadow cursor-pointer">BUSCAR</button>
                 </div>
                 <div id="boutique-autocomplete-box" class="hidden absolute top-full left-0 right-0 mt-2 bg-slate-900 border-2 border-cyan-500/60 rounded-2xl shadow-2xl z-50 p-2.5 flex flex-col gap-2 max-h-96 overflow-y-auto no-scrollbar"></div>
                 <div id="master-autocomplete-box" class="hidden absolute top-full left-0 right-0 mt-2 bg-slate-900 border-2 border-cyan-500/60 rounded-2xl shadow-2xl z-50 p-2.5 flex flex-col gap-2 max-h-96 overflow-y-auto no-scrollbar"></div>
             </div>
 
-            <!-- Botón de Canasta / Carrito Compacto -->
-            <button onclick="toggleCartDrawer()" aria-label="Abrir canasta de compras" title="Ver Carrito" class="flex items-center gap-1.5 sm:gap-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white px-2.5 sm:px-3.5 py-1.5 rounded-xl transition cursor-pointer active:scale-95 shadow shrink-0">
+            <!-- Canasta Global / Carrito con Total en Vivo -->
+            <button onclick="toggleCartDrawer()" aria-label="Abrir canasta de compras" title="Ver Carrito" class="flex items-center gap-2 sm:gap-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white px-3 sm:px-4 py-2 rounded-xl transition cursor-pointer active:scale-95 shadow shrink-0 group">
                 <div class="relative">
-                    <i class="fa-solid fa-cart-shopping text-cyan-400 text-sm sm:text-base"></i>
+                    <i class="fa-solid fa-cart-shopping text-cyan-400 text-sm sm:text-base group-hover:scale-110 transition"></i>
                     <span id="boutique-cart-badge" class="absolute -top-2 -right-2 bg-amber-500 text-slate-950 font-mono font-black text-[9px] rounded-full w-4 h-4 flex items-center justify-center shadow">0</span>
                     <span id="portal-cart-badge" class="absolute -top-2 -right-2 bg-amber-500 text-slate-950 font-mono font-black text-[9px] rounded-full w-4 h-4 flex items-center justify-center shadow hidden">0</span>
                 </div>
                 <div class="flex flex-col text-left">
-                    <span class="text-[8px] font-mono text-slate-400 uppercase leading-none hidden sm:inline">Canasta</span>
-                    <span id="boutique-cart-total" class="text-[11px] sm:text-xs font-mono font-bold text-amber-400">$0.00</span>
-                    <span id="portal-cart-total" class="text-[11px] sm:text-xs font-mono font-bold text-amber-400 hidden">$0.00</span>
+                    <span class="text-[9px] font-mono text-slate-400 uppercase leading-none hidden sm:inline">Canasta</span>
+                    <span id="boutique-cart-total" class="text-xs font-mono font-bold text-amber-400">$0.00 MXN</span>
+                    <span id="portal-cart-total" class="text-xs font-mono font-bold text-amber-400 hidden">$0.00 MXN</span>
                 </div>
             </button>
         </div>
