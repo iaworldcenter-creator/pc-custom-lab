@@ -262,6 +262,13 @@ html, body { margin: 0; padding: 0; box-sizing: border-box; }
     
 </style>
     <link rel="stylesheet" href="css/ux-conversion.css">
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+  });
+}
+</script>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-cyan-500 selection:text-slate-950">
 
@@ -4095,9 +4102,7 @@ function saveUserProfile() {
                     <div class="w-full h-32 sm:h-36 overflow-hidden rounded-xl bg-slate-900/90 flex items-center justify-center p-2 relative mb-2 shadow-inner border border-slate-800/50">
                         <img 
                             src="${p.image}" 
-                            alt="${safeTitle}" 
-                            loading="lazy" 
-                            decoding="async" 
+                            alt="${safeTitle}" width="180" height="180" loading="lazy" decoding="async" 
                             class="w-full h-full object-contain group-hover:scale-105 transition duration-300"
                             onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';"
                         />
@@ -4270,7 +4275,7 @@ function saveUserProfile() {
         syncBoutiqueCart();
     });
     </script>
-    <script src="js/cart-engine.js"></script>
-    <script src="js/ux-engine.js"></script>
+    <script defer src="js/cart-engine.js"></script>
+    <script defer src="js/ux-engine.js"></script>
 </body>
 </html>

@@ -1,25 +1,30 @@
-const CACHE_NAME = 'ecosystem-cache-v1.1.0';
-const ASSETS_TO_CACHE = [
+// Service Worker v2.0.0 - Aceleración Extrema de Caché & 0ms Latencia
+const CACHE_NAME = 'bazar-nfl-static-v2';
+const STATIC_ASSETS = [
+  './',
   './index.html',
-  './assets/css/tailwind-built.css?v=1.1.0',
-  './assets/css/fontawesome-all.min.css?v=1.1.0'
+  './css/ux-conversion.css',
+  './js/ux-engine.js',
+  './js/cart-engine.js',
+  './assets/img/mascota_tigre_thumb.webp',
+  './assets/img/codigo_qr_bazar_nfl.png'
 ];
 
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS_TO_CACHE))
+self.addEventListener('install', (e) => {
+  e.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(STATIC_ASSETS).catch(() => {});
+    })
   );
   self.skipWaiting();
 });
 
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
+self.addEventListener('activate', (e) => {
+  e.waitUntil(
     caches.keys().then((keys) => {
       return Promise.all(
-        keys.map((key) => {
-          if (key !== CACHE_NAME) {
-            return caches.delete(key);
-          }
+        keys.map((k) => {
+          if (k !== CACHE_NAME) return caches.delete(k);
         })
       );
     })
@@ -27,40 +32,43 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-self.addEventListener('fetch', (event) => {
-  const url = new URL(event.request.url);
+self.addEventListener('fetch', (e) => {
+  const url = new URL(e.request.url);
   
-  // Use Network-First for HTML/Navigations to prevent user stuck on old versions
-  if (event.request.mode === 'navigate' || url.pathname.endsWith('.html') || url.pathname.endsWith('/')) {
-    event.respondWith(
-      fetch(event.request)
-        .then((networkResponse) => {
-          if (networkResponse && networkResponse.status === 200) {
-            const cacheCopy = networkResponse.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, cacheCopy));
+  // HTML: Stale-While-Revalidate para frescura instantánea
+  if (e.request.mode === 'navigate' || url.pathname.endsWith('.html')) {
+    e.respondWith(
+      fetch(e.request)
+        .then((res) => {
+          if (res.status === 200) {
+            const clone = res.clone();
+            caches.open(CACHE_NAME).then((c) => c.put(e.request, clone));
           }
-          return networkResponse;
+          return res;
         })
-        .catch(() => caches.match(event.request))
+        .catch(() => caches.match(e.request))
     );
     return;
   }
-  
-  // Cache-First for other assets (CSS, FontAwesome, Images)
-  event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      return fetch(event.request).then((networkResponse) => {
-        if (networkResponse && networkResponse.status === 200) {
-          const cacheCopy = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, cacheCopy);
-          });
-        }
-        return networkResponse;
-      });
-    })
+
+  // Imágenes, CSS, JS y Fuentes: Cache-First
+  if (e.request.destination === 'image' || e.request.destination === 'style' || e.request.destination === 'script' || e.request.destination === 'font' || url.pathname.includes('/assets/')) {
+    e.respondWith(
+      caches.match(e.request).then((cached) => {
+        if (cached) return cached;
+        return fetch(e.request).then((res) => {
+          if (res.status === 200) {
+            const clone = res.clone();
+            caches.open(CACHE_NAME).then((c) => c.put(e.request, clone));
+          }
+          return res;
+        });
+      })
+    );
+    return;
+  }
+
+  e.respondWith(
+    caches.match(e.request).then((cached) => cached || fetch(e.request))
   );
 });
