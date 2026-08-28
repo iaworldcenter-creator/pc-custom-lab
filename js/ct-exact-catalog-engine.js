@@ -1,10 +1,10 @@
 // =========================================================================
-// MOTOR OFICIAL PC CUSTOM LAB CON FICHA DE PRODUCTO EN 3 COLUMNAS (PDP)
+// MOTOR OFICIAL PC CUSTOM LAB: 3 COLUMNAS SIMÉTRICAS, 5X4 Y BUSCADOR LONG-TAIL
 // =========================================================================
 
-let currentViewStyle = 'grid'; // 'grid' o 'list'
+let currentViewStyle = 'grid'; // 'grid' (5x4) o 'list'
 let currentPageNumber = 1;
-const productsPerPage = 20;
+const productsPerPage = 20; // Exactamente 20 productos por vista (5 filas x 4 columnas)
 
 let activeSelectedCategory = 'Todas';
 let activeSelectedBrand = 'Todas';
@@ -12,7 +12,9 @@ let currentSortCriterion = 'existencia';
 
 document.addEventListener("DOMContentLoaded", () => {
     renderSidebarFacets();
+    renderSidebarBestsellers();
     renderExactCatalogView();
+    initLongTailSearchEngine();
 });
 
 function setViewStyle(style) {
@@ -71,23 +73,24 @@ function renderExactCatalogView() {
     const pageItems = filtered.slice(startIdx, startIdx + productsPerPage);
 
     if (resultsCountTxt) {
-        resultsCountTxt.innerText = `Resultados de búsqueda (${Math.min(startIdx + productsPerPage, totalCount)} de ${totalCount})`;
+        resultsCountTxt.innerText = `Aparador Principal (${Math.min(startIdx + productsPerPage, totalCount)} de ${totalCount})`;
     }
 
     renderPaginationBar(totalPages);
 
     if (pageItems.length === 0) {
-        container.className = "w-full py-16 text-center text-slate-400 font-mono text-sm";
+        container.className = "w-full py-16 text-center text-slate-400 font-mono text-sm bg-slate-900/90 border border-slate-800 rounded-2xl";
         container.innerHTML = `
             <i class="fa-solid fa-box-open text-4xl text-cyan-400 mb-3 block"></i>
             No se encontraron productos con los filtros seleccionados.
-            <br><button onclick="resetFacets()" class="mt-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold px-5 py-2 rounded-xl text-xs uppercase cursor-pointer shadow-lg hover:shadow-cyan-500/30">Limpiar Filtros</button>
+            <br><button onclick="resetFacets()" class="mt-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-black px-5 py-2 rounded-xl text-xs uppercase cursor-pointer shadow-lg hover:shadow-cyan-500/30">Limpiar Filtros</button>
         `;
         return;
     }
 
     if (currentViewStyle === 'grid') {
-        container.className = "grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 pb-4";
+        // EXACTAMENTE 4 COLUMNAS POR FILA (5 FILAS X 4 COLUMNAS = 20 PRODUCTOS)
+        container.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 pb-2";
         container.innerHTML = pageItems.map(p => {
             const sku = p.sku;
             const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
@@ -108,19 +111,20 @@ function renderExactCatalogView() {
                     </button>
 
                     <div>
-                        <!-- Fotografía Centrada con Clic para Abrir Ficha Técnica en 3 Columnas -->
+                        <!-- Fotografía Real con Clic a Ficha en 3 Columnas -->
                         <div onclick="openProductDetailModal('${sku}')" class="w-full h-32 sm:h-36 bg-slate-950/80 border border-slate-800/80 rounded-xl flex items-center justify-center p-2 mb-2.5 relative group-hover:border-cyan-500/40 transition cursor-pointer">
                             <img 
                                 src="${localImg}" 
                                 alt="${title}" 
-                                width="160" 
-                                height="160" 
+                                width="150" 
+                                height="150" 
                                 loading="lazy" 
                                 class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
                                 onerror="this.onerror=null; this.src='${cdnImg}'; this.onerror=function(){this.src='assets/img/catalog/gabinete_negro.webp';};"
                             />
                         </div>
 
+                        <!-- Precios Destacados -->
                         <div class="text-center mb-1.5">
                             <span class="text-xs sm:text-sm font-black text-emerald-400 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
                                 $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
@@ -132,10 +136,10 @@ function renderExactCatalogView() {
                         </div>
 
                         <div class="text-center text-[9px] text-cyan-400 font-mono font-bold mb-1 flex items-center justify-center gap-1">
-                            <i class="fa-solid fa-truck-bolt text-[10px]"></i> Disponible en Mostrador GDL
+                            <i class="fa-solid fa-truck-bolt text-[10px]"></i> Disponible Mostrador GDL
                         </div>
 
-                        <!-- Título con Clic a Ficha Técnica -->
+                        <!-- Título con Clic a PDP -->
                         <h4 onclick="openProductDetailModal('${sku}')" class="text-slate-200 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="${title}">
                             ${title}
                         </h4>
@@ -145,6 +149,7 @@ function renderExactCatalogView() {
                         </div>
                     </div>
 
+                    <!-- Botones de Acción -->
                     <div class="pt-1 flex gap-1.5">
                         <button 
                             onclick="openProductDetailModal('${sku}')" 
@@ -163,7 +168,7 @@ function renderExactCatalogView() {
             `;
         }).join('');
     } else {
-        container.className = "flex flex-col gap-3 pb-4";
+        container.className = "flex flex-col gap-3 pb-2";
         container.innerHTML = pageItems.map(p => {
             const sku = p.sku;
             const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
@@ -176,17 +181,17 @@ function renderExactCatalogView() {
             const desc = p.descripcion_completa || p.desc || '';
 
             return `
-                <div class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition group shadow-xl relative overflow-hidden text-slate-100">
+                <div class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition group shadow-xl relative overflow-hidden text-slate-100">
                     <div class="absolute -top-6 -left-6 w-14 h-14 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow z-10">
                         <span class="text-[7px] font-black text-white uppercase">-25%</span>
                     </div>
 
-                    <div onclick="openProductDetailModal('${sku}')" class="w-full md:w-32 h-28 bg-slate-950/80 border border-slate-800 rounded-xl flex items-center justify-center p-2 shrink-0 relative cursor-pointer">
+                    <div onclick="openProductDetailModal('${sku}')" class="w-full md:w-28 h-24 bg-slate-950/80 border border-slate-800 rounded-xl flex items-center justify-center p-2 shrink-0 relative cursor-pointer">
                         <img 
                             src="${localImg}" 
                             alt="${title}" 
-                            width="120" 
-                            height="120" 
+                            width="100" 
+                            height="100" 
                             loading="lazy" 
                             class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
                             onerror="this.onerror=null; this.src='${cdnImg}'; this.onerror=function(){this.src='assets/img/catalog/gabinete_negro.webp';};"
@@ -194,45 +199,33 @@ function renderExactCatalogView() {
                     </div>
 
                     <div class="flex-1 min-w-0">
-                        <h4 onclick="openProductDetailModal('${sku}')" class="text-cyan-300 font-bold text-sm mb-1 hover:text-cyan-200 transition leading-snug cursor-pointer">
+                        <h4 onclick="openProductDetailModal('${sku}')" class="text-cyan-300 font-bold text-xs sm:text-sm mb-1 hover:text-cyan-200 transition leading-snug cursor-pointer">
                             ${title}
                         </h4>
                         <div class="flex items-center gap-2 text-[10px] font-mono text-slate-400 mb-1">
                             <span>SKU: ${sku}</span>
                             <span>•</span>
-                            <span>Clave CT: ${sku}</span>
-                            <span>•</span>
-                            <span class="text-emerald-400 font-bold">20% Neto Libre Protegido</span>
+                            <span class="text-emerald-400 font-bold">20% Neto Libre Garantizado</span>
                         </div>
-                        
-                        <div class="flex items-center gap-0.5 text-amber-400 text-xs mb-1.5">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-
                         <p class="text-slate-400 text-xs leading-relaxed line-clamp-2">${desc}</p>
                     </div>
 
-                    <div class="w-full md:w-56 flex flex-col justify-between items-end border-t md:border-t-0 md:border-l border-slate-800 pt-3 md:pt-0 md:pl-4 shrink-0 text-right">
-                        <div class="w-full mb-2">
-                            <span class="text-[10px] text-cyan-400 font-mono font-bold block mb-0.5"><i class="fa-solid fa-check"></i> Stock Disponible GDL</span>
-                            <span class="text-[10px] text-slate-500 line-through block font-mono">$${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
-                            <div class="text-base sm:text-lg font-black text-emerald-400 leading-tight font-mono drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    <div class="w-full md:w-52 flex flex-col justify-between items-end border-t md:border-t-0 md:border-l border-slate-800 pt-3 md:pt-0 md:pl-3.5 shrink-0 text-right">
+                        <div class="w-full mb-1.5">
+                            <span class="text-[9px] text-slate-500 line-through block font-mono">$${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                            <div class="text-base font-black text-emerald-400 leading-tight font-mono drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
                                 $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
                             </div>
-                            <span class="text-[10px] text-slate-400 block font-mono">$${usdPrice} USD • Mayoreo: $${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                            <span class="text-[9px] text-slate-400 block font-mono">$${usdPrice} USD • Mayoreo: $${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
                         </div>
 
                         <div class="flex items-center gap-2 w-full">
-                            <button onclick="openProductDetailModal('${sku}')" class="p-2.5 rounded-xl border border-slate-800 bg-slate-800 hover:bg-slate-700 text-cyan-300 transition text-xs font-bold" title="Ver Ficha Técnica">
+                            <button onclick="openProductDetailModal('${sku}')" class="p-2 rounded-xl border border-slate-800 bg-slate-800 hover:bg-slate-700 text-cyan-300 transition text-xs font-bold" title="Ficha Técnica">
                                 <i class="fa-solid fa-file-lines"></i>
                             </button>
                             <button 
                                 onclick="addToCartCT('${sku}', '${title}', ${price}, '${localImg}')" 
-                                class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2 px-3 rounded-xl text-xs flex items-center justify-center gap-1.5 transition active:scale-95 shadow-md cursor-pointer uppercase"
+                                class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-1.5 px-2 rounded-xl text-xs flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer uppercase"
                             >
                                 <span>Agregar</span>
                             </button>
@@ -242,6 +235,263 @@ function renderExactCatalogView() {
             `;
         }).join('');
     }
+}
+
+// =========================================================================
+// COLUMNA LATERAL IZQUIERDA: 2 BLOQUES (ENSAMBLE CLAVE VS COMPLEMENTOS)
+// =========================================================================
+function renderSidebarFacets() {
+    const root = document.getElementById("sidebar-facets-root");
+    if (!root) return;
+
+    // Bloque 1: Componentes Clave de Ensamble (Prioridad Superior)
+    const assemblyCategories = [
+        { id: 'Todas', name: 'Todas las Categorías', count: 16122, icon: 'fa-layer-group' },
+        { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', count: 111, icon: 'fa-chess-board' },
+        { id: 'procesadores', name: 'Procesadores (CPUs Intel/AMD)', count: 691, icon: 'fa-microchip' },
+        { id: 'memorias_ram', name: 'Memorias RAM (DDR4/DDR5)', count: 597, icon: 'fa-memory' },
+        { id: 'discos_duros', name: 'Discos Duros & SSD NVMe', count: 484, icon: 'fa-hard-drive' },
+        { id: 'gabinetes', name: 'Gabinetes & Chasis Gamer', count: 402, icon: 'fa-server' },
+        { id: 'fuentes_energia', name: 'Fuentes de Poder & UPS', count: 80, icon: 'fa-plug-circle-bolt' },
+        { id: 'tarjetas_de_video', name: 'Tarjetas de Video (GPUs)', count: 61, icon: 'fa-gamepad' },
+        { id: 'enfriamiento', name: 'Enfriamiento Líquido/Aire', count: 228, icon: 'fa-snowflake' },
+        { id: 'monitores', name: 'Monitores & Pantallas PC', count: 623, icon: 'fa-desktop' }
+    ];
+
+    // Bloque 2: Complementos, Periféricos y Software
+    const complementCategories = [
+        { id: 'accesorios_perifericos', name: 'Teclados, Mouse & Periféricos', count: 4593, icon: 'fa-keyboard' },
+        { id: 'conectividad_redes', name: 'Conectividad & Routers WiFi', count: 584, icon: 'fa-network-wired' },
+        { id: 'software', name: 'Software & Licencias Windows/Office', count: 580, icon: 'fa-compact-disc' },
+        { id: 'telefonia_seguridad', name: 'Videovigilancia CCTV & Alarmas', count: 849, icon: 'fa-video' },
+        { id: 'impresoras', name: 'Impresoras & Multifuncionales', count: 416, icon: 'fa-print' },
+        { id: 'consumibles', name: 'Tintas, Tóner & Consumibles', count: 592, icon: 'fa-fill-drip' },
+        { id: 'equipos_de_marca', name: 'Laptops & Equipos de Marca', count: 27, icon: 'fa-laptop' },
+        { id: 'punto_de_venta', name: 'Punto de Venta (POS)', count: 156, icon: 'fa-barcode' },
+        { id: 'electronica_consumo', name: 'Smart TVs & Audio', count: 728, icon: 'fa-tv' },
+        { id: 'linea_blanca', name: 'Climatización & Línea Blanca', count: 56, icon: 'fa-fan' }
+    ];
+
+    root.innerHTML = `
+        <div class="bg-gradient-to-r from-slate-900 to-cyan-950 border border-cyan-500/40 text-white p-3 rounded-t-2xl font-bold text-xs uppercase flex items-center justify-between shadow-lg">
+            <span class="flex items-center gap-2 text-cyan-300 font-mono"><i class="fa-solid fa-sliders text-cyan-400"></i> Filtros de Ensamble</span>
+            <span class="text-[9px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono font-bold">16,122 Items</span>
+        </div>
+
+        <div class="p-3 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-300 text-xs space-y-3.5 shadow-2xl">
+            
+            <div class="flex gap-1.5">
+                <button onclick="renderExactCatalogView()" class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-1.5 rounded-xl text-[10px] uppercase transition cursor-pointer shadow">
+                    Aplicar
+                </button>
+                <button onclick="resetFacets()" class="flex-1 bg-slate-800 hover:bg-red-950/60 border border-slate-700 hover:border-red-500/50 text-slate-300 hover:text-red-400 font-bold py-1.5 rounded-xl text-[10px] uppercase transition cursor-pointer">
+                    Limpiar
+                </button>
+            </div>
+
+            <!-- BLOQUE 1: COMPONENTES CLAVE DE ENSAMBLE -->
+            <div class="border-b border-slate-800 pb-3">
+                <h4 class="font-bold text-cyan-300 mb-2 text-[11px] flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                    <i class="fa-solid fa-microchip text-cyan-400"></i> 1. Componentes Clave
+                </h4>
+                <div class="space-y-1 text-slate-400">
+                    ${assemblyCategories.map(c => `
+                        <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-1 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
+                            <span class="flex items-center gap-2 truncate">
+                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
+                                <i class="fa-solid ${c.icon} text-[10px] text-slate-400 w-3 text-center shrink-0"></i>
+                                <span class="truncate text-[11px] ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : ''}">${c.name}</span>
+                            </span>
+                            <span class="text-[9px] text-slate-400 font-mono">(${c.count})</span>
+                        </label>
+                    `).join('')}
+                </div>
+            </div>
+
+            <!-- BLOQUE 2: COMPLEMENTOS, PERIFÉRICOS Y SOFTWARE -->
+            <div>
+                <h4 class="font-bold text-amber-300 mb-2 text-[11px] flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                    <i class="fa-solid fa-puzzle-piece text-amber-400"></i> 2. Complementos
+                </h4>
+                <div class="space-y-1 text-slate-400 max-h-56 overflow-y-auto pr-1">
+                    ${complementCategories.map(c => `
+                        <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-1 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
+                            <span class="flex items-center gap-2 truncate">
+                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
+                                <i class="fa-solid ${c.icon} text-[10px] text-slate-400 w-3 text-center shrink-0"></i>
+                                <span class="truncate text-[11px] ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : ''}">${c.name}</span>
+                            </span>
+                            <span class="text-[9px] text-slate-400 font-mono">(${c.count})</span>
+                        </label>
+                    `).join('')}
+                </div>
+            </div>
+
+        </div>
+    `;
+}
+
+// =========================================================================
+// COLUMNA LATERAL DERECHA: LOS 3 MÁS VENDIDOS + BOTÓN 'VER TODOS'
+// =========================================================================
+function renderSidebarBestsellers() {
+    const root = document.getElementById("sidebar-bestsellers-root");
+    if (!root) return;
+
+    const bestsellers = [
+        {
+            sku: 'MBDASS5750',
+            title: 'Motherboard ASUS Prime B760M-A WiFi D4 LGA1700',
+            price: 3157.50,
+            original: 4210.00,
+            mayoreo: 2947.00,
+            cat: 'tarjetas_madre',
+            badge: '#1 Más Vendido'
+        },
+        {
+            sku: 'CPUINT4520',
+            title: 'Procesador Intel Core i5-14400F 14va Gen 10 Cores',
+            price: 4320.00,
+            original: 5760.00,
+            mayoreo: 4032.00,
+            cat: 'procesadores',
+            badge: '#2 Más Vendido'
+        },
+        {
+            sku: 'MONACT050',
+            title: 'Monitor Gamer Acteck 24" 165Hz Full HD IPS 1ms',
+            price: 2685.00,
+            original: 3580.00,
+            mayoreo: 2506.00,
+            cat: 'monitores',
+            badge: '#3 Más Vendido'
+        }
+    ];
+
+    root.innerHTML = `
+        <div class="bg-gradient-to-r from-amber-950 to-slate-900 border border-amber-500/50 text-white p-3 rounded-t-2xl font-bold text-xs uppercase flex items-center justify-between shadow-lg">
+            <span class="flex items-center gap-1.5 text-amber-300 font-mono"><i class="fa-solid fa-fire text-amber-400"></i> Más Vendidos</span>
+            <span class="text-[9px] bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2 py-0.5 rounded-full font-mono font-bold">Top Ventas</span>
+        </div>
+
+        <div class="p-3 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-300 text-xs space-y-3.5 shadow-2xl">
+            ${bestsellers.map(b => {
+                const img = `assets/img/catalog/${b.cat}/${b.sku}.jpg`;
+                const cdn = `https://static.ctonline.mx/imagenes/${b.sku}/${b.sku}_400.jpg`;
+                return `
+                    <div class="bg-slate-950 border border-slate-800 hover:border-amber-400/70 p-2.5 rounded-xl transition group flex flex-col justify-between gap-2 shadow relative">
+                        <span class="absolute top-2 left-2 bg-gradient-to-r from-amber-500 to-red-600 text-slate-950 text-[8px] font-black uppercase px-1.5 py-0.5 rounded shadow">
+                            ${b.badge}
+                        </span>
+
+                        <div onclick="openProductDetailModal('${b.sku}')" class="w-full h-28 bg-slate-900/80 rounded-lg flex items-center justify-center p-1 cursor-pointer">
+                            <img 
+                                src="${img}" 
+                                alt="${b.title}" 
+                                class="w-full h-full object-contain group-hover:scale-105 transition"
+                                onerror="this.onerror=null; this.src='${cdn}'; this.onerror=function(){this.src='assets/img/catalog/gabinete_negro.webp';};"
+                            />
+                        </div>
+
+                        <div>
+                            <h5 onclick="openProductDetailModal('${b.sku}')" class="text-[11px] font-bold text-white leading-tight line-clamp-2 hover:text-cyan-300 transition cursor-pointer mb-1">
+                                ${b.title}
+                            </h5>
+                            <div class="text-[9px] font-mono text-slate-400 mb-1">SKU: ${b.sku}</div>
+                            
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-black text-emerald-400 font-mono">$${b.price.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                                <span class="text-[9px] text-amber-400 font-mono font-bold">May: $${b.mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                            </div>
+                        </div>
+
+                        <button 
+                            onclick="buyNowCT('${b.sku}', '${b.title}', ${b.price}, '${img}')"
+                            class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black py-1.5 rounded-lg text-[10px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer"
+                        >
+                            <i class="fa-solid fa-cart-shopping text-[10px]"></i> <span>Compra Rápida</span>
+                        </button>
+                    </div>
+                `;
+            }).join('')}
+
+            <!-- Botón de Remate 'Ver Todos los Destacados' -->
+            <button 
+                onclick="activeSelectedCategory='Todas'; currentPageNumber=1; renderExactCatalogView(); document.getElementById('catalog-main-content-root').scrollIntoView({behavior:'smooth'});" 
+                class="w-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/40 font-mono font-bold py-2 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer shadow"
+            >
+                <i class="fa-solid fa-layer-group text-xs"></i> <span>Ver Todos</span>
+            </button>
+        </div>
+    `;
+}
+
+// =========================================================================
+// MOTOR DE BÚSQUEDA LONG-TAIL PARA TODO EL CATÁLOGO (16,122 ARTÍCULOS)
+// =========================================================================
+function initLongTailSearchEngine() {
+    const input = document.getElementById("boutiqueSearchInput");
+    const box = document.getElementById("boutique-autocomplete-box");
+    if (!input || !box) return;
+
+    input.addEventListener("input", (e) => {
+        const query = (e.target.value || '').trim().toLowerCase();
+        if (query.length < 2) {
+            box.classList.add("hidden");
+            box.innerHTML = "";
+            return;
+        }
+
+        const all = [...(window.PC_COMBOS_DATA || []), ...(window.CT_CATALOG_DATA || [])];
+        const matches = all.filter(p => {
+            const sku = (p.sku || '').toLowerCase();
+            const name = (p.nombre || p.descripcion_completa || '').toLowerCase();
+            const marca = (p.marca || '').toLowerCase();
+            return sku.includes(query) || name.includes(query) || marca.includes(query);
+        }).slice(0, 8); // Máximo 8 resultados inmediatos en el dropdown
+
+        if (matches.length === 0) {
+            box.innerHTML = `
+                <div class="p-3 text-center text-slate-400 font-mono text-xs">
+                    No se encontraron coincidencias directas para "${query}".
+                </div>
+            `;
+            box.classList.remove("hidden");
+            return;
+        }
+
+        box.innerHTML = matches.map(p => {
+            const sku = p.sku;
+            const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
+            const price = p.precio_mxn || p.precio;
+            const img = p.img || `assets/img/catalog/${p.categoria_clasificada}/${sku}.jpg`;
+            const cdn = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+
+            return `
+                <div class="flex items-center justify-between gap-3 p-2 hover:bg-slate-800/80 rounded-xl transition cursor-pointer border-b border-slate-800 last:border-0" onclick="openProductDetailModal('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');">
+                    <div class="w-10 h-10 bg-slate-950 rounded-lg p-1 shrink-0 flex items-center justify-center">
+                        <img src="${img}" alt="${title}" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='${cdn}';" />
+                    </div>
+                    <div class="flex-1 min-w-0 text-left">
+                        <div class="text-xs font-bold text-white truncate">${title}</div>
+                        <div class="text-[10px] font-mono text-slate-400">SKU: ${sku} • <span class="text-cyan-400">${p.marca || 'CT'}</span></div>
+                    </div>
+                    <div class="text-right shrink-0">
+                        <div class="text-xs font-mono font-black text-emerald-400">$${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</div>
+                        <span class="text-[9px] font-mono text-cyan-300 font-bold bg-cyan-950/80 border border-cyan-500/30 px-1.5 py-0.5 rounded">Ficha</span>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        box.classList.remove("hidden");
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!input.contains(e.target) && !box.contains(e.target)) {
+            box.classList.add("hidden");
+        }
+    });
 }
 
 // =========================================================================
@@ -279,7 +529,6 @@ window.openProductDetailModal = function(sku) {
             </button>
         </div>
 
-        <!-- ESTRUCTURA SIMÉTRICA DE 3 COLUMNAS -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             
             <!-- COLUMNA 1 (IZQUIERDA - GALERÍA VISUAL Y FOTOGRAFÍAS REALES) -->
@@ -297,7 +546,6 @@ window.openProductDetailModal = function(sku) {
                     </div>
                 </div>
 
-                <!-- Miniaturas Deslizables -->
                 <div class="grid grid-cols-4 gap-2">
                     <button onclick="document.getElementById('pdp-main-image').src='${localImg}'" class="h-16 bg-slate-950 border border-cyan-400 rounded-xl p-1 flex items-center justify-center hover:opacity-80 transition cursor-pointer">
                         <img src="${localImg}" alt="Vista 1" class="w-full h-full object-contain" />
@@ -334,7 +582,6 @@ window.openProductDetailModal = function(sku) {
                     </div>
                 </div>
 
-                <!-- Disponibilidad y Sucursal -->
                 <div class="bg-emerald-950/60 border border-emerald-500/50 p-3 rounded-xl flex items-center gap-3">
                     <i class="fa-solid fa-circle-check text-emerald-400 text-xl shrink-0"></i>
                     <div class="text-xs">
@@ -343,7 +590,6 @@ window.openProductDetailModal = function(sku) {
                     </div>
                 </div>
 
-                <!-- Tabla de Especificaciones Técnicas -->
                 <div class="space-y-2 text-xs">
                     <h3 class="font-bold text-white uppercase text-xs font-mono flex items-center gap-2">
                         <i class="fa-solid fa-list-check text-cyan-400"></i> Características & Especificaciones
@@ -364,7 +610,6 @@ window.openProductDetailModal = function(sku) {
             <div class="lg:col-span-3 bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between gap-4 shadow-2xl">
                 
                 <div>
-                    <!-- Desglose Comercial de Precios -->
                     <div class="border-b border-slate-800 pb-3 space-y-1">
                         <span class="text-[10px] text-slate-400 font-mono line-through block">
                             Precio de Lista: $${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
@@ -377,7 +622,6 @@ window.openProductDetailModal = function(sku) {
                         </span>
                     </div>
 
-                    <!-- Botones de Acción -->
                     <div class="pt-3 space-y-2">
                         <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-1">
                             <span>Cantidad:</span>
@@ -404,7 +648,6 @@ window.openProductDetailModal = function(sku) {
                         </button>
                     </div>
 
-                    <!-- Módulo de Cashback 5% y Mayoreo -->
                     <div class="mt-4 pt-3 border-t border-slate-800 space-y-2 text-[11px]">
                         <div class="bg-slate-900/90 border border-emerald-500/40 p-2.5 rounded-xl space-y-1">
                             <div class="flex items-center gap-1.5 text-emerald-400 font-mono font-bold">
@@ -493,129 +736,6 @@ function goToPageNumber(p) {
     renderExactCatalogView();
     const target = document.getElementById("catalog-main-content-root");
     if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-function renderSidebarFacets() {
-    const root = document.getElementById("sidebar-facets-root");
-    if (!root) return;
-
-    const catMetaList = [
-        { id: 'Todas', name: 'Todas las Categorías', count: 16122, icon: 'fa-layer-group' },
-        { id: 'monitores', name: 'Monitores & Pantallas PC', count: 623, icon: 'fa-desktop' },
-        { id: 'procesadores', name: 'Procesadores (CPUs)', count: 691, icon: 'fa-microchip' },
-        { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', count: 111, icon: 'fa-chess-board' },
-        { id: 'tarjetas_de_video', name: 'Tarjetas de Video (GPUs)', count: 61, icon: 'fa-gamepad' },
-        { id: 'memorias_ram', name: 'Memorias RAM (DDR4 / DDR5)', count: 597, icon: 'fa-memory' },
-        { id: 'discos_duros', name: 'Discos Duros & SSD NVMe', count: 484, icon: 'fa-hard-drive' },
-        { id: 'fuentes_energia', name: 'Fuentes de Poder & UPS', count: 80, icon: 'fa-plug-circle-bolt' },
-        { id: 'gabinetes', name: 'Gabinetes & Chasis Gamer', count: 402, icon: 'fa-server' },
-        { id: 'enfriamiento', name: 'Enfriamiento Líquido/Aire', count: 228, icon: 'fa-snowflake' },
-        { id: 'impresoras', name: 'Impresoras & Multifuncionales', count: 416, icon: 'fa-print' },
-        { id: 'consumibles', name: 'Tintas, Tóner & Consumibles', count: 592, icon: 'fa-fill-drip' },
-        { id: 'conectividad_redes', name: 'Conectividad & Routers WiFi', count: 584, icon: 'fa-network-wired' },
-        { id: 'software', name: 'Software & Licencias', count: 580, icon: 'fa-compact-disc' },
-        { id: 'accesorios_perifericos', name: 'Teclados, Mouse & Periféricos', count: 4593, icon: 'fa-keyboard' },
-        { id: 'telefonia_seguridad', name: 'Videovigilancia CCTV & Telefonía', count: 849, icon: 'fa-video' },
-        { id: 'equipos_de_marca', name: 'Laptops & Computadoras', count: 27, icon: 'fa-laptop' },
-        { id: 'punto_de_venta', name: 'Punto de Venta (POS)', count: 156, icon: 'fa-barcode' },
-        { id: 'electronica_consumo', name: 'Smart TVs & Audio', count: 728, icon: 'fa-tv' },
-        { id: 'linea_blanca', name: 'Climatización & Línea Blanca', count: 56, icon: 'fa-fan' }
-    ];
-
-    const brandCounts = { 'ASUS': 218, 'INTEL': 142, 'AMD': 116, 'KINGSTON': 287, 'ACTECK': 213, 'MSI': 98, 'GIGABYTE': 124, 'TRIPP-LITE': 86, 'ADATA': 94, 'CORSAIR': 76, 'LOGITECH': 115, 'SAMSUNG': 64, 'LG': 58, 'DELL': 72, 'HP': 89, 'LENOVO': 95 };
-
-    root.innerHTML = `
-        <div class="bg-gradient-to-r from-slate-900 to-cyan-950 border border-cyan-500/40 text-white p-3.5 rounded-t-2xl font-bold text-xs uppercase flex items-center justify-between shadow-lg">
-            <span class="flex items-center gap-2 text-cyan-300 font-mono"><i class="fa-solid fa-sliders text-cyan-400"></i> Filtros de Búsqueda</span>
-            <span class="text-[9px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono font-bold">16,122 Items</span>
-        </div>
-
-        <div class="p-4 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-300 text-xs space-y-4 shadow-2xl">
-            <div class="flex gap-2">
-                <button onclick="renderExactCatalogView()" class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2 rounded-xl text-[11px] uppercase transition cursor-pointer shadow-md hover:shadow-cyan-500/20">
-                    Aplicar Filtros
-                </button>
-                <button onclick="resetFacets()" class="flex-1 bg-slate-800 hover:bg-red-950/60 border border-slate-700 hover:border-red-500/50 text-slate-300 hover:text-red-400 font-bold py-2 rounded-xl text-[11px] uppercase transition cursor-pointer">
-                    Limpiar
-                </button>
-            </div>
-
-            <div class="border-b border-slate-800 pb-3">
-                <h4 class="font-bold text-white mb-2 text-xs flex items-center gap-1.5 font-mono">
-                    <i class="fa-solid fa-tags text-amber-400"></i> Promociones Activas
-                </h4>
-                <div class="space-y-1.5 text-slate-300">
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-cyan-300">
-                        <input type="checkbox" checked class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer" /> <span>Descuento de -25% Vigente</span>
-                    </label>
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-cyan-300">
-                        <input type="checkbox" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer" /> <span>Nuevos Lanzamientos</span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="border-b border-slate-800 pb-3">
-                <h4 class="font-bold text-white mb-2 text-xs flex items-center gap-1.5 font-mono">
-                    <i class="fa-solid fa-microchip text-cyan-400"></i> Categorías (${catMetaList.length})
-                </h4>
-                <div class="space-y-1 text-slate-400 max-h-72 overflow-y-auto pr-1">
-                    ${catMetaList.map(c => `
-                        <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-1 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
-                            <span class="flex items-center gap-2 truncate">
-                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
-                                <span class="truncate ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : ''}">${c.name}</span>
-                            </span>
-                            <span class="text-[10px] text-slate-400 font-mono">(${c.count.toLocaleString('es-MX')})</span>
-                        </label>
-                    `).join('')}
-                </div>
-            </div>
-
-            <div class="border-b border-slate-800 pb-3">
-                <h4 class="font-bold text-white mb-2 text-xs flex items-center gap-1.5 font-mono">
-                    <i class="fa-solid fa-award text-amber-400"></i> Marcas Oficiales
-                </h4>
-                <div class="space-y-1 text-slate-400 max-h-48 overflow-y-auto pr-1">
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-cyan-300 py-1 px-1.5 rounded-lg hover:bg-slate-800/60">
-                        <input type="radio" name="brand_facet" ${activeSelectedBrand === 'Todas' ? 'checked' : ''} onchange="activeSelectedBrand='Todas'; currentPageNumber=1; renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer" />
-                        <span>Todas las Marcas</span>
-                    </label>
-                    ${Object.entries(brandCounts).map(([b, count]) => `
-                        <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-1 px-1.5 rounded-lg hover:bg-slate-800/60">
-                            <span class="flex items-center gap-2 truncate">
-                                <input type="radio" name="brand_facet" ${activeSelectedBrand === b ? 'checked' : ''} onchange="activeSelectedBrand='${b}'; currentPageNumber=1; renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer" />
-                                <span class="truncate ${activeSelectedBrand === b ? 'font-bold text-cyan-300' : ''}">${b}</span>
-                            </span>
-                            <span class="text-[10px] text-slate-400 font-mono">(${count})</span>
-                        </label>
-                    `).join('')}
-                </div>
-            </div>
-
-            <div>
-                <h4 class="font-bold text-white mb-2 text-xs flex items-center gap-1.5 font-mono">
-                    <i class="fa-solid fa-location-dot text-emerald-400"></i> Sucursal & Logística
-                </h4>
-                <div class="space-y-1 text-slate-400">
-                    <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-1 px-1.5 rounded-lg hover:bg-slate-800/60">
-                        <span class="flex items-center gap-2">
-                            <input type="checkbox" checked class="w-3.5 h-3.5 accent-emerald-400 cursor-pointer" />
-                            <span>Guadalajara (Pedro Moreno 501 A)</span>
-                        </span>
-                        <span class="text-[10px] text-emerald-400 font-mono font-bold">(477)</span>
-                    </label>
-                    <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-1 px-1.5 rounded-lg hover:bg-slate-800/60">
-                        <span class="flex items-center gap-2">
-                            <input type="checkbox" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer" />
-                            <span>Envío Nacional Express</span>
-                        </span>
-                        <span class="text-[10px] text-slate-400 font-mono">(16,122)</span>
-                    </label>
-                </div>
-            </div>
-        </div>
-    `;
 }
 
 function resetFacets() {

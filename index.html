@@ -95,49 +95,49 @@
     </header>
 
     <!-- CONTENIDO PRINCIPAL: ESTRUCTURA EXACTA DE 2 COLUMNAS (CT ONLINE STYLE) -->
-    <main class="w-full max-w-[1850px] mx-auto px-2 sm:px-4 py-4 flex-1" id="catalog-main-content-root">
+    <main class="w-full max-w-[1880px] mx-auto px-2 sm:px-4 py-4 flex-1" id="catalog-main-content-root">
         
-        <div class="flex flex-col lg:flex-row gap-5 items-start justify-center">
+        <div class="flex flex-col lg:flex-row gap-4 items-start justify-center">
             
-            <!-- COLUMNA IZQUIERDA: FILTROS DE BÚSQUEDA / FACETS (PANEL FIJO EXACTO) -->
-            <aside style="width: 270px; min-width: 270px; max-width: 270px;" class="w-full lg:w-[270px] shrink-0" id="sidebar-facets-root">
-                <!-- Inyectado por JS -->
+            <!-- COLUMNA LATERAL IZQUIERDA: CATEGORÍAS Y FILTROS EN 2 BLOQUES (ANCHO FIJO 255px) -->
+            <aside style="width: 255px; min-width: 255px; max-width: 255px;" class="w-full lg:w-[255px] shrink-0" id="sidebar-facets-root">
+                <!-- Inyectado por JS: Bloque 1 (Ensamble) + Bloque 2 (Complementos) -->
             </aside>
 
-            <!-- COLUMNA DERECHA: ÁREA PRINCIPAL DEL CATÁLOGO (ANCHO COMPLETO) -->
+            <!-- COLUMNA CENTRAL: ESCAPARATE PRINCIPAL (5 FILAS X 4 COLUMNAS = 20 PRODUCTOS) -->
             <section style="flex: 1 1 0%; min-width: 0;" class="flex-1 min-w-0 w-full flex flex-col gap-3.5">
                 
                 <!-- Banner Superior Promocional -->
-                <div class="w-full rounded-lg overflow-hidden bg-gradient-to-r from-blue-700 via-indigo-800 to-blue-900 border border-blue-400/40 p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow text-white">
+                <div class="w-full rounded-2xl overflow-hidden bg-gradient-to-r from-blue-900 via-indigo-950 to-slate-900 border border-cyan-500/40 p-3.5 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xl text-white">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-xl shrink-0">
+                        <div class="w-10 h-10 rounded-xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-xl shrink-0">
                             <i class="fa-solid fa-bolt text-amber-300"></i>
                         </div>
                         <div>
                             <span class="text-[10px] font-mono text-cyan-300 font-bold uppercase tracking-wider block">Distribución Mayorista Directa</span>
-                            <h3 class="font-bold text-sm sm:text-base">Precios Especiales con Entrega Inmediata en Guadalajara</h3>
+                            <h3 class="font-bold text-xs sm:text-sm">Precios Especiales con Entrega Inmediata en Guadalajara (Pedro Moreno 501 A)</h3>
                         </div>
                     </div>
-                    <button onclick="document.getElementById('boutiqueSearchInput').focus()" class="bg-white hover:bg-slate-100 text-blue-900 font-black px-4 py-1.5 rounded-lg text-xs uppercase font-mono tracking-wider shadow transition shrink-0 cursor-pointer">
+                    <button onclick="document.getElementById('boutiqueSearchInput').focus()" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-black px-4 py-1.5 rounded-xl text-xs uppercase font-mono tracking-wider shadow-lg transition shrink-0 cursor-pointer">
                         Ver Catálogo
                     </button>
                 </div>
 
                 <!-- Barra Superior de Control (Resultados + Alternador Vista + Paginación 1..7...50 + Ordenar) -->
-                <div class="p-4 bg-slate-900/95 border border-slate-800 rounded-2xl shadow-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-white">
+                <div class="p-3.5 bg-slate-900/95 border border-slate-800 rounded-2xl shadow-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-white">
                     <div>
-                        <h2 class="text-sm sm:text-base font-bold text-cyan-300 leading-tight font-mono" id="results-count-display">
-                            Resultados de búsqueda (20 de 16159)
+                        <h2 class="text-xs sm:text-sm font-bold text-cyan-300 leading-tight font-mono" id="results-count-display">
+                            Aparador Principal (20 de 16,122)
                         </h2>
                     </div>
 
-                    <div class="flex items-center gap-2.5 flex-wrap justify-between w-full sm:w-auto">
-                        <!-- Alternador de Vista (Lista vs. Cuadrícula) -->
-                        <div class="bg-slate-100 p-0.5 rounded border border-slate-300 flex items-center gap-0.5">
-                            <button id="btn-view-list" onclick="setViewStyle('list')" title="Vista Listado Horizontal (Estilo Imagen 1)" class="p-1.5 rounded text-slate-500 hover:text-slate-900 transition cursor-pointer text-xs">
+                    <div class="flex items-center gap-2 flex-wrap justify-between w-full sm:w-auto">
+                        <!-- Alternador de Vista (Cuadrícula 5x4 vs. Lista) -->
+                        <div class="bg-slate-950 p-1 rounded-xl border border-slate-800 flex items-center gap-1">
+                            <button id="btn-view-list" onclick="setViewStyle('list')" title="Vista Listado Horizontal" class="p-1.5 rounded-lg text-slate-400 hover:text-white transition cursor-pointer text-xs">
                                 <i class="fa-solid fa-list-ul"></i>
                             </button>
-                            <button id="btn-view-grid" onclick="setViewStyle('grid')" title="Vista Cuadrícula / Grupos (Estilo Imagen 2)" class="p-1.5 rounded bg-[#1e40af] text-white transition cursor-pointer text-xs">
+                            <button id="btn-view-grid" onclick="setViewStyle('grid')" title="Vista Cuadrícula (5x4)" class="p-1.5 rounded-lg bg-cyan-500 text-slate-950 font-bold transition cursor-pointer text-xs">
                                 <i class="fa-solid fa-table-cells"></i>
                             </button>
                         </div>
@@ -148,10 +148,10 @@
                         </div>
 
                         <!-- Menú Desplegable 'Ordenar por' -->
-                        <div class="flex items-center gap-1 text-xs text-slate-600 font-mono">
-                            <span class="hidden md:inline">Ordenar:</span>
-                            <select onchange="currentSortCriterion=this.value; renderExactCatalogView();" class="bg-white border border-slate-300 text-slate-700 rounded px-2 py-1 text-xs font-mono cursor-pointer outline-none">
-                                <option value="existencia">Existencia</option>
+                        <div class="flex items-center gap-1.5 text-xs font-mono text-slate-400">
+                            <span>Ordenar:</span>
+                            <select id="sort-select" onchange="currentSortCriterion=this.value; renderExactCatalogView();" class="bg-slate-950 border border-slate-800 text-white rounded-xl px-2.5 py-1 text-xs outline-none cursor-pointer">
+                                <option value="existencia">Disponibilidad</option>
                                 <option value="precio_asc">Precio: Menor a Mayor</option>
                                 <option value="precio_desc">Precio: Mayor a Menor</option>
                                 <option value="nombre">Nombre A-Z</option>
@@ -160,54 +160,24 @@
                     </div>
                 </div>
 
-                <!-- CONTENEDOR DE PRODUCTOS (GRID DE 4/5 COLS O LISTA HORIZONTAL) -->
-                <div id="products-grid-container" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 pb-2">
-                    <!-- Inyectado por JS -->
+                <!-- CONTENEDOR DEL APARADOR DE 20 PRODUCTOS (5 FILAS X 4 COLUMNAS) -->
+                <div id="products-grid-container" class="min-h-[700px]">
+                    <!-- Inyectado por JS: 20 productos -->
                 </div>
 
-                <!-- PAGINACIÓN NUMÉRICA INFERIOR -->
-                <div class="pagination-target-bar p-4 bg-slate-900/95 border border-slate-800 rounded-2xl shadow-xl flex justify-center items-center">
+                <!-- Paginación Inferior 1..7...50 -->
+                <div class="pagination-target-bar p-3.5 bg-slate-900/95 border border-slate-800 rounded-2xl shadow-xl flex justify-center items-center">
                     <!-- Inyectado por JS -->
                 </div>
 
             </section>
+
+            <!-- COLUMNA LATERAL DERECHA: LOS MÁS VENDIDOS / BESTSELLERS (ANCHO FIJO 250px) -->
+            <aside style="width: 250px; min-width: 250px; max-width: 250px;" class="w-full lg:w-[250px] shrink-0" id="sidebar-bestsellers-root">
+                <!-- Inyectado por JS: Los 3 Más Vendidos + Ver Todos -->
+            </aside>
+
         </div>
-
-        <!-- BANNER DE CONVERSIÓN (QR + GEMINI + ANTI-GRAVITY) -->
-        <div class="mt-8 pt-6 border-t border-slate-800 grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="p-4 bg-slate-900 border-2 border-cyan-400 rounded-2xl text-center flex flex-col justify-between items-center gap-2.5">
-                <span class="text-white font-mono font-bold text-xs uppercase"><i class="fa-solid fa-mobile-screen text-cyan-400"></i> App Móvil BAZAR NFL</span>
-                <div class="w-28 h-28 bg-white p-1 rounded-xl shadow flex items-center justify-center">
-                    <img src="assets/img/codigo_qr_bazar_nfl.png" alt="QR App" width="112" height="112" class="w-full h-full object-contain" onerror="this.onerror=null;this.src='https://quickchart.io/qr?text=https%3A//iaworldcenter-creator.github.io/sitios-web/app.html&size=250';" />
-                </div>
-                <a href="https://iaworldcenter-creator.github.io/sitios-web/app.html" target="_blank" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-1.5 rounded-lg text-xs flex items-center justify-center gap-1.5 transition">
-                    <i class="fa-brands fa-google-play text-emerald-400"></i> Abrir App
-                </a>
-            </div>
-
-            <div class="p-4 bg-slate-900 border border-cyan-500/40 rounded-2xl flex flex-col justify-between gap-2.5">
-                <div class="space-y-1">
-                    <span class="text-cyan-300 font-mono font-bold text-xs uppercase"><i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i> Google Gemini AI</span>
-                    <h4 class="text-white font-bold text-sm">Inteligencia Artificial para tu Negocio</h4>
-                    <p class="text-slate-300 text-xs">Concebido y programado con la IA más avanzada de Google.</p>
-                </div>
-                <a href="https://gemini.google.com" target="_blank" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold py-1.5 rounded-lg text-xs text-center">
-                    Suscribir a Gemini
-                </a>
-            </div>
-
-            <div class="p-4 bg-slate-900 border border-amber-500/40 rounded-2xl flex flex-col justify-between gap-2.5">
-                <div class="space-y-1">
-                    <span class="text-amber-300 font-mono font-bold text-xs uppercase"><i class="fa-solid fa-laptop-code text-amber-400"></i> Anti-Gravity Copilot</span>
-                    <h4 class="text-white font-bold text-sm">Agente Autónomo de Ingeniería</h4>
-                    <p class="text-slate-300 text-xs">Desarrollado y optimizado por Anti-Gravity Copilot.</p>
-                </div>
-                <a href="https://github.com" target="_blank" class="w-full bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black py-1.5 rounded-lg text-xs text-center">
-                    Descargar Anti-Gravity
-                </a>
-            </div>
-        </div>
-
     
     <!-- MODAL DE FICHA TÉCNICA EN 3 COLUMNAS (PDP) -->
     <div id="productDetailModal" class="fixed inset-0 z-[200] hidden flex items-center justify-center p-2 sm:p-4">
@@ -242,8 +212,8 @@
         </div>
     </footer>
 
-    <script src="js/ct-catalog-data.js?v=20260828_1120"></script>
-    <script defer src="js/ct-exact-catalog-engine.js?v=20260828_1120"></script>
+    <script src="js/ct-catalog-data.js?v=20260828_1135"></script>
+    <script defer src="js/ct-exact-catalog-engine.js?v=20260828_1135"></script>
     <script defer src="js/ct-search-engine.js"></script>
 </body>
 </html>
