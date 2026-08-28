@@ -1,155 +1,383 @@
 [
   {
-    "sku": "CFG-INTEL-14900",
-    "nombre": "PC Gamer Ultra Intel Core i9-14900 | ASUS Prime B760M-A | 16GB DDR4 3200MHz | 1TB HDD + SSD | Kit Gamer 4en1",
-    "marca": "INTEL / ASUS",
+    "sku": "PC-INTEL-14VA-GEN-5",
+    "nombre": "PC Armada 2026-08-24 00:00:00 | INTEL 14va GEN",
+    "descripcion_completa": "Configuración recomendada oficial CT: MONACT050 (MONITOR CB195 PLANO 19.5 NEGRO AC-939409), CPUINT4560 (CORE I9-14900 5.80 GHZ MAX), MBDASS5750 (MB ASUS PRIME B760M-A D4), GABACT160 (GAB MICRO ACTECK KIOTO GC220 AC-933063), DDUSAT260 (DD SATA II 1TB 7200 NEW PULL), MEMKGN3470 (DDR4 DIMM KGT 16GB/3200 KVR32N22S8/16), KITNCB140 (KIT GAMER NACEB 4 EN 1 TEC/MOU/ NA-0925)",
     "categoria": "Equipos Armados",
-    "precio": 26302.12,
-    "original": 31172.88,
-    "desc": "Configuración de máxima potencia para renderizado 3D, streaming y gaming extremo. 24 Núcleos, 32 Hilos, hasta 5.80GHz.",
-    "img": "assets/img/catalog/gabinete_negro.webp",
-    "precio_mxn": 26302.12,
-    "costo_proveedor_mxn": 19483.05,
-    "precio_original": 31172.88,
-    "precio_mayoreo_10pzs": 23379.66,
-    "margen_minimo_garantizado": "20% neto minimo",
-    "local_img": "assets/img/catalog/gabinete_negro.webp",
-    "categoria_ct": "Equipos Armados"
+    "categoria_ct": "Equipos Armados",
+    "categoria_clasificada": "equipos_de_marca",
+    "marca": "CT Ensamble",
+    "base_cost_usd": 998.73,
+    "costo_proveedor_mxn": 19475.17,
+    "precio_original": 31160.27,
+    "original": 31160.27,
+    "precio": 26291.48,
+    "precio_mxn": 26291.48,
+    "precio_mayoreo_10pzs": 24343.96,
+    "precio_piso_minimo_20": 23370.2,
+    "img": "https://static.ctonline.mx/imagenes/GABACT160/GABACT160_400.jpg",
+    "local_img": "assets/img/catalog/GABACT160.jpg",
+    "componentes": [
+      {
+        "sku": "MONACT050",
+        "desc": "MONITOR CB195 PLANO 19.5 NEGRO AC-939409",
+        "usd": 34.035472525810235
+      },
+      {
+        "sku": "CPUINT4560",
+        "desc": "CORE I9-14900 5.80 GHZ MAX",
+        "usd": 560.5555555555555
+      },
+      {
+        "sku": "MBDASS5750",
+        "desc": "MB ASUS PRIME B760M-A D4",
+        "usd": 107.95454545454545
+      },
+      {
+        "sku": "GABACT160",
+        "desc": "GAB MICRO ACTECK KIOTO GC220 AC-933063",
+        "usd": 27.242948762154338
+      },
+      {
+        "sku": "DDUSAT260",
+        "desc": "DD SATA II 1TB 7200 NEW PULL",
+        "usd": 59.44444444444444
+      },
+      {
+        "sku": "MEMKGN3470",
+        "desc": "DDR4 DIMM KGT 16GB/3200 KVR32N22S8/16",
+        "usd": 183.54444444444445
+      },
+      {
+        "sku": "KITNCB140",
+        "desc": "KIT GAMER NACEB 4 EN 1 TEC/MOU/ NA-0925",
+        "usd": 25.94913878618451
+      }
+    ]
   },
   {
-    "sku": "CFG-INTEL-14700",
-    "nombre": "PC Gamer Pro Intel Core i7-14700 | ASUS Prime B760M-A | 16GB DDR4 3200MHz | 1TB HDD + SSD | Kit Gamer Naceb",
-    "marca": "INTEL / ASUS",
+    "sku": "PC-INTEL-12VA-GEN-5",
+    "nombre": "PC Armada 2026-08-24 00:00:00 | INTEL 12va GEN",
+    "descripcion_completa": "Configuración recomendada oficial CT: MONACT050 (MONITOR CB195 PLANO 19.5 NEGRO AC-939409), CPUINT4210 (CORE I9-12900 2.40 GHZ), MBDASS5460 (MB ASUS PRIME H610M-K D4), GABACT160 (GAB MICRO ACTECK KIOTO GC220 AC-933063), DDUSAT260 (DD SATA II 1TB 7200 NEW PULL), MEMDAT5700 (DDR4 UDIMM 8GB 3200MHZ AD4U32008G22-SGN), KITNCB140 (KIT GAMER NACEB 4 EN 1 TEC/MOU/ NA-0925)",
     "categoria": "Equipos Armados",
-    "precio": 21725.85,
-    "original": 25749.16,
-    "desc": "Equilibrio supremo para creación de contenido y juegos competitivos. 20 Núcleos, 28 Hilos, turbo 5.40GHz.",
-    "img": "assets/img/Female_technician_assembling_gam_202608041518_thumb.webp",
-    "precio_mxn": 21725.85,
-    "costo_proveedor_mxn": 16093.22,
-    "precio_original": 25749.16,
-    "precio_mayoreo_10pzs": 19311.87,
-    "margen_minimo_garantizado": "20% neto minimo",
-    "local_img": "assets/img/Female_technician_assembling_gam_202608041518_thumb.webp",
-    "categoria_ct": "Equipos Armados"
+    "categoria_ct": "Equipos Armados",
+    "categoria_clasificada": "equipos_de_marca",
+    "marca": "CT Ensamble",
+    "base_cost_usd": 704.41,
+    "costo_proveedor_mxn": 13736.01,
+    "precio_original": 21977.62,
+    "original": 21977.62,
+    "precio": 18543.62,
+    "precio_mxn": 18543.62,
+    "precio_mayoreo_10pzs": 17170.02,
+    "precio_piso_minimo_20": 16483.21,
+    "img": "https://static.ctonline.mx/imagenes/GABACT160/GABACT160_400.jpg",
+    "local_img": "assets/img/catalog/GABACT160.jpg",
+    "componentes": [
+      {
+        "sku": "MONACT050",
+        "desc": "MONITOR CB195 PLANO 19.5 NEGRO AC-939409",
+        "usd": 34.035472525810235
+      },
+      {
+        "sku": "CPUINT4210",
+        "desc": "CORE I9-12900 2.40 GHZ",
+        "usd": 446.87777777777774
+      },
+      {
+        "sku": "MBDASS5460",
+        "desc": "MB ASUS PRIME H610M-K D4",
+        "usd": 60.25
+      },
+      {
+        "sku": "GABACT160",
+        "desc": "GAB MICRO ACTECK KIOTO GC220 AC-933063",
+        "usd": 27.242948762154338
+      },
+      {
+        "sku": "DDUSAT260",
+        "desc": "DD SATA II 1TB 7200 NEW PULL",
+        "usd": 59.44444444444444
+      },
+      {
+        "sku": "MEMDAT5700",
+        "desc": "DDR4 UDIMM 8GB 3200MHZ AD4U32008G22-SGN",
+        "usd": 50.61111111111111
+      },
+      {
+        "sku": "KITNCB140",
+        "desc": "KIT GAMER NACEB 4 EN 1 TEC/MOU/ NA-0925",
+        "usd": 25.94913878618451
+      }
+    ]
   },
   {
-    "sku": "CFG-INTEL-14400",
-    "nombre": "PC Gamer Calidad/Precio Intel Core i5-14400 | ASUS Prime B760M-A | 16GB DDR4 | 1TB HDD | Kit Naceb 4en1",
-    "marca": "INTEL / ASUS",
+    "sku": "PC-AMD-RYZEN-5",
+    "nombre": "PC Armada 2026-08-24 00:00:00 | AMD RYZEN",
+    "descripcion_completa": "Configuración recomendada oficial CT: MONACT050 (MONITOR CB195 PLANO 19.5 NEGRO AC-939409), CPUAMD2710 (AMD RYZEN 9 5900XT), MBDASS5500 (MB ASUS ROG STRIX B550-F GAMING WIFI II), GABACT160 (GAB MICRO ACTECK KIOTO GC220 AC-933063), DDUSAT260 (DD SATA II 1TB 7200 NEW PULL), MEMKGN2870 (FURYBEASTBLACK DDR4 8/3200 KF432C16BB/8), KITNCB140 (KIT GAMER NACEB 4 EN 1 TEC/MOU/ NA-0925), TVIASS2990 (ASUS GT730-SL-2GD5-BRK)",
     "categoria": "Equipos Armados",
-    "precio": 16806.36,
-    "original": 19918.65,
-    "desc": "La reina de la gama media. 10 Núcleos híbridos, 16 Hilos, hasta 4.70GHz. Excelente para diseño y gaming.",
-    "img": "assets/img/tigre_gamer_thumb.webp",
-    "precio_mxn": 16806.36,
-    "costo_proveedor_mxn": 12449.16,
-    "precio_original": 19918.65,
-    "precio_mayoreo_10pzs": 14938.99,
-    "margen_minimo_garantizado": "20% neto minimo",
-    "local_img": "assets/img/tigre_gamer_thumb.webp",
-    "categoria_ct": "Equipos Armados"
+    "categoria_ct": "Equipos Armados",
+    "categoria_clasificada": "equipos_de_marca",
+    "marca": "CT Ensamble",
+    "base_cost_usd": 847.38,
+    "costo_proveedor_mxn": 16523.87,
+    "precio_original": 26438.19,
+    "original": 26438.19,
+    "precio": 22307.23,
+    "precio_mxn": 22307.23,
+    "precio_mayoreo_10pzs": 20654.84,
+    "precio_piso_minimo_20": 19828.65,
+    "img": "https://static.ctonline.mx/imagenes/GABACT160/GABACT160_400.jpg",
+    "local_img": "assets/img/catalog/GABACT160.jpg",
+    "componentes": [
+      {
+        "sku": "MONACT050",
+        "desc": "MONITOR CB195 PLANO 19.5 NEGRO AC-939409",
+        "usd": 34.035472525810235
+      },
+      {
+        "sku": "CPUAMD2710",
+        "desc": "AMD RYZEN 9 5900XT",
+        "usd": 365.55555555555554
+      },
+      {
+        "sku": "MBDASS5500",
+        "desc": "MB ASUS ROG STRIX B550-F GAMING WIFI II",
+        "usd": 166.47727272727272
+      },
+      {
+        "sku": "GABACT160",
+        "desc": "GAB MICRO ACTECK KIOTO GC220 AC-933063",
+        "usd": 27.242948762154338
+      },
+      {
+        "sku": "DDUSAT260",
+        "desc": "DD SATA II 1TB 7200 NEW PULL",
+        "usd": 59.44444444444444
+      },
+      {
+        "sku": "MEMKGN2870",
+        "desc": "FURYBEASTBLACK DDR4 8/3200 KF432C16BB/8",
+        "usd": 69.55555555555556
+      },
+      {
+        "sku": "KITNCB140",
+        "desc": "KIT GAMER NACEB 4 EN 1 TEC/MOU/ NA-0925",
+        "usd": 25.94913878618451
+      },
+      {
+        "sku": "TVIASS2990",
+        "desc": "ASUS GT730-SL-2GD5-BRK",
+        "usd": 99.11764705882354
+      }
+    ]
   },
   {
-    "sku": "CFG-RYZEN-5900XT",
-    "nombre": "PC Gamer Master AMD Ryzen 9 5900XT | ASUS ROG Strix B550-F WiFi II | 16GB Fury Beast | 1TB SATA | Gráficos Dedicados",
-    "marca": "AMD / ASUS ROG",
+    "sku": "PC-AMD-RYZEN-G-3",
+    "nombre": "PC Armada RYZEN 7 5700G | AMD RYZEN G",
+    "descripcion_completa": "Configuración recomendada oficial CT: MONACT050 (MONITOR CB195 PLANO 19.5 NEGRO AC-939409), CPUAMD2290 (AMD RYZEN 7 5700G AM4), MBDASS5490 (MB ASUS PRIME B550M-A AC), GABACT160 (GAB MICRO ACTECK KIOTO GC220 AC-933063), DDUSAT260 (DD SATA II 1TB 7200 NEW PULL), MEMKGN2910 (FURYBEASTBLACKDDR4 16GB KF432C16BB1/16), KITNCB140 (KIT GAMER NACEB 4 EN 1 TEC/MOU/ NA-0925), DDUDAT1290 (SSD ADATA 240GB ASU630SS-240GQ-R), DDUWSD1930 (SSD WD GREEN 480GB WDS480G3G0A), MEMKGN3750 (FURYBEASTBLAC DDR4 16/3200 KF432C16BB/16), DDUKGT1300 (D.D ESTADO SOLIDO SA400S37/480G), DDUKGT1360 (D.D ESTADO SOLIDO SA400S37/960G), MONLGE3280 (MON LG 21.5 22U401A-B.AWMQ FHD 100HZ 1MS), MONBLR150 (MON 23.8 CURVO ULTRA EARTH BR-938334 BCO), MONASS710 (MONITOR ASUS VA24EHE 23.8)",
     "categoria": "Equipos Armados",
-    "precio": 19666.53,
-    "original": 23308.48,
-    "desc": "16 Núcleos y 32 Hilos de arquitectura Zen 3 pura con tarjeta madre ROG Strix con WiFi 6E integrado.",
-    "img": "assets/img/slider_ia_human_thumb.webp",
-    "precio_mxn": 19666.53,
-    "costo_proveedor_mxn": 14567.8,
-    "precio_original": 23308.48,
-    "precio_mayoreo_10pzs": 17481.36,
-    "margen_minimo_garantizado": "20% neto minimo",
-    "local_img": "assets/img/slider_ia_human_thumb.webp",
-    "categoria_ct": "Equipos Armados"
+    "categoria_ct": "Equipos Armados",
+    "categoria_clasificada": "equipos_de_marca",
+    "marca": "CT Ensamble",
+    "base_cost_usd": 1199.64,
+    "costo_proveedor_mxn": 23393.06,
+    "precio_original": 37428.89,
+    "original": 37428.89,
+    "precio": 31580.63,
+    "precio_mxn": 31580.63,
+    "precio_mayoreo_10pzs": 29241.32,
+    "precio_piso_minimo_20": 28071.67,
+    "img": "https://static.ctonline.mx/imagenes/GABACT160/GABACT160_400.jpg",
+    "local_img": "assets/img/catalog/GABACT160.jpg",
+    "componentes": [
+      {
+        "sku": "MONACT050",
+        "desc": "MONITOR CB195 PLANO 19.5 NEGRO AC-939409",
+        "usd": 34.035472525810235
+      },
+      {
+        "sku": "CPUAMD2290",
+        "desc": "AMD RYZEN 7 5700G AM4",
+        "usd": 188.33333333333334
+      },
+      {
+        "sku": "MBDASS5490",
+        "desc": "MB ASUS PRIME B550M-A AC",
+        "usd": 74.6590909090909
+      },
+      {
+        "sku": "GABACT160",
+        "desc": "GAB MICRO ACTECK KIOTO GC220 AC-933063",
+        "usd": 27.242948762154338
+      },
+      {
+        "sku": "DDUSAT260",
+        "desc": "DD SATA II 1TB 7200 NEW PULL",
+        "usd": 59.44444444444444
+      },
+      {
+        "sku": "MEMKGN2910",
+        "desc": "FURYBEASTBLACKDDR4 16GB KF432C16BB1/16",
+        "usd": 134.24444444444444
+      },
+      {
+        "sku": "KITNCB140",
+        "desc": "KIT GAMER NACEB 4 EN 1 TEC/MOU/ NA-0925",
+        "usd": 25.94913878618451
+      },
+      {
+        "sku": "DDUDAT1290",
+        "desc": "SSD ADATA 240GB ASU630SS-240GQ-R",
+        "usd": 36.55555555555555
+      },
+      {
+        "sku": "DDUWSD1930",
+        "desc": "SSD WD GREEN 480GB WDS480G3G0A",
+        "usd": 72.22222222222221
+      },
+      {
+        "sku": "MEMKGN3750",
+        "desc": "FURYBEASTBLAC DDR4 16/3200 KF432C16BB/16",
+        "usd": 129.75555555555556
+      },
+      {
+        "sku": "DDUKGT1300",
+        "desc": "D.D ESTADO SOLIDO SA400S37/480G",
+        "usd": 67.33333333333333
+      },
+      {
+        "sku": "DDUKGT1360",
+        "desc": "D.D ESTADO SOLIDO SA400S37/960G",
+        "usd": 131.66666666666666
+      },
+      {
+        "sku": "MONLGE3280",
+        "desc": "MON LG 21.5 22U401A-B.AWMQ FHD 100HZ 1MS",
+        "usd": 33.34282080423236
+      },
+      {
+        "sku": "MONBLR150",
+        "desc": "MON 23.8 CURVO ULTRA EARTH BR-938334 BCO",
+        "usd": 93.89443330938244
+      },
+      {
+        "sku": "MONASS710",
+        "desc": "MONITOR ASUS VA24EHE 23.8",
+        "usd": 90.96452747418977
+      }
+    ]
   },
   {
-    "sku": "CFG-RYZEN-5700X",
-    "nombre": "PC Gamer Elite AMD Ryzen 7 5700X | ASUS ROG Strix B550-F WiFi II | 16GB Fury Beast | 1TB SATA | Gabinete Micro Acteck",
-    "marca": "AMD / ASUS ROG",
+    "sku": "PC-AMD-RYZEN-G-4",
+    "nombre": "PC Armada RYZEN 5 5600GT | AMD RYZEN G",
+    "descripcion_completa": "Configuración recomendada oficial CT: MONACT050 (MONITOR CB195 PLANO 19.5 NEGRO AC-939409), CPUAMD2570 (AMD RYZEN 5 5600GT AM4), MBDASS5490 (MB ASUS PRIME B550M-A AC), GABACT160 (GAB MICRO ACTECK KIOTO GC220 AC-933063), DDUSAT260 (DD SATA II 1TB 7200 NEW PULL), MEMKGN2910 (FURYBEASTBLACKDDR4 16GB KF432C16BB1/16), KITNCB140 (KIT GAMER NACEB 4 EN 1 TEC/MOU/ NA-0925)",
     "categoria": "Equipos Armados",
-    "precio": 15204.66,
-    "original": 18020.34,
-    "desc": "8 Núcleos y 16 Hilos con 32MB de L3 Cache. Eficiencia térmica insuperable de 65W TDP.",
-    "img": "assets/img/slider_warehouse_thumb.webp",
-    "precio_mxn": 15204.66,
-    "costo_proveedor_mxn": 11262.71,
-    "precio_original": 18020.34,
-    "precio_mayoreo_10pzs": 13515.25,
-    "margen_minimo_garantizado": "20% neto minimo",
-    "local_img": "assets/img/slider_warehouse_thumb.webp",
-    "categoria_ct": "Equipos Armados"
+    "categoria_ct": "Equipos Armados",
+    "categoria_clasificada": "equipos_de_marca",
+    "marca": "CT Ensamble",
+    "base_cost_usd": 492.58,
+    "costo_proveedor_mxn": 9605.22,
+    "precio_original": 15368.36,
+    "original": 15368.36,
+    "precio": 12967.05,
+    "precio_mxn": 12967.05,
+    "precio_mayoreo_10pzs": 12006.53,
+    "precio_piso_minimo_20": 11526.27,
+    "img": "https://static.ctonline.mx/imagenes/GABACT160/GABACT160_400.jpg",
+    "local_img": "assets/img/catalog/GABACT160.jpg",
+    "componentes": [
+      {
+        "sku": "MONACT050",
+        "desc": "MONITOR CB195 PLANO 19.5 NEGRO AC-939409",
+        "usd": 34.035472525810235
+      },
+      {
+        "sku": "CPUAMD2570",
+        "desc": "AMD RYZEN 5 5600GT AM4",
+        "usd": 137.0
+      },
+      {
+        "sku": "MBDASS5490",
+        "desc": "MB ASUS PRIME B550M-A AC",
+        "usd": 74.6590909090909
+      },
+      {
+        "sku": "GABACT160",
+        "desc": "GAB MICRO ACTECK KIOTO GC220 AC-933063",
+        "usd": 27.242948762154338
+      },
+      {
+        "sku": "DDUSAT260",
+        "desc": "DD SATA II 1TB 7200 NEW PULL",
+        "usd": 59.44444444444444
+      },
+      {
+        "sku": "MEMKGN2910",
+        "desc": "FURYBEASTBLACKDDR4 16GB KF432C16BB1/16",
+        "usd": 134.24444444444444
+      },
+      {
+        "sku": "KITNCB140",
+        "desc": "KIT GAMER NACEB 4 EN 1 TEC/MOU/ NA-0925",
+        "usd": 25.94913878618451
+      }
+    ]
   },
   {
-    "sku": "CFG-RYZEN-5600X",
-    "nombre": "PC Gamer AMD Ryzen 5 5600X | ASUS ROG Strix B550-F Gaming WiFi II | 16GB Fury Beast | 1TB SATA | Kit Gamer",
-    "marca": "AMD / ASUS ROG",
+    "sku": "PC-AMD-RYZEN-G-5",
+    "nombre": "PC Armada RYZEN 3 5300G | AMD RYZEN G",
+    "descripcion_completa": "Configuración recomendada oficial CT: MONACT050 (MONITOR CB195 PLANO 19.5 NEGRO AC-939409), CPUAMD2820 (AMD RYZEN 3 5300G), MBDASS5490 (MB ASUS PRIME B550M-A AC), GABACT160 (GAB MICRO ACTECK KIOTO GC220 AC-933063), DDUSAT260 (DD SATA II 1TB 7200 NEW PULL), MEMKGN2910 (FURYBEASTBLACKDDR4 16GB KF432C16BB1/16), KITNCB140 (KIT GAMER NACEB 4 EN 1 TEC/MOU/ NA-0925)",
     "categoria": "Equipos Armados",
-    "precio": 13030.93,
-    "original": 15444.07,
-    "desc": "El procesador gaming favorito de la comunidad. 6 Núcleos, 12 Hilos hasta 4.6GHz en placa ROG.",
-    "img": "assets/img/catalog/gabinete_negro.webp",
-    "precio_mxn": 13030.93,
-    "costo_proveedor_mxn": 9652.54,
-    "precio_original": 15444.07,
-    "precio_mayoreo_10pzs": 11583.05,
-    "margen_minimo_garantizado": "20% neto minimo",
-    "local_img": "assets/img/catalog/gabinete_negro.webp",
-    "categoria_ct": "Equipos Armados"
-  },
-  {
-    "sku": "CFG-APU-5700G",
-    "nombre": "PC Workstation APU AMD Ryzen 7 5700G con Gráficos Radeon Vega 8 | ASUS Prime B550M-A | 16GB RAM | 1TB HDD",
-    "marca": "AMD / ASUS",
-    "categoria": "Equipos Armados",
-    "precio": 14300.85,
-    "original": 16949.16,
-    "desc": "Potentes gráficos integrados Vega 8 para jugar sin necesidad de tarjeta de video dedicada.",
-    "img": "assets/img/Female_technician_assembling_gam_202608041518_thumb.webp",
-    "precio_mxn": 14300.85,
-    "costo_proveedor_mxn": 10593.22,
-    "precio_original": 16949.16,
-    "precio_mayoreo_10pzs": 12711.87,
-    "margen_minimo_garantizado": "20% neto minimo",
-    "local_img": "assets/img/Female_technician_assembling_gam_202608041518_thumb.webp",
-    "categoria_ct": "Equipos Armados"
-  },
-  {
-    "sku": "CFG-APU-5600GT",
-    "nombre": "PC APU AMD Ryzen 5 5600GT Gráficos Radeon Vega 7 | ASUS Prime B550M-A AC | 16GB Fury Beast | 1TB HDD",
-    "marca": "AMD / ASUS",
-    "categoria": "Equipos Armados",
-    "precio": 12927.97,
-    "original": 15322.04,
-    "desc": "Versión GT de alto reloj para gráficos fluidos en eSports (Valorant, Fortnite, League of Legends, CS2).",
-    "img": "assets/img/tigre_gamer_thumb.webp",
-    "precio_mxn": 12927.97,
-    "costo_proveedor_mxn": 9576.27,
-    "precio_original": 15322.04,
-    "precio_mayoreo_10pzs": 11491.53,
-    "margen_minimo_garantizado": "20% neto minimo",
-    "local_img": "assets/img/tigre_gamer_thumb.webp",
-    "categoria_ct": "Equipos Armados"
-  },
-  {
-    "sku": "CFG-APU-5300G",
-    "nombre": "PC Entrada / Oficina AMD Ryzen 3 5300G Gráficos Radeon Vega 6 | ASUS Prime B550M-A | 16GB RAM | 1TB HDD",
-    "marca": "AMD / ASUS",
-    "categoria": "Equipos Armados",
-    "precio": 11669.49,
-    "original": 13830.51,
-    "desc": "Solución ultra rápida para tareas de oficina, punto de venta, escuelas y navegación pesada con 4 núcleos Zen 3.",
-    "img": "assets/img/slider_ia_human_thumb.webp",
-    "precio_mxn": 11669.49,
-    "costo_proveedor_mxn": 8644.07,
-    "precio_original": 13830.51,
-    "precio_mayoreo_10pzs": 10372.88,
-    "margen_minimo_garantizado": "20% neto minimo",
-    "local_img": "assets/img/slider_ia_human_thumb.webp",
-    "categoria_ct": "Equipos Armados"
+    "categoria_ct": "Equipos Armados",
+    "categoria_clasificada": "equipos_de_marca",
+    "marca": "CT Ensamble",
+    "base_cost_usd": 445.23,
+    "costo_proveedor_mxn": 8682.01,
+    "precio_original": 13891.21,
+    "original": 13891.21,
+    "precio": 11720.71,
+    "precio_mxn": 11720.71,
+    "precio_mayoreo_10pzs": 10852.51,
+    "precio_piso_minimo_20": 10418.41,
+    "img": "https://static.ctonline.mx/imagenes/GABACT160/GABACT160_400.jpg",
+    "local_img": "assets/img/catalog/GABACT160.jpg",
+    "componentes": [
+      {
+        "sku": "MONACT050",
+        "desc": "MONITOR CB195 PLANO 19.5 NEGRO AC-939409",
+        "usd": 34.035472525810235
+      },
+      {
+        "sku": "CPUAMD2820",
+        "desc": "AMD RYZEN 3 5300G",
+        "usd": 89.65555555555555
+      },
+      {
+        "sku": "MBDASS5490",
+        "desc": "MB ASUS PRIME B550M-A AC",
+        "usd": 74.6590909090909
+      },
+      {
+        "sku": "GABACT160",
+        "desc": "GAB MICRO ACTECK KIOTO GC220 AC-933063",
+        "usd": 27.242948762154338
+      },
+      {
+        "sku": "DDUSAT260",
+        "desc": "DD SATA II 1TB 7200 NEW PULL",
+        "usd": 59.44444444444444
+      },
+      {
+        "sku": "MEMKGN2910",
+        "desc": "FURYBEASTBLACKDDR4 16GB KF432C16BB1/16",
+        "usd": 134.24444444444444
+      },
+      {
+        "sku": "KITNCB140",
+        "desc": "KIT GAMER NACEB 4 EN 1 TEC/MOU/ NA-0925",
+        "usd": 25.94913878618451
+      }
+    ]
   }
 ]
