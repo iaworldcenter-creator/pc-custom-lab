@@ -448,24 +448,28 @@ if ('serviceWorker' in navigator) {
 
             <!-- ESCAPARATE DE 11 SECCIONES (5 COLUMNAS X 4 FILAS = 20 PRODUCTOS POR PÁGINA) -->
             <section class="flex-1 w-full flex flex-col gap-5 min-w-0">
-                <!-- Header de Sección Activa -->
-                <div class="p-5 sm:p-6 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-900/80 to-slate-950 border border-slate-800 shadow-2xl relative overflow-hidden flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                                <!-- HEADER DE SECCIÓN + SELECTOR DE VISTA (GRID VS. LIST) + ORDENAMIENTO -->
+                <div class="p-4 sm:p-5 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-950 border border-slate-800 shadow-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div>
-                        <div id="section-badge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-[11px] font-mono font-bold uppercase tracking-wider mb-1.5">
-                            <span>🔲</span> SECCIÓN 1 DE 11
-                        </div>
-                        <h2 id="section-title" class="text-xl sm:text-2xl font-black text-white tracking-wide uppercase font-mono">
-                            Tarjetas Madre (Motherboards)
+                        <h2 id="section-title" class="text-lg sm:text-xl font-black text-white tracking-wide uppercase font-mono">
+                            Catálogo General de Hardware
                         </h2>
-                        <p id="section-desc" class="text-xs text-slate-400 max-w-xl mt-0.5">
-                            Placas base de alto rendimiento para sockets AMD AM5/AM4 e Intel LGA1700/1850
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="text-xs font-mono font-bold text-amber-400 bg-slate-950 px-3 py-2 rounded-xl border border-slate-800 shadow">
-                            20 Productos (5x4)
+                        <span class="text-xs font-mono text-cyan-400 font-bold" id="results-count-txt">
+                            Mostrando 1 - 20 de Componentes
                         </span>
+                    </div>
+
+                    <!-- SELECTOR DE VISTA DE PRODUCTOS (GRID VS. LIST) -->
+                    <div class="flex items-center gap-2 self-end md:self-auto">
+                        <span class="text-[10px] font-mono text-slate-400 uppercase hidden sm:inline">Vista:</span>
+                        <div class="bg-slate-950 p-1 rounded-2xl border border-slate-800 flex items-center gap-1 shadow-inner">
+                            <button id="btn-view-grid" onclick="setViewMode('grid')" title="Vista en Cuadrícula (5 Columnas)" aria-label="Vista en Cuadrícula" class="px-3 py-1.5 rounded-xl bg-cyan-500 text-slate-950 font-mono font-bold text-xs shadow-lg shadow-cyan-500/30 flex items-center gap-1.5 transition active:scale-95 cursor-pointer">
+                                <i class="fa-solid fa-table-cells text-xs"></i> <span class="hidden sm:inline">Cuadrícula</span>
+                            </button>
+                            <button id="btn-view-list" onclick="setViewMode('list')" title="Vista en Listado Detallado" aria-label="Vista en Listado" class="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-mono font-bold text-xs flex items-center gap-1.5 transition active:scale-95 cursor-pointer">
+                                <i class="fa-solid fa-list-ul text-xs"></i> <span class="hidden sm:inline">Listado</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -4269,5 +4273,6 @@ function saveUserProfile() {
     <script defer src="js/cart-engine.js"></script>
     <script defer src="js/ux-engine.js"></script>
     <script defer src="js/ct-search-engine.js"></script>
+    <script defer src="js/pc-custom-ui-engine.js"></script>
 </body>
 </html>
