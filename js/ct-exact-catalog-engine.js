@@ -1,5 +1,5 @@
 // =========================================================================
-// MOTOR OFICIAL PC CUSTOM LAB (ESTÉTICA NEÓN ORIGINAL + VISTAS LIST/GRID)
+// MOTOR OFICIAL PC CUSTOM LAB (CONCORDANCIA ESTRICTA DE CATEGORÍAS E IMÁGENES)
 // =========================================================================
 
 let currentViewStyle = 'grid'; // 'grid' o 'list'
@@ -38,11 +38,7 @@ function getFilteredList() {
     if (activeSelectedCategory !== 'Todas') {
         items = items.filter(p => {
             const catClasif = (p.categoria_clasificada || '').toLowerCase();
-            const catCT = (p.categoria_ct || p.categoria || '').toLowerCase();
-            const desc = (p.nombre || p.descripcion_completa || '').toLowerCase();
-            return catClasif.includes(activeSelectedCategory.toLowerCase()) || 
-                   catCT.includes(activeSelectedCategory.toLowerCase()) || 
-                   desc.includes(activeSelectedCategory.toLowerCase());
+            return catClasif === activeSelectedCategory.toLowerCase();
         });
     }
 
@@ -91,7 +87,6 @@ function renderExactCatalogView() {
     }
 
     if (currentViewStyle === 'grid') {
-        // VISTA CUADRÍCULA NEÓN CYBERPUNK
         container.className = "grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 pb-4";
         container.innerHTML = pageItems.map(p => {
             const sku = p.sku;
@@ -99,36 +94,32 @@ function renderExactCatalogView() {
             const price = p.precio_mxn || p.precio;
             const original = p.precio_original || (price * 1.25);
             const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
-            const img = p.local_img || p.img || `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
-            const marca = p.marca || 'CT';
+            const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+            const localImg = p.img || `assets/img/catalog/${p.categoria_clasificada}/${sku}.jpg`;
 
             return `
                 <div class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
-                    <!-- Badge Diagonal Rojo Promoción -->
                     <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
                         <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
                     </div>
 
-                    <!-- Corazón de Favoritos -->
                     <button class="absolute top-2.5 right-2.5 text-slate-500 hover:text-pink-400 transition text-sm z-10 cursor-pointer" title="Favoritos">
                         <i class="fa-regular fa-heart"></i>
                     </button>
 
                     <div>
-                        <!-- Fotografía Centrada sobre Fondo Oscuro Limpio -->
                         <div class="w-full h-32 sm:h-36 bg-slate-950/80 border border-slate-800/80 rounded-xl flex items-center justify-center p-2 mb-2.5 relative group-hover:border-cyan-500/40 transition">
                             <img 
-                                src="${img}" 
+                                src="${localImg}" 
                                 alt="${title}" 
                                 width="160" 
                                 height="160" 
                                 loading="lazy" 
                                 class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
-                                onerror="this.onerror=null; this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre_thumb.webp';"
+                                onerror="this.onerror=null; this.src='${cdnImg}'; this.onerror=function(){this.src='assets/img/catalog/gabinete_negro.webp';};"
                             />
                         </div>
 
-                        <!-- Precios Destacados Neón -->
                         <div class="text-center mb-1.5">
                             <span class="text-xs sm:text-sm font-black text-emerald-400 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
                                 $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
@@ -139,26 +130,22 @@ function renderExactCatalogView() {
                             </div>
                         </div>
 
-                        <!-- Tipo de Entrega -->
                         <div class="text-center text-[9px] text-cyan-400 font-mono font-bold mb-1 flex items-center justify-center gap-1">
                             <i class="fa-solid fa-truck-bolt text-[10px]"></i> Entrega Inmediata GDL
                         </div>
 
-                        <!-- Título del Producto -->
                         <h4 class="text-slate-200 text-xs font-semibold text-center line-clamp-2 leading-tight group-hover:text-cyan-300 transition mb-1" title="${title}">
                             ${title}
                         </h4>
 
-                        <!-- Clave CT / SKU -->
                         <div class="text-center text-[9px] font-mono text-slate-400 mb-2">
                             <span>SKU: ${sku}</span>
                         </div>
                     </div>
 
-                    <!-- Botón Azul Neón 'Comprar' -->
                     <div class="pt-1">
                         <button 
-                            onclick="buyNowCT('${sku}', '${title}', ${price}, '${img}')" 
+                            onclick="buyNowCT('${sku}', '${title}', ${price}, '${localImg}')" 
                             class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2 px-2 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition active:scale-95 shadow-md hover:shadow-cyan-500/30 cursor-pointer"
                         >
                             <i class="fa-solid fa-cart-plus text-xs"></i> <span>Comprar</span>
@@ -168,7 +155,6 @@ function renderExactCatalogView() {
             `;
         }).join('');
     } else {
-        // VISTA LISTADO HORIZONTAL NEÓN
         container.className = "flex flex-col gap-3 pb-4";
         container.innerHTML = pageItems.map(p => {
             const sku = p.sku;
@@ -177,7 +163,8 @@ function renderExactCatalogView() {
             const original = p.precio_original || (price * 1.25);
             const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
             const usdPrice = (price / 19.50).toFixed(2);
-            const img = p.local_img || p.img || `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+            const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+            const localImg = p.img || `assets/img/catalog/${p.categoria_clasificada}/${sku}.jpg`;
             const desc = p.descripcion_completa || p.desc || '';
 
             return `
@@ -188,18 +175,18 @@ function renderExactCatalogView() {
 
                     <div class="w-full md:w-32 h-28 bg-slate-950/80 border border-slate-800 rounded-xl flex items-center justify-center p-2 shrink-0 relative">
                         <img 
-                            src="${img}" 
+                            src="${localImg}" 
                             alt="${title}" 
                             width="120" 
                             height="120" 
                             loading="lazy" 
                             class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
-                            onerror="this.onerror=null; this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre_thumb.webp';"
+                            onerror="this.onerror=null; this.src='${cdnImg}'; this.onerror=function(){this.src='assets/img/catalog/gabinete_negro.webp';};"
                         />
                     </div>
 
                     <div class="flex-1 min-w-0">
-                        <h4 class="text-cyan-300 font-bold text-sm mb-1 group-hover:text-cyan-200 transition leading-snug cursor-pointer" onclick="buyNowCT('${sku}', '${title}', ${price}, '${img}')">
+                        <h4 class="text-cyan-300 font-bold text-sm mb-1 group-hover:text-cyan-200 transition leading-snug cursor-pointer" onclick="buyNowCT('${sku}', '${title}', ${price}, '${localImg}')">
                             ${title}
                         </h4>
                         <div class="flex items-center gap-2 text-[10px] font-mono text-slate-400 mb-1">
@@ -236,7 +223,7 @@ function renderExactCatalogView() {
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                             <button 
-                                onclick="addToCartCT('${sku}', '${title}', ${price}, '${img}')" 
+                                onclick="addToCartCT('${sku}', '${title}', ${price}, '${localImg}')" 
                                 class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2 px-3 rounded-xl text-xs flex items-center justify-center gap-1.5 transition active:scale-95 shadow-md hover:shadow-cyan-500/30 cursor-pointer uppercase"
                             >
                                 <span>Agregar</span>
@@ -309,12 +296,12 @@ function renderSidebarFacets() {
 
     const catMetaList = [
         { id: 'Todas', name: 'Todas las Categorías', count: 16122, icon: 'fa-layer-group' },
-        { id: 'procesadores', name: 'Procesadores (CPUs)', count: 1233, icon: 'fa-microchip' },
+        { id: 'monitores', name: 'Monitores & Pantallas PC', count: 326, icon: 'fa-desktop' },
+        { id: 'procesadores', name: 'Procesadores (CPUs)', count: 204, icon: 'fa-microchip' },
         { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', count: 174, icon: 'fa-chess-board' },
         { id: 'tarjetas_de_video', name: 'Tarjetas de Video (GPUs)', count: 187, icon: 'fa-gamepad' },
         { id: 'memorias_ram', name: 'Memorias RAM (DDR4 / DDR5)', count: 328, icon: 'fa-memory' },
         { id: 'discos_duros', name: 'Discos Duros & SSD NVMe', count: 784, icon: 'fa-hard-drive' },
-        { id: 'monitores', name: 'Monitores & Pantallas PC', count: 1183, icon: 'fa-desktop' },
         { id: 'fuentes_energia', name: 'Fuentes de Poder & UPS', count: 805, icon: 'fa-plug-circle-bolt' },
         { id: 'gabinetes', name: 'Gabinetes & Chasis Gamer', count: 281, icon: 'fa-server' },
         { id: 'enfriamiento', name: 'Enfriamiento Líquido/Aire', count: 228, icon: 'fa-snowflake' },
