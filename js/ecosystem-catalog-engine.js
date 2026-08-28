@@ -1,5 +1,5 @@
 // =========================================================================
-// MOTOR UNIVERSAL DE CATÁLOGO: FORMATO EXACTO CT ONLINE (GRID & LIST VIEW)
+// MOTOR UNIVERSAL DE CATÁLOGO MULTI-VISTA (GRID/LIST) Y PAGINACIÓN DUAL 1..7...N
 // =========================================================================
 
 let globalViewMode = 'grid'; // 'grid' o 'list'
@@ -8,12 +8,13 @@ const globalItemsPerPage = 20;
 
 let filterCategoryActive = 'Todos';
 let filterBrandActive = 'Todas';
-let filterMaxBudget = 35000;
+let filterMaxBudget = 50000;
 let filterStockGdl = false;
 let currentSortOrder = 'existencia';
 
 document.addEventListener("DOMContentLoaded", () => {
-    initUniversalCatalog();
+    // Si los productos cargan de forma asíncrona, esperar un momento si aún no están listos
+    setTimeout(initUniversalCatalog, 50);
 });
 
 function initUniversalCatalog() {
@@ -28,8 +29,14 @@ function onSortChange(e) {
 
 function getActiveCatalogItems() {
     let prods = [];
-    if (window.boutiqueProducts && Array.isArray(window.boutiqueProducts) && window.boutiqueProducts.length > 0) {
+    if (typeof masterItems !== 'undefined' && Array.isArray(masterItems) && masterItems.length > 0) {
+        prods = [...masterItems];
+    } else if (window.masterItems && Array.isArray(window.masterItems)) {
+        prods = [...window.masterItems];
+    } else if (window.boutiqueProducts && Array.isArray(window.boutiqueProducts)) {
         prods = [...window.boutiqueProducts];
+    } else if (typeof boutiqueProducts !== 'undefined' && Array.isArray(boutiqueProducts)) {
+        prods = [...boutiqueProducts];
     } else if (window.CT_ALL_PRODUCTS && Array.isArray(window.CT_ALL_PRODUCTS)) {
         prods = [...(window.PC_COMBOS || []), ...window.CT_ALL_PRODUCTS];
     } else if (window.UNIFIED_CATALOG && Array.isArray(window.UNIFIED_CATALOG)) {
@@ -38,15 +45,15 @@ function getActiveCatalogItems() {
         });
     }
 
-    // Filtro Categoría
+    // Filtrar por Categoría
     if (filterCategoryActive !== 'Todos') {
         prods = prods.filter(p => {
-            const cat = (p.categoria || p.categoria_ct || p.category || '').toLowerCase();
+            const cat = (p.categoria || p.categoria_ct || p.category || p.departamento || '').toLowerCase();
             return cat.includes(filterCategoryActive.toLowerCase());
         });
     }
 
-    // Filtro Marca
+    // Filtrar por Marca
     if (filterBrandActive !== 'Todas') {
         prods = prods.filter(p => {
             const b = (p.marca || p.brand || '').toUpperCase();
@@ -54,7 +61,7 @@ function getActiveCatalogItems() {
         });
     }
 
-    // Filtro Presupuesto
+    // Filtrar por Presupuesto
     prods = prods.filter(p => {
         const pr = p.precio || p.precio_mxn || p.price || 0;
         return pr <= filterMaxBudget;
@@ -62,11 +69,11 @@ function getActiveCatalogItems() {
 
     // Ordenamiento
     if (currentSortOrder === 'precio_asc') {
-        prods.sort((a, b) => (a.precio || a.precio_mxn || 0) - (b.precio || b.precio_mxn || 0));
+        prods.sort((a, b) => (a.precio || a.precio_mxn || a.price || 0) - (b.precio || b.precio_mxn || b.price || 0));
     } else if (currentSortOrder === 'precio_desc') {
-        prods.sort((a, b) => (b.precio || b.precio_mxn || 0) - (a.precio || a.precio_mxn || 0));
+        prods.sort((a, b) => (b.precio || b.precio_mxn || b.price || 0) - (a.precio || a.precio_mxn || a.price || 0));
     } else if (currentSortOrder === 'nombre') {
-        prods.sort((a, b) => (a.nombre || a.title || '').localeCompare(b.nombre || b.title || ''));
+        prods.sort((a, b) => (a.nombre || a.title || a.model || '').localeCompare(b.nombre || b.title || b.model || ''));
     }
 
     return prods;
@@ -124,12 +131,12 @@ function selectBrandFilter(brand) {
 function resetCatalogFilters() {
     filterCategoryActive = 'Todos';
     filterBrandActive = 'Todas';
-    filterMaxBudget = 35000;
+    filterMaxBudget = 50000;
     filterStockGdl = false;
     globalCurrentPage = 1;
     
-    document.querySelectorAll(".budget-slider-input").forEach(el => el.value = 35000);
-    document.querySelectorAll(".budget-slider-val").forEach(el => el.innerText = `$35,000 MXN`);
+    document.querySelectorAll(".budget-slider-input").forEach(el => el.value = 50000);
+    document.querySelectorAll(".budget-slider-val").forEach(el => el.innerText = `$50,000 MXN`);
     document.querySelectorAll(".chk-gdl-stock").forEach(el => el.checked = false);
 
     renderUniversalFilters();
@@ -171,7 +178,7 @@ function renderUniversalCatalog() {
 
     if (globalViewMode === 'grid') {
         // ==========================================
-        // VISTA CUADRÍCULA / GRUPOS (IMAGEN 2 DE REFERENCIA)
+        // VISTA CUADRÍCULA / GRUPOS (IMAGEN 2)
         // 5 columnas en PC/TV, 2 columnas en Móvil
         // ==========================================
         container.className = "grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 pb-2";
@@ -180,24 +187,20 @@ function renderUniversalCatalog() {
             const title = (p.nombre || p.model || p.title || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
             const price = p.precio || p.precio_mxn || p.price || 0;
             const original = p.original || p.precio_original || (price * 1.28);
-            const usdPrice = (price / 19.50).toFixed(2);
-            const img = p.local_img || p.img || p.image || `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
-            const marca = p.marca || p.brand || 'CT';
+            const img = p.local_img || p.img || p.image || p.foto || `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+            const marca = p.marca || p.brand || 'Bazar';
 
             return `
                 <div class="bg-slate-950/90 hover:bg-slate-900/95 rounded-2xl p-3 flex flex-col justify-between transition group shadow-xl hover:shadow-[0_8px_30px_rgba(6,182,212,0.25)] border border-slate-800/80 hover:border-cyan-500/50 relative overflow-hidden">
-                    <!-- Badge Diagonal de Promoción en esquina izquierda -->
                     <div class="absolute -top-6 -left-6 w-16 h-16 bg-red-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow z-10">
                         <span class="text-[8px] font-mono font-black text-white uppercase tracking-tighter">PROMO</span>
                     </div>
 
-                    <!-- Corazón de Favoritos -->
                     <button class="absolute top-2 right-2 text-slate-500 hover:text-red-500 transition text-xs z-10 cursor-pointer" title="Guardar en Favoritos">
                         <i class="fa-regular fa-heart"></i>
                     </button>
 
                     <div>
-                        <!-- Foto centrada -->
                         <div class="w-full h-32 sm:h-36 overflow-hidden rounded-xl bg-slate-900 flex items-center justify-center p-2 relative mb-2 shadow-inner border border-slate-800/50">
                             <img 
                                 src="${img}" 
@@ -207,11 +210,10 @@ function renderUniversalCatalog() {
                                 loading="lazy" 
                                 decoding="async" 
                                 class="w-full h-full object-contain group-hover:scale-105 transition duration-300"
-                                onerror="this.onerror=null; this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre_thumb.webp';"
+                                onerror="this.onerror=null; this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre_thumb.webp';" 
                             />
                         </div>
 
-                        <!-- Precios Grandes en Verde/Ámbar -->
                         <div class="text-center mb-1">
                             <span class="text-xs sm:text-sm font-black font-mono text-emerald-400 block">
                                 $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
@@ -222,10 +224,9 @@ function renderUniversalCatalog() {
                         </div>
 
                         <div class="text-center text-[8px] font-mono text-cyan-400 font-bold mb-1 flex items-center justify-center gap-1">
-                            <i class="fa-solid fa-cloud-arrow-down"></i> Entrega Digital / Express
+                            <i class="fa-solid fa-cloud-arrow-down"></i> Entrega Inmediata GDL
                         </div>
 
-                        <!-- Título y Clave CT -->
                         <h4 class="text-white text-xs font-bold text-center line-clamp-2 leading-snug group-hover:text-cyan-300 transition mb-1" title="${title}">
                             ${title}
                         </h4>
@@ -235,7 +236,6 @@ function renderUniversalCatalog() {
                         </div>
                     </div>
 
-                    <!-- Botón Azul Comprar / Terminar Compra -->
                     <div class="pt-1">
                         <button 
                             onclick="buyNowUniversal('${sku}', '${title}', ${price}, '${img}')" 
@@ -249,8 +249,7 @@ function renderUniversalCatalog() {
         }).join('');
     } else {
         // ==========================================
-        // VISTA LISTADO HORIZONTAL (IMAGEN 1 DE REFERENCIA)
-        // Fila extendida de izquierda a derecha
+        // VISTA LISTADO HORIZONTAL (IMAGEN 1)
         // ==========================================
         container.className = "flex flex-col gap-3 pb-2";
         container.innerHTML = pageItems.map(p => {
@@ -259,18 +258,16 @@ function renderUniversalCatalog() {
             const price = p.precio || p.precio_mxn || p.price || 0;
             const original = p.original || p.precio_original || (price * 1.28);
             const usdPrice = (price / 19.50).toFixed(2);
-            const img = p.local_img || p.img || p.image || `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
-            const marca = p.marca || p.brand || 'CT';
+            const img = p.local_img || p.img || p.image || p.foto || `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+            const marca = p.marca || p.brand || 'Bazar';
             const desc = p.descripcion_completa || p.desc || '';
 
             return `
                 <div class="bg-slate-950/90 hover:bg-slate-900/95 rounded-2xl p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition group shadow-xl border border-slate-800/80 hover:border-cyan-500/50 relative overflow-hidden">
-                    <!-- Badge Diagonal Promo -->
                     <div class="absolute -top-5 -left-5 w-14 h-14 bg-red-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow z-10">
                         <span class="text-[7px] font-mono font-black text-white uppercase">PROMO</span>
                     </div>
 
-                    <!-- Miniatura Izquierda -->
                     <div class="w-full md:w-36 h-28 overflow-hidden rounded-xl bg-slate-900 flex items-center justify-center p-2 relative shadow-inner shrink-0 border border-slate-800">
                         <img 
                             src="${img}" 
@@ -280,22 +277,18 @@ function renderUniversalCatalog() {
                             loading="lazy" 
                             decoding="async" 
                             class="w-full h-full object-contain group-hover:scale-105 transition duration-300"
-                            onerror="this.onerror=null; this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre_thumb.webp';"
+                            onerror="this.onerror=null; this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre_thumb.webp';" 
                         />
                     </div>
 
-                    <!-- Información Central -->
                     <div class="flex-1 min-w-0">
                         <h4 class="text-white font-bold text-sm mb-1 group-hover:text-cyan-300 transition leading-snug">${title}</h4>
                         <div class="flex items-center gap-2 text-[10px] font-mono text-slate-400 mb-1">
                             <span class="text-cyan-400 font-bold uppercase">${marca}</span>
                             <span>•</span>
                             <span>SKU: ${sku}</span>
-                            <span>•</span>
-                            <span>Clave CT: ${sku}</span>
                         </div>
                         
-                        <!-- Calificación Estrellas -->
                         <div class="flex items-center gap-1 text-red-500 text-xs mb-1.5">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -307,10 +300,9 @@ function renderUniversalCatalog() {
                         <p class="text-slate-400 text-xs leading-relaxed line-clamp-2 font-normal">${desc}</p>
                     </div>
 
-                    <!-- Precios y Botón de Compra Derecha -->
                     <div class="w-full md:w-56 flex flex-col justify-between items-end border-t md:border-t-0 md:border-l border-slate-800/80 pt-3 md:pt-0 md:pl-4 shrink-0">
                         <div class="text-right w-full mb-2">
-                            <span class="text-[9px] font-mono text-cyan-400 font-bold uppercase block"><i class="fa-solid fa-cloud-arrow-down"></i> Entrega Express</span>
+                            <span class="text-[9px] font-mono text-cyan-400 font-bold uppercase block"><i class="fa-solid fa-cloud-arrow-down"></i> Entrega Inmediata</span>
                             <span class="text-[10px] font-mono text-slate-500 line-through block">$${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
                             <div class="text-base sm:text-lg font-black font-mono text-emerald-400 leading-tight">
                                 $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
@@ -336,7 +328,7 @@ function renderUniversalCatalog() {
     }
 }
 
-// PAGINACIÓN DUAL IDÉNTICA A LA REFERENCIA (1 2 3 4 5 6 7 ... N)
+// PAGINACIÓN DUAL IDÉNTICA A LA REFERENCIA CT
 function renderDualPagination(totalPages) {
     const containers = document.querySelectorAll(".pagination-controls-container");
     if (!containers || containers.length === 0) return;
@@ -388,10 +380,30 @@ function goCatalogPage(p) {
     scrollToProducts();
 }
 
-// BARRA LATERAL CON DISEÑO EXACTO DE LA IMAGEN 1/2
 function renderUniversalFilters() {
     const root = document.getElementById("boutique-sidebar-root");
     if (!root) return;
+
+    // Obtener categorías y marcas únicas del catálogo actual
+    const items = (typeof masterItems !== 'undefined' ? masterItems : []) || window.boutiqueProducts || window.CT_ALL_PRODUCTS || [];
+    let cats = ['Todos'];
+    let brands = ['Todas'];
+
+    if (items.length > 0) {
+        const catSet = new Set();
+        const brandSet = new Set();
+        items.forEach(i => {
+            const c = i.categoria || i.categoria_ct || i.category || i.departamento;
+            if (c) catSet.add(c);
+            const b = i.marca || i.brand;
+            if (b) brandSet.add(b);
+        });
+        cats = ['Todos', ...Array.from(catSet).slice(0, 10)];
+        brands = ['Todas', ...Array.from(brandSet).slice(0, 12)];
+    } else {
+        cats = ['Todos', 'Tarjetas Madre', 'Procesadores', 'Tarjetas de Video', 'Memorias RAM', 'Almacenamiento', 'Fuentes de Poder', 'Gabinetes', 'Equipos Armados'];
+        brands = ['Todas', 'ASUS', 'INTEL', 'AMD', 'KINGSTON', 'MSI', 'GIGABYTE', 'ACTECK', 'TRIPP-LITE'];
+    }
 
     root.innerHTML = `
         <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-3">
@@ -409,46 +421,42 @@ function renderUniversalFilters() {
             </button>
         </div>
 
-        <!-- PROMOCIONES -->
         <div class="mb-4">
             <h3 class="text-[11px] font-mono font-bold text-slate-300 uppercase mb-2">Promociones</h3>
             <div class="flex flex-col gap-1 text-xs text-slate-400">
                 <label class="flex items-center gap-2 cursor-pointer hover:text-white">
-                    <input type="checkbox" checked class="w-3.5 h-3.5 accent-blue-600 cursor-pointer" /> Promociones
+                    <input type="checkbox" checked class="w-3.5 h-3.5 accent-blue-600 cursor-pointer" /> Promociones Activas
                 </label>
                 <label class="flex items-center gap-2 cursor-pointer hover:text-white">
-                    <input type="checkbox" class="w-3.5 h-3.5 accent-blue-600 cursor-pointer" /> Nuevos
+                    <input type="checkbox" class="w-3.5 h-3.5 accent-blue-600 cursor-pointer" /> Nuevos Lanzamientos
                 </label>
             </div>
         </div>
 
-        <!-- CATEGORÍAS -->
         <div class="mb-4">
             <h3 class="text-[11px] font-mono font-bold text-slate-300 uppercase mb-2">Categorías</h3>
             <div class="flex flex-col gap-1 text-xs text-slate-400 max-h-48 overflow-y-auto no-scrollbar">
-                ${['Todos', 'Procesadores', 'Tarjetas Madre', 'Tarjetas de Video', 'Memorias RAM', 'Almacenamiento', 'Fuentes de Poder', 'Gabinetes', 'Equipos Armados'].map(cat => `
+                ${cats.map(cat => `
                     <label class="flex items-center gap-2 cursor-pointer hover:text-white">
                         <input type="radio" name="sidebar_cat" ${filterCategoryActive === cat ? 'checked' : ''} onchange="selectCategoryFilter('${cat}')" class="w-3.5 h-3.5 accent-blue-600 cursor-pointer" />
-                        <span>${cat}</span>
+                        <span class="truncate">${cat}</span>
                     </label>
                 `).join('')}
             </div>
         </div>
 
-        <!-- MARCAS -->
         <div class="mb-4">
             <h3 class="text-[11px] font-mono font-bold text-slate-300 uppercase mb-2">Marcas</h3>
             <div class="flex flex-col gap-1 text-xs text-slate-400 max-h-44 overflow-y-auto no-scrollbar">
-                ${['Todas', 'ASUS', 'INTEL', 'AMD', 'KINGSTON', 'MSI', 'GIGABYTE', 'ACTECK', 'TRIPP-LITE', 'ADATA', 'CORSAIR'].map(b => `
+                ${brands.map(b => `
                     <label class="flex items-center gap-2 cursor-pointer hover:text-white">
                         <input type="radio" name="sidebar_brand" ${filterBrandActive === b ? 'checked' : ''} onchange="selectBrandFilter('${b}')" class="w-3.5 h-3.5 accent-blue-600 cursor-pointer" />
-                        <span>${b}</span>
+                        <span class="truncate">${b}</span>
                     </label>
                 `).join('')}
             </div>
         </div>
 
-        <!-- STOCK / SUCURSALES -->
         <div class="mb-4">
             <h3 class="text-[11px] font-mono font-bold text-slate-300 uppercase mb-2">Sucursales</h3>
             <div class="flex flex-col gap-1 text-xs text-slate-400">
@@ -461,7 +469,6 @@ function renderUniversalFilters() {
             </div>
         </div>
 
-        <!-- RANGO DE PRECIO -->
         <div class="mb-2 p-2.5 rounded-xl bg-slate-950 border border-slate-800">
             <div class="flex justify-between items-center mb-1">
                 <span class="text-[9px] font-mono text-slate-400 uppercase">Presupuesto Máx:</span>
@@ -470,7 +477,7 @@ function renderUniversalFilters() {
             <input 
                 type="range" 
                 min="500" 
-                max="35000" 
+                max="50000" 
                 step="500" 
                 value="${filterMaxBudget}" 
                 class="budget-slider-input w-full accent-blue-500 cursor-pointer h-1.5 bg-slate-800 rounded-lg" 
@@ -502,6 +509,7 @@ window.addToCartUniversal = function(sku, title, price, img) {
     localStorage.setItem('ecosystem_global_cart', JSON.stringify(cart));
     localStorage.setItem('cart_items', JSON.stringify(cart));
     if (typeof syncBoutiqueCart === 'function') syncBoutiqueCart();
+    if (typeof syncCartState === 'function') syncCartState();
     alert(`🛒 ¡${title} se agregó a tu canasta!`);
 };
 
