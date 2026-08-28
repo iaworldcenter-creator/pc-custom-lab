@@ -120,7 +120,7 @@ function renderExactCatalogView() {
                                 height="150" 
                                 loading="lazy" 
                                 class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
-                                onerror="this.onerror=null; this.src='${cdnImg}'; this.onerror=function(){this.src='assets/img/catalog/gabinete_negro.webp';};"
+                                onerror="this.onerror=null; this.src='https://static.ctonline.mx/imagenes/' + (p.sku || '') + '/' + (p.sku || '') + '_400.jpg';"
                             />
                         </div>
 
@@ -194,7 +194,7 @@ function renderExactCatalogView() {
                             height="110" 
                             loading="lazy" 
                             class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
-                            onerror="this.onerror=null; this.src='${cdnImg}'; this.onerror=function(){this.src='assets/img/catalog/gabinete_negro.webp';};"
+                            onerror="this.onerror=null; this.src='https://static.ctonline.mx/imagenes/' + (p.sku || '') + '/' + (p.sku || '') + '_400.jpg';"
                         />
                     </div>
 
@@ -495,7 +495,7 @@ window.openProductDetailModal = function(sku) {
                         src="${localImg}" 
                         alt="${title}" 
                         class="w-full h-full object-contain group-hover:scale-110 transition duration-300"
-                        onerror="this.onerror=null; this.src='${cdnImg}'; this.onerror=function(){this.src='assets/img/catalog/gabinete_negro.webp';};"
+                        onerror="this.onerror=null; this.src='https://static.ctonline.mx/imagenes/' + (p.sku || '') + '/' + (p.sku || '') + '_400.jpg';"
                     />
                     <div class="absolute top-3 left-3 bg-red-600 text-white font-black text-[10px] uppercase px-2.5 py-1 rounded-md shadow">
                         -25% Oferta
