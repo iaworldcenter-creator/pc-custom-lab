@@ -7,17 +7,18 @@
     "marca": "TAPA",
     "costo_base": 6.0,
     "precio_mxn": 157.95,
-    "precio_original": 197.44,
+    "precio_original": 187.2,
     "img": "https://static.ctonline.mx/imagenes/ACCRBT730/ACCRBT730_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/TAPA.png",
     "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCRBT730",
     "costo_proveedor_mxn": 117.0,
     "precio": 157.95,
-    "precio_mayoreo_10pzs": 150.05,
+    "precio_mayoreo_10pzs": 140.4,
     "margen_aplicado": "35%",
     "img_local": "assets/img/catalog/ACCRBT730.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT730/ACCRBT730_400.jpg",
-    "categoria_clasificada": "outlet_remates"
+    "categoria_clasificada": "outlet_remates",
+    "local_img": "https://static.ctonline.mx/imagenes/ACCRBT730/ACCRBT730_400.jpg"
   },
   {
     "sku": "ACCHPB010",
@@ -27,17 +28,18 @@
     "marca": "HANDS",
     "costo_base": 150.0,
     "precio_mxn": 3948.75,
-    "precio_original": 4935.94,
+    "precio_original": 4680.0,
     "img": "https://static.ctonline.mx/imagenes/ACCHPB010/ACCHPB010_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/HANDS.png",
     "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCHPB010",
     "costo_proveedor_mxn": 2925.0,
     "precio": 3948.75,
-    "precio_mayoreo_10pzs": 3751.31,
+    "precio_mayoreo_10pzs": 3510.0,
     "margen_aplicado": "35%",
     "img_local": "assets/img/catalog/ACCHPB010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHPB010/ACCHPB010_400.jpg",
-    "categoria_clasificada": "outlet_remates"
+    "categoria_clasificada": "outlet_remates",
+    "local_img": "https://static.ctonline.mx/imagenes/ACCHPB010/ACCHPB010_400.jpg"
   },
   {
     "sku": "ACCHPD265",
@@ -47,17 +49,18 @@
     "marca": "COMBO",
     "costo_base": 99.0,
     "precio_mxn": 2606.18,
-    "precio_original": 3257.72,
+    "precio_original": 3088.8,
     "img": "https://static.ctonline.mx/imagenes/ACCHPD265/ACCHPD265_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/COMBO.png",
     "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCHPD265",
     "costo_proveedor_mxn": 1930.5,
     "precio": 2606.18,
-    "precio_mayoreo_10pzs": 2475.87,
+    "precio_mayoreo_10pzs": 2316.6,
     "margen_aplicado": "35%",
     "img_local": "assets/img/catalog/ACCHPD265.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHPD265/ACCHPD265_400.jpg",
-    "categoria_clasificada": "outlet_remates"
+    "categoria_clasificada": "outlet_remates",
+    "local_img": "https://static.ctonline.mx/imagenes/ACCHPD265/ACCHPD265_400.jpg"
   },
   {
     "sku": "MEMRAM080",
@@ -67,17 +70,18 @@
     "marca": "DDR",
     "costo_base": 2.0,
     "precio_mxn": 52.65,
-    "precio_original": 65.81,
+    "precio_original": 62.4,
     "img": "https://static.ctonline.mx/imagenes/MEMRAM080/MEMRAM080_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/DDR.png",
     "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMRAM080",
     "costo_proveedor_mxn": 39.0,
     "precio": 52.65,
-    "precio_mayoreo_10pzs": 50.02,
+    "precio_mayoreo_10pzs": 46.8,
     "margen_aplicado": "35%",
     "img_local": "assets/img/catalog/MEMRAM080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MEMRAM080/MEMRAM080_400.jpg",
-    "categoria_clasificada": "outlet_remates"
+    "categoria_clasificada": "outlet_remates",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMRAM080/MEMRAM080_400.jpg"
   },
   {
     "sku": "MEMRAM720",
@@ -87,16 +91,17 @@
     "marca": "DDR",
     "costo_base": 3.0,
     "precio_mxn": 78.98,
-    "precio_original": 98.73,
+    "precio_original": 93.6,
     "img": "https://static.ctonline.mx/imagenes/MEMRAM720/MEMRAM720_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/DDR.png",
     "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMRAM720",
     "costo_proveedor_mxn": 58.5,
     "precio": 78.98,
-    "precio_mayoreo_10pzs": 75.03,
+    "precio_mayoreo_10pzs": 70.2,
     "margen_aplicado": "35%",
     "img_local": "assets/img/catalog/MEMRAM720.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MEMRAM720/MEMRAM720_400.jpg",
-    "categoria_clasificada": "outlet_remates"
+    "categoria_clasificada": "outlet_remates",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMRAM720/MEMRAM720_400.jpg"
   }
 ]
