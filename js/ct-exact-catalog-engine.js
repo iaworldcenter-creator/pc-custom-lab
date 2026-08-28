@@ -1,10 +1,10 @@
 // =========================================================================
-// MOTOR OFICIAL PC CUSTOM LAB: 3 COLUMNAS SIMÉTRICAS, 5X4 Y BUSCADOR LONG-TAIL
+// MOTOR OFICIAL PC CUSTOM LAB (MAQUETACIÓN PERFECTA DE 2 COLUMNAS Y 5X4)
 // =========================================================================
 
 let currentViewStyle = 'grid'; // 'grid' (5x4) o 'list'
 let currentPageNumber = 1;
-const productsPerPage = 20; // Exactamente 20 productos por vista (5 filas x 4 columnas)
+const productsPerPage = 20; // 5 filas x 4 columnas
 
 let activeSelectedCategory = 'Todas';
 let activeSelectedBrand = 'Todas';
@@ -12,7 +12,6 @@ let currentSortCriterion = 'existencia';
 
 document.addEventListener("DOMContentLoaded", () => {
     renderSidebarFacets();
-    renderSidebarBestsellers();
     renderExactCatalogView();
     initLongTailSearchEngine();
 });
@@ -89,8 +88,8 @@ function renderExactCatalogView() {
     }
 
     if (currentViewStyle === 'grid') {
-        // EXACTAMENTE 4 COLUMNAS POR FILA (5 FILAS X 4 COLUMNAS = 20 PRODUCTOS)
-        container.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 pb-2";
+        // CUADRÍCULA DESPEJADA 5 FILAS X 4 COLUMNAS (20 ARTÍCULOS)
+        container.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-2";
         container.innerHTML = pageItems.map(p => {
             const sku = p.sku;
             const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
@@ -101,7 +100,8 @@ function renderExactCatalogView() {
             const localImg = p.img || `assets/img/catalog/${p.categoria_clasificada}/${sku}.jpg`;
 
             return `
-                <div class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+                <div class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+                    <!-- Badge Promoción -->
                     <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
                         <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
                     </div>
@@ -111,8 +111,8 @@ function renderExactCatalogView() {
                     </button>
 
                     <div>
-                        <!-- Fotografía Real con Clic a Ficha en 3 Columnas -->
-                        <div onclick="openProductDetailModal('${sku}')" class="w-full h-32 sm:h-36 bg-slate-950/80 border border-slate-800/80 rounded-xl flex items-center justify-center p-2 mb-2.5 relative group-hover:border-cyan-500/40 transition cursor-pointer">
+                        <!-- Fotografía Real con Clic a PDP -->
+                        <div onclick="openProductDetailModal('${sku}')" class="w-full h-36 bg-slate-950/80 border border-slate-800/80 rounded-xl flex items-center justify-center p-2 mb-2.5 relative group-hover:border-cyan-500/40 transition cursor-pointer">
                             <img 
                                 src="${localImg}" 
                                 alt="${title}" 
@@ -124,12 +124,12 @@ function renderExactCatalogView() {
                             />
                         </div>
 
-                        <!-- Precios Destacados -->
+                        <!-- Precios de Contado y Mayoreo -->
                         <div class="text-center mb-1.5">
-                            <span class="text-xs sm:text-sm font-black text-emerald-400 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                            <span class="text-sm font-black text-emerald-400 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
                                 $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
                             </span>
-                            <div class="flex items-center justify-center gap-1.5 text-[9px] font-mono">
+                            <div class="flex items-center justify-center gap-1.5 text-[9.5px] font-mono">
                                 <span class="text-slate-500 line-through">$${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
                                 <span class="text-amber-400 font-bold">Mayoreo: $${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
                             </div>
@@ -168,7 +168,7 @@ function renderExactCatalogView() {
             `;
         }).join('');
     } else {
-        container.className = "flex flex-col gap-3 pb-2";
+        container.className = "flex flex-col gap-3.5 pb-2";
         container.innerHTML = pageItems.map(p => {
             const sku = p.sku;
             const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
@@ -181,17 +181,17 @@ function renderExactCatalogView() {
             const desc = p.descripcion_completa || p.desc || '';
 
             return `
-                <div class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition group shadow-xl relative overflow-hidden text-slate-100">
+                <div class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition group shadow-xl relative overflow-hidden text-slate-100">
                     <div class="absolute -top-6 -left-6 w-14 h-14 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow z-10">
                         <span class="text-[7px] font-black text-white uppercase">-25%</span>
                     </div>
 
-                    <div onclick="openProductDetailModal('${sku}')" class="w-full md:w-28 h-24 bg-slate-950/80 border border-slate-800 rounded-xl flex items-center justify-center p-2 shrink-0 relative cursor-pointer">
+                    <div onclick="openProductDetailModal('${sku}')" class="w-full md:w-32 h-28 bg-slate-950/80 border border-slate-800 rounded-xl flex items-center justify-center p-2 shrink-0 relative cursor-pointer">
                         <img 
                             src="${localImg}" 
                             alt="${title}" 
-                            width="100" 
-                            height="100" 
+                            width="110" 
+                            height="110" 
                             loading="lazy" 
                             class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
                             onerror="this.onerror=null; this.src='${cdnImg}'; this.onerror=function(){this.src='assets/img/catalog/gabinete_negro.webp';};"
@@ -199,7 +199,7 @@ function renderExactCatalogView() {
                     </div>
 
                     <div class="flex-1 min-w-0">
-                        <h4 onclick="openProductDetailModal('${sku}')" class="text-cyan-300 font-bold text-xs sm:text-sm mb-1 hover:text-cyan-200 transition leading-snug cursor-pointer">
+                        <h4 onclick="openProductDetailModal('${sku}')" class="text-cyan-300 font-bold text-sm mb-1 hover:text-cyan-200 transition leading-snug cursor-pointer">
                             ${title}
                         </h4>
                         <div class="flex items-center gap-2 text-[10px] font-mono text-slate-400 mb-1">
@@ -210,22 +210,22 @@ function renderExactCatalogView() {
                         <p class="text-slate-400 text-xs leading-relaxed line-clamp-2">${desc}</p>
                     </div>
 
-                    <div class="w-full md:w-52 flex flex-col justify-between items-end border-t md:border-t-0 md:border-l border-slate-800 pt-3 md:pt-0 md:pl-3.5 shrink-0 text-right">
+                    <div class="w-full md:w-56 flex flex-col justify-between items-end border-t md:border-t-0 md:border-l border-slate-800 pt-3 md:pt-0 md:pl-4 shrink-0 text-right">
                         <div class="w-full mb-1.5">
-                            <span class="text-[9px] text-slate-500 line-through block font-mono">$${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                            <span class="text-[10px] text-slate-500 line-through block font-mono">$${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
                             <div class="text-base font-black text-emerald-400 leading-tight font-mono drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
                                 $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
                             </div>
-                            <span class="text-[9px] text-slate-400 block font-mono">$${usdPrice} USD • Mayoreo: $${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                            <span class="text-[9.5px] text-slate-400 block font-mono">$${usdPrice} USD • Mayoreo: $${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
                         </div>
 
                         <div class="flex items-center gap-2 w-full">
-                            <button onclick="openProductDetailModal('${sku}')" class="p-2 rounded-xl border border-slate-800 bg-slate-800 hover:bg-slate-700 text-cyan-300 transition text-xs font-bold" title="Ficha Técnica">
+                            <button onclick="openProductDetailModal('${sku}')" class="p-2.5 rounded-xl border border-slate-800 bg-slate-800 hover:bg-slate-700 text-cyan-300 transition text-xs font-bold" title="Ficha Técnica">
                                 <i class="fa-solid fa-file-lines"></i>
                             </button>
                             <button 
                                 onclick="addToCartCT('${sku}', '${title}', ${price}, '${localImg}')" 
-                                class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-1.5 px-2 rounded-xl text-xs flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer uppercase"
+                                class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2 px-3 rounded-xl text-xs flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer uppercase"
                             >
                                 <span>Agregar</span>
                             </button>
@@ -238,13 +238,13 @@ function renderExactCatalogView() {
 }
 
 // =========================================================================
-// COLUMNA LATERAL IZQUIERDA: 2 BLOQUES (ENSAMBLE CLAVE VS COMPLEMENTOS)
+// BARRA LATERAL IZQUIERDA: 2 BLOQUES + BESTSELLERS INTEGRADOS + VER TODO
 // =========================================================================
 function renderSidebarFacets() {
     const root = document.getElementById("sidebar-facets-root");
     if (!root) return;
 
-    // Bloque 1: Componentes Clave de Ensamble (Prioridad Superior)
+    // Bloque 1: Componentes Clave de Ensamble
     const assemblyCategories = [
         { id: 'Todas', name: 'Todas las Categorías', count: 16122, icon: 'fa-layer-group' },
         { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', count: 111, icon: 'fa-chess-board' },
@@ -272,156 +272,112 @@ function renderSidebarFacets() {
         { id: 'linea_blanca', name: 'Climatización & Línea Blanca', count: 56, icon: 'fa-fan' }
     ];
 
+    // Obtener los 3 más vendidos dinámicos según la categoría activa
+    const all = [...(window.PC_COMBOS_DATA || []), ...(window.CT_CATALOG_DATA || [])];
+    let topItems = all.filter(p => {
+        if (activeSelectedCategory === 'Todas') return true;
+        return (p.categoria_clasificada || '').toLowerCase() === activeSelectedCategory.toLowerCase();
+    }).slice(0, 3);
+
     root.innerHTML = `
         <div class="bg-gradient-to-r from-slate-900 to-cyan-950 border border-cyan-500/40 text-white p-3 rounded-t-2xl font-bold text-xs uppercase flex items-center justify-between shadow-lg">
             <span class="flex items-center gap-2 text-cyan-300 font-mono"><i class="fa-solid fa-sliders text-cyan-400"></i> Filtros de Ensamble</span>
             <span class="text-[9px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono font-bold">16,122 Items</span>
         </div>
 
-        <div class="p-3 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-300 text-xs space-y-3.5 shadow-2xl">
+        <div class="p-3.5 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-300 text-xs space-y-4 shadow-2xl flex flex-col justify-between">
             
-            <div class="flex gap-1.5">
-                <button onclick="renderExactCatalogView()" class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-1.5 rounded-xl text-[10px] uppercase transition cursor-pointer shadow">
+            <div class="flex gap-2">
+                <button onclick="renderExactCatalogView()" class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2 rounded-xl text-[11px] uppercase transition cursor-pointer shadow">
                     Aplicar
                 </button>
-                <button onclick="resetFacets()" class="flex-1 bg-slate-800 hover:bg-red-950/60 border border-slate-700 hover:border-red-500/50 text-slate-300 hover:text-red-400 font-bold py-1.5 rounded-xl text-[10px] uppercase transition cursor-pointer">
+                <button onclick="resetFacets()" class="flex-1 bg-slate-800 hover:bg-red-950/60 border border-slate-700 hover:border-red-500/50 text-slate-300 hover:text-red-400 font-bold py-2 rounded-xl text-[11px] uppercase transition cursor-pointer">
                     Limpiar
                 </button>
             </div>
 
             <!-- BLOQUE 1: COMPONENTES CLAVE DE ENSAMBLE -->
             <div class="border-b border-slate-800 pb-3">
-                <h4 class="font-bold text-cyan-300 mb-2 text-[11px] flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                <h4 class="font-bold text-cyan-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
                     <i class="fa-solid fa-microchip text-cyan-400"></i> 1. Componentes Clave
                 </h4>
                 <div class="space-y-1 text-slate-400">
                     ${assemblyCategories.map(c => `
                         <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-1 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
                             <span class="flex items-center gap-2 truncate">
-                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-[10px] text-slate-400 w-3 text-center shrink-0"></i>
-                                <span class="truncate text-[11px] ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : ''}">${c.name}</span>
+                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
+                                <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
+                                <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : ''}">${c.name}</span>
                             </span>
-                            <span class="text-[9px] text-slate-400 font-mono">(${c.count})</span>
+                            <span class="text-[10px] text-slate-400 font-mono">(${c.count})</span>
                         </label>
                     `).join('')}
                 </div>
             </div>
 
             <!-- BLOQUE 2: COMPLEMENTOS, PERIFÉRICOS Y SOFTWARE -->
-            <div>
-                <h4 class="font-bold text-amber-300 mb-2 text-[11px] flex items-center gap-1.5 font-mono uppercase tracking-wider">
-                    <i class="fa-solid fa-puzzle-piece text-amber-400"></i> 2. Complementos
+            <div class="border-b border-slate-800 pb-3">
+                <h4 class="font-bold text-amber-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                    <i class="fa-solid fa-puzzle-piece text-amber-400"></i> 2. Complementos & Redes
                 </h4>
                 <div class="space-y-1 text-slate-400 max-h-56 overflow-y-auto pr-1">
                     ${complementCategories.map(c => `
                         <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-1 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
                             <span class="flex items-center gap-2 truncate">
-                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-[10px] text-slate-400 w-3 text-center shrink-0"></i>
-                                <span class="truncate text-[11px] ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : ''}">${c.name}</span>
+                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
+                                <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
+                                <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : ''}">${c.name}</span>
                             </span>
-                            <span class="text-[9px] text-slate-400 font-mono">(${c.count})</span>
+                            <span class="text-[10px] text-slate-400 font-mono">(${c.count})</span>
                         </label>
                     `).join('')}
                 </div>
             </div>
 
-        </div>
-    `;
-}
+            <!-- BLOQUE 3: LOS 3 MÁS VENDIDOS DE ESTA CATEGORÍA + ENLACE 'VER TODO' -->
+            <div class="pt-1 space-y-2.5">
+                <div class="flex items-center justify-between">
+                    <h4 class="font-bold text-amber-400 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                        <i class="fa-solid fa-fire text-amber-400"></i> Top 3 Más Vendidos
+                    </h4>
+                    <span class="text-[9px] text-cyan-400 font-mono font-bold">${activeSelectedCategory.toUpperCase()}</span>
+                </div>
 
-// =========================================================================
-// COLUMNA LATERAL DERECHA: LOS 3 MÁS VENDIDOS + BOTÓN 'VER TODOS'
-// =========================================================================
-function renderSidebarBestsellers() {
-    const root = document.getElementById("sidebar-bestsellers-root");
-    if (!root) return;
+                <div class="space-y-2">
+                    ${topItems.map((b, idx) => {
+                        const sku = b.sku;
+                        const title = (b.nombre || b.descripcion_completa || '').replace(/'/g, "&#39;");
+                        const price = b.precio_mxn || b.precio;
+                        const mayoreo = b.precio_mayoreo_10pzs || (price * 0.93);
+                        const img = b.img || `assets/img/catalog/${b.categoria_clasificada}/${sku}.jpg`;
+                        const cdn = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
 
-    const bestsellers = [
-        {
-            sku: 'MBDASS5750',
-            title: 'Motherboard ASUS Prime B760M-A WiFi D4 LGA1700',
-            price: 3157.50,
-            original: 4210.00,
-            mayoreo: 2947.00,
-            cat: 'tarjetas_madre',
-            badge: '#1 Más Vendido'
-        },
-        {
-            sku: 'CPUINT4520',
-            title: 'Procesador Intel Core i5-14400F 14va Gen 10 Cores',
-            price: 4320.00,
-            original: 5760.00,
-            mayoreo: 4032.00,
-            cat: 'procesadores',
-            badge: '#2 Más Vendido'
-        },
-        {
-            sku: 'MONACT050',
-            title: 'Monitor Gamer Acteck 24" 165Hz Full HD IPS 1ms',
-            price: 2685.00,
-            original: 3580.00,
-            mayoreo: 2506.00,
-            cat: 'monitores',
-            badge: '#3 Más Vendido'
-        }
-    ];
-
-    root.innerHTML = `
-        <div class="bg-gradient-to-r from-amber-950 to-slate-900 border border-amber-500/50 text-white p-3 rounded-t-2xl font-bold text-xs uppercase flex items-center justify-between shadow-lg">
-            <span class="flex items-center gap-1.5 text-amber-300 font-mono"><i class="fa-solid fa-fire text-amber-400"></i> Más Vendidos</span>
-            <span class="text-[9px] bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2 py-0.5 rounded-full font-mono font-bold">Top Ventas</span>
-        </div>
-
-        <div class="p-3 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-300 text-xs space-y-3.5 shadow-2xl">
-            ${bestsellers.map(b => {
-                const img = `assets/img/catalog/${b.cat}/${b.sku}.jpg`;
-                const cdn = `https://static.ctonline.mx/imagenes/${b.sku}/${b.sku}_400.jpg`;
-                return `
-                    <div class="bg-slate-950 border border-slate-800 hover:border-amber-400/70 p-2.5 rounded-xl transition group flex flex-col justify-between gap-2 shadow relative">
-                        <span class="absolute top-2 left-2 bg-gradient-to-r from-amber-500 to-red-600 text-slate-950 text-[8px] font-black uppercase px-1.5 py-0.5 rounded shadow">
-                            ${b.badge}
-                        </span>
-
-                        <div onclick="openProductDetailModal('${b.sku}')" class="w-full h-28 bg-slate-900/80 rounded-lg flex items-center justify-center p-1 cursor-pointer">
-                            <img 
-                                src="${img}" 
-                                alt="${b.title}" 
-                                class="w-full h-full object-contain group-hover:scale-105 transition"
-                                onerror="this.onerror=null; this.src='${cdn}'; this.onerror=function(){this.src='assets/img/catalog/gabinete_negro.webp';};"
-                            />
-                        </div>
-
-                        <div>
-                            <h5 onclick="openProductDetailModal('${b.sku}')" class="text-[11px] font-bold text-white leading-tight line-clamp-2 hover:text-cyan-300 transition cursor-pointer mb-1">
-                                ${b.title}
-                            </h5>
-                            <div class="text-[9px] font-mono text-slate-400 mb-1">SKU: ${b.sku}</div>
-                            
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-black text-emerald-400 font-mono">$${b.price.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
-                                <span class="text-[9px] text-amber-400 font-mono font-bold">May: $${b.mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                        return `
+                            <div class="bg-slate-950 border border-slate-800 hover:border-cyan-500/50 p-2 rounded-xl flex items-center gap-2.5 transition group cursor-pointer" onclick="openProductDetailModal('${sku}')">
+                                <div class="w-11 h-11 bg-slate-900 rounded-lg p-1 shrink-0 flex items-center justify-center">
+                                    <img src="${img}" alt="${title}" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='${cdn}';" />
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="text-[11px] font-bold text-slate-200 truncate group-hover:text-cyan-300 transition">${title}</div>
+                                    <div class="flex items-center justify-between text-[10px] font-mono">
+                                        <span class="text-emerald-400 font-black">$${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                                        <span class="text-amber-400">May: $${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        `;
+                    }).join('')}
+                </div>
 
-                        <button 
-                            onclick="buyNowCT('${b.sku}', '${b.title}', ${b.price}, '${img}')"
-                            class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black py-1.5 rounded-lg text-[10px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer"
-                        >
-                            <i class="fa-solid fa-cart-shopping text-[10px]"></i> <span>Compra Rápida</span>
-                        </button>
-                    </div>
-                `;
-            }).join('')}
+                <!-- Enlace Destacado 'Ver Todo' -->
+                <button 
+                    onclick="activeSelectedCategory='Todas'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView(); document.getElementById('catalog-main-content-root').scrollIntoView({behavior:'smooth'});" 
+                    class="w-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/40 font-mono font-bold py-2 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer shadow mt-2"
+                >
+                    <i class="fa-solid fa-layer-group text-xs"></i> <span>Ver Todo el Catálogo</span>
+                </button>
+            </div>
 
-            <!-- Botón de Remate 'Ver Todos los Destacados' -->
-            <button 
-                onclick="activeSelectedCategory='Todas'; currentPageNumber=1; renderExactCatalogView(); document.getElementById('catalog-main-content-root').scrollIntoView({behavior:'smooth'});" 
-                class="w-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/40 font-mono font-bold py-2 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer shadow"
-            >
-                <i class="fa-solid fa-layer-group text-xs"></i> <span>Ver Todos</span>
-            </button>
         </div>
     `;
 }
@@ -448,7 +404,7 @@ function initLongTailSearchEngine() {
             const name = (p.nombre || p.descripcion_completa || '').toLowerCase();
             const marca = (p.marca || '').toLowerCase();
             return sku.includes(query) || name.includes(query) || marca.includes(query);
-        }).slice(0, 8); // Máximo 8 resultados inmediatos en el dropdown
+        }).slice(0, 8);
 
         if (matches.length === 0) {
             box.innerHTML = `
@@ -610,7 +566,6 @@ window.openProductDetailModal = function(sku) {
             <div class="lg:col-span-3 bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between gap-3.5 shadow-2xl">
                 
                 <div>
-                    <!-- Desglose de Precios Dinámicos con Subtotal en Tiempo Real -->
                     <div class="border-b border-slate-800 pb-3 space-y-1">
                         <div class="flex justify-between items-center">
                             <span class="text-[10px] text-slate-400 font-mono line-through" id="pdp-original-price">
@@ -631,14 +586,13 @@ window.openProductDetailModal = function(sku) {
                         </div>
                     </div>
 
-                    <!-- SELECTOR DE CANTIDAD DINÁMICO (+ / -) Y BOTÓN DE PAPELERA -->
+                    <!-- SELECTOR DINÁMICO (+ / -) Y PAPELERA -->
                     <div class="pt-3 space-y-2.5">
                         
                         <div class="flex items-center justify-between gap-2">
                             <span class="text-xs font-mono text-slate-300 font-bold">Cantidad:</span>
                             
                             <div class="flex items-center gap-1.5 bg-slate-900 border border-slate-700 rounded-xl p-1">
-                                <!-- Botón Decremento (-) -->
                                 <button 
                                     type="button" 
                                     onclick="updatePDPQuantity(-1, ${price}, ${mayoreo}, ${original})" 
@@ -648,7 +602,6 @@ window.openProductDetailModal = function(sku) {
                                     -
                                 </button>
                                 
-                                <!-- Input Numérico -->
                                 <input 
                                     id="pdp-qty-input" 
                                     type="number" 
@@ -659,7 +612,6 @@ window.openProductDetailModal = function(sku) {
                                     class="w-10 bg-transparent text-center text-white font-mono font-bold text-xs outline-none no-arrows"
                                 />
 
-                                <!-- Botón Incremento (+) -->
                                 <button 
                                     type="button" 
                                     onclick="updatePDPQuantity(1, ${price}, ${mayoreo}, ${original})" 
@@ -670,7 +622,6 @@ window.openProductDetailModal = function(sku) {
                                 </button>
                             </div>
 
-                            <!-- Botón de Papelera (Vaciar / Remover Producto) -->
                             <button 
                                 type="button" 
                                 onclick="removeProductFromCart('${sku}'); closeProductDetailModal();" 
@@ -681,7 +632,6 @@ window.openProductDetailModal = function(sku) {
                             </button>
                         </div>
 
-                        <!-- Botones de Conversión y Pago Validado -->
                         <div class="space-y-2 pt-1">
                             <button 
                                 onclick="executeAddToCartPDP('${sku}', '${title}', '${localImg}', ${price}, ${mayoreo})" 
@@ -700,7 +650,6 @@ window.openProductDetailModal = function(sku) {
 
                     </div>
 
-                    <!-- Módulo de Cashback 5% y Mayoreo -->
                     <div class="mt-3.5 pt-3 border-t border-slate-800 space-y-2 text-[11px]">
                         <div class="bg-slate-900/90 border border-emerald-500/40 p-2.5 rounded-xl space-y-1">
                             <div class="flex items-center gap-1.5 text-emerald-400 font-mono font-bold">
@@ -723,6 +672,7 @@ window.openProductDetailModal = function(sku) {
                 </div>
 
             </div>
+
         </div>
     `;
 
@@ -798,51 +748,6 @@ function resetFacets() {
     renderExactCatalogView();
 }
 
-window.addToCartCT = function(sku, title, price, img, qty = 1) {
-    let cart = JSON.parse(localStorage.getItem('ecosystem_global_cart') || localStorage.getItem('cart_items') || '[]');
-    const existing = cart.find(i => i.sku === sku);
-    if (existing) {
-        existing.quantity = (existing.quantity || 1) + qty;
-        existing.qty = existing.quantity;
-    } else {
-        cart.push({
-            sku: sku,
-            nombre: title,
-            title: title,
-            precio: price,
-            price: price,
-            quantity: qty,
-            qty: qty,
-            imagen: img,
-            image: img
-        });
-    }
-    localStorage.setItem('ecosystem_global_cart', JSON.stringify(cart));
-    localStorage.setItem('cart_items', JSON.stringify(cart));
-    syncBoutiqueCart();
-    alert(`🛒 ¡(${qty}) ${title} agregado al carrito!`);
-};
-
-window.buyNowCT = function(sku, title, price, img) {
-    window.addToCartCT(sku, title, price, img, 1);
-    window.location.href = "checkout.html";
-};
-
-function syncBoutiqueCart() {
-    try {
-        const cart = JSON.parse(localStorage.getItem('ecosystem_global_cart') || localStorage.getItem('cart_items') || '[]');
-        const count = cart.reduce((s, i) => s + (parseInt(i.quantity || i.qty) || 0), 0);
-        const total = cart.reduce((s, i) => s + ((parseFloat(i.precio || i.price) || 0) * (parseInt(i.quantity || i.qty) || 0)), 0);
-        const bBadge = document.getElementById("boutique-cart-badge");
-        const bTotal = document.getElementById("boutique-cart-total");
-        if (bBadge) bBadge.innerText = count;
-        if (bTotal) bTotal.innerText = `$${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-    } catch(e) {}
-}
-
-// =========================================================================
-// FUNCIONES INTERACTIVAS DE CANTIDAD (+ / -), MAYOREO DINÁMICO Y PAPELERA
-// =========================================================================
 window.updatePDPQuantity = function(delta, regularPrice, wholesalePrice, originalPrice) {
     const input = document.getElementById("pdp-qty-input");
     if (!input) return;
@@ -900,3 +805,45 @@ window.removeProductFromCart = function(sku) {
     syncBoutiqueCart();
     alert("🗑️ Producto removido de la selección.");
 };
+
+window.addToCartCT = function(sku, title, price, img, qty = 1) {
+    let cart = JSON.parse(localStorage.getItem('ecosystem_global_cart') || localStorage.getItem('cart_items') || '[]');
+    const existing = cart.find(i => i.sku === sku);
+    if (existing) {
+        existing.quantity = (existing.quantity || 1) + qty;
+        existing.qty = existing.quantity;
+    } else {
+        cart.push({
+            sku: sku,
+            nombre: title,
+            title: title,
+            precio: price,
+            price: price,
+            quantity: qty,
+            qty: qty,
+            imagen: img,
+            image: img
+        });
+    }
+    localStorage.setItem('ecosystem_global_cart', JSON.stringify(cart));
+    localStorage.setItem('cart_items', JSON.stringify(cart));
+    syncBoutiqueCart();
+    alert(`🛒 ¡(${qty}) ${title} agregado al carrito!`);
+};
+
+window.buyNowCT = function(sku, title, price, img) {
+    window.addToCartCT(sku, title, price, img, 1);
+    window.location.href = "checkout.html";
+};
+
+function syncBoutiqueCart() {
+    try {
+        const cart = JSON.parse(localStorage.getItem('ecosystem_global_cart') || localStorage.getItem('cart_items') || '[]');
+        const count = cart.reduce((s, i) => s + (parseInt(i.quantity || i.qty) || 0), 0);
+        const total = cart.reduce((s, i) => s + ((parseFloat(i.precio || i.price) || 0) * (parseInt(i.quantity || i.qty) || 0)), 0);
+        const bBadge = document.getElementById("boutique-cart-badge");
+        const bTotal = document.getElementById("boutique-cart-total");
+        if (bBadge) bBadge.innerText = count;
+        if (bTotal) bTotal.innerText = `$${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+    } catch(e) {}
+}
