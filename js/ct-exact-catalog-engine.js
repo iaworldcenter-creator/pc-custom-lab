@@ -606,71 +606,123 @@ window.openProductDetailModal = function(sku) {
                 </div>
             </div>
 
-            <!-- COLUMNA 3 (DERECHA - PASARELA DE CONVERSIÓN & PRECIOS) -->
-            <div class="lg:col-span-3 bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between gap-4 shadow-2xl">
+            <!-- COLUMNA 3 (DERECHA - PASARELA DE CONVERSIÓN & PRECIOS DINÁMICOS) -->
+            <div class="lg:col-span-3 bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between gap-3.5 shadow-2xl">
                 
                 <div>
+                    <!-- Desglose de Precios Dinámicos con Subtotal en Tiempo Real -->
                     <div class="border-b border-slate-800 pb-3 space-y-1">
-                        <span class="text-[10px] text-slate-400 font-mono line-through block">
-                            Precio de Lista: $${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
-                        </span>
-                        <div class="text-2xl font-black text-emerald-400 font-mono tracking-tight drop-shadow-[0_0_10px_rgba(52,211,153,0.4)]">
-                            $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
-                        </div>
-                        <span class="text-[10px] text-cyan-300 font-mono font-bold block">
-                            🔥 Ahorras 25% ($${(original - price).toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN)
-                        </span>
-                    </div>
-
-                    <div class="pt-3 space-y-2">
-                        <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-1">
-                            <span>Cantidad:</span>
-                            <select id="pdp-qty-select" class="bg-slate-900 border border-slate-700 text-white rounded-lg px-2 py-1 outline-none cursor-pointer">
-                                <option value="1">1 Unidad</option>
-                                <option value="2">2 Unidades</option>
-                                <option value="5">5 Unidades</option>
-                                <option value="10">10 Unidades (Mayoreo)</option>
-                            </select>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[10px] text-slate-400 font-mono line-through" id="pdp-original-price">
+                                Lista: $${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}
+                            </span>
+                            <span id="pdp-wholesale-badge" class="hidden text-[8.5px] font-black bg-amber-500 text-slate-950 px-2 py-0.5 rounded-md uppercase tracking-wider animate-pulse">
+                                Mayoreo Activado
+                            </span>
                         </div>
 
-                        <button 
-                            onclick="const q=parseInt(document.getElementById('pdp-qty-select').value)||1; addToCartCT('${sku}', '${title}', ${price}, '${localImg}', q); closeProductDetailModal();" 
-                            class="w-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/50 hover:border-cyan-400 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition cursor-pointer shadow"
-                        >
-                            <i class="fa-solid fa-cart-plus"></i> <span>Agregar al Carrito</span>
-                        </button>
+                        <div class="text-2xl font-black text-emerald-400 font-mono tracking-tight drop-shadow-[0_0_10px_rgba(52,211,153,0.4)]" id="pdp-unit-price-display">
+                            $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} <span class="text-xs font-normal text-slate-400">MXN c/u</span>
+                        </div>
 
-                        <button 
-                            onclick="const q=parseInt(document.getElementById('pdp-qty-select').value)||1; addToCartCT('${sku}', '${title}', ${price}, '${localImg}', q); window.location.href='checkout.html';" 
-                            class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition active:scale-95 shadow-lg cursor-pointer"
-                        >
-                            <i class="fa-solid fa-bolt"></i> <span>Pagar Ahora (SPEI / MP)</span>
-                        </button>
+                        <div class="flex justify-between items-center text-[10px] font-mono text-cyan-300 font-bold">
+                            <span>Ahorro: -25% Vigente</span>
+                            <span class="text-slate-400" id="pdp-subtotal-display">Subtotal: $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                        </div>
                     </div>
 
-                    <div class="mt-4 pt-3 border-t border-slate-800 space-y-2 text-[11px]">
+                    <!-- SELECTOR DE CANTIDAD DINÁMICO (+ / -) Y BOTÓN DE PAPELERA -->
+                    <div class="pt-3 space-y-2.5">
+                        
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="text-xs font-mono text-slate-300 font-bold">Cantidad:</span>
+                            
+                            <div class="flex items-center gap-1.5 bg-slate-900 border border-slate-700 rounded-xl p-1">
+                                <!-- Botón Decremento (-) -->
+                                <button 
+                                    type="button" 
+                                    onclick="updatePDPQuantity(-1, ${price}, ${mayoreo}, ${original})" 
+                                    class="w-7 h-7 bg-slate-800 hover:bg-slate-700 active:scale-90 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition cursor-pointer text-sm"
+                                    title="Disminuir cantidad"
+                                >
+                                    -
+                                </button>
+                                
+                                <!-- Input Numérico -->
+                                <input 
+                                    id="pdp-qty-input" 
+                                    type="number" 
+                                    value="1" 
+                                    min="1" 
+                                    max="999" 
+                                    onchange="updatePDPQuantity(0, ${price}, ${mayoreo}, ${original})" 
+                                    class="w-10 bg-transparent text-center text-white font-mono font-bold text-xs outline-none no-arrows"
+                                />
+
+                                <!-- Botón Incremento (+) -->
+                                <button 
+                                    type="button" 
+                                    onclick="updatePDPQuantity(1, ${price}, ${mayoreo}, ${original})" 
+                                    class="w-7 h-7 bg-slate-800 hover:bg-slate-700 active:scale-90 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition cursor-pointer text-sm"
+                                    title="Aumentar cantidad"
+                                >
+                                    +
+                                </button>
+                            </div>
+
+                            <!-- Botón de Papelera (Vaciar / Remover Producto) -->
+                            <button 
+                                type="button" 
+                                onclick="removeProductFromCart('${sku}'); closeProductDetailModal();" 
+                                class="w-8 h-8 rounded-xl bg-slate-900 border border-slate-800 hover:border-red-500 hover:bg-red-950/60 text-slate-400 hover:text-red-400 flex items-center justify-center transition cursor-pointer shrink-0" 
+                                title="Remover de la selección"
+                            >
+                                <i class="fa-solid fa-trash-can text-xs"></i>
+                            </button>
+                        </div>
+
+                        <!-- Botones de Conversión y Pago Validado -->
+                        <div class="space-y-2 pt-1">
+                            <button 
+                                onclick="executeAddToCartPDP('${sku}', '${title}', '${localImg}', ${price}, ${mayoreo})" 
+                                class="w-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/50 hover:border-cyan-400 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition cursor-pointer shadow hover:shadow-cyan-500/20"
+                            >
+                                <i class="fa-solid fa-cart-plus"></i> <span>Agregar al Carrito</span>
+                            </button>
+
+                            <button 
+                                onclick="executeBuyNowPDP('${sku}', '${title}', '${localImg}', ${price}, ${mayoreo})" 
+                                class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition active:scale-95 shadow-lg cursor-pointer"
+                            >
+                                <i class="fa-solid fa-bolt"></i> <span>Pagar Ahora (SPEI / MP)</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- Módulo de Cashback 5% y Mayoreo -->
+                    <div class="mt-3.5 pt-3 border-t border-slate-800 space-y-2 text-[11px]">
                         <div class="bg-slate-900/90 border border-emerald-500/40 p-2.5 rounded-xl space-y-1">
                             <div class="flex items-center gap-1.5 text-emerald-400 font-mono font-bold">
                                 <i class="fa-solid fa-coins"></i> <span>5% DE CASHBACK</span>
                             </div>
-                            <p class="text-slate-300 text-[10px] leading-tight">Acumula saldo en monedero registrando tu WhatsApp en la cuenta.</p>
+                            <p class="text-slate-300 text-[10px] leading-tight">Acumula saldo en tu monedero con tu teléfono registrado.</p>
                         </div>
 
                         <div class="bg-slate-900/90 border border-amber-500/40 p-2.5 rounded-xl space-y-1">
                             <div class="flex items-center gap-1.5 text-amber-400 font-mono font-bold">
-                                <i class="fa-solid fa-boxes-stacked"></i> <span>MAYOREO DISPONIBLE</span>
+                                <i class="fa-solid fa-boxes-stacked"></i> <span>PRECIO DE MAYOREO</span>
                             </div>
-                            <p class="text-slate-300 text-[10px] leading-tight">A partir de 10 piezas: <strong>$${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN</strong> c/u.</p>
+                            <p class="text-slate-300 text-[10px] leading-tight">A partir de 10 piezas aplica automáticamente <strong>$${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN</strong>.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="text-[10px] text-slate-500 font-mono text-center pt-2">
-                    🔒 Transacción protegida SSL 256-bit • Facturación inmediata
+                <div class="text-[10px] text-slate-500 font-mono text-center pt-1 border-t border-slate-900">
+                    🔒 Transacción protegida SSL • Entrega express Guadalajara
                 </div>
 
             </div>
-
         </div>
     `;
 
@@ -787,3 +839,64 @@ function syncBoutiqueCart() {
         if (bTotal) bTotal.innerText = `$${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
     } catch(e) {}
 }
+
+// =========================================================================
+// FUNCIONES INTERACTIVAS DE CANTIDAD (+ / -), MAYOREO DINÁMICO Y PAPELERA
+// =========================================================================
+window.updatePDPQuantity = function(delta, regularPrice, wholesalePrice, originalPrice) {
+    const input = document.getElementById("pdp-qty-input");
+    if (!input) return;
+    
+    let currentQty = parseInt(input.value) || 1;
+    currentQty += delta;
+    if (currentQty < 1) currentQty = 1;
+    input.value = currentQty;
+
+    const unitPriceDisplay = document.getElementById("pdp-unit-price-display");
+    const subtotalDisplay = document.getElementById("pdp-subtotal-display");
+    const wholesaleBadge = document.getElementById("pdp-wholesale-badge");
+
+    const isWholesale = currentQty >= 10;
+    const activePrice = isWholesale ? wholesalePrice : regularPrice;
+    const total = activePrice * currentQty;
+
+    if (wholesaleBadge) {
+        if (isWholesale) wholesaleBadge.classList.remove("hidden");
+        else wholesaleBadge.classList.add("hidden");
+    }
+
+    if (unitPriceDisplay) {
+        unitPriceDisplay.innerHTML = `$${activePrice.toLocaleString('es-MX', { minimumFractionDigits: 2 })} <span class="text-xs font-normal text-slate-400">MXN c/u</span>`;
+    }
+
+    if (subtotalDisplay) {
+        subtotalDisplay.innerText = `Subtotal: $${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+    }
+};
+
+window.executeAddToCartPDP = function(sku, title, img, regularPrice, wholesalePrice) {
+    const input = document.getElementById("pdp-qty-input");
+    const qty = parseInt(input ? input.value : 1) || 1;
+    const activePrice = (qty >= 10) ? wholesalePrice : regularPrice;
+    
+    addToCartCT(sku, title, activePrice, img, qty);
+    closeProductDetailModal();
+};
+
+window.executeBuyNowPDP = function(sku, title, img, regularPrice, wholesalePrice) {
+    const input = document.getElementById("pdp-qty-input");
+    const qty = parseInt(input ? input.value : 1) || 1;
+    const activePrice = (qty >= 10) ? wholesalePrice : regularPrice;
+    
+    addToCartCT(sku, title, activePrice, img, qty);
+    window.location.href = "checkout.html";
+};
+
+window.removeProductFromCart = function(sku) {
+    let cart = JSON.parse(localStorage.getItem('ecosystem_global_cart') || localStorage.getItem('cart_items') || '[]');
+    cart = cart.filter(item => item.sku !== sku);
+    localStorage.setItem('ecosystem_global_cart', JSON.stringify(cart));
+    localStorage.setItem('cart_items', JSON.stringify(cart));
+    syncBoutiqueCart();
+    alert("🗑️ Producto removido de la selección.");
+};
