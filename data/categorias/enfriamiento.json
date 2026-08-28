@@ -1,26 +1,5 @@
 [
   {
-    "sku": "MONYEY190",
-    "nombre": "Monitor Gamer YEYIAN Avance Serie 25'' modelo YMF-VAF25-G1, Disfruta de un juego suave y receptivo con una frecuencia de",
-    "descripcion_completa": "Monitor Gamer YEYIAN Avance Serie 25'' modelo YMF-VAF25-G1, Disfruta de un juego suave y receptivo con una frecuencia de actualización súper rápida de 240Hz, Experimenta imágenes realistas con colores vibrantes y precisos gracias a su amplia gama de colores sRGB del 92%, El tiempo de respuesta rápido de 1ms minimiza el desenfoque de movimiento y las imágenes fantasma para una visualización nítida y clara. Color: Negro. Garantía: 1 año.",
-    "categoria_ct": "COMPONENTES DE ENSAMBLE",
-    "marca": "GAMER",
-    "costo_base": 130.12,
-    "precio_mxn": 3425.37,
-    "precio_original": 4059.7,
-    "img": "https://static.ctonline.mx/imagenes/MONYEY190/MONYEY190_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/GAMER.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONYEY190",
-    "costo_proveedor_mxn": 2537.31,
-    "precio": 3425.37,
-    "precio_mayoreo_10pzs": 3044.77,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONYEY190.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONYEY190/MONYEY190_400.jpg",
-    "categoria_clasificada": "enfriamiento",
-    "local_img": "https://static.ctonline.mx/imagenes/MONYEY190/MONYEY190_400.jpg"
-  },
-  {
     "sku": "VENDCO530",
     "nombre": "Disipador DeepCool AK620 DIGITAL PRO WH, 120 mm, 1750 RPM, Blanco, R-AK620-WHAPMN-G",
     "descripcion_completa": "Disipador DeepCool AK620 DIGITAL PRO WH, 120 mm, 1750 RPM, Blanco, R-AK620-WHAPMN-G",
@@ -39,6 +18,7 @@
     "img_local": "assets/img/catalog/VENDCO530.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENDCO530/VENDCO530_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENDCO530/VENDCO530_400.jpg"
   },
   {
@@ -60,6 +40,7 @@
     "img_local": "assets/img/catalog/VENDCO470.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENDCO470/VENDCO470_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENDCO470/VENDCO470_400.jpg"
   },
   {
@@ -81,6 +62,7 @@
     "img_local": "assets/img/catalog/VENDCO450.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENDCO450/VENDCO450_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENDCO450/VENDCO450_400.jpg"
   },
   {
@@ -102,6 +84,7 @@
     "img_local": "assets/img/catalog/VENDCO460.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENDCO460/VENDCO460_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENDCO460/VENDCO460_400.jpg"
   },
   {
@@ -123,6 +106,7 @@
     "img_local": "assets/img/catalog/VENDCO480.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENDCO480/VENDCO480_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENDCO480/VENDCO480_400.jpg"
   },
   {
@@ -144,6 +128,7 @@
     "img_local": "assets/img/catalog/VENDCO290.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENDCO290/VENDCO290_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENDCO290/VENDCO290_400.jpg"
   },
   {
@@ -165,6 +150,7 @@
     "img_local": "assets/img/catalog/VENDCO300.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENDCO300/VENDCO300_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENDCO300/VENDCO300_400.jpg"
   },
   {
@@ -186,6 +172,7 @@
     "img_local": "assets/img/catalog/VENDCO310.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENDCO310/VENDCO310_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENDCO310/VENDCO310_400.jpg"
   },
   {
@@ -207,6 +194,7 @@
     "img_local": "assets/img/catalog/VENDCO380.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENDCO380/VENDCO380_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENDCO380/VENDCO380_400.jpg"
   },
   {
@@ -228,6 +216,7 @@
     "img_local": "assets/img/catalog/VENDCO370.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENDCO370/VENDCO370_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENDCO370/VENDCO370_400.jpg"
   },
   {
@@ -249,6 +238,7 @@
     "img_local": "assets/img/catalog/VENDCO400.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENDCO400/VENDCO400_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENDCO400/VENDCO400_400.jpg"
   },
   {
@@ -270,6 +260,7 @@
     "img_local": "assets/img/catalog/VENDCO330.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENDCO330/VENDCO330_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENDCO330/VENDCO330_400.jpg"
   },
   {
@@ -291,6 +282,7 @@
     "img_local": "assets/img/catalog/VENDCO390.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENDCO390/VENDCO390_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENDCO390/VENDCO390_400.jpg"
   },
   {
@@ -312,6 +304,7 @@
     "img_local": "assets/img/catalog/VENCLR690.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENCLR690/VENCLR690_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENCLR690/VENCLR690_400.jpg"
   },
   {
@@ -333,6 +326,7 @@
     "img_local": "assets/img/catalog/VENCLR700.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENCLR700/VENCLR700_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENCLR700/VENCLR700_400.jpg"
   },
   {
@@ -354,6 +348,7 @@
     "img_local": "assets/img/catalog/VENCLR710.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENCLR710/VENCLR710_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENCLR710/VENCLR710_400.jpg"
   },
   {
@@ -375,6 +370,7 @@
     "img_local": "assets/img/catalog/VENCLR720.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENCLR720/VENCLR720_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENCLR720/VENCLR720_400.jpg"
   },
   {
@@ -396,6 +392,7 @@
     "img_local": "assets/img/catalog/VENCLR680.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENCLR680/VENCLR680_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENCLR680/VENCLR680_400.jpg"
   },
   {
@@ -417,6 +414,7 @@
     "img_local": "assets/img/catalog/VENCLR670.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENCLR670/VENCLR670_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENCLR670/VENCLR670_400.jpg"
   },
   {
@@ -438,6 +436,7 @@
     "img_local": "assets/img/catalog/VENVGO020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENVGO020/VENVGO020_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENVGO020/VENVGO020_400.jpg"
   },
   {
@@ -459,6 +458,7 @@
     "img_local": "assets/img/catalog/VENVGO100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENVGO100/VENVGO100_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENVGO100/VENVGO100_400.jpg"
   },
   {
@@ -480,6 +480,7 @@
     "img_local": "assets/img/catalog/VENVGO110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENVGO110/VENVGO110_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENVGO110/VENVGO110_400.jpg"
   },
   {
@@ -501,6 +502,7 @@
     "img_local": "assets/img/catalog/VENVGO010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENVGO010/VENVGO010_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENVGO010/VENVGO010_400.jpg"
   },
   {
@@ -522,6 +524,7 @@
     "img_local": "assets/img/catalog/KITVGO250.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITVGO250/KITVGO250_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITVGO250/KITVGO250_400.jpg"
   },
   {
@@ -543,6 +546,7 @@
     "img_local": "assets/img/catalog/KITVGO260.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITVGO260/KITVGO260_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITVGO260/KITVGO260_400.jpg"
   },
   {
@@ -564,6 +568,7 @@
     "img_local": "assets/img/catalog/VENVGO120.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENVGO120/VENVGO120_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENVGO120/VENVGO120_400.jpg"
   },
   {
@@ -585,6 +590,7 @@
     "img_local": "assets/img/catalog/VENVGO050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENVGO050/VENVGO050_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENVGO050/VENVGO050_400.jpg"
   },
   {
@@ -606,6 +612,7 @@
     "img_local": "assets/img/catalog/VENVGO060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENVGO060/VENVGO060_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENVGO060/VENVGO060_400.jpg"
   },
   {
@@ -627,6 +634,7 @@
     "img_local": "assets/img/catalog/VENVGO070.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENVGO070/VENVGO070_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENVGO070/VENVGO070_400.jpg"
   },
   {
@@ -648,6 +656,7 @@
     "img_local": "assets/img/catalog/VENVGO080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENVGO080/VENVGO080_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENVGO080/VENVGO080_400.jpg"
   },
   {
@@ -669,6 +678,7 @@
     "img_local": "assets/img/catalog/VENVGO090.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENVGO090/VENVGO090_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENVGO090/VENVGO090_400.jpg"
   },
   {
@@ -690,6 +700,7 @@
     "img_local": "assets/img/catalog/VENBEQ050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBEQ050/VENBEQ050_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBEQ050/VENBEQ050_400.jpg"
   },
   {
@@ -711,6 +722,7 @@
     "img_local": "assets/img/catalog/VENBEQ110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBEQ110/VENBEQ110_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBEQ110/VENBEQ110_400.jpg"
   },
   {
@@ -732,6 +744,7 @@
     "img_local": "assets/img/catalog/VENBEQ340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBEQ340/VENBEQ340_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBEQ340/VENBEQ340_400.jpg"
   },
   {
@@ -753,6 +766,7 @@
     "img_local": "assets/img/catalog/VENBEQ370.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBEQ370/VENBEQ370_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBEQ370/VENBEQ370_400.jpg"
   },
   {
@@ -774,6 +788,7 @@
     "img_local": "assets/img/catalog/VENBEQ390.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBEQ390/VENBEQ390_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBEQ390/VENBEQ390_400.jpg"
   },
   {
@@ -795,6 +810,7 @@
     "img_local": "assets/img/catalog/VENBEQ160.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBEQ160/VENBEQ160_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBEQ160/VENBEQ160_400.jpg"
   },
   {
@@ -816,6 +832,7 @@
     "img_local": "assets/img/catalog/VENBEQ540.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBEQ540/VENBEQ540_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBEQ540/VENBEQ540_400.jpg"
   },
   {
@@ -837,6 +854,7 @@
     "img_local": "assets/img/catalog/VENNCB190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENNCB190/VENNCB190_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENNCB190/VENNCB190_400.jpg"
   },
   {
@@ -858,6 +876,7 @@
     "img_local": "assets/img/catalog/VENNCB200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENNCB200/VENNCB200_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENNCB200/VENNCB200_400.jpg"
   },
   {
@@ -879,6 +898,7 @@
     "img_local": "assets/img/catalog/VENNCB130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENNCB130/VENNCB130_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENNCB130/VENNCB130_400.jpg"
   },
   {
@@ -900,6 +920,7 @@
     "img_local": "assets/img/catalog/VENNCB140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENNCB140/VENNCB140_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENNCB140/VENNCB140_400.jpg"
   },
   {
@@ -921,6 +942,7 @@
     "img_local": "assets/img/catalog/VENNCB210.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENNCB210/VENNCB210_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENNCB210/VENNCB210_400.jpg"
   },
   {
@@ -942,6 +964,7 @@
     "img_local": "assets/img/catalog/VENYEY080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENYEY080/VENYEY080_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENYEY080/VENYEY080_400.jpg"
   },
   {
@@ -963,6 +986,7 @@
     "img_local": "assets/img/catalog/VENYEY110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENYEY110/VENYEY110_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENYEY110/VENYEY110_400.jpg"
   },
   {
@@ -984,6 +1008,7 @@
     "img_local": "assets/img/catalog/VENTMK950.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENTMK950/VENTMK950_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENTMK950/VENTMK950_400.jpg"
   },
   {
@@ -1005,6 +1030,7 @@
     "img_local": "assets/img/catalog/VENTMK990.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENTMK990/VENTMK990_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENTMK990/VENTMK990_400.jpg"
   },
   {
@@ -1026,6 +1052,7 @@
     "img_local": "assets/img/catalog/ACCHPE3980.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHPE3980/ACCHPE3980_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHPE3980/ACCHPE3980_400.jpg"
   },
   {
@@ -1047,6 +1074,7 @@
     "img_local": "assets/img/catalog/ACCHPE3990.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHPE3990/ACCHPE3990_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHPE3990/ACCHPE3990_400.jpg"
   },
   {
@@ -1068,6 +1096,7 @@
     "img_local": "assets/img/catalog/ACCXRX2240.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCXRX2240/ACCXRX2240_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCXRX2240/ACCXRX2240_400.jpg"
   },
   {
@@ -1089,6 +1118,7 @@
     "img_local": "assets/img/catalog/SWTTPL1350.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1350/SWTTPL1350_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1350/SWTTPL1350_400.jpg"
   },
   {
@@ -1110,6 +1140,7 @@
     "img_local": "assets/img/catalog/SWTTPL1200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1200/SWTTPL1200_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1200/SWTTPL1200_400.jpg"
   },
   {
@@ -1131,28 +1162,8 @@
     "img_local": "assets/img/catalog/SWTTPL1070.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1070/SWTTPL1070_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1070/SWTTPL1070_400.jpg"
-  },
-  {
-    "sku": "SWTTPL1210",
-    "nombre": "Switch Gestionable de 24 puertos, PoE++ y 2.5G (SG3428XPP-M2) 24× puertos RJ45 a 2,5 Gbps, 4× Ranuras SFP+ 10G,1× Puerto",
-    "descripcion_completa": "Switch Gestionable de 24 puertos, PoE++ y 2.5G (SG3428XPP-M2) 24× puertos RJ45 a 2,5 Gbps, 4× Ranuras SFP+ 10G,1× Puerto de consola RJ45, 1× Puerto de consola Micro-USB.  integración total Omada. Accede a funcionalidades avanzadas como Provisionamiento Zero Touch (ZTP), Gestión Centralizada desde la Nube y Monitorización Avanzada, Con soporte de priorización de dispositivos QoS L2/L3/L4 e IGMP snooping, Cantidad de Ventiladores 3, Montaje en Rack, Requisitos del sistema: Microsoft® Windows® 98SE, NT, 2000, XP, Vista™ o Windows 7/8/10/11, MAC® OS, NetWare®, UNIX® o Linux.",
-    "categoria_ct": "CONECTIVIDAD",
-    "marca": "SWITCH",
-    "costo_base": 625.0,
-    "precio_mxn": 16453.12,
-    "precio_original": 19500.0,
-    "img": "https://static.ctonline.mx/imagenes/SWTTPL1210/SWTTPL1210_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/SWITCH.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=SWTTPL1210",
-    "costo_proveedor_mxn": 12187.5,
-    "precio": 16453.12,
-    "precio_mayoreo_10pzs": 14625.0,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/SWTTPL1210.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1210/SWTTPL1210_400.jpg",
-    "categoria_clasificada": "enfriamiento",
-    "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1210/SWTTPL1210_400.jpg"
   },
   {
     "sku": "SWTTPL1400",
@@ -1173,6 +1184,7 @@
     "img_local": "assets/img/catalog/SWTTPL1400.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1400/SWTTPL1400_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1400/SWTTPL1400_400.jpg"
   },
   {
@@ -1194,6 +1206,7 @@
     "img_local": "assets/img/catalog/SWTTPL1410.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1410/SWTTPL1410_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1410/SWTTPL1410_400.jpg"
   },
   {
@@ -1215,6 +1228,7 @@
     "img_local": "assets/img/catalog/SWTTPL300.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL300/SWTTPL300_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL300/SWTTPL300_400.jpg"
   },
   {
@@ -1236,6 +1250,7 @@
     "img_local": "assets/img/catalog/SWTTPL1160.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1160/SWTTPL1160_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1160/SWTTPL1160_400.jpg"
   },
   {
@@ -1257,6 +1272,7 @@
     "img_local": "assets/img/catalog/SWTTPL1430.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1430/SWTTPL1430_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1430/SWTTPL1430_400.jpg"
   },
   {
@@ -1278,6 +1294,7 @@
     "img_local": "assets/img/catalog/SWTTPL1440.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1440/SWTTPL1440_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1440/SWTTPL1440_400.jpg"
   },
   {
@@ -1299,6 +1316,7 @@
     "img_local": "assets/img/catalog/SWTTPL220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL220/SWTTPL220_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL220/SWTTPL220_400.jpg"
   },
   {
@@ -1320,6 +1338,7 @@
     "img_local": "assets/img/catalog/SWTTPL1060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1060/SWTTPL1060_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1060/SWTTPL1060_400.jpg"
   },
   {
@@ -1341,6 +1360,7 @@
     "img_local": "assets/img/catalog/SWTTPL1260.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1260/SWTTPL1260_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1260/SWTTPL1260_400.jpg"
   },
   {
@@ -1362,6 +1382,7 @@
     "img_local": "assets/img/catalog/SWTTPL140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL140/SWTTPL140_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL140/SWTTPL140_400.jpg"
   },
   {
@@ -1383,6 +1404,7 @@
     "img_local": "assets/img/catalog/SWTTPL1170.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1170/SWTTPL1170_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1170/SWTTPL1170_400.jpg"
   },
   {
@@ -1404,6 +1426,7 @@
     "img_local": "assets/img/catalog/SWTTPL1190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1190/SWTTPL1190_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1190/SWTTPL1190_400.jpg"
   },
   {
@@ -1425,6 +1448,7 @@
     "img_local": "assets/img/catalog/SWTTPL490.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL490/SWTTPL490_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL490/SWTTPL490_400.jpg"
   },
   {
@@ -1446,6 +1470,7 @@
     "img_local": "assets/img/catalog/SWTTPL1090.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1090/SWTTPL1090_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1090/SWTTPL1090_400.jpg"
   },
   {
@@ -1467,6 +1492,7 @@
     "img_local": "assets/img/catalog/SWTTPL1130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1130/SWTTPL1130_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1130/SWTTPL1130_400.jpg"
   },
   {
@@ -1488,6 +1514,7 @@
     "img_local": "assets/img/catalog/SWTTPL1120.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1120/SWTTPL1120_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1120/SWTTPL1120_400.jpg"
   },
   {
@@ -1509,6 +1536,7 @@
     "img_local": "assets/img/catalog/SWTTPL1140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1140/SWTTPL1140_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1140/SWTTPL1140_400.jpg"
   },
   {
@@ -1530,6 +1558,7 @@
     "img_local": "assets/img/catalog/SWTTPL1150.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1150/SWTTPL1150_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1150/SWTTPL1150_400.jpg"
   },
   {
@@ -1551,6 +1580,7 @@
     "img_local": "assets/img/catalog/SWTTPL970.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL970/SWTTPL970_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL970/SWTTPL970_400.jpg"
   },
   {
@@ -1572,6 +1602,7 @@
     "img_local": "assets/img/catalog/SWTTPL980.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL980/SWTTPL980_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL980/SWTTPL980_400.jpg"
   },
   {
@@ -1593,6 +1624,7 @@
     "img_local": "assets/img/catalog/SWTTPL390.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL390/SWTTPL390_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL390/SWTTPL390_400.jpg"
   },
   {
@@ -1614,6 +1646,7 @@
     "img_local": "assets/img/catalog/SWTTPL1030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1030/SWTTPL1030_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1030/SWTTPL1030_400.jpg"
   },
   {
@@ -1635,6 +1668,7 @@
     "img_local": "assets/img/catalog/SWTTPL1050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1050/SWTTPL1050_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1050/SWTTPL1050_400.jpg"
   },
   {
@@ -1656,6 +1690,7 @@
     "img_local": "assets/img/catalog/ACCITL1705.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCITL1705/ACCITL1705_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCITL1705/ACCITL1705_400.jpg"
   },
   {
@@ -1677,6 +1712,7 @@
     "img_local": "assets/img/catalog/SWTITL260.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTITL260/SWTITL260_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTITL260/SWTITL260_400.jpg"
   },
   {
@@ -1698,6 +1734,7 @@
     "img_local": "assets/img/catalog/GABITL740.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL740/GABITL740_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL740/GABITL740_400.jpg"
   },
   {
@@ -1719,6 +1756,7 @@
     "img_local": "assets/img/catalog/SWTUBI340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTUBI340/SWTUBI340_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTUBI340/SWTUBI340_400.jpg"
   },
   {
@@ -1740,6 +1778,7 @@
     "img_local": "assets/img/catalog/SWTGDM050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTGDM050/SWTGDM050_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTGDM050/SWTGDM050_400.jpg"
   },
   {
@@ -1761,6 +1800,7 @@
     "img_local": "assets/img/catalog/SWTGDM040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTGDM040/SWTGDM040_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTGDM040/SWTGDM040_400.jpg"
   },
   {
@@ -1782,6 +1822,7 @@
     "img_local": "assets/img/catalog/SWTGDM030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTGDM030/SWTGDM030_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTGDM030/SWTGDM030_400.jpg"
   },
   {
@@ -1803,6 +1844,7 @@
     "img_local": "assets/img/catalog/SWTGDM020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTGDM020/SWTGDM020_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTGDM020/SWTGDM020_400.jpg"
   },
   {
@@ -1824,6 +1866,7 @@
     "img_local": "assets/img/catalog/SWTGDM140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTGDM140/SWTGDM140_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTGDM140/SWTGDM140_400.jpg"
   },
   {
@@ -1845,6 +1888,7 @@
     "img_local": "assets/img/catalog/SWTALL180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTALL180/SWTALL180_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTALL180/SWTALL180_400.jpg"
   },
   {
@@ -1866,6 +1910,7 @@
     "img_local": "assets/img/catalog/ACCALL040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCALL040/ACCALL040_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCALL040/ACCALL040_400.jpg"
   },
   {
@@ -1887,70 +1932,8 @@
     "img_local": "assets/img/catalog/NVRPVS420.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/NVRPVS420/NVRPVS420_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/NVRPVS420/NVRPVS420_400.jpg"
-  },
-  {
-    "sku": "MONDAH170",
-    "nombre": "Monitor Dahua DHI-LM25-E231B / monitor 25 plg a resolución de 1920*1080 produce imágenes más claras y vívidas; Panel IPS",
-    "descripcion_completa": "Monitor Dahua DHI-LM25-E231B / monitor 25 plg a resolución de 1920*1080 produce imágenes más claras y vívidas; Panel IPS para amplios ángulos de visión con diseño sin marco de 3 lados; Amplia gama de colores, 100% sRGB, 85% NTSC, 90% DCI-P3, 83% Adobe RGB. Satisface la demanda del diseñador en cuanto a textura de imagen; La sincronización adaptativa puede resolver eficazmente los problemas de retraso y desgarro de la imagen; Tiempo de respuesta rápido de 1 ms sin imágenes borrosas ni fantasmas",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "DAHUA",
-    "costo_base": 93.67,
-    "precio_mxn": 2465.78,
-    "precio_original": 2922.4,
-    "img": "https://static.ctonline.mx/imagenes/MONDAH170/MONDAH170_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/DAHUA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONDAH170",
-    "costo_proveedor_mxn": 1826.5,
-    "precio": 2465.78,
-    "precio_mayoreo_10pzs": 2191.8,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONDAH170.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONDAH170/MONDAH170_400.jpg",
-    "categoria_clasificada": "enfriamiento",
-    "local_img": "https://static.ctonline.mx/imagenes/MONDAH170/MONDAH170_400.jpg"
-  },
-  {
-    "sku": "MONDAH180",
-    "nombre": "Monitor Dahua DHI-LM27-E231B /a resolución de 1920*1080 produce imágenes más claras y vívidas; Panel IPS para amplios án",
-    "descripcion_completa": "Monitor Dahua DHI-LM27-E231B /a resolución de 1920*1080 produce imágenes más claras y vívidas; Panel IPS para amplios ángulos de visión con diseño sin marco de 3 lados; Amplia gama de colores, 100% sRGB, 85% NTSC, 90% DCI-P3, 83% Adobe RGB. Satisface la demanda del diseñador en cuanto a textura de imagen; Ángulo de visión extra amplio de 178°H/178°V para un rendimiento de visualización completo; La sincronización adaptativa puede resolver eficazmente los problemas de retraso y desgarro de la imagen; Tiempo de respuesta rápido de 1 ms sin imágenes borrosas ni fantasmas",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "DAHUA",
-    "costo_base": 106.65,
-    "precio_mxn": 2807.43,
-    "precio_original": 3327.33,
-    "img": "https://static.ctonline.mx/imagenes/MONDAH180/MONDAH180_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/DAHUA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONDAH180",
-    "costo_proveedor_mxn": 2079.58,
-    "precio": 2807.43,
-    "precio_mayoreo_10pzs": 2495.5,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONDAH180.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONDAH180/MONDAH180_400.jpg",
-    "categoria_clasificada": "enfriamiento",
-    "local_img": "https://static.ctonline.mx/imagenes/MONDAH180/MONDAH180_400.jpg"
-  },
-  {
-    "sku": "MONDAH220",
-    "nombre": "Monitor Dahua DHI-LM34-E330CA La resolución de 3440*1440 produce imágenes más claras y vívidas; Cómoda curvatura exquisi",
-    "descripcion_completa": "Monitor Dahua DHI-LM34-E330CA La resolución de 3440*1440 produce imágenes más claras y vívidas; Cómoda curvatura exquisita de 1500R, cercana a la apariencia y sensación naturales del ojo humano, brindando un disfrute visual inmersivo Amplia gama de colores, 120% sRGB, 85% NTSC, 85% DCI-P3, 85% Adobe RGB. Satisface la demanda del diseñador en cuanto a textura de imagen; Ángulo de visión extra amplio de 178°H/178°V para un rendimiento de visualización completo; La sincronización adaptativa puede resolver eficazmente los problemas de retraso y desgarro de la imagen; Tiempo de respuesta rápido sin imágenes borrosas ni fantasmas;",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "DAHUA",
-    "costo_base": 222.43,
-    "precio_mxn": 5855.48,
-    "precio_original": 6939.82,
-    "img": "https://static.ctonline.mx/imagenes/MONDAH220/MONDAH220_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/DAHUA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONDAH220",
-    "costo_proveedor_mxn": 4337.39,
-    "precio": 5855.48,
-    "precio_mayoreo_10pzs": 5204.87,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONDAH220.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONDAH220/MONDAH220_400.jpg",
-    "categoria_clasificada": "enfriamiento",
-    "local_img": "https://static.ctonline.mx/imagenes/MONDAH220/MONDAH220_400.jpg"
   },
   {
     "sku": "ACCHKV4880",
@@ -1971,6 +1954,7 @@
     "img_local": "assets/img/catalog/ACCHKV4880.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV4880/ACCHKV4880_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV4880/ACCHKV4880_400.jpg"
   },
   {
@@ -1992,6 +1976,7 @@
     "img_local": "assets/img/catalog/ACCHKV5240.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV5240/ACCHKV5240_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV5240/ACCHKV5240_400.jpg"
   },
   {
@@ -2013,6 +1998,7 @@
     "img_local": "assets/img/catalog/ACCHKV5060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV5060/ACCHKV5060_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV5060/ACCHKV5060_400.jpg"
   },
   {
@@ -2034,6 +2020,7 @@
     "img_local": "assets/img/catalog/ACCAMZ420.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCAMZ420/ACCAMZ420_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCAMZ420/ACCAMZ420_400.jpg"
   },
   {
@@ -2055,6 +2042,7 @@
     "img_local": "assets/img/catalog/ACCAMZ400.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCAMZ400/ACCAMZ400_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCAMZ400/ACCAMZ400_400.jpg"
   },
   {
@@ -2076,6 +2064,7 @@
     "img_local": "assets/img/catalog/ACCAMZ510.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCAMZ510/ACCAMZ510_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCAMZ510/ACCAMZ510_400.jpg"
   },
   {
@@ -2097,6 +2086,7 @@
     "img_local": "assets/img/catalog/ACCMTD340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCMTD340/ACCMTD340_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCMTD340/ACCMTD340_400.jpg"
   },
   {
@@ -2118,6 +2108,7 @@
     "img_local": "assets/img/catalog/AIRLGE660.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/AIRLGE660/AIRLGE660_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/AIRLGE660/AIRLGE660_400.jpg"
   },
   {
@@ -2139,28 +2130,8 @@
     "img_local": "assets/img/catalog/AIRLGE670.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/AIRLGE670/AIRLGE670_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/AIRLGE670/AIRLGE670_400.jpg"
-  },
-  {
-    "sku": "AIRLGE570",
-    "nombre": "MiniSplit Inverter LG ArtCool VR242CW de 2 Toneladas, Compresor DUAL Inverter con 10 años de garantia, Conectividad WiFi",
-    "descripcion_completa": "MiniSplit Inverter LG ArtCool VR242CW de 2 Toneladas, Compresor DUAL Inverter con 10 años de garantia, Conectividad WiFi (ThinQ App) funciona con asistente de google, Sistema activo purificador Plasmaster Ionizer Plus, Ahorro de energia y enfriamiento rapido, Voltaje 220V / 50Hz, Diseño estilizado ArtCool Inverter, Pantalla Intuitiva, Suave diseño curvo, diseño delgado, Pre-Filter, Allergy Filter, Smart Diagnosis, Bajo ruido, Seguro de alta tension (PCB - Power Circuit Board), Jet Cool,  Micro filtro, Funcion Jet Dry, Comfort Sleep, Limpieza automatica, Gold Fin, 4 vias (arriba-abajo/izquierda-derecha), 6 pasos velocidad del ventilador, Color negro, Consumo de energia de enfriamiento nominal/min(W): 1990/2400, Capacidad de enfriamiento nominal/min(W): 6448/1026",
-    "categoria_ct": "LINEA BLANCA",
-    "marca": "MINISPLIT",
-    "costo_base": 14800.0,
-    "precio_mxn": 19980.0,
-    "precio_original": 23680.0,
-    "img": "https://static.ctonline.mx/imagenes/AIRLGE570/AIRLGE570_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/MINISPLIT.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=AIRLGE570",
-    "costo_proveedor_mxn": 14800.0,
-    "precio": 19980.0,
-    "precio_mayoreo_10pzs": 17760.0,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/AIRLGE570.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/AIRLGE570/AIRLGE570_400.jpg",
-    "categoria_clasificada": "enfriamiento",
-    "local_img": "https://static.ctonline.mx/imagenes/AIRLGE570/AIRLGE570_400.jpg"
   },
   {
     "sku": "IMPEPS3050",
@@ -2181,6 +2152,7 @@
     "img_local": "assets/img/catalog/IMPEPS3050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/IMPEPS3050/IMPEPS3050_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/IMPEPS3050/IMPEPS3050_400.jpg"
   },
   {
@@ -2202,6 +2174,7 @@
     "img_local": "assets/img/catalog/MOUACT400.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MOUACT400/MOUACT400_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MOUACT400/MOUACT400_400.jpg"
   },
   {
@@ -2223,6 +2196,7 @@
     "img_local": "assets/img/catalog/MOUACT370.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MOUACT370/MOUACT370_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MOUACT370/MOUACT370_400.jpg"
   },
   {
@@ -2244,6 +2218,7 @@
     "img_local": "assets/img/catalog/KITACT1230.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITACT1230/KITACT1230_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITACT1230/KITACT1230_400.jpg"
   },
   {
@@ -2265,6 +2240,7 @@
     "img_local": "assets/img/catalog/KITACT1270.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITACT1270/KITACT1270_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITACT1270/KITACT1270_400.jpg"
   },
   {
@@ -2286,28 +2262,8 @@
     "img_local": "assets/img/catalog/ACCACT3940.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCACT3940/ACCACT3940_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCACT3940/ACCACT3940_400.jpg"
-  },
-  {
-    "sku": "ACCBLR110",
-    "nombre": "Base Enfriadora Eolox Freez EF707 Balam Rush Azender Series  Compatible con laptop de 15.6\"- 17\", 6 ventiladores, Ilumin",
-    "descripcion_completa": "Base Enfriadora Eolox Freez EF707 Balam Rush Azender Series  Compatible con laptop de 15.6\"- 17\", 6 ventiladores, Iluminación RGB, Display LCD, 6 Niveles de Velocidad, 8 Ajustes de Altura, 7 modos de Iluminacion, 2 Puertos USB, Color Negro. BR-937429",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "BASE",
-    "costo_base": 345.79,
-    "precio_mxn": 9103.04,
-    "precio_original": 10788.78,
-    "img": "https://static.ctonline.mx/imagenes/ACCBLR110/ACCBLR110_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/BASE.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCBLR110",
-    "costo_proveedor_mxn": 6742.99,
-    "precio": 9103.04,
-    "precio_mayoreo_10pzs": 8091.59,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCBLR110.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCBLR110/ACCBLR110_400.jpg",
-    "categoria_clasificada": "enfriamiento",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCBLR110/ACCBLR110_400.jpg"
   },
   {
     "sku": "ACCACT4960",
@@ -2328,6 +2284,7 @@
     "img_local": "assets/img/catalog/ACCACT4960.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCACT4960/ACCACT4960_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCACT4960/ACCACT4960_400.jpg"
   },
   {
@@ -2349,6 +2306,7 @@
     "img_local": "assets/img/catalog/ACCBLR180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCBLR180/ACCBLR180_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCBLR180/ACCBLR180_400.jpg"
   },
   {
@@ -2370,6 +2328,7 @@
     "img_local": "assets/img/catalog/ACCBLR190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCBLR190/ACCBLR190_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCBLR190/ACCBLR190_400.jpg"
   },
   {
@@ -2391,6 +2350,7 @@
     "img_local": "assets/img/catalog/ACCBLR200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCBLR200/ACCBLR200_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCBLR200/ACCBLR200_400.jpg"
   },
   {
@@ -2412,6 +2372,7 @@
     "img_local": "assets/img/catalog/VENACT010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENACT010/VENACT010_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENACT010/VENACT010_400.jpg"
   },
   {
@@ -2433,6 +2394,7 @@
     "img_local": "assets/img/catalog/VENACT020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENACT020/VENACT020_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENACT020/VENACT020_400.jpg"
   },
   {
@@ -2454,6 +2416,7 @@
     "img_local": "assets/img/catalog/VENBLR090.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR090/VENBLR090_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR090/VENBLR090_400.jpg"
   },
   {
@@ -2475,6 +2438,7 @@
     "img_local": "assets/img/catalog/VENBLR100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR100/VENBLR100_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR100/VENBLR100_400.jpg"
   },
   {
@@ -2496,6 +2460,7 @@
     "img_local": "assets/img/catalog/VENBLR170.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR170/VENBLR170_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR170/VENBLR170_400.jpg"
   },
   {
@@ -2517,6 +2482,7 @@
     "img_local": "assets/img/catalog/VENBLR180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR180/VENBLR180_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR180/VENBLR180_400.jpg"
   },
   {
@@ -2538,6 +2504,7 @@
     "img_local": "assets/img/catalog/VENBLR210.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR210/VENBLR210_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR210/VENBLR210_400.jpg"
   },
   {
@@ -2559,6 +2526,7 @@
     "img_local": "assets/img/catalog/VENBLR220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR220/VENBLR220_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR220/VENBLR220_400.jpg"
   },
   {
@@ -2580,6 +2548,7 @@
     "img_local": "assets/img/catalog/VENBLR450.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR450/VENBLR450_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR450/VENBLR450_400.jpg"
   },
   {
@@ -2601,6 +2570,7 @@
     "img_local": "assets/img/catalog/VENBLR460.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR460/VENBLR460_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR460/VENBLR460_400.jpg"
   },
   {
@@ -2622,6 +2592,7 @@
     "img_local": "assets/img/catalog/VENBLR480.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR480/VENBLR480_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR480/VENBLR480_400.jpg"
   },
   {
@@ -2643,6 +2614,7 @@
     "img_local": "assets/img/catalog/VENBLR130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR130/VENBLR130_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR130/VENBLR130_400.jpg"
   },
   {
@@ -2664,6 +2636,7 @@
     "img_local": "assets/img/catalog/VENBLR140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR140/VENBLR140_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR140/VENBLR140_400.jpg"
   },
   {
@@ -2685,6 +2658,7 @@
     "img_local": "assets/img/catalog/VENBLR410.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR410/VENBLR410_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR410/VENBLR410_400.jpg"
   },
   {
@@ -2706,6 +2680,7 @@
     "img_local": "assets/img/catalog/VENBLR420.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR420/VENBLR420_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR420/VENBLR420_400.jpg"
   },
   {
@@ -2727,6 +2702,7 @@
     "img_local": "assets/img/catalog/VENBLR470.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR470/VENBLR470_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR470/VENBLR470_400.jpg"
   },
   {
@@ -2748,6 +2724,7 @@
     "img_local": "assets/img/catalog/VENBLR490.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR490/VENBLR490_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR490/VENBLR490_400.jpg"
   },
   {
@@ -2769,6 +2746,7 @@
     "img_local": "assets/img/catalog/VENBLR500.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR500/VENBLR500_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR500/VENBLR500_400.jpg"
   },
   {
@@ -2790,6 +2768,7 @@
     "img_local": "assets/img/catalog/VENBLR510.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR510/VENBLR510_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR510/VENBLR510_400.jpg"
   },
   {
@@ -2811,6 +2790,7 @@
     "img_local": "assets/img/catalog/VENBLR520.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR520/VENBLR520_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR520/VENBLR520_400.jpg"
   },
   {
@@ -2832,6 +2812,7 @@
     "img_local": "assets/img/catalog/VENBLR430.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR430/VENBLR430_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR430/VENBLR430_400.jpg"
   },
   {
@@ -2853,6 +2834,7 @@
     "img_local": "assets/img/catalog/VENBLR440.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR440/VENBLR440_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR440/VENBLR440_400.jpg"
   },
   {
@@ -2874,6 +2856,7 @@
     "img_local": "assets/img/catalog/VENBLR120.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR120/VENBLR120_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR120/VENBLR120_400.jpg"
   },
   {
@@ -2895,6 +2878,7 @@
     "img_local": "assets/img/catalog/VENBLR110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR110/VENBLR110_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR110/VENBLR110_400.jpg"
   },
   {
@@ -2916,6 +2900,7 @@
     "img_local": "assets/img/catalog/VENBLR150.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR150/VENBLR150_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR150/VENBLR150_400.jpg"
   },
   {
@@ -2937,6 +2922,7 @@
     "img_local": "assets/img/catalog/VENBLR370.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR370/VENBLR370_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR370/VENBLR370_400.jpg"
   },
   {
@@ -2958,6 +2944,7 @@
     "img_local": "assets/img/catalog/VENBLR380.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR380/VENBLR380_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR380/VENBLR380_400.jpg"
   },
   {
@@ -2979,6 +2966,7 @@
     "img_local": "assets/img/catalog/VENBLR390.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR390/VENBLR390_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR390/VENBLR390_400.jpg"
   },
   {
@@ -3000,6 +2988,7 @@
     "img_local": "assets/img/catalog/VENBLR400.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR400/VENBLR400_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR400/VENBLR400_400.jpg"
   },
   {
@@ -3021,6 +3010,7 @@
     "img_local": "assets/img/catalog/VENBLR190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR190/VENBLR190_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR190/VENBLR190_400.jpg"
   },
   {
@@ -3042,6 +3032,7 @@
     "img_local": "assets/img/catalog/VENBLR200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR200/VENBLR200_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR200/VENBLR200_400.jpg"
   },
   {
@@ -3063,6 +3054,7 @@
     "img_local": "assets/img/catalog/VENBLR230.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR230/VENBLR230_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR230/VENBLR230_400.jpg"
   },
   {
@@ -3084,6 +3076,7 @@
     "img_local": "assets/img/catalog/VENBLR240.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR240/VENBLR240_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR240/VENBLR240_400.jpg"
   },
   {
@@ -3105,6 +3098,7 @@
     "img_local": "assets/img/catalog/VENBLR160.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR160/VENBLR160_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR160/VENBLR160_400.jpg"
   },
   {
@@ -3126,6 +3120,7 @@
     "img_local": "assets/img/catalog/VENBLR330.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR330/VENBLR330_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR330/VENBLR330_400.jpg"
   },
   {
@@ -3147,6 +3142,7 @@
     "img_local": "assets/img/catalog/VENBLR340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR340/VENBLR340_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR340/VENBLR340_400.jpg"
   },
   {
@@ -3168,6 +3164,7 @@
     "img_local": "assets/img/catalog/VENBLR350.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR350/VENBLR350_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR350/VENBLR350_400.jpg"
   },
   {
@@ -3189,6 +3186,7 @@
     "img_local": "assets/img/catalog/VENBLR360.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENBLR360/VENBLR360_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENBLR360/VENBLR360_400.jpg"
   },
   {
@@ -3210,6 +3208,7 @@
     "img_local": "assets/img/catalog/ACCACT4920.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCACT4920/ACCACT4920_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCACT4920/ACCACT4920_400.jpg"
   },
   {
@@ -3231,6 +3230,7 @@
     "img_local": "assets/img/catalog/ACCACT5270.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCACT5270/ACCACT5270_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCACT5270/ACCACT5270_400.jpg"
   },
   {
@@ -3252,6 +3252,7 @@
     "img_local": "assets/img/catalog/ACCACT5280.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCACT5280/ACCACT5280_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCACT5280/ACCACT5280_400.jpg"
   },
   {
@@ -3273,6 +3274,7 @@
     "img_local": "assets/img/catalog/ACCACT5290.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCACT5290/ACCACT5290_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCACT5290/ACCACT5290_400.jpg"
   },
   {
@@ -3294,6 +3296,7 @@
     "img_local": "assets/img/catalog/ACCBLR230.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCBLR230/ACCBLR230_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCBLR230/ACCBLR230_400.jpg"
   },
   {
@@ -3315,6 +3318,7 @@
     "img_local": "assets/img/catalog/ACCNCB470.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCNCB470/ACCNCB470_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCNCB470/ACCNCB470_400.jpg"
   },
   {
@@ -3336,6 +3340,7 @@
     "img_local": "assets/img/catalog/ACCNCB930.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCNCB930/ACCNCB930_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCNCB930/ACCNCB930_400.jpg"
   },
   {
@@ -3357,6 +3362,7 @@
     "img_local": "assets/img/catalog/ACCNCB940.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCNCB940/ACCNCB940_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCNCB940/ACCNCB940_400.jpg"
   },
   {
@@ -3378,6 +3384,7 @@
     "img_local": "assets/img/catalog/KITNCB190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITNCB190/KITNCB190_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITNCB190/KITNCB190_400.jpg"
   },
   {
@@ -3399,6 +3406,7 @@
     "img_local": "assets/img/catalog/VENNCB180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENNCB180/VENNCB180_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENNCB180/VENNCB180_400.jpg"
   },
   {
@@ -3420,6 +3428,7 @@
     "img_local": "assets/img/catalog/KITNCB200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITNCB200/KITNCB200_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITNCB200/KITNCB200_400.jpg"
   },
   {
@@ -3441,6 +3450,7 @@
     "img_local": "assets/img/catalog/VENCOR260.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENCOR260/VENCOR260_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENCOR260/VENCOR260_400.jpg"
   },
   {
@@ -3462,6 +3472,7 @@
     "img_local": "assets/img/catalog/VENCOR280.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENCOR280/VENCOR280_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENCOR280/VENCOR280_400.jpg"
   },
   {
@@ -3483,6 +3494,7 @@
     "img_local": "assets/img/catalog/VENCOR150.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENCOR150/VENCOR150_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENCOR150/VENCOR150_400.jpg"
   },
   {
@@ -3504,6 +3516,7 @@
     "img_local": "assets/img/catalog/VENCOR110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENCOR110/VENCOR110_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENCOR110/VENCOR110_400.jpg"
   },
   {
@@ -3525,6 +3538,7 @@
     "img_local": "assets/img/catalog/VENCOR310.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENCOR310/VENCOR310_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENCOR310/VENCOR310_400.jpg"
   },
   {
@@ -3546,6 +3560,7 @@
     "img_local": "assets/img/catalog/VENCOR320.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENCOR320/VENCOR320_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENCOR320/VENCOR320_400.jpg"
   },
   {
@@ -3567,6 +3582,7 @@
     "img_local": "assets/img/catalog/VENCOR440.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENCOR440/VENCOR440_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENCOR440/VENCOR440_400.jpg"
   },
   {
@@ -3588,6 +3604,7 @@
     "img_local": "assets/img/catalog/TECASS270.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/TECASS270/TECASS270_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/TECASS270/TECASS270_400.jpg"
   },
   {
@@ -3609,6 +3626,7 @@
     "img_local": "assets/img/catalog/TECLOG1050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/TECLOG1050/TECLOG1050_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/TECLOG1050/TECLOG1050_400.jpg"
   },
   {
@@ -3630,6 +3648,7 @@
     "img_local": "assets/img/catalog/TECLOG1060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/TECLOG1060/TECLOG1060_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/TECLOG1060/TECLOG1060_400.jpg"
   },
   {
@@ -3651,6 +3670,7 @@
     "img_local": "assets/img/catalog/MALGEN4880.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4880/MALGEN4880_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4880/MALGEN4880_400.jpg"
   },
   {
@@ -3672,6 +3692,7 @@
     "img_local": "assets/img/catalog/MALGEN4890.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4890/MALGEN4890_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4890/MALGEN4890_400.jpg"
   },
   {
@@ -3693,6 +3714,7 @@
     "img_local": "assets/img/catalog/MALGEN4920.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4920/MALGEN4920_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4920/MALGEN4920_400.jpg"
   },
   {
@@ -3714,6 +3736,7 @@
     "img_local": "assets/img/catalog/MALGEN4930.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4930/MALGEN4930_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4930/MALGEN4930_400.jpg"
   },
   {
@@ -3735,6 +3758,7 @@
     "img_local": "assets/img/catalog/CABITL4970.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABITL4970/CABITL4970_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABITL4970/CABITL4970_400.jpg"
   },
   {
@@ -3756,6 +3780,7 @@
     "img_local": "assets/img/catalog/ACCITL7650.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCITL7650/ACCITL7650_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCITL7650/ACCITL7650_400.jpg"
   },
   {
@@ -3777,6 +3802,7 @@
     "img_local": "assets/img/catalog/ACCTRL570.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTRL570/ACCTRL570_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTRL570/ACCTRL570_400.jpg"
   },
   {
@@ -3798,6 +3824,7 @@
     "img_local": "assets/img/catalog/ACCVGO2180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCVGO2180/ACCVGO2180_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCVGO2180/ACCVGO2180_400.jpg"
   },
   {
@@ -3819,6 +3846,7 @@
     "img_local": "assets/img/catalog/KITTCH390.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITTCH390/KITTCH390_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITTCH390/KITTCH390_400.jpg"
   },
   {
@@ -3840,6 +3868,7 @@
     "img_local": "assets/img/catalog/CONTCH080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CONTCH080/CONTCH080_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CONTCH080/CONTCH080_400.jpg"
   },
   {
@@ -3861,6 +3890,7 @@
     "img_local": "assets/img/catalog/CONTCH090.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CONTCH090/CONTCH090_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CONTCH090/CONTCH090_400.jpg"
   },
   {
@@ -3882,6 +3912,7 @@
     "img_local": "assets/img/catalog/ACCTCH9650.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTCH9650/ACCTCH9650_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTCH9650/ACCTCH9650_400.jpg"
   },
   {
@@ -3903,6 +3934,7 @@
     "img_local": "assets/img/catalog/ACCRBT6300.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6300/ACCRBT6300_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6300/ACCRBT6300_400.jpg"
   },
   {
@@ -3924,6 +3956,7 @@
     "img_local": "assets/img/catalog/ACCRBT6310.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6310/ACCRBT6310_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6310/ACCRBT6310_400.jpg"
   },
   {
@@ -3945,28 +3978,8 @@
     "img_local": "assets/img/catalog/ACCRBT6320.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6320/ACCRBT6320_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6320/ACCRBT6320_400.jpg"
-  },
-  {
-    "sku": "TECRBT160",
-    "nombre": "Teclado MINI INALÁMBRICO, RECARGABLE, ILUMINADO RGB  (963814), Brobotix. Teclado mini de conexión inalámbrica, ideal par",
-    "descripcion_completa": "Teclado MINI INALÁMBRICO, RECARGABLE, ILUMINADO RGB  (963814), Brobotix. Teclado mini de conexión inalámbrica, ideal para consolas de videojuegos Xbox 360, PS3, Smart TV, smartphones OTG, PC, laptop, tabletas y Android TV Boxes. Escribe búsquedas fácilmente, chatea, juega videojuegos o ingresa páginas web de forma práctica. También deslízate rápidamente en tu navegación gracias a su pantalla touch con DPI ajustable a la dimensión de tu monitor. Cuenta con iluminación RGB personalizada para que no pierdas de vista las teclas y puedas usarlo a cualquier hora. Teclado mini de conexión inalámbrica. Ideal para consolas de videojuegos Xbox 360, PS3, Smart TV, smartphones OTG, PC, laptop, tabletas y Android TV Boxes. Realiza búsquedas, chatea, juega videojuegos o ingresa páginas web de forma práctica. Iluminación personalizada: Azul, Rojo, Verde. Pantalla touch con DPI ajustable a la dimensión de tu monitor. Incluye teclas multimedia y direccionales. Teclado alfanumérico. No requiere pilas debido a que cuenta con una batería interna de litio recargable. Incluye cable USB para recarga. Diseño moderno, mini y portátil. Especificaciones: Teclado completo: 92 teclas. Incluye Receptor USB inalámbrico RF 2.4 GHz. Utiliza una batería recargable (incluida). El receptor inalámbrico se encuentra almacenado en la parte posterior junto a la batería. Compatibilidad: Windows, Android y Smart TV con puerto USB disponible. Color: Negro",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "MINI",
-    "costo_base": 8.61,
-    "precio_mxn": 226.69,
-    "precio_original": 268.67,
-    "img": "https://static.ctonline.mx/imagenes/TECRBT160/TECRBT160_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/MINI.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=TECRBT160",
-    "costo_proveedor_mxn": 167.92,
-    "precio": 226.69,
-    "precio_mayoreo_10pzs": 201.5,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/TECRBT160.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/TECRBT160/TECRBT160_400.jpg",
-    "categoria_clasificada": "enfriamiento",
-    "local_img": "https://static.ctonline.mx/imagenes/TECRBT160/TECRBT160_400.jpg"
   },
   {
     "sku": "ACCRBT180",
@@ -3987,6 +4000,7 @@
     "img_local": "assets/img/catalog/ACCRBT180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT180/ACCRBT180_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT180/ACCRBT180_400.jpg"
   },
   {
@@ -4008,6 +4022,7 @@
     "img_local": "assets/img/catalog/ACCRBT8350.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT8350/ACCRBT8350_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT8350/ACCRBT8350_400.jpg"
   },
   {
@@ -4029,6 +4044,7 @@
     "img_local": "assets/img/catalog/ACCRBT1010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT1010/ACCRBT1010_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT1010/ACCRBT1010_400.jpg"
   },
   {
@@ -4050,6 +4066,7 @@
     "img_local": "assets/img/catalog/ACCRBT1020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT1020/ACCRBT1020_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT1020/ACCRBT1020_400.jpg"
   },
   {
@@ -4071,6 +4088,7 @@
     "img_local": "assets/img/catalog/ACCRBT1030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT1030/ACCRBT1030_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT1030/ACCRBT1030_400.jpg"
   },
   {
@@ -4092,6 +4110,7 @@
     "img_local": "assets/img/catalog/ACCRBT5230.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT5230/ACCRBT5230_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT5230/ACCRBT5230_400.jpg"
   },
   {
@@ -4113,6 +4132,7 @@
     "img_local": "assets/img/catalog/ACCRBT1880.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT1880/ACCRBT1880_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT1880/ACCRBT1880_400.jpg"
   },
   {
@@ -4134,6 +4154,7 @@
     "img_local": "assets/img/catalog/ACCRBT6970.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6970/ACCRBT6970_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6970/ACCRBT6970_400.jpg"
   },
   {
@@ -4155,6 +4176,7 @@
     "img_local": "assets/img/catalog/ACCRBT6980.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6980/ACCRBT6980_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6980/ACCRBT6980_400.jpg"
   },
   {
@@ -4176,6 +4198,7 @@
     "img_local": "assets/img/catalog/ACCRBT7290.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT7290/ACCRBT7290_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT7290/ACCRBT7290_400.jpg"
   },
   {
@@ -4197,6 +4220,7 @@
     "img_local": "assets/img/catalog/ACCRBT5680.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT5680/ACCRBT5680_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT5680/ACCRBT5680_400.jpg"
   },
   {
@@ -4218,6 +4242,7 @@
     "img_local": "assets/img/catalog/ACCRBT5690.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT5690/ACCRBT5690_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT5690/ACCRBT5690_400.jpg"
   },
   {
@@ -4239,6 +4264,7 @@
     "img_local": "assets/img/catalog/ACCRBT5700.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT5700/ACCRBT5700_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT5700/ACCRBT5700_400.jpg"
   },
   {
@@ -4260,6 +4286,7 @@
     "img_local": "assets/img/catalog/ACCRBT5630.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT5630/ACCRBT5630_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT5630/ACCRBT5630_400.jpg"
   },
   {
@@ -4281,6 +4308,7 @@
     "img_local": "assets/img/catalog/ACCRBT5640.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT5640/ACCRBT5640_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT5640/ACCRBT5640_400.jpg"
   },
   {
@@ -4302,6 +4330,7 @@
     "img_local": "assets/img/catalog/ACCRBT5650.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT5650/ACCRBT5650_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT5650/ACCRBT5650_400.jpg"
   },
   {
@@ -4323,6 +4352,7 @@
     "img_local": "assets/img/catalog/ACCRBT5660.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT5660/ACCRBT5660_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT5660/ACCRBT5660_400.jpg"
   },
   {
@@ -4344,6 +4374,7 @@
     "img_local": "assets/img/catalog/ACCRBT5670.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT5670/ACCRBT5670_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT5670/ACCRBT5670_400.jpg"
   },
   {
@@ -4365,6 +4396,7 @@
     "img_local": "assets/img/catalog/ACCRBT3540.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT3540/ACCRBT3540_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT3540/ACCRBT3540_400.jpg"
   },
   {
@@ -4386,6 +4418,7 @@
     "img_local": "assets/img/catalog/ACCRBT3550.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT3550/ACCRBT3550_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT3550/ACCRBT3550_400.jpg"
   },
   {
@@ -4407,6 +4440,7 @@
     "img_local": "assets/img/catalog/ACCRBT3560.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT3560/ACCRBT3560_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT3560/ACCRBT3560_400.jpg"
   },
   {
@@ -4428,6 +4462,7 @@
     "img_local": "assets/img/catalog/ACCRBT3570.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT3570/ACCRBT3570_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT3570/ACCRBT3570_400.jpg"
   },
   {
@@ -4449,6 +4484,7 @@
     "img_local": "assets/img/catalog/ACCRBT3580.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT3580/ACCRBT3580_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT3580/ACCRBT3580_400.jpg"
   },
   {
@@ -4470,6 +4506,7 @@
     "img_local": "assets/img/catalog/ACCRBT3590.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT3590/ACCRBT3590_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT3590/ACCRBT3590_400.jpg"
   },
   {
@@ -4491,6 +4528,7 @@
     "img_local": "assets/img/catalog/ACCRBT2440.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT2440/ACCRBT2440_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT2440/ACCRBT2440_400.jpg"
   },
   {
@@ -4512,6 +4550,7 @@
     "img_local": "assets/img/catalog/KITSTY100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITSTY100/KITSTY100_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITSTY100/KITSTY100_400.jpg"
   },
   {
@@ -4533,6 +4572,7 @@
     "img_local": "assets/img/catalog/KITSTY180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITSTY180/KITSTY180_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITSTY180/KITSTY180_400.jpg"
   },
   {
@@ -4554,6 +4594,7 @@
     "img_local": "assets/img/catalog/KITSTY190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITSTY190/KITSTY190_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITSTY190/KITSTY190_400.jpg"
   },
   {
@@ -4575,6 +4616,7 @@
     "img_local": "assets/img/catalog/ACCSTY300.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCSTY300/ACCSTY300_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCSTY300/ACCSTY300_400.jpg"
   },
   {
@@ -4596,6 +4638,7 @@
     "img_local": "assets/img/catalog/VERSTY010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VERSTY010/VERSTY010_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VERSTY010/VERSTY010_400.jpg"
   },
   {
@@ -4617,6 +4660,7 @@
     "img_local": "assets/img/catalog/CUBPCO110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CUBPCO110/CUBPCO110_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CUBPCO110/CUBPCO110_400.jpg"
   },
   {
@@ -4638,6 +4682,7 @@
     "img_local": "assets/img/catalog/TERGEN010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/TERGEN010/TERGEN010_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/TERGEN010/TERGEN010_400.jpg"
   },
   {
@@ -4659,6 +4704,7 @@
     "img_local": "assets/img/catalog/ACCNEX1670.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCNEX1670/ACCNEX1670_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCNEX1670/ACCNEX1670_400.jpg"
   },
   {
@@ -4680,6 +4726,7 @@
     "img_local": "assets/img/catalog/ACCNEX1660.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCNEX1660/ACCNEX1660_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCNEX1660/ACCNEX1660_400.jpg"
   },
   {
@@ -4701,6 +4748,7 @@
     "img_local": "assets/img/catalog/BOCNNN230.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BOCNNN230/BOCNNN230_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BOCNNN230/BOCNNN230_400.jpg"
   },
   {
@@ -4722,6 +4770,7 @@
     "img_local": "assets/img/catalog/BOCNNN240.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BOCNNN240/BOCNNN240_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BOCNNN240/BOCNNN240_400.jpg"
   },
   {
@@ -4743,6 +4792,7 @@
     "img_local": "assets/img/catalog/BOCNNN250.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BOCNNN250/BOCNNN250_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BOCNNN250/BOCNNN250_400.jpg"
   },
   {
@@ -4764,6 +4814,7 @@
     "img_local": "assets/img/catalog/CAMNNN080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMNNN080/CAMNNN080_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMNNN080/CAMNNN080_400.jpg"
   },
   {
@@ -4785,6 +4836,7 @@
     "img_local": "assets/img/catalog/CAMNNN090.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMNNN090/CAMNNN090_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMNNN090/CAMNNN090_400.jpg"
   },
   {
@@ -4806,6 +4858,7 @@
     "img_local": "assets/img/catalog/CAMNNN100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMNNN100/CAMNNN100_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMNNN100/CAMNNN100_400.jpg"
   },
   {
@@ -4827,6 +4880,7 @@
     "img_local": "assets/img/catalog/CAMNNN110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMNNN110/CAMNNN110_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMNNN110/CAMNNN110_400.jpg"
   },
   {
@@ -4848,6 +4902,7 @@
     "img_local": "assets/img/catalog/ACCTRL720.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTRL720/ACCTRL720_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTRL720/ACCTRL720_400.jpg"
   },
   {
@@ -4869,6 +4924,7 @@
     "img_local": "assets/img/catalog/ACCTRL5540.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTRL5540/ACCTRL5540_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTRL5540/ACCTRL5540_400.jpg"
   },
   {
@@ -4890,6 +4946,7 @@
     "img_local": "assets/img/catalog/AIRTRL060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/AIRTRL060/AIRTRL060_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/AIRTRL060/AIRTRL060_400.jpg"
   },
   {
@@ -4911,6 +4968,7 @@
     "img_local": "assets/img/catalog/CENFZA010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CENFZA010/CENFZA010_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CENFZA010/CENFZA010_400.jpg"
   },
   {
@@ -4932,6 +4990,7 @@
     "img_local": "assets/img/catalog/CENFZA020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CENFZA020/CENFZA020_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CENFZA020/CENFZA020_400.jpg"
   },
   {
@@ -4953,6 +5012,7 @@
     "img_local": "assets/img/catalog/CENFZA030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CENFZA030/CENFZA030_400.jpg",
     "categoria_clasificada": "enfriamiento",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CENFZA030/CENFZA030_400.jpg"
   }
 ]

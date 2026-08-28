@@ -41,7 +41,12 @@ function getFilteredList() {
 
     // Filtro Categoría
     if (activeSelectedCategory !== 'Todas') {
-        items = items.filter(p => (p.categoria_ct || p.categoria || '').toLowerCase().includes(activeSelectedCategory.toLowerCase()));
+        items = items.filter(p => {
+            const catClasif = (p.categoria_clasificada || '').toLowerCase();
+            const catCT = (p.categoria_ct || p.categoria || '').toLowerCase();
+            const desc = (p.nombre || p.descripcion_completa || '').toLowerCase();
+            return catClasif.includes(activeSelectedCategory.toLowerCase()) || catCT.includes(activeSelectedCategory.toLowerCase()) || desc.includes(activeSelectedCategory.toLowerCase());
+        });
     }
 
     // Filtro Marca
@@ -299,67 +304,100 @@ function renderSidebarFacets() {
     const root = document.getElementById("sidebar-facets-root");
     if (!root) return;
 
-    const brandCounts = { 'ASUS': 218, 'INTEL': 142, 'AMD': 116, 'KINGSTON': 287, 'ACTECK': 213, 'MSI': 98, 'GIGABYTE': 124, 'TRIPP-LITE': 86, 'ADATA': 94 };
-    const catCounts = { 'Procesadores': 185, 'Tarjetas Madre': 240, 'Tarjetas de Video': 92, 'Memorias RAM': 310, 'Discos SSD/HDD': 260, 'Gabinetes': 145, 'Fuentes de Poder': 130 };
+    const catMetaList = [
+        { id: 'Todas', name: 'Todas las Categorías', count: 16159, icon: 'fa-layer-group' },
+        { id: 'procesadores', name: 'Procesadores (CPUs)', count: 1270, icon: 'fa-microchip' },
+        { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', count: 174, icon: 'fa-chess-board' },
+        { id: 'tarjetas_de_video', name: 'Tarjetas de Video (GPUs)', count: 198, icon: 'fa-gamepad' },
+        { id: 'memorias_ram', name: 'Memorias RAM (DDR4 / DDR5)', count: 334, icon: 'fa-memory' },
+        { id: 'discos_duros', name: 'Discos Duros & SSD NVMe', count: 795, icon: 'fa-hard-drive' },
+        { id: 'monitores', name: 'Monitores & Pantallas PC', count: 310, icon: 'fa-desktop' },
+        { id: 'fuentes_energia', name: 'Fuentes de Poder & UPS', count: 955, icon: 'fa-plug-circle-bolt' },
+        { id: 'gabinetes', name: 'Gabinetes & Chasis Gamer', count: 285, icon: 'fa-server' },
+        { id: 'enfriamiento', name: 'Enfriamiento Líquido/Aire', count: 236, icon: 'fa-snowflake' },
+        { id: 'impresoras', name: 'Impresoras & Multifuncionales', count: 1450, icon: 'fa-print' },
+        { id: 'consumibles', name: 'Tintas, Tóner & Consumibles', count: 1347, icon: 'fa-fill-drip' },
+        { id: 'conectividad_redes', name: 'Conectividad & Routers WiFi', count: 2297, icon: 'fa-network-wired' },
+        { id: 'software', name: 'Software & Licencias', count: 662, icon: 'fa-compact-disc' },
+        { id: 'accesorios_perifericos', name: 'Teclados, Mouse & Periféricos', count: 1651, icon: 'fa-keyboard' },
+        { id: 'telefonia_seguridad', name: 'Videovigilancia CCTV & Telefonía', count: 376, icon: 'fa-video' },
+        { id: 'equipos_de_marca', name: 'Laptops & Computadoras', count: 211, icon: 'fa-laptop' },
+        { id: 'punto_de_venta', name: 'Punto de Venta (POS)', count: 646, icon: 'fa-barcode' },
+        { id: 'electronica_consumo', name: 'Smart TVs & Audio', count: 621, icon: 'fa-tv' },
+        { id: 'linea_blanca', name: 'Climatización & Línea Blanca', count: 35, icon: 'fa-fan' },
+        { id: 'outlet_remates', name: 'Remates & Liquidaciones', count: 5, icon: 'fa-tags' }
+    ];
+
+    const brandCounts = { 'ASUS': 218, 'INTEL': 142, 'AMD': 116, 'KINGSTON': 287, 'ACTECK': 213, 'MSI': 98, 'GIGABYTE': 124, 'TRIPP-LITE': 86, 'ADATA': 94, 'CORSAIR': 76, 'LOGITECH': 115, 'SAMSUNG': 64, 'LG': 58, 'DELL': 72, 'HP': 89, 'LENOVO': 95 };
 
     root.innerHTML = `
-        <div class="bg-[#1e3a8a] text-white p-3 rounded-t-lg font-bold text-xs uppercase flex items-center gap-2">
-            <i class="fa-solid fa-sliders text-sm"></i> Filtros de búsqueda
+        <div class="bg-[#1e3a8a] text-white p-3 rounded-t-lg font-bold text-xs uppercase flex items-center justify-between shadow">
+            <span class="flex items-center gap-2"><i class="fa-solid fa-sliders text-sm"></i> Filtros de búsqueda</span>
+            <span class="text-[10px] bg-blue-900 px-2 py-0.5 rounded font-mono">16,159 Items</span>
         </div>
 
-        <div class="p-3 bg-white border-x border-b border-slate-200 rounded-b-lg text-slate-700 text-xs space-y-4">
+        <div class="p-3 bg-white border-x border-b border-slate-200 rounded-b-lg text-slate-700 text-xs space-y-4 shadow-sm">
+            <!-- Botones Aplicar / Limpiar -->
             <div class="flex gap-2">
-                <button onclick="renderExactCatalogView()" class="flex-1 bg-[#1e40af] hover:bg-[#1d4ed8] text-white font-bold py-1.5 rounded text-[11px] uppercase transition cursor-pointer">
+                <button onclick="renderExactCatalogView()" class="flex-1 bg-[#1e40af] hover:bg-[#1d4ed8] text-white font-bold py-1.5 rounded text-[11px] uppercase transition cursor-pointer shadow-sm">
                     Aplicar Filtros
                 </button>
-                <button onclick="resetFacets()" class="flex-1 bg-[#dc2626] hover:bg-[#b91c1c] text-white font-bold py-1.5 rounded text-[11px] uppercase transition cursor-pointer">
+                <button onclick="resetFacets()" class="flex-1 bg-[#dc2626] hover:bg-[#b91c1c] text-white font-bold py-1.5 rounded text-[11px] uppercase transition cursor-pointer shadow-sm">
                     Limpiar Filtros
                 </button>
             </div>
 
+            <!-- Promociones -->
             <div class="border-b border-slate-100 pb-3">
-                <h4 class="font-bold text-slate-900 mb-1.5 text-xs">Promociones</h4>
+                <h4 class="font-bold text-slate-900 mb-1.5 text-xs flex items-center gap-1.5">
+                    <i class="fa-solid fa-tags text-red-600"></i> Promociones & Estado
+                </h4>
                 <div class="space-y-1 text-slate-600">
                     <label class="flex items-center gap-2 cursor-pointer hover:text-blue-700">
-                        <input type="checkbox" checked class="w-3.5 h-3.5 accent-[#1e40af] cursor-pointer" /> Promociones
+                        <input type="checkbox" checked class="w-3.5 h-3.5 accent-[#1e40af] cursor-pointer" /> Promociones Activas
                     </label>
                     <label class="flex items-center gap-2 cursor-pointer hover:text-blue-700">
-                        <input type="checkbox" class="w-3.5 h-3.5 accent-[#1e40af] cursor-pointer" /> Nuevos
+                        <input type="checkbox" class="w-3.5 h-3.5 accent-[#1e40af] cursor-pointer" /> Nuevos Lanzamientos
                     </label>
                 </div>
             </div>
 
+            <!-- Categorías Exhaustivas -->
             <div class="border-b border-slate-100 pb-3">
-                <h4 class="font-bold text-slate-900 mb-1.5 text-xs">Categorías</h4>
-                <div class="space-y-1 text-slate-600 max-h-48 overflow-y-auto pr-1">
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-blue-700">
-                        <input type="radio" name="cat_facet" ${activeSelectedCategory === 'Todas' ? 'checked' : ''} onchange="activeSelectedCategory='Todas'; currentPageNumber=1; renderExactCatalogView();" class="w-3.5 h-3.5 accent-[#1e40af] cursor-pointer" />
-                        <span>Todas</span>
-                    </label>
-                    ${Object.entries(catCounts).map(([cat, count]) => `
-                        <label class="flex items-center justify-between cursor-pointer hover:text-blue-700">
+                <div class="flex items-center justify-between mb-1.5">
+                    <h4 class="font-bold text-slate-900 text-xs flex items-center gap-1.5">
+                        <i class="fa-solid fa-microchip text-blue-700"></i> Categorías (${catMetaList.length})
+                    </h4>
+                </div>
+                <div class="space-y-1 text-slate-600 max-h-72 overflow-y-auto pr-1">
+                    ${catMetaList.map(c => `
+                        <label class="flex items-center justify-between cursor-pointer hover:text-blue-700 py-0.5 px-1 rounded hover:bg-slate-50 transition">
                             <span class="flex items-center gap-2 truncate">
-                                <input type="radio" name="cat_facet" ${activeSelectedCategory === cat ? 'checked' : ''} onchange="activeSelectedCategory='${cat}'; currentPageNumber=1; renderExactCatalogView();" class="w-3.5 h-3.5 accent-[#1e40af] cursor-pointer" />
-                                <span class="truncate">${cat}</span>
+                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderExactCatalogView();" class="w-3.5 h-3.5 accent-[#1e40af] cursor-pointer shrink-0" />
+                                <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
+                                <span class="truncate ${activeSelectedCategory === c.id ? 'font-bold text-blue-800' : ''}">${c.name}</span>
                             </span>
-                            <span class="text-[10px] text-slate-400 font-mono">(${count})</span>
+                            <span class="text-[10px] text-slate-400 font-mono">(${c.count.toLocaleString('es-MX')})</span>
                         </label>
                     `).join('')}
                 </div>
             </div>
 
+            <!-- Marcas -->
             <div class="border-b border-slate-100 pb-3">
-                <h4 class="font-bold text-slate-900 mb-1.5 text-xs">Marcas</h4>
+                <h4 class="font-bold text-slate-900 mb-1.5 text-xs flex items-center gap-1.5">
+                    <i class="fa-solid fa-award text-amber-500"></i> Marcas Oficiales
+                </h4>
                 <div class="space-y-1 text-slate-600 max-h-48 overflow-y-auto pr-1">
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-blue-700">
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-blue-700 py-0.5 px-1 rounded hover:bg-slate-50">
                         <input type="radio" name="brand_facet" ${activeSelectedBrand === 'Todas' ? 'checked' : ''} onchange="activeSelectedBrand='Todas'; currentPageNumber=1; renderExactCatalogView();" class="w-3.5 h-3.5 accent-[#1e40af] cursor-pointer" />
-                        <span>Todas</span>
+                        <span>Todas las Marcas</span>
                     </label>
                     ${Object.entries(brandCounts).map(([b, count]) => `
-                        <label class="flex items-center justify-between cursor-pointer hover:text-blue-700">
+                        <label class="flex items-center justify-between cursor-pointer hover:text-blue-700 py-0.5 px-1 rounded hover:bg-slate-50">
                             <span class="flex items-center gap-2 truncate">
                                 <input type="radio" name="brand_facet" ${activeSelectedBrand === b ? 'checked' : ''} onchange="activeSelectedBrand='${b}'; currentPageNumber=1; renderExactCatalogView();" class="w-3.5 h-3.5 accent-[#1e40af] cursor-pointer" />
-                                <span class="truncate">${b}</span>
+                                <span class="truncate ${activeSelectedBrand === b ? 'font-bold text-blue-800' : ''}">${b}</span>
                             </span>
                             <span class="text-[10px] text-slate-400 font-mono">(${count})</span>
                         </label>
@@ -367,17 +405,20 @@ function renderSidebarFacets() {
                 </div>
             </div>
 
+            <!-- Sucursales / Stock -->
             <div>
-                <h4 class="font-bold text-slate-900 mb-1.5 text-xs">Sucursales</h4>
+                <h4 class="font-bold text-slate-900 mb-1.5 text-xs flex items-center gap-1.5">
+                    <i class="fa-solid fa-location-dot text-emerald-600"></i> Sucursal & Disponibilidad
+                </h4>
                 <div class="space-y-1 text-slate-600">
-                    <label class="flex items-center justify-between cursor-pointer hover:text-blue-700">
+                    <label class="flex items-center justify-between cursor-pointer hover:text-blue-700 py-0.5 px-1 rounded hover:bg-slate-50">
                         <span class="flex items-center gap-2">
                             <input type="checkbox" checked class="w-3.5 h-3.5 accent-[#1e40af] cursor-pointer" />
                             <span>Guadalajara (Pedro Moreno 501 A)</span>
                         </span>
                         <span class="text-[10px] text-slate-400 font-mono">(477)</span>
                     </label>
-                    <label class="flex items-center justify-between cursor-pointer hover:text-blue-700">
+                    <label class="flex items-center justify-between cursor-pointer hover:text-blue-700 py-0.5 px-1 rounded hover:bg-slate-50">
                         <span class="flex items-center gap-2">
                             <input type="checkbox" class="w-3.5 h-3.5 accent-[#1e40af] cursor-pointer" />
                             <span>Envío Nacional Express</span>

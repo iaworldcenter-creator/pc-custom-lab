@@ -18,6 +18,7 @@
     "img_local": "assets/img/catalog/MEMWSD050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MEMWSD050/MEMWSD050_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MEMWSD050/MEMWSD050_400.jpg"
   },
   {
@@ -39,49 +40,8 @@
     "img_local": "assets/img/catalog/MEMWSD190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MEMWSD190/MEMWSD190_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MEMWSD190/MEMWSD190_400.jpg"
-  },
-  {
-    "sku": "MONBNQ1480",
-    "nombre": "Monitor BenQ. RD280U. 9H.LM1LJ.TBA. Monitor para Programación 28.2\". Resolución 4K ( 3840 x 2560 ). Retroiluminación LED",
-    "descripcion_completa": "Monitor BenQ. RD280U. 9H.LM1LJ.TBA. Monitor para Programación 28.2\". Resolución 4K ( 3840 x 2560 ). Retroiluminación LED, Relación de Aspecto 3:2. Dot Pitch 0.155. Tipo de Panel IPS / Panel Nano Matte. Brillo 350 nits. Contraste 1200:1. Colores 1.07 Billones, Angulo de Visión 178°/178°, Tiempo de respuesta 5 ms(GTG). Gama de Color 95% P3. Frecuencia de actualización 60 Hz(DP, USB-C). Entradas: HDMI (v2.0) x 1 / DP v1.4 x 1/ USB - C (Poder 90W / DP Alt Mode, Data) x1/ USB-C, USB-A x 3, USB-B x1, Audífonos, Bocinas 2Wx2. Consumo de Energía Normal 34 W, Consumo de Energía Max. 205 W, Standby .05 W. Energía (USB C/ Thunderbolt 3) 90W. Características Especiales Tecnología Eye Care, Night Hours Protecftion, Certificación TÜV Rheinlan, Energy Star, TCO, EPEAT, Display Pilot 2, Giro 15°/15° Inclinación -5° / 20°, Ajuste de altura hasta 110 mm. VESA 100 x 100 mm / K-Locker. Compatible con MAC, MoonHalo (anillo de luz), Incluye: Cable de Poder (1.8 mts), HDMI 2.0, USB 3.2, USB-C, Guía de inicio rápido, Tarjeta de Garantia, Instrucciones de seguridad. Dimensiones: 474.3 (min) - 587.3 (max) - 610.4 x 244.5 mm. Peso 10.4 kg. Color Gris Garantía 3 años.",
-    "categoria_ct": "COMPONENTES DE ENSAMBLE",
-    "marca": "BENQ",
-    "costo_base": 9610.75,
-    "precio_mxn": 12974.51,
-    "precio_original": 15377.2,
-    "img": "https://static.ctonline.mx/imagenes/MONBNQ1480/MONBNQ1480_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/BENQ.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONBNQ1480",
-    "costo_proveedor_mxn": 9610.75,
-    "precio": 12974.51,
-    "precio_mayoreo_10pzs": 11532.9,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONBNQ1480.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONBNQ1480/MONBNQ1480_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/MONBNQ1480/MONBNQ1480_400.jpg"
-  },
-  {
-    "sku": "MONHPI840",
-    "nombre": "Monitor HP Serie 3 PRO 327pe FHD (B1GM6AA#ABA). Resolución 1920 x 1080, Tiempo de Respuesta 5 ms, Puerto de Video VGA, H",
-    "descripcion_completa": "Monitor HP Serie 3 PRO 327pe FHD (B1GM6AA#ABA). Resolución 1920 x 1080, Tiempo de Respuesta 5 ms, Puerto de Video VGA, HDMI 1.4, and DisplayPort™ 1.2., Bezel 3 lados bordes delgados, VESA 100x100, Base desmontable, puerto para candado de seguridad, Garantía: 3 años.",
-    "categoria_ct": "EQUIPOS DE MARCA",
-    "marca": "HP",
-    "costo_base": 2989.47,
-    "precio_mxn": 4035.78,
-    "precio_original": 4783.15,
-    "img": "https://static.ctonline.mx/imagenes/MONHPI840/MONHPI840_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/HP.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONHPI840",
-    "costo_proveedor_mxn": 2989.47,
-    "precio": 4035.78,
-    "precio_mayoreo_10pzs": 3587.36,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONHPI840.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONHPI840/MONHPI840_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/MONHPI840/MONHPI840_400.jpg"
   },
   {
     "sku": "SCABRT230",
@@ -102,6 +62,7 @@
     "img_local": "assets/img/catalog/SCABRT230.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SCABRT230/SCABRT230_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SCABRT230/SCABRT230_400.jpg"
   },
   {
@@ -123,6 +84,7 @@
     "img_local": "assets/img/catalog/SWTTPL1340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1340/SWTTPL1340_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1340/SWTTPL1340_400.jpg"
   },
   {
@@ -144,6 +106,7 @@
     "img_local": "assets/img/catalog/SWTTPL1180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1180/SWTTPL1180_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1180/SWTTPL1180_400.jpg"
   },
   {
@@ -165,6 +128,7 @@
     "img_local": "assets/img/catalog/SWTTPL1270.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL1270/SWTTPL1270_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL1270/SWTTPL1270_400.jpg"
   },
   {
@@ -186,6 +150,7 @@
     "img_local": "assets/img/catalog/ACCTPL870.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTPL870/ACCTPL870_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTPL870/ACCTPL870_400.jpg"
   },
   {
@@ -207,6 +172,7 @@
     "img_local": "assets/img/catalog/TARTPL100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/TARTPL100/TARTPL100_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/TARTPL100/TARTPL100_400.jpg"
   },
   {
@@ -228,6 +194,7 @@
     "img_local": "assets/img/catalog/TARTPL380.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/TARTPL380/TARTPL380_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/TARTPL380/TARTPL380_400.jpg"
   },
   {
@@ -249,6 +216,7 @@
     "img_local": "assets/img/catalog/ACPTPL940.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACPTPL940/ACPTPL940_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACPTPL940/ACPTPL940_400.jpg"
   },
   {
@@ -270,6 +238,7 @@
     "img_local": "assets/img/catalog/CABDAH320.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABDAH320/CABDAH320_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABDAH320/CABDAH320_400.jpg"
   },
   {
@@ -291,6 +260,7 @@
     "img_local": "assets/img/catalog/ACCRBT6740.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6740/ACCRBT6740_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6740/ACCRBT6740_400.jpg"
   },
   {
@@ -312,6 +282,7 @@
     "img_local": "assets/img/catalog/ACCRBT6750.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6750/ACCRBT6750_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6750/ACCRBT6750_400.jpg"
   },
   {
@@ -333,6 +304,7 @@
     "img_local": "assets/img/catalog/CABBEL060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABBEL060/CABBEL060_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABBEL060/CABBEL060_400.jpg"
   },
   {
@@ -354,6 +326,7 @@
     "img_local": "assets/img/catalog/ACCBEL1140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCBEL1140/ACCBEL1140_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCBEL1140/ACCBEL1140_400.jpg"
   },
   {
@@ -375,6 +348,7 @@
     "img_local": "assets/img/catalog/CABBEL150.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABBEL150/CABBEL150_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABBEL150/CABBEL150_400.jpg"
   },
   {
@@ -396,28 +370,8 @@
     "img_local": "assets/img/catalog/RASTEL010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RASTEL010/RASTEL010_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RASTEL010/RASTEL010_400.jpg"
-  },
-  {
-    "sku": "ACPMIM040",
-    "nombre": "Punto de Acceso A5X, 4.9-6.4 GHz, Conectorizado, MU-MIMO 2X2, hasta 64 usuarios concurrentes, 700 Mbps, conectores SMA-h",
-    "descripcion_completa": "Punto de Acceso A5X, 4.9-6.4 GHz, Conectorizado, MU-MIMO 2X2, hasta 64 usuarios concurrentes, 700 Mbps, conectores SMA-hembra, Adaptación al entorno, Monitoreo a través de la nube. Capas de soportar ambientes extremos, Multipunto para gran densidad de usuarios, Compatibilidad con C5c y C5x, Protocolo de seguridad 802.1x",
-    "categoria_ct": "CONECTIVIDAD",
-    "marca": "PUNTO",
-    "costo_base": 354.49,
-    "precio_mxn": 9331.89,
-    "precio_original": 11060.02,
-    "img": "https://static.ctonline.mx/imagenes/ACPMIM040/ACPMIM040_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/PUNTO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACPMIM040",
-    "costo_proveedor_mxn": 6912.51,
-    "precio": 9331.89,
-    "precio_mayoreo_10pzs": 8295.01,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACPMIM040.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACPMIM040/ACPMIM040_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/ACPMIM040/ACPMIM040_400.jpg"
   },
   {
     "sku": "GRDPVS870",
@@ -438,6 +392,7 @@
     "img_local": "assets/img/catalog/GRDPVS870.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GRDPVS870/GRDPVS870_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GRDPVS870/GRDPVS870_400.jpg"
   },
   {
@@ -459,6 +414,7 @@
     "img_local": "assets/img/catalog/GRDPVS950.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GRDPVS950/GRDPVS950_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GRDPVS950/GRDPVS950_400.jpg"
   },
   {
@@ -480,6 +436,7 @@
     "img_local": "assets/img/catalog/ACCPVS430.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCPVS430/ACCPVS430_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCPVS430/ACCPVS430_400.jpg"
   },
   {
@@ -501,28 +458,8 @@
     "img_local": "assets/img/catalog/KITDAH770.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITDAH770/KITDAH770_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITDAH770/KITDAH770_400.jpg"
-  },
-  {
-    "sku": "KITDAH720",
-    "nombre": "DAHUA DHI-VTO2111D-P-S3 - Frente de Calle de Videoportero IP/ Alámbrico/ Angulo Visión 107 Grados con WDR / Soporta Aper",
-    "descripcion_completa": "DAHUA DHI-VTO2111D-P-S3 - Frente de Calle de Videoportero IP/ Alámbrico/ Angulo Visión 107 Grados con WDR / Soporta Apertura de Puerta por APP, Tarjeta y desde Monitor/ Uso Exterior IP65/ PoE/ Soporta Hasta 10 Monitores/",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "DAHUA",
-    "costo_base": 71.82,
-    "precio_mxn": 1890.62,
-    "precio_original": 2240.74,
-    "img": "https://static.ctonline.mx/imagenes/KITDAH720/KITDAH720_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/DAHUA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=KITDAH720",
-    "costo_proveedor_mxn": 1400.46,
-    "precio": 1890.62,
-    "precio_mayoreo_10pzs": 1680.55,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/KITDAH720.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/KITDAH720/KITDAH720_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/KITDAH720/KITDAH720_400.jpg"
   },
   {
     "sku": "KITDAH690",
@@ -543,28 +480,8 @@
     "img_local": "assets/img/catalog/KITDAH690.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITDAH690/KITDAH690_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITDAH690/KITDAH690_400.jpg"
-  },
-  {
-    "sku": "KITDAH440",
-    "nombre": "Kit de Video Portero Analogico Dahua DHI-KTA02, El Kit Incluye: 1 DHI-VTO1000J- Frente de calle 1.3 MP, 1 DHI-VTH1020J- ",
-    "descripcion_completa": "Kit de Video Portero Analogico Dahua DHI-KTA02, El Kit Incluye: 1 DHI-VTO1000J- Frente de calle 1.3 MP, 1 DHI-VTH1020J- Monitor touch de 7\" color blanco, desbloqueo, llamadas de voz, videollamada.",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "KIT",
-    "costo_base": 68.4,
-    "precio_mxn": 1800.56,
-    "precio_original": 2134.0,
-    "img": "https://static.ctonline.mx/imagenes/KITDAH440/KITDAH440_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/KIT.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=KITDAH440",
-    "costo_proveedor_mxn": 1333.75,
-    "precio": 1800.56,
-    "precio_mayoreo_10pzs": 1600.5,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/KITDAH440.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/KITDAH440/KITDAH440_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/KITDAH440/KITDAH440_400.jpg"
   },
   {
     "sku": "GRDDAH1290",
@@ -585,6 +502,7 @@
     "img_local": "assets/img/catalog/GRDDAH1290.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GRDDAH1290/GRDDAH1290_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GRDDAH1290/GRDDAH1290_400.jpg"
   },
   {
@@ -606,6 +524,7 @@
     "img_local": "assets/img/catalog/GRDDAH1240.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GRDDAH1240/GRDDAH1240_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GRDDAH1240/GRDDAH1240_400.jpg"
   },
   {
@@ -627,6 +546,7 @@
     "img_local": "assets/img/catalog/GRDDAH1090.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GRDDAH1090/GRDDAH1090_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GRDDAH1090/GRDDAH1090_400.jpg"
   },
   {
@@ -648,6 +568,7 @@
     "img_local": "assets/img/catalog/GRDDAH1200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GRDDAH1200/GRDDAH1200_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GRDDAH1200/GRDDAH1200_400.jpg"
   },
   {
@@ -669,6 +590,7 @@
     "img_local": "assets/img/catalog/GRDDAH1210.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GRDDAH1210/GRDDAH1210_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GRDDAH1210/GRDDAH1210_400.jpg"
   },
   {
@@ -690,6 +612,7 @@
     "img_local": "assets/img/catalog/GRDDAH1040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GRDDAH1040/GRDDAH1040_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GRDDAH1040/GRDDAH1040_400.jpg"
   },
   {
@@ -711,6 +634,7 @@
     "img_local": "assets/img/catalog/NVRDAH580.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/NVRDAH580/NVRDAH580_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/NVRDAH580/NVRDAH580_400.jpg"
   },
   {
@@ -732,6 +656,7 @@
     "img_local": "assets/img/catalog/NVRDAH520.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/NVRDAH520/NVRDAH520_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/NVRDAH520/NVRDAH520_400.jpg"
   },
   {
@@ -753,6 +678,7 @@
     "img_local": "assets/img/catalog/NVRDAH570.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/NVRDAH570/NVRDAH570_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/NVRDAH570/NVRDAH570_400.jpg"
   },
   {
@@ -774,6 +700,7 @@
     "img_local": "assets/img/catalog/NVRDAH660.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/NVRDAH660/NVRDAH660_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/NVRDAH660/NVRDAH660_400.jpg"
   },
   {
@@ -795,6 +722,7 @@
     "img_local": "assets/img/catalog/NVRDAH650.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/NVRDAH650/NVRDAH650_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/NVRDAH650/NVRDAH650_400.jpg"
   },
   {
@@ -816,6 +744,7 @@
     "img_local": "assets/img/catalog/GRDDAH1120.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GRDDAH1120/GRDDAH1120_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GRDDAH1120/GRDDAH1120_400.jpg"
   },
   {
@@ -837,6 +766,7 @@
     "img_local": "assets/img/catalog/NVRDAH620.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/NVRDAH620/NVRDAH620_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/NVRDAH620/NVRDAH620_400.jpg"
   },
   {
@@ -858,6 +788,7 @@
     "img_local": "assets/img/catalog/CAMDAH6690.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6690/CAMDAH6690_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6690/CAMDAH6690_400.jpg"
   },
   {
@@ -879,6 +810,7 @@
     "img_local": "assets/img/catalog/CAMDAH3450.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3450/CAMDAH3450_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3450/CAMDAH3450_400.jpg"
   },
   {
@@ -900,6 +832,7 @@
     "img_local": "assets/img/catalog/CAMDAH6890.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6890/CAMDAH6890_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6890/CAMDAH6890_400.jpg"
   },
   {
@@ -921,6 +854,7 @@
     "img_local": "assets/img/catalog/CAMDAH6350.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6350/CAMDAH6350_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6350/CAMDAH6350_400.jpg"
   },
   {
@@ -942,6 +876,7 @@
     "img_local": "assets/img/catalog/CAMDAH6570.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6570/CAMDAH6570_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6570/CAMDAH6570_400.jpg"
   },
   {
@@ -963,6 +898,7 @@
     "img_local": "assets/img/catalog/CAMDAH6000.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6000/CAMDAH6000_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6000/CAMDAH6000_400.jpg"
   },
   {
@@ -984,6 +920,7 @@
     "img_local": "assets/img/catalog/CAMDAH6190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6190/CAMDAH6190_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6190/CAMDAH6190_400.jpg"
   },
   {
@@ -1005,6 +942,7 @@
     "img_local": "assets/img/catalog/CAMDAH6860.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6860/CAMDAH6860_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6860/CAMDAH6860_400.jpg"
   },
   {
@@ -1026,6 +964,7 @@
     "img_local": "assets/img/catalog/CAMDAH6870.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6870/CAMDAH6870_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6870/CAMDAH6870_400.jpg"
   },
   {
@@ -1047,6 +986,7 @@
     "img_local": "assets/img/catalog/CAMDAH6880.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6880/CAMDAH6880_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6880/CAMDAH6880_400.jpg"
   },
   {
@@ -1068,6 +1008,7 @@
     "img_local": "assets/img/catalog/CAMDAH6020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6020/CAMDAH6020_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6020/CAMDAH6020_400.jpg"
   },
   {
@@ -1089,6 +1030,7 @@
     "img_local": "assets/img/catalog/CAMDAH5710.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5710/CAMDAH5710_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5710/CAMDAH5710_400.jpg"
   },
   {
@@ -1110,6 +1052,7 @@
     "img_local": "assets/img/catalog/CAMDAH5790.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5790/CAMDAH5790_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5790/CAMDAH5790_400.jpg"
   },
   {
@@ -1131,6 +1074,7 @@
     "img_local": "assets/img/catalog/CAMDAH2320.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH2320/CAMDAH2320_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH2320/CAMDAH2320_400.jpg"
   },
   {
@@ -1152,6 +1096,7 @@
     "img_local": "assets/img/catalog/CAMDAH4080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH4080/CAMDAH4080_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH4080/CAMDAH4080_400.jpg"
   },
   {
@@ -1173,6 +1118,7 @@
     "img_local": "assets/img/catalog/CAMDAH6500.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6500/CAMDAH6500_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6500/CAMDAH6500_400.jpg"
   },
   {
@@ -1194,6 +1140,7 @@
     "img_local": "assets/img/catalog/CAMDAH2840.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH2840/CAMDAH2840_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH2840/CAMDAH2840_400.jpg"
   },
   {
@@ -1215,6 +1162,7 @@
     "img_local": "assets/img/catalog/CAMDAH5690.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5690/CAMDAH5690_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5690/CAMDAH5690_400.jpg"
   },
   {
@@ -1236,6 +1184,7 @@
     "img_local": "assets/img/catalog/CAMDAH3730.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3730/CAMDAH3730_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3730/CAMDAH3730_400.jpg"
   },
   {
@@ -1257,6 +1206,7 @@
     "img_local": "assets/img/catalog/CAMDAH5450.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5450/CAMDAH5450_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5450/CAMDAH5450_400.jpg"
   },
   {
@@ -1278,6 +1228,7 @@
     "img_local": "assets/img/catalog/CAMDAH5550.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5550/CAMDAH5550_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5550/CAMDAH5550_400.jpg"
   },
   {
@@ -1299,6 +1250,7 @@
     "img_local": "assets/img/catalog/CAMDAH5520.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5520/CAMDAH5520_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5520/CAMDAH5520_400.jpg"
   },
   {
@@ -1320,6 +1272,7 @@
     "img_local": "assets/img/catalog/CAMDAH5580.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5580/CAMDAH5580_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5580/CAMDAH5580_400.jpg"
   },
   {
@@ -1341,6 +1294,7 @@
     "img_local": "assets/img/catalog/CAMDAH5530.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5530/CAMDAH5530_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5530/CAMDAH5530_400.jpg"
   },
   {
@@ -1362,6 +1316,7 @@
     "img_local": "assets/img/catalog/CAMDAH3930.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3930/CAMDAH3930_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3930/CAMDAH3930_400.jpg"
   },
   {
@@ -1383,6 +1338,7 @@
     "img_local": "assets/img/catalog/CAMDAH3920.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3920/CAMDAH3920_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3920/CAMDAH3920_400.jpg"
   },
   {
@@ -1404,6 +1360,7 @@
     "img_local": "assets/img/catalog/CAMDAH4270.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH4270/CAMDAH4270_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH4270/CAMDAH4270_400.jpg"
   },
   {
@@ -1425,6 +1382,7 @@
     "img_local": "assets/img/catalog/CAMDAH3350.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3350/CAMDAH3350_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3350/CAMDAH3350_400.jpg"
   },
   {
@@ -1446,6 +1404,7 @@
     "img_local": "assets/img/catalog/CAMDAH4680.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH4680/CAMDAH4680_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH4680/CAMDAH4680_400.jpg"
   },
   {
@@ -1467,6 +1426,7 @@
     "img_local": "assets/img/catalog/CAMDAH5220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5220/CAMDAH5220_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5220/CAMDAH5220_400.jpg"
   },
   {
@@ -1488,6 +1448,7 @@
     "img_local": "assets/img/catalog/CAMDAH6610.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6610/CAMDAH6610_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6610/CAMDAH6610_400.jpg"
   },
   {
@@ -1509,6 +1470,7 @@
     "img_local": "assets/img/catalog/CAMDAH6210.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6210/CAMDAH6210_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6210/CAMDAH6210_400.jpg"
   },
   {
@@ -1530,28 +1492,8 @@
     "img_local": "assets/img/catalog/CAMDAH6270.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6270/CAMDAH6270_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6270/CAMDAH6270_400.jpg"
-  },
-  {
-    "sku": "CAMDAH6280",
-    "nombre": "Cámara DAHUA DHI-DAE-CDM5110-CYN - Cámara para Monitoreo de Conductor, Lente de 4mm, IR de 3 Mts, Para DVR Móvil, Analít",
-    "descripcion_completa": "Cámara DAHUA DHI-DAE-CDM5110-CYN - Cámara para Monitoreo de Conductor, Lente de 4mm, IR de 3 Mts, Para DVR Móvil, Analítico DSM, Detecta Cansancio y Distracción en Rostro del Conductor, Uso Interior.",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "CÁMARA",
-    "costo_base": 70.59,
-    "precio_mxn": 1858.32,
-    "precio_original": 2202.45,
-    "img": "https://static.ctonline.mx/imagenes/CAMDAH6280/CAMDAH6280_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/CMARA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CAMDAH6280",
-    "costo_proveedor_mxn": 1376.53,
-    "precio": 1858.32,
-    "precio_mayoreo_10pzs": 1651.84,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/CAMDAH6280.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6280/CAMDAH6280_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6280/CAMDAH6280_400.jpg"
   },
   {
     "sku": "CAMDAH5980",
@@ -1572,6 +1514,7 @@
     "img_local": "assets/img/catalog/CAMDAH5980.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5980/CAMDAH5980_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5980/CAMDAH5980_400.jpg"
   },
   {
@@ -1593,6 +1536,7 @@
     "img_local": "assets/img/catalog/CAMDAH6330.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6330/CAMDAH6330_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6330/CAMDAH6330_400.jpg"
   },
   {
@@ -1614,6 +1558,7 @@
     "img_local": "assets/img/catalog/CAMDAH5250.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5250/CAMDAH5250_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5250/CAMDAH5250_400.jpg"
   },
   {
@@ -1635,6 +1580,7 @@
     "img_local": "assets/img/catalog/CAMDAH4620.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH4620/CAMDAH4620_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH4620/CAMDAH4620_400.jpg"
   },
   {
@@ -1656,6 +1602,7 @@
     "img_local": "assets/img/catalog/CAMDAH6030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6030/CAMDAH6030_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6030/CAMDAH6030_400.jpg"
   },
   {
@@ -1677,6 +1624,7 @@
     "img_local": "assets/img/catalog/CAMDAH5720.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5720/CAMDAH5720_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5720/CAMDAH5720_400.jpg"
   },
   {
@@ -1698,6 +1646,7 @@
     "img_local": "assets/img/catalog/CAMDAH6300.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6300/CAMDAH6300_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6300/CAMDAH6300_400.jpg"
   },
   {
@@ -1719,6 +1668,7 @@
     "img_local": "assets/img/catalog/CAMDAH4160.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH4160/CAMDAH4160_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH4160/CAMDAH4160_400.jpg"
   },
   {
@@ -1740,6 +1690,7 @@
     "img_local": "assets/img/catalog/CAMDAH4190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH4190/CAMDAH4190_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH4190/CAMDAH4190_400.jpg"
   },
   {
@@ -1761,6 +1712,7 @@
     "img_local": "assets/img/catalog/CAMDAH5960.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5960/CAMDAH5960_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5960/CAMDAH5960_400.jpg"
   },
   {
@@ -1782,6 +1734,7 @@
     "img_local": "assets/img/catalog/CAMDAH5940.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5940/CAMDAH5940_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5940/CAMDAH5940_400.jpg"
   },
   {
@@ -1803,6 +1756,7 @@
     "img_local": "assets/img/catalog/CAMDAH2550.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH2550/CAMDAH2550_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH2550/CAMDAH2550_400.jpg"
   },
   {
@@ -1824,6 +1778,7 @@
     "img_local": "assets/img/catalog/CAMDAH4700.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH4700/CAMDAH4700_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH4700/CAMDAH4700_400.jpg"
   },
   {
@@ -1845,6 +1800,7 @@
     "img_local": "assets/img/catalog/CAMDAH3950.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3950/CAMDAH3950_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3950/CAMDAH3950_400.jpg"
   },
   {
@@ -1866,6 +1822,7 @@
     "img_local": "assets/img/catalog/CAMDAH3070.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3070/CAMDAH3070_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3070/CAMDAH3070_400.jpg"
   },
   {
@@ -1887,6 +1844,7 @@
     "img_local": "assets/img/catalog/CAMDAH2820.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH2820/CAMDAH2820_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH2820/CAMDAH2820_400.jpg"
   },
   {
@@ -1908,6 +1866,7 @@
     "img_local": "assets/img/catalog/CAMDAH6360.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6360/CAMDAH6360_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6360/CAMDAH6360_400.jpg"
   },
   {
@@ -1929,6 +1888,7 @@
     "img_local": "assets/img/catalog/CAMDAH6370.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6370/CAMDAH6370_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6370/CAMDAH6370_400.jpg"
   },
   {
@@ -1950,6 +1910,7 @@
     "img_local": "assets/img/catalog/CAMDAH6380.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6380/CAMDAH6380_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6380/CAMDAH6380_400.jpg"
   },
   {
@@ -1971,6 +1932,7 @@
     "img_local": "assets/img/catalog/CAMDAH6390.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6390/CAMDAH6390_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6390/CAMDAH6390_400.jpg"
   },
   {
@@ -1992,6 +1954,7 @@
     "img_local": "assets/img/catalog/CAMDAH6400.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6400/CAMDAH6400_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6400/CAMDAH6400_400.jpg"
   },
   {
@@ -2013,6 +1976,7 @@
     "img_local": "assets/img/catalog/CAMDAH6410.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6410/CAMDAH6410_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6410/CAMDAH6410_400.jpg"
   },
   {
@@ -2034,6 +1998,7 @@
     "img_local": "assets/img/catalog/CAMDAH6420.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6420/CAMDAH6420_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6420/CAMDAH6420_400.jpg"
   },
   {
@@ -2055,6 +2020,7 @@
     "img_local": "assets/img/catalog/CAMDAH6440.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6440/CAMDAH6440_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6440/CAMDAH6440_400.jpg"
   },
   {
@@ -2076,6 +2042,7 @@
     "img_local": "assets/img/catalog/CAMDAH2570.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH2570/CAMDAH2570_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH2570/CAMDAH2570_400.jpg"
   },
   {
@@ -2097,6 +2064,7 @@
     "img_local": "assets/img/catalog/CAMDAH3710.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3710/CAMDAH3710_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3710/CAMDAH3710_400.jpg"
   },
   {
@@ -2118,6 +2086,7 @@
     "img_local": "assets/img/catalog/CAMDAH4170.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH4170/CAMDAH4170_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH4170/CAMDAH4170_400.jpg"
   },
   {
@@ -2139,6 +2108,7 @@
     "img_local": "assets/img/catalog/CAMDAH3300.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3300/CAMDAH3300_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3300/CAMDAH3300_400.jpg"
   },
   {
@@ -2160,6 +2130,7 @@
     "img_local": "assets/img/catalog/CAMDAH2180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH2180/CAMDAH2180_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH2180/CAMDAH2180_400.jpg"
   },
   {
@@ -2181,6 +2152,7 @@
     "img_local": "assets/img/catalog/CAMDAH2970.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH2970/CAMDAH2970_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH2970/CAMDAH2970_400.jpg"
   },
   {
@@ -2202,6 +2174,7 @@
     "img_local": "assets/img/catalog/CAMDAH2040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH2040/CAMDAH2040_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH2040/CAMDAH2040_400.jpg"
   },
   {
@@ -2223,6 +2196,7 @@
     "img_local": "assets/img/catalog/CAMDAH2870.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH2870/CAMDAH2870_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH2870/CAMDAH2870_400.jpg"
   },
   {
@@ -2244,6 +2218,7 @@
     "img_local": "assets/img/catalog/CAMDAH6010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6010/CAMDAH6010_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6010/CAMDAH6010_400.jpg"
   },
   {
@@ -2265,6 +2240,7 @@
     "img_local": "assets/img/catalog/CAMDAH6340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6340/CAMDAH6340_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6340/CAMDAH6340_400.jpg"
   },
   {
@@ -2286,6 +2262,7 @@
     "img_local": "assets/img/catalog/CAMDAH5910.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5910/CAMDAH5910_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5910/CAMDAH5910_400.jpg"
   },
   {
@@ -2307,6 +2284,7 @@
     "img_local": "assets/img/catalog/CAMDAH6460.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6460/CAMDAH6460_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6460/CAMDAH6460_400.jpg"
   },
   {
@@ -2328,6 +2306,7 @@
     "img_local": "assets/img/catalog/CAMDAH6580.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6580/CAMDAH6580_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6580/CAMDAH6580_400.jpg"
   },
   {
@@ -2349,6 +2328,7 @@
     "img_local": "assets/img/catalog/CAMDAH6640.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6640/CAMDAH6640_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6640/CAMDAH6640_400.jpg"
   },
   {
@@ -2370,6 +2350,7 @@
     "img_local": "assets/img/catalog/CAMDAH6530.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6530/CAMDAH6530_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6530/CAMDAH6530_400.jpg"
   },
   {
@@ -2391,6 +2372,7 @@
     "img_local": "assets/img/catalog/CAMDAH5280.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5280/CAMDAH5280_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5280/CAMDAH5280_400.jpg"
   },
   {
@@ -2412,6 +2394,7 @@
     "img_local": "assets/img/catalog/CAMDAH6620.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6620/CAMDAH6620_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6620/CAMDAH6620_400.jpg"
   },
   {
@@ -2433,6 +2416,7 @@
     "img_local": "assets/img/catalog/CAMDAH6560.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6560/CAMDAH6560_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6560/CAMDAH6560_400.jpg"
   },
   {
@@ -2454,6 +2438,7 @@
     "img_local": "assets/img/catalog/CAMDAH6250.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6250/CAMDAH6250_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6250/CAMDAH6250_400.jpg"
   },
   {
@@ -2475,6 +2460,7 @@
     "img_local": "assets/img/catalog/CAMDAH7100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH7100/CAMDAH7100_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH7100/CAMDAH7100_400.jpg"
   },
   {
@@ -2496,6 +2482,7 @@
     "img_local": "assets/img/catalog/CAMDAH3180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3180/CAMDAH3180_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3180/CAMDAH3180_400.jpg"
   },
   {
@@ -2517,6 +2504,7 @@
     "img_local": "assets/img/catalog/CAMDAH6220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6220/CAMDAH6220_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6220/CAMDAH6220_400.jpg"
   },
   {
@@ -2538,6 +2526,7 @@
     "img_local": "assets/img/catalog/CAMDAH5870.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5870/CAMDAH5870_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5870/CAMDAH5870_400.jpg"
   },
   {
@@ -2559,6 +2548,7 @@
     "img_local": "assets/img/catalog/CAMDAH5900.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5900/CAMDAH5900_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5900/CAMDAH5900_400.jpg"
   },
   {
@@ -2580,6 +2570,7 @@
     "img_local": "assets/img/catalog/CAMDAH5930.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5930/CAMDAH5930_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5930/CAMDAH5930_400.jpg"
   },
   {
@@ -2601,6 +2592,7 @@
     "img_local": "assets/img/catalog/CAMDAH3310.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3310/CAMDAH3310_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3310/CAMDAH3310_400.jpg"
   },
   {
@@ -2622,6 +2614,7 @@
     "img_local": "assets/img/catalog/CAMDAH3500.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3500/CAMDAH3500_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3500/CAMDAH3500_400.jpg"
   },
   {
@@ -2643,6 +2636,7 @@
     "img_local": "assets/img/catalog/CAMDAH3390.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3390/CAMDAH3390_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3390/CAMDAH3390_400.jpg"
   },
   {
@@ -2664,6 +2658,7 @@
     "img_local": "assets/img/catalog/CAMDAH2060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH2060/CAMDAH2060_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH2060/CAMDAH2060_400.jpg"
   },
   {
@@ -2685,6 +2680,7 @@
     "img_local": "assets/img/catalog/CAMDAH3560.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3560/CAMDAH3560_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3560/CAMDAH3560_400.jpg"
   },
   {
@@ -2706,6 +2702,7 @@
     "img_local": "assets/img/catalog/CAMDAH3510.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3510/CAMDAH3510_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3510/CAMDAH3510_400.jpg"
   },
   {
@@ -2727,6 +2724,7 @@
     "img_local": "assets/img/catalog/CAMDAH3480.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3480/CAMDAH3480_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3480/CAMDAH3480_400.jpg"
   },
   {
@@ -2748,6 +2746,7 @@
     "img_local": "assets/img/catalog/CAMDAH3820.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3820/CAMDAH3820_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3820/CAMDAH3820_400.jpg"
   },
   {
@@ -2769,6 +2768,7 @@
     "img_local": "assets/img/catalog/CAMDAH3340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3340/CAMDAH3340_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3340/CAMDAH3340_400.jpg"
   },
   {
@@ -2790,6 +2790,7 @@
     "img_local": "assets/img/catalog/CAMDAH3780.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3780/CAMDAH3780_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3780/CAMDAH3780_400.jpg"
   },
   {
@@ -2811,6 +2812,7 @@
     "img_local": "assets/img/catalog/CAMDAH6960.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6960/CAMDAH6960_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6960/CAMDAH6960_400.jpg"
   },
   {
@@ -2832,6 +2834,7 @@
     "img_local": "assets/img/catalog/CAMDAH6970.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6970/CAMDAH6970_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6970/CAMDAH6970_400.jpg"
   },
   {
@@ -2853,6 +2856,7 @@
     "img_local": "assets/img/catalog/CAMDAH6230.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6230/CAMDAH6230_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6230/CAMDAH6230_400.jpg"
   },
   {
@@ -2874,6 +2878,7 @@
     "img_local": "assets/img/catalog/CAMDAH6240.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6240/CAMDAH6240_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6240/CAMDAH6240_400.jpg"
   },
   {
@@ -2895,6 +2900,7 @@
     "img_local": "assets/img/catalog/CAMDAH2620.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH2620/CAMDAH2620_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH2620/CAMDAH2620_400.jpg"
   },
   {
@@ -2916,6 +2922,7 @@
     "img_local": "assets/img/catalog/CAMDAH4980.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH4980/CAMDAH4980_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH4980/CAMDAH4980_400.jpg"
   },
   {
@@ -2937,6 +2944,7 @@
     "img_local": "assets/img/catalog/CAMDAH2610.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH2610/CAMDAH2610_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH2610/CAMDAH2610_400.jpg"
   },
   {
@@ -2958,6 +2966,7 @@
     "img_local": "assets/img/catalog/CAMDAH5400.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5400/CAMDAH5400_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5400/CAMDAH5400_400.jpg"
   },
   {
@@ -2979,6 +2988,7 @@
     "img_local": "assets/img/catalog/CAMDAH2660.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH2660/CAMDAH2660_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH2660/CAMDAH2660_400.jpg"
   },
   {
@@ -3000,6 +3010,7 @@
     "img_local": "assets/img/catalog/CAMDAH6630.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6630/CAMDAH6630_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6630/CAMDAH6630_400.jpg"
   },
   {
@@ -3021,6 +3032,7 @@
     "img_local": "assets/img/catalog/CAMDAH1810.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH1810/CAMDAH1810_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH1810/CAMDAH1810_400.jpg"
   },
   {
@@ -3042,6 +3054,7 @@
     "img_local": "assets/img/catalog/CAMDAH3490.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3490/CAMDAH3490_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3490/CAMDAH3490_400.jpg"
   },
   {
@@ -3063,6 +3076,7 @@
     "img_local": "assets/img/catalog/CAMDAH6510.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6510/CAMDAH6510_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6510/CAMDAH6510_400.jpg"
   },
   {
@@ -3084,6 +3098,7 @@
     "img_local": "assets/img/catalog/CAMDAH6260.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6260/CAMDAH6260_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6260/CAMDAH6260_400.jpg"
   },
   {
@@ -3105,6 +3120,7 @@
     "img_local": "assets/img/catalog/CAMDAH6600.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6600/CAMDAH6600_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6600/CAMDAH6600_400.jpg"
   },
   {
@@ -3126,6 +3142,7 @@
     "img_local": "assets/img/catalog/CAMDAH6850.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6850/CAMDAH6850_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6850/CAMDAH6850_400.jpg"
   },
   {
@@ -3147,6 +3164,7 @@
     "img_local": "assets/img/catalog/CAMDAH2630.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH2630/CAMDAH2630_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH2630/CAMDAH2630_400.jpg"
   },
   {
@@ -3168,6 +3186,7 @@
     "img_local": "assets/img/catalog/CAMDAH3170.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3170/CAMDAH3170_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3170/CAMDAH3170_400.jpg"
   },
   {
@@ -3189,6 +3208,7 @@
     "img_local": "assets/img/catalog/CAMDAH3550.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3550/CAMDAH3550_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3550/CAMDAH3550_400.jpg"
   },
   {
@@ -3210,6 +3230,7 @@
     "img_local": "assets/img/catalog/CAMDAH3190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3190/CAMDAH3190_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3190/CAMDAH3190_400.jpg"
   },
   {
@@ -3231,6 +3252,7 @@
     "img_local": "assets/img/catalog/CAMDAH3200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3200/CAMDAH3200_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3200/CAMDAH3200_400.jpg"
   },
   {
@@ -3252,6 +3274,7 @@
     "img_local": "assets/img/catalog/CAMDAH2810.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH2810/CAMDAH2810_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH2810/CAMDAH2810_400.jpg"
   },
   {
@@ -3273,6 +3296,7 @@
     "img_local": "assets/img/catalog/CAMDAH6180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6180/CAMDAH6180_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6180/CAMDAH6180_400.jpg"
   },
   {
@@ -3294,6 +3318,7 @@
     "img_local": "assets/img/catalog/CAMDAH6170.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6170/CAMDAH6170_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6170/CAMDAH6170_400.jpg"
   },
   {
@@ -3315,6 +3340,7 @@
     "img_local": "assets/img/catalog/CAMDAH5460.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5460/CAMDAH5460_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5460/CAMDAH5460_400.jpg"
   },
   {
@@ -3336,6 +3362,7 @@
     "img_local": "assets/img/catalog/CAMDAH5510.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH5510/CAMDAH5510_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH5510/CAMDAH5510_400.jpg"
   },
   {
@@ -3357,6 +3384,7 @@
     "img_local": "assets/img/catalog/CAMDAH6830.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH6830/CAMDAH6830_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH6830/CAMDAH6830_400.jpg"
   },
   {
@@ -3378,6 +3406,7 @@
     "img_local": "assets/img/catalog/CAMDAH3720.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH3720/CAMDAH3720_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH3720/CAMDAH3720_400.jpg"
   },
   {
@@ -3399,6 +3428,7 @@
     "img_local": "assets/img/catalog/ACCDAH2580.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH2580/ACCDAH2580_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH2580/ACCDAH2580_400.jpg"
   },
   {
@@ -3420,6 +3450,7 @@
     "img_local": "assets/img/catalog/ACCDAH2590.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH2590/ACCDAH2590_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH2590/ACCDAH2590_400.jpg"
   },
   {
@@ -3441,6 +3472,7 @@
     "img_local": "assets/img/catalog/ACCDAH2600.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH2600/ACCDAH2600_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH2600/ACCDAH2600_400.jpg"
   },
   {
@@ -3462,6 +3494,7 @@
     "img_local": "assets/img/catalog/ACCDAH1460.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH1460/ACCDAH1460_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH1460/ACCDAH1460_400.jpg"
   },
   {
@@ -3483,6 +3516,7 @@
     "img_local": "assets/img/catalog/ACCDAH2180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH2180/ACCDAH2180_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH2180/ACCDAH2180_400.jpg"
   },
   {
@@ -3504,6 +3538,7 @@
     "img_local": "assets/img/catalog/ACCDAH2420.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH2420/ACCDAH2420_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH2420/ACCDAH2420_400.jpg"
   },
   {
@@ -3525,6 +3560,7 @@
     "img_local": "assets/img/catalog/ACCDAH1020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH1020/ACCDAH1020_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH1020/ACCDAH1020_400.jpg"
   },
   {
@@ -3546,6 +3582,7 @@
     "img_local": "assets/img/catalog/ACCDAH1470.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH1470/ACCDAH1470_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH1470/ACCDAH1470_400.jpg"
   },
   {
@@ -3567,6 +3604,7 @@
     "img_local": "assets/img/catalog/ACCDAH600.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH600/ACCDAH600_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH600/ACCDAH600_400.jpg"
   },
   {
@@ -3588,6 +3626,7 @@
     "img_local": "assets/img/catalog/ACCDAH1250.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH1250/ACCDAH1250_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH1250/ACCDAH1250_400.jpg"
   },
   {
@@ -3609,6 +3648,7 @@
     "img_local": "assets/img/catalog/LECDAH010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/LECDAH010/LECDAH010_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/LECDAH010/LECDAH010_400.jpg"
   },
   {
@@ -3630,6 +3670,7 @@
     "img_local": "assets/img/catalog/ACCDAH1840.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH1840/ACCDAH1840_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH1840/ACCDAH1840_400.jpg"
   },
   {
@@ -3651,6 +3692,7 @@
     "img_local": "assets/img/catalog/ACCDAH1620.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH1620/ACCDAH1620_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH1620/ACCDAH1620_400.jpg"
   },
   {
@@ -3672,6 +3714,7 @@
     "img_local": "assets/img/catalog/ACCDAH1570.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH1570/ACCDAH1570_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH1570/ACCDAH1570_400.jpg"
   },
   {
@@ -3693,6 +3736,7 @@
     "img_local": "assets/img/catalog/ACCDAH1580.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH1580/ACCDAH1580_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH1580/ACCDAH1580_400.jpg"
   },
   {
@@ -3714,6 +3758,7 @@
     "img_local": "assets/img/catalog/ACCDAH1960.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH1960/ACCDAH1960_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH1960/ACCDAH1960_400.jpg"
   },
   {
@@ -3735,6 +3780,7 @@
     "img_local": "assets/img/catalog/ACCDAH2490.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH2490/ACCDAH2490_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH2490/ACCDAH2490_400.jpg"
   },
   {
@@ -3756,6 +3802,7 @@
     "img_local": "assets/img/catalog/ACCDAH1560.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH1560/ACCDAH1560_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH1560/ACCDAH1560_400.jpg"
   },
   {
@@ -3777,6 +3824,7 @@
     "img_local": "assets/img/catalog/ACCDAH1920.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH1920/ACCDAH1920_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH1920/ACCDAH1920_400.jpg"
   },
   {
@@ -3798,6 +3846,7 @@
     "img_local": "assets/img/catalog/ACCDAH970.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH970/ACCDAH970_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH970/ACCDAH970_400.jpg"
   },
   {
@@ -3819,6 +3868,7 @@
     "img_local": "assets/img/catalog/ACCDAH1600.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH1600/ACCDAH1600_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH1600/ACCDAH1600_400.jpg"
   },
   {
@@ -3840,6 +3890,7 @@
     "img_local": "assets/img/catalog/ACCDAH220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH220/ACCDAH220_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH220/ACCDAH220_400.jpg"
   },
   {
@@ -3861,6 +3912,7 @@
     "img_local": "assets/img/catalog/ACCDAH820.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH820/ACCDAH820_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH820/ACCDAH820_400.jpg"
   },
   {
@@ -3882,6 +3934,7 @@
     "img_local": "assets/img/catalog/ACCDAH2810.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH2810/ACCDAH2810_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH2810/ACCDAH2810_400.jpg"
   },
   {
@@ -3903,6 +3956,7 @@
     "img_local": "assets/img/catalog/PANDAH050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/PANDAH050/PANDAH050_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/PANDAH050/PANDAH050_400.jpg"
   },
   {
@@ -3924,6 +3978,7 @@
     "img_local": "assets/img/catalog/ACCDAH2020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH2020/ACCDAH2020_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH2020/ACCDAH2020_400.jpg"
   },
   {
@@ -3945,6 +4000,7 @@
     "img_local": "assets/img/catalog/ACCDAH2520.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH2520/ACCDAH2520_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH2520/ACCDAH2520_400.jpg"
   },
   {
@@ -3966,6 +4022,7 @@
     "img_local": "assets/img/catalog/ACCDAH2010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH2010/ACCDAH2010_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH2010/ACCDAH2010_400.jpg"
   },
   {
@@ -3987,6 +4044,7 @@
     "img_local": "assets/img/catalog/ACCDAH1830.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDAH1830/ACCDAH1830_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDAH1830/ACCDAH1830_400.jpg"
   },
   {
@@ -4008,6 +4066,7 @@
     "img_local": "assets/img/catalog/CONDAH010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CONDAH010/CONDAH010_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CONDAH010/CONDAH010_400.jpg"
   },
   {
@@ -4029,6 +4088,7 @@
     "img_local": "assets/img/catalog/CABDAH130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABDAH130/CABDAH130_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABDAH130/CABDAH130_400.jpg"
   },
   {
@@ -4050,196 +4110,8 @@
     "img_local": "assets/img/catalog/CABDAH020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABDAH020/CABDAH020_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABDAH020/CABDAH020_400.jpg"
-  },
-  {
-    "sku": "MONDAH270",
-    "nombre": "Monitor DAHUA 21.5 DHI-LM22-A211Y bisel ultra estrecho, procesamiento digital de alta fidelidad ,visión extra amplia de ",
-    "descripcion_completa": "Monitor DAHUA 21.5 DHI-LM22-A211Y bisel ultra estrecho, procesamiento digital de alta fidelidad ,visión extra amplia de 178\", 100 Hz  3 años de garantía .",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "DAHUA",
-    "costo_base": 52.5,
-    "precio_mxn": 1382.06,
-    "precio_original": 1638.0,
-    "img": "https://static.ctonline.mx/imagenes/MONDAH270/MONDAH270_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/DAHUA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONDAH270",
-    "costo_proveedor_mxn": 1023.75,
-    "precio": 1382.06,
-    "precio_mayoreo_10pzs": 1228.5,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONDAH270.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONDAH270/MONDAH270_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/MONDAH270/MONDAH270_400.jpg"
-  },
-  {
-    "sku": "MONDAH260",
-    "nombre": "Monitor DAHUA 23.8 DHI-LM24-A200Y ultra delgado  3 años de garantia .",
-    "descripcion_completa": "Monitor DAHUA 23.8 DHI-LM24-A200Y ultra delgado  3 años de garantia .",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "DAHUA",
-    "costo_base": 61.16,
-    "precio_mxn": 1610.01,
-    "precio_original": 1908.16,
-    "img": "https://static.ctonline.mx/imagenes/MONDAH260/MONDAH260_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/DAHUA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONDAH260",
-    "costo_proveedor_mxn": 1192.6,
-    "precio": 1610.01,
-    "precio_mayoreo_10pzs": 1431.12,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONDAH260.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONDAH260/MONDAH260_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/MONDAH260/MONDAH260_400.jpg"
-  },
-  {
-    "sku": "MONDAH280",
-    "nombre": "Monitor DAHUA DHI-LM27-A201H  Angulo de visión extra amplio de 178°H/178°V procesamiento digital de alta fidelidad, admi",
-    "descripcion_completa": "Monitor DAHUA DHI-LM27-A201H  Angulo de visión extra amplio de 178°H/178°V procesamiento digital de alta fidelidad, admite múltiples entradas de señal HDMI y VGA modo de control mediante botones fisicos, bajo consumo de energía.",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "DAHUA",
-    "costo_base": 78.81,
-    "precio_mxn": 2074.59,
-    "precio_original": 2458.77,
-    "img": "https://static.ctonline.mx/imagenes/MONDAH280/MONDAH280_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/DAHUA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONDAH280",
-    "costo_proveedor_mxn": 1536.73,
-    "precio": 2074.59,
-    "precio_mayoreo_10pzs": 1844.08,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONDAH280.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONDAH280/MONDAH280_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/MONDAH280/MONDAH280_400.jpg"
-  },
-  {
-    "sku": "MONDAH200",
-    "nombre": "Monitor Dahua DHI-LM22-B201S-B3 Carcasa de plástico ligera y económica; Bisel ultraestrecho, apariencia elegante, base d",
-    "descripcion_completa": "Monitor Dahua DHI-LM22-B201S-B3 Carcasa de plástico ligera y económica; Bisel ultraestrecho, apariencia elegante, base de metal; Ángulo de visión extra amplio de 178°H/178°V para un rendimiento de visualización general; Procesamiento digital de alta fidelidad para un vídeo brillante y vívido; Admite múltiples entradas de señal como HDMI, VGA; Modo de control de botón físico; Bajo consumo de energía, larga vida útil; Diseño de luz anti-azul, protector para los ojos.",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "DAHUA",
-    "costo_base": 56.14,
-    "precio_mxn": 1477.89,
-    "precio_original": 1751.57,
-    "img": "https://static.ctonline.mx/imagenes/MONDAH200/MONDAH200_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/DAHUA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONDAH200",
-    "costo_proveedor_mxn": 1094.73,
-    "precio": 1477.89,
-    "precio_mayoreo_10pzs": 1313.68,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONDAH200.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONDAH200/MONDAH200_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/MONDAH200/MONDAH200_400.jpg"
-  },
-  {
-    "sku": "MONDAH210",
-    "nombre": "Monitor Dahua DHI-LM24-B201S-B3 Carcasa de plástico ligera y económica; Bisel ultraestrecho, apariencia elegante, base d",
-    "descripcion_completa": "Monitor Dahua DHI-LM24-B201S-B3 Carcasa de plástico ligera y económica; Bisel ultraestrecho, apariencia elegante, base de metal; Ángulo de visión extra amplio de 178°H/178°V para un rendimiento de visualización general; Procesamiento digital de alta fidelidad para un vídeo brillante y vívido;\n Admite múltiples entradas de señal como HDMI, VGA; Modo de control de botón físico; Bajo consumo de energía, larga vida útil; Diseño de luz anti-azul, protector para los ojos.",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "DAHUA",
-    "costo_base": 63.34,
-    "precio_mxn": 1667.53,
-    "precio_original": 1976.34,
-    "img": "https://static.ctonline.mx/imagenes/MONDAH210/MONDAH210_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/DAHUA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONDAH210",
-    "costo_proveedor_mxn": 1235.21,
-    "precio": 1667.53,
-    "precio_mayoreo_10pzs": 1482.25,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONDAH210.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONDAH210/MONDAH210_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/MONDAH210/MONDAH210_400.jpg"
-  },
-  {
-    "sku": "MONDAH190",
-    "nombre": "Monitor Dahua DHI-LM27-A200F Carcasa de plástico ligera y económica; Bisel ultraestrecho, apariencia elegante, base de m",
-    "descripcion_completa": "Monitor Dahua DHI-LM27-A200F Carcasa de plástico ligera y económica; Bisel ultraestrecho, apariencia elegante, base de metal; Ángulo de visión extra amplio de 178°H/178°V para un rendimiento de visualización general; Procesamiento digital de alta fidelidad para un vídeo brillante y vívido; Admite múltiples entradas de señal, incluidas HDMI y VGA; Bajo consumo de energía, larga vida útil; Diseño de luz anti-azul, protector para los ojos",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "DAHUA",
-    "costo_base": 77.32,
-    "precio_mxn": 2035.52,
-    "precio_original": 2412.46,
-    "img": "https://static.ctonline.mx/imagenes/MONDAH190/MONDAH190_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/DAHUA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONDAH190",
-    "costo_proveedor_mxn": 1507.79,
-    "precio": 2035.52,
-    "precio_mayoreo_10pzs": 1809.35,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONDAH190.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONDAH190/MONDAH190_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/MONDAH190/MONDAH190_400.jpg"
-  },
-  {
-    "sku": "MONDAH140",
-    "nombre": "DAHUA DHI-LM22-B200S - Monitor de 21.45 Pulgadas/ Ultra Delgado/ 1920×1080/ Angulo de Visualización de 178 Grados/ Altav",
-    "descripcion_completa": "DAHUA DHI-LM22-B200S - Monitor de 21.45 Pulgadas/ Ultra Delgado/ 1920×1080/ Angulo de Visualización de 178 Grados/ Altavoces Integrados/ HDMI&VGA/ Diseño de Micro Bisel",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "DAHUA",
-    "costo_base": 76.55,
-    "precio_mxn": 2015.13,
-    "precio_original": 2388.3,
-    "img": "https://static.ctonline.mx/imagenes/MONDAH140/MONDAH140_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/DAHUA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONDAH140",
-    "costo_proveedor_mxn": 1492.69,
-    "precio": 2015.13,
-    "precio_mayoreo_10pzs": 1791.23,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONDAH140.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONDAH140/MONDAH140_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/MONDAH140/MONDAH140_400.jpg"
-  },
-  {
-    "sku": "MONDAH150",
-    "nombre": "DAHUA DHI-LM24-B200S - Monitor de 23.80 Pulgadas/ Ultra Delgado/ 1920×1080/ Angulo de Visualización de 178 Grados/ Altav",
-    "descripcion_completa": "DAHUA DHI-LM24-B200S - Monitor de 23.80 Pulgadas/ Ultra Delgado/ 1920×1080/ Angulo de Visualización de 178 Grados/ Altavoces Integrados/ HDMI&VGA/ Diseño de Micro Bisel",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "DAHUA",
-    "costo_base": 90.19,
-    "precio_mxn": 2374.34,
-    "precio_original": 2814.03,
-    "img": "https://static.ctonline.mx/imagenes/MONDAH150/MONDAH150_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/DAHUA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONDAH150",
-    "costo_proveedor_mxn": 1758.77,
-    "precio": 2374.34,
-    "precio_mayoreo_10pzs": 2110.52,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONDAH150.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONDAH150/MONDAH150_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/MONDAH150/MONDAH150_400.jpg"
-  },
-  {
-    "sku": "MONDAH250",
-    "nombre": "Monitor DAHUA 27 DHI-LM27-B200S Monitor de 27 Pulgadas/ Full HD/ Especial para Videovigilancia/ Ideal para trabajo 24/7/",
-    "descripcion_completa": "Monitor DAHUA 27 DHI-LM27-B200S Monitor de 27 Pulgadas/ Full HD/ Especial para Videovigilancia/ Ideal para trabajo 24/7/ Marco Ultra Delgado/ Angulo de 178 Grados de Visualización/ Entrada HDMI&VGA/ VESA/ Bajo consumo de energía",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "DAHUA",
-    "costo_base": 145.96,
-    "precio_mxn": 3842.32,
-    "precio_original": 4553.86,
-    "img": "https://static.ctonline.mx/imagenes/MONDAH250/MONDAH250_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/DAHUA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONDAH250",
-    "costo_proveedor_mxn": 2846.16,
-    "precio": 3842.32,
-    "precio_mayoreo_10pzs": 3415.39,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONDAH250.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONDAH250/MONDAH250_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/MONDAH250/MONDAH250_400.jpg"
   },
   {
     "sku": "CAMIMO130",
@@ -4260,6 +4132,7 @@
     "img_local": "assets/img/catalog/CAMIMO130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMIMO130/CAMIMO130_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMIMO130/CAMIMO130_400.jpg"
   },
   {
@@ -4281,6 +4154,7 @@
     "img_local": "assets/img/catalog/GRDDAH1220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GRDDAH1220/GRDDAH1220_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GRDDAH1220/GRDDAH1220_400.jpg"
   },
   {
@@ -4302,6 +4176,7 @@
     "img_local": "assets/img/catalog/GRDDAH1230.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GRDDAH1230/GRDDAH1230_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GRDDAH1230/GRDDAH1230_400.jpg"
   },
   {
@@ -4323,6 +4198,7 @@
     "img_local": "assets/img/catalog/CAMTPL410.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL410/CAMTPL410_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTPL410/CAMTPL410_400.jpg"
   },
   {
@@ -4344,6 +4220,7 @@
     "img_local": "assets/img/catalog/CAMTPL550.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL550/CAMTPL550_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTPL550/CAMTPL550_400.jpg"
   },
   {
@@ -4365,6 +4242,7 @@
     "img_local": "assets/img/catalog/CAMTPL560.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL560/CAMTPL560_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTPL560/CAMTPL560_400.jpg"
   },
   {
@@ -4386,6 +4264,7 @@
     "img_local": "assets/img/catalog/CAMTPL260.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL260/CAMTPL260_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTPL260/CAMTPL260_400.jpg"
   },
   {
@@ -4407,6 +4286,7 @@
     "img_local": "assets/img/catalog/CAMTPL250.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL250/CAMTPL250_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTPL250/CAMTPL250_400.jpg"
   },
   {
@@ -4428,6 +4308,7 @@
     "img_local": "assets/img/catalog/CAMTPL340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL340/CAMTPL340_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTPL340/CAMTPL340_400.jpg"
   },
   {
@@ -4449,6 +4330,7 @@
     "img_local": "assets/img/catalog/CAMTPL420.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL420/CAMTPL420_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTPL420/CAMTPL420_400.jpg"
   },
   {
@@ -4470,6 +4352,7 @@
     "img_local": "assets/img/catalog/CAMTPL300.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL300/CAMTPL300_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTPL300/CAMTPL300_400.jpg"
   },
   {
@@ -4491,28 +4374,8 @@
     "img_local": "assets/img/catalog/CAMTPL270.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL270/CAMTPL270_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTPL270/CAMTPL270_400.jpg"
-  },
-  {
-    "sku": "CAMTPL430",
-    "nombre": "Cámara Wi-Fi de seguridad interior/ exterior (Tapo C120) Resolución Máxima: 2K QHD 4MP (2560 × 1440 px), Zoom digital 12",
-    "descripcion_completa": "Cámara Wi-Fi de seguridad interior/ exterior (Tapo C120) Resolución Máxima: 2K QHD 4MP (2560 × 1440 px), Zoom digital 12x, Compresión de video: H.264, Visión nocturna en color 2K'.Monitoreo interior y exterior las 24 horas, resistente a la intemperie IP66,la tecnología inteligente de IA detecta e identifica personas, mascotas y vehículos, Audio bidireccional .",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "CÁMARA",
-    "costo_base": 35.23,
-    "precio_mxn": 927.36,
-    "precio_original": 1099.09,
-    "img": "https://static.ctonline.mx/imagenes/CAMTPL430/CAMTPL430_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/CMARA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CAMTPL430",
-    "costo_proveedor_mxn": 686.93,
-    "precio": 927.36,
-    "precio_mayoreo_10pzs": 824.32,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/CAMTPL430.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL430/CAMTPL430_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/CAMTPL430/CAMTPL430_400.jpg"
   },
   {
     "sku": "CAMTPL380",
@@ -4533,6 +4396,7 @@
     "img_local": "assets/img/catalog/CAMTPL380.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL380/CAMTPL380_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTPL380/CAMTPL380_400.jpg"
   },
   {
@@ -4554,6 +4418,7 @@
     "img_local": "assets/img/catalog/CAMTPL360.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL360/CAMTPL360_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTPL360/CAMTPL360_400.jpg"
   },
   {
@@ -4575,6 +4440,7 @@
     "img_local": "assets/img/catalog/CAMTPL310.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL310/CAMTPL310_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTPL310/CAMTPL310_400.jpg"
   },
   {
@@ -4596,6 +4462,7 @@
     "img_local": "assets/img/catalog/CAMTPL640.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL640/CAMTPL640_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTPL640/CAMTPL640_400.jpg"
   },
   {
@@ -4617,6 +4484,7 @@
     "img_local": "assets/img/catalog/CAMTPL650.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL650/CAMTPL650_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTPL650/CAMTPL650_400.jpg"
   },
   {
@@ -4638,6 +4506,7 @@
     "img_local": "assets/img/catalog/CAMMER020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMMER020/CAMMER020_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMMER020/CAMMER020_400.jpg"
   },
   {
@@ -4659,6 +4528,7 @@
     "img_local": "assets/img/catalog/CAMMER030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMMER030/CAMMER030_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMMER030/CAMMER030_400.jpg"
   },
   {
@@ -4680,28 +4550,8 @@
     "img_local": "assets/img/catalog/CAMMER040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMMER040/CAMMER040_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMMER040/CAMMER040_400.jpg"
-  },
-  {
-    "sku": "NVRTPL050",
-    "nombre": "Grabador NVR IP de 4 canales (VIGI NVR1004H-4P) 4 puertos PoE+ de 10/100 Mbps , Compatibilidad ONVIF, Gestión Remota: Mo",
-    "descripcion_completa": "Grabador NVR IP de 4 canales (VIGI NVR1004H-4P) 4 puertos PoE+ de 10/100 Mbps , Compatibilidad ONVIF, Gestión Remota: Monitoreo desde la App VIGI, interfaz Web y software VIGI Security Manager, Audio Bidireccional: 1 entrada RCA y 1 salida RCA para comunicación por voz en tiempo real.",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "GRABADOR",
-    "costo_base": 64.77,
-    "precio_mxn": 1705.14,
-    "precio_original": 2020.91,
-    "img": "https://static.ctonline.mx/imagenes/NVRTPL050/NVRTPL050_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/GRABADOR.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=NVRTPL050",
-    "costo_proveedor_mxn": 1263.07,
-    "precio": 1705.14,
-    "precio_mayoreo_10pzs": 1515.68,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/NVRTPL050.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/NVRTPL050/NVRTPL050_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/NVRTPL050/NVRTPL050_400.jpg"
   },
   {
     "sku": "NVRTPL100",
@@ -4722,6 +4572,7 @@
     "img_local": "assets/img/catalog/NVRTPL100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/NVRTPL100/NVRTPL100_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/NVRTPL100/NVRTPL100_400.jpg"
   },
   {
@@ -4743,6 +4594,7 @@
     "img_local": "assets/img/catalog/CAMHKV5400.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5400/CAMHKV5400_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5400/CAMHKV5400_400.jpg"
   },
   {
@@ -4764,6 +4616,7 @@
     "img_local": "assets/img/catalog/CAMHKV5310.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5310/CAMHKV5310_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5310/CAMHKV5310_400.jpg"
   },
   {
@@ -4785,6 +4638,7 @@
     "img_local": "assets/img/catalog/CAMHKV4430.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV4430/CAMHKV4430_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV4430/CAMHKV4430_400.jpg"
   },
   {
@@ -4806,6 +4660,7 @@
     "img_local": "assets/img/catalog/CAMHKV4500.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV4500/CAMHKV4500_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV4500/CAMHKV4500_400.jpg"
   },
   {
@@ -4827,6 +4682,7 @@
     "img_local": "assets/img/catalog/CAMHKV4510.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV4510/CAMHKV4510_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV4510/CAMHKV4510_400.jpg"
   },
   {
@@ -4848,6 +4704,7 @@
     "img_local": "assets/img/catalog/CAMHKV4830.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV4830/CAMHKV4830_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV4830/CAMHKV4830_400.jpg"
   },
   {
@@ -4869,6 +4726,7 @@
     "img_local": "assets/img/catalog/CAMHKV4980.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV4980/CAMHKV4980_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV4980/CAMHKV4980_400.jpg"
   },
   {
@@ -4890,6 +4748,7 @@
     "img_local": "assets/img/catalog/CAMHKV5130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5130/CAMHKV5130_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5130/CAMHKV5130_400.jpg"
   },
   {
@@ -4911,6 +4770,7 @@
     "img_local": "assets/img/catalog/CAMHKV5140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5140/CAMHKV5140_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5140/CAMHKV5140_400.jpg"
   },
   {
@@ -4932,6 +4792,7 @@
     "img_local": "assets/img/catalog/CAMHKV5150.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5150/CAMHKV5150_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5150/CAMHKV5150_400.jpg"
   },
   {
@@ -4953,6 +4814,7 @@
     "img_local": "assets/img/catalog/CAMHKV5160.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5160/CAMHKV5160_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5160/CAMHKV5160_400.jpg"
   },
   {
@@ -4974,6 +4836,7 @@
     "img_local": "assets/img/catalog/CAMHKV5170.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5170/CAMHKV5170_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5170/CAMHKV5170_400.jpg"
   },
   {
@@ -4995,6 +4858,7 @@
     "img_local": "assets/img/catalog/CAMHKV5180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5180/CAMHKV5180_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5180/CAMHKV5180_400.jpg"
   },
   {
@@ -5016,6 +4880,7 @@
     "img_local": "assets/img/catalog/CAMHKV5190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5190/CAMHKV5190_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5190/CAMHKV5190_400.jpg"
   },
   {
@@ -5037,6 +4902,7 @@
     "img_local": "assets/img/catalog/CAMHKV5200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5200/CAMHKV5200_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5200/CAMHKV5200_400.jpg"
   },
   {
@@ -5058,6 +4924,7 @@
     "img_local": "assets/img/catalog/CAMHKV5220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5220/CAMHKV5220_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5220/CAMHKV5220_400.jpg"
   },
   {
@@ -5079,6 +4946,7 @@
     "img_local": "assets/img/catalog/CAMHKV5230.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5230/CAMHKV5230_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5230/CAMHKV5230_400.jpg"
   },
   {
@@ -5100,6 +4968,7 @@
     "img_local": "assets/img/catalog/CAMHKV5240.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5240/CAMHKV5240_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5240/CAMHKV5240_400.jpg"
   },
   {
@@ -5121,6 +4990,7 @@
     "img_local": "assets/img/catalog/CAMHKV5270.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5270/CAMHKV5270_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5270/CAMHKV5270_400.jpg"
   },
   {
@@ -5142,6 +5012,7 @@
     "img_local": "assets/img/catalog/CAMHKV5470.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5470/CAMHKV5470_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5470/CAMHKV5470_400.jpg"
   },
   {
@@ -5163,6 +5034,7 @@
     "img_local": "assets/img/catalog/CAMHKV5480.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5480/CAMHKV5480_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5480/CAMHKV5480_400.jpg"
   },
   {
@@ -5184,6 +5056,7 @@
     "img_local": "assets/img/catalog/CAMHKV5390.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5390/CAMHKV5390_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5390/CAMHKV5390_400.jpg"
   },
   {
@@ -5205,6 +5078,7 @@
     "img_local": "assets/img/catalog/CAMHKV4490.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV4490/CAMHKV4490_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV4490/CAMHKV4490_400.jpg"
   },
   {
@@ -5226,6 +5100,7 @@
     "img_local": "assets/img/catalog/CAMHKV5380.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5380/CAMHKV5380_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5380/CAMHKV5380_400.jpg"
   },
   {
@@ -5247,6 +5122,7 @@
     "img_local": "assets/img/catalog/CAMHKV5450.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5450/CAMHKV5450_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5450/CAMHKV5450_400.jpg"
   },
   {
@@ -5268,6 +5144,7 @@
     "img_local": "assets/img/catalog/CAMHKV5490.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV5490/CAMHKV5490_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV5490/CAMHKV5490_400.jpg"
   },
   {
@@ -5289,6 +5166,7 @@
     "img_local": "assets/img/catalog/CAMHKV1590.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHKV1590/CAMHKV1590_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHKV1590/CAMHKV1590_400.jpg"
   },
   {
@@ -5310,6 +5188,7 @@
     "img_local": "assets/img/catalog/KITHKV820.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITHKV820/KITHKV820_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITHKV820/KITHKV820_400.jpg"
   },
   {
@@ -5331,6 +5210,7 @@
     "img_local": "assets/img/catalog/KITHKV640.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITHKV640/KITHKV640_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITHKV640/KITHKV640_400.jpg"
   },
   {
@@ -5352,6 +5232,7 @@
     "img_local": "assets/img/catalog/KITHKV560.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITHKV560/KITHKV560_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITHKV560/KITHKV560_400.jpg"
   },
   {
@@ -5373,6 +5254,7 @@
     "img_local": "assets/img/catalog/KITHKV350.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITHKV350/KITHKV350_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITHKV350/KITHKV350_400.jpg"
   },
   {
@@ -5394,6 +5276,7 @@
     "img_local": "assets/img/catalog/KITHKV390.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/KITHKV390/KITHKV390_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/KITHKV390/KITHKV390_400.jpg"
   },
   {
@@ -5415,6 +5298,7 @@
     "img_local": "assets/img/catalog/DVRHLK220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/DVRHLK220/DVRHLK220_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/DVRHLK220/DVRHLK220_400.jpg"
   },
   {
@@ -5436,6 +5320,7 @@
     "img_local": "assets/img/catalog/CABHKV120.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABHKV120/CABHKV120_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABHKV120/CABHKV120_400.jpg"
   },
   {
@@ -5457,6 +5342,7 @@
     "img_local": "assets/img/catalog/ACCHKV4950.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV4950/ACCHKV4950_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV4950/ACCHKV4950_400.jpg"
   },
   {
@@ -5478,6 +5364,7 @@
     "img_local": "assets/img/catalog/LCTHKV110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/LCTHKV110/LCTHKV110_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/LCTHKV110/LCTHKV110_400.jpg"
   },
   {
@@ -5499,6 +5386,7 @@
     "img_local": "assets/img/catalog/ACCHKV5220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV5220/ACCHKV5220_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV5220/ACCHKV5220_400.jpg"
   },
   {
@@ -5520,6 +5408,7 @@
     "img_local": "assets/img/catalog/ACCHKV5230.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV5230/ACCHKV5230_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV5230/ACCHKV5230_400.jpg"
   },
   {
@@ -5541,6 +5430,7 @@
     "img_local": "assets/img/catalog/ACCHKV4990.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV4990/ACCHKV4990_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV4990/ACCHKV4990_400.jpg"
   },
   {
@@ -5562,6 +5452,7 @@
     "img_local": "assets/img/catalog/ACCHKV4930.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV4930/ACCHKV4930_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV4930/ACCHKV4930_400.jpg"
   },
   {
@@ -5583,6 +5474,7 @@
     "img_local": "assets/img/catalog/ACCHKV5160.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV5160/ACCHKV5160_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV5160/ACCHKV5160_400.jpg"
   },
   {
@@ -5604,6 +5496,7 @@
     "img_local": "assets/img/catalog/ACCHKV4940.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV4940/ACCHKV4940_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV4940/ACCHKV4940_400.jpg"
   },
   {
@@ -5625,6 +5518,7 @@
     "img_local": "assets/img/catalog/ACCHKV5000.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV5000/ACCHKV5000_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV5000/ACCHKV5000_400.jpg"
   },
   {
@@ -5646,6 +5540,7 @@
     "img_local": "assets/img/catalog/ACCHKV5010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV5010/ACCHKV5010_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV5010/ACCHKV5010_400.jpg"
   },
   {
@@ -5667,6 +5562,7 @@
     "img_local": "assets/img/catalog/ACCHKV5030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV5030/ACCHKV5030_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV5030/ACCHKV5030_400.jpg"
   },
   {
@@ -5688,6 +5584,7 @@
     "img_local": "assets/img/catalog/ACCHKV5040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV5040/ACCHKV5040_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV5040/ACCHKV5040_400.jpg"
   },
   {
@@ -5709,6 +5606,7 @@
     "img_local": "assets/img/catalog/ACCHKV5050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV5050/ACCHKV5050_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV5050/ACCHKV5050_400.jpg"
   },
   {
@@ -5730,6 +5628,7 @@
     "img_local": "assets/img/catalog/ACCHKV4860.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV4860/ACCHKV4860_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV4860/ACCHKV4860_400.jpg"
   },
   {
@@ -5751,6 +5650,7 @@
     "img_local": "assets/img/catalog/ACCHKV960.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV960/ACCHKV960_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV960/ACCHKV960_400.jpg"
   },
   {
@@ -5772,6 +5672,7 @@
     "img_local": "assets/img/catalog/ACCHKV850.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV850/ACCHKV850_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV850/ACCHKV850_400.jpg"
   },
   {
@@ -5793,6 +5694,7 @@
     "img_local": "assets/img/catalog/ACCHKV4680.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV4680/ACCHKV4680_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV4680/ACCHKV4680_400.jpg"
   },
   {
@@ -5814,6 +5716,7 @@
     "img_local": "assets/img/catalog/ACCHKV5150.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV5150/ACCHKV5150_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV5150/ACCHKV5150_400.jpg"
   },
   {
@@ -5835,6 +5738,7 @@
     "img_local": "assets/img/catalog/ACCHKV1790.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV1790/ACCHKV1790_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV1790/ACCHKV1790_400.jpg"
   },
   {
@@ -5856,6 +5760,7 @@
     "img_local": "assets/img/catalog/ACCHKV3000.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV3000/ACCHKV3000_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV3000/ACCHKV3000_400.jpg"
   },
   {
@@ -5877,6 +5782,7 @@
     "img_local": "assets/img/catalog/ACCHKV750.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV750/ACCHKV750_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV750/ACCHKV750_400.jpg"
   },
   {
@@ -5898,6 +5804,7 @@
     "img_local": "assets/img/catalog/ACCHKV1710.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV1710/ACCHKV1710_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV1710/ACCHKV1710_400.jpg"
   },
   {
@@ -5919,6 +5826,7 @@
     "img_local": "assets/img/catalog/ACCHKV020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV020/ACCHKV020_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV020/ACCHKV020_400.jpg"
   },
   {
@@ -5940,6 +5848,7 @@
     "img_local": "assets/img/catalog/ACCHKV550.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV550/ACCHKV550_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV550/ACCHKV550_400.jpg"
   },
   {
@@ -5961,6 +5870,7 @@
     "img_local": "assets/img/catalog/ACCHKV890.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV890/ACCHKV890_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV890/ACCHKV890_400.jpg"
   },
   {
@@ -5982,6 +5892,7 @@
     "img_local": "assets/img/catalog/ACCHKV1090.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV1090/ACCHKV1090_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV1090/ACCHKV1090_400.jpg"
   },
   {
@@ -6003,6 +5914,7 @@
     "img_local": "assets/img/catalog/ACCHKV1100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV1100/ACCHKV1100_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV1100/ACCHKV1100_400.jpg"
   },
   {
@@ -6024,6 +5936,7 @@
     "img_local": "assets/img/catalog/ACCHKV1130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV1130/ACCHKV1130_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV1130/ACCHKV1130_400.jpg"
   },
   {
@@ -6045,6 +5958,7 @@
     "img_local": "assets/img/catalog/ACCHKV1210.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV1210/ACCHKV1210_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV1210/ACCHKV1210_400.jpg"
   },
   {
@@ -6066,49 +5980,8 @@
     "img_local": "assets/img/catalog/ACCHKV790.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV790/ACCHKV790_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV790/ACCHKV790_400.jpg"
-  },
-  {
-    "sku": "ESTHKV010",
-    "nombre": "Estación Mobiliaria Profesional de Monitoreo y Control (EM-S02) para: Videovigilancia, Acceso, Alarmas, etc., Metal Negr",
-    "descripcion_completa": "Estación Mobiliaria Profesional de Monitoreo y Control (EM-S02) para: Videovigilancia, Acceso, Alarmas, etc., Metal Negro y Madera Tono Oscuro",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "ESTACIÓN",
-    "costo_base": 775.24,
-    "precio_mxn": 20408.17,
-    "precio_original": 24187.46,
-    "img": "https://static.ctonline.mx/imagenes/ESTHKV010/ESTHKV010_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/ESTACIN.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ESTHKV010",
-    "costo_proveedor_mxn": 15117.16,
-    "precio": 20408.17,
-    "precio_mayoreo_10pzs": 18140.59,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ESTHKV010.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ESTHKV010/ESTHKV010_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/ESTHKV010/ESTHKV010_400.jpg"
-  },
-  {
-    "sku": "ACCHKV1040",
-    "nombre": "Monitor 7\" con comunicación manos libres (800 x 400) (DS-KH2220) Adicional para Videoportero Análogo DS-KIS202 / DS-KIS2",
-    "descripcion_completa": "Monitor 7\" con comunicación manos libres (800 x 400) (DS-KH2220) Adicional para Videoportero Análogo DS-KIS202 / DS-KIS203 / Soporta el monitoreo de frente de calle además de una cámara análoga adicional / Apertura desde monitor / Fácil instalación a 4 hilos. HIKVISION",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "7\"",
-    "costo_base": 57.3,
-    "precio_mxn": 1508.53,
-    "precio_original": 1787.89,
-    "img": "https://static.ctonline.mx/imagenes/ACCHKV1040/ACCHKV1040_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/7.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCHKV1040",
-    "costo_proveedor_mxn": 1117.43,
-    "precio": 1508.53,
-    "precio_mayoreo_10pzs": 1340.92,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCHKV1040.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV1040/ACCHKV1040_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCHKV1040/ACCHKV1040_400.jpg"
   },
   {
     "sku": "CAMHLK400",
@@ -6129,6 +6002,7 @@
     "img_local": "assets/img/catalog/CAMHLK400.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHLK400/CAMHLK400_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHLK400/CAMHLK400_400.jpg"
   },
   {
@@ -6150,28 +6024,8 @@
     "img_local": "assets/img/catalog/CAMHLK670.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMHLK670/CAMHLK670_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMHLK670/CAMHLK670_400.jpg"
-  },
-  {
-    "sku": "CAMTND070",
-    "nombre": "Cámara de seguridad Pan/Tilt CP3 Pro es una cámara de monitoreo doméstico de alto rendimiento que integra funciones tale",
-    "descripcion_completa": "Cámara de seguridad Pan/Tilt CP3 Pro es una cámara de monitoreo doméstico de alto rendimiento que integra funciones tales como cobertura visual de 360 °, video Wi-Fi 6,3MP, detección de humanos / mascotas, detección de llanto, un toque llamada, audio bidireccional, alarma de sonido y luz y audio de bricolaje. Se usa comúnmente en escenarios de monitoreo en interiores, como casas, tiendas, oficinas y aulas.",
-    "categoria_ct": "TELEFONIA Y VIDEO VIGILANCIA",
-    "marca": "CÁMARA",
-    "costo_base": 16.56,
-    "precio_mxn": 435.82,
-    "precio_original": 516.53,
-    "img": "https://static.ctonline.mx/imagenes/CAMTND070/CAMTND070_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/CMARA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CAMTND070",
-    "costo_proveedor_mxn": 322.83,
-    "precio": 435.82,
-    "precio_mayoreo_10pzs": 387.4,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/CAMTND070.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/CAMTND070/CAMTND070_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/CAMTND070/CAMTND070_400.jpg"
   },
   {
     "sku": "CAMTND130",
@@ -6192,6 +6046,7 @@
     "img_local": "assets/img/catalog/CAMTND130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTND130/CAMTND130_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTND130/CAMTND130_400.jpg"
   },
   {
@@ -6213,6 +6068,7 @@
     "img_local": "assets/img/catalog/CAMTND140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTND140/CAMTND140_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTND140/CAMTND140_400.jpg"
   },
   {
@@ -6234,6 +6090,7 @@
     "img_local": "assets/img/catalog/CAMTND150.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTND150/CAMTND150_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTND150/CAMTND150_400.jpg"
   },
   {
@@ -6255,6 +6112,7 @@
     "img_local": "assets/img/catalog/NVRUNV060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/NVRUNV060/NVRUNV060_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/NVRUNV060/NVRUNV060_400.jpg"
   },
   {
@@ -6276,6 +6134,7 @@
     "img_local": "assets/img/catalog/NVRUNV070.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/NVRUNV070/NVRUNV070_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/NVRUNV070/NVRUNV070_400.jpg"
   },
   {
@@ -6297,6 +6156,7 @@
     "img_local": "assets/img/catalog/NVRUNV080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/NVRUNV080/NVRUNV080_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/NVRUNV080/NVRUNV080_400.jpg"
   },
   {
@@ -6318,6 +6178,7 @@
     "img_local": "assets/img/catalog/NVRUNV090.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/NVRUNV090/NVRUNV090_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/NVRUNV090/NVRUNV090_400.jpg"
   },
   {
@@ -6339,49 +6200,74 @@
     "img_local": "assets/img/catalog/NVRUNV100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/NVRUNV100/NVRUNV100_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/NVRUNV100/NVRUNV100_400.jpg"
   },
   {
-    "sku": "MONLGE3350",
-    "nombre": "Monitor Profesional LG 65\" 65UH5Q, Tamaño de pantalla 65\", Resolución 3840x2160 UHD, Brillo 500 nit (típico), Paneles AD",
-    "descripcion_completa": "Monitor Profesional LG 65\" 65UH5Q, Tamaño de pantalla 65\", Resolución 3840x2160 UHD, Brillo 500 nit (típico), Paneles ADS, Contraste 1200:1, CR dinámico 1,000,000:1, 60Hz frecuencia de actualización; 50,000 horas tiempo de vida, 16:9 Relación de aspecto, 24/7 horas de operación, 300x300 VESA, Alto rendimiento LG webOS 8.0, Diseño de bisel uniforme, Diseño delgado para aprovechamiento del espacio, Protección contra la sal, el polvo, el polvo de hierro y la humedad con IP5x y Shock Monitoring, Seguridad Integral con LG Shield, Altavoz integrado, Compatible con SuperSign, Garantía 3 años en centro de servicio LG autorizados en sitio.",
+    "sku": "PROEPS2140",
+    "nombre": "Proyector Epson PowerLite X49 (V11H982020) Tecnología Epson 3 LCD, de 3-Chips, Resolución: 1024 x 768 (XGA), Método de p",
+    "descripcion_completa": "Proyector Epson PowerLite X49 (V11H982020) Tecnología Epson 3 LCD, de 3-Chips, Resolución: 1024 x 768 (XGA), Método de proyección: Montaje frontal / retroproyección / colgado del techo, Luminosidad en blanco y color 3,600 lúmenes. Vida útil de la lámpara: Hasta 10,000 horas (Modo ECO), Hasta 6,000 horas (Modo Normal), Distancia de proyección: 30\" - 300\" (0.84 - 10.42 m), USB Plug' n Play Proyecta audio y video compatible con PC y Mac. Interfaces: HDMI x 1,  D-sub 15 pin x 1, Mini DIN x 1, RCA (Amarillo) x 1, RCA x 2 (L and R), Modulo Inalámbrico opcional. Parlante: 5w. Seguridad: Traba de seguridad tipo Kensington Lock. Dimensiones: 30.2 cm x 24.9 cm x 8.7 cm. Peso: 2.7 kg. Garantía: 2 años proyector y 90 días lámpara.",
     "categoria_ct": "ELECTRONICA DE CONSUMO",
-    "marca": "PROFESIONAL",
-    "costo_base": 18539.36,
-    "precio_mxn": 25028.14,
-    "precio_original": 29662.98,
-    "img": "https://static.ctonline.mx/imagenes/MONLGE3350/MONLGE3350_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/PROFESIONAL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONLGE3350",
-    "costo_proveedor_mxn": 18539.36,
-    "precio": 25028.14,
-    "precio_mayoreo_10pzs": 22247.23,
+    "marca": "PROYECTOR",
+    "costo_base": 16363.25,
+    "precio_mxn": 22090.39,
+    "precio_original": 26181.2,
+    "img": "https://static.ctonline.mx/imagenes/PROEPS2140/PROEPS2140_400.jpg",
+    "brand_logo": "https://static.ctonline.mx/marcas/png/PROYECTOR.png",
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=PROEPS2140",
+    "costo_proveedor_mxn": 16363.25,
+    "precio": 22090.39,
+    "precio_mayoreo_10pzs": 19635.9,
     "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONLGE3350.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONLGE3350/MONLGE3350_400.jpg",
+    "img_local": "assets/img/catalog/PROEPS2140.jpg",
+    "img_cdn": "https://static.ctonline.mx/imagenes/PROEPS2140/PROEPS2140_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/MONLGE3350/MONLGE3350_400.jpg"
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
+    "local_img": "https://static.ctonline.mx/imagenes/PROEPS2140/PROEPS2140_400.jpg"
   },
   {
-    "sku": "MONLGE3170",
-    "nombre": "Monitor Video wall 49\" LG 49VL5PJ. Tecnología del panel IPS, Tipo de luz de fondo, Direct, Relación de Aspecto 16 : 9, R",
-    "descripcion_completa": "Monitor Video wall 49\" LG 49VL5PJ. Tecnología del panel IPS, Tipo de luz de fondo, Direct, Relación de Aspecto 16 : 9, Resolución natural Seguridad Ritmo de actualización 60Hz, Brillo 500 nit (típ.), Relación de contraste 1,000:1, Relación de contraste dinámico 500,000:1, Gama de colores NTSC 72%, Ángulo de visualización (H x V) 178 x 178, Profundidad del color, 10 bits, 1.07 mil millones de colores, Tiempo de respuesta 8 ms, (gris a gris)Tratamiento de la superficie (Niebla)3%, Vida útil 60,000 Hrs (típ.) / 50,000 Hrs, (Min.)Horas de funcionamiento (Horas/Día) 24/7, retratos/Paisajes, Bisel: 2,25 mm (parte superior izquierda), 1,25 mm (parte inferior derecha), Profundidad: 89,7 mm; Interfaz: HDMI/DP/DVI-D/USB/ RS232C/ RJ45/ Audio/ IR3, Interfaz de montaje estándar VESA™600 x 400, 3 años de garantía en centros  de servicio  LG autorizados.",
+    "sku": "PROEPS2150",
+    "nombre": "Proyector EPSON Powerlite 119W (V11H985020). Sistema de Proyección: Tecnología EPSON 3LCD de 3 chips. Método de Proyecci",
+    "descripcion_completa": "Proyector EPSON Powerlite 119W (V11H985020). Sistema de Proyección: Tecnología EPSON 3LCD de 3 chips. Método de Proyección: Frontal/Posterior/Techo. Número de pixeles: 1,024,000 pixeles (1280x800) x3. Brillo en Lúmenes: 4,000. Relación de Aspecto: 16:10. Resolución Nativa: WXGA. Tipo de Lámpara: 210W UHE. Vida Útil de Lámpara: 6,000 horas (Normal). 12,000 (Económico). Relación de Contraste: hasta 15,000:1. Reproducción del color: hasta 1 billón de Colores. Dimensiones 302 x 87 x249mm (ancho x alto x profundidad). Peso: 2.8kg. Seguridad: Kensington Lock, Traba de seguridad. Conectividad: HDMI/MHL. Conectividad Inalámbrica Opcional.  Garantía 2 Año en centro de servicio.",
     "categoria_ct": "ELECTRONICA DE CONSUMO",
-    "marca": "VIDEO",
-    "costo_base": 16118.28,
-    "precio_mxn": 21759.68,
-    "precio_original": 25789.25,
-    "img": "https://static.ctonline.mx/imagenes/MONLGE3170/MONLGE3170_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/VIDEO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONLGE3170",
-    "costo_proveedor_mxn": 16118.28,
-    "precio": 21759.68,
-    "precio_mayoreo_10pzs": 19341.94,
+    "marca": "PROYECTOR",
+    "costo_base": 18154.91,
+    "precio_mxn": 24509.14,
+    "precio_original": 29047.87,
+    "img": "https://static.ctonline.mx/imagenes/PROEPS2150/PROEPS2150_400.jpg",
+    "brand_logo": "https://static.ctonline.mx/marcas/png/PROYECTOR.png",
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=PROEPS2150",
+    "costo_proveedor_mxn": 18154.92,
+    "precio": 24509.14,
+    "precio_mayoreo_10pzs": 21785.9,
     "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONLGE3170.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONLGE3170/MONLGE3170_400.jpg",
+    "img_local": "assets/img/catalog/PROEPS2150.jpg",
+    "img_cdn": "https://static.ctonline.mx/imagenes/PROEPS2150/PROEPS2150_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/MONLGE3170/MONLGE3170_400.jpg"
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
+    "local_img": "https://static.ctonline.mx/imagenes/PROEPS2150/PROEPS2150_400.jpg"
+  },
+  {
+    "sku": "PROEPS2220",
+    "nombre": "Proyector Powerlite W49 (V11H983020) Sistema de Proyección: Tecnología Epson 3LCD de 3 chips Método de Proyección: Front",
+    "descripcion_completa": "Proyector Powerlite W49 (V11H983020) Sistema de Proyección: Tecnología Epson 3LCD de 3 chips Método de Proyección: Frontal / Posterior / Techo Pantalla LCD:0,59 pulgadas (C2fine) Método de visualización: Poly-silicon TFT active matrixNúmero de Pixeles:1.024.000 pixeles (1.280 px x 800 px) x 3 Luminosidad en Color :3.800 Lúmenes Luminosidad en Blanco:3.800 Lúmenes Relación de Aspecto:16:10 Resolución Nativa: WXGA, Tipo de Lámpara:210W UHE Vida Útil de la Lámpara:8.000 horas (normal); 17.000 horas (Eco )Corrección de Trapecio: Vertical: -30° +30º, Horizontal: -30° +30°Relación de Contraste: Hasta  16.000:1Reproducción del Color: Hasta 1 billón de colores, Conectividad Estándar: Entrada computadora x 2 D-sub15 pin, Salida computadora x 1 D-sub15 pin, HDMI® x 2, RCA Video In Amarillo x 1, USB tipo A (para módulo inalámbrico) x 1, USB tipo B (para actualización Firmware) x 1, Stereo Mini - Entrada x 2, Stereo Mini - Salida x 1, RS-232C x 1, Audio entrada RCA Blanco x 1, rojo x 1, RJ45 x 1, Módulo inalámbrico Accesorio opcional, Dimensiones: 302 mm x 87 mm x 249 mm (ancho x alto x profundidad) Peso:2,7 Kg Seguridad: Kensington Lock , Traba de seguridad. Garantía limitada de 2 años en equipo y 90 dias en lampara directo en CSA. Color: Blanco.",
+    "categoria_ct": "ELECTRONICA DE CONSUMO",
+    "marca": "PROYECTOR",
+    "costo_base": 18232.91,
+    "precio_mxn": 24614.43,
+    "precio_original": 29172.66,
+    "img": "https://static.ctonline.mx/imagenes/PROEPS2220/PROEPS2220_400.jpg",
+    "brand_logo": "https://static.ctonline.mx/marcas/png/PROYECTOR.png",
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=PROEPS2220",
+    "costo_proveedor_mxn": 18232.91,
+    "precio": 24614.43,
+    "precio_mayoreo_10pzs": 21879.49,
+    "margen_aplicado": "35%",
+    "img_local": "assets/img/catalog/PROEPS2220.jpg",
+    "img_cdn": "https://static.ctonline.mx/imagenes/PROEPS2220/PROEPS2220_400.jpg",
+    "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
+    "local_img": "https://static.ctonline.mx/imagenes/PROEPS2220/PROEPS2220_400.jpg"
   },
   {
     "sku": "ACCBNQ730",
@@ -6402,28 +6288,8 @@
     "img_local": "assets/img/catalog/ACCBNQ730.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCBNQ730/ACCBNQ730_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCBNQ730/ACCBNQ730_400.jpg"
-  },
-  {
-    "sku": "ACCBNQ810",
-    "nombre": "Botón InstaShare Button TWY31, 5A.F7V28.BP2, Transmisor Inalámbrico para BenQ Board, Color Plateado, Resolución de entra",
-    "descripcion_completa": "Botón InstaShare Button TWY31, 5A.F7V28.BP2, Transmisor Inalámbrico para BenQ Board, Color Plateado, Resolución de entrada 4K 30P, Transmisión: 60 FPS según el entorno (1080P60/4K30P), Velocidad de audio: Estéreo, calidad de radio 16 bits 48 KHz, Estándar Wi-Fi: IEEE 802.11ac 5 GHz, 2T2R MIMO, Seguridad inalámbrica (cifrado): Compatibilidad con WPA2/3 Personal/WPA2 Enterprise AES-256, Alcance de cobertura inalámbrica: Máx. 15 m. USB Tipo C (Display Port), 5 V ± 10 %, mínimo 0,9 A, Compatible Casting (4 divisiones de pantalla): SL04, RE04,RM04 y RP04 (Se requiere WD02AT) / RP03, RM03, RM03A (Se requiere TDY31), Compatible BYOM (Cámara web): SL04, RM04 y RP04 (Se requiere WD02AT) / RP03, RM03, RM03A (Se requiere TDY31)\" Dimensiones 67 x 67 x 23.2 mm.",
-    "categoria_ct": "ELECTRONICA DE CONSUMO",
-    "marca": "BOTÓN",
-    "costo_base": 14463.33,
-    "precio_mxn": 19525.5,
-    "precio_original": 23141.33,
-    "img": "https://static.ctonline.mx/imagenes/ACCBNQ810/ACCBNQ810_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/BOTN.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCBNQ810",
-    "costo_proveedor_mxn": 14463.33,
-    "precio": 19525.5,
-    "precio_mayoreo_10pzs": 17356.0,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCBNQ810.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCBNQ810/ACCBNQ810_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCBNQ810/ACCBNQ810_400.jpg"
   },
   {
     "sku": "PANHKV170",
@@ -6444,6 +6310,7 @@
     "img_local": "assets/img/catalog/PANHKV170.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/PANHKV170/PANHKV170_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/PANHKV170/PANHKV170_400.jpg"
   },
   {
@@ -6465,6 +6332,7 @@
     "img_local": "assets/img/catalog/PANHKV180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/PANHKV180/PANHKV180_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/PANHKV180/PANHKV180_400.jpg"
   },
   {
@@ -6486,6 +6354,7 @@
     "img_local": "assets/img/catalog/PANHKV100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/PANHKV100/PANHKV100_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/PANHKV100/PANHKV100_400.jpg"
   },
   {
@@ -6507,6 +6376,7 @@
     "img_local": "assets/img/catalog/PANHKV110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/PANHKV110/PANHKV110_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/PANHKV110/PANHKV110_400.jpg"
   },
   {
@@ -6528,6 +6398,7 @@
     "img_local": "assets/img/catalog/PANHKV120.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/PANHKV120/PANHKV120_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/PANHKV120/PANHKV120_400.jpg"
   },
   {
@@ -6549,6 +6420,7 @@
     "img_local": "assets/img/catalog/PANHKV130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/PANHKV130/PANHKV130_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/PANHKV130/PANHKV130_400.jpg"
   },
   {
@@ -6570,6 +6442,7 @@
     "img_local": "assets/img/catalog/PANHKV140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/PANHKV140/PANHKV140_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/PANHKV140/PANHKV140_400.jpg"
   },
   {
@@ -6591,6 +6464,7 @@
     "img_local": "assets/img/catalog/PANHKV150.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/PANHKV150/PANHKV150_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/PANHKV150/PANHKV150_400.jpg"
   },
   {
@@ -6612,6 +6486,7 @@
     "img_local": "assets/img/catalog/PANHKV160.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/PANHKV160/PANHKV160_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/PANHKV160/PANHKV160_400.jpg"
   },
   {
@@ -6633,6 +6508,7 @@
     "img_local": "assets/img/catalog/CJSQIA030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CJSQIA030/CJSQIA030_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CJSQIA030/CJSQIA030_400.jpg"
   },
   {
@@ -6654,6 +6530,7 @@
     "img_local": "assets/img/catalog/CJNQIA030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CJNQIA030/CJNQIA030_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CJNQIA030/CJNQIA030_400.jpg"
   },
   {
@@ -6675,6 +6552,7 @@
     "img_local": "assets/img/catalog/CJNQIA040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CJNQIA040/CJNQIA040_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CJNQIA040/CJNQIA040_400.jpg"
   },
   {
@@ -6696,6 +6574,7 @@
     "img_local": "assets/img/catalog/LCTHKV050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/LCTHKV050/LCTHKV050_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/LCTHKV050/LCTHKV050_400.jpg"
   },
   {
@@ -6717,6 +6596,7 @@
     "img_local": "assets/img/catalog/LCTHKV060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/LCTHKV060/LCTHKV060_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/LCTHKV060/LCTHKV060_400.jpg"
   },
   {
@@ -6738,6 +6618,7 @@
     "img_local": "assets/img/catalog/LCTHKV070.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/LCTHKV070/LCTHKV070_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/LCTHKV070/LCTHKV070_400.jpg"
   },
   {
@@ -6759,6 +6640,7 @@
     "img_local": "assets/img/catalog/LCTHKV080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/LCTHKV080/LCTHKV080_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/LCTHKV080/LCTHKV080_400.jpg"
   },
   {
@@ -6780,28 +6662,8 @@
     "img_local": "assets/img/catalog/CAMGET020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMGET020/CAMGET020_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMGET020/CAMGET020_400.jpg"
-  },
-  {
-    "sku": "CAMGET030",
-    "nombre": "Cámara de Videovigilancia tipo Bombilla GETTTECH Wi- Fi -2 MP modelo: GEC-WBUB2, Cobertura total con rotación de 355° ho",
-    "descripcion_completa": "Cámara de Videovigilancia tipo Bombilla GETTTECH Wi- Fi -2 MP modelo: GEC-WBUB2, Cobertura total con rotación de 355° horizontal y 90° vertical para un monitoreo completo, Conéctala a cualquier portalámpara E27 sin necesidad de cables adicionales para la alimentación, Imágenes claras con resolución 2MP (1920x1080) y tecnología de compresión H.264/H.265, Gestiona grabaciones, alertas y más desde una app intuitiva, accesible en cualquier momento, Guarda tus grabaciones en una tarjeta Micro SD (en la nube a través de suscripción), Color: Blanco. Garantía: 1 año.",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "CÁMARA",
-    "costo_base": 10.63,
-    "precio_mxn": 279.92,
-    "precio_original": 331.76,
-    "img": "https://static.ctonline.mx/imagenes/CAMGET030/CAMGET030_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/CMARA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CAMGET030",
-    "costo_proveedor_mxn": 207.35,
-    "precio": 279.92,
-    "precio_mayoreo_10pzs": 248.82,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/CAMGET030.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/CAMGET030/CAMGET030_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/CAMGET030/CAMGET030_400.jpg"
   },
   {
     "sku": "RELLEN3130",
@@ -6822,6 +6684,7 @@
     "img_local": "assets/img/catalog/RELLEN3130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RELLEN3130/RELLEN3130_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RELLEN3130/RELLEN3130_400.jpg"
   },
   {
@@ -6843,6 +6706,7 @@
     "img_local": "assets/img/catalog/MALHPI060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALHPI060/MALHPI060_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALHPI060/MALHPI060_400.jpg"
   },
   {
@@ -6864,6 +6728,7 @@
     "img_local": "assets/img/catalog/ACCMST3940.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCMST3940/ACCMST3940_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCMST3940/ACCMST3940_400.jpg"
   },
   {
@@ -6885,6 +6750,7 @@
     "img_local": "assets/img/catalog/MALGEN4120.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4120/MALGEN4120_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4120/MALGEN4120_400.jpg"
   },
   {
@@ -6906,6 +6772,7 @@
     "img_local": "assets/img/catalog/MALGEN4750.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4750/MALGEN4750_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4750/MALGEN4750_400.jpg"
   },
   {
@@ -6927,6 +6794,7 @@
     "img_local": "assets/img/catalog/MALGEN4910.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4910/MALGEN4910_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4910/MALGEN4910_400.jpg"
   },
   {
@@ -6948,6 +6816,7 @@
     "img_local": "assets/img/catalog/MALGEN4960.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4960/MALGEN4960_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4960/MALGEN4960_400.jpg"
   },
   {
@@ -6969,6 +6838,7 @@
     "img_local": "assets/img/catalog/MALGEN4970.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4970/MALGEN4970_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4970/MALGEN4970_400.jpg"
   },
   {
@@ -6990,6 +6860,7 @@
     "img_local": "assets/img/catalog/ACCKNS1220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS1220/ACCKNS1220_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS1220/ACCKNS1220_400.jpg"
   },
   {
@@ -7011,6 +6882,7 @@
     "img_local": "assets/img/catalog/ACCKNS2230.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS2230/ACCKNS2230_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS2230/ACCKNS2230_400.jpg"
   },
   {
@@ -7032,6 +6904,7 @@
     "img_local": "assets/img/catalog/ACCKNS1320.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS1320/ACCKNS1320_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS1320/ACCKNS1320_400.jpg"
   },
   {
@@ -7053,6 +6926,7 @@
     "img_local": "assets/img/catalog/ACCKNS2200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS2200/ACCKNS2200_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS2200/ACCKNS2200_400.jpg"
   },
   {
@@ -7074,6 +6948,7 @@
     "img_local": "assets/img/catalog/ACCKNS2180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS2180/ACCKNS2180_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS2180/ACCKNS2180_400.jpg"
   },
   {
@@ -7095,6 +6970,7 @@
     "img_local": "assets/img/catalog/ACCKNS2000.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS2000/ACCKNS2000_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS2000/ACCKNS2000_400.jpg"
   },
   {
@@ -7116,6 +6992,7 @@
     "img_local": "assets/img/catalog/ACCKNS2060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS2060/ACCKNS2060_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS2060/ACCKNS2060_400.jpg"
   },
   {
@@ -7137,6 +7014,7 @@
     "img_local": "assets/img/catalog/ACCKNS1290.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS1290/ACCKNS1290_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS1290/ACCKNS1290_400.jpg"
   },
   {
@@ -7158,6 +7036,7 @@
     "img_local": "assets/img/catalog/ACCKNS020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS020/ACCKNS020_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS020/ACCKNS020_400.jpg"
   },
   {
@@ -7179,6 +7058,7 @@
     "img_local": "assets/img/catalog/ACCKNS1240.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS1240/ACCKNS1240_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS1240/ACCKNS1240_400.jpg"
   },
   {
@@ -7200,6 +7080,7 @@
     "img_local": "assets/img/catalog/ACCKNS2220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS2220/ACCKNS2220_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS2220/ACCKNS2220_400.jpg"
   },
   {
@@ -7221,6 +7102,7 @@
     "img_local": "assets/img/catalog/ACCKNS630.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS630/ACCKNS630_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS630/ACCKNS630_400.jpg"
   },
   {
@@ -7242,6 +7124,7 @@
     "img_local": "assets/img/catalog/ACCKNS810.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS810/ACCKNS810_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS810/ACCKNS810_400.jpg"
   },
   {
@@ -7263,6 +7146,7 @@
     "img_local": "assets/img/catalog/ACCKNS920.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS920/ACCKNS920_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS920/ACCKNS920_400.jpg"
   },
   {
@@ -7284,28 +7168,8 @@
     "img_local": "assets/img/catalog/ACCKNS1140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS1140/ACCKNS1140_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS1140/ACCKNS1140_400.jpg"
-  },
-  {
-    "sku": "ACCKNS2390",
-    "nombre": "Trackball Pro Fit® Ergo TB550 K72196WW KENSINGTON. Un diseño ergonómico esculpido brinda comodidad durante todo el día. ",
-    "descripcion_completa": "Trackball Pro Fit® Ergo TB550 K72196WW KENSINGTON. Un diseño ergonómico esculpido brinda comodidad durante todo el día. El Pro Fit® Ergo TB550 cuenta con una inclinación única de 45° que ayuda a mejorar la alineación de la muñeca y el antebrazo, y una rueda de desplazamiento 4D mejorada para una experiencia de usuario intuitiva. El Pro Fit® Ergo TB550 incluye una opción de Bluetooth® Low Energy (LE) y conexión inalámbrica de 2,4 GHz (nano receptor de 2,4 GHz incluido). La batería recargable del Pro Fit® Ergo TB550 proporciona hasta 4 meses de duración con una sola carga a través del puerto USB-C®. Incluye un 51 % de contenido reciclado posconsumo (PCR) del total de componentes plásticos. *Excluye el conjunto de PCB, la batería recargable y el cable de carga. El diseño exclusivo y fácil de limpiar del Pro Fit® Ergo TB550 cuenta con un botón de expulsión del trackball incorporado para quitarlo sin esfuerzo para limpiarlo cuando sea necesario. Un sensor óptico de alta calidad sigue con precisión el trackball de 34 mm que se opera con el pulgar, lo que brinda a los usuarios un control del cursor suave y una precisión óptima. El trackball cuenta con 4 velocidades de cursor conmutables (400, 800, 1200 y 1600 DPI). El Pro Fit® Ergo TB550 incluye encriptación AES de 128 bits de grado gubernamental para mayor seguridad y disuadir a los piratas informáticos de monitorear la conexión inalámbrica y capturar información confidencial.",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "TRACKBALL",
-    "costo_base": 1055.56,
-    "precio_mxn": 27787.5,
-    "precio_original": 32933.33,
-    "img": "https://static.ctonline.mx/imagenes/ACCKNS2390/ACCKNS2390_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/TRACKBALL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCKNS2390",
-    "costo_proveedor_mxn": 20583.33,
-    "precio": 27787.5,
-    "precio_mayoreo_10pzs": 24700.0,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCKNS2390.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS2390/ACCKNS2390_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCKNS2390/ACCKNS2390_400.jpg"
   },
   {
     "sku": "ACCITL7340",
@@ -7326,6 +7190,7 @@
     "img_local": "assets/img/catalog/ACCITL7340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCITL7340/ACCITL7340_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCITL7340/ACCITL7340_400.jpg"
   },
   {
@@ -7347,6 +7212,7 @@
     "img_local": "assets/img/catalog/ACCITL7350.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCITL7350/ACCITL7350_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCITL7350/ACCITL7350_400.jpg"
   },
   {
@@ -7368,6 +7234,7 @@
     "img_local": "assets/img/catalog/ACCITL5610.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCITL5610/ACCITL5610_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCITL5610/ACCITL5610_400.jpg"
   },
   {
@@ -7389,6 +7256,7 @@
     "img_local": "assets/img/catalog/ACCITL3580.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCITL3580/ACCITL3580_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCITL3580/ACCITL3580_400.jpg"
   },
   {
@@ -7410,6 +7278,7 @@
     "img_local": "assets/img/catalog/SLXLMP780.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SLXLMP780/SLXLMP780_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SLXLMP780/SLXLMP780_400.jpg"
   },
   {
@@ -7431,6 +7300,7 @@
     "img_local": "assets/img/catalog/SLXLMP670.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SLXLMP670/SLXLMP670_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SLXLMP670/SLXLMP670_400.jpg"
   },
   {
@@ -7452,6 +7322,7 @@
     "img_local": "assets/img/catalog/SLXLMP690.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SLXLMP690/SLXLMP690_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SLXLMP690/SLXLMP690_400.jpg"
   },
   {
@@ -7473,6 +7344,7 @@
     "img_local": "assets/img/catalog/SLXLMP720.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SLXLMP720/SLXLMP720_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SLXLMP720/SLXLMP720_400.jpg"
   },
   {
@@ -7494,28 +7366,8 @@
     "img_local": "assets/img/catalog/ACCTRG3430.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTRG3430/ACCTRG3430_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTRG3430/ACCTRG3430_400.jpg"
-  },
-  {
-    "sku": "ACCTCH9740",
-    "nombre": "Candado de SEGURIDAD TZKL703KD marca TechZone Candado de Seguridad para Ranura NANO LOCK. Cable de acero inoxidable recu",
-    "descripcion_completa": "Candado de SEGURIDAD TZKL703KD marca TechZone Candado de Seguridad para Ranura NANO LOCK. Cable de acero inoxidable recubierto de vinilo. Cabezal Fusionado al cable. Compatible con MAC®, PC® o Monitor (verifica compatibilidad). Candado y cable adaptable para entrada tipo Kensington lock.",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "CANDADO",
-    "costo_base": 300.0,
-    "precio_mxn": 7897.5,
-    "precio_original": 9360.0,
-    "img": "https://static.ctonline.mx/imagenes/ACCTCH9740/ACCTCH9740_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/CANDADO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCTCH9740",
-    "costo_proveedor_mxn": 5850.0,
-    "precio": 7897.5,
-    "precio_mayoreo_10pzs": 7020.0,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCTCH9740.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCTCH9740/ACCTCH9740_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCTCH9740/ACCTCH9740_400.jpg"
   },
   {
     "sku": "ACCTCH140",
@@ -7536,28 +7388,8 @@
     "img_local": "assets/img/catalog/ACCTCH140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTCH140/ACCTCH140_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTCH140/ACCTCH140_400.jpg"
-  },
-  {
-    "sku": "ACCTCH9700",
-    "nombre": "Candado de seguridad de combinación intercambiable TZCCL103 marca TechZone Cable de acero inoxidable. Recubierto de vini",
-    "descripcion_completa": "Candado de seguridad de combinación intercambiable TZCCL103 marca TechZone Cable de acero inoxidable. Recubierto de vinilo. Se engancha fácilmente en la ranura de seguridad de la computadora portátil, compatible con puerto K. Compatible con Mac, PC, monitor y proyector. 10,000 combinaciones posibles. 3 años de garantía. Cabezal fusionado al cable. Estructura del cable: 7×7. Grosor del cable: 3mm. Longitud del cable: 1.8mts. 3 en 1: Cabezal tipo T, N17, Nano Lock",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "CANDADO",
-    "costo_base": 358.89,
-    "precio_mxn": 9447.75,
-    "precio_original": 11197.33,
-    "img": "https://static.ctonline.mx/imagenes/ACCTCH9700/ACCTCH9700_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/CANDADO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCTCH9700",
-    "costo_proveedor_mxn": 6998.33,
-    "precio": 9447.75,
-    "precio_mayoreo_10pzs": 8398.0,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCTCH9700.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCTCH9700/ACCTCH9700_400.jpg",
-    "categoria_clasificada": "telefonia_seguridad",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCTCH9700/ACCTCH9700_400.jpg"
   },
   {
     "sku": "ACCRBT8850",
@@ -7578,6 +7410,7 @@
     "img_local": "assets/img/catalog/ACCRBT8850.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT8850/ACCRBT8850_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT8850/ACCRBT8850_400.jpg"
   },
   {
@@ -7599,6 +7432,7 @@
     "img_local": "assets/img/catalog/ACCRBT8860.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT8860/ACCRBT8860_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT8860/ACCRBT8860_400.jpg"
   },
   {
@@ -7620,6 +7454,7 @@
     "img_local": "assets/img/catalog/ACCRBT7620.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT7620/ACCRBT7620_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT7620/ACCRBT7620_400.jpg"
   },
   {
@@ -7641,6 +7476,7 @@
     "img_local": "assets/img/catalog/ACCRBT7350.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT7350/ACCRBT7350_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT7350/ACCRBT7350_400.jpg"
   },
   {
@@ -7662,6 +7498,7 @@
     "img_local": "assets/img/catalog/ACCRBT6410.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6410/ACCRBT6410_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6410/ACCRBT6410_400.jpg"
   },
   {
@@ -7683,6 +7520,7 @@
     "img_local": "assets/img/catalog/ACCRBT2430.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT2430/ACCRBT2430_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT2430/ACCRBT2430_400.jpg"
   },
   {
@@ -7704,6 +7542,7 @@
     "img_local": "assets/img/catalog/ACCRBT1180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT1180/ACCRBT1180_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT1180/ACCRBT1180_400.jpg"
   },
   {
@@ -7725,6 +7564,7 @@
     "img_local": "assets/img/catalog/ACCRBT5580.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT5580/ACCRBT5580_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT5580/ACCRBT5580_400.jpg"
   },
   {
@@ -7746,6 +7586,7 @@
     "img_local": "assets/img/catalog/ACCRBT6860.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6860/ACCRBT6860_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6860/ACCRBT6860_400.jpg"
   },
   {
@@ -7767,6 +7608,7 @@
     "img_local": "assets/img/catalog/ACCRBT8110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT8110/ACCRBT8110_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT8110/ACCRBT8110_400.jpg"
   },
   {
@@ -7788,6 +7630,7 @@
     "img_local": "assets/img/catalog/ACCKSA050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKSA050/ACCKSA050_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKSA050/ACCKSA050_400.jpg"
   },
   {
@@ -7809,6 +7652,7 @@
     "img_local": "assets/img/catalog/ACCBAC3360.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCBAC3360/ACCBAC3360_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCBAC3360/ACCBAC3360_400.jpg"
   },
   {
@@ -7830,6 +7674,7 @@
     "img_local": "assets/img/catalog/ACCNEX1860.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCNEX1860/ACCNEX1860_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCNEX1860/ACCNEX1860_400.jpg"
   },
   {
@@ -7851,6 +7696,7 @@
     "img_local": "assets/img/catalog/ACCNTE250.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCNTE250/ACCNTE250_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCNTE250/ACCNTE250_400.jpg"
   },
   {
@@ -7872,6 +7718,7 @@
     "img_local": "assets/img/catalog/ACCAPC1110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCAPC1110/ACCAPC1110_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCAPC1110/ACCAPC1110_400.jpg"
   },
   {
@@ -7893,6 +7740,7 @@
     "img_local": "assets/img/catalog/ACCAPC820.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCAPC820/ACCAPC820_400.jpg",
     "categoria_clasificada": "telefonia_seguridad",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCAPC820/ACCAPC820_400.jpg"
   }
 ]

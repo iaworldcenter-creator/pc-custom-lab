@@ -18,7 +18,8 @@
     "margen_aplicado": "35%",
     "img_local": "assets/img/catalog/VENITL280.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENITL280/VENITL280_400.jpg",
-    "categoria_clasificada": "gabinetes"
+    "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor"
   },
   {
     "sku": "GABEVO530",
@@ -39,6 +40,7 @@
     "img_local": "assets/img/catalog/GABEVO530.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABEVO530/GABEVO530_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABEVO530/GABEVO530_400.jpg"
   },
   {
@@ -60,6 +62,7 @@
     "img_local": "assets/img/catalog/GABEVO540.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABEVO540/GABEVO540_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABEVO540/GABEVO540_400.jpg"
   },
   {
@@ -81,6 +84,7 @@
     "img_local": "assets/img/catalog/GABEVO550.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABEVO550/GABEVO550_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABEVO550/GABEVO550_400.jpg"
   },
   {
@@ -102,6 +106,7 @@
     "img_local": "assets/img/catalog/GABEVO470.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABEVO470/GABEVO470_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABEVO470/GABEVO470_400.jpg"
   },
   {
@@ -123,6 +128,7 @@
     "img_local": "assets/img/catalog/GABEVO480.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABEVO480/GABEVO480_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABEVO480/GABEVO480_400.jpg"
   },
   {
@@ -144,6 +150,7 @@
     "img_local": "assets/img/catalog/GABEVO490.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABEVO490/GABEVO490_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABEVO490/GABEVO490_400.jpg"
   },
   {
@@ -165,6 +172,7 @@
     "img_local": "assets/img/catalog/GABEVO500.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABEVO500/GABEVO500_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABEVO500/GABEVO500_400.jpg"
   },
   {
@@ -186,6 +194,7 @@
     "img_local": "assets/img/catalog/GABACT680.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABACT680/GABACT680_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABACT680/GABACT680_400.jpg"
   },
   {
@@ -207,6 +216,7 @@
     "img_local": "assets/img/catalog/GABACT690.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABACT690/GABACT690_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABACT690/GABACT690_400.jpg"
   },
   {
@@ -228,6 +238,7 @@
     "img_local": "assets/img/catalog/GABACT100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABACT100/GABACT100_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABACT100/GABACT100_400.jpg"
   },
   {
@@ -249,6 +260,7 @@
     "img_local": "assets/img/catalog/GABACT110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABACT110/GABACT110_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABACT110/GABACT110_400.jpg"
   },
   {
@@ -270,6 +282,7 @@
     "img_local": "assets/img/catalog/GABACT080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABACT080/GABACT080_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABACT080/GABACT080_400.jpg"
   },
   {
@@ -291,6 +304,7 @@
     "img_local": "assets/img/catalog/GABBLR030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR030/GABBLR030_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR030/GABBLR030_400.jpg"
   },
   {
@@ -312,6 +326,7 @@
     "img_local": "assets/img/catalog/GABBLR250.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR250/GABBLR250_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR250/GABBLR250_400.jpg"
   },
   {
@@ -333,6 +348,7 @@
     "img_local": "assets/img/catalog/GABBLR260.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR260/GABBLR260_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR260/GABBLR260_400.jpg"
   },
   {
@@ -354,6 +370,7 @@
     "img_local": "assets/img/catalog/GABBLR270.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR270/GABBLR270_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR270/GABBLR270_400.jpg"
   },
   {
@@ -375,6 +392,7 @@
     "img_local": "assets/img/catalog/GABBLR650.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR650/GABBLR650_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR650/GABBLR650_400.jpg"
   },
   {
@@ -396,6 +414,7 @@
     "img_local": "assets/img/catalog/GABBLR660.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR660/GABBLR660_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR660/GABBLR660_400.jpg"
   },
   {
@@ -417,6 +436,7 @@
     "img_local": "assets/img/catalog/GABBLR670.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR670/GABBLR670_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR670/GABBLR670_400.jpg"
   },
   {
@@ -438,6 +458,7 @@
     "img_local": "assets/img/catalog/GABBLR680.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR680/GABBLR680_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR680/GABBLR680_400.jpg"
   },
   {
@@ -459,6 +480,7 @@
     "img_local": "assets/img/catalog/GABBLR700.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR700/GABBLR700_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR700/GABBLR700_400.jpg"
   },
   {
@@ -480,6 +502,7 @@
     "img_local": "assets/img/catalog/GABBLR710.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR710/GABBLR710_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR710/GABBLR710_400.jpg"
   },
   {
@@ -501,6 +524,7 @@
     "img_local": "assets/img/catalog/GABBLR720.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR720/GABBLR720_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR720/GABBLR720_400.jpg"
   },
   {
@@ -522,6 +546,7 @@
     "img_local": "assets/img/catalog/GABBLR740.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR740/GABBLR740_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR740/GABBLR740_400.jpg"
   },
   {
@@ -543,6 +568,7 @@
     "img_local": "assets/img/catalog/GABBLR750.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR750/GABBLR750_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR750/GABBLR750_400.jpg"
   },
   {
@@ -564,6 +590,7 @@
     "img_local": "assets/img/catalog/GABBLR760.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR760/GABBLR760_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR760/GABBLR760_400.jpg"
   },
   {
@@ -585,6 +612,7 @@
     "img_local": "assets/img/catalog/GABBLR590.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR590/GABBLR590_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR590/GABBLR590_400.jpg"
   },
   {
@@ -606,6 +634,7 @@
     "img_local": "assets/img/catalog/GABBLR600.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR600/GABBLR600_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR600/GABBLR600_400.jpg"
   },
   {
@@ -627,6 +656,7 @@
     "img_local": "assets/img/catalog/GABBLR610.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR610/GABBLR610_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR610/GABBLR610_400.jpg"
   },
   {
@@ -648,6 +678,7 @@
     "img_local": "assets/img/catalog/GABBLR620.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR620/GABBLR620_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR620/GABBLR620_400.jpg"
   },
   {
@@ -669,6 +700,7 @@
     "img_local": "assets/img/catalog/GABBLR630.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR630/GABBLR630_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR630/GABBLR630_400.jpg"
   },
   {
@@ -690,6 +722,7 @@
     "img_local": "assets/img/catalog/GABBLR640.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR640/GABBLR640_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR640/GABBLR640_400.jpg"
   },
   {
@@ -711,6 +744,7 @@
     "img_local": "assets/img/catalog/GABBLR280.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR280/GABBLR280_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR280/GABBLR280_400.jpg"
   },
   {
@@ -732,6 +766,7 @@
     "img_local": "assets/img/catalog/GABBLR290.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR290/GABBLR290_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR290/GABBLR290_400.jpg"
   },
   {
@@ -753,6 +788,7 @@
     "img_local": "assets/img/catalog/GABBLR300.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR300/GABBLR300_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR300/GABBLR300_400.jpg"
   },
   {
@@ -774,6 +810,7 @@
     "img_local": "assets/img/catalog/GABBLR310.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR310/GABBLR310_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR310/GABBLR310_400.jpg"
   },
   {
@@ -795,6 +832,7 @@
     "img_local": "assets/img/catalog/GABBLR320.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR320/GABBLR320_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR320/GABBLR320_400.jpg"
   },
   {
@@ -816,6 +854,7 @@
     "img_local": "assets/img/catalog/GABBLR330.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR330/GABBLR330_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR330/GABBLR330_400.jpg"
   },
   {
@@ -837,6 +876,7 @@
     "img_local": "assets/img/catalog/GABBLR340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR340/GABBLR340_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR340/GABBLR340_400.jpg"
   },
   {
@@ -858,6 +898,7 @@
     "img_local": "assets/img/catalog/GABBLR180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBLR180/GABBLR180_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBLR180/GABBLR180_400.jpg"
   },
   {
@@ -879,6 +920,7 @@
     "img_local": "assets/img/catalog/GABCLR840.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABCLR840/GABCLR840_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABCLR840/GABCLR840_400.jpg"
   },
   {
@@ -900,6 +942,7 @@
     "img_local": "assets/img/catalog/GABCLR1200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABCLR1200/GABCLR1200_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABCLR1200/GABCLR1200_400.jpg"
   },
   {
@@ -921,6 +964,7 @@
     "img_local": "assets/img/catalog/GABCLR1210.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABCLR1210/GABCLR1210_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABCLR1210/GABCLR1210_400.jpg"
   },
   {
@@ -942,6 +986,7 @@
     "img_local": "assets/img/catalog/GABVGO050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABVGO050/GABVGO050_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABVGO050/GABVGO050_400.jpg"
   },
   {
@@ -963,6 +1008,7 @@
     "img_local": "assets/img/catalog/GABVGO340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABVGO340/GABVGO340_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABVGO340/GABVGO340_400.jpg"
   },
   {
@@ -984,6 +1030,7 @@
     "img_local": "assets/img/catalog/GABVGO190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABVGO190/GABVGO190_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABVGO190/GABVGO190_400.jpg"
   },
   {
@@ -1005,6 +1052,7 @@
     "img_local": "assets/img/catalog/GABVGO290.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABVGO290/GABVGO290_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABVGO290/GABVGO290_400.jpg"
   },
   {
@@ -1026,6 +1074,7 @@
     "img_local": "assets/img/catalog/GABBEQ020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABBEQ020/GABBEQ020_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABBEQ020/GABBEQ020_400.jpg"
   },
   {
@@ -1047,6 +1096,7 @@
     "img_local": "assets/img/catalog/GABNCB180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABNCB180/GABNCB180_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABNCB180/GABNCB180_400.jpg"
   },
   {
@@ -1068,6 +1118,7 @@
     "img_local": "assets/img/catalog/GABNCB170.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABNCB170/GABNCB170_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABNCB170/GABNCB170_400.jpg"
   },
   {
@@ -1089,6 +1140,7 @@
     "img_local": "assets/img/catalog/GABNCB260.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABNCB260/GABNCB260_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABNCB260/GABNCB260_400.jpg"
   },
   {
@@ -1110,6 +1162,7 @@
     "img_local": "assets/img/catalog/GABNCB270.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABNCB270/GABNCB270_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABNCB270/GABNCB270_400.jpg"
   },
   {
@@ -1131,6 +1184,7 @@
     "img_local": "assets/img/catalog/GABNCB280.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABNCB280/GABNCB280_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABNCB280/GABNCB280_400.jpg"
   },
   {
@@ -1152,6 +1206,7 @@
     "img_local": "assets/img/catalog/GABNCB200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABNCB200/GABNCB200_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABNCB200/GABNCB200_400.jpg"
   },
   {
@@ -1173,6 +1228,7 @@
     "img_local": "assets/img/catalog/GABNCB190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABNCB190/GABNCB190_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABNCB190/GABNCB190_400.jpg"
   },
   {
@@ -1194,6 +1250,7 @@
     "img_local": "assets/img/catalog/GABNCB210.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABNCB210/GABNCB210_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABNCB210/GABNCB210_400.jpg"
   },
   {
@@ -1215,6 +1272,7 @@
     "img_local": "assets/img/catalog/GABSTY400.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABSTY400/GABSTY400_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABSTY400/GABSTY400_400.jpg"
   },
   {
@@ -1236,6 +1294,7 @@
     "img_local": "assets/img/catalog/GABSTY410.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABSTY410/GABSTY410_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABSTY410/GABSTY410_400.jpg"
   },
   {
@@ -1257,6 +1316,7 @@
     "img_local": "assets/img/catalog/GABSTY310.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABSTY310/GABSTY310_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABSTY310/GABSTY310_400.jpg"
   },
   {
@@ -1278,6 +1338,7 @@
     "img_local": "assets/img/catalog/GABSTY320.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABSTY320/GABSTY320_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABSTY320/GABSTY320_400.jpg"
   },
   {
@@ -1299,6 +1360,7 @@
     "img_local": "assets/img/catalog/GABSTY470.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABSTY470/GABSTY470_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABSTY470/GABSTY470_400.jpg"
   },
   {
@@ -1320,6 +1382,7 @@
     "img_local": "assets/img/catalog/GABSTY480.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABSTY480/GABSTY480_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABSTY480/GABSTY480_400.jpg"
   },
   {
@@ -1341,6 +1404,7 @@
     "img_local": "assets/img/catalog/GABYEY390.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABYEY390/GABYEY390_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABYEY390/GABYEY390_400.jpg"
   },
   {
@@ -1362,6 +1426,7 @@
     "img_local": "assets/img/catalog/GABYEY200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABYEY200/GABYEY200_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABYEY200/GABYEY200_400.jpg"
   },
   {
@@ -1383,6 +1448,7 @@
     "img_local": "assets/img/catalog/GABYEY210.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABYEY210/GABYEY210_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABYEY210/GABYEY210_400.jpg"
   },
   {
@@ -1404,6 +1470,7 @@
     "img_local": "assets/img/catalog/GABYEY410.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABYEY410/GABYEY410_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABYEY410/GABYEY410_400.jpg"
   },
   {
@@ -1425,6 +1492,7 @@
     "img_local": "assets/img/catalog/GABYEY240.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABYEY240/GABYEY240_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABYEY240/GABYEY240_400.jpg"
   },
   {
@@ -1446,6 +1514,7 @@
     "img_local": "assets/img/catalog/GABYEY380.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABYEY380/GABYEY380_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABYEY380/GABYEY380_400.jpg"
   },
   {
@@ -1467,6 +1536,7 @@
     "img_local": "assets/img/catalog/GABYEY370.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABYEY370/GABYEY370_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABYEY370/GABYEY370_400.jpg"
   },
   {
@@ -1488,6 +1558,7 @@
     "img_local": "assets/img/catalog/GABYEY340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABYEY340/GABYEY340_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABYEY340/GABYEY340_400.jpg"
   },
   {
@@ -1509,6 +1580,7 @@
     "img_local": "assets/img/catalog/GABYEY350.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABYEY350/GABYEY350_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABYEY350/GABYEY350_400.jpg"
   },
   {
@@ -1530,6 +1602,7 @@
     "img_local": "assets/img/catalog/GABTMK2890.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABTMK2890/GABTMK2890_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABTMK2890/GABTMK2890_400.jpg"
   },
   {
@@ -1551,6 +1624,7 @@
     "img_local": "assets/img/catalog/GABTMK2840.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABTMK2840/GABTMK2840_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABTMK2840/GABTMK2840_400.jpg"
   },
   {
@@ -1572,6 +1646,7 @@
     "img_local": "assets/img/catalog/GABTMK2730.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABTMK2730/GABTMK2730_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABTMK2730/GABTMK2730_400.jpg"
   },
   {
@@ -1593,6 +1668,7 @@
     "img_local": "assets/img/catalog/IMPCNN2190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/IMPCNN2190/IMPCNN2190_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/IMPCNN2190/IMPCNN2190_400.jpg"
   },
   {
@@ -1614,6 +1690,7 @@
     "img_local": "assets/img/catalog/ACCXRX610.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCXRX610/ACCXRX610_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCXRX610/ACCXRX610_400.jpg"
   },
   {
@@ -1635,6 +1712,7 @@
     "img_local": "assets/img/catalog/ACCXRX1660.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCXRX1660/ACCXRX1660_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCXRX1660/ACCXRX1660_400.jpg"
   },
   {
@@ -1656,6 +1734,7 @@
     "img_local": "assets/img/catalog/ACCXRX1220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCXRX1220/ACCXRX1220_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCXRX1220/ACCXRX1220_400.jpg"
   },
   {
@@ -1677,6 +1756,7 @@
     "img_local": "assets/img/catalog/ACCXRX1230.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCXRX1230/ACCXRX1230_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCXRX1230/ACCXRX1230_400.jpg"
   },
   {
@@ -1698,6 +1778,7 @@
     "img_local": "assets/img/catalog/ACCXRX1680.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCXRX1680/ACCXRX1680_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCXRX1680/ACCXRX1680_400.jpg"
   },
   {
@@ -1719,6 +1800,7 @@
     "img_local": "assets/img/catalog/SWTTPL730.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL730/SWTTPL730_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL730/SWTTPL730_400.jpg"
   },
   {
@@ -1740,6 +1822,7 @@
     "img_local": "assets/img/catalog/SWTTPL740.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL740/SWTTPL740_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL740/SWTTPL740_400.jpg"
   },
   {
@@ -1761,6 +1844,7 @@
     "img_local": "assets/img/catalog/SWTTPL010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL010/SWTTPL010_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL010/SWTTPL010_400.jpg"
   },
   {
@@ -1782,6 +1866,7 @@
     "img_local": "assets/img/catalog/SWTTPL030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL030/SWTTPL030_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL030/SWTTPL030_400.jpg"
   },
   {
@@ -1803,6 +1888,7 @@
     "img_local": "assets/img/catalog/SWTTPL210.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL210/SWTTPL210_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL210/SWTTPL210_400.jpg"
   },
   {
@@ -1824,6 +1910,7 @@
     "img_local": "assets/img/catalog/SWTTPL040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL040/SWTTPL040_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL040/SWTTPL040_400.jpg"
   },
   {
@@ -1845,6 +1932,7 @@
     "img_local": "assets/img/catalog/SWTTPL050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL050/SWTTPL050_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL050/SWTTPL050_400.jpg"
   },
   {
@@ -1866,6 +1954,7 @@
     "img_local": "assets/img/catalog/SWTTPL750.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL750/SWTTPL750_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL750/SWTTPL750_400.jpg"
   },
   {
@@ -1887,6 +1976,7 @@
     "img_local": "assets/img/catalog/SWTTPL760.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL760/SWTTPL760_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL760/SWTTPL760_400.jpg"
   },
   {
@@ -1908,6 +1998,7 @@
     "img_local": "assets/img/catalog/SWTTPL120.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL120/SWTTPL120_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL120/SWTTPL120_400.jpg"
   },
   {
@@ -1929,6 +2020,7 @@
     "img_local": "assets/img/catalog/SWTTPL130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL130/SWTTPL130_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL130/SWTTPL130_400.jpg"
   },
   {
@@ -1950,6 +2042,7 @@
     "img_local": "assets/img/catalog/SWTTPL150.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL150/SWTTPL150_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL150/SWTTPL150_400.jpg"
   },
   {
@@ -1971,6 +2064,7 @@
     "img_local": "assets/img/catalog/SWTTPL155.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL155/SWTTPL155_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL155/SWTTPL155_400.jpg"
   },
   {
@@ -1992,6 +2086,7 @@
     "img_local": "assets/img/catalog/SWTTPL160.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL160/SWTTPL160_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL160/SWTTPL160_400.jpg"
   },
   {
@@ -2013,6 +2108,7 @@
     "img_local": "assets/img/catalog/SWTTPL250.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL250/SWTTPL250_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL250/SWTTPL250_400.jpg"
   },
   {
@@ -2034,6 +2130,7 @@
     "img_local": "assets/img/catalog/SWTTPL700.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL700/SWTTPL700_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL700/SWTTPL700_400.jpg"
   },
   {
@@ -2055,6 +2152,7 @@
     "img_local": "assets/img/catalog/SWTTPL710.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL710/SWTTPL710_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL710/SWTTPL710_400.jpg"
   },
   {
@@ -2076,6 +2174,7 @@
     "img_local": "assets/img/catalog/SWTTPL720.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL720/SWTTPL720_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL720/SWTTPL720_400.jpg"
   },
   {
@@ -2097,6 +2196,7 @@
     "img_local": "assets/img/catalog/SWTTPL790.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL790/SWTTPL790_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL790/SWTTPL790_400.jpg"
   },
   {
@@ -2118,49 +2218,8 @@
     "img_local": "assets/img/catalog/SWTTPL800.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL800/SWTTPL800_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL800/SWTTPL800_400.jpg"
-  },
-  {
-    "sku": "SWTTPL810",
-    "nombre": "Switch TP-Link administrable OMADA POE (TL-SG2210MP) de (8) puertos 10/100/1000 Mbps 802.3at / af POE+ y (2) Gigabit SFP",
-    "descripcion_completa": "Switch TP-Link administrable OMADA POE (TL-SG2210MP) de (8) puertos 10/100/1000 Mbps 802.3at / af POE+ y (2) Gigabit SFP. Fuente de alimentación de 150W PoE, Integrado en Omada SDN, Administración centralizada vía nube y monitorización inteligente. gabinete metálico.",
-    "categoria_ct": "CONECTIVIDAD",
-    "marca": "SWITCH",
-    "costo_base": 148.75,
-    "precio_mxn": 3915.85,
-    "precio_original": 4641.01,
-    "img": "https://static.ctonline.mx/imagenes/SWTTPL810/SWTTPL810_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/SWITCH.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=SWTTPL810",
-    "costo_proveedor_mxn": 2900.63,
-    "precio": 3915.85,
-    "precio_mayoreo_10pzs": 3480.76,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/SWTTPL810.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL810/SWTTPL810_400.jpg",
-    "categoria_clasificada": "gabinetes",
-    "local_img": "https://static.ctonline.mx/imagenes/SWTTPL810/SWTTPL810_400.jpg"
-  },
-  {
-    "sku": "SWTTPL820",
-    "nombre": "Switch TP-Link administrable OMADA POE (TL-SG2008P) de (4) puertos 10/100/1000 Mbps 802.3at / af POE+, (4) puertos 10/10",
-    "descripcion_completa": "Switch TP-Link administrable OMADA POE (TL-SG2008P) de (4) puertos 10/100/1000 Mbps 802.3at / af POE+, (4) puertos 10/100/1000. Fuente de alimentación de 62W PoE, Integrado en Omada SDN, Administración centralizada vía nube y monitorización inteligente, gabinete metálico.",
-    "categoria_ct": "CONECTIVIDAD",
-    "marca": "SWITCH",
-    "costo_base": 90.0,
-    "precio_mxn": 2369.25,
-    "precio_original": 2808.0,
-    "img": "https://static.ctonline.mx/imagenes/SWTTPL820/SWTTPL820_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/SWITCH.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=SWTTPL820",
-    "costo_proveedor_mxn": 1755.0,
-    "precio": 2369.25,
-    "precio_mayoreo_10pzs": 2106.0,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/SWTTPL820.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL820/SWTTPL820_400.jpg",
-    "categoria_clasificada": "gabinetes",
-    "local_img": "https://static.ctonline.mx/imagenes/SWTTPL820/SWTTPL820_400.jpg"
   },
   {
     "sku": "SWTTPL670",
@@ -2181,6 +2240,7 @@
     "img_local": "assets/img/catalog/SWTTPL670.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL670/SWTTPL670_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL670/SWTTPL670_400.jpg"
   },
   {
@@ -2202,6 +2262,7 @@
     "img_local": "assets/img/catalog/SWTTPL690.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL690/SWTTPL690_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL690/SWTTPL690_400.jpg"
   },
   {
@@ -2223,6 +2284,7 @@
     "img_local": "assets/img/catalog/SWTTPL200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL200/SWTTPL200_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL200/SWTTPL200_400.jpg"
   },
   {
@@ -2244,6 +2306,7 @@
     "img_local": "assets/img/catalog/SWTTPL320.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTTPL320/SWTTPL320_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTTPL320/SWTTPL320_400.jpg"
   },
   {
@@ -2265,6 +2328,7 @@
     "img_local": "assets/img/catalog/ACCTPL190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTPL190/ACCTPL190_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTPL190/ACCTPL190_400.jpg"
   },
   {
@@ -2286,6 +2350,7 @@
     "img_local": "assets/img/catalog/ACCTPL1320.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTPL1320/ACCTPL1320_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTPL1320/ACCTPL1320_400.jpg"
   },
   {
@@ -2307,6 +2372,7 @@
     "img_local": "assets/img/catalog/ACCTPL220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTPL220/ACCTPL220_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTPL220/ACCTPL220_400.jpg"
   },
   {
@@ -2328,6 +2394,7 @@
     "img_local": "assets/img/catalog/ACCTPL010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTPL010/ACCTPL010_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTPL010/ACCTPL010_400.jpg"
   },
   {
@@ -2349,6 +2416,7 @@
     "img_local": "assets/img/catalog/ACCTPL060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTPL060/ACCTPL060_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTPL060/ACCTPL060_400.jpg"
   },
   {
@@ -2370,6 +2438,7 @@
     "img_local": "assets/img/catalog/ACCTPL070.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTPL070/ACCTPL070_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTPL070/ACCTPL070_400.jpg"
   },
   {
@@ -2391,6 +2460,7 @@
     "img_local": "assets/img/catalog/ACCTPL080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTPL080/ACCTPL080_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTPL080/ACCTPL080_400.jpg"
   },
   {
@@ -2412,6 +2482,7 @@
     "img_local": "assets/img/catalog/ACCTPL090.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTPL090/ACCTPL090_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTPL090/ACCTPL090_400.jpg"
   },
   {
@@ -2433,6 +2504,7 @@
     "img_local": "assets/img/catalog/ACCTPL100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTPL100/ACCTPL100_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTPL100/ACCTPL100_400.jpg"
   },
   {
@@ -2454,6 +2526,7 @@
     "img_local": "assets/img/catalog/ACCTPL110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTPL110/ACCTPL110_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTPL110/ACCTPL110_400.jpg"
   },
   {
@@ -2475,6 +2548,7 @@
     "img_local": "assets/img/catalog/SWTMER010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTMER010/SWTMER010_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTMER010/SWTMER010_400.jpg"
   },
   {
@@ -2496,6 +2570,7 @@
     "img_local": "assets/img/catalog/SWTMER020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTMER020/SWTMER020_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTMER020/SWTMER020_400.jpg"
   },
   {
@@ -2517,6 +2592,7 @@
     "img_local": "assets/img/catalog/SWTMER030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTMER030/SWTMER030_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTMER030/SWTMER030_400.jpg"
   },
   {
@@ -2538,6 +2614,7 @@
     "img_local": "assets/img/catalog/SWTMER040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTMER040/SWTMER040_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTMER040/SWTMER040_400.jpg"
   },
   {
@@ -2559,6 +2636,7 @@
     "img_local": "assets/img/catalog/SWTITL330.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTITL330/SWTITL330_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTITL330/SWTITL330_400.jpg"
   },
   {
@@ -2580,6 +2658,7 @@
     "img_local": "assets/img/catalog/SWTITL440.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTITL440/SWTITL440_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTITL440/SWTITL440_400.jpg"
   },
   {
@@ -2601,6 +2680,7 @@
     "img_local": "assets/img/catalog/SWTITL580.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTITL580/SWTITL580_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTITL580/SWTITL580_400.jpg"
   },
   {
@@ -2622,6 +2702,7 @@
     "img_local": "assets/img/catalog/SWTITL590.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTITL590/SWTITL590_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTITL590/SWTITL590_400.jpg"
   },
   {
@@ -2643,6 +2724,7 @@
     "img_local": "assets/img/catalog/SWTITL600.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTITL600/SWTITL600_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTITL600/SWTITL600_400.jpg"
   },
   {
@@ -2664,6 +2746,7 @@
     "img_local": "assets/img/catalog/SWTITL610.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SWTITL610/SWTITL610_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SWTITL610/SWTITL610_400.jpg"
   },
   {
@@ -2685,6 +2768,7 @@
     "img_local": "assets/img/catalog/RCKACC2380.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2380/RCKACC2380_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2380/RCKACC2380_400.jpg"
   },
   {
@@ -2706,6 +2790,7 @@
     "img_local": "assets/img/catalog/RCKACC2480.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2480/RCKACC2480_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2480/RCKACC2480_400.jpg"
   },
   {
@@ -2727,6 +2812,7 @@
     "img_local": "assets/img/catalog/RCKACC2370.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2370/RCKACC2370_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2370/RCKACC2370_400.jpg"
   },
   {
@@ -2748,6 +2834,7 @@
     "img_local": "assets/img/catalog/RCKACC2340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2340/RCKACC2340_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2340/RCKACC2340_400.jpg"
   },
   {
@@ -2769,6 +2856,7 @@
     "img_local": "assets/img/catalog/RCKACC2400.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2400/RCKACC2400_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2400/RCKACC2400_400.jpg"
   },
   {
@@ -2790,6 +2878,7 @@
     "img_local": "assets/img/catalog/RCKACC2390.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2390/RCKACC2390_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2390/RCKACC2390_400.jpg"
   },
   {
@@ -2811,6 +2900,7 @@
     "img_local": "assets/img/catalog/RCKACC2360.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2360/RCKACC2360_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2360/RCKACC2360_400.jpg"
   },
   {
@@ -2832,6 +2922,7 @@
     "img_local": "assets/img/catalog/RCKACC2460.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2460/RCKACC2460_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2460/RCKACC2460_400.jpg"
   },
   {
@@ -2853,6 +2944,7 @@
     "img_local": "assets/img/catalog/RCKACC2430.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2430/RCKACC2430_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2430/RCKACC2430_400.jpg"
   },
   {
@@ -2874,6 +2966,7 @@
     "img_local": "assets/img/catalog/RCKACC2470.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2470/RCKACC2470_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2470/RCKACC2470_400.jpg"
   },
   {
@@ -2895,6 +2988,7 @@
     "img_local": "assets/img/catalog/RCKACC2410.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2410/RCKACC2410_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2410/RCKACC2410_400.jpg"
   },
   {
@@ -2916,6 +3010,7 @@
     "img_local": "assets/img/catalog/RCKACC2420.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2420/RCKACC2420_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2420/RCKACC2420_400.jpg"
   },
   {
@@ -2937,6 +3032,7 @@
     "img_local": "assets/img/catalog/RCKACC2350.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2350/RCKACC2350_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2350/RCKACC2350_400.jpg"
   },
   {
@@ -2958,6 +3054,7 @@
     "img_local": "assets/img/catalog/RCKACC2450.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2450/RCKACC2450_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2450/RCKACC2450_400.jpg"
   },
   {
@@ -2979,6 +3076,7 @@
     "img_local": "assets/img/catalog/RCKACC2500.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2500/RCKACC2500_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2500/RCKACC2500_400.jpg"
   },
   {
@@ -3000,6 +3098,7 @@
     "img_local": "assets/img/catalog/RCKACC2320.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2320/RCKACC2320_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2320/RCKACC2320_400.jpg"
   },
   {
@@ -3021,6 +3120,7 @@
     "img_local": "assets/img/catalog/RCKACC2330.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2330/RCKACC2330_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2330/RCKACC2330_400.jpg"
   },
   {
@@ -3042,6 +3142,7 @@
     "img_local": "assets/img/catalog/RCKACC2490.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2490/RCKACC2490_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2490/RCKACC2490_400.jpg"
   },
   {
@@ -3063,6 +3164,7 @@
     "img_local": "assets/img/catalog/RCKACC2530.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2530/RCKACC2530_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2530/RCKACC2530_400.jpg"
   },
   {
@@ -3084,6 +3186,7 @@
     "img_local": "assets/img/catalog/RCKACC2510.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2510/RCKACC2510_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2510/RCKACC2510_400.jpg"
   },
   {
@@ -3105,6 +3208,7 @@
     "img_local": "assets/img/catalog/GABITL720.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL720/GABITL720_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL720/GABITL720_400.jpg"
   },
   {
@@ -3126,6 +3230,7 @@
     "img_local": "assets/img/catalog/GABITL210.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL210/GABITL210_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL210/GABITL210_400.jpg"
   },
   {
@@ -3147,6 +3252,7 @@
     "img_local": "assets/img/catalog/GABITL680.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL680/GABITL680_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL680/GABITL680_400.jpg"
   },
   {
@@ -3168,6 +3274,7 @@
     "img_local": "assets/img/catalog/GABITL700.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL700/GABITL700_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL700/GABITL700_400.jpg"
   },
   {
@@ -3189,6 +3296,7 @@
     "img_local": "assets/img/catalog/GABITL670.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL670/GABITL670_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL670/GABITL670_400.jpg"
   },
   {
@@ -3210,6 +3318,7 @@
     "img_local": "assets/img/catalog/GABITL660.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL660/GABITL660_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL660/GABITL660_400.jpg"
   },
   {
@@ -3231,6 +3340,7 @@
     "img_local": "assets/img/catalog/GABITL500.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL500/GABITL500_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL500/GABITL500_400.jpg"
   },
   {
@@ -3252,6 +3362,7 @@
     "img_local": "assets/img/catalog/GABITL510.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL510/GABITL510_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL510/GABITL510_400.jpg"
   },
   {
@@ -3273,6 +3384,7 @@
     "img_local": "assets/img/catalog/GABITL520.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL520/GABITL520_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL520/GABITL520_400.jpg"
   },
   {
@@ -3294,6 +3406,7 @@
     "img_local": "assets/img/catalog/GABITL540.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL540/GABITL540_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL540/GABITL540_400.jpg"
   },
   {
@@ -3315,6 +3428,7 @@
     "img_local": "assets/img/catalog/GABITL820.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL820/GABITL820_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL820/GABITL820_400.jpg"
   },
   {
@@ -3336,6 +3450,7 @@
     "img_local": "assets/img/catalog/RCKACC1970.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC1970/RCKACC1970_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC1970/RCKACC1970_400.jpg"
   },
   {
@@ -3357,6 +3472,7 @@
     "img_local": "assets/img/catalog/RCKACC1960.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC1960/RCKACC1960_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC1960/RCKACC1960_400.jpg"
   },
   {
@@ -3378,6 +3494,7 @@
     "img_local": "assets/img/catalog/RCKACC1950.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC1950/RCKACC1950_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC1950/RCKACC1950_400.jpg"
   },
   {
@@ -3399,6 +3516,7 @@
     "img_local": "assets/img/catalog/RCKACC2030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2030/RCKACC2030_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2030/RCKACC2030_400.jpg"
   },
   {
@@ -3420,6 +3538,7 @@
     "img_local": "assets/img/catalog/RCKACC2310.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2310/RCKACC2310_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2310/RCKACC2310_400.jpg"
   },
   {
@@ -3441,6 +3560,7 @@
     "img_local": "assets/img/catalog/RCKACC2040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC2040/RCKACC2040_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC2040/RCKACC2040_400.jpg"
   },
   {
@@ -3462,6 +3582,7 @@
     "img_local": "assets/img/catalog/RCKACC1410.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKACC1410/RCKACC1410_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKACC1410/RCKACC1410_400.jpg"
   },
   {
@@ -3483,6 +3604,7 @@
     "img_local": "assets/img/catalog/ACCITL7970.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCITL7970/ACCITL7970_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCITL7970/ACCITL7970_400.jpg"
   },
   {
@@ -3504,6 +3626,7 @@
     "img_local": "assets/img/catalog/GABNSY010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABNSY010/GABNSY010_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABNSY010/GABNSY010_400.jpg"
   },
   {
@@ -3525,6 +3648,7 @@
     "img_local": "assets/img/catalog/ACCRBT6190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6190/ACCRBT6190_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6190/ACCRBT6190_400.jpg"
   },
   {
@@ -3546,6 +3670,7 @@
     "img_local": "assets/img/catalog/ACCRBT6200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6200/ACCRBT6200_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6200/ACCRBT6200_400.jpg"
   },
   {
@@ -3567,6 +3692,7 @@
     "img_local": "assets/img/catalog/ACCRBT6210.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6210/ACCRBT6210_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6210/ACCRBT6210_400.jpg"
   },
   {
@@ -3588,6 +3714,7 @@
     "img_local": "assets/img/catalog/ACCEPC170.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCEPC170/ACCEPC170_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCEPC170/ACCEPC170_400.jpg"
   },
   {
@@ -3609,6 +3736,7 @@
     "img_local": "assets/img/catalog/ACCEPC180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCEPC180/ACCEPC180_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCEPC180/ACCEPC180_400.jpg"
   },
   {
@@ -3630,6 +3758,7 @@
     "img_local": "assets/img/catalog/ACCEPC190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCEPC190/ACCEPC190_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCEPC190/ACCEPC190_400.jpg"
   },
   {
@@ -3651,6 +3780,7 @@
     "img_local": "assets/img/catalog/ACCEPC200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCEPC200/ACCEPC200_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCEPC200/ACCEPC200_400.jpg"
   },
   {
@@ -3672,6 +3802,7 @@
     "img_local": "assets/img/catalog/ACCEPC310.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCEPC310/ACCEPC310_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCEPC310/ACCEPC310_400.jpg"
   },
   {
@@ -3693,6 +3824,7 @@
     "img_local": "assets/img/catalog/ACCEPC210.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCEPC210/ACCEPC210_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCEPC210/ACCEPC210_400.jpg"
   },
   {
@@ -3714,6 +3846,7 @@
     "img_local": "assets/img/catalog/ACCEPC220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCEPC220/ACCEPC220_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCEPC220/ACCEPC220_400.jpg"
   },
   {
@@ -3735,6 +3868,7 @@
     "img_local": "assets/img/catalog/ACCEPC230.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCEPC230/ACCEPC230_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCEPC230/ACCEPC230_400.jpg"
   },
   {
@@ -3756,6 +3890,7 @@
     "img_local": "assets/img/catalog/ACPMTK030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACPMTK030/ACPMTK030_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACPMTK030/ACPMTK030_400.jpg"
   },
   {
@@ -3777,6 +3912,7 @@
     "img_local": "assets/img/catalog/ACCMVA1100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCMVA1100/ACCMVA1100_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCMVA1100/ACCMVA1100_400.jpg"
   },
   {
@@ -3798,6 +3934,7 @@
     "img_local": "assets/img/catalog/ACCMVA1110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCMVA1110/ACCMVA1110_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCMVA1110/ACCMVA1110_400.jpg"
   },
   {
@@ -3819,6 +3956,7 @@
     "img_local": "assets/img/catalog/GABMVA010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABMVA010/GABMVA010_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABMVA010/GABMVA010_400.jpg"
   },
   {
@@ -3840,6 +3978,7 @@
     "img_local": "assets/img/catalog/GABMVA020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABMVA020/GABMVA020_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABMVA020/GABMVA020_400.jpg"
   },
   {
@@ -3861,6 +4000,7 @@
     "img_local": "assets/img/catalog/GABMVA070.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABMVA070/GABMVA070_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABMVA070/GABMVA070_400.jpg"
   },
   {
@@ -3882,6 +4022,7 @@
     "img_local": "assets/img/catalog/GABMVA060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABMVA060/GABMVA060_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABMVA060/GABMVA060_400.jpg"
   },
   {
@@ -3903,6 +4044,7 @@
     "img_local": "assets/img/catalog/ACCENS120.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCENS120/ACCENS120_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCENS120/ACCENS120_400.jpg"
   },
   {
@@ -3924,6 +4066,7 @@
     "img_local": "assets/img/catalog/ACCMVA1440.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCMVA1440/ACCMVA1440_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCMVA1440/ACCMVA1440_400.jpg"
   },
   {
@@ -3945,6 +4088,7 @@
     "img_local": "assets/img/catalog/ACCENS130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCENS130/ACCENS130_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCENS130/ACCENS130_400.jpg"
   },
   {
@@ -3966,6 +4110,7 @@
     "img_local": "assets/img/catalog/ACCENS100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCENS100/ACCENS100_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCENS100/ACCENS100_400.jpg"
   },
   {
@@ -3987,6 +4132,7 @@
     "img_local": "assets/img/catalog/ACCLKP120.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCLKP120/ACCLKP120_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCLKP120/ACCLKP120_400.jpg"
   },
   {
@@ -4008,6 +4154,7 @@
     "img_local": "assets/img/catalog/GABLKP050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABLKP050/GABLKP050_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABLKP050/GABLKP050_400.jpg"
   },
   {
@@ -4029,6 +4176,7 @@
     "img_local": "assets/img/catalog/GABLKP040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABLKP040/GABLKP040_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABLKP040/GABLKP040_400.jpg"
   },
   {
@@ -4050,6 +4198,7 @@
     "img_local": "assets/img/catalog/GABNXX010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABNXX010/GABNXX010_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABNXX010/GABNXX010_400.jpg"
   },
   {
@@ -4071,6 +4220,7 @@
     "img_local": "assets/img/catalog/GABNXX020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABNXX020/GABNXX020_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABNXX020/GABNXX020_400.jpg"
   },
   {
@@ -4092,6 +4242,7 @@
     "img_local": "assets/img/catalog/GABNXX030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABNXX030/GABNXX030_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABNXX030/GABNXX030_400.jpg"
   },
   {
@@ -4113,6 +4264,7 @@
     "img_local": "assets/img/catalog/GABNXX040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABNXX040/GABNXX040_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABNXX040/GABNXX040_400.jpg"
   },
   {
@@ -4134,6 +4286,7 @@
     "img_local": "assets/img/catalog/GABWAM140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABWAM140/GABWAM140_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABWAM140/GABWAM140_400.jpg"
   },
   {
@@ -4155,6 +4308,7 @@
     "img_local": "assets/img/catalog/GABWAM150.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABWAM150/GABWAM150_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABWAM150/GABWAM150_400.jpg"
   },
   {
@@ -4176,6 +4330,7 @@
     "img_local": "assets/img/catalog/GABWAM160.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABWAM160/GABWAM160_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABWAM160/GABWAM160_400.jpg"
   },
   {
@@ -4197,6 +4352,7 @@
     "img_local": "assets/img/catalog/CAMDAH1520.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMDAH1520/CAMDAH1520_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMDAH1520/CAMDAH1520_400.jpg"
   },
   {
@@ -4218,6 +4374,7 @@
     "img_local": "assets/img/catalog/CAMTPL810.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMTPL810/CAMTPL810_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMTPL810/CAMTPL810_400.jpg"
   },
   {
@@ -4239,6 +4396,7 @@
     "img_local": "assets/img/catalog/ACCHKV2180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV2180/ACCHKV2180_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV2180/ACCHKV2180_400.jpg"
   },
   {
@@ -4260,6 +4418,7 @@
     "img_local": "assets/img/catalog/GABHKV090.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABHKV090/GABHKV090_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABHKV090/GABHKV090_400.jpg"
   },
   {
@@ -4281,6 +4440,7 @@
     "img_local": "assets/img/catalog/GABLKP030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABLKP030/GABLKP030_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABLKP030/GABLKP030_400.jpg"
   },
   {
@@ -4302,6 +4462,7 @@
     "img_local": "assets/img/catalog/GABLKP060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABLKP060/GABLKP060_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABLKP060/GABLKP060_400.jpg"
   },
   {
@@ -4323,6 +4484,7 @@
     "img_local": "assets/img/catalog/ACCHKV4490.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV4490/ACCHKV4490_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV4490/ACCHKV4490_400.jpg"
   },
   {
@@ -4344,6 +4506,7 @@
     "img_local": "assets/img/catalog/ACCHKV4430.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV4430/ACCHKV4430_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV4430/ACCHKV4430_400.jpg"
   },
   {
@@ -4365,6 +4528,7 @@
     "img_local": "assets/img/catalog/ACCHKV4580.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV4580/ACCHKV4580_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV4580/ACCHKV4580_400.jpg"
   },
   {
@@ -4386,6 +4550,7 @@
     "img_local": "assets/img/catalog/ACCHKV4840.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV4840/ACCHKV4840_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV4840/ACCHKV4840_400.jpg"
   },
   {
@@ -4407,6 +4572,7 @@
     "img_local": "assets/img/catalog/ACCHKV4970.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV4970/ACCHKV4970_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV4970/ACCHKV4970_400.jpg"
   },
   {
@@ -4428,6 +4594,7 @@
     "img_local": "assets/img/catalog/ACCHKV4980.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV4980/ACCHKV4980_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV4980/ACCHKV4980_400.jpg"
   },
   {
@@ -4449,6 +4616,7 @@
     "img_local": "assets/img/catalog/ACCHKV1240.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHKV1240/ACCHKV1240_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHKV1240/ACCHKV1240_400.jpg"
   },
   {
@@ -4470,6 +4638,7 @@
     "img_local": "assets/img/catalog/AIRLGE330.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/AIRLGE330/AIRLGE330_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/AIRLGE330/AIRLGE330_400.jpg"
   },
   {
@@ -4491,6 +4660,7 @@
     "img_local": "assets/img/catalog/AIRLGE230.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/AIRLGE230/AIRLGE230_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/AIRLGE230/AIRLGE230_400.jpg"
   },
   {
@@ -4512,6 +4682,7 @@
     "img_local": "assets/img/catalog/CJNNTE030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CJNNTE030/CJNNTE030_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CJNNTE030/CJNNTE030_400.jpg"
   },
   {
@@ -4533,6 +4704,7 @@
     "img_local": "assets/img/catalog/LICZKT130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/LICZKT130/LICZKT130_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/LICZKT130/LICZKT130_400.jpg"
   },
   {
@@ -4554,6 +4726,7 @@
     "img_local": "assets/img/catalog/ACCZKT880.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCZKT880/ACCZKT880_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCZKT880/ACCZKT880_400.jpg"
   },
   {
@@ -4575,6 +4748,7 @@
     "img_local": "assets/img/catalog/ACCZKT920.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCZKT920/ACCZKT920_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCZKT920/ACCZKT920_400.jpg"
   },
   {
@@ -4596,6 +4770,7 @@
     "img_local": "assets/img/catalog/BOCBLR170.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BOCBLR170/BOCBLR170_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BOCBLR170/BOCBLR170_400.jpg"
   },
   {
@@ -4617,6 +4792,7 @@
     "img_local": "assets/img/catalog/BOCBLR180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BOCBLR180/BOCBLR180_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BOCBLR180/BOCBLR180_400.jpg"
   },
   {
@@ -4638,6 +4814,7 @@
     "img_local": "assets/img/catalog/ACCACT4760.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCACT4760/ACCACT4760_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCACT4760/ACCACT4760_400.jpg"
   },
   {
@@ -4659,6 +4836,7 @@
     "img_local": "assets/img/catalog/ACCNCB770.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCNCB770/ACCNCB770_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCNCB770/ACCNCB770_400.jpg"
   },
   {
@@ -4680,6 +4858,7 @@
     "img_local": "assets/img/catalog/VENNCB020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENNCB020/VENNCB020_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENNCB020/VENNCB020_400.jpg"
   },
   {
@@ -4701,6 +4880,7 @@
     "img_local": "assets/img/catalog/VENNCB040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENNCB040/VENNCB040_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENNCB040/VENNCB040_400.jpg"
   },
   {
@@ -4722,6 +4902,7 @@
     "img_local": "assets/img/catalog/VENNCB050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENNCB050/VENNCB050_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENNCB050/VENNCB050_400.jpg"
   },
   {
@@ -4743,6 +4924,7 @@
     "img_local": "assets/img/catalog/VENNCB080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENNCB080/VENNCB080_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENNCB080/VENNCB080_400.jpg"
   },
   {
@@ -4764,6 +4946,7 @@
     "img_local": "assets/img/catalog/VENNCB090.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENNCB090/VENNCB090_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENNCB090/VENNCB090_400.jpg"
   },
   {
@@ -4785,6 +4968,7 @@
     "img_local": "assets/img/catalog/VENNCB100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENNCB100/VENNCB100_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENNCB100/VENNCB100_400.jpg"
   },
   {
@@ -4806,6 +4990,7 @@
     "img_local": "assets/img/catalog/VENNCB110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/VENNCB110/VENNCB110_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/VENNCB110/VENNCB110_400.jpg"
   },
   {
@@ -4827,6 +5012,7 @@
     "img_local": "assets/img/catalog/ACCYEY070.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCYEY070/ACCYEY070_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCYEY070/ACCYEY070_400.jpg"
   },
   {
@@ -4848,6 +5034,7 @@
     "img_local": "assets/img/catalog/ACCMAC2840.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCMAC2840/ACCMAC2840_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCMAC2840/ACCMAC2840_400.jpg"
   },
   {
@@ -4869,6 +5056,7 @@
     "img_local": "assets/img/catalog/ACCMAC2850.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCMAC2850/ACCMAC2850_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCMAC2850/ACCMAC2850_400.jpg"
   },
   {
@@ -4890,6 +5078,7 @@
     "img_local": "assets/img/catalog/ACCMAC2860.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCMAC2860/ACCMAC2860_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCMAC2860/ACCMAC2860_400.jpg"
   },
   {
@@ -4911,6 +5100,7 @@
     "img_local": "assets/img/catalog/ACCMAC3150.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCMAC3150/ACCMAC3150_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCMAC3150/ACCMAC3150_400.jpg"
   },
   {
@@ -4932,6 +5122,7 @@
     "img_local": "assets/img/catalog/ACCMAC3160.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCMAC3160/ACCMAC3160_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCMAC3160/ACCMAC3160_400.jpg"
   },
   {
@@ -4953,6 +5144,7 @@
     "img_local": "assets/img/catalog/ACCMAC2960.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCMAC2960/ACCMAC2960_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCMAC2960/ACCMAC2960_400.jpg"
   },
   {
@@ -4974,6 +5166,7 @@
     "img_local": "assets/img/catalog/BOCASS100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BOCASS100/BOCASS100_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BOCASS100/BOCASS100_400.jpg"
   },
   {
@@ -4995,6 +5188,7 @@
     "img_local": "assets/img/catalog/BOCMST4170.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BOCMST4170/BOCMST4170_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BOCMST4170/BOCMST4170_400.jpg"
   },
   {
@@ -5016,6 +5210,7 @@
     "img_local": "assets/img/catalog/GABITL760.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL760/GABITL760_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL760/GABITL760_400.jpg"
   },
   {
@@ -5037,6 +5232,7 @@
     "img_local": "assets/img/catalog/GABITL770.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL770/GABITL770_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL770/GABITL770_400.jpg"
   },
   {
@@ -5058,6 +5254,7 @@
     "img_local": "assets/img/catalog/GABITL780.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL780/GABITL780_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL780/GABITL780_400.jpg"
   },
   {
@@ -5079,6 +5276,7 @@
     "img_local": "assets/img/catalog/GABITL830.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL830/GABITL830_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL830/GABITL830_400.jpg"
   },
   {
@@ -5100,6 +5298,7 @@
     "img_local": "assets/img/catalog/GABITL840.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL840/GABITL840_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL840/GABITL840_400.jpg"
   },
   {
@@ -5121,6 +5320,7 @@
     "img_local": "assets/img/catalog/GABITL850.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL850/GABITL850_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL850/GABITL850_400.jpg"
   },
   {
@@ -5142,6 +5342,7 @@
     "img_local": "assets/img/catalog/GABITL800.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL800/GABITL800_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL800/GABITL800_400.jpg"
   },
   {
@@ -5163,6 +5364,7 @@
     "img_local": "assets/img/catalog/CABITL2070.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABITL2070/CABITL2070_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABITL2070/CABITL2070_400.jpg"
   },
   {
@@ -5184,6 +5386,7 @@
     "img_local": "assets/img/catalog/CABITL2460.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABITL2460/CABITL2460_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABITL2460/CABITL2460_400.jpg"
   },
   {
@@ -5205,6 +5408,7 @@
     "img_local": "assets/img/catalog/SLXLMP030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SLXLMP030/SLXLMP030_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SLXLMP030/SLXLMP030_400.jpg"
   },
   {
@@ -5226,6 +5430,7 @@
     "img_local": "assets/img/catalog/SLXLMP130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SLXLMP130/SLXLMP130_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SLXLMP130/SLXLMP130_400.jpg"
   },
   {
@@ -5247,6 +5452,7 @@
     "img_local": "assets/img/catalog/SLXLMP680.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SLXLMP680/SLXLMP680_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SLXLMP680/SLXLMP680_400.jpg"
   },
   {
@@ -5268,6 +5474,7 @@
     "img_local": "assets/img/catalog/ACCTRL560.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTRL560/ACCTRL560_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTRL560/ACCTRL560_400.jpg"
   },
   {
@@ -5289,6 +5496,7 @@
     "img_local": "assets/img/catalog/ACCTRL1670.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTRL1670/ACCTRL1670_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTRL1670/ACCTRL1670_400.jpg"
   },
   {
@@ -5310,6 +5518,7 @@
     "img_local": "assets/img/catalog/ACCTRL380.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTRL380/ACCTRL380_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTRL380/ACCTRL380_400.jpg"
   },
   {
@@ -5331,6 +5540,7 @@
     "img_local": "assets/img/catalog/ACCTRL3810.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTRL3810/ACCTRL3810_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTRL3810/ACCTRL3810_400.jpg"
   },
   {
@@ -5352,6 +5562,7 @@
     "img_local": "assets/img/catalog/ACCTRL5450.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTRL5450/ACCTRL5450_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTRL5450/ACCTRL5450_400.jpg"
   },
   {
@@ -5373,6 +5584,7 @@
     "img_local": "assets/img/catalog/ACCTRL3940.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTRL3940/ACCTRL3940_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTRL3940/ACCTRL3940_400.jpg"
   },
   {
@@ -5394,6 +5606,7 @@
     "img_local": "assets/img/catalog/ACCTRL4070.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTRL4070/ACCTRL4070_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTRL4070/ACCTRL4070_400.jpg"
   },
   {
@@ -5415,6 +5628,7 @@
     "img_local": "assets/img/catalog/ACCTRL5110.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTRL5110/ACCTRL5110_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTRL5110/ACCTRL5110_400.jpg"
   },
   {
@@ -5436,6 +5650,7 @@
     "img_local": "assets/img/catalog/ACCRBT8930.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT8930/ACCRBT8930_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT8930/ACCRBT8930_400.jpg"
   },
   {
@@ -5457,6 +5672,7 @@
     "img_local": "assets/img/catalog/ACCRBT5930.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT5930/ACCRBT5930_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT5930/ACCRBT5930_400.jpg"
   },
   {
@@ -5478,6 +5694,7 @@
     "img_local": "assets/img/catalog/ACCRBT5950.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT5950/ACCRBT5950_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT5950/ACCRBT5950_400.jpg"
   },
   {
@@ -5499,6 +5716,7 @@
     "img_local": "assets/img/catalog/ACCRBT8790.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT8790/ACCRBT8790_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT8790/ACCRBT8790_400.jpg"
   },
   {
@@ -5520,6 +5738,7 @@
     "img_local": "assets/img/catalog/ACCRBT8800.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT8800/ACCRBT8800_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT8800/ACCRBT8800_400.jpg"
   },
   {
@@ -5541,6 +5760,7 @@
     "img_local": "assets/img/catalog/ACCRBT7670.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT7670/ACCRBT7670_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT7670/ACCRBT7670_400.jpg"
   },
   {
@@ -5562,6 +5782,7 @@
     "img_local": "assets/img/catalog/ACCRBT8040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT8040/ACCRBT8040_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT8040/ACCRBT8040_400.jpg"
   },
   {
@@ -5583,6 +5804,7 @@
     "img_local": "assets/img/catalog/ACCRBT8050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT8050/ACCRBT8050_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT8050/ACCRBT8050_400.jpg"
   },
   {
@@ -5604,6 +5826,7 @@
     "img_local": "assets/img/catalog/ACCRBT6870.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6870/ACCRBT6870_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6870/ACCRBT6870_400.jpg"
   },
   {
@@ -5625,6 +5848,7 @@
     "img_local": "assets/img/catalog/ACCRBT7330.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT7330/ACCRBT7330_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT7330/ACCRBT7330_400.jpg"
   },
   {
@@ -5646,6 +5870,7 @@
     "img_local": "assets/img/catalog/CAMSTY040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CAMSTY040/CAMSTY040_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CAMSTY040/CAMSTY040_400.jpg"
   },
   {
@@ -5667,6 +5892,7 @@
     "img_local": "assets/img/catalog/REGTRL120.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/REGTRL120/REGTRL120_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/REGTRL120/REGTRL120_400.jpg"
   },
   {
@@ -5688,6 +5914,7 @@
     "img_local": "assets/img/catalog/ACCTRL780.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTRL780/ACCTRL780_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTRL780/ACCTRL780_400.jpg"
   },
   {
@@ -5709,6 +5936,7 @@
     "img_local": "assets/img/catalog/GABTRL040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABTRL040/GABTRL040_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABTRL040/GABTRL040_400.jpg"
   },
   {
@@ -5730,6 +5958,7 @@
     "img_local": "assets/img/catalog/GABTRL050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABTRL050/GABTRL050_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABTRL050/GABTRL050_400.jpg"
   },
   {
@@ -5751,6 +5980,7 @@
     "img_local": "assets/img/catalog/RCKTRL060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/RCKTRL060/RCKTRL060_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/RCKTRL060/RCKTRL060_400.jpg"
   },
   {
@@ -5772,6 +6002,7 @@
     "img_local": "assets/img/catalog/ACCTRL800.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTRL800/ACCTRL800_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTRL800/ACCTRL800_400.jpg"
   },
   {
@@ -5793,49 +6024,8 @@
     "img_local": "assets/img/catalog/GABTRL080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABTRL080/GABTRL080_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABTRL080/GABTRL080_400.jpg"
-  },
-  {
-    "sku": "AIRTRL080",
-    "nombre": "Unidad de Aire Acondicionado, Tripp Lite,  Modelo SRCOOL7KRME, La unidad de aire acondicionado para montaje en rack util",
-    "descripcion_completa": "Unidad de Aire Acondicionado, Tripp Lite,  Modelo SRCOOL7KRME, La unidad de aire acondicionado para montaje en rack utiliza enfriamiento de acoplamiento directo eficiente para evitar apagados y fallas del equipo debido al sobrecalentamiento. 9,000 BTU/h (2.7 kW) ASHRE evita fallas del equipo y tiempos muertos relacionados con el calor. Menor potencial de calentamiento global con refrigerante R32 y hasta un 39 % más eficiente energéticamente. La tarjeta opcional para administración de la red ofrece monitoreo y control remoto. Cumple con los más altos estándares de eficiencia de CEC, DoE, NRCAN y EPA/AIM.  Se monta en 8U de espacio en la parte inferior de un gabinete para rack de 19 pulgadas estándar EIA.",
-    "categoria_ct": "ENERGIA",
-    "marca": "UNIDAD",
-    "costo_base": 14867.38,
-    "precio_mxn": 20070.96,
-    "precio_original": 23787.81,
-    "img": "https://static.ctonline.mx/imagenes/AIRTRL080/AIRTRL080_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/UNIDAD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=AIRTRL080",
-    "costo_proveedor_mxn": 14867.38,
-    "precio": 20070.96,
-    "precio_mayoreo_10pzs": 17840.86,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/AIRTRL080.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/AIRTRL080/AIRTRL080_400.jpg",
-    "categoria_clasificada": "gabinetes",
-    "local_img": "https://static.ctonline.mx/imagenes/AIRTRL080/AIRTRL080_400.jpg"
-  },
-  {
-    "sku": "ACCTRL5350",
-    "nombre": "Carro de Carga Móvil, Tripp Lite, Modelo CSC36AC, Carga, asegura y organiza hasta 36 Chromebooks y laptops en entornos e",
-    "descripcion_completa": "Carro de Carga Móvil, Tripp Lite, Modelo CSC36AC, Carga, asegura y organiza hasta 36 Chromebooks y laptops en entornos educacionales, sanitarios, retail, almacenes y oficinas. 36 tomacorrientes internos NEMA 5-15R proporcionan hasta 1,440 watts en total para carga. Un temporizador alterna cada hora las zonas de carga para ayudar a evitar sobrecargas. El conector RJ45 dentro del gabinete conecta periféricos Ethernet, incluyendo ruteadores y puntos de acceso. Los tomacorrientes externos dobles NEMA 5-15R proporcionan alimentación para un monitor o proyector. El cable de 3 m [10 pies] con clavija NEMA 5-15P confiere flexibilidad para acceder a las tomas de CA.",
-    "categoria_ct": "ENERGIA",
-    "marca": "CARRO",
-    "costo_base": 16398.37,
-    "precio_mxn": 22137.79,
-    "precio_original": 26237.38,
-    "img": "https://static.ctonline.mx/imagenes/ACCTRL5350/ACCTRL5350_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/CARRO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCTRL5350",
-    "costo_proveedor_mxn": 16398.36,
-    "precio": 22137.79,
-    "precio_mayoreo_10pzs": 19678.03,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCTRL5350.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCTRL5350/ACCTRL5350_400.jpg",
-    "categoria_clasificada": "gabinetes",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCTRL5350/ACCTRL5350_400.jpg"
   },
   {
     "sku": "GABDTS010",
@@ -5856,6 +6046,7 @@
     "img_local": "assets/img/catalog/GABDTS010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABDTS010/GABDTS010_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABDTS010/GABDTS010_400.jpg"
   },
   {
@@ -5877,6 +6068,7 @@
     "img_local": "assets/img/catalog/GABDTS020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABDTS020/GABDTS020_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABDTS020/GABDTS020_400.jpg"
   },
   {
@@ -5898,6 +6090,7 @@
     "img_local": "assets/img/catalog/ACCCDP580.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCCDP580/ACCCDP580_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCCDP580/ACCCDP580_400.jpg"
   },
   {
@@ -5919,6 +6112,7 @@
     "img_local": "assets/img/catalog/ACCAPC1250.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCAPC1250/ACCAPC1250_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCAPC1250/ACCAPC1250_400.jpg"
   },
   {
@@ -5940,6 +6134,7 @@
     "img_local": "assets/img/catalog/ACCAPC1690.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCAPC1690/ACCAPC1690_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCAPC1690/ACCAPC1690_400.jpg"
   },
   {
@@ -5961,6 +6156,7 @@
     "img_local": "assets/img/catalog/ACCAPC1700.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCAPC1700/ACCAPC1700_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCAPC1700/ACCAPC1700_400.jpg"
   },
   {
@@ -5982,6 +6178,7 @@
     "img_local": "assets/img/catalog/ACCCYP570.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCCYP570/ACCCYP570_400.jpg",
     "categoria_clasificada": "gabinetes",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCCYP570/ACCCYP570_400.jpg"
   }
 ]

@@ -18,6 +18,7 @@
     "img_local": "assets/img/catalog/MEMSTY300.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MEMSTY300/MEMSTY300_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MEMSTY300/MEMSTY300_400.jpg"
   },
   {
@@ -39,6 +40,7 @@
     "img_local": "assets/img/catalog/MEMSTY310.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MEMSTY310/MEMSTY310_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MEMSTY310/MEMSTY310_400.jpg"
   },
   {
@@ -60,6 +62,7 @@
     "img_local": "assets/img/catalog/MEMSTY280.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MEMSTY280/MEMSTY280_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MEMSTY280/MEMSTY280_400.jpg"
   },
   {
@@ -81,6 +84,7 @@
     "img_local": "assets/img/catalog/MEMSTY290.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MEMSTY290/MEMSTY290_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MEMSTY290/MEMSTY290_400.jpg"
   },
   {
@@ -102,6 +106,7 @@
     "img_local": "assets/img/catalog/MEMSTY350.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MEMSTY350/MEMSTY350_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MEMSTY350/MEMSTY350_400.jpg"
   },
   {
@@ -123,49 +128,8 @@
     "img_local": "assets/img/catalog/MEMSTY360.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MEMSTY360/MEMSTY360_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MEMSTY360/MEMSTY360_400.jpg"
-  },
-  {
-    "sku": "MONSTY390",
-    "nombre": "Monitor Stylos 23.8\" Stylos STPMOT7B Flat Panel LED HD 100Hz 5ms 1xVGA + 1xHDMI + Vesa 100x100mm Negro, Compatible con l",
-    "descripcion_completa": "Monitor Stylos 23.8\" Stylos STPMOT7B Flat Panel LED HD 100Hz 5ms 1xVGA + 1xHDMI + Vesa 100x100mm Negro, Compatible con laptops, consolas, PC y más gracias a sus entradas HDMI y VGA, resolución 1920 x 1080 (Full HD).",
-    "categoria_ct": "COMPONENTES DE ENSAMBLE",
-    "marca": "STYLOS",
-    "costo_base": 1086.69,
-    "precio_mxn": 28607.08,
-    "precio_original": 33904.69,
-    "img": "https://static.ctonline.mx/imagenes/MONSTY390/MONSTY390_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/STYLOS.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONSTY390",
-    "costo_proveedor_mxn": 21190.43,
-    "precio": 28607.08,
-    "precio_mayoreo_10pzs": 25428.52,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONSTY390.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONSTY390/MONSTY390_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/MONSTY390/MONSTY390_400.jpg"
-  },
-  {
-    "sku": "MONSTY400",
-    "nombre": "Monitor Stylos 27\" Stylos STPMOT8B Flat Panel LED HD 75Hz 5ms 1xVGA + 1xHDMI + Vesa 100x100mm Black, resolución 1920 x 1",
-    "descripcion_completa": "Monitor Stylos 27\" Stylos STPMOT8B Flat Panel LED HD 75Hz 5ms 1xVGA + 1xHDMI + Vesa 100x100mm Black, resolución 1920 x 1080 (Full HD), Conecta sin límites. Compatible con laptops, consolas, \nPC y más gracias a sus entradas HDMI y VGA.",
-    "categoria_ct": "COMPONENTES DE ENSAMBLE",
-    "marca": "STYLOS",
-    "costo_base": 1430.22,
-    "precio_mxn": 37650.6,
-    "precio_original": 44622.93,
-    "img": "https://static.ctonline.mx/imagenes/MONSTY400/MONSTY400_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/STYLOS.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONSTY400",
-    "costo_proveedor_mxn": 27889.33,
-    "precio": 37650.6,
-    "precio_mayoreo_10pzs": 33467.2,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONSTY400.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONSTY400/MONSTY400_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/MONSTY400/MONSTY400_400.jpg"
   },
   {
     "sku": "ACCLE1900",
@@ -186,6 +150,7 @@
     "img_local": "assets/img/catalog/ACCLE1900.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCLE1900/ACCLE1900_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCLE1900/ACCLE1900_400.jpg"
   },
   {
@@ -207,70 +172,8 @@
     "img_local": "assets/img/catalog/ACCLEN4520.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCLEN4520/ACCLEN4520_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCLEN4520/ACCLEN4520_400.jpg"
-  },
-  {
-    "sku": "RELLEN1020",
-    "nombre": "Monitor Lenovo ThinkVision E20-30, 62F7KAR4LA, Pantalla 19.5\" (1600x900), HDMI, VGA, (HDMI cable), Color Negro, Garantía",
-    "descripcion_completa": "Monitor Lenovo ThinkVision E20-30, 62F7KAR4LA, Pantalla 19.5\" (1600x900), HDMI, VGA, (HDMI cable), Color Negro, Garantía 3 Años Premier Support.",
-    "categoria_ct": "EQUIPOS DE MARCA",
-    "marca": "LENOVO",
-    "costo_base": 101.33,
-    "precio_mxn": 2667.6,
-    "precio_original": 3161.6,
-    "img": "https://static.ctonline.mx/imagenes/RELLEN1020/RELLEN1020_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/LENOVO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=RELLEN1020",
-    "costo_proveedor_mxn": 1976.0,
-    "precio": 2667.6,
-    "precio_mayoreo_10pzs": 2371.2,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/RELLEN1020.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/RELLEN1020/RELLEN1020_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/RELLEN1020/RELLEN1020_400.jpg"
-  },
-  {
-    "sku": "MONLEN1510",
-    "nombre": "Monitor Lenovo ThinkVision S24-4e 64B5KAR1LA, 23.8\" FHD (1920x1080) IPS display, Anti-glare 16:9. Resolución 1920x1080. ",
-    "descripcion_completa": "Monitor Lenovo ThinkVision S24-4e 64B5KAR1LA, 23.8\" FHD (1920x1080) IPS display, Anti-glare 16:9. Resolución 1920x1080. Tiempo de respuesta de 4 ms, Color NEGRO, Garantía de 3 años, 1x HDMI® 1.4, 1x VGA. Peso de 4.7 Kg.",
-    "categoria_ct": "EQUIPOS DE MARCA",
-    "marca": "LENOVO",
-    "costo_base": 2410.53,
-    "precio_mxn": 63457.1,
-    "precio_original": 75208.42,
-    "img": "https://static.ctonline.mx/imagenes/MONLEN1510/MONLEN1510_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/LENOVO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONLEN1510",
-    "costo_proveedor_mxn": 47005.26,
-    "precio": 63457.1,
-    "precio_mayoreo_10pzs": 56406.31,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONLEN1510.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONLEN1510/MONLEN1510_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/MONLEN1510/MONLEN1510_400.jpg"
-  },
-  {
-    "sku": "MONLEN1480",
-    "nombre": "Monitor Lenovo ThinkVision T27-40 64A5MAR6LA, 27 pulgadas FHD display with IPS panel. Resolución 1920x1080. Tiempo de re",
-    "descripcion_completa": "Monitor Lenovo ThinkVision T27-40 64A5MAR6LA, 27 pulgadas FHD display with IPS panel. Resolución 1920x1080. Tiempo de respuesta de 4 ms, Color NEGRO, Garantía de 3 años, 1x HDMI® 1.4, 1x DP 1.2, 1x VGA. Peso de 6.5 Kg.",
-    "categoria_ct": "EQUIPOS DE MARCA",
-    "marca": "LENOVO",
-    "costo_base": 4736.84,
-    "precio_mxn": 6394.73,
-    "precio_original": 7578.94,
-    "img": "https://static.ctonline.mx/imagenes/MONLEN1480/MONLEN1480_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/LENOVO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MONLEN1480",
-    "costo_proveedor_mxn": 4736.84,
-    "precio": 6394.73,
-    "precio_mayoreo_10pzs": 5684.21,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/MONLEN1480.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/MONLEN1480/MONLEN1480_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/MONLEN1480/MONLEN1480_400.jpg"
   },
   {
     "sku": "GABITL730",
@@ -291,6 +194,7 @@
     "img_local": "assets/img/catalog/GABITL730.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/GABITL730/GABITL730_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/GABITL730/GABITL730_400.jpg"
   },
   {
@@ -312,6 +216,7 @@
     "img_local": "assets/img/catalog/CELLEN040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CELLEN040/CELLEN040_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CELLEN040/CELLEN040_400.jpg"
   },
   {
@@ -333,6 +238,7 @@
     "img_local": "assets/img/catalog/ACCMTD470.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCMTD470/ACCMTD470_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCMTD470/ACCMTD470_400.jpg"
   },
   {
@@ -354,6 +260,7 @@
     "img_local": "assets/img/catalog/PROQIA030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/PROQIA030/PROQIA030_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/PROQIA030/PROQIA030_400.jpg"
   },
   {
@@ -375,6 +282,7 @@
     "img_local": "assets/img/catalog/LCTSYB020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/LCTSYB020/LCTSYB020_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/LCTSYB020/LCTSYB020_400.jpg"
   },
   {
@@ -396,6 +304,7 @@
     "img_local": "assets/img/catalog/ACCETI350.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCETI350/ACCETI350_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCETI350/ACCETI350_400.jpg"
   },
   {
@@ -417,6 +326,7 @@
     "img_local": "assets/img/catalog/ACCNCB480.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCNCB480/ACCNCB480_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCNCB480/ACCNCB480_400.jpg"
   },
   {
@@ -438,6 +348,7 @@
     "img_local": "assets/img/catalog/MALDLL660.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALDLL660/MALDLL660_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALDLL660/MALDLL660_400.jpg"
   },
   {
@@ -459,6 +370,7 @@
     "img_local": "assets/img/catalog/ACCDLL4410.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCDLL4410/ACCDLL4410_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCDLL4410/ACCDLL4410_400.jpg"
   },
   {
@@ -480,6 +392,7 @@
     "img_local": "assets/img/catalog/MALHPI150.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALHPI150/MALHPI150_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALHPI150/MALHPI150_400.jpg"
   },
   {
@@ -501,6 +414,7 @@
     "img_local": "assets/img/catalog/ACCMST4430.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCMST4430/ACCMST4430_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCMST4430/ACCMST4430_400.jpg"
   },
   {
@@ -522,6 +436,7 @@
     "img_local": "assets/img/catalog/ACCMST4450.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCMST4450/ACCMST4450_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCMST4450/ACCMST4450_400.jpg"
   },
   {
@@ -543,6 +458,7 @@
     "img_local": "assets/img/catalog/ACCMST4320.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCMST4320/ACCMST4320_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCMST4320/ACCMST4320_400.jpg"
   },
   {
@@ -564,6 +480,7 @@
     "img_local": "assets/img/catalog/MALGEN4260.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4260/MALGEN4260_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4260/MALGEN4260_400.jpg"
   },
   {
@@ -585,6 +502,7 @@
     "img_local": "assets/img/catalog/MALGEN4470.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4470/MALGEN4470_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4470/MALGEN4470_400.jpg"
   },
   {
@@ -606,6 +524,7 @@
     "img_local": "assets/img/catalog/MALGEN4680.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4680/MALGEN4680_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4680/MALGEN4680_400.jpg"
   },
   {
@@ -627,6 +546,7 @@
     "img_local": "assets/img/catalog/MALGEN4330.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4330/MALGEN4330_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4330/MALGEN4330_400.jpg"
   },
   {
@@ -648,6 +568,7 @@
     "img_local": "assets/img/catalog/MALGEN3660.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN3660/MALGEN3660_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN3660/MALGEN3660_400.jpg"
   },
   {
@@ -669,6 +590,7 @@
     "img_local": "assets/img/catalog/MALGEN3180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN3180/MALGEN3180_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN3180/MALGEN3180_400.jpg"
   },
   {
@@ -690,6 +612,7 @@
     "img_local": "assets/img/catalog/MALGEN4140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4140/MALGEN4140_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4140/MALGEN4140_400.jpg"
   },
   {
@@ -711,6 +634,7 @@
     "img_local": "assets/img/catalog/MALGEN4150.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4150/MALGEN4150_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4150/MALGEN4150_400.jpg"
   },
   {
@@ -732,6 +656,7 @@
     "img_local": "assets/img/catalog/MALGEN4180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4180/MALGEN4180_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4180/MALGEN4180_400.jpg"
   },
   {
@@ -753,6 +678,7 @@
     "img_local": "assets/img/catalog/MALGEN4430.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4430/MALGEN4430_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4430/MALGEN4430_400.jpg"
   },
   {
@@ -774,6 +700,7 @@
     "img_local": "assets/img/catalog/MALGEN4450.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4450/MALGEN4450_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4450/MALGEN4450_400.jpg"
   },
   {
@@ -795,6 +722,7 @@
     "img_local": "assets/img/catalog/MALGEN4440.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4440/MALGEN4440_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4440/MALGEN4440_400.jpg"
   },
   {
@@ -816,6 +744,7 @@
     "img_local": "assets/img/catalog/MALGEN4610.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4610/MALGEN4610_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4610/MALGEN4610_400.jpg"
   },
   {
@@ -837,6 +766,7 @@
     "img_local": "assets/img/catalog/MALGEN4620.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4620/MALGEN4620_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4620/MALGEN4620_400.jpg"
   },
   {
@@ -858,6 +788,7 @@
     "img_local": "assets/img/catalog/MALGEN4350.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4350/MALGEN4350_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4350/MALGEN4350_400.jpg"
   },
   {
@@ -879,6 +810,7 @@
     "img_local": "assets/img/catalog/MALGEN4360.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4360/MALGEN4360_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4360/MALGEN4360_400.jpg"
   },
   {
@@ -900,6 +832,7 @@
     "img_local": "assets/img/catalog/MALGEN4370.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4370/MALGEN4370_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4370/MALGEN4370_400.jpg"
   },
   {
@@ -921,6 +854,7 @@
     "img_local": "assets/img/catalog/MALGEN4020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4020/MALGEN4020_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4020/MALGEN4020_400.jpg"
   },
   {
@@ -942,6 +876,7 @@
     "img_local": "assets/img/catalog/MALGEN4340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4340/MALGEN4340_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4340/MALGEN4340_400.jpg"
   },
   {
@@ -963,6 +898,7 @@
     "img_local": "assets/img/catalog/MALGEN3310.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN3310/MALGEN3310_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN3310/MALGEN3310_400.jpg"
   },
   {
@@ -984,6 +920,7 @@
     "img_local": "assets/img/catalog/MALGEN4050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4050/MALGEN4050_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4050/MALGEN4050_400.jpg"
   },
   {
@@ -1005,6 +942,7 @@
     "img_local": "assets/img/catalog/MALGEN4200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4200/MALGEN4200_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4200/MALGEN4200_400.jpg"
   },
   {
@@ -1026,6 +964,7 @@
     "img_local": "assets/img/catalog/MALGEN4390.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4390/MALGEN4390_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4390/MALGEN4390_400.jpg"
   },
   {
@@ -1047,6 +986,7 @@
     "img_local": "assets/img/catalog/MALGEN4400.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4400/MALGEN4400_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4400/MALGEN4400_400.jpg"
   },
   {
@@ -1068,6 +1008,7 @@
     "img_local": "assets/img/catalog/MALGEN4410.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4410/MALGEN4410_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4410/MALGEN4410_400.jpg"
   },
   {
@@ -1089,6 +1030,7 @@
     "img_local": "assets/img/catalog/MALGEN4420.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4420/MALGEN4420_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4420/MALGEN4420_400.jpg"
   },
   {
@@ -1110,6 +1052,7 @@
     "img_local": "assets/img/catalog/MALGEN4600.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4600/MALGEN4600_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4600/MALGEN4600_400.jpg"
   },
   {
@@ -1131,6 +1074,7 @@
     "img_local": "assets/img/catalog/MALGEN4250.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4250/MALGEN4250_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4250/MALGEN4250_400.jpg"
   },
   {
@@ -1152,6 +1096,7 @@
     "img_local": "assets/img/catalog/MALGEN4760.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4760/MALGEN4760_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4760/MALGEN4760_400.jpg"
   },
   {
@@ -1173,6 +1118,7 @@
     "img_local": "assets/img/catalog/MALGEN4800.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4800/MALGEN4800_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4800/MALGEN4800_400.jpg"
   },
   {
@@ -1194,6 +1140,7 @@
     "img_local": "assets/img/catalog/MALGEN4810.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4810/MALGEN4810_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4810/MALGEN4810_400.jpg"
   },
   {
@@ -1215,6 +1162,7 @@
     "img_local": "assets/img/catalog/MALGEN4950.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4950/MALGEN4950_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4950/MALGEN4950_400.jpg"
   },
   {
@@ -1236,6 +1184,7 @@
     "img_local": "assets/img/catalog/MALGEN4980.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN4980/MALGEN4980_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN4980/MALGEN4980_400.jpg"
   },
   {
@@ -1257,6 +1206,7 @@
     "img_local": "assets/img/catalog/MALGEN5000.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN5000/MALGEN5000_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN5000/MALGEN5000_400.jpg"
   },
   {
@@ -1278,6 +1228,7 @@
     "img_local": "assets/img/catalog/MALGEN5040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN5040/MALGEN5040_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN5040/MALGEN5040_400.jpg"
   },
   {
@@ -1299,6 +1250,7 @@
     "img_local": "assets/img/catalog/MALGEN5050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN5050/MALGEN5050_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN5050/MALGEN5050_400.jpg"
   },
   {
@@ -1320,6 +1272,7 @@
     "img_local": "assets/img/catalog/MALGEN5060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN5060/MALGEN5060_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN5060/MALGEN5060_400.jpg"
   },
   {
@@ -1341,6 +1294,7 @@
     "img_local": "assets/img/catalog/MALGEN5070.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN5070/MALGEN5070_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN5070/MALGEN5070_400.jpg"
   },
   {
@@ -1362,6 +1316,7 @@
     "img_local": "assets/img/catalog/MALGEN5080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN5080/MALGEN5080_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN5080/MALGEN5080_400.jpg"
   },
   {
@@ -1383,6 +1338,7 @@
     "img_local": "assets/img/catalog/MALGEN5090.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN5090/MALGEN5090_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN5090/MALGEN5090_400.jpg"
   },
   {
@@ -1404,6 +1360,7 @@
     "img_local": "assets/img/catalog/MALGEN5100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN5100/MALGEN5100_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN5100/MALGEN5100_400.jpg"
   },
   {
@@ -1425,6 +1382,7 @@
     "img_local": "assets/img/catalog/MALGEN5120.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN5120/MALGEN5120_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN5120/MALGEN5120_400.jpg"
   },
   {
@@ -1446,6 +1404,7 @@
     "img_local": "assets/img/catalog/MALGEN5140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN5140/MALGEN5140_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN5140/MALGEN5140_400.jpg"
   },
   {
@@ -1467,6 +1426,7 @@
     "img_local": "assets/img/catalog/MALGEN5180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALGEN5180/MALGEN5180_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALGEN5180/MALGEN5180_400.jpg"
   },
   {
@@ -1488,6 +1448,7 @@
     "img_local": "assets/img/catalog/ACCKNS930.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS930/ACCKNS930_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS930/ACCKNS930_400.jpg"
   },
   {
@@ -1509,6 +1470,7 @@
     "img_local": "assets/img/catalog/ACCKNS2430.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCKNS2430/ACCKNS2430_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCKNS2430/ACCKNS2430_400.jpg"
   },
   {
@@ -1530,6 +1492,7 @@
     "img_local": "assets/img/catalog/ACCITL7960.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCITL7960/ACCITL7960_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCITL7960/ACCITL7960_400.jpg"
   },
   {
@@ -1551,6 +1514,7 @@
     "img_local": "assets/img/catalog/ACCITL7790.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCITL7790/ACCITL7790_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCITL7790/ACCITL7790_400.jpg"
   },
   {
@@ -1572,49 +1536,8 @@
     "img_local": "assets/img/catalog/ACCITL7560.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCITL7560/ACCITL7560_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCITL7560/ACCITL7560_400.jpg"
-  },
-  {
-    "sku": "ACCITL7800",
-    "nombre": "Docking Station USB-C 10 en 1 con MST (190398) MANHATTAN Estación Docking USB-C con MST para doble monitor 4K, USB 3.2 G",
-    "descripcion_completa": "Docking Station USB-C 10 en 1 con MST (190398) MANHATTAN Estación Docking USB-C con MST para doble monitor 4K, USB 3.2 Gen 1 Tipo-C Macho a dos HDMI (hasta 4K@60Hz), tres USB-A (hasta 5 Gbps), USB-C Power Delivery (100 W), USB-C Data (5 Gbps), lector de tarjetas SD/microSD y puertos Gigabit RJ45. Compatible con todas las computadoras de escritorio, laptops y tabletas compatibles con USB-C DP-Alt-Mode, incluidos Apple® MacBook®, Cromebook™, Pixel™ y más. Instalación plug-and-play; compatible con Windows®, macOS®, Chrome OS™ y Android™. Cable integrado extralargo de 0.5 m, carcasa de aluminio y  bases de goma.",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "DOCKING",
-    "costo_base": 64.92,
-    "precio_mxn": 1709.1,
-    "precio_original": 2025.6,
-    "img": "https://static.ctonline.mx/imagenes/ACCITL7800/ACCITL7800_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/DOCKING.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCITL7800",
-    "costo_proveedor_mxn": 1266.0,
-    "precio": 1709.1,
-    "precio_mayoreo_10pzs": 1519.2,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCITL7800.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCITL7800/ACCITL7800_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCITL7800/ACCITL7800_400.jpg"
-  },
-  {
-    "sku": "ACCITL6920",
-    "nombre": "Convertidor de USB-A a HDMI 1080p (153690) Manhattan Convertidor USB 3.0 a HDMI para conectar una laptop, MacBook®, Ultr",
-    "descripcion_completa": "Convertidor de USB-A a HDMI 1080p (153690) Manhattan Convertidor USB 3.0 a HDMI para conectar una laptop, MacBook®, Ultrabook o PC de escritorio a una pantalla, monitor o proyector HDMI Negro. Conecta fácilmente un dispositivo con salida USB-A a una pantalla, monitor o proyector HDMI, resoluciones Full HD 1080p@60Hz (1980×1080). Convierte una señal USB 3.2 Gen 1 (antes USB 3.0) en una señal HDMI con vídeo y audio.",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "CONVERTIDOR",
-    "costo_base": 22.42,
-    "precio_mxn": 590.14,
-    "precio_original": 699.42,
-    "img": "https://static.ctonline.mx/imagenes/ACCITL6920/ACCITL6920_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/CONVERTIDOR.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCITL6920",
-    "costo_proveedor_mxn": 437.14,
-    "precio": 590.14,
-    "precio_mayoreo_10pzs": 524.57,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCITL6920.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCITL6920/ACCITL6920_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCITL6920/ACCITL6920_400.jpg"
   },
   {
     "sku": "MALITL050",
@@ -1635,6 +1558,7 @@
     "img_local": "assets/img/catalog/MALITL050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALITL050/MALITL050_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALITL050/MALITL050_400.jpg"
   },
   {
@@ -1656,6 +1580,7 @@
     "img_local": "assets/img/catalog/MALITL790.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALITL790/MALITL790_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALITL790/MALITL790_400.jpg"
   },
   {
@@ -1677,6 +1602,7 @@
     "img_local": "assets/img/catalog/ACCITL6170.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCITL6170/ACCITL6170_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCITL6170/ACCITL6170_400.jpg"
   },
   {
@@ -1698,6 +1624,7 @@
     "img_local": "assets/img/catalog/MALITL010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALITL010/MALITL010_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALITL010/MALITL010_400.jpg"
   },
   {
@@ -1719,28 +1646,8 @@
     "img_local": "assets/img/catalog/MALITL750.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALITL750/MALITL750_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALITL750/MALITL750_400.jpg"
-  },
-  {
-    "sku": "ACCITL7170",
-    "nombre": "440448 Candado de Combinación para Laptop: Cerradura con combinación Kensington Longitud cable: 2 m; Mejores usos: Base ",
-    "descripcion_completa": "440448 Candado de Combinación para Laptop: Cerradura con combinación Kensington Longitud cable: 2 m; Mejores usos: Base de conexión, Monitor, Portátil, PC, Periférico, Proyector; Materiales: Acero, Zinc: Plata; GARANTIA: 5 AÑOS.",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "440448",
-    "costo_base": 9.81,
-    "precio_mxn": 258.34,
-    "precio_original": 306.18,
-    "img": "https://static.ctonline.mx/imagenes/ACCITL7170/ACCITL7170_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/440448.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCITL7170",
-    "costo_proveedor_mxn": 191.36,
-    "precio": 258.34,
-    "precio_mayoreo_10pzs": 229.63,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCITL7170.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCITL7170/ACCITL7170_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCITL7170/ACCITL7170_400.jpg"
   },
   {
     "sku": "ACCITL7000",
@@ -1761,6 +1668,7 @@
     "img_local": "assets/img/catalog/ACCITL7000.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCITL7000/ACCITL7000_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCITL7000/ACCITL7000_400.jpg"
   },
   {
@@ -1782,6 +1690,7 @@
     "img_local": "assets/img/catalog/CABITL2450.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABITL2450/CABITL2450_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABITL2450/CABITL2450_400.jpg"
   },
   {
@@ -1803,6 +1712,7 @@
     "img_local": "assets/img/catalog/CABITL4120.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABITL4120/CABITL4120_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABITL4120/CABITL4120_400.jpg"
   },
   {
@@ -1824,6 +1734,7 @@
     "img_local": "assets/img/catalog/SLXLMP790.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SLXLMP790/SLXLMP790_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SLXLMP790/SLXLMP790_400.jpg"
   },
   {
@@ -1845,6 +1756,7 @@
     "img_local": "assets/img/catalog/SLXLMP750.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SLXLMP750/SLXLMP750_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SLXLMP750/SLXLMP750_400.jpg"
   },
   {
@@ -1866,6 +1778,7 @@
     "img_local": "assets/img/catalog/SLXLMP340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SLXLMP340/SLXLMP340_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SLXLMP340/SLXLMP340_400.jpg"
   },
   {
@@ -1887,28 +1800,8 @@
     "img_local": "assets/img/catalog/SLXLMP770.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/SLXLMP770/SLXLMP770_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/SLXLMP770/SLXLMP770_400.jpg"
-  },
-  {
-    "sku": "PROLMP080",
-    "nombre": "367165 TOWEL-EXPRESS PROLICOM, Toallas húmedas antiestaticas, Para pantallas de laptop y displays LCD, CD`S, DVD`S y tod",
-    "descripcion_completa": "367165 TOWEL-EXPRESS PROLICOM, Toallas húmedas antiestaticas, Para pantallas de laptop y displays LCD, CD`S, DVD`S y toda clase de cristal o mica, Envase de 30 PZAS",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "367165",
-    "costo_base": 33.97,
-    "precio_mxn": 894.38,
-    "precio_original": 1060.0,
-    "img": "https://static.ctonline.mx/imagenes/PROLMP080/PROLMP080_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/367165.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=PROLMP080",
-    "costo_proveedor_mxn": 662.5,
-    "precio": 894.38,
-    "precio_mayoreo_10pzs": 795.0,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/PROLMP080.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/PROLMP080/PROLMP080_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/PROLMP080/PROLMP080_400.jpg"
   },
   {
     "sku": "PROLMP410",
@@ -1929,49 +1822,8 @@
     "img_local": "assets/img/catalog/PROLMP410.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/PROLMP410/PROLMP410_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/PROLMP410/PROLMP410_400.jpg"
-  },
-  {
-    "sku": "PROLMP270",
-    "nombre": "367332 TWO PACK DE TOWEL-30 PROLICOM, 1 Towel Express húmedo Y 1 Dry Cloth Express para la limpieza de Pantallas de lapt",
-    "descripcion_completa": "367332 TWO PACK DE TOWEL-30 PROLICOM, 1 Towel Express húmedo Y 1 Dry Cloth Express para la limpieza de Pantallas de laptop y displays LCD, CD`S, DVD`S y toda clase de cristal o mica, gadgets, superficies y componentes. 30 Pzas. c/u.",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "367332",
-    "costo_base": 66.59,
-    "precio_mxn": 1752.98,
-    "precio_original": 2077.6,
-    "img": "https://static.ctonline.mx/imagenes/PROLMP270/PROLMP270_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/367332.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=PROLMP270",
-    "costo_proveedor_mxn": 1298.5,
-    "precio": 1752.98,
-    "precio_mayoreo_10pzs": 1558.2,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/PROLMP270.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/PROLMP270/PROLMP270_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/PROLMP270/PROLMP270_400.jpg"
-  },
-  {
-    "sku": "PROLMP280",
-    "nombre": "367349 TWO PACK DE TOWEL-70 PROLICOM, 1 Towel Express húmedo Y 1 Dry Cloth Express para la limpieza de Pantallas de lapt",
-    "descripcion_completa": "367349 TWO PACK DE TOWEL-70 PROLICOM, 1 Towel Express húmedo Y 1 Dry Cloth Express para la limpieza de Pantallas de laptop y displays LCD, CD`S, DVD`S y toda clase de cristal o mica, gadgets, superficies y componentes. 70 Pzas. c/u.",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "367349",
-    "costo_base": 153.73,
-    "precio_mxn": 4046.96,
-    "precio_original": 4796.4,
-    "img": "https://static.ctonline.mx/imagenes/PROLMP280/PROLMP280_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/367349.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=PROLMP280",
-    "costo_proveedor_mxn": 2997.75,
-    "precio": 4046.96,
-    "precio_mayoreo_10pzs": 3597.3,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/PROLMP280.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/PROLMP280/PROLMP280_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/PROLMP280/PROLMP280_400.jpg"
   },
   {
     "sku": "ACCOVL730",
@@ -1992,6 +1844,7 @@
     "img_local": "assets/img/catalog/ACCOVL730.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCOVL730/ACCOVL730_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCOVL730/ACCOVL730_400.jpg"
   },
   {
@@ -2013,6 +1866,7 @@
     "img_local": "assets/img/catalog/ACCOVL040.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCOVL040/ACCOVL040_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCOVL040/ACCOVL040_400.jpg"
   },
   {
@@ -2034,6 +1888,7 @@
     "img_local": "assets/img/catalog/ACCOVL1120.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCOVL1120/ACCOVL1120_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCOVL1120/ACCOVL1120_400.jpg"
   },
   {
@@ -2055,6 +1910,7 @@
     "img_local": "assets/img/catalog/ACCOVL1130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCOVL1130/ACCOVL1130_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCOVL1130/ACCOVL1130_400.jpg"
   },
   {
@@ -2076,6 +1932,7 @@
     "img_local": "assets/img/catalog/ACCOVL140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCOVL140/ACCOVL140_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCOVL140/ACCOVL140_400.jpg"
   },
   {
@@ -2097,6 +1954,7 @@
     "img_local": "assets/img/catalog/ACCOVL410.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCOVL410/ACCOVL410_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCOVL410/ACCOVL410_400.jpg"
   },
   {
@@ -2118,6 +1976,7 @@
     "img_local": "assets/img/catalog/BATOVL900.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BATOVL900/BATOVL900_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BATOVL900/BATOVL900_400.jpg"
   },
   {
@@ -2139,6 +1998,7 @@
     "img_local": "assets/img/catalog/BATOVL930.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BATOVL930/BATOVL930_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BATOVL930/BATOVL930_400.jpg"
   },
   {
@@ -2160,6 +2020,7 @@
     "img_local": "assets/img/catalog/BATOVL1190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BATOVL1190/BATOVL1190_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BATOVL1190/BATOVL1190_400.jpg"
   },
   {
@@ -2181,6 +2042,7 @@
     "img_local": "assets/img/catalog/BATOVL660.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BATOVL660/BATOVL660_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BATOVL660/BATOVL660_400.jpg"
   },
   {
@@ -2202,6 +2064,7 @@
     "img_local": "assets/img/catalog/BATOVL1080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BATOVL1080/BATOVL1080_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BATOVL1080/BATOVL1080_400.jpg"
   },
   {
@@ -2223,6 +2086,7 @@
     "img_local": "assets/img/catalog/BATOVL1050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BATOVL1050/BATOVL1050_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BATOVL1050/BATOVL1050_400.jpg"
   },
   {
@@ -2244,6 +2108,7 @@
     "img_local": "assets/img/catalog/BATOVL250.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BATOVL250/BATOVL250_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BATOVL250/BATOVL250_400.jpg"
   },
   {
@@ -2265,6 +2130,7 @@
     "img_local": "assets/img/catalog/BATOVL220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BATOVL220/BATOVL220_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BATOVL220/BATOVL220_400.jpg"
   },
   {
@@ -2286,6 +2152,7 @@
     "img_local": "assets/img/catalog/BATOVL850.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BATOVL850/BATOVL850_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BATOVL850/BATOVL850_400.jpg"
   },
   {
@@ -2307,6 +2174,7 @@
     "img_local": "assets/img/catalog/BATOVL1070.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BATOVL1070/BATOVL1070_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BATOVL1070/BATOVL1070_400.jpg"
   },
   {
@@ -2328,6 +2196,7 @@
     "img_local": "assets/img/catalog/BATOVL1170.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BATOVL1170/BATOVL1170_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BATOVL1170/BATOVL1170_400.jpg"
   },
   {
@@ -2349,6 +2218,7 @@
     "img_local": "assets/img/catalog/BATOVL1360.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BATOVL1360/BATOVL1360_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BATOVL1360/BATOVL1360_400.jpg"
   },
   {
@@ -2370,6 +2240,7 @@
     "img_local": "assets/img/catalog/BATOVL1460.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BATOVL1460/BATOVL1460_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BATOVL1460/BATOVL1460_400.jpg"
   },
   {
@@ -2391,6 +2262,7 @@
     "img_local": "assets/img/catalog/ACCGEN300.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN300/ACCGEN300_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN300/ACCGEN300_400.jpg"
   },
   {
@@ -2412,6 +2284,7 @@
     "img_local": "assets/img/catalog/ACCGEN310.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN310/ACCGEN310_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN310/ACCGEN310_400.jpg"
   },
   {
@@ -2433,6 +2306,7 @@
     "img_local": "assets/img/catalog/ACCGEN320.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN320/ACCGEN320_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN320/ACCGEN320_400.jpg"
   },
   {
@@ -2454,6 +2328,7 @@
     "img_local": "assets/img/catalog/ACCGEN330.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN330/ACCGEN330_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN330/ACCGEN330_400.jpg"
   },
   {
@@ -2475,6 +2350,7 @@
     "img_local": "assets/img/catalog/ACCGEN340.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN340/ACCGEN340_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN340/ACCGEN340_400.jpg"
   },
   {
@@ -2496,6 +2372,7 @@
     "img_local": "assets/img/catalog/ACCGEN350.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN350/ACCGEN350_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN350/ACCGEN350_400.jpg"
   },
   {
@@ -2517,6 +2394,7 @@
     "img_local": "assets/img/catalog/ACCGEN360.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN360/ACCGEN360_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN360/ACCGEN360_400.jpg"
   },
   {
@@ -2538,6 +2416,7 @@
     "img_local": "assets/img/catalog/ACCGEN370.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN370/ACCGEN370_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN370/ACCGEN370_400.jpg"
   },
   {
@@ -2559,6 +2438,7 @@
     "img_local": "assets/img/catalog/ACCGEN380.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN380/ACCGEN380_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN380/ACCGEN380_400.jpg"
   },
   {
@@ -2580,6 +2460,7 @@
     "img_local": "assets/img/catalog/ACCGEN390.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN390/ACCGEN390_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN390/ACCGEN390_400.jpg"
   },
   {
@@ -2601,6 +2482,7 @@
     "img_local": "assets/img/catalog/ACCGEN400.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN400/ACCGEN400_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN400/ACCGEN400_400.jpg"
   },
   {
@@ -2622,6 +2504,7 @@
     "img_local": "assets/img/catalog/ACCGEN410.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN410/ACCGEN410_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN410/ACCGEN410_400.jpg"
   },
   {
@@ -2643,6 +2526,7 @@
     "img_local": "assets/img/catalog/ACCGEN470.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN470/ACCGEN470_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN470/ACCGEN470_400.jpg"
   },
   {
@@ -2664,6 +2548,7 @@
     "img_local": "assets/img/catalog/ACCGEN460.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN460/ACCGEN460_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN460/ACCGEN460_400.jpg"
   },
   {
@@ -2685,6 +2570,7 @@
     "img_local": "assets/img/catalog/ACCGEN510.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN510/ACCGEN510_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN510/ACCGEN510_400.jpg"
   },
   {
@@ -2706,6 +2592,7 @@
     "img_local": "assets/img/catalog/ACCGEN520.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN520/ACCGEN520_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN520/ACCGEN520_400.jpg"
   },
   {
@@ -2727,6 +2614,7 @@
     "img_local": "assets/img/catalog/ACCGEN560.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN560/ACCGEN560_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN560/ACCGEN560_400.jpg"
   },
   {
@@ -2748,6 +2636,7 @@
     "img_local": "assets/img/catalog/ACCGEN3050.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN3050/ACCGEN3050_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN3050/ACCGEN3050_400.jpg"
   },
   {
@@ -2769,6 +2658,7 @@
     "img_local": "assets/img/catalog/ACCGEN3060.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN3060/ACCGEN3060_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN3060/ACCGEN3060_400.jpg"
   },
   {
@@ -2790,6 +2680,7 @@
     "img_local": "assets/img/catalog/ACCGEN3070.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN3070/ACCGEN3070_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN3070/ACCGEN3070_400.jpg"
   },
   {
@@ -2811,6 +2702,7 @@
     "img_local": "assets/img/catalog/ACCGEN3080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCGEN3080/ACCGEN3080_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCGEN3080/ACCGEN3080_400.jpg"
   },
   {
@@ -2832,6 +2724,7 @@
     "img_local": "assets/img/catalog/ACCVGO2500.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCVGO2500/ACCVGO2500_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCVGO2500/ACCVGO2500_400.jpg"
   },
   {
@@ -2853,6 +2746,7 @@
     "img_local": "assets/img/catalog/ACCVGO1860.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCVGO1860/ACCVGO1860_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCVGO1860/ACCVGO1860_400.jpg"
   },
   {
@@ -2874,6 +2768,7 @@
     "img_local": "assets/img/catalog/MALVGO020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALVGO020/MALVGO020_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALVGO020/MALVGO020_400.jpg"
   },
   {
@@ -2895,6 +2790,7 @@
     "img_local": "assets/img/catalog/MALVGO030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALVGO030/MALVGO030_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALVGO030/MALVGO030_400.jpg"
   },
   {
@@ -2916,6 +2812,7 @@
     "img_local": "assets/img/catalog/ACCVGO2090.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCVGO2090/ACCVGO2090_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCVGO2090/ACCVGO2090_400.jpg"
   },
   {
@@ -2937,6 +2834,7 @@
     "img_local": "assets/img/catalog/BOCVGO2000.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BOCVGO2000/BOCVGO2000_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BOCVGO2000/BOCVGO2000_400.jpg"
   },
   {
@@ -2958,6 +2856,7 @@
     "img_local": "assets/img/catalog/ACCTCH9870.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTCH9870/ACCTCH9870_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTCH9870/ACCTCH9870_400.jpg"
   },
   {
@@ -2979,6 +2878,7 @@
     "img_local": "assets/img/catalog/MALTCH100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALTCH100/MALTCH100_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALTCH100/MALTCH100_400.jpg"
   },
   {
@@ -3000,6 +2900,7 @@
     "img_local": "assets/img/catalog/MALTCH500.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALTCH500/MALTCH500_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALTCH500/MALTCH500_400.jpg"
   },
   {
@@ -3021,6 +2922,7 @@
     "img_local": "assets/img/catalog/MALTCH440.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALTCH440/MALTCH440_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALTCH440/MALTCH440_400.jpg"
   },
   {
@@ -3042,6 +2944,7 @@
     "img_local": "assets/img/catalog/MALTCH450.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALTCH450/MALTCH450_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALTCH450/MALTCH450_400.jpg"
   },
   {
@@ -3063,6 +2966,7 @@
     "img_local": "assets/img/catalog/MALTCH460.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALTCH460/MALTCH460_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALTCH460/MALTCH460_400.jpg"
   },
   {
@@ -3084,6 +2988,7 @@
     "img_local": "assets/img/catalog/MALTCH370.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALTCH370/MALTCH370_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALTCH370/MALTCH370_400.jpg"
   },
   {
@@ -3105,6 +3010,7 @@
     "img_local": "assets/img/catalog/MALTCH380.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALTCH380/MALTCH380_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALTCH380/MALTCH380_400.jpg"
   },
   {
@@ -3126,6 +3032,7 @@
     "img_local": "assets/img/catalog/MALTCH310.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALTCH310/MALTCH310_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALTCH310/MALTCH310_400.jpg"
   },
   {
@@ -3147,6 +3054,7 @@
     "img_local": "assets/img/catalog/MALTCH320.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALTCH320/MALTCH320_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALTCH320/MALTCH320_400.jpg"
   },
   {
@@ -3168,6 +3076,7 @@
     "img_local": "assets/img/catalog/ACCTCH9440.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTCH9440/ACCTCH9440_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTCH9440/ACCTCH9440_400.jpg"
   },
   {
@@ -3189,6 +3098,7 @@
     "img_local": "assets/img/catalog/ACCTCH550.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTCH550/ACCTCH550_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTCH550/ACCTCH550_400.jpg"
   },
   {
@@ -3210,6 +3120,7 @@
     "img_local": "assets/img/catalog/MALTCH090.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALTCH090/MALTCH090_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALTCH090/MALTCH090_400.jpg"
   },
   {
@@ -3231,6 +3142,7 @@
     "img_local": "assets/img/catalog/MALTCH190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALTCH190/MALTCH190_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALTCH190/MALTCH190_400.jpg"
   },
   {
@@ -3252,6 +3164,7 @@
     "img_local": "assets/img/catalog/MALTCH200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALTCH200/MALTCH200_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALTCH200/MALTCH200_400.jpg"
   },
   {
@@ -3273,6 +3186,7 @@
     "img_local": "assets/img/catalog/ACCTCH9730.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTCH9730/ACCTCH9730_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTCH9730/ACCTCH9730_400.jpg"
   },
   {
@@ -3294,6 +3208,7 @@
     "img_local": "assets/img/catalog/ACCTCZ010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTCZ010/ACCTCZ010_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTCZ010/ACCTCZ010_400.jpg"
   },
   {
@@ -3315,6 +3230,7 @@
     "img_local": "assets/img/catalog/ACCTCH310.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCTCH310/ACCTCH310_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCTCH310/ACCTCH310_400.jpg"
   },
   {
@@ -3336,6 +3252,7 @@
     "img_local": "assets/img/catalog/ACCRBT6880.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6880/ACCRBT6880_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6880/ACCRBT6880_400.jpg"
   },
   {
@@ -3357,6 +3274,7 @@
     "img_local": "assets/img/catalog/ACCRBT6890.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6890/ACCRBT6890_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6890/ACCRBT6890_400.jpg"
   },
   {
@@ -3378,6 +3296,7 @@
     "img_local": "assets/img/catalog/ACCRBT6900.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6900/ACCRBT6900_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6900/ACCRBT6900_400.jpg"
   },
   {
@@ -3399,28 +3318,8 @@
     "img_local": "assets/img/catalog/ACCRBT7140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT7140/ACCRBT7140_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT7140/ACCRBT7140_400.jpg"
-  },
-  {
-    "sku": "ACCRBT8160",
-    "nombre": "ADAPTADOR USB C MACHO A DISPLAY PORT HEMBRA (6006122), Brobotix Con el nuevo Adaptador USB C a Display Port BRobotix de ",
-    "descripcion_completa": "ADAPTADOR USB C MACHO A DISPLAY PORT HEMBRA (6006122), Brobotix Con el nuevo Adaptador USB C a Display Port BRobotix de alta velocidad podrás conectar dispositivos como televisores y proyectores Este adaptador te permite añadir un puerto Display Port \"hembra\" Adaptador USB Tipo “C” macho a Display Port \"hembra\". Conecta dispositivos como televisores y proyectores. Compatible con todos dispositivos que cuenten con un puertos USB tipo C con salida de audio y video. Admite resoluciones de audio y pantalla de hasta 8K 7920x4320@60Hz. Diseño metálico. Compacto, ligero y discreto. Especificaciones: Conector: Display Port \"hembra\". Conector USB Tipo \"C\" compatible con laptops, computadoras de escritorio. Contenido: 1 pieza. Dimensiones del producto (Ancho x Alto x Profundidad):  2.1 x 4.4 x 1.1-0.8 cm. Garantía: 1 año *Antes de adquirir su adaptador se le sugiere verificar que el puerto USB Tipo \"C\" de su equipo esté habilitado para salida de video. Esta información la puede confirmar en las especificaciones de su equipo.  Color: Negro",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "ADAPTADOR",
-    "costo_base": 7.58,
-    "precio_mxn": 199.48,
-    "precio_original": 236.42,
-    "img": "https://static.ctonline.mx/imagenes/ACCRBT8160/ACCRBT8160_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/ADAPTADOR.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCRBT8160",
-    "costo_proveedor_mxn": 147.76,
-    "precio": 199.48,
-    "precio_mayoreo_10pzs": 177.31,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCRBT8160.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT8160/ACCRBT8160_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCRBT8160/ACCRBT8160_400.jpg"
   },
   {
     "sku": "ACCRBT8170",
@@ -3441,6 +3340,7 @@
     "img_local": "assets/img/catalog/ACCRBT8170.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT8170/ACCRBT8170_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT8170/ACCRBT8170_400.jpg"
   },
   {
@@ -3462,6 +3362,7 @@
     "img_local": "assets/img/catalog/ACCRBT8180.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT8180/ACCRBT8180_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT8180/ACCRBT8180_400.jpg"
   },
   {
@@ -3483,6 +3384,7 @@
     "img_local": "assets/img/catalog/BOCRBT710.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BOCRBT710/BOCRBT710_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BOCRBT710/BOCRBT710_400.jpg"
   },
   {
@@ -3504,6 +3406,7 @@
     "img_local": "assets/img/catalog/BOCRBT720.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BOCRBT720/BOCRBT720_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BOCRBT720/BOCRBT720_400.jpg"
   },
   {
@@ -3525,28 +3428,8 @@
     "img_local": "assets/img/catalog/BOCRBT670.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BOCRBT670/BOCRBT670_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BOCRBT670/BOCRBT670_400.jpg"
-  },
-  {
-    "sku": "CABRBT3780",
-    "nombre": "CABLE HDMI A VGA V2.0 SOPORTA 2K4K 1.80 m (406344), Brobotix Con el cable HDMI a VGA BRobotix® podrás conectar la salida",
-    "descripcion_completa": "CABLE HDMI A VGA V2.0 SOPORTA 2K4K 1.80 m (406344), Brobotix Con el cable HDMI a VGA BRobotix® podrás conectar la salida HDMI de tu laptop o computadora de escritorio a un monitor o proyector VGA. Cable de conversión de fuente HDMI a receptor VGA. No necesita fuente de alimentación externa. Soporta resolución superior a los 1080 dpis. Plug and play. Ligero y portátil. Especificaciones: Entrada HDMI macho, salida VGA macho. Material: PVC, cobre, latón niquelad.  Presentación en bolsa. Color: Negro",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "CABLE",
-    "costo_base": 6.97,
-    "precio_mxn": 183.4,
-    "precio_original": 217.36,
-    "img": "https://static.ctonline.mx/imagenes/CABRBT3780/CABRBT3780_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/CABLE.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CABRBT3780",
-    "costo_proveedor_mxn": 135.85,
-    "precio": 183.4,
-    "precio_mayoreo_10pzs": 163.02,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/CABRBT3780.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/CABRBT3780/CABRBT3780_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/CABRBT3780/CABRBT3780_400.jpg"
   },
   {
     "sku": "CABRBT3770",
@@ -3567,6 +3450,7 @@
     "img_local": "assets/img/catalog/CABRBT3770.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABRBT3770/CABRBT3770_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABRBT3770/CABRBT3770_400.jpg"
   },
   {
@@ -3588,6 +3472,7 @@
     "img_local": "assets/img/catalog/ACCRBT6240.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6240/ACCRBT6240_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6240/ACCRBT6240_400.jpg"
   },
   {
@@ -3609,6 +3494,7 @@
     "img_local": "assets/img/catalog/CABRBT2960.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABRBT2960/CABRBT2960_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABRBT2960/CABRBT2960_400.jpg"
   },
   {
@@ -3630,91 +3516,8 @@
     "img_local": "assets/img/catalog/CABRBT2750.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABRBT2750/CABRBT2750_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABRBT2750/CABRBT2750_400.jpg"
-  },
-  {
-    "sku": "ACCRBT4790",
-    "nombre": "Convertidor USB A DVI/HDMI/SVGA 1920*1080 (171920), Brobotix Este adaptador te permite conectar fácilmente monitores adi",
-    "descripcion_completa": "Convertidor USB A DVI/HDMI/SVGA 1920*1080 (171920), Brobotix Este adaptador te permite conectar fácilmente monitores adicionales (tv) al puerto USB de tu laptop o PC de escritorio. Los monitores conectados se pueden configurar para reflejar la pantalla principal o ampliar el escritorio, permitiendo visibilidad o más aplicaciones al mismo tiempo. Características: Puede reflejar fácilmente la pantalla principal. Útil para extender su pantalla a la izquierda, derecha, arriba o abajo. Puede girarse a la izquierda, derecha o al revés. Alimentación mediante USB 2.0. Compatible con pantallas standard y widescreen. Utiliza un controlador virtual. Su operación es completamente silenciosa. LED indicadores de encendido y estado. Portátil, lo que facilita su traslado. Especificaciones: Host Interface: USB 2.0. Video Interface: VGA / DVI-I / HDMI. RAM: 8M x 16 DDR sincrónica DRAM (SDRAM). Sistemas Operativos Soportados: Windows 2000/XP-32Bit, Vista, 7, Server 2003, 2008 y 2008 R2, MAC OS / Linux. Color Negro.",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "CONVERTIDOR",
-    "costo_base": 43.02,
-    "precio_mxn": 1132.56,
-    "precio_original": 1342.29,
-    "img": "https://static.ctonline.mx/imagenes/ACCRBT4790/ACCRBT4790_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/CONVERTIDOR.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCRBT4790",
-    "costo_proveedor_mxn": 838.93,
-    "precio": 1132.56,
-    "precio_mayoreo_10pzs": 1006.72,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCRBT4790.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT4790/ACCRBT4790_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCRBT4790/ACCRBT4790_400.jpg"
-  },
-  {
-    "sku": "ACCRBT900",
-    "nombre": "Convertidor HDMI a VGA (110910) B-Robotix HDMI Macho a VGA hembra, permite conectar la salida HDMI de tu laptop, ultrabo",
-    "descripcion_completa": "Convertidor HDMI a VGA (110910) B-Robotix HDMI Macho a VGA hembra, permite conectar la salida HDMI de tu laptop, ultrabook, o computadora de escritorio a un monitor o proyector VGA, soporta resolución superior a 1080P(1920X1080). Color: Blanco.",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "CONVERTIDOR",
-    "costo_base": 4.96,
-    "precio_mxn": 130.46,
-    "precio_original": 154.62,
-    "img": "https://static.ctonline.mx/imagenes/ACCRBT900/ACCRBT900_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/CONVERTIDOR.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCRBT900",
-    "costo_proveedor_mxn": 96.64,
-    "precio": 130.46,
-    "precio_mayoreo_10pzs": 115.97,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCRBT900.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT900/ACCRBT900_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCRBT900/ACCRBT900_400.jpg"
-  },
-  {
-    "sku": "ACCRBT2680",
-    "nombre": "Convertidor HDMI a VGA (110910) B-Robotix HDMI Macho a VGA hembra, permite conectar la salida HDMI de tu laptop, ultrabo",
-    "descripcion_completa": "Convertidor HDMI a VGA (110910) B-Robotix HDMI Macho a VGA hembra, permite conectar la salida HDMI de tu laptop, ultrabook, o computadora de escritorio a un monitor o proyector VGA, soporta resolución superior a 1080P(1920X1080). Color: Blanco.",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "CONVERTIDOR",
-    "costo_base": 4.96,
-    "precio_mxn": 130.46,
-    "precio_original": 154.62,
-    "img": "https://static.ctonline.mx/imagenes/ACCRBT2680/ACCRBT2680_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/CONVERTIDOR.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCRBT2680",
-    "costo_proveedor_mxn": 96.64,
-    "precio": 130.46,
-    "precio_mayoreo_10pzs": 115.97,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCRBT2680.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT2680/ACCRBT2680_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCRBT2680/ACCRBT2680_400.jpg"
-  },
-  {
-    "sku": "ACCRBT930",
-    "nombre": "Convertidor mini HDMI a VGA (110977) B-Robotix Mini HDMI Macho a VGA hembra, permite conectar la salida mini HDMI de tu ",
-    "descripcion_completa": "Convertidor mini HDMI a VGA (110977) B-Robotix Mini HDMI Macho a VGA hembra, permite conectar la salida mini HDMI de tu laptop a un monitor SVGA ahora podrás ver películas, fotos, videos y hasta juegos ¡en GRANDE! desde tu Tablet a la pantalla, monitor o proyector, resoluciones desde 480i a 1080p. Color: Blanco.",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "CONVERTIDOR",
-    "costo_base": 17.66,
-    "precio_mxn": 464.78,
-    "precio_original": 550.85,
-    "img": "https://static.ctonline.mx/imagenes/ACCRBT930/ACCRBT930_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/CONVERTIDOR.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCRBT930",
-    "costo_proveedor_mxn": 344.28,
-    "precio": 464.78,
-    "precio_mayoreo_10pzs": 413.14,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCRBT930.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT930/ACCRBT930_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCRBT930/ACCRBT930_400.jpg"
   },
   {
     "sku": "CABRBT3200",
@@ -3735,6 +3538,7 @@
     "img_local": "assets/img/catalog/CABRBT3200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABRBT3200/CABRBT3200_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABRBT3200/CABRBT3200_400.jpg"
   },
   {
@@ -3756,6 +3560,7 @@
     "img_local": "assets/img/catalog/CABRBT3210.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/CABRBT3210/CABRBT3210_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/CABRBT3210/CABRBT3210_400.jpg"
   },
   {
@@ -3777,6 +3582,7 @@
     "img_local": "assets/img/catalog/ACCRBT6990.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6990/ACCRBT6990_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6990/ACCRBT6990_400.jpg"
   },
   {
@@ -3798,6 +3604,7 @@
     "img_local": "assets/img/catalog/ACCRBT7000.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT7000/ACCRBT7000_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT7000/ACCRBT7000_400.jpg"
   },
   {
@@ -3819,6 +3626,7 @@
     "img_local": "assets/img/catalog/MALRBT450.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALRBT450/MALRBT450_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALRBT450/MALRBT450_400.jpg"
   },
   {
@@ -3840,6 +3648,7 @@
     "img_local": "assets/img/catalog/MALRBT210.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALRBT210/MALRBT210_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALRBT210/MALRBT210_400.jpg"
   },
   {
@@ -3861,6 +3670,7 @@
     "img_local": "assets/img/catalog/ACCRBT970.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT970/ACCRBT970_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT970/ACCRBT970_400.jpg"
   },
   {
@@ -3882,6 +3692,7 @@
     "img_local": "assets/img/catalog/ACCRBT980.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT980/ACCRBT980_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT980/ACCRBT980_400.jpg"
   },
   {
@@ -3903,6 +3714,7 @@
     "img_local": "assets/img/catalog/ACCRBT990.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT990/ACCRBT990_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT990/ACCRBT990_400.jpg"
   },
   {
@@ -3924,6 +3736,7 @@
     "img_local": "assets/img/catalog/ACCRBT1000.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT1000/ACCRBT1000_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT1000/ACCRBT1000_400.jpg"
   },
   {
@@ -3945,6 +3758,7 @@
     "img_local": "assets/img/catalog/ACCRBT1660.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT1660/ACCRBT1660_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT1660/ACCRBT1660_400.jpg"
   },
   {
@@ -3966,6 +3780,7 @@
     "img_local": "assets/img/catalog/ACCRBT960.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT960/ACCRBT960_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT960/ACCRBT960_400.jpg"
   },
   {
@@ -3987,6 +3802,7 @@
     "img_local": "assets/img/catalog/MALRBT400.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALRBT400/MALRBT400_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALRBT400/MALRBT400_400.jpg"
   },
   {
@@ -4008,6 +3824,7 @@
     "img_local": "assets/img/catalog/MALRBT360.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALRBT360/MALRBT360_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALRBT360/MALRBT360_400.jpg"
   },
   {
@@ -4029,6 +3846,7 @@
     "img_local": "assets/img/catalog/MALRBT190.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALRBT190/MALRBT190_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALRBT190/MALRBT190_400.jpg"
   },
   {
@@ -4050,6 +3868,7 @@
     "img_local": "assets/img/catalog/MALRBT200.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALRBT200/MALRBT200_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALRBT200/MALRBT200_400.jpg"
   },
   {
@@ -4071,6 +3890,7 @@
     "img_local": "assets/img/catalog/MALRBT230.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALRBT230/MALRBT230_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALRBT230/MALRBT230_400.jpg"
   },
   {
@@ -4092,6 +3912,7 @@
     "img_local": "assets/img/catalog/MALRBT220.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALRBT220/MALRBT220_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALRBT220/MALRBT220_400.jpg"
   },
   {
@@ -4113,6 +3934,7 @@
     "img_local": "assets/img/catalog/MALRBT370.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALRBT370/MALRBT370_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALRBT370/MALRBT370_400.jpg"
   },
   {
@@ -4134,6 +3956,7 @@
     "img_local": "assets/img/catalog/MALRBT390.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALRBT390/MALRBT390_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALRBT390/MALRBT390_400.jpg"
   },
   {
@@ -4155,6 +3978,7 @@
     "img_local": "assets/img/catalog/MALRBT380.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALRBT380/MALRBT380_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALRBT380/MALRBT380_400.jpg"
   },
   {
@@ -4176,6 +4000,7 @@
     "img_local": "assets/img/catalog/MALRBT410.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALRBT410/MALRBT410_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALRBT410/MALRBT410_400.jpg"
   },
   {
@@ -4197,6 +4022,7 @@
     "img_local": "assets/img/catalog/MALRBT420.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALRBT420/MALRBT420_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALRBT420/MALRBT420_400.jpg"
   },
   {
@@ -4218,6 +4044,7 @@
     "img_local": "assets/img/catalog/ACCRBT2280.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT2280/ACCRBT2280_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT2280/ACCRBT2280_400.jpg"
   },
   {
@@ -4239,6 +4066,7 @@
     "img_local": "assets/img/catalog/ACCRBT6470.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT6470/ACCRBT6470_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT6470/ACCRBT6470_400.jpg"
   },
   {
@@ -4260,6 +4088,7 @@
     "img_local": "assets/img/catalog/MALNEX020.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALNEX020/MALNEX020_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALNEX020/MALNEX020_400.jpg"
   },
   {
@@ -4281,6 +4110,7 @@
     "img_local": "assets/img/catalog/MALNEX030.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALNEX030/MALNEX030_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALNEX030/MALNEX030_400.jpg"
   },
   {
@@ -4302,6 +4132,7 @@
     "img_local": "assets/img/catalog/MALNEX010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MALNEX010/MALNEX010_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MALNEX010/MALNEX010_400.jpg"
   },
   {
@@ -4323,6 +4154,7 @@
     "img_local": "assets/img/catalog/ACCHYU130.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHYU130/ACCHYU130_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHYU130/ACCHYU130_400.jpg"
   },
   {
@@ -4344,6 +4176,7 @@
     "img_local": "assets/img/catalog/ACCHYU140.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHYU140/ACCHYU140_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHYU140/ACCHYU140_400.jpg"
   },
   {
@@ -4365,28 +4198,8 @@
     "img_local": "assets/img/catalog/ACCUBA010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCUBA010/ACCUBA010_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCUBA010/ACCUBA010_400.jpg"
-  },
-  {
-    "sku": "ACCUBA080",
-    "nombre": "Adaptador Mini TIPC-HDMI-UB Tipo USB-C a HDMI 4k@60Hz para equipos con conector USB-C 3.1 El adaptador te permite conect",
-    "descripcion_completa": "Adaptador Mini TIPC-HDMI-UB Tipo USB-C a HDMI 4k@60Hz para equipos con conector USB-C 3.1 El adaptador te permite conectar tu dispositivo como laptop, tablet, teléfono celular y otros a una pantalla con entrada HDMI para una señal de hasta 4K@60Hz. Utiliza el conector tipo USB-C 3.1 para proyectar imágenes en una TV, monitor o proyector desde tu dispositivo sin necesidad de instalar ningún Software.",
-    "categoria_ct": "ACCESORIOS",
-    "marca": "ADAPTADOR",
-    "costo_base": 105.89,
-    "precio_mxn": 2787.52,
-    "precio_original": 3303.73,
-    "img": "https://static.ctonline.mx/imagenes/ACCUBA080/ACCUBA080_400.jpg",
-    "brand_logo": "https://static.ctonline.mx/marcas/png/ADAPTADOR.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCUBA080",
-    "costo_proveedor_mxn": 2064.83,
-    "precio": 2787.52,
-    "precio_mayoreo_10pzs": 2477.8,
-    "margen_aplicado": "35%",
-    "img_local": "assets/img/catalog/ACCUBA080.jpg",
-    "img_cdn": "https://static.ctonline.mx/imagenes/ACCUBA080/ACCUBA080_400.jpg",
-    "categoria_clasificada": "equipos_de_marca",
-    "local_img": "https://static.ctonline.mx/imagenes/ACCUBA080/ACCUBA080_400.jpg"
   },
   {
     "sku": "ACCUBA100",
@@ -4407,6 +4220,7 @@
     "img_local": "assets/img/catalog/ACCUBA100.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCUBA100/ACCUBA100_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCUBA100/ACCUBA100_400.jpg"
   },
   {
@@ -4428,6 +4242,7 @@
     "img_local": "assets/img/catalog/BOCHPC010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/BOCHPC010/BOCHPC010_400.jpg",
     "categoria_clasificada": "equipos_de_marca",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/BOCHPC010/BOCHPC010_400.jpg"
   }
 ]

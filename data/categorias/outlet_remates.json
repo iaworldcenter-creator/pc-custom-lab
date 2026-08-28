@@ -18,6 +18,7 @@
     "img_local": "assets/img/catalog/ACCRBT730.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCRBT730/ACCRBT730_400.jpg",
     "categoria_clasificada": "outlet_remates",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCRBT730/ACCRBT730_400.jpg"
   },
   {
@@ -39,6 +40,7 @@
     "img_local": "assets/img/catalog/ACCHPB010.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHPB010/ACCHPB010_400.jpg",
     "categoria_clasificada": "outlet_remates",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHPB010/ACCHPB010_400.jpg"
   },
   {
@@ -60,6 +62,7 @@
     "img_local": "assets/img/catalog/ACCHPD265.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/ACCHPD265/ACCHPD265_400.jpg",
     "categoria_clasificada": "outlet_remates",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/ACCHPD265/ACCHPD265_400.jpg"
   },
   {
@@ -81,6 +84,7 @@
     "img_local": "assets/img/catalog/MEMRAM080.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MEMRAM080/MEMRAM080_400.jpg",
     "categoria_clasificada": "outlet_remates",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MEMRAM080/MEMRAM080_400.jpg"
   },
   {
@@ -102,6 +106,7 @@
     "img_local": "assets/img/catalog/MEMRAM720.jpg",
     "img_cdn": "https://static.ctonline.mx/imagenes/MEMRAM720/MEMRAM720_400.jpg",
     "categoria_clasificada": "outlet_remates",
+    "utilidad_neta_minima": "20% garantizado sobre proveedor",
     "local_img": "https://static.ctonline.mx/imagenes/MEMRAM720/MEMRAM720_400.jpg"
   }
 ]
