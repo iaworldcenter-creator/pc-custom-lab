@@ -1,10 +1,10 @@
 // =========================================================================
-// MOTOR OFICIAL PC CUSTOM LAB (MAQUETACIÓN PERFECTA DE 2 COLUMNAS Y 5X4)
+// MOTOR OFICIAL PC CUSTOM LAB (RUTAS RELATIVAS LIMPIAS, FALLBACK CDN Y SIDEBAR 100%)
 // =========================================================================
 
 let currentViewStyle = 'grid'; // 'grid' (5x4) o 'list'
 let currentPageNumber = 1;
-const productsPerPage = 20; // 5 filas x 4 columnas
+const productsPerPage = 20; // 5 filas x 4 columnas = 20 productos exactos
 
 let activeSelectedCategory = 'Todas';
 let activeSelectedBrand = 'Todas';
@@ -88,20 +88,20 @@ function renderExactCatalogView() {
     }
 
     if (currentViewStyle === 'grid') {
-        // CUADRÍCULA DESPEJADA 5 FILAS X 4 COLUMNAS (20 ARTÍCULOS)
+        // CUADRÍCULA 5 FILAS X 4 COLUMNAS (20 ARTÍCULOS EXACTOS)
         container.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-2";
         container.innerHTML = pageItems.map(p => {
             const sku = p.sku;
+            const cat = p.categoria_clasificada || 'varios_hardware';
             const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
             const price = p.precio_mxn || p.precio;
             const original = p.precio_original || (price * 1.33);
             const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
+            const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
             const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
-            const localImg = p.img || `assets/img/catalog/${p.categoria_clasificada}/${sku}.jpg`;
 
             return `
                 <div class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
-                    <!-- Badge Promoción -->
                     <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
                         <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
                     </div>
@@ -111,7 +111,7 @@ function renderExactCatalogView() {
                     </button>
 
                     <div>
-                        <!-- Fotografía Real con Clic a PDP -->
+                        <!-- Fotografía Real con Vinculación 1 a 1 por SKU -->
                         <div onclick="openProductDetailModal('${sku}')" class="w-full h-36 bg-slate-950/80 border border-slate-800/80 rounded-xl flex items-center justify-center p-2 mb-2.5 relative group-hover:border-cyan-500/40 transition cursor-pointer">
                             <img 
                                 src="${localImg}" 
@@ -120,7 +120,7 @@ function renderExactCatalogView() {
                                 height="150" 
                                 loading="lazy" 
                                 class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
-                                onerror="this.onerror=null; this.src='https://static.ctonline.mx/imagenes/' + (p.sku || '') + '/' + (p.sku || '') + '_400.jpg';"
+                                onerror="this.onerror=null; this.src='${cdnImg}';"
                             />
                         </div>
 
@@ -171,13 +171,14 @@ function renderExactCatalogView() {
         container.className = "flex flex-col gap-3.5 pb-2";
         container.innerHTML = pageItems.map(p => {
             const sku = p.sku;
+            const cat = p.categoria_clasificada || 'varios_hardware';
             const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
             const price = p.precio_mxn || p.precio;
             const original = p.precio_original || (price * 1.33);
             const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
             const usdPrice = (price / 19.50).toFixed(2);
+            const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
             const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
-            const localImg = p.img || `assets/img/catalog/${p.categoria_clasificada}/${sku}.jpg`;
             const desc = p.descripcion_completa || p.desc || '';
 
             return `
@@ -194,7 +195,7 @@ function renderExactCatalogView() {
                             height="110" 
                             loading="lazy" 
                             class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
-                            onerror="this.onerror=null; this.src='https://static.ctonline.mx/imagenes/' + (p.sku || '') + '/' + (p.sku || '') + '_400.jpg';"
+                            onerror="this.onerror=null; this.src='${cdnImg}';"
                         />
                     </div>
 
@@ -238,16 +239,18 @@ function renderExactCatalogView() {
 }
 
 // =========================================================================
-// BARRA LATERAL IZQUIERDA: 2 BLOQUES + BESTSELLERS INTEGRADOS + VER TODO
+// BARRA LATERAL IZQUIERDA: ALTURA 100% LLENA Y TODAS LAS SUBCATEGORÍAS
 // =========================================================================
 function renderSidebarFacets() {
     const root = document.getElementById("sidebar-facets-root");
     if (!root) return;
 
-    // Bloque 1: Componentes Clave de Ensamble
-    const assemblyCategories = [
-        { id: 'Todas', name: 'Todas las Categorías', count: 16122, icon: 'fa-layer-group' },
-        { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', count: 111, icon: 'fa-chess-board' },
+    // Lista Completa de Todas las Categorías para Nivelación Vertical Total
+    const allCategoriesList = [
+        { id: 'Todas', name: 'Todas las Categorías', count: 16122, icon: 'fa-layer-group', header: 'Catálogo Maestro' },
+        
+        // Bloque Ensamble
+        { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', count: 111, icon: 'fa-chess-board', header: 'Ensamble de Hardware' },
         { id: 'procesadores', name: 'Procesadores (CPUs Intel/AMD)', count: 691, icon: 'fa-microchip' },
         { id: 'memorias_ram', name: 'Memorias RAM (DDR4/DDR5)', count: 597, icon: 'fa-memory' },
         { id: 'discos_duros', name: 'Discos Duros & SSD NVMe', count: 484, icon: 'fa-hard-drive' },
@@ -255,15 +258,15 @@ function renderSidebarFacets() {
         { id: 'fuentes_energia', name: 'Fuentes de Poder & UPS', count: 80, icon: 'fa-plug-circle-bolt' },
         { id: 'tarjetas_de_video', name: 'Tarjetas de Video (GPUs)', count: 61, icon: 'fa-gamepad' },
         { id: 'enfriamiento', name: 'Enfriamiento Líquido/Aire', count: 228, icon: 'fa-snowflake' },
-        { id: 'monitores', name: 'Monitores & Pantallas PC', count: 623, icon: 'fa-desktop' }
-    ];
-
-    // Bloque 2: Complementos, Periféricos y Software
-    const complementCategories = [
-        { id: 'accesorios_perifericos', name: 'Teclados, Mouse & Periféricos', count: 4593, icon: 'fa-keyboard' },
-        { id: 'conectividad_redes', name: 'Conectividad & Routers WiFi', count: 584, icon: 'fa-network-wired' },
-        { id: 'software', name: 'Software & Licencias Windows/Office', count: 580, icon: 'fa-compact-disc' },
+        { id: 'monitores', name: 'Monitores & Pantallas PC', count: 623, icon: 'fa-desktop' },
+        
+        // Bloque Almacenamiento y Redes
+        { id: 'conectividad_redes', name: 'Conectividad & Routers WiFi', count: 584, icon: 'fa-network-wired', header: 'Redes & Conectividad' },
         { id: 'telefonia_seguridad', name: 'Videovigilancia CCTV & Alarmas', count: 849, icon: 'fa-video' },
+        
+        // Bloque Periféricos y Software
+        { id: 'accesorios_perifericos', name: 'Teclados, Mouse & Periféricos', count: 4593, icon: 'fa-keyboard', header: 'Periféricos & Software' },
+        { id: 'software', name: 'Software & Licencias Originales', count: 580, icon: 'fa-compact-disc' },
         { id: 'impresoras', name: 'Impresoras & Multifuncionales', count: 416, icon: 'fa-print' },
         { id: 'consumibles', name: 'Tintas, Tóner & Consumibles', count: 592, icon: 'fa-fill-drip' },
         { id: 'equipos_de_marca', name: 'Laptops & Equipos de Marca', count: 27, icon: 'fa-laptop' },
@@ -272,7 +275,7 @@ function renderSidebarFacets() {
         { id: 'linea_blanca', name: 'Climatización & Línea Blanca', count: 56, icon: 'fa-fan' }
     ];
 
-    // Obtener los 3 más vendidos dinámicos según la categoría activa
+    // Obtener los 3 más vendidos de la categoría seleccionada
     const all = [...(window.PC_COMBOS_DATA || []), ...(window.CT_CATALOG_DATA || [])];
     let topItems = all.filter(p => {
         if (activeSelectedCategory === 'Todas') return true;
@@ -285,57 +288,38 @@ function renderSidebarFacets() {
             <span class="text-[9px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono font-bold">16,122 Items</span>
         </div>
 
-        <div class="p-3.5 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-300 text-xs space-y-4 shadow-2xl flex flex-col justify-between">
+        <div class="p-3.5 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-300 text-xs space-y-4 shadow-2xl flex flex-col justify-between min-h-[950px]">
             
             <div class="flex gap-2">
                 <button onclick="renderExactCatalogView()" class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2 rounded-xl text-[11px] uppercase transition cursor-pointer shadow">
-                    Aplicar
+                    Aplicar Filtros
                 </button>
                 <button onclick="resetFacets()" class="flex-1 bg-slate-800 hover:bg-red-950/60 border border-slate-700 hover:border-red-500/50 text-slate-300 hover:text-red-400 font-bold py-2 rounded-xl text-[11px] uppercase transition cursor-pointer">
                     Limpiar
                 </button>
             </div>
 
-            <!-- BLOQUE 1: COMPONENTES CLAVE DE ENSAMBLE -->
-            <div class="border-b border-slate-800 pb-3">
-                <h4 class="font-bold text-cyan-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
-                    <i class="fa-solid fa-microchip text-cyan-400"></i> 1. Componentes Clave
+            <!-- LISTA COMPLETA DE CATEGORÍAS (LLENADO TOTAL DEL SIDEBAR) -->
+            <div class="border-b border-slate-800 pb-3 flex-1">
+                <h4 class="font-bold text-cyan-300 mb-2.5 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                    <i class="fa-solid fa-folder-tree text-cyan-400"></i> Categorías & Componentes
                 </h4>
-                <div class="space-y-1 text-slate-400">
-                    ${assemblyCategories.map(c => `
+                <div class="space-y-1.5 text-slate-400 max-h-[580px] overflow-y-auto pr-1 no-scrollbar">
+                    ${allCategoriesList.map(c => `
                         <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-1 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
                             <span class="flex items-center gap-2 truncate">
                                 <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
                                 <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
                                 <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : ''}">${c.name}</span>
                             </span>
-                            <span class="text-[10px] text-slate-400 font-mono">(${c.count})</span>
+                            <span class="text-[10px] text-slate-400 font-mono">(${c.count.toLocaleString('es-MX')})</span>
                         </label>
                     `).join('')}
                 </div>
             </div>
 
-            <!-- BLOQUE 2: COMPLEMENTOS, PERIFÉRICOS Y SOFTWARE -->
-            <div class="border-b border-slate-800 pb-3">
-                <h4 class="font-bold text-amber-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
-                    <i class="fa-solid fa-puzzle-piece text-amber-400"></i> 2. Complementos & Redes
-                </h4>
-                <div class="space-y-1 text-slate-400 max-h-56 overflow-y-auto pr-1">
-                    ${complementCategories.map(c => `
-                        <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-1 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
-                            <span class="flex items-center gap-2 truncate">
-                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
-                                <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : ''}">${c.name}</span>
-                            </span>
-                            <span class="text-[10px] text-slate-400 font-mono">(${c.count})</span>
-                        </label>
-                    `).join('')}
-                </div>
-            </div>
-
-            <!-- BLOQUE 3: LOS 3 MÁS VENDIDOS DE ESTA CATEGORÍA + ENLACE 'VER TODO' -->
-            <div class="pt-1 space-y-2.5">
+            <!-- BLOQUE DE LOS 3 MÁS VENDIDOS DE LA CATEGORÍA -->
+            <div class="pt-1 space-y-2">
                 <div class="flex items-center justify-between">
                     <h4 class="font-bold text-amber-400 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
                         <i class="fa-solid fa-fire text-amber-400"></i> Top 3 Más Vendidos
@@ -346,16 +330,17 @@ function renderSidebarFacets() {
                 <div class="space-y-2">
                     ${topItems.map((b, idx) => {
                         const sku = b.sku;
+                        const cat = b.categoria_clasificada || 'varios_hardware';
                         const title = (b.nombre || b.descripcion_completa || '').replace(/'/g, "&#39;");
                         const price = b.precio_mxn || b.precio;
                         const mayoreo = b.precio_mayoreo_10pzs || (price * 0.93);
-                        const img = b.img || `assets/img/catalog/${b.categoria_clasificada}/${sku}.jpg`;
-                        const cdn = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+                        const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
+                        const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
 
                         return `
                             <div class="bg-slate-950 border border-slate-800 hover:border-cyan-500/50 p-2 rounded-xl flex items-center gap-2.5 transition group cursor-pointer" onclick="openProductDetailModal('${sku}')">
                                 <div class="w-11 h-11 bg-slate-900 rounded-lg p-1 shrink-0 flex items-center justify-center">
-                                    <img src="${img}" alt="${title}" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='${cdn}';" />
+                                    <img src="${localImg}" alt="${title}" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='${cdnImg}';" />
                                 </div>
                                 <div class="flex-1 min-w-0">
                                     <div class="text-[11px] font-bold text-slate-200 truncate group-hover:text-cyan-300 transition">${title}</div>
@@ -369,7 +354,7 @@ function renderSidebarFacets() {
                     }).join('')}
                 </div>
 
-                <!-- Enlace Destacado 'Ver Todo' -->
+                <!-- Botón de Remate 'Ver Todo el Catálogo' -->
                 <button 
                     onclick="activeSelectedCategory='Todas'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView(); document.getElementById('catalog-main-content-root').scrollIntoView({behavior:'smooth'});" 
                     class="w-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/40 font-mono font-bold py-2 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer shadow mt-2"
@@ -418,15 +403,16 @@ function initLongTailSearchEngine() {
 
         box.innerHTML = matches.map(p => {
             const sku = p.sku;
+            const cat = p.categoria_clasificada || 'varios_hardware';
             const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
             const price = p.precio_mxn || p.precio;
-            const img = p.img || `assets/img/catalog/${p.categoria_clasificada}/${sku}.jpg`;
-            const cdn = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+            const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
+            const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
 
             return `
                 <div class="flex items-center justify-between gap-3 p-2 hover:bg-slate-800/80 rounded-xl transition cursor-pointer border-b border-slate-800 last:border-0" onclick="openProductDetailModal('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');">
                     <div class="w-10 h-10 bg-slate-950 rounded-lg p-1 shrink-0 flex items-center justify-center">
-                        <img src="${img}" alt="${title}" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='${cdn}';" />
+                        <img src="${localImg}" alt="${title}" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='${cdnImg}';" />
                     </div>
                     <div class="flex-1 min-w-0 text-left">
                         <div class="text-xs font-bold text-white truncate">${title}</div>
@@ -462,15 +448,15 @@ window.openProductDetailModal = function(sku) {
     const modalContent = document.getElementById("productDetailModalContent");
     if (!modal || !modalContent) return;
 
+    const cat = prod.categoria_clasificada || 'Hardware';
     const title = prod.nombre || prod.descripcion_completa;
     const price = prod.precio_mxn || prod.precio;
     const original = prod.precio_original || (price * 1.33);
     const mayoreo = prod.precio_mayoreo_10pzs || (price * 0.93);
+    const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
     const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
-    const localImg = prod.img || `assets/img/catalog/${prod.categoria_clasificada}/${sku}.jpg`;
     const desc = prod.descripcion_completa || '';
     const marca = prod.marca || 'CT';
-    const cat = prod.categoria_clasificada || 'Hardware';
 
     modalContent.innerHTML = `
         <div class="w-full flex justify-between items-center border-b border-slate-800 pb-3 mb-4">
@@ -495,7 +481,7 @@ window.openProductDetailModal = function(sku) {
                         src="${localImg}" 
                         alt="${title}" 
                         class="w-full h-full object-contain group-hover:scale-110 transition duration-300"
-                        onerror="this.onerror=null; this.src='https://static.ctonline.mx/imagenes/' + (p.sku || '') + '/' + (p.sku || '') + '_400.jpg';"
+                        onerror="this.onerror=null; this.src='${cdnImg}';"
                     />
                     <div class="absolute top-3 left-3 bg-red-600 text-white font-black text-[10px] uppercase px-2.5 py-1 rounded-md shadow">
                         -25% Oferta
@@ -504,16 +490,10 @@ window.openProductDetailModal = function(sku) {
 
                 <div class="grid grid-cols-4 gap-2">
                     <button onclick="document.getElementById('pdp-main-image').src='${localImg}'" class="h-16 bg-slate-950 border border-cyan-400 rounded-xl p-1 flex items-center justify-center hover:opacity-80 transition cursor-pointer">
-                        <img src="${localImg}" alt="Vista 1" class="w-full h-full object-contain" />
+                        <img src="${localImg}" alt="Vista Local" class="w-full h-full object-contain" onerror="this.src='${cdnImg}';" />
                     </button>
                     <button onclick="document.getElementById('pdp-main-image').src='${cdnImg}'" class="h-16 bg-slate-950 border border-slate-800 rounded-xl p-1 flex items-center justify-center hover:border-cyan-400 transition cursor-pointer">
                         <img src="${cdnImg}" alt="Vista CDN" class="w-full h-full object-contain" />
-                    </button>
-                    <button onclick="document.getElementById('pdp-main-image').src='assets/img/catalog/gabinete_negro.webp'" class="h-16 bg-slate-950 border border-slate-800 rounded-xl p-1 flex items-center justify-center hover:border-cyan-400 transition cursor-pointer">
-                        <img src="assets/img/catalog/gabinete_negro.webp" alt="Gabinete" class="w-full h-full object-contain" />
-                    </button>
-                    <button onclick="document.getElementById('pdp-main-image').src='assets/img/Female_technician_assembling_gam_202608041518_thumb.webp'" class="h-16 bg-slate-950 border border-slate-800 rounded-xl p-1 flex items-center justify-center hover:border-cyan-400 transition cursor-pointer">
-                        <img src="assets/img/Female_technician_assembling_gam_202608041518_thumb.webp" alt="Ensamble" class="w-full h-full object-contain" />
                     </button>
                 </div>
             </div>
