@@ -112,7 +112,7 @@ function renderExactCatalogView() {
 
                     <div>
                         <!-- Fotografía Real con Vinculación 1 a 1 por SKU -->
-                        <div onclick="openProductDetailModal('${sku}')" class="w-full h-36 bg-slate-950/80 border border-slate-800/80 rounded-xl flex items-center justify-center p-2 mb-2.5 relative group-hover:border-cyan-500/40 transition cursor-pointer">
+                        <div onclick="openProductDetailModal('${sku}')" class="w-full h-36 bg-slate-950/80 border border-slate-800/80 rounded-xl flex items-center justify-center p-2 mb-2.5 relative group-hover:border-cyan-500/40 transition cursor-pointer overflow-hidden">
                             <img 
                                 src="${localImg}" 
                                 alt="${title}" 
@@ -187,7 +187,7 @@ function renderExactCatalogView() {
                         <span class="text-[7px] font-black text-white uppercase">-25%</span>
                     </div>
 
-                    <div onclick="openProductDetailModal('${sku}')" class="w-full md:w-32 h-28 bg-slate-950/80 border border-slate-800 rounded-xl flex items-center justify-center p-2 shrink-0 relative cursor-pointer">
+                    <div onclick="openProductDetailModal('${sku}')" class="w-full md:w-32 h-28 bg-slate-950/80 border border-slate-800 rounded-xl flex items-center justify-center p-2 shrink-0 relative cursor-pointer overflow-hidden">
                         <img 
                             src="${localImg}" 
                             alt="${title}" 
@@ -239,7 +239,7 @@ function renderExactCatalogView() {
 }
 
 // =========================================================================
-// BARRA LATERAL IZQUIERDA: ESTRUCTURA EXACTA EN 3 BLOQUES TAXONÓMICOS
+// BARRA LATERAL IZQUIERDA: 3 BLOQUES TAXONÓMICOS CON CONTEOS REALES
 // =========================================================================
 function renderSidebarFacets() {
     const root = document.getElementById("sidebar-facets-root");
@@ -255,7 +255,7 @@ function renderSidebarFacets() {
         { id: 'gabinetes', name: 'Gabinetes & Chasis Gamer', icon: 'fa-server' },
         { id: 'fuentes_energia', name: 'Fuentes de Poder (PSU)', icon: 'fa-bolt' },
         { id: 'enfriamiento', name: 'Enfriamiento y Disipadores', icon: 'fa-snowflake' },
-        { id: 'energia_ups', name: 'Reguladores, No-Breaks & UPS', icon: 'fa-plug-circle-bolt' },
+        { id: 'reguladores_ups', name: 'Reguladores, No-Breaks & UPS', icon: 'fa-plug-circle-bolt' },
         { id: 'monitores', name: 'Monitores & Pantallas PC', icon: 'fa-desktop' }
     ];
 
@@ -274,15 +274,13 @@ function renderSidebarFacets() {
         { id: 'accesorios_perifericos', name: 'Teclados, Mouse & Periféricos', icon: 'fa-keyboard' },
         { id: 'conectividad_redes', name: 'Redes & Conectividad WiFi', icon: 'fa-network-wired' },
         { id: 'software', name: 'Software & Licencias Originales', icon: 'fa-compact-disc' },
-        { id: 'telefonia_seguridad', name: 'Telefonía & Videovigilancia', icon: 'fa-video' },
+        { id: 'telefonia_seguridad', name: 'Telefonía & Videovigilancia (CCTV)', icon: 'fa-video' },
         { id: 'punto_de_venta', name: 'Punto de Venta (POS)', icon: 'fa-barcode' }
     ];
 
     const all = window.CT_CATALOG_DATA || [];
-    
     const getCount = (id) => all.filter(p => (p.categoria_clasificada || '').toLowerCase() === id.toLowerCase()).length;
 
-    // Top 3 de la categoría activa
     let topItems = all.filter(p => {
         if (activeSelectedCategory === 'Todas') return true;
         return (p.categoria_clasificada || '').toLowerCase() === activeSelectedCategory.toLowerCase();
@@ -291,7 +289,7 @@ function renderSidebarFacets() {
     root.innerHTML = `
         <div class="bg-gradient-to-r from-slate-900 to-cyan-950 border border-cyan-500/40 text-white p-3 rounded-t-2xl font-bold text-xs uppercase flex items-center justify-between shadow-lg">
             <span class="flex items-center gap-2 text-cyan-300 font-mono"><i class="fa-solid fa-sliders text-cyan-400"></i> Catálogo Mayorista</span>
-            <span class="text-[9px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono font-bold">16,134 Items</span>
+            <span class="text-[9px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono font-bold">${all.length.toLocaleString('es-MX')} Items</span>
         </div>
 
         <div class="p-3.5 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-300 text-xs space-y-4 shadow-2xl flex flex-col justify-between min-h-[980px]">
@@ -374,7 +372,7 @@ function renderSidebarFacets() {
                 </div>
             </div>
 
-            <!-- TOP 3 MÁS VENDIDOS DE LA CATEGORÍA -->
+            <!-- TOP 3 MÁS VENDIDOS -->
             <div class="pt-1 space-y-2">
                 <div class="flex items-center justify-between">
                     <h4 class="font-bold text-amber-400 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
@@ -433,7 +431,6 @@ function initPredictiveSearchEngine() {
     input.addEventListener("input", (e) => {
         const query = (e.target.value || '').trim().toLowerCase();
         
-        // Se activa desde la primera letra (>= 1)
         if (query.length < 1) {
             box.classList.add("hidden");
             box.innerHTML = "";

@@ -1050,27 +1050,6 @@
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
-    "sku": "COMASS9660",
-    "clave": "COMASS9660",
-    "nombre": "Computadora Portátil Asus TUF Gaming FA401UH-RG004W  90NR0KQ1-M00130, 14\" Pulgadas WQXGA, 165Hz",
-    "descripcion_completa": "Computadora Portátil Asus TUF Gaming FA401UH-RG004W  90NR0KQ1-M00130, 14\" Pulgadas WQXGA, 165Hz, IPS, Ryzen 7 260, 16GB RAM, 512GB SSD, Nvidia GeForce RTX5050, Windows 11 Home, Jaeger Gray Wi-fi 6E *Este equipo incluye 1 año de garantía estándar directo con fabricante. Consulte características y ficha técnica para validar que cubra sus necesidades antes de adquirir el producto. Precio y disponibilidad sujetos a cambios sin previo aviso.*",
-    "marca": "TUF",
-    "moneda_origen": "m",
-    "costo_origen": 28089.583333333336,
-    "costo_base_mxn": 28089.58,
-    "costo_base_usd": 1440.49,
-    "precio": 42134.37,
-    "precio_mxn": 42134.37,
-    "precio_original": 56179.16,
-    "precio_mayoreo_10pzs": 39325.41,
-    "precio_piso_minimo_20": 33707.5,
-    "categoria_clasificada": "tarjetas_de_video",
-    "img": "./assets/img/catalog/tarjetas_de_video/COMASS9660.jpg",
-    "cdn_url": "https://static.ctonline.mx/imagenes/COMASS9660/COMASS9660_400.jpg",
-    "garantia": "48h Directa / 1 Año Fábrica",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
-  },
-  {
     "sku": "PANLGE4230",
     "clave": "PANLGE4230",
     "nombre": "Pantalla 55\" Nano LG 55NU800BPSB Televisión Nano 55\", Resolución 3840x2160 4K UHD, Smart TV AI,",
