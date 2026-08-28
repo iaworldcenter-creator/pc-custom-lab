@@ -1,0 +1,754 @@
+import os
+import json
+import re
+
+gallery_dir = r"E:\sitios web\pc-custom-lab\assets\gallery"
+output_dir = r"E:\sitios web\pc-custom-lab"
+
+all_files = [f for f in os.listdir(gallery_dir) if f.lower().endswith(('.webp', '.png', '.jpg', '.jpeg'))]
+
+# Definición detallada de las 11 categorías con sus 20 productos técnicos
+CATALOG_DATA = [
+    {
+        "id": 1,
+        "slug": "catalogo-01-tarjetas-madre.html",
+        "title": "Tarjetas Madre (Motherboards)",
+        "icon": "🔲",
+        "subtitle": "Placas base de alto rendimiento para sockets AMD AM5/AM4 e Intel LGA1700/1850",
+        "badge_color": "cyan",
+        "filter_keywords": ["b650", "b760", "z790", "a620", "x670", "b550", "h610", "prime", "tuf", "aorus", "7666231", "mortar", "tomahawk"],
+        "products": [
+            {"brand": "ASUS", "model": "ROG STRIX B650E-F GAMING WIFI", "specs": ["Socket AM5", "DDR5 6400MHz", "PCIe 5.0 x16"], "price": 6899, "stock": 7},
+            {"brand": "MSI", "model": "MAG B650 TOMAHAWK WIFI", "specs": ["Socket AM5", "DDR5 Dual Channel", "3x M.2 NVMe"], "price": 5299, "stock": 12},
+            {"brand": "GIGABYTE", "model": "B650 AORUS ELITE AX ICE", "specs": ["Socket AM5", "PCB Blanco", "Wi-Fi 6E + 2.5G LAN"], "price": 5499, "stock": 9},
+            {"brand": "ASUS", "model": "TUF GAMING B760-PLUS WIFI", "specs": ["Intel LGA1700", "DDR5 Ready", "Military-Grade VRM"], "price": 4699, "stock": 15},
+            {"brand": "MSI", "model": "PRO Z790-A MAX WIFI", "specs": ["Intel Z790", "DDR5 7200+ (OC)", "4x M.2 Gen4"], "price": 6199, "stock": 6},
+            {"brand": "GIGABYTE", "model": "Z790 AORUS MASTER X", "specs": ["Intel LGA1700", "VRM 20+1+2 fases", "PCIe 5.0 M.2"], "price": 12899, "stock": 4},
+            {"brand": "ASRock", "model": "B650M-HDV/M.2 Micro-ATX", "specs": ["Socket AM5", "DDR5 6000MHz", "Ultra M.2 PCIe 5.0"], "price": 2899, "stock": 18},
+            {"brand": "ASUS", "model": "PRIME B550M-A WIFI II", "specs": ["Socket AM4", "DDR4 4400MHz", "PCIe 4.0"], "price": 2499, "stock": 22},
+            {"brand": "MSI", "model": "B550 GAMING PLUS", "specs": ["Socket AM4", "Audio Boost", "Turbo M.2 con Shield"], "price": 2999, "stock": 14},
+            {"brand": "GIGABYTE", "model": "A620M GAMING X AX", "specs": ["Socket AM5", "DDR5 6400MHz", "Wi-Fi 6 Integrado"], "price": 2799, "stock": 11},
+            {"brand": "ASUS", "model": "ROG MAXIMUS Z790 HERO", "specs": ["Intel LGA1700", "Thunderbolt 4", "Polymo Lighting"], "price": 16499, "stock": 3},
+            {"brand": "MSI", "model": "MAG B760M MORTAR WIFI II", "specs": ["Intel B760", "DDR5 7000MHz", "Diseño Disipador Extendido"], "price": 4299, "stock": 8},
+            {"brand": "GIGABYTE", "model": "B760M DS3H AX DDR4", "specs": ["Intel LGA1700", "DDR4 5333MHz", "Dual M.2 PCIe 4.0"], "price": 2799, "stock": 16},
+            {"brand": "ASUS", "model": "PRIME X670-P WIFI", "specs": ["Socket AM5", "DDR5 6400MHz", "3x PCIe 4.0 M.2"], "price": 6599, "stock": 5},
+            {"brand": "ASRock", "model": "Z790 PG LIGHTNING D4", "specs": ["Intel Z790", "DDR4 5333MHz", "4x M.2 Gen4x4"], "price": 4199, "stock": 10},
+            {"brand": "MSI", "model": "PRO B650M-P Micro-ATX", "specs": ["Socket AM5", "DDR5 6000MHz", "DisplayPort & HDMI"], "price": 2699, "stock": 20},
+            {"brand": "ASUS", "model": "TUF GAMING A620M-PLUS WIFI", "specs": ["Socket AM5", "DDR5 6400MHz", "TUF Protection"], "price": 3399, "stock": 13},
+            {"brand": "GIGABYTE", "model": "H610M S2H V2 DDR4", "specs": ["Intel LGA1700", "DDR4 3200MHz", "NVMe PCIe 3.0"], "price": 1899, "stock": 25},
+            {"brand": "MSI", "model": "MPG X670E CARBON WIFI", "specs": ["Socket AM5", "PCIe 5.0 x16 & M.2", "Wi-Fi 6E + 2.5G"], "price": 10499, "stock": 4},
+            {"brand": "ASUS", "model": "ROG STRIX Z790-E GAMING WIFI II", "specs": ["Intel LGA1700", "DDR5 8000+ (OC)", "Wi-Fi 7 Ready"], "price": 13999, "stock": 5}
+        ]
+    },
+    {
+        "id": 2,
+        "slug": "catalogo-02-procesadores.html",
+        "title": "Procesadores (CPUs)",
+        "icon": "⚡",
+        "subtitle": "Microprocesadores AMD Ryzen 7000/9000 e Intel Core 13ª/14ª Generación",
+        "badge_color": "emerald",
+        "filter_keywords": ["ryzen", "core", "intel", "amd", "i3", "i5", "i7", "i9", "7800", "14700", "13400", "7666233"],
+        "products": [
+            {"brand": "AMD", "model": "Ryzen 7 7800X3D (3D V-Cache)", "specs": ["8 Núcleos / 16 Hilos", "Hasta 5.0 GHz", "96MB L3 Cache"], "price": 8799, "stock": 8},
+            {"brand": "Intel", "model": "Core i7-14700K Desbloqueado", "specs": ["20 Núcleos (8P+12E)", "Hasta 5.6 GHz", "UHD Graphics 770"], "price": 8999, "stock": 10},
+            {"brand": "AMD", "model": "Ryzen 5 7600X Gaming", "specs": ["6 Núcleos / 12 Hilos", "Hasta 5.3 GHz", "Zen 4 5nm"], "price": 4599, "stock": 16},
+            {"brand": "Intel", "model": "Core i5-14600K 14th Gen", "specs": ["14 Núcleos (6P+8E)", "Hasta 5.3 GHz", "24MB Smart Cache"], "price": 6399, "stock": 14},
+            {"brand": "AMD", "model": "Ryzen 9 7950X3D Flagship", "specs": ["16 Núcleos / 32 Hilos", "Hasta 5.7 GHz", "128MB 3D V-Cache"], "price": 13899, "stock": 4},
+            {"brand": "Intel", "model": "Core i9-14900K Ultra High-End", "specs": ["24 Núcleos (8P+16E)", "Hasta 6.0 GHz", "36MB Cache"], "price": 13499, "stock": 5},
+            {"brand": "AMD", "model": "Ryzen 5 5600X Socket AM4", "specs": ["6 Núcleos / 12 Hilos", "Hasta 4.6 GHz", "35MB GameCache"], "price": 2899, "stock": 24},
+            {"brand": "AMD", "model": "Ryzen 7 5700X3D AM4", "specs": ["8 Núcleos / 16 Hilos", "Hasta 4.1 GHz", "96MB L3 V-Cache"], "price": 4899, "stock": 11},
+            {"brand": "Intel", "model": "Core i5-13400F 10-Core", "specs": ["10 Núcleos (6P+4E)", "Hasta 4.6 GHz", "Sin Gráficos Integ."], "price": 4199, "stock": 19},
+            {"brand": "Intel", "model": "Core i3-14100F Quad-Core", "specs": ["4 Núcleos / 8 Hilos", "Hasta 4.7 GHz", "12MB Cache"], "price": 2199, "stock": 28},
+            {"brand": "AMD", "model": "Ryzen 9 7900X Workstation", "specs": ["12 Núcleos / 24 Hilos", "Hasta 5.6 GHz", "76MB Cache"], "price": 9199, "stock": 7},
+            {"brand": "Intel", "model": "Core i7-13700KF Raptor Lake", "specs": ["16 Núcleos (8P+8E)", "Hasta 5.4 GHz", "30MB Cache"], "price": 7699, "stock": 9},
+            {"brand": "AMD", "model": "Ryzen 5 8600G con Radeon 760M", "specs": ["6 Núcleos / 12 Hilos", "Hasta 5.0 GHz", "NPU Ryzen AI"], "price": 4499, "stock": 12},
+            {"brand": "AMD", "model": "Ryzen 7 8700G con Radeon 780M", "specs": ["8 Núcleos / 16 Hilos", "Hasta 5.1 GHz", "IA Generativa NPU"], "price": 6799, "stock": 6},
+            {"brand": "Intel", "model": "Core i5-12400F Alder Lake", "specs": ["6 Núcleos / 12 Hilos", "Hasta 4.4 GHz", "18MB Cache"], "price": 2799, "stock": 30},
+            {"brand": "AMD", "model": "Ryzen 5 5500 Presupuesto", "specs": ["6 Núcleos / 12 Hilos", "Hasta 4.2 GHz", "19MB Cache"], "price": 1999, "stock": 35},
+            {"brand": "Intel", "model": "Core i9-13900K 24-Core", "specs": ["24 Núcleos (8P+16E)", "Hasta 5.8 GHz", "UHD Graphics 770"], "price": 11999, "stock": 4},
+            {"brand": "AMD", "model": "Ryzen 7 7700X AM5", "specs": ["8 Núcleos / 16 Hilos", "Hasta 5.4 GHz", "40MB Cache"], "price": 6499, "stock": 10},
+            {"brand": "Intel", "model": "Core i5-14400 10-Core", "specs": ["10 Núcleos (6P+4E)", "Hasta 4.7 GHz", "UHD 730 Gráficos"], "price": 4799, "stock": 15},
+            {"brand": "AMD", "model": "Ryzen 9 5900X AM4", "specs": ["12 Núcleos / 24 Hilos", "Hasta 4.8 GHz", "70MB GameCache"], "price": 6199, "stock": 8}
+        ]
+    },
+    {
+        "id": 3,
+        "slug": "catalogo-03-tarjetas-de-video.html",
+        "title": "Tarjetas de Video (GPUs)",
+        "icon": "🎮",
+        "subtitle": "Gráficas dedicadas NVIDIA GeForce RTX 40 Series y AMD Radeon RX 7000",
+        "badge_color": "purple",
+        "filter_keywords": ["-kr", "02g-p", "04g-p", "08g-", "12g-", "16g-", "24g-", "rtx", "gtx", "dual-", "radeon", "7666232"],
+        "products": [
+            {"brand": "ASUS", "model": "ROG Strix GeForce RTX 4090 OC 24GB", "specs": ["24GB GDDR6X", "DLSS 3.5 & Frame Gen", "Vapor Chamber 3.5 slot"], "price": 42999, "stock": 3},
+            {"brand": "MSI", "model": "GeForce RTX 4080 SUPER 16G GAMING X SLIM", "specs": ["16GB GDDR6X", "TRI FROZR 3", "Ray Tracing Gen3"], "price": 23499, "stock": 5},
+            {"brand": "GIGABYTE", "model": "GeForce RTX 4070 Ti SUPER WINDFORCE 16GB", "specs": ["16GB GDDR6X 256-bit", "3x Fans 90mm", "Dual BIOS"], "price": 18999, "stock": 7},
+            {"brand": "ASUS", "model": "TUF Gaming GeForce RTX 4070 SUPER 12GB", "specs": ["12GB GDDR6X", "Ventiladores Axial-tech", "Capacitores Grado Militar"], "price": 14899, "stock": 9},
+            {"brand": "MSI", "model": "GeForce RTX 4060 Ti VENTUS 2X 8GB", "specs": ["8GB GDDR6", "TORX Fan 4.0", "Zero Frozr"], "price": 8999, "stock": 14},
+            {"brand": "GIGABYTE", "model": "GeForce RTX 4060 EAGLE OC 8GB", "specs": ["8GB GDDR6", "WINDFORCE 3X", "RGB Fusion"], "price": 6999, "stock": 18},
+            {"brand": "Sapphire", "model": "PULSE Radeon RX 7900 XTX 24GB", "specs": ["24GB GDDR6 384-bit", "RDNA 3 Arquitectura", "Dual BIOS"], "price": 22899, "stock": 4},
+            {"brand": "XFX", "model": "Speedster MERC319 Radeon RX 7800 XT 16GB", "specs": ["16GB GDDR6", "Triple Fan Ghost Thermal", "DisplayPort 2.1"], "price": 12499, "stock": 8},
+            {"brand": "PowerColor", "model": "Hellhound Radeon RX 7700 XT 12GB", "specs": ["12GB GDDR6", "LED Switch Azul/Ice", "Placa Trasera Reforzada"], "price": 9899, "stock": 10},
+            {"brand": "ASUS", "model": "Dual Radeon RX 7600 XT OC Edition 16GB", "specs": ["16GB GDDR6", "Tecnología 0dB", "Auto-Extreme Tech"], "price": 7599, "stock": 12},
+            {"brand": "ZOTAC", "model": "GAMING GeForce RTX 3060 Twin Edge 12GB", "specs": ["12GB GDDR6", "IceStorm 2.0", "Active Fan Control"], "price": 5899, "stock": 15},
+            {"brand": "PNY", "model": "GeForce RTX 4070 12GB XLR8 Gaming VERTO", "specs": ["12GB GDDR6X", "EPIC-X RGB", "Triple Fan Cooling"], "price": 13499, "stock": 6},
+            {"brand": "MSI", "model": "Radeon RX 6600 MECH 2X 8GB", "specs": ["8GB GDDR6", "TORX Fan 3.0", "Consumo Eficiente 132W"], "price": 4499, "stock": 20},
+            {"brand": "EVGA", "model": "GeForce GTX 1650 SC Ultra Gaming 4GB", "specs": ["4GB GDDR6", "Dual Fan", "Compact ITX Ready"], "price": 3299, "stock": 11},
+            {"brand": "ASUS", "model": "Phoenix GeForce GTX 1050 Ti 4GB", "specs": ["4GB GDDR5", "Ventilador Rodamiento Doble", "Sin conector extra PCIe"], "price": 2899, "stock": 8},
+            {"brand": "GIGABYTE", "model": "GeForce GT 730 2GB Low Profile", "specs": ["2GB GDDR5", "Diseño Bajo Perfil", "Salidas HDMI/DVI/VGA"], "price": 1599, "stock": 22},
+            {"brand": "ASUS", "model": "Dual GeForce RTX 4060 V2 OC 8GB", "specs": ["8GB GDDR6", "Diseño 2 Ranuras", "Soporte de Acero Inox"], "price": 6799, "stock": 16},
+            {"brand": "MSI", "model": "GeForce RTX 4070 SUPER 12G GAMING X SLIM WHITE", "specs": ["12GB GDDR6X", "Acabado Blanco Nieve", "Airflow Control"], "price": 15699, "stock": 5},
+            {"brand": "XFX", "model": "Speedster QICK 308 Radeon RX 7600 8GB", "specs": ["8GB GDDR6", "Triple Fan Black Edition", "FSR 3.0 Ready"], "price": 5799, "stock": 14},
+            {"brand": "Sapphire", "model": "NITRO+ Radeon RX 7900 GRE 16GB", "specs": ["16GB GDDR6", "Vapor-X Cooling", "ARGB Light Bar"], "price": 14999, "stock": 6}
+        ]
+    },
+    {
+        "id": 4,
+        "slug": "catalogo-04-memorias-ram.html",
+        "title": "Memorias RAM",
+        "icon": "⚡",
+        "subtitle": "Módulos DDR4 y DDR5 de alta velocidad con disipador térmico e iluminación RGB",
+        "badge_color": "yellow",
+        "filter_keywords": ["2e2m", "4a3t", "740617", "fury", "vengeance", "trident", "ram"],
+        "products": [
+            {"brand": "Kingston", "model": "FURY Beast RGB DDR5 32GB (2x16GB) 6000MHz", "specs": ["32GB Kit (2x16GB)", "CL30 Intel XMP & AMD EXPO", "RGB Personalizable"], "price": 2599, "stock": 18},
+            {"brand": "Corsair", "model": "Vengeance RGB DDR5 32GB (2x16GB) 6400MHz", "specs": ["32GB Kit", "CL32 iCUE Compatible", "Disipador Aluminio"], "price": 2799, "stock": 14},
+            {"brand": "G.Skill", "model": "Trident Z5 Neo RGB DDR5 32GB (2x16GB) 6000MHz", "specs": ["32GB Kit", "CL30 Optimizado AMD EXPO", "Diseño Mate Negro"], "price": 2899, "stock": 12},
+            {"brand": "ADATA", "model": "XPG Lancer Blade RGB DDR5 32GB 6000MHz", "specs": ["32GB Kit (2x16GB)", "CL30 Perfil Bajo", "Iluminación 120°"], "price": 2399, "stock": 20},
+            {"brand": "Kingston", "model": "FURY Renegade RGB DDR5 32GB 7200MHz", "specs": ["32GB Kit Ultra Speed", "CL38 XMP 3.0", "Disipador Plata/Negro"], "price": 3499, "stock": 8},
+            {"brand": "Corsair", "model": "Dominator Titanium RGB DDR5 64GB (2x32GB) 6000MHz", "specs": ["64GB Gran Capacidad", "CL30 Topes Intercambiables", "DHX Cooling"], "price": 6499, "stock": 5},
+            {"brand": "TeamGroup", "model": "T-Force Delta RGB DDR5 32GB (2x16GB) 6000MHz White", "specs": ["32GB Kit Blanco", "CL30 Ángulo Ultra Ancho", "Power Management IC"], "price": 2499, "stock": 15},
+            {"brand": "Kingston", "model": "FURY Beast DDR4 16GB (2x8GB) 3200MHz", "specs": ["16GB Dual Channel", "CL16 Disipador Negro", "Plug N Play"], "price": 949, "stock": 35},
+            {"brand": "Corsair", "model": "Vengeance LPX DDR4 32GB (2x16GB) 3600MHz", "specs": ["32GB Kit", "CL18 Perfil Bajo 31mm", "Aluminio Puro"], "price": 1699, "stock": 22},
+            {"brand": "G.Skill", "model": "Ripjaws V Series DDR4 32GB (2x16GB) 3200MHz", "specs": ["32GB Kit", "CL16 Voltaje 1.35V", "Compatibilidad Total"], "price": 1599, "stock": 19},
+            {"brand": "Kingston", "model": "FURY Impact DDR5 SODIMM 32GB (2x16GB) Laptop", "specs": ["32GB Kit Laptop", "4800MHz / 5600MHz", "Plug N Play Auto OC"], "price": 2299, "stock": 10},
+            {"brand": "Crucial", "model": "Pro DDR5 32GB (2x16GB) 5600MHz", "specs": ["32GB Kit", "CL46 Disipador Negro Mate", "Universal Intel/AMD"], "price": 2199, "stock": 16},
+            {"brand": "HP", "model": "V6 Series DDR4 8GB 3200MHz", "specs": ["8GB Single Module", "CL16 Disipador Azul Metal", "Overclocking IC"], "price": 499, "stock": 40},
+            {"brand": "ADATA", "model": "XPG Spectrix D35G RGB DDR4 16GB (2x8GB) 3200MHz", "specs": ["16GB Kit", "CL16 Diseño Triangular Compacto", "Efectos RGB Sync"], "price": 999, "stock": 25},
+            {"brand": "Kingston", "model": "ValueRAM DDR5 16GB 4800MHz", "specs": ["16GB Single Module", "CL40 Estándar JEDEC", "On-Die ECC"], "price": 999, "stock": 30},
+            {"brand": "TeamGroup", "model": "T-Create Expert DDR5 64GB (2x32GB) 6000MHz", "specs": ["64GB para Creadores", "CL34 10-Layer PCB", "Garantía de por Vida"], "price": 4899, "stock": 7},
+            {"brand": "Patriot", "model": "Viper Venom RGB DDR5 32GB (2x16GB) 6400MHz", "specs": ["32GB Kit", "CL32 Sensor Térmico", "Perfil XMP/EXPO"], "price": 2699, "stock": 11},
+            {"brand": "Lexar", "model": "ARES RGB DDR5 32GB (2x16GB) 6400MHz", "specs": ["32GB Kit", "CL32 Disipador de Aluminio Premium", "Sync Aura/Mystic"], "price": 2599, "stock": 13},
+            {"brand": "Kingston", "model": "FURY Beast RGB Special Edition DDR4 16GB 3200MHz", "specs": ["16GB Kit Blanco", "CL16 Disipador Blanco Exclusivo", "Infrared Sync"], "price": 1199, "stock": 17},
+            {"brand": "Corsair", "model": "Vengeance RGB PRO SL DDR4 32GB (2x16GB) 3600MHz", "specs": ["32GB Kit", "CL18 Altura Reducida 44mm", "10 LEDs RGB por módulo"], "price": 1899, "stock": 15}
+        ]
+    },
+    {
+        "id": 5,
+        "slug": "catalogo-05-discos-duros.html",
+        "title": "Almacenamiento (SSD / NVMe / HDD)",
+        "icon": "💾",
+        "subtitle": "Unidades de estado sólido M.2 PCIe Gen4/Gen5 y discos duros de alta capacidad",
+        "badge_color": "blue",
+        "filter_keywords": ["4a3u", "619659", "ssd", "hdd", "nvme", "sn850", "sn770", "wd", "seagate"],
+        "products": [
+            {"brand": "Western Digital", "model": "WD_BLACK SN850X NVMe SSD 2TB con Disipador", "specs": ["2TB M.2 PCIe 4.0", "Lectura 7,300 MB/s", "Game Mode 2.0"], "price": 3599, "stock": 14},
+            {"brand": "Samsung", "model": "990 PRO NVMe M.2 SSD 2TB PCIe Gen 4", "specs": ["2TB Capacidad", "Lectura 7,450 MB/s", "Samsung V-NAND TLC"], "price": 3899, "stock": 12},
+            {"brand": "Kingston", "model": "KC3000 PCIe 4.0 NVMe M.2 SSD 1TB", "specs": ["1TB PCIe 4.0 x4", "Lectura 7,000 MB/s", "Disipador Grafeno-Aluminio"], "price": 1999, "stock": 22},
+            {"brand": "Western Digital", "model": "WD_BLACK SN770 NVMe SSD 1TB", "specs": ["1TB PCIe Gen4", "Lectura 5,150 MB/s", "Eficiencia sin DRAM"], "price": 1599, "stock": 28},
+            {"brand": "Crucial", "model": "T700 PCIe 5.0 NVMe SSD 2TB", "specs": ["2TB Gen5 Ultra Speed", "Lectura 12,400 MB/s", "Disipador Térmico Pasivo"], "price": 6999, "stock": 5},
+            {"brand": "Kingston", "model": "NV2 PCIe 4.0 NVMe SSD 1TB", "specs": ["1TB M.2 2280", "Lectura 3,500 MB/s", "Ideal para Laptops y PC"], "price": 1249, "stock": 40},
+            {"brand": "Western Digital", "model": "WD Blue SN580 NVMe SSD 1TB", "specs": ["1TB PCIe Gen4", "Lectura 4,150 MB/s", "Tecnología nCache 4.0"], "price": 1449, "stock": 25},
+            {"brand": "ADATA", "model": "XPG GAMMIX S70 BLADE 2TB", "specs": ["2TB PCIe 4.0", "Lectura 7,400 MB/s", "Compatible PS5 & PC"], "price": 2999, "stock": 16},
+            {"brand": "Seagate", "model": "Barracuda 4TB HDD 3.5\" 5400RPM", "specs": ["4TB Almacenamiento", "SATA 6Gb/s", "256MB Cache"], "price": 1999, "stock": 18},
+            {"brand": "Western Digital", "model": "WD Blue 2TB HDD 3.5\" 7200RPM", "specs": ["2TB Capacidad", "SATA 6Gb/s", "256MB Cache"], "price": 1299, "stock": 30},
+            {"brand": "Seagate", "model": "IronWolf 8TB NAS HDD 3.5\" 7200RPM", "specs": ["8TB para Servidores NAS", "AgileArray Tech", "256MB Cache"], "price": 4299, "stock": 8},
+            {"brand": "Kingston", "model": "A400 SSD 480GB SATA 2.5\"", "specs": ["480GB SATA III", "Lectura 500 MB/s", "Resistente a Golpes"], "price": 699, "stock": 45},
+            {"brand": "Crucial", "model": "BX500 SSD 1TB SATA 2.5\"", "specs": ["1TB SATA III 6Gb/s", "Lectura 540 MB/s", "Actualización Rápida"], "price": 1399, "stock": 24},
+            {"brand": "Samsung", "model": "870 EVO SSD 1TB SATA 2.5\"", "specs": ["1TB SATA III", "Lectura 560 MB/s", "V-NAND & Controlador MKX"], "price": 1999, "stock": 15},
+            {"brand": "Corsair", "model": "MP600 PRO LPX 2TB M.2 PCIe 4.0", "specs": ["2TB Optimizado PS5", "Lectura 7,100 MB/s", "Disipador Aluminio Bajo Perfil"], "price": 3699, "stock": 10},
+            {"brand": "TeamGroup", "model": "MP44L M.2 PCIe 4.0 1TB", "specs": ["1TB PCIe Gen4x4", "Lectura 5,000 MB/s", "Etiqueta Térmica Grafeno"], "price": 1499, "stock": 20},
+            {"brand": "Western Digital", "model": "WD Red Plus 4TB NAS HDD 5400RPM", "specs": ["4TB CMR Drive", "Tecnología NASware 3.0", "128MB Cache"], "price": 2499, "stock": 12},
+            {"brand": "Lexar", "model": "NM790 NVMe M.2 SSD 2TB", "specs": ["2TB PCIe 4.0 x4", "Lectura 7,400 MB/s", "HMB 3.0 & Dynamic SLC"], "price": 2899, "stock": 14},
+            {"brand": "ADATA", "model": "Legend 800 NVMe 1TB PCIe 4.0", "specs": ["1TB M.2 2280", "Lectura 3,500 MB/s", "Cifrado LDPC ECC"], "price": 1299, "stock": 26},
+            {"brand": "Seagate", "model": "FireCuda 530 2TB PCIe Gen4 NVMe", "specs": ["2TB Resistencia Extrema", "Lectura 7,300 MB/s", "2550 TBW"], "price": 4199, "stock": 6}
+        ]
+    },
+    {
+        "id": 6,
+        "slug": "catalogo-06-fuentes-de-poder.html",
+        "title": "Fuentes de Poder (PSU)",
+        "icon": "🔌",
+        "subtitle": "Unidades de suministro de poder con certificación 80 PLUS Bronze, Gold, Platinum y ATX 3.0",
+        "badge_color": "red",
+        "filter_keywords": ["110-bq", "psu", "723844", "843591", "power", "gold", "bronze", "650w", "750w", "850w"],
+        "products": [
+            {"brand": "Corsair", "model": "RM850e Fully Modular 850W 80+ Gold (ATX 3.0)", "specs": ["850 Watts Reales", "80 PLUS Gold", "Cable 12VHPWR PCIe 5.0"], "price": 2799, "stock": 14},
+            {"brand": "MSI", "model": "MAG A850GL PCIE5 850W 80+ Gold Modular", "specs": ["850W ATX 3.0 Ready", "Conector Amarillo Seguro 12V-2x6", "Ventilador FDB 120mm"], "price": 2599, "stock": 16},
+            {"brand": "EVGA", "model": "750 BQ 750W Semi-Modular 80+ Bronze", "specs": ["750W Potencia Continua", "80 PLUS Bronze", "Ventilador Silencioso 140mm"], "price": 1799, "stock": 20},
+            {"brand": "Seasonic", "model": "FOCUS GX-750 750W 80+ Gold Full Modular", "specs": ["750W Gold", "Control Fanless Híbrido", "10 Años de Garantía"], "price": 2699, "stock": 10},
+            {"brand": "Corsair", "model": "RM1000x Shift Fully Modular 1000W 80+ Gold", "specs": ["1000W Lateral Conectores", "ATX 3.0 & PCIe 5.0", "Capacitores 105°C Japoneses"], "price": 4299, "stock": 7},
+            {"brand": "Thermaltake", "model": "Toughpower GF3 850W 80+ Gold PCIe Gen 5", "specs": ["850W ATX 3.0", "Smart Zero Fan", "Bajo Rizado <30mV"], "price": 2899, "stock": 9},
+            {"brand": "ASUS", "model": "ROG Thor 1000W Platinum II con Pantalla OLED", "specs": ["1000W 80+ Platinum", "OLED Power Display", "Disipadores ROG Integrados"], "price": 6899, "stock": 4},
+            {"brand": "Gigabyte", "model": "UD750GM 750W 80+ Gold Full Modular", "specs": ["750W Ultra Durable", "Ventilador Hidráulico 120mm", "Protección OPP/OVP/SCP"], "price": 1999, "stock": 18},
+            {"brand": "XPG", "model": "Core Reactor II 850W 80+ Gold ATX 3.0", "specs": ["850W Modular", "Certificación Cybenetics Gold", "Diseño Compacto 140mm"], "price": 2499, "stock": 12},
+            {"brand": "MSI", "model": "MAG A650BN 650W 80+ Bronze", "specs": ["650W Certificados", "Circuito DC a DC", "Ventilador de Bajo Ruido"], "price": 1199, "stock": 30},
+            {"brand": "Corsair", "model": "CX650 650W 80+ Bronze No Modular", "specs": ["650W Potencia Continua", "80 PLUS Bronze", "Cables Negros Planos"], "price": 1399, "stock": 25},
+            {"brand": "EVGA", "model": "SuperNOVA 850 GT 850W 80+ Gold", "specs": ["850W Full Modular", "Modo ECO EVGA", "Auto Relay Guard"], "price": 2699, "stock": 8},
+            {"brand": "Be Quiet!", "model": "Pure Power 12 M 750W 80+ Gold ATX 3.0", "specs": ["750W Silencio Extremo", "2 Raíles Independientes 12V", "Silent Wings Fan"], "price": 2699, "stock": 9},
+            {"brand": "Cooler Master", "model": "MWE Gold 850 V2 Full Modular", "specs": ["850W 80+ Gold", "Soporta Alta Temp 50°C", "Cables Planos Flexibles"], "price": 2399, "stock": 15},
+            {"brand": "ASUS", "model": "TUF Gaming 750W 80+ Bronze", "specs": ["750W Recubrimiento PCB", "Ventilador Axial-tech Dual Ball", "6 Años Garantía"], "price": 1899, "stock": 14},
+            {"brand": "Seasonic", "model": "B12 BC-650 650W 80+ Bronze", "specs": ["650W Fixed Cables", "Control Térmico Inteligente S2FC", "Energy Star Compliant"], "price": 1499, "stock": 19},
+            {"brand": "Yeyian", "model": "Pegasus 650W 80+ Bronze Semi-Modular", "specs": ["650W Gamer", "Protecciones Industriales", "Ventilador 120mm LED"], "price": 1099, "stock": 22},
+            {"brand": "Corsair", "model": "HX1200 Fully Modular 1200W 80+ Platinum", "specs": ["1200W Monorail/Multirail", "80 PLUS Platinum", "Ventilador FDB Zero RPM"], "price": 5499, "stock": 5},
+            {"brand": "Thermaltake", "model": "Smart BM2 650W Semi-Modular 80+ Bronze", "specs": ["650W Flat Cables", "Condensador Principal Japonés", "140mm Rifle Fan"], "price": 1299, "stock": 17},
+            {"brand": "XPG", "model": "Pylon 550W 80+ Bronze", "specs": ["550W Entrada Gamer", "Convertidor DC-DC", "Regulación de Voltaje <3%"], "price": 999, "stock": 28}
+        ]
+    },
+    {
+        "id": 7,
+        "slug": "catalogo-07-gabinetes.html",
+        "title": "Gabinetes y Chasis (Cases)",
+        "icon": "🏰",
+        "subtitle": "Chasis Gamer Mid-Tower, Full-Tower y Mini-ITX con panel de cristal templado y flujo de aire optimizado",
+        "badge_color": "indigo",
+        "filter_keywords": ["1n5g", "3pkb", "gab-", "case", "tower", "lancool", "4000d", "h5", "h7", "h9"],
+        "products": [
+            {"brand": "NZXT", "model": "H9 Flow Dual-Chamber Mid-Tower White", "specs": ["Doble Cámara Panorámica", "Vidrio Templado sin Pilar", "Soporte Radiador 360mm"], "price": 3899, "stock": 6},
+            {"brand": "Corsair", "model": "4000D Airflow Tempered Glass Black", "specs": ["Panel Frontal de Alto Flujo", "Sistema Cable Routing RapidRoute", "2x Ventiladores AirGuide"], "price": 2099, "stock": 15},
+            {"brand": "Lian Li", "model": "O11 Dynamic EVO RGB Black", "specs": ["Diseño Reversible Universal", "Tiras ARGB Superiores/Inferiores", "Soporta hasta 3x 360mm"], "price": 3999, "stock": 8},
+            {"brand": "Lian Li", "model": "LANCOOL 216 RGB con 2x Fans 160mm", "specs": ["Frontal Malla Completa", "2x 160mm ARGB + 1x 140mm PWM", "Soporte PCIe Modular"], "price": 2399, "stock": 11},
+            {"brand": "NZXT", "model": "H6 Flow Compact Dual-Chamber Black", "specs": ["Esquina Panorámica 45°", "3x Fans 120mm Preinstalados", "Gestión Cables Intuitiva"], "price": 2499, "stock": 10},
+            {"brand": "Corsair", "model": "5000D Core Airflow Mid-Tower White", "specs": ["Espacio Extra para Refrigeración", "Panel Lateral para 3x Fans", "Filtros Antipolvo Magnéticos"], "price": 3299, "stock": 7},
+            {"brand": "Montech", "model": "AIR 903 MAX Black con 4x Fans 140mm", "specs": ["4x 140mm PWM Fans (3 ARGB)", "Controlador Fan/RGB Incluido", "Soporta E-ATX & GPU 400mm"], "price": 1799, "stock": 18},
+            {"brand": "DeepCool", "model": "CH560 Digital con Pantalla de Monitoreo", "specs": ["Display Digital Temp CPU/GPU", "Frontal Malla Híbrida", "4x Fans ARGB Preinstalados"], "price": 2299, "stock": 12},
+            {"brand": "Phanteks", "model": "NV5 Vision Glass Showcase Mid-Tower", "specs": ["Vista Panorámica Cristal", "Cubierta PSU con ARGB", "Soporta GPU Gigante 4090"], "price": 2699, "stock": 9},
+            {"brand": "Fractal Design", "model": "North Charcoal Black con Frontal Madera Nogal", "specs": ["Frontal Nogal Auténtico", "Diseño Nórdico Elegante", "2x Aspect 14 PWM Fans"], "price": 3699, "stock": 5},
+            {"brand": "ASUS", "model": "TUF Gaming GT301 Compact Case", "specs": ["Panel Frontal Panal de Abeja", "4x Fans (3 ARGB AURA Sync)", "Colgador de Auriculares"], "price": 2199, "stock": 14},
+            {"brand": "MSI", "model": "MAG FORGE 100R Mid-Tower", "specs": ["2x 120mm ARGB + 1x 120mm Fan", "Vidrio Templado 4mm", "Placa de Control 1 a 6 RGB"], "price": 1499, "stock": 20},
+            {"brand": "Yeyian", "model": "Haizen 2500 Mesh Black", "specs": ["3x Fans RGB Frontales", "Panel Lateral Acrílico", "Filtro de Polvo Superior"], "price": 1099, "stock": 25},
+            {"brand": "Balam Rush", "model": "Canyon II Squad Micro-ATX White", "specs": ["Formato Compacto Pecera", "Vidrio Curvo Templado", "2x Fans Rainbow"], "price": 1199, "stock": 19},
+            {"brand": "XPG", "model": "Valor Air Compact Mid-Tower Black", "specs": ["Frontal Magnético Desmontable", "4x Fans 120mm Incluidos", "Filtro Polvo Fácil Limpieza"], "price": 1299, "stock": 22},
+            {"brand": "Cooler Master", "model": "MasterBox TD500 Mesh V2 White", "specs": ["Diseño Cristal Poligonal 3D", "3x 120mm CF120 ARGB", "USB 3.2 Gen 2 Type-C"], "price": 2299, "stock": 10},
+            {"brand": "Thermaltake", "model": "Tower 300 Micro-Tower Racing Green", "specs": ["Diseño Prisma Octagonal", "Instalación Horizontal/Vertical", "Compatibilidad AIO 420mm"], "price": 3199, "stock": 6},
+            {"brand": "Be Quiet!", "model": "Pure Base 500 FX Black con ARGB", "specs": ["4x Light Wings PWM Fans", "Aislamiento Acústico en Paneles", "Controlador ARGB-PWM Hub"], "price": 3299, "stock": 7},
+            {"brand": "NZXT", "model": "H5 Flow RGB All-Black Edition", "specs": ["Fan Dedicado a GPU en Base", "2x 140mm ARGB Frontales", "Canales de Enrutamiento Amplios"], "price": 2199, "stock": 13},
+            {"brand": "Hyte", "model": "Y60 Panoramic View Aesthetic Case Red", "specs": ["Cristal en 3 Piezas Esquina", "Cable Riser PCIe 4.0 Incluido", "Flujo de Aire en Piso Frío"], "price": 4999, "stock": 4}
+        ]
+    },
+    {
+        "id": 8,
+        "slug": "catalogo-08-enfriamiento.html",
+        "title": "Enfriamiento y Ventiladores (Cooling)",
+        "icon": "❄️",
+        "subtitle": "Kits de refrigeración líquida AIO, disipadores por aire de doble torre y ventiladores ARGB",
+        "badge_color": "teal",
+        "filter_keywords": ["3cbq", "3eou", "air-100", "coreliquid", "fan", "cooler", "liquid", "aio"],
+        "products": [
+            {"brand": "NZXT", "model": "Kraken Elite 360 RGB con Pantalla LCD 2.36\"", "specs": ["Radiador 360mm Triple Fan", "LCD 640x640 60Hz Personalizable", "Bomba Asetek 7th Gen"], "price": 6399, "stock": 6},
+            {"brand": "MSI", "model": "MAG CORELIQUID C360 V2 ARGB", "specs": ["Radiador 360mm", "Bomba Integrada en Radiador", "Tubos Antievaporación"], "price": 2799, "stock": 12},
+            {"brand": "DeepCool", "model": "LT720 360mm Infinity Mirror Liquid Cooler", "specs": ["Bloque Espejo Infinito 3D", "Bomba 4ta Gen 3100 RPM", "Tecnología Anti-Leak"], "price": 2699, "stock": 14},
+            {"brand": "Corsair", "model": "iCUE H150i ELITE LCD XT 360mm", "specs": ["Pantalla IPS 2.1\" 480x480", "3x AF120 RGB ELITE Fans", "Modo Zero RPM"], "price": 5799, "stock": 5},
+            {"brand": "Thermalright", "model": "Peerless Assassin 120 SE Doble Torre", "specs": ["Doble Torre 6 Heatpipes", "2x TL-C12C PWM Fans", "Rendimiento Top a Precio Imbatible"], "price": 899, "stock": 30},
+            {"brand": "DeepCool", "model": "AK620 Digital con Display LED de Temperatura", "specs": ["Doble Torre 260W TDP", "Display Tiempo Real CPU Temp/Uso", "FDB Fans Silenciosos"], "price": 1699, "stock": 18},
+            {"brand": "Noctua", "model": "NH-D15 chromax.black Dual-Tower Cooler", "specs": ["2x NF-A15 HS-PWM Fans", "Recubrimiento Cerámico Negro", "Pasta Térmica NT-H1 Incluida"], "price": 2799, "stock": 8},
+            {"brand": "Thermalright", "model": "Aqua Elite 240 V3 ARGB Liquid Cooler White", "specs": ["Radiador 240mm Blanco", "Bomba Halo ARGB", "Soporta LGA1700 & AM5"], "price": 1499, "stock": 20},
+            {"brand": "Lian Li", "model": "Galahad II Trinity SL-INF 360mm White", "specs": ["Tapas de Bomba Intercambiables", "Fans SL-Infinity Daisy Chain", "Bomba 3200 RPM"], "price": 4399, "stock": 7},
+            {"brand": "DeepCool", "model": "AG400 Digital Plus Single Tower ARGB", "specs": ["4 Heatpipes Contacto Directo", "Display Digital de Estado", "2x 120mm PWM Fans"], "price": 949, "stock": 25},
+            {"brand": "Corsair", "model": "iCUE LINK QX120 RGB Pack 3 Ventiladores + Hub", "specs": ["Conexión Serial de 1 Solo Cable", "34 LEDs RGB por Fan", "Sensor de Temp Integrado"], "price": 3299, "stock": 10},
+            {"brand": "Lian Li", "model": "UNI FAN SL-INFINITY 120 Triple Pack Negro", "specs": ["Espejo Infinito Lateral/Centro", "Conexión Pin-to-Pin sin Cables", "Controlador L-Connect 3"], "price": 2399, "stock": 15},
+            {"brand": "Thermalright", "model": "TL-C12C-S X3 Pack 3 Ventiladores 120mm ARGB", "specs": ["3x 120mm PWM Fans", "Iluminación ARGB 5V 3-Pin", "Cojinete S-FDB Larga Vida"], "price": 499, "stock": 40},
+            {"brand": "Arctic", "model": "Liquid Freezer III 360 A-RGB Black", "specs": ["Radiador Grueso 38mm", "Fan Dedicado VRM en Bomba", "Presión Estática Optimizada P12"], "price": 2899, "stock": 11},
+            {"brand": "Be Quiet!", "model": "Dark Rock Pro 5 Disipador de Aire", "specs": ["7 Heatpipes de Alto Rendimiento", "Interruptor de Modo Silencioso/Velocidad", "Silent Wings Fan"], "price": 2199, "stock": 9},
+            {"brand": "Cooler Master", "model": "Hyper 212 Halo Black Edition", "specs": ["Diseño Halo ARGB Dual Loop", "4 Heatpipes Acabado Negro", "Instalación Simplificada"], "price": 799, "stock": 28},
+            {"brand": "NZXT", "model": "F120 RGB Duo Triple Pack con Controlador", "specs": ["Iluminación Doble Cara", "Aspas Diseñadas para Presión/Flujo", "Software NZXT CAM"], "price": 2199, "stock": 12},
+            {"brand": "Arctic", "model": "MX-6 Pasta Térmica de Alto Rendimiento 4g", "specs": ["Jeringa 4g con Espátula", "Conductividad Térmica Extrema", "No Conductora de Electricidad"], "price": 249, "stock": 50},
+            {"brand": "Thermal Grizzly", "model": "Kryonaut Pasta Térmica Premium 1g", "specs": ["1g Ultra High Thermal Conductivity", "Ideal para Overclocking Extremo", "Estructura Estable a 80°C"], "price": 299, "stock": 45},
+            {"brand": "Yeyian", "model": "Storm 1200 Ventilador Individual ARGB 120mm", "specs": ["120mm 1200 RPM", "Almohadillas Antivibración", "Conector ARGB 3-Pin"], "price": 189, "stock": 60}
+        ]
+    },
+    {
+        "id": 9,
+        "slug": "catalogo-09-perifericos.html",
+        "title": "Periféricos y Accesorios",
+        "icon": "🎧",
+        "subtitle": "Teclados mecánicos, ratones gamer de alta precisión, diademas con sonido espacial y accesorios",
+        "badge_color": "pink",
+        "filter_keywords": ["summoner", "097855", "keyboard", "mouse", "raton", "headset", "audifono", "4863"],
+        "products": [
+            {"brand": "Logitech G", "model": "G502 HERO Ratón Gamer con Sensor 25K", "specs": ["Sensor HERO 25,600 DPI", "11 Botones Programables", "5 Pesas de 3.6g Ajustables"], "price": 999, "stock": 25},
+            {"brand": "Razer", "model": "BlackWidow V4 X Teclado Mecánico RGB", "specs": ["Switches Mecánicos Amarillos/Verdes", "6 Teclas Macro Dedicadas", "Teclas ABS Doble Inyección"], "price": 2499, "stock": 14},
+            {"brand": "HyperX", "model": "Cloud II Diadema Gamer con Audio 7.1", "specs": ["Drivers 53mm de Neodimio", "Sonido Envolvente Virtual 7.1", "Almohadillas Memory Foam"], "price": 1499, "stock": 20},
+            {"brand": "Logitech G", "model": "G PRO X Superlight Ratón Inalámbrico Blanco", "specs": ["Peso Ultraligero <63g", "Tecnología LIGHTSPEED 1ms", "Pies de PTFE sin Aditivos"], "price": 2499, "stock": 12},
+            {"brand": "Razer", "model": "DeathAdder V3 Pro Ratón Inalámbrico Ergonómico", "specs": ["Sensor Focus Pro 30K", "Switches Ópticos Gen-3", "Batería hasta 90 Horas"], "price": 2799, "stock": 10},
+            {"brand": "ADATA XPG", "model": "SUMMONER Teclado Mecánico RGB con Switches Cherry MX", "specs": ["Switches Cherry MX Red/Blue/Speed", "Reposamuñecas Magnético", "Passthrough USB & Teclas Media"], "price": 1699, "stock": 18},
+            {"brand": "Corsair", "model": "K70 RGB PRO Teclado Mecánico Tournament", "specs": ["Switches Cherry MX Red", "Tecnología AXON 8,000Hz", "Chasis de Aluminio Cepillado"], "price": 2999, "stock": 9},
+            {"brand": "SteelSeries", "model": "Arctis Nova 7 Wireless Diadema Multi-Plataforma", "specs": ["Conexión Simultánea 2.4GHz & BT", "Audio Espacial 360°", "Carga Rápida 15 min = 6 hrs"], "price": 3499, "stock": 7},
+            {"brand": "Logitech G", "model": "G203 LIGHTSYNC Ratón Gamer RGB 8000 DPI", "specs": ["Sensor de 8,000 DPI", "Iluminación LIGHTSYNC RGB Onda", "6 Botones con Tensión Mecánica"], "price": 449, "stock": 35},
+            {"brand": "Razer", "model": "BlackShark V2 X Diadema de Esports", "specs": ["Drivers TriForce 50mm", "Cancelación Pasiva de Ruido", "Micrófono Cardioide HyperClear"], "price": 999, "stock": 22},
+            {"brand": "HyperX", "model": "Alloy Origins Core TKL Teclado Mecánico", "specs": ["Formato Compacto Tenkeyless", "Switches Propios HyperX Red", "Cuerpo Entero de Aluminio"], "price": 1699, "stock": 16},
+            {"brand": "Redragon", "model": "Kumara K552 Teclado Mecánico RGB TKL", "specs": ["Switches Outemu Red/Blue", "Construcción Metal y ABS", "Teclas Moldeadas por Doble Disparo"], "price": 699, "stock": 40},
+            {"brand": "Logitech", "model": "C920 HD Pro Webcam Full HD 1080p", "specs": ["Resolución 1080p 30fps", "Micrófonos Estéreo Duales", "Corrección de Luz HD Automática"], "price": 1299, "stock": 18},
+            {"brand": "HyperX", "model": "QuadCast S Micrófono USB de Condensador", "specs": ["Iluminación RGB Dinámica", "4 Patrones Polares Seleccionables", "Sensor de Toque para Silenciar"], "price": 2899, "stock": 11},
+            {"brand": "Razer", "model": "Seiren Mini Micrófono de Transmisión USB", "specs": ["Patrón Supercardioide Preciso", "Soporte Inclinable Resistente", "Calidad de Grabación Profesional"], "price": 899, "stock": 24},
+            {"brand": "Corsair", "model": "MM300 PRO Tapete de Ratón XL Antidesgaste", "specs": ["Superficie Textil 930x300mm", "Recubrimiento Antiderrames", "Bordes Cosidos Reforzados"], "price": 599, "stock": 30},
+            {"brand": "Logitech G", "model": "G435 LIGHTSPEED Diadema Inalámbrica Ultraligera", "specs": ["Peso Pluma 165g", "Micrófonos con Formación de Haces", "Batería de 18 Horas"], "price": 1199, "stock": 20},
+            {"brand": "ASUS", "model": "ROG Gladius III Wireless AimPoint", "specs": ["Sensor Óptico 36,000 DPI", "Switches Intercambiables Push-Fit", "Cable ROG Paracord"], "price": 2199, "stock": 8},
+            {"brand": "Elgato", "model": "Stream Deck MK.2 con 15 Teclas LCD", "specs": ["15 Teclas LCD Personalizables", "Control de Escenas y Apps", "Placa Frontal Desmontable"], "price": 2999, "stock": 10},
+            {"brand": "Yeyian", "model": "Spark Serie 2000 Combo Teclado + Mouse RGB", "specs": ["Teclado de Membrana Gamer", "Mouse 3200 DPI Óptico", "Iluminación Rainbow"], "price": 499, "stock": 30}
+        ]
+    },
+    {
+        "id": 10,
+        "slug": "catalogo-10-conectividad-redes.html",
+        "title": "Conectividad, Redes y Adaptadores",
+        "icon": "📶",
+        "subtitle": "Tarjetas de red Wi-Fi 6E/7 PCIe, adaptadores Bluetooth 5.4, switches Gigabit y hubs USB-C",
+        "badge_color": "cyan",
+        "filter_keywords": ["1gc1", "1t1x", "00-5333", "wifi", "bluetooth", "pcie", "adapter", "hub", "ethernet"],
+        "products": [
+            {"brand": "TP-Link", "model": "Archer TXE75E Tarjeta PCIe Wi-Fi 6E AXE5400", "specs": ["Wi-Fi 6E Tri-Banda (6GHz)", "Bluetooth 5.3 Integrado", "2x Antenas de Alta Ganancia"], "price": 1199, "stock": 20},
+            {"brand": "ASUS", "model": "PCE-AXE59BT Tarjeta de Red PCIe Wi-Fi 6E", "specs": ["Velocidad AXE5400", "Base de Antena Magnetizada", "Seguridad WPA3"], "price": 1499, "stock": 15},
+            {"brand": "TP-Link", "model": "Archer T4U Plus Adaptador USB Wi-Fi AC1300", "specs": ["Doble Banda 2.4GHz/5GHz", "2x Antenas Externas 5dBi", "USB 3.0 de Alta Velocidad"], "price": 499, "stock": 35},
+            {"brand": "UGREEN", "model": "Adaptador Bluetooth 5.4 USB Dongle", "specs": ["Bluetooth 5.4 Última Gen", "Alcance hasta 20 Metros", "Conexión de hasta 5 Dispositivos"], "price": 249, "stock": 50},
+            {"brand": "Intel", "model": "Kit de Actualización M.2 Wi-Fi 6E AX210", "specs": ["Módulo M.2 2230", "Bandas 2.4, 5 y 6 GHz", "Bluetooth 5.3"], "price": 599, "stock": 28},
+            {"brand": "TP-Link", "model": "Switch de Escritorio 8 Puertos Gigabit TL-SG108", "specs": ["8x Puertos 10/100/1000 Mbps", "Carcasa Metálica Resistente", "Plug and Play sin Configuración"], "price": 499, "stock": 25},
+            {"brand": "UGREEN", "model": "Hub USB-C 7 en 1 con HDMI 4K@60Hz y PD 100W", "specs": ["HDMI 4K 60Hz", "Power Delivery 100W", "2x USB 3.0 + SD/TF + 1G LAN"], "price": 799, "stock": 22},
+            {"brand": "TP-Link", "model": "TG-3468 Tarjeta de Red PCIe Gigabit RJ45", "specs": ["10/100/1000 Mbps PCIe", "Control de Flujo IEEE 802.3x", "Soporte Wake-on-LAN"], "price": 299, "stock": 40},
+            {"brand": "StarTech", "model": "Tarjeta PCIe 10 Gigabit Ethernet (10GBASE-T)", "specs": ["Velocidad 10G/5G/2.5G/1G", "Chipset Marvell AQtion AQC107", "Jumbo Frames 9K"], "price": 2699, "stock": 6},
+            {"brand": "TP-Link", "model": "Archer TX20U Plus Adaptador USB Wi-Fi 6 AX1800", "specs": ["Wi-Fi 6 Doble Banda", "Tecnología OFDMA & MU-MIMO", "Cable USB 3.0 de 1 Metro"], "price": 799, "stock": 18},
+            {"brand": "UGREEN", "model": "Tarjeta PCIe a 4 Puertos USB 3.0", "specs": ["4x Puertos USB 3.0 Tipo-A", "Velocidad 5Gbps por Puerto", "Alimentación SATA 15-Pin"], "price": 499, "stock": 20},
+            {"brand": "TP-Link", "model": "Adaptador USB a Ethernet Gigabit UE300", "specs": ["USB 3.0 a RJ45 1000 Mbps", "Diseño Plegable Portátil", "Compatible Windows, Mac, Linux"], "price": 349, "stock": 30},
+            {"brand": "UGREEN", "model": "Cable Ethernet Cat 7 Apantallado 10G 5 Metros", "specs": ["Cat 7 STP 600MHz", "Conectores RJ45 Chapados en Oro", "Velocidad 10 Gbps"], "price": 199, "stock": 60},
+            {"brand": "TP-Link", "model": "Switch Administrable 5 Puertos Gigabit TL-SG105E", "specs": ["Soporte VLAN & QoS", "Monitoreo de Red & IGMP Snooping", "Carcasa Metálica sin Ventilador"], "price": 599, "stock": 16},
+            {"brand": "Baseus", "model": "Hub USB 3.0 de 4 Puertos con Cable 1m", "specs": ["4x USB 3.0 5Gbps", "Indicador LED Blanco Suave", "Protección contra Sobretensión"], "price": 299, "stock": 35},
+            {"brand": "UGREEN", "model": "Gabinete Carcasa M.2 NVMe PCIe a USB-C 10Gbps", "specs": ["Soporta M.2 M-Key & B+M Key", "Carcasa de Aluminio con Pad Térmico", "Cable USB-C a C/A Incluido"], "price": 499, "stock": 25},
+            {"brand": "TP-Link", "model": "Extensor de Rango Wi-Fi 6 RE705X AX3000", "specs": ["Wi-Fi 6 hasta 3.0 Gbps", "Puerto Gigabit Ethernet", "Compatible con TP-Link OneMesh"], "price": 1399, "stock": 12},
+            {"brand": "Vention", "model": "Adaptador de Sonido USB Tarjeta de Audio Externa", "specs": ["Salida 3.5mm Auriculares + Micrófono", "Chip DAC de Reducción de Ruido", "Plug and Play USB"], "price": 189, "stock": 45},
+            {"brand": "UGREEN", "model": "Switch Bidireccional HDMI 2.1 8K@60Hz 4K@120Hz", "specs": ["2 Entradas 1 Salida / 1 Entrada 2 Salidas", "Ancho de Banda 48Gbps", "Soporta HDR, VRR, Dolby Vision"], "price": 499, "stock": 20},
+            {"brand": "TP-Link", "model": "Inyector PoE Gigabit TL-POE150S", "specs": ["Estándar IEEE 802.3af PoE", "Suministra Energía y Datos hasta 100m", "Auto-Determinación de Potencia"], "price": 399, "stock": 15}
+        ]
+    },
+    {
+        "id": 11,
+        "slug": "catalogo-11-monitores-software.html",
+        "title": "Monitores y Software (Intercalados)",
+        "icon": "🖥️",
+        "subtitle": "Selección combinada de Monitores Gamer de alta tasa de refresco y Licencias Oficiales de Software",
+        "badge_color": "purple",
+        "is_alternating": True,
+        "filter_keywords": ["24gl600", "32u631", "3ufn", "monitor", "display", "screen", "benq", "lg"],
+        "products": [
+            # 1. MONITOR
+            {"type": "monitor", "brand": "LG", "model": "UltraGear 24GL600F-B 24\" FHD 144Hz 1ms", "specs": ["24 Pulgadas 1920x1080", "144Hz Tasa de Refresco", "AMD FreeSync & 1ms MBR"], "price": 2899, "stock": 14},
+            # 2. SOFTWARE
+            {"type": "software", "brand": "Microsoft", "model": "Windows 11 Pro 64-Bit Licencia Digital ESD OEM", "specs": ["Licencia Permanente 1 PC", "Cifrado BitLocker & Hyper-V", "Activación Digital Instantánea"], "price": 1299, "stock": 50},
+            # 3. MONITOR
+            {"type": "monitor", "brand": "BenQ", "model": "MOBIUZ EX2710S 27\" IPS FHD 165Hz HDRi", "specs": ["27 Pulgadas Panel IPS", "165Hz 1ms MPRT", "Altavoces treVolo 2.5W x2"], "price": 4699, "stock": 8},
+            # 4. SOFTWARE
+            {"type": "software", "brand": "Microsoft", "model": "Office 2024 Professional Plus Licencia Permanente", "specs": ["Word, Excel, PowerPoint, Outlook", "Pago Único sin Suscripción", "Soporte Multi-idioma Español"], "price": 1699, "stock": 40},
+            # 5. MONITOR
+            {"type": "monitor", "brand": "Samsung", "model": "Odyssey G5 27\" Curvo QHD 2K 165Hz 1000R", "specs": ["27 Pulgadas 2560x1440 2K", "Curvatura Inmersiva 1000R", "HDR10 & FreeSync Premium"], "price": 4999, "stock": 10},
+            # 6. SOFTWARE
+            {"type": "software", "brand": "Kaspersky", "model": "Kaspersky Premium 2025 Antivirus (1 Año / 3 Dispositivos)", "specs": ["Protección Antivirus en Tiempo Real", "VPN Ilimitada & Administrador Claves", "Protección contra Ransomware"], "price": 699, "stock": 35},
+            # 7. MONITOR
+            {"type": "monitor", "brand": "ASUS", "model": "TUF Gaming VG27AQ3A 27\" IPS 2K QHD 180Hz", "specs": ["27 Pulgadas Fast IPS 2560x1440", "180Hz 1ms GTG", "ELMB Sync & G-SYNC Compatible"], "price": 5499, "stock": 7},
+            # 8. SOFTWARE
+            {"type": "software", "brand": "Adobe", "model": "Creative Cloud Photography Plan (1 Año Suscripción)", "specs": ["Photoshop + Lightroom Classic", "20GB Almacenamiento Nube", "Actualizaciones Oficiales"], "price": 2899, "stock": 20},
+            # 9. MONITOR
+            {"type": "monitor", "brand": "MSI", "model": "G274F 27\" Rapid IPS FHD 180Hz 1ms", "specs": ["27 Pulgadas Rapid IPS", "180Hz 1ms GTG", "Gama de Color 134% sRGB"], "price": 3899, "stock": 12},
+            # 10. SOFTWARE
+            {"type": "software", "brand": "Microsoft", "model": "Windows 11 Home 64-Bit Licencia Digital Oficial", "specs": ["Licencia Oficial 1 PC", "Integración Copilot IA", "Seguridad Windows Defender"], "price": 999, "stock": 60},
+            # 11. MONITOR
+            {"type": "monitor", "brand": "LG", "model": "32GN600-B UltraGear 32\" QHD 2K 165Hz", "specs": ["32 Pulgadas 2560x1440", "165Hz 1ms MBR", "HDR10 con 95% sRGB"], "price": 5899, "stock": 6},
+            # 12. SOFTWARE
+            {"type": "software", "brand": "Bitdefender", "model": "Total Security 2025 (1 Año / 5 Dispositivos)", "specs": ["Protección Multi-Dispositivo", "Optimizador de Rendimiento", "Anti-Phishing & Anti-Spyware"], "price": 649, "stock": 30},
+            # 13. MONITOR
+            {"type": "monitor", "brand": "AOC", "model": "Gaming C24G2 24\" Curvo 1500R 165Hz", "specs": ["24 Pulgadas FHD Panel VA", "165Hz 1ms MPRT", "Base Ergonómica Ajustable"], "price": 2999, "stock": 15},
+            # 14. SOFTWARE
+            {"type": "software", "brand": "Microsoft", "model": "Microsoft 365 Familia (Suscripción 1 Año / Hasta 6 Personas)", "specs": ["Word, Excel, PowerPoint, Outlook", "6TB Nube (1TB por Persona)", "Apps Premium para PC y Móvil"], "price": 1799, "stock": 25},
+            # 15. MONITOR
+            {"type": "monitor", "brand": "GIGABYTE", "model": "GS27Q 27\" IPS QHD 2K 170Hz Gaming", "specs": ["27 Pulgadas 2560x1440 SS IPS", "170Hz (OC) 1ms", "HDR Ready & 100% sRGB"], "price": 4599, "stock": 9},
+            # 16. SOFTWARE
+            {"type": "software", "brand": "IObit", "model": "Driver Booster 13 PRO Licencia Oficial (1 Año / 3 PCs)", "specs": ["Actualización de +9,500,000 Drivers", "Game Boost para Máximos FPS", "Copia de Seguridad Automática"], "price": 499, "stock": 45},
+            # 17. MONITOR
+            {"type": "monitor", "brand": "ASUS", "model": "ROG Swift OLED PG27AQDM 27\" 240Hz 0.03ms", "specs": ["Panel OLED 2K QHD", "240Hz Tiempo Respuesta 0.03ms", "Disipador Térmico Personalizado"], "price": 17999, "stock": 3},
+            # 18. SOFTWARE
+            {"type": "software", "brand": "Norton", "model": "Norton 360 Deluxe 2025 (1 Año / 5 Dispositivos)", "specs": ["Protección Antivirus & Dark Web", "VPN Segura sin Registro", "50GB Copia de Seguridad en Nube"], "price": 599, "stock": 28},
+            # 19. MONITOR
+            {"type": "monitor", "brand": "ViewSonic", "model": "Omni VX2418-P-MHD 24\" FHD 165Hz", "specs": ["24 Pulgadas 1920x1080", "165Hz 1ms MPRT", "Altavoces Estéreo Duales"], "price": 2699, "stock": 16},
+            # 20. SOFTWARE
+            {"type": "software", "brand": "ChessBase", "model": "PowerFritz 18 Motor de Ajedrez & Entrenamiento IA", "specs": ["Motor de Cálculo AVX-512", "Análisis con Ray Tracing", "Licencia Original ChessBase"], "price": 1499, "stock": 20}
+        ]
+    }
+]
+
+# Asignación de 20 imágenes únicas y variadas de la galería a cada categoría
+def assign_gallery_images():
+    used_images = set()
+    
+    for cat in CATALOG_DATA:
+        kws = cat["filter_keywords"]
+        matched_pool = [f for f in all_files if any(k in f.lower() for k in kws) and f not in used_images]
+        
+        # Si no hay suficientes exclusivas, tomar del conjunto general de la galería
+        if len(matched_pool) < 20:
+            fallback_pool = [f for f in all_files if f not in used_images]
+            matched_pool += fallback_pool
+            
+        for i, prod in enumerate(cat["products"]):
+            img_file = matched_pool[i % len(matched_pool)]
+            used_images.add(img_file)
+            prod["image"] = f"assets/gallery/{img_file}"
+            prod["id"] = f"PCC-{cat['id']:02d}-{i+1:02d}"
+
+assign_gallery_images()
+print("Imágenes asignadas exitosamente a los 220 productos.")
+
+# Plantilla HTML modular con 5 columnas x 4 filas y navegación universal
+def generate_html_page(current_cat_idx):
+    current_cat = CATALOG_DATA[current_cat_idx]
+    
+    # Generar pestañas superiores de navegación
+    nav_tabs_html = ""
+    for idx, cat in enumerate(CATALOG_DATA):
+        is_active = idx == current_cat_idx
+        active_class = "bg-cyan-500 text-black font-bold shadow-lg shadow-cyan-500/30 scale-105 border-cyan-400" if is_active else "bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border-slate-700/60"
+        nav_tabs_html += f"""
+        <a href="{cat['slug']}" class="px-3.5 py-2 rounded-xl text-xs md:text-sm border transition-all duration-200 flex items-center gap-1.5 whitespace-nowrap {active_class}">
+            <span>{cat['icon']}</span>
+            <span>{idx+1}. {cat['title'].split('(')[0].strip()}</span>
+        </a>
+        """
+
+    # Generar las tarjetas de productos (5 columnas x 4 filas = 20 productos)
+    products_grid_html = ""
+    for p in current_cat["products"]:
+        specs_badges = "".join([f'<span class="px-2 py-0.5 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/50 text-[11px] font-medium">{s}</span>' for s in p['specs']])
+        
+        # Badge especial para página 11 (Monitor vs Software)
+        type_badge = ""
+        if "type" in p:
+            if p["type"] == "monitor":
+                type_badge = '<span class="px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 text-[10px] font-bold uppercase tracking-wider">🖥️ MONITOR</span>'
+            else:
+                type_badge = '<span class="px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/40 text-[10px] font-bold uppercase tracking-wider">💿 SOFTWARE</span>'
+        else:
+            type_badge = f'<span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 text-[10px] font-bold uppercase">{p["brand"]}</span>'
+
+        safe_title = p['model'].replace("'", "&#39;").replace('"', '&quot;')
+        specs_str = ", ".join(p['specs']).replace("'", "&#39;")
+
+        products_grid_html += f"""
+        <div class="group bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/80 hover:border-cyan-500/60 rounded-2xl p-4 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-1 relative overflow-hidden">
+            <!-- Glow Effect -->
+            <div class="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-all"></div>
+            
+            <div>
+                <!-- Top Tags -->
+                <div class="flex justify-between items-center mb-3">
+                    {type_badge}
+                    <span class="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Stock: {p['stock']}
+                    </span>
+                </div>
+
+                <!-- Product Image -->
+                <div class="w-full h-44 rounded-xl bg-slate-950/80 border border-slate-800/50 flex items-center justify-center p-3 mb-3 relative overflow-hidden group-hover:border-cyan-500/30">
+                    <img src="{p['image']}" alt="{safe_title}" class="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='assets/img/fachada-oficial.webp';">
+                </div>
+
+                <!-- Brand & Model Title -->
+                <div class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider mb-1">{p['brand']}</div>
+                <h3 class="text-sm font-bold text-white leading-snug line-clamp-2 mb-2.5 group-hover:text-cyan-200 transition-colors" title="{safe_title}">
+                    {p['model']}
+                </h3>
+
+                <!-- Tech Specs -->
+                <div class="flex flex-wrap gap-1 mb-4">
+                    {specs_badges}
+                </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-3 border-t border-slate-800/60 flex flex-col gap-2.5">
+                <div class="flex items-baseline justify-between">
+                    <span class="text-xs text-slate-400 font-medium">Precio contado:</span>
+                    <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                        ${p['price']:,} <span class="text-xs text-slate-300 font-normal">MXN</span>
+                    </span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button onclick="verDetalle('{p['id']}', '{safe_title}', '{p['brand']}', {p['price']}, '{p['image']}', '{specs_str}')" class="px-2.5 py-2 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-all border border-slate-700 flex items-center justify-center gap-1">
+                        👁️ Detalle
+                    </button>
+                    <button onclick="agregarAlCarrito('{p['id']}', '{safe_title}', {p['price']}, '{p['image']}')" class="px-2.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 text-black font-bold text-xs shadow-md shadow-cyan-500/20 transition-all flex items-center justify-center gap-1">
+                        🛒 Cotizar
+                    </button>
+                </div>
+            </div>
+        </div>
+        """
+
+    # Paginación inferior numerada
+    pagination_links_html = ""
+    prev_slug = CATALOG_DATA[max(0, current_cat_idx - 1)]["slug"]
+    next_slug = CATALOG_DATA[min(len(CATALOG_DATA) - 1, current_cat_idx + 1)]["slug"]
+    
+    for idx, cat in enumerate(CATALOG_DATA):
+        is_curr = idx == current_cat_idx
+        cls = "w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm transition-all " + (
+            "bg-cyan-500 text-black shadow-lg shadow-cyan-500/30 scale-110 border border-cyan-400" if is_curr else
+            "bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white"
+        )
+        pagination_links_html += f'<a href="{cat["slug"]}" class="{cls}">{idx+1}</a>'
+
+    # Código HTML completo de la página
+    html_content = f"""<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{current_cat['title']} — Catálogo PC Custom Lab</title>
+    <meta name="description" content="{current_cat['subtitle']} en PC Custom Lab. Cotiza componentes gamer y de workstation al mejor precio.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {{ font-family: 'Plus Jakarta Sans', sans-serif; }}
+        h1, h2, h3, .font-heading {{ font-family: 'Outfit', sans-serif; }}
+    </style>
+</head>
+<body class="bg-[#0b0f19] text-slate-100 min-h-screen flex flex-col selection:bg-cyan-500 selection:text-black">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-cyan-500 to-emerald-400 p-0.5 shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center text-cyan-400 font-black text-xl">
+                        ⚡
+                    </div>
+                </div>
+                <div>
+                    <span class="text-lg font-black tracking-wider text-white flex items-center gap-1.5 font-heading">
+                        PC CUSTOM LAB <span class="px-1.5 py-0.5 rounded text-[10px] bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">PRO</span>
+                    </span>
+                    <p class="text-[11px] text-slate-400 font-medium">Armado Profesional & Hardware de Vanguardia</p>
+                </div>
+            </a>
+
+            <!-- Quick Links -->
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-300">
+                <a href="index.html" class="hover:text-cyan-400 transition-colors">Inicio</a>
+                <a href="catalogo-01-tarjetas-madre.html" class="text-cyan-400 font-bold">Catálogo (11 Secciones)</a>
+                <a href="producto.html" class="hover:text-cyan-400 transition-colors">Configurador</a>
+                <a href="checkout.html" class="hover:text-cyan-400 transition-colors">Carrito / Checkout</a>
+            </nav>
+
+            <!-- Cart Trigger Button -->
+            <button onclick="toggleCartDrawer()" class="relative px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700/80 hover:border-cyan-500 text-white flex items-center gap-2.5 font-semibold text-sm transition-all shadow-md">
+                <span>🛒 Carrito</span>
+                <span id="cartCountBadge" class="w-5 h-5 rounded-full bg-cyan-500 text-black text-xs font-black flex items-center justify-center">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Top Categories Tabs Bar -->
+    <section class="bg-slate-950/60 border-b border-slate-800/60 py-3.5 px-4 sticky top-20 z-30 backdrop-blur-md overflow-x-auto scrollbar-thin">
+        <div class="max-w-7xl mx-auto flex items-center gap-2 overflow-x-auto pb-1">
+            {nav_tabs_html}
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
+        <!-- Hero Section Header -->
+        <div class="mb-8 p-6 md:p-8 rounded-3xl bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-slate-950 border border-slate-800/80 shadow-2xl relative overflow-hidden flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-bold uppercase tracking-wider mb-2">
+                    <span>{current_cat['icon']}</span> SECCIÓN {current_cat_idx+1} DE 11
+                </div>
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight font-heading">
+                    {current_cat['title']}
+                </h1>
+                <p class="text-sm md:text-base text-slate-400 max-w-2xl mt-1">
+                    {current_cat['subtitle']}
+                </p>
+            </div>
+            <div class="flex items-center gap-3 bg-slate-950/80 border border-slate-800 px-4 py-3 rounded-2xl">
+                <span class="text-xs text-slate-400 font-medium">Mostrando:</span>
+                <span class="text-sm font-bold text-white bg-slate-800 px-2.5 py-1 rounded-lg border border-slate-700">20 Productos (5x4)</span>
+            </div>
+        </div>
+
+        <!-- 5 Columns x 4 Rows Products Grid -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-5 mb-12">
+            {products_grid_html}
+        </section>
+
+        <!-- Pagination Section -->
+        <section class="border-t border-slate-800/80 pt-8 pb-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <a href="{prev_slug}" class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white font-semibold text-sm flex items-center gap-2 transition-all">
+                ← Sección Anterior
+            </a>
+
+            <!-- Numbered Links 1..11 -->
+            <div class="flex items-center gap-1.5 flex-wrap justify-center">
+                {pagination_links_html}
+            </div>
+
+            <a href="{next_slug}" class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white font-semibold text-sm flex items-center gap-2 transition-all">
+                Siguiente Sección →
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-10 px-4 mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-slate-400">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-cyan-500 text-black flex items-center justify-center font-black">⚡</div>
+                <span class="font-bold text-white">PC CUSTOM LAB © 2026</span> — Armado y Distribución de Hardware
+            </div>
+            <div class="flex gap-6 text-xs text-slate-400">
+                <span>📍 Guadalajara, Jalisco, México</span>
+                <span>💬 WhatsApp Cotizaciones: +52 33 1234 5678</span>
+                <span>🛡️ Garantía Oficial</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-lg w-full p-6 relative shadow-2xl">
+            <button onclick="cerrarDetalle()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center font-bold">✕</button>
+            <div class="w-full h-56 bg-slate-950 rounded-2xl flex items-center justify-center p-4 mb-4 border border-slate-800">
+                <img id="modalImg" src="" class="max-h-full max-w-full object-contain">
+            </div>
+            <span id="modalBrand" class="px-2.5 py-1 rounded-md bg-cyan-500/20 text-cyan-400 text-xs font-bold uppercase"></span>
+            <h3 id="modalTitle" class="text-xl font-bold text-white mt-2 mb-3"></h3>
+            <p class="text-xs text-slate-400 mb-4" id="modalSpecs"></p>
+            <div class="flex items-center justify-between pt-4 border-t border-slate-800">
+                <span id="modalPrice" class="text-2xl font-black text-emerald-400"></span>
+                <button id="modalAddBtn" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-black font-bold text-sm shadow-lg shadow-cyan-500/20 hover:opacity-95">
+                    🛒 Agregar al Carrito
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div id="cartDrawer" class="fixed inset-y-0 right-0 w-full max-w-md bg-slate-950 border-l border-slate-800 shadow-2xl z-50 translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-5 border-b border-slate-800 flex items-center justify-between">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">🛒 Tu Carrito de Cotización</h3>
+            <button onclick="toggleCartDrawer()" class="w-8 h-8 rounded-lg bg-slate-900 text-slate-400 hover:text-white flex items-center justify-center">✕</button>
+        </div>
+        <div id="cartItemsList" class="flex-1 overflow-y-auto p-5 space-y-4">
+            <!-- Items injected by JS -->
+        </div>
+        <div class="p-5 border-t border-slate-800 bg-slate-900/60">
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-sm text-slate-400">Total Estimado:</span>
+                <span id="cartTotalSum" class="text-xl font-black text-cyan-400">$0 MXN</span>
+            </div>
+            <a href="checkout.html" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 text-black font-black text-center text-sm block shadow-lg shadow-cyan-500/20 hover:opacity-95 transition-opacity">
+                Proceder al Checkout / Cotizar por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('pccustom_cart') || '[]');
+
+        function updateCartUI() {{
+            const badge = document.getElementById('cartCountBadge');
+            const list = document.getElementById('cartItemsList');
+            const totalEl = document.getElementById('cartTotalSum');
+            
+            const totalQty = cart.reduce((acc, item) => acc + item.qty, 0);
+            badge.innerText = totalQty;
+            
+            if (cart.length === 0) {{
+                list.innerHTML = '<div class="text-center py-12 text-slate-500 text-sm">Tu carrito está vacío.<br>Agrega componentes para cotizar.</div>';
+                totalEl.innerText = '$0 MXN';
+                return;
+            }}
+            
+            let total = 0;
+            list.innerHTML = cart.map((item, idx) => {{
+                total += item.price * item.qty;
+                return `
+                <div class="flex items-center gap-3 bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                    <img src="${{item.img}}" class="w-12 h-12 object-contain bg-slate-950 rounded-lg p-1">
+                    <div class="flex-1 min-w-0">
+                        <h4 class="text-xs font-bold text-white truncate">${{item.title}}</h4>
+                        <div class="text-xs text-cyan-400 font-bold">$${{item.price.toLocaleString()}} MXN</div>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <button onclick="cambiarQty(${{idx}}, -1)" class="w-6 h-6 rounded bg-slate-800 text-slate-300 font-bold flex items-center justify-center">-</button>
+                        <span class="text-xs font-bold text-white px-1">${{item.qty}}</span>
+                        <button onclick="cambiarQty(${{idx}}, 1)" class="w-6 h-6 rounded bg-slate-800 text-slate-300 font-bold flex items-center justify-center">+</button>
+                    </div>
+                </div>
+                `;
+            }}).join('');
+            
+            totalEl.innerText = '$' + total.toLocaleString() + ' MXN';
+            localStorage.setItem('pccustom_cart', JSON.stringify(cart));
+        }}
+
+        function agregarAlCarrito(id, title, price, img) {{
+            const existing = cart.find(x => x.id === id);
+            if (existing) {{
+                existing.qty += 1;
+            }} else {{
+                cart.push({{ id, title, price, img, qty: 1 }});
+            }}
+            updateCartUI();
+            toggleCartDrawer(true);
+        }}
+
+        function cambiarQty(idx, delta) {{
+            cart[idx].qty += delta;
+            if (cart[idx].qty <= 0) cart.splice(idx, 1);
+            updateCartUI();
+        }}
+
+        function toggleCartDrawer(open = null) {{
+            const drawer = document.getElementById('cartDrawer');
+            if (open === true) drawer.classList.remove('translate-x-full');
+            else if (open === false) drawer.classList.add('translate-x-full');
+            else drawer.classList.toggle('translate-x-full');
+        }}
+
+        function verDetalle(id, title, brand, price, img, specs) {{
+            document.getElementById('modalImg').src = img;
+            document.getElementById('modalBrand').innerText = brand;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalSpecs').innerText = 'Especificaciones clave: ' + specs;
+            document.getElementById('modalPrice').innerText = '$' + price.toLocaleString() + ' MXN';
+            document.getElementById('modalAddBtn').onclick = () => {{
+                agregarAlCarrito(id, title, price, img);
+                cerrarDetalle();
+            }};
+            document.getElementById('quickViewModal').classList.remove('hidden');
+            document.getElementById('quickViewModal').classList.add('flex');
+        }}
+
+        function cerrarDetalle() {{
+            document.getElementById('quickViewModal').classList.add('hidden');
+            document.getElementById('quickViewModal').classList.remove('flex');
+        }}
+
+        // Inicializar carrito
+        updateCartUI();
+    </script>
+</body>
+</html>
+"""
+    return html_content
+
+# Generar los 11 archivos HTML
+for i in range(11):
+    html_str = generate_html_page(i)
+    target_path = os.path.join(output_dir, CATALOG_DATA[i]["slug"])
+    with open(target_path, "w", encoding="utf-8") as f:
+        f.write(html_str)
+    print(f"Generado: {CATALOG_DATA[i]['slug']} (20 productos, 5x4)")
+
+print("\n¡Las 11 páginas del catálogo fueron generadas exitosamente!")
