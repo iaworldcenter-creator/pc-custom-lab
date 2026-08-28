@@ -1,0 +1,92 @@
+[
+  {
+    "sku": "CFG-INTEL-14900",
+    "nombre": "PC Gamer Ultra Intel Core i9-14900 | ASUS Prime B760M-A | 16GB DDR4 3200MHz | 1TB HDD + SSD | Kit Gamer 4en1",
+    "marca": "INTEL / ASUS",
+    "categoria": "Equipos Armados & Configuraciones",
+    "precio": 22990.0,
+    "original": 27500.0,
+    "desc": "Configuración de máxima potencia para renderizado 3D, streaming y gaming extremo. 24 Núcleos, 32 Hilos, hasta 5.80GHz.",
+    "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/gallery/0.01L4863ZAKFR-1.webp"
+  },
+  {
+    "sku": "CFG-INTEL-14700",
+    "nombre": "PC Gamer Pro Intel Core i7-14700 | ASUS Prime B760M-A | 16GB DDR4 3200MHz | 1TB HDD + SSD | Kit Gamer Naceb",
+    "marca": "INTEL / ASUS",
+    "categoria": "Equipos Armados & Configuraciones",
+    "precio": 18990.0,
+    "original": 22800.0,
+    "desc": "Equilibrio supremo para creación de contenido y juegos competitivos. 20 Núcleos, 28 Hilos, turbo 5.40GHz.",
+    "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/gallery/00-1522-00-2-1.webp"
+  },
+  {
+    "sku": "CFG-INTEL-14400",
+    "nombre": "PC Gamer Calidad/Precio Intel Core i5-14400 | ASUS Prime B760M-A | 16GB DDR4 | 1TB HDD | Kit Naceb 4en1",
+    "marca": "INTEL / ASUS",
+    "categoria": "Equipos Armados & Configuraciones",
+    "precio": 14690.0,
+    "original": 17600.0,
+    "desc": "La reina de la gama media. 10 Núcleos híbridos, 16 Hilos, hasta 4.70GHz. Excelente para diseño y gaming.",
+    "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/gallery/00-1522-00-2-2.webp"
+  },
+  {
+    "sku": "CFG-RYZEN-5900XT",
+    "nombre": "PC Gamer Master AMD Ryzen 9 5900XT | ASUS ROG Strix B550-F WiFi II | 16GB Fury Beast | 1TB SATA | Gráficos Dedicados",
+    "marca": "AMD / ASUS ROG",
+    "categoria": "Equipos Armados & Configuraciones",
+    "precio": 17190.0,
+    "original": 20600.0,
+    "desc": "16 Núcleos y 32 Hilos de arquitectura Zen 3 pura con tarjeta madre ROG Strix con WiFi 6E integrado.",
+    "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/gallery/00-5333-00-0-1.webp"
+  },
+  {
+    "sku": "CFG-RYZEN-5700X",
+    "nombre": "PC Gamer Elite AMD Ryzen 7 5700X | ASUS ROG Strix B550-F WiFi II | 16GB Fury Beast | 1TB SATA | Gabinete Micro Acteck",
+    "marca": "AMD / ASUS ROG",
+    "categoria": "Equipos Armados & Configuraciones",
+    "precio": 13290.0,
+    "original": 15900.0,
+    "desc": "8 Núcleos y 16 Hilos con 32MB de L3 Cache. Eficiencia térmica insuperable de 65W TDP.",
+    "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/gallery/00-5333-00-0-2.webp"
+  },
+  {
+    "sku": "CFG-RYZEN-5600X",
+    "nombre": "PC Gamer AMD Ryzen 5 5600X | ASUS ROG Strix B550-F Gaming WiFi II | 16GB Fury Beast | 1TB SATA | Kit Gamer",
+    "marca": "AMD / ASUS ROG",
+    "categoria": "Equipos Armados & Configuraciones",
+    "precio": 11390.0,
+    "original": 13700.0,
+    "desc": "El procesador gaming favorito de la comunidad. 6 Núcleos, 12 Hilos hasta 4.6GHz en placa ROG.",
+    "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/gallery/000-0925-08G-1.webp"
+  },
+  {
+    "sku": "CFG-APU-5700G",
+    "nombre": "PC Workstation APU AMD Ryzen 7 5700G con Gráficos Radeon Vega 8 | ASUS Prime B550M-A | 16GB RAM | 1TB HDD",
+    "marca": "AMD / ASUS",
+    "categoria": "Equipos Armados & Configuraciones",
+    "precio": 12500.0,
+    "original": 15000.0,
+    "desc": "Potentes gráficos integrados Vega 8 para jugar sin necesidad de tarjeta de video dedicada.",
+    "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/gallery/000-0925-08G-2.webp"
+  },
+  {
+    "sku": "CFG-APU-5600GT",
+    "nombre": "PC APU AMD Ryzen 5 5600GT Gráficos Radeon Vega 7 | ASUS Prime B550M-A AC | 16GB Fury Beast | 1TB HDD",
+    "marca": "AMD / ASUS",
+    "categoria": "Equipos Armados & Configuraciones",
+    "precio": 11300.0,
+    "original": 13500.0,
+    "desc": "Versión GT de alto reloj para gráficos fluidos en eSports (Valorant, Fortnite, League of Legends, CS2).",
+    "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/gallery/000-0925-08G-3.webp"
+  },
+  {
+    "sku": "CFG-APU-5300G",
+    "nombre": "PC Entrada / Oficina AMD Ryzen 3 5300G Gráficos Radeon Vega 6 | ASUS Prime B550M-A | 16GB RAM | 1TB HDD",
+    "marca": "AMD / ASUS",
+    "categoria": "Equipos Armados & Configuraciones",
+    "precio": 10200.0,
+    "original": 12200.0,
+    "desc": "Solución ultra rápida para tareas de oficina, punto de venta, escuelas y navegación pesada con 4 núcleos Zen 3.",
+    "img": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/gallery/000-0962-08G-1.webp"
+  }
+]
