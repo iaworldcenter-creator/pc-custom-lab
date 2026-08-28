@@ -1,10 +1,10 @@
 // =========================================================================
-// MOTOR OFICIAL PC CUSTOM LAB (RUTAS RELATIVAS LIMPIAS, FALLBACK CDN Y SIDEBAR 100%)
+// MOTOR OFICIAL PC CUSTOM LAB (3 BLOQUES TAXONÓMICOS Y BÚSQUEDA PREDICTIVA INSTANTÁNEA)
 // =========================================================================
 
 let currentViewStyle = 'grid'; // 'grid' (5x4) o 'list'
 let currentPageNumber = 1;
-const productsPerPage = 20; // 5 filas x 4 columnas = 20 productos exactos
+const productsPerPage = 20; // 5 filas x 4 columnas
 
 let activeSelectedCategory = 'Todas';
 let activeSelectedBrand = 'Todas';
@@ -13,7 +13,7 @@ let currentSortCriterion = 'existencia';
 document.addEventListener("DOMContentLoaded", () => {
     renderSidebarFacets();
     renderExactCatalogView();
-    initLongTailSearchEngine();
+    initPredictiveSearchEngine();
 });
 
 function setViewStyle(style) {
@@ -34,7 +34,7 @@ function setViewStyle(style) {
 }
 
 function getFilteredList() {
-    let items = [...(window.PC_COMBOS_DATA || []), ...(window.CT_CATALOG_DATA || [])];
+    let items = [...(window.CT_CATALOG_DATA || [])];
 
     if (activeSelectedCategory !== 'Todas') {
         items = items.filter(p => {
@@ -92,7 +92,7 @@ function renderExactCatalogView() {
         container.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-2";
         container.innerHTML = pageItems.map(p => {
             const sku = p.sku;
-            const cat = p.categoria_clasificada || 'varios_hardware';
+            const cat = p.categoria_clasificada || 'accesorios_perifericos';
             const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
             const price = p.precio_mxn || p.precio;
             const original = p.precio_original || (price * 1.33);
@@ -171,7 +171,7 @@ function renderExactCatalogView() {
         container.className = "flex flex-col gap-3.5 pb-2";
         container.innerHTML = pageItems.map(p => {
             const sku = p.sku;
-            const cat = p.categoria_clasificada || 'varios_hardware';
+            const cat = p.categoria_clasificada || 'accesorios_perifericos';
             const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
             const price = p.precio_mxn || p.precio;
             const original = p.precio_original || (price * 1.33);
@@ -239,44 +239,50 @@ function renderExactCatalogView() {
 }
 
 // =========================================================================
-// BARRA LATERAL IZQUIERDA: ALTURA 100% LLENA Y TODAS LAS SUBCATEGORÍAS
+// BARRA LATERAL IZQUIERDA: ESTRUCTURA EXACTA EN 3 BLOQUES TAXONÓMICOS
 // =========================================================================
 function renderSidebarFacets() {
     const root = document.getElementById("sidebar-facets-root");
     if (!root) return;
 
-    // Lista Completa de Todas las Categorías para Nivelación Vertical Total
-    const allCategoriesList = [
-        { id: 'Todas', name: 'Todas las Categorías', count: 16122, icon: 'fa-layer-group', header: 'Catálogo Maestro' },
-        
-        // Bloque Ensamble
-        { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', count: 111, icon: 'fa-chess-board', header: 'Ensamble de Hardware' },
-        { id: 'procesadores', name: 'Procesadores (CPUs Intel/AMD)', count: 691, icon: 'fa-microchip' },
-        { id: 'memorias_ram', name: 'Memorias RAM (DDR4/DDR5)', count: 597, icon: 'fa-memory' },
-        { id: 'discos_duros', name: 'Discos Duros & SSD NVMe', count: 484, icon: 'fa-hard-drive' },
-        { id: 'gabinetes', name: 'Gabinetes & Chasis Gamer', count: 402, icon: 'fa-server' },
-        { id: 'fuentes_energia', name: 'Fuentes de Poder & UPS', count: 80, icon: 'fa-plug-circle-bolt' },
-        { id: 'tarjetas_de_video', name: 'Tarjetas de Video (GPUs)', count: 61, icon: 'fa-gamepad' },
-        { id: 'enfriamiento', name: 'Enfriamiento Líquido/Aire', count: 228, icon: 'fa-snowflake' },
-        { id: 'monitores', name: 'Monitores & Pantallas PC', count: 623, icon: 'fa-desktop' },
-        
-        // Bloque Almacenamiento y Redes
-        { id: 'conectividad_redes', name: 'Conectividad & Routers WiFi', count: 584, icon: 'fa-network-wired', header: 'Redes & Conectividad' },
-        { id: 'telefonia_seguridad', name: 'Videovigilancia CCTV & Alarmas', count: 849, icon: 'fa-video' },
-        
-        // Bloque Periféricos y Software
-        { id: 'accesorios_perifericos', name: 'Teclados, Mouse & Periféricos', count: 4593, icon: 'fa-keyboard', header: 'Periféricos & Software' },
-        { id: 'software', name: 'Software & Licencias Originales', count: 580, icon: 'fa-compact-disc' },
-        { id: 'impresoras', name: 'Impresoras & Multifuncionales', count: 416, icon: 'fa-print' },
-        { id: 'consumibles', name: 'Tintas, Tóner & Consumibles', count: 592, icon: 'fa-fill-drip' },
-        { id: 'equipos_de_marca', name: 'Laptops & Equipos de Marca', count: 27, icon: 'fa-laptop' },
-        { id: 'punto_de_venta', name: 'Punto de Venta (POS)', count: 156, icon: 'fa-barcode' },
-        { id: 'electronica_consumo', name: 'Smart TVs & Audio', count: 728, icon: 'fa-tv' },
-        { id: 'linea_blanca', name: 'Climatización & Línea Blanca', count: 56, icon: 'fa-fan' }
+    // BLOQUE 1 - COMPONENTES DE ENSAMBLE
+    const block1 = [
+        { id: 'procesadores', name: 'Procesadores (CPUs Intel/AMD)', icon: 'fa-microchip' },
+        { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', icon: 'fa-chess-board' },
+        { id: 'memorias_ram', name: 'Memorias RAM (DDR4 / DDR5)', icon: 'fa-memory' },
+        { id: 'discos_duros', name: 'Almacenamiento (SSD & HDD)', icon: 'fa-hard-drive' },
+        { id: 'tarjetas_de_video', name: 'Tarjetas de Video (GPUs)', icon: 'fa-gamepad' },
+        { id: 'gabinetes', name: 'Gabinetes & Chasis Gamer', icon: 'fa-server' },
+        { id: 'fuentes_energia', name: 'Fuentes de Poder (PSU)', icon: 'fa-bolt' },
+        { id: 'enfriamiento', name: 'Enfriamiento y Disipadores', icon: 'fa-snowflake' },
+        { id: 'energia_ups', name: 'Reguladores, No-Breaks & UPS', icon: 'fa-plug-circle-bolt' },
+        { id: 'monitores', name: 'Monitores & Pantallas PC', icon: 'fa-desktop' }
     ];
 
-    // Obtener los 3 más vendidos de la categoría seleccionada
-    const all = [...(window.PC_COMBOS_DATA || []), ...(window.CT_CATALOG_DATA || [])];
+    // BLOQUE 2 - SISTEMAS Y EQUIPOS COMPLETOS
+    const block2 = [
+        { id: 'mini_pcs_ia', name: 'Mini PCs & Servidores IA (NUC)', icon: 'fa-cube' },
+        { id: 'computadoras_ensambladas', name: 'Computadoras & PC Gamer', icon: 'fa-desktop' },
+        { id: 'laptops', name: 'Laptops y Portátiles', icon: 'fa-laptop' },
+        { id: 'all_in_one', name: 'Equipos All-in-One e iMac', icon: 'fa-tv' }
+    ];
+
+    // BLOQUE 3 - CONSUMIBLES Y SOLUCIONES
+    const block3 = [
+        { id: 'consumibles', name: 'Tóners, Tintas y Consumibles', icon: 'fa-fill-drip' },
+        { id: 'impresoras', name: 'Impresoras y Multifuncionales', icon: 'fa-print' },
+        { id: 'accesorios_perifericos', name: 'Teclados, Mouse & Periféricos', icon: 'fa-keyboard' },
+        { id: 'conectividad_redes', name: 'Redes & Conectividad WiFi', icon: 'fa-network-wired' },
+        { id: 'software', name: 'Software & Licencias Originales', icon: 'fa-compact-disc' },
+        { id: 'telefonia_seguridad', name: 'Telefonía & Videovigilancia', icon: 'fa-video' },
+        { id: 'punto_de_venta', name: 'Punto de Venta (POS)', icon: 'fa-barcode' }
+    ];
+
+    const all = window.CT_CATALOG_DATA || [];
+    
+    const getCount = (id) => all.filter(p => (p.categoria_clasificada || '').toLowerCase() === id.toLowerCase()).length;
+
+    // Top 3 de la categoría activa
     let topItems = all.filter(p => {
         if (activeSelectedCategory === 'Todas') return true;
         return (p.categoria_clasificada || '').toLowerCase() === activeSelectedCategory.toLowerCase();
@@ -284,41 +290,91 @@ function renderSidebarFacets() {
 
     root.innerHTML = `
         <div class="bg-gradient-to-r from-slate-900 to-cyan-950 border border-cyan-500/40 text-white p-3 rounded-t-2xl font-bold text-xs uppercase flex items-center justify-between shadow-lg">
-            <span class="flex items-center gap-2 text-cyan-300 font-mono"><i class="fa-solid fa-sliders text-cyan-400"></i> Filtros de Ensamble</span>
-            <span class="text-[9px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono font-bold">16,122 Items</span>
+            <span class="flex items-center gap-2 text-cyan-300 font-mono"><i class="fa-solid fa-sliders text-cyan-400"></i> Catálogo Mayorista</span>
+            <span class="text-[9px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono font-bold">16,134 Items</span>
         </div>
 
-        <div class="p-3.5 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-300 text-xs space-y-4 shadow-2xl flex flex-col justify-between min-h-[950px]">
+        <div class="p-3.5 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-300 text-xs space-y-4 shadow-2xl flex flex-col justify-between min-h-[980px]">
             
             <div class="flex gap-2">
                 <button onclick="renderExactCatalogView()" class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2 rounded-xl text-[11px] uppercase transition cursor-pointer shadow">
-                    Aplicar Filtros
+                    Aplicar
                 </button>
                 <button onclick="resetFacets()" class="flex-1 bg-slate-800 hover:bg-red-950/60 border border-slate-700 hover:border-red-500/50 text-slate-300 hover:text-red-400 font-bold py-2 rounded-xl text-[11px] uppercase transition cursor-pointer">
                     Limpiar
                 </button>
             </div>
 
-            <!-- LISTA COMPLETA DE CATEGORÍAS (LLENADO TOTAL DEL SIDEBAR) -->
-            <div class="border-b border-slate-800 pb-3 flex-1">
-                <h4 class="font-bold text-cyan-300 mb-2.5 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
-                    <i class="fa-solid fa-folder-tree text-cyan-400"></i> Categorías & Componentes
+            <!-- ENLACE A TODAS LAS CATEGORÍAS -->
+            <div class="bg-slate-950 p-2 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition">
+                <label class="flex items-center justify-between cursor-pointer">
+                    <span class="flex items-center gap-2 truncate">
+                        <input type="radio" name="cat_facet" ${activeSelectedCategory === 'Todas' ? 'checked' : ''} onchange="activeSelectedCategory='Todas'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
+                        <i class="fa-solid fa-layer-group text-[11px] text-cyan-400 shrink-0"></i>
+                        <span class="truncate text-xs font-bold text-white">Todas las Categorías</span>
+                    </span>
+                    <span class="text-[10px] text-cyan-400 font-mono font-bold">(${all.length.toLocaleString('es-MX')})</span>
+                </label>
+            </div>
+
+            <!-- BLOQUE 1 - COMPONENTES DE ENSAMBLE -->
+            <div class="border-b border-slate-800 pb-3">
+                <h4 class="font-bold text-cyan-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                    <i class="fa-solid fa-microchip text-cyan-400"></i> 1. Componentes de Ensamble
                 </h4>
-                <div class="space-y-1.5 text-slate-400 max-h-[580px] overflow-y-auto pr-1 no-scrollbar">
-                    ${allCategoriesList.map(c => `
-                        <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-1 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
+                <div class="space-y-1 text-slate-400">
+                    ${block1.map(c => `
+                        <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-0.5 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
                             <span class="flex items-center gap-2 truncate">
                                 <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
                                 <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
                                 <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : ''}">${c.name}</span>
                             </span>
-                            <span class="text-[10px] text-slate-400 font-mono">(${c.count.toLocaleString('es-MX')})</span>
+                            <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
                         </label>
                     `).join('')}
                 </div>
             </div>
 
-            <!-- BLOQUE DE LOS 3 MÁS VENDIDOS DE LA CATEGORÍA -->
+            <!-- BLOQUE 2 - SISTEMAS Y EQUIPOS COMPLETOS -->
+            <div class="border-b border-slate-800 pb-3">
+                <h4 class="font-bold text-purple-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                    <i class="fa-solid fa-cube text-purple-400"></i> 2. Sistemas & Mini PCs IA
+                </h4>
+                <div class="space-y-1 text-slate-400">
+                    ${block2.map(c => `
+                        <label class="flex items-center justify-between cursor-pointer hover:text-purple-300 py-0.5 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
+                            <span class="flex items-center gap-2 truncate">
+                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-purple-400 cursor-pointer shrink-0" />
+                                <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
+                                <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-purple-300' : ''}">${c.name}</span>
+                            </span>
+                            <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
+                        </label>
+                    `).join('')}
+                </div>
+            </div>
+
+            <!-- BLOQUE 3 - CONSUMIBLES Y SOLUCIONES -->
+            <div class="border-b border-slate-800 pb-3">
+                <h4 class="font-bold text-amber-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                    <i class="fa-solid fa-puzzle-piece text-amber-400"></i> 3. Consumibles & Soluciones
+                </h4>
+                <div class="space-y-1 text-slate-400">
+                    ${block3.map(c => `
+                        <label class="flex items-center justify-between cursor-pointer hover:text-amber-300 py-0.5 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
+                            <span class="flex items-center gap-2 truncate">
+                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-amber-400 cursor-pointer shrink-0" />
+                                <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
+                                <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-amber-300' : ''}">${c.name}</span>
+                            </span>
+                            <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
+                        </label>
+                    `).join('')}
+                </div>
+            </div>
+
+            <!-- TOP 3 MÁS VENDIDOS DE LA CATEGORÍA -->
             <div class="pt-1 space-y-2">
                 <div class="flex items-center justify-between">
                     <h4 class="font-bold text-amber-400 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
@@ -330,7 +386,7 @@ function renderSidebarFacets() {
                 <div class="space-y-2">
                     ${topItems.map((b, idx) => {
                         const sku = b.sku;
-                        const cat = b.categoria_clasificada || 'varios_hardware';
+                        const cat = b.categoria_clasificada || 'accesorios_perifericos';
                         const title = (b.nombre || b.descripcion_completa || '').replace(/'/g, "&#39;");
                         const price = b.precio_mxn || b.precio;
                         const mayoreo = b.precio_mayoreo_10pzs || (price * 0.93);
@@ -354,7 +410,6 @@ function renderSidebarFacets() {
                     }).join('')}
                 </div>
 
-                <!-- Botón de Remate 'Ver Todo el Catálogo' -->
                 <button 
                     onclick="activeSelectedCategory='Todas'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView(); document.getElementById('catalog-main-content-root').scrollIntoView({behavior:'smooth'});" 
                     class="w-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/40 font-mono font-bold py-2 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer shadow mt-2"
@@ -368,63 +423,90 @@ function renderSidebarFacets() {
 }
 
 // =========================================================================
-// MOTOR DE BÚSQUEDA LONG-TAIL PARA TODO EL CATÁLOGO (16,122 ARTÍCULOS)
+// MOTOR DE BÚSQUEDA PREDICTIVA INSTANTÁNEA (SEARCH-AS-YOU-TYPE DESDE 1 LETRA)
 // =========================================================================
-function initLongTailSearchEngine() {
+function initPredictiveSearchEngine() {
     const input = document.getElementById("boutiqueSearchInput");
     const box = document.getElementById("boutique-autocomplete-box");
     if (!input || !box) return;
 
     input.addEventListener("input", (e) => {
         const query = (e.target.value || '').trim().toLowerCase();
-        if (query.length < 2) {
+        
+        // Se activa desde la primera letra (>= 1)
+        if (query.length < 1) {
             box.classList.add("hidden");
             box.innerHTML = "";
             return;
         }
 
-        const all = [...(window.PC_COMBOS_DATA || []), ...(window.CT_CATALOG_DATA || [])];
+        const all = window.CT_CATALOG_DATA || [];
         const matches = all.filter(p => {
             const sku = (p.sku || '').toLowerCase();
             const name = (p.nombre || p.descripcion_completa || '').toLowerCase();
             const marca = (p.marca || '').toLowerCase();
-            return sku.includes(query) || name.includes(query) || marca.includes(query);
+            const cat = (p.categoria_clasificada || '').toLowerCase();
+            return sku.includes(query) || name.includes(query) || marca.includes(query) || cat.includes(query);
         }).slice(0, 8);
 
         if (matches.length === 0) {
             box.innerHTML = `
-                <div class="p-3 text-center text-slate-400 font-mono text-xs">
-                    No se encontraron coincidencias directas para "${query}".
+                <div class="p-3.5 text-center text-slate-400 font-mono text-xs">
+                    <i class="fa-solid fa-magnifying-glass text-cyan-400 mb-1 block"></i>
+                    No se encontraron coincidencias directas para "<strong>${query}</strong>".
                 </div>
             `;
             box.classList.remove("hidden");
             return;
         }
 
-        box.innerHTML = matches.map(p => {
-            const sku = p.sku;
-            const cat = p.categoria_clasificada || 'varios_hardware';
-            const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
-            const price = p.precio_mxn || p.precio;
-            const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
-            const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+        box.innerHTML = `
+            <div class="p-2 border-b border-slate-800 flex justify-between items-center text-[10px] font-mono text-slate-400 bg-slate-950/80">
+                <span>Resultados en tiempo real para: "<strong>${query}</strong>"</span>
+                <span class="text-cyan-400 font-bold">${matches.length} sugerencias</span>
+            </div>
+            <div class="divide-y divide-slate-800/60 max-h-96 overflow-y-auto">
+                ${matches.map(p => {
+                    const sku = p.sku;
+                    const cat = p.categoria_clasificada || 'accesorios_perifericos';
+                    const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
+                    const price = p.precio_mxn || p.precio;
+                    const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
+                    const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
+                    const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
 
-            return `
-                <div class="flex items-center justify-between gap-3 p-2 hover:bg-slate-800/80 rounded-xl transition cursor-pointer border-b border-slate-800 last:border-0" onclick="openProductDetailModal('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');">
-                    <div class="w-10 h-10 bg-slate-950 rounded-lg p-1 shrink-0 flex items-center justify-center">
-                        <img src="${localImg}" alt="${title}" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='${cdnImg}';" />
-                    </div>
-                    <div class="flex-1 min-w-0 text-left">
-                        <div class="text-xs font-bold text-white truncate">${title}</div>
-                        <div class="text-[10px] font-mono text-slate-400">SKU: ${sku} • <span class="text-cyan-400">${p.marca || 'CT'}</span></div>
-                    </div>
-                    <div class="text-right shrink-0">
-                        <div class="text-xs font-mono font-black text-emerald-400">$${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</div>
-                        <span class="text-[9px] font-mono text-cyan-300 font-bold bg-cyan-950/80 border border-cyan-500/30 px-1.5 py-0.5 rounded">Ficha</span>
-                    </div>
-                </div>
-            `;
-        }).join('');
+                    return `
+                        <div class="flex items-center justify-between gap-3 p-2.5 hover:bg-slate-850 transition cursor-pointer group" onclick="openProductDetailModal('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');">
+                            <div class="w-12 h-12 bg-slate-950 rounded-xl p-1 shrink-0 flex items-center justify-center border border-slate-800 group-hover:border-cyan-400/50">
+                                <img src="${localImg}" alt="${title}" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='${cdnImg}';" />
+                            </div>
+                            <div class="flex-1 min-w-0 text-left">
+                                <div class="text-xs font-bold text-white group-hover:text-cyan-300 transition truncate">${title}</div>
+                                <div class="text-[10px] font-mono text-slate-400 flex items-center gap-1.5">
+                                    <span class="text-cyan-400 font-bold">SKU: ${sku}</span>
+                                    <span>•</span>
+                                    <span>${p.marca || 'CT'}</span>
+                                    <span>•</span>
+                                    <span class="text-amber-400">May: $${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                                </div>
+                            </div>
+                            <div class="text-right shrink-0 flex items-center gap-2">
+                                <div class="text-xs font-mono font-black text-emerald-400">$${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</div>
+                                <button onclick="event.stopPropagation(); openProductDetailModal('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" class="bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[10px] font-bold px-2 py-1 rounded-lg border border-slate-700 uppercase" title="Ver Ficha">
+                                    Ficha
+                                </button>
+                                <button onclick="event.stopPropagation(); addToCartCT('${sku}', '${title}', ${price}, '${localImg}');" class="bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-bold px-2 py-1 rounded-lg uppercase" title="Agregar al Carrito">
+                                    + Carrito
+                                </button>
+                                <button onclick="event.stopPropagation(); buyNowCT('${sku}', '${title}', ${price}, '${localImg}');" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 text-[10px] font-black px-2 py-1 rounded-lg uppercase shadow" title="Comprar Ahora">
+                                    ⚡ Comprar
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                }).join('')}
+            </div>
+        `;
 
         box.classList.remove("hidden");
     });
@@ -440,7 +522,7 @@ function initLongTailSearchEngine() {
 // FICHA DE PRODUCTO EN 3 COLUMNAS (PDP - PRODUCT DETAIL PAGE)
 // =========================================================================
 window.openProductDetailModal = function(sku) {
-    const all = [...(window.PC_COMBOS_DATA || []), ...(window.CT_CATALOG_DATA || [])];
+    const all = window.CT_CATALOG_DATA || [];
     const prod = all.find(p => p.sku === sku);
     if (!prod) return;
 
@@ -448,7 +530,7 @@ window.openProductDetailModal = function(sku) {
     const modalContent = document.getElementById("productDetailModalContent");
     if (!modal || !modalContent) return;
 
-    const cat = prod.categoria_clasificada || 'Hardware';
+    const cat = prod.categoria_clasificada || 'accesorios_perifericos';
     const title = prod.nombre || prod.descripcion_completa;
     const price = prod.precio_mxn || prod.precio;
     const original = prod.precio_original || (price * 1.33);
