@@ -1,5 +1,5 @@
 // =========================================================================
-// MOTOR OFICIAL PC CUSTOM LAB (CONCORDANCIA ESTRICTA DE CATEGORÍAS E IMÁGENES)
+// MOTOR OFICIAL PC CUSTOM LAB CON FICHA DE PRODUCTO EN 3 COLUMNAS (PDP)
 // =========================================================================
 
 let currentViewStyle = 'grid'; // 'grid' o 'list'
@@ -92,7 +92,7 @@ function renderExactCatalogView() {
             const sku = p.sku;
             const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
             const price = p.precio_mxn || p.precio;
-            const original = p.precio_original || (price * 1.25);
+            const original = p.precio_original || (price * 1.33);
             const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
             const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
             const localImg = p.img || `assets/img/catalog/${p.categoria_clasificada}/${sku}.jpg`;
@@ -108,7 +108,8 @@ function renderExactCatalogView() {
                     </button>
 
                     <div>
-                        <div class="w-full h-32 sm:h-36 bg-slate-950/80 border border-slate-800/80 rounded-xl flex items-center justify-center p-2 mb-2.5 relative group-hover:border-cyan-500/40 transition">
+                        <!-- Fotografía Centrada con Clic para Abrir Ficha Técnica en 3 Columnas -->
+                        <div onclick="openProductDetailModal('${sku}')" class="w-full h-32 sm:h-36 bg-slate-950/80 border border-slate-800/80 rounded-xl flex items-center justify-center p-2 mb-2.5 relative group-hover:border-cyan-500/40 transition cursor-pointer">
                             <img 
                                 src="${localImg}" 
                                 alt="${title}" 
@@ -131,10 +132,11 @@ function renderExactCatalogView() {
                         </div>
 
                         <div class="text-center text-[9px] text-cyan-400 font-mono font-bold mb-1 flex items-center justify-center gap-1">
-                            <i class="fa-solid fa-truck-bolt text-[10px]"></i> Entrega Inmediata GDL
+                            <i class="fa-solid fa-truck-bolt text-[10px]"></i> Disponible en Mostrador GDL
                         </div>
 
-                        <h4 class="text-slate-200 text-xs font-semibold text-center line-clamp-2 leading-tight group-hover:text-cyan-300 transition mb-1" title="${title}">
+                        <!-- Título con Clic a Ficha Técnica -->
+                        <h4 onclick="openProductDetailModal('${sku}')" class="text-slate-200 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="${title}">
                             ${title}
                         </h4>
 
@@ -143,12 +145,18 @@ function renderExactCatalogView() {
                         </div>
                     </div>
 
-                    <div class="pt-1">
+                    <div class="pt-1 flex gap-1.5">
+                        <button 
+                            onclick="openProductDetailModal('${sku}')" 
+                            class="flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold py-1.5 rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700"
+                        >
+                            <span>Ficha</span>
+                        </button>
                         <button 
                             onclick="buyNowCT('${sku}', '${title}', ${price}, '${localImg}')" 
-                            class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2 px-2 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition active:scale-95 shadow-md hover:shadow-cyan-500/30 cursor-pointer"
+                            class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-1.5 rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer"
                         >
-                            <i class="fa-solid fa-cart-plus text-xs"></i> <span>Comprar</span>
+                            <span>Comprar</span>
                         </button>
                     </div>
                 </div>
@@ -160,7 +168,7 @@ function renderExactCatalogView() {
             const sku = p.sku;
             const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
             const price = p.precio_mxn || p.precio;
-            const original = p.precio_original || (price * 1.25);
+            const original = p.precio_original || (price * 1.33);
             const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
             const usdPrice = (price / 19.50).toFixed(2);
             const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
@@ -173,7 +181,7 @@ function renderExactCatalogView() {
                         <span class="text-[7px] font-black text-white uppercase">-25%</span>
                     </div>
 
-                    <div class="w-full md:w-32 h-28 bg-slate-950/80 border border-slate-800 rounded-xl flex items-center justify-center p-2 shrink-0 relative">
+                    <div onclick="openProductDetailModal('${sku}')" class="w-full md:w-32 h-28 bg-slate-950/80 border border-slate-800 rounded-xl flex items-center justify-center p-2 shrink-0 relative cursor-pointer">
                         <img 
                             src="${localImg}" 
                             alt="${title}" 
@@ -186,7 +194,7 @@ function renderExactCatalogView() {
                     </div>
 
                     <div class="flex-1 min-w-0">
-                        <h4 class="text-cyan-300 font-bold text-sm mb-1 group-hover:text-cyan-200 transition leading-snug cursor-pointer" onclick="buyNowCT('${sku}', '${title}', ${price}, '${localImg}')">
+                        <h4 onclick="openProductDetailModal('${sku}')" class="text-cyan-300 font-bold text-sm mb-1 hover:text-cyan-200 transition leading-snug cursor-pointer">
                             ${title}
                         </h4>
                         <div class="flex items-center gap-2 text-[10px] font-mono text-slate-400 mb-1">
@@ -194,7 +202,7 @@ function renderExactCatalogView() {
                             <span>•</span>
                             <span>Clave CT: ${sku}</span>
                             <span>•</span>
-                            <span class="text-emerald-400 font-bold">Margen Protegido</span>
+                            <span class="text-emerald-400 font-bold">20% Neto Libre Protegido</span>
                         </div>
                         
                         <div class="flex items-center gap-0.5 text-amber-400 text-xs mb-1.5">
@@ -219,12 +227,12 @@ function renderExactCatalogView() {
                         </div>
 
                         <div class="flex items-center gap-2 w-full">
-                            <button class="p-2.5 rounded-xl border border-slate-800 text-slate-400 hover:text-pink-400 hover:border-pink-500 transition cursor-pointer" title="Favoritos">
-                                <i class="fa-regular fa-heart"></i>
+                            <button onclick="openProductDetailModal('${sku}')" class="p-2.5 rounded-xl border border-slate-800 bg-slate-800 hover:bg-slate-700 text-cyan-300 transition text-xs font-bold" title="Ver Ficha Técnica">
+                                <i class="fa-solid fa-file-lines"></i>
                             </button>
                             <button 
                                 onclick="addToCartCT('${sku}', '${title}', ${price}, '${localImg}')" 
-                                class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2 px-3 rounded-xl text-xs flex items-center justify-center gap-1.5 transition active:scale-95 shadow-md hover:shadow-cyan-500/30 cursor-pointer uppercase"
+                                class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2 px-3 rounded-xl text-xs flex items-center justify-center gap-1.5 transition active:scale-95 shadow-md cursor-pointer uppercase"
                             >
                                 <span>Agregar</span>
                             </button>
@@ -235,6 +243,203 @@ function renderExactCatalogView() {
         }).join('');
     }
 }
+
+// =========================================================================
+// FICHA DE PRODUCTO EN 3 COLUMNAS (PDP - PRODUCT DETAIL PAGE)
+// =========================================================================
+window.openProductDetailModal = function(sku) {
+    const all = [...(window.PC_COMBOS_DATA || []), ...(window.CT_CATALOG_DATA || [])];
+    const prod = all.find(p => p.sku === sku);
+    if (!prod) return;
+
+    const modal = document.getElementById("productDetailModal");
+    const modalContent = document.getElementById("productDetailModalContent");
+    if (!modal || !modalContent) return;
+
+    const title = prod.nombre || prod.descripcion_completa;
+    const price = prod.precio_mxn || prod.precio;
+    const original = prod.precio_original || (price * 1.33);
+    const mayoreo = prod.precio_mayoreo_10pzs || (price * 0.93);
+    const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+    const localImg = prod.img || `assets/img/catalog/${prod.categoria_clasificada}/${sku}.jpg`;
+    const desc = prod.descripcion_completa || '';
+    const marca = prod.marca || 'CT';
+    const cat = prod.categoria_clasificada || 'Hardware';
+
+    modalContent.innerHTML = `
+        <div class="w-full flex justify-between items-center border-b border-slate-800 pb-3 mb-4">
+            <div class="flex items-center gap-2">
+                <span class="text-xs font-mono font-bold text-cyan-400 bg-cyan-950/80 border border-cyan-500/40 px-2.5 py-1 rounded-full uppercase">
+                    Ficha Técnica Oficial CT
+                </span>
+                <span class="text-xs font-mono text-slate-400">SKU: <strong>${sku}</strong></span>
+            </div>
+            <button onclick="closeProductDetailModal()" class="text-slate-400 hover:text-white text-lg p-1 transition cursor-pointer">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+        </div>
+
+        <!-- ESTRUCTURA SIMÉTRICA DE 3 COLUMNAS -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            
+            <!-- COLUMNA 1 (IZQUIERDA - GALERÍA VISUAL Y FOTOGRAFÍAS REALES) -->
+            <div class="lg:col-span-4 flex flex-col gap-3">
+                <div class="w-full h-72 sm:h-80 bg-slate-950 border-2 border-cyan-500/40 rounded-2xl flex items-center justify-center p-4 relative shadow-2xl overflow-hidden group">
+                    <img 
+                        id="pdp-main-image"
+                        src="${localImg}" 
+                        alt="${title}" 
+                        class="w-full h-full object-contain group-hover:scale-110 transition duration-300"
+                        onerror="this.onerror=null; this.src='${cdnImg}'; this.onerror=function(){this.src='assets/img/catalog/gabinete_negro.webp';};"
+                    />
+                    <div class="absolute top-3 left-3 bg-red-600 text-white font-black text-[10px] uppercase px-2.5 py-1 rounded-md shadow">
+                        -25% Oferta
+                    </div>
+                </div>
+
+                <!-- Miniaturas Deslizables -->
+                <div class="grid grid-cols-4 gap-2">
+                    <button onclick="document.getElementById('pdp-main-image').src='${localImg}'" class="h-16 bg-slate-950 border border-cyan-400 rounded-xl p-1 flex items-center justify-center hover:opacity-80 transition cursor-pointer">
+                        <img src="${localImg}" alt="Vista 1" class="w-full h-full object-contain" />
+                    </button>
+                    <button onclick="document.getElementById('pdp-main-image').src='${cdnImg}'" class="h-16 bg-slate-950 border border-slate-800 rounded-xl p-1 flex items-center justify-center hover:border-cyan-400 transition cursor-pointer">
+                        <img src="${cdnImg}" alt="Vista CDN" class="w-full h-full object-contain" />
+                    </button>
+                    <button onclick="document.getElementById('pdp-main-image').src='assets/img/catalog/gabinete_negro.webp'" class="h-16 bg-slate-950 border border-slate-800 rounded-xl p-1 flex items-center justify-center hover:border-cyan-400 transition cursor-pointer">
+                        <img src="assets/img/catalog/gabinete_negro.webp" alt="Gabinete" class="w-full h-full object-contain" />
+                    </button>
+                    <button onclick="document.getElementById('pdp-main-image').src='assets/img/Female_technician_assembling_gam_202608041518_thumb.webp'" class="h-16 bg-slate-950 border border-slate-800 rounded-xl p-1 flex items-center justify-center hover:border-cyan-400 transition cursor-pointer">
+                        <img src="assets/img/Female_technician_assembling_gam_202608041518_thumb.webp" alt="Ensamble" class="w-full h-full object-contain" />
+                    </button>
+                </div>
+            </div>
+
+            <!-- COLUMNA 2 (CENTRO - ESPECIFICACIONES TÉCNICAS Y COMPATIBILIDAD) -->
+            <div class="lg:col-span-5 flex flex-col gap-4 text-slate-200">
+                <div>
+                    <span class="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider block mb-1">Marca Oficial: ${marca}</span>
+                    <h2 class="text-base sm:text-xl font-bold text-white leading-snug mb-2">${title}</h2>
+                    
+                    <div class="flex items-center gap-2 text-xs font-mono text-slate-400 pb-3 border-b border-slate-800">
+                        <div class="flex items-center text-amber-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span>(5.0 Calificación Oficial)</span>
+                        <span>•</span>
+                        <span class="text-emerald-400 font-bold">100% Original Nuevo</span>
+                    </div>
+                </div>
+
+                <!-- Disponibilidad y Sucursal -->
+                <div class="bg-emerald-950/60 border border-emerald-500/50 p-3 rounded-xl flex items-center gap-3">
+                    <i class="fa-solid fa-circle-check text-emerald-400 text-xl shrink-0"></i>
+                    <div class="text-xs">
+                        <strong class="text-emerald-300 block">Disponible en Sucursal Guadalajara</strong>
+                        <span class="text-slate-300">Pedro Moreno 501 A, Zona Centro. Retiro en 15 minutos o entrega express.</span>
+                    </div>
+                </div>
+
+                <!-- Tabla de Especificaciones Técnicas -->
+                <div class="space-y-2 text-xs">
+                    <h3 class="font-bold text-white uppercase text-xs font-mono flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-cyan-400"></i> Características & Especificaciones
+                    </h3>
+                    <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-3 space-y-2 text-slate-300 leading-relaxed font-sans">
+                        <p><strong>Descripción:</strong> ${desc}</p>
+                        <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800 text-[11px] font-mono">
+                            <div><span class="text-slate-500">Categoría:</span> <strong class="text-cyan-300">${cat.toUpperCase()}</strong></div>
+                            <div><span class="text-slate-500">Garantía:</span> <strong class="text-white">48h Directa / 1 Año</strong></div>
+                            <div><span class="text-slate-500">Clave CT:</span> <strong class="text-white">${sku}</strong></div>
+                            <div><span class="text-slate-500">Embalaje:</span> <strong class="text-white">Caja Sellada Fábrica</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMNA 3 (DERECHA - PASARELA DE CONVERSIÓN & PRECIOS) -->
+            <div class="lg:col-span-3 bg-slate-950 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between gap-4 shadow-2xl">
+                
+                <div>
+                    <!-- Desglose Comercial de Precios -->
+                    <div class="border-b border-slate-800 pb-3 space-y-1">
+                        <span class="text-[10px] text-slate-400 font-mono line-through block">
+                            Precio de Lista: $${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
+                        </span>
+                        <div class="text-2xl font-black text-emerald-400 font-mono tracking-tight drop-shadow-[0_0_10px_rgba(52,211,153,0.4)]">
+                            $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
+                        </div>
+                        <span class="text-[10px] text-cyan-300 font-mono font-bold block">
+                            🔥 Ahorras 25% ($${(original - price).toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN)
+                        </span>
+                    </div>
+
+                    <!-- Botones de Acción -->
+                    <div class="pt-3 space-y-2">
+                        <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-1">
+                            <span>Cantidad:</span>
+                            <select id="pdp-qty-select" class="bg-slate-900 border border-slate-700 text-white rounded-lg px-2 py-1 outline-none cursor-pointer">
+                                <option value="1">1 Unidad</option>
+                                <option value="2">2 Unidades</option>
+                                <option value="5">5 Unidades</option>
+                                <option value="10">10 Unidades (Mayoreo)</option>
+                            </select>
+                        </div>
+
+                        <button 
+                            onclick="const q=parseInt(document.getElementById('pdp-qty-select').value)||1; addToCartCT('${sku}', '${title}', ${price}, '${localImg}', q); closeProductDetailModal();" 
+                            class="w-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/50 hover:border-cyan-400 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition cursor-pointer shadow"
+                        >
+                            <i class="fa-solid fa-cart-plus"></i> <span>Agregar al Carrito</span>
+                        </button>
+
+                        <button 
+                            onclick="const q=parseInt(document.getElementById('pdp-qty-select').value)||1; addToCartCT('${sku}', '${title}', ${price}, '${localImg}', q); window.location.href='checkout.html';" 
+                            class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition active:scale-95 shadow-lg cursor-pointer"
+                        >
+                            <i class="fa-solid fa-bolt"></i> <span>Pagar Ahora (SPEI / MP)</span>
+                        </button>
+                    </div>
+
+                    <!-- Módulo de Cashback 5% y Mayoreo -->
+                    <div class="mt-4 pt-3 border-t border-slate-800 space-y-2 text-[11px]">
+                        <div class="bg-slate-900/90 border border-emerald-500/40 p-2.5 rounded-xl space-y-1">
+                            <div class="flex items-center gap-1.5 text-emerald-400 font-mono font-bold">
+                                <i class="fa-solid fa-coins"></i> <span>5% DE CASHBACK</span>
+                            </div>
+                            <p class="text-slate-300 text-[10px] leading-tight">Acumula saldo en monedero registrando tu WhatsApp en la cuenta.</p>
+                        </div>
+
+                        <div class="bg-slate-900/90 border border-amber-500/40 p-2.5 rounded-xl space-y-1">
+                            <div class="flex items-center gap-1.5 text-amber-400 font-mono font-bold">
+                                <i class="fa-solid fa-boxes-stacked"></i> <span>MAYOREO DISPONIBLE</span>
+                            </div>
+                            <p class="text-slate-300 text-[10px] leading-tight">A partir de 10 piezas: <strong>$${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN</strong> c/u.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-[10px] text-slate-500 font-mono text-center pt-2">
+                    🔒 Transacción protegida SSL 256-bit • Facturación inmediata
+                </div>
+
+            </div>
+
+        </div>
+    `;
+
+    modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+};
+
+window.closeProductDetailModal = function() {
+    const modal = document.getElementById("productDetailModal");
+    if (modal) modal.classList.add("hidden");
+    document.body.style.overflow = "auto";
+};
 
 function renderPaginationBar(totalPages) {
     const containers = document.querySelectorAll(".pagination-target-bar");
@@ -296,26 +501,25 @@ function renderSidebarFacets() {
 
     const catMetaList = [
         { id: 'Todas', name: 'Todas las Categorías', count: 16122, icon: 'fa-layer-group' },
-        { id: 'monitores', name: 'Monitores & Pantallas PC', count: 326, icon: 'fa-desktop' },
-        { id: 'procesadores', name: 'Procesadores (CPUs)', count: 204, icon: 'fa-microchip' },
-        { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', count: 174, icon: 'fa-chess-board' },
-        { id: 'tarjetas_de_video', name: 'Tarjetas de Video (GPUs)', count: 187, icon: 'fa-gamepad' },
-        { id: 'memorias_ram', name: 'Memorias RAM (DDR4 / DDR5)', count: 328, icon: 'fa-memory' },
-        { id: 'discos_duros', name: 'Discos Duros & SSD NVMe', count: 784, icon: 'fa-hard-drive' },
-        { id: 'fuentes_energia', name: 'Fuentes de Poder & UPS', count: 805, icon: 'fa-plug-circle-bolt' },
-        { id: 'gabinetes', name: 'Gabinetes & Chasis Gamer', count: 281, icon: 'fa-server' },
+        { id: 'monitores', name: 'Monitores & Pantallas PC', count: 623, icon: 'fa-desktop' },
+        { id: 'procesadores', name: 'Procesadores (CPUs)', count: 691, icon: 'fa-microchip' },
+        { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', count: 111, icon: 'fa-chess-board' },
+        { id: 'tarjetas_de_video', name: 'Tarjetas de Video (GPUs)', count: 61, icon: 'fa-gamepad' },
+        { id: 'memorias_ram', name: 'Memorias RAM (DDR4 / DDR5)', count: 597, icon: 'fa-memory' },
+        { id: 'discos_duros', name: 'Discos Duros & SSD NVMe', count: 484, icon: 'fa-hard-drive' },
+        { id: 'fuentes_energia', name: 'Fuentes de Poder & UPS', count: 80, icon: 'fa-plug-circle-bolt' },
+        { id: 'gabinetes', name: 'Gabinetes & Chasis Gamer', count: 402, icon: 'fa-server' },
         { id: 'enfriamiento', name: 'Enfriamiento Líquido/Aire', count: 228, icon: 'fa-snowflake' },
-        { id: 'impresoras', name: 'Impresoras & Multifuncionales', count: 701, icon: 'fa-print' },
-        { id: 'consumibles', name: 'Tintas, Tóner & Consumibles', count: 2017, icon: 'fa-fill-drip' },
-        { id: 'conectividad_redes', name: 'Conectividad & Routers WiFi', count: 2027, icon: 'fa-network-wired' },
-        { id: 'software', name: 'Software & Licencias', count: 648, icon: 'fa-compact-disc' },
-        { id: 'accesorios_perifericos', name: 'Teclados, Mouse & Periféricos', count: 1484, icon: 'fa-keyboard' },
-        { id: 'telefonia_seguridad', name: 'Videovigilancia CCTV & Telefonía', count: 352, icon: 'fa-video' },
-        { id: 'equipos_de_marca', name: 'Laptops & Computadoras', count: 193, icon: 'fa-laptop' },
-        { id: 'punto_de_venta', name: 'Punto de Venta (POS)', count: 564, icon: 'fa-barcode' },
-        { id: 'electronica_consumo', name: 'Smart TVs & Audio', count: 209, icon: 'fa-tv' },
-        { id: 'linea_blanca', name: 'Climatización & Línea Blanca', count: 26, icon: 'fa-fan' },
-        { id: 'outlet_remates', name: 'Remates & Liquidaciones', count: 5, icon: 'fa-tags' }
+        { id: 'impresoras', name: 'Impresoras & Multifuncionales', count: 416, icon: 'fa-print' },
+        { id: 'consumibles', name: 'Tintas, Tóner & Consumibles', count: 592, icon: 'fa-fill-drip' },
+        { id: 'conectividad_redes', name: 'Conectividad & Routers WiFi', count: 584, icon: 'fa-network-wired' },
+        { id: 'software', name: 'Software & Licencias', count: 580, icon: 'fa-compact-disc' },
+        { id: 'accesorios_perifericos', name: 'Teclados, Mouse & Periféricos', count: 4593, icon: 'fa-keyboard' },
+        { id: 'telefonia_seguridad', name: 'Videovigilancia CCTV & Telefonía', count: 849, icon: 'fa-video' },
+        { id: 'equipos_de_marca', name: 'Laptops & Computadoras', count: 27, icon: 'fa-laptop' },
+        { id: 'punto_de_venta', name: 'Punto de Venta (POS)', count: 156, icon: 'fa-barcode' },
+        { id: 'electronica_consumo', name: 'Smart TVs & Audio', count: 728, icon: 'fa-tv' },
+        { id: 'linea_blanca', name: 'Climatización & Línea Blanca', count: 56, icon: 'fa-fan' }
     ];
 
     const brandCounts = { 'ASUS': 218, 'INTEL': 142, 'AMD': 116, 'KINGSTON': 287, 'ACTECK': 213, 'MSI': 98, 'GIGABYTE': 124, 'TRIPP-LITE': 86, 'ADATA': 94, 'CORSAIR': 76, 'LOGITECH': 115, 'SAMSUNG': 64, 'LG': 58, 'DELL': 72, 'HP': 89, 'LENOVO': 95 };
@@ -422,11 +626,11 @@ function resetFacets() {
     renderExactCatalogView();
 }
 
-window.addToCartCT = function(sku, title, price, img) {
+window.addToCartCT = function(sku, title, price, img, qty = 1) {
     let cart = JSON.parse(localStorage.getItem('ecosystem_global_cart') || localStorage.getItem('cart_items') || '[]');
     const existing = cart.find(i => i.sku === sku);
     if (existing) {
-        existing.quantity = (existing.quantity || 1) + 1;
+        existing.quantity = (existing.quantity || 1) + qty;
         existing.qty = existing.quantity;
     } else {
         cart.push({
@@ -435,8 +639,8 @@ window.addToCartCT = function(sku, title, price, img) {
             title: title,
             precio: price,
             price: price,
-            quantity: 1,
-            qty: 1,
+            quantity: qty,
+            qty: qty,
             imagen: img,
             image: img
         });
@@ -444,11 +648,11 @@ window.addToCartCT = function(sku, title, price, img) {
     localStorage.setItem('ecosystem_global_cart', JSON.stringify(cart));
     localStorage.setItem('cart_items', JSON.stringify(cart));
     syncBoutiqueCart();
-    alert(`🛒 ¡${title} se agregó a la canasta!`);
+    alert(`🛒 ¡(${qty}) ${title} agregado al carrito!`);
 };
 
 window.buyNowCT = function(sku, title, price, img) {
-    window.addToCartCT(sku, title, price, img);
+    window.addToCartCT(sku, title, price, img, 1);
     window.location.href = "checkout.html";
 };
 
