@@ -17,6 +17,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD830.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD830/PLOHPD830_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -38,6 +39,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD435.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD435/PLOHPD435_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -59,6 +61,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD610.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD610/PLOHPD610_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -80,6 +83,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD840.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD840/PLOHPD840_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -101,6 +105,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD760.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD760/PLOHPD760_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -122,6 +127,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD770.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD770/PLOHPD770_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -143,6 +149,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD780.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD780/PLOHPD780_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -164,6 +171,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD530.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD530/PLOHPD530_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -185,6 +193,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD860.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD860/PLOHPD860_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -206,6 +215,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD870.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD870/PLOHPD870_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -227,6 +237,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD880.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD880/PLOHPD880_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -248,6 +259,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD890.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD890/PLOHPD890_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -269,6 +281,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD900.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD900/PLOHPD900_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -290,6 +303,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD810.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD810/PLOHPD810_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -311,6 +325,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD910.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD910/PLOHPD910_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -332,6 +347,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOHPD920.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOHPD920/PLOHPD920_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -353,6 +369,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/APLHPD610.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/APLHPD610/APLHPD610_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -374,6 +391,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI3075.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI3075/IMPHPI3075_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -395,6 +413,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI2925.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI2925/IMPHPI2925_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -416,6 +435,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI2885.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI2885/IMPHPI2885_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -437,6 +457,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI2560.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI2560/IMPHPI2560_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -458,6 +479,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI2875.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI2875/IMPHPI2875_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -479,6 +501,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI4130.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI4130/IMPHPI4130_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -500,6 +523,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI4120.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI4120/IMPHPI4120_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -521,6 +545,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI2715.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI2715/IMPHPI2715_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -542,6 +567,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI2900.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI2900/IMPHPI2900_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -563,6 +589,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI2975.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI2975/IMPHPI2975_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -584,6 +611,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI4140.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI4140/IMPHPI4140_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -605,6 +633,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI4090.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI4090/IMPHPI4090_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -626,6 +655,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI2965.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI2965/IMPHPI2965_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -647,6 +677,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI2995.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI2995/IMPHPI2995_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -668,6 +699,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI2435.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI2435/MTFHPI2435_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -689,6 +721,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI1465.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI1465/MTFHPI1465_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -710,6 +743,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI1475.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI1475/MTFHPI1475_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -731,6 +765,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI1015.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI1015/MTFHPI1015_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -752,6 +787,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI1325.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI1325/MTFHPI1325_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -773,6 +809,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI2960.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI2960/MTFHPI2960_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -794,6 +831,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI3010.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI3010/MTFHPI3010_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -815,6 +853,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI3020.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI3020/MTFHPI3020_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -836,6 +875,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI4150.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI4150/IMPHPI4150_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -857,6 +897,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI1345.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI1345/MTFHPI1345_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -878,6 +919,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI3040.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI3040/MTFHPI3040_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -899,6 +941,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI1505.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI1505/MTFHPI1505_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -920,6 +963,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI1595.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI1595/MTFHPI1595_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -941,6 +985,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI1535.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI1535/MTFHPI1535_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -962,6 +1007,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI1600.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI1600/MTFHPI1600_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -983,6 +1029,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI2930.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI2930/MTFHPI2930_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1004,6 +1051,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI2910.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI2910/MTFHPI2910_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1025,6 +1073,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI2915.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI2915/MTFHPI2915_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1046,6 +1095,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI1025.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI1025/MTFHPI1025_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1067,6 +1117,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI2990.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI2990/MTFHPI2990_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1088,6 +1139,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI3030.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI3030/MTFHPI3030_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1109,6 +1161,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI1395.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI1395/MTFHPI1395_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1130,6 +1183,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI3000.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI3000/MTFHPI3000_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1151,6 +1205,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI1690.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI1690/IMPHPI1690_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1172,6 +1227,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI2950.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI2950/MTFHPI2950_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1193,6 +1249,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI2920.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI2920/MTFHPI2920_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1214,6 +1271,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI2550.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI2550/IMPHPI2550_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1235,6 +1293,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPHPI4110.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPHPI4110/IMPHPI4110_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1256,6 +1315,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI2970.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI2970/MTFHPI2970_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1277,6 +1337,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFHPI2980.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFHPI2980/MTFHPI2980_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1298,6 +1359,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAHPI510.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAHPI510/SCAHPI510_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1319,6 +1381,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAHPI520.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAHPI520/SCAHPI520_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1340,6 +1403,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAHPI530.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAHPI530/SCAHPI530_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1361,6 +1425,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAHPI465.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAHPI465/SCAHPI465_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1382,6 +1447,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAHPI455.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAHPI455/SCAHPI455_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1403,6 +1469,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAHPI440.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAHPI440/SCAHPI440_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1424,6 +1491,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAHPI475.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAHPI475/SCAHPI475_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1445,6 +1513,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAHPI480.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAHPI480/SCAHPI480_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1466,6 +1535,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAHPI380.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAHPI380/SCAHPI380_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1487,6 +1557,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAHPI570.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAHPI570/SCAHPI570_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1508,6 +1579,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAHPI550.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAHPI550/SCAHPI550_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1529,6 +1601,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAHPI560.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAHPI560/SCAHPI560_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1550,6 +1623,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAHPI490.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAHPI490/SCAHPI490_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1571,6 +1645,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAHPI500.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAHPI500/SCAHPI500_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1592,6 +1667,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ACCHPI2950.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCHPI2950/ACCHPI2950_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1613,6 +1689,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3780.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3780/IMPEPS3780_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1634,6 +1711,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3300.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3300/IMPEPS3300_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1655,6 +1733,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3370.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3370/IMPEPS3370_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1676,6 +1755,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3390.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3390/IMPEPS3390_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1697,6 +1777,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS4110.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS4110/IMPEPS4110_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1718,6 +1799,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3800.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3800/IMPEPS3800_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1739,6 +1821,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS2820.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS2820/IMPEPS2820_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1760,6 +1843,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS300.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS300/PLOEPS300_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1781,6 +1865,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS310.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS310/PLOEPS310_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1802,6 +1887,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS320.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS320/PLOEPS320_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1823,6 +1909,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS330.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS330/PLOEPS330_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1844,6 +1931,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS340.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS340/PLOEPS340_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1865,6 +1953,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS270.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS270/PLOEPS270_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1886,6 +1975,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS200.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS200/PLOEPS200_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1907,6 +1997,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS280.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS280/PLOEPS280_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1928,6 +2019,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS290.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS290/PLOEPS290_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1949,6 +2041,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS250.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS250/PLOEPS250_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1970,6 +2063,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS260.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS260/PLOEPS260_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1991,6 +2085,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS210.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS210/PLOEPS210_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2012,6 +2107,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS220.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS220/PLOEPS220_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2033,6 +2129,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS230.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS230/PLOEPS230_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2054,6 +2151,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS240.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS240/PLOEPS240_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2075,6 +2173,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOEPS170.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOEPS170/PLOEPS170_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2096,6 +2195,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS4030.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS4030/IMPEPS4030_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2117,6 +2217,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS4040.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS4040/IMPEPS4040_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2138,6 +2239,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS4060.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS4060/IMPEPS4060_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2159,6 +2261,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3560.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3560/IMPEPS3560_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2180,6 +2283,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3570.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3570/IMPEPS3570_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2201,6 +2305,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3610.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3610/IMPEPS3610_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2222,6 +2327,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3810.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3810/IMPEPS3810_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2243,6 +2349,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS4120.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS4120/IMPEPS4120_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2264,6 +2371,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS4130.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS4130/IMPEPS4130_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2285,6 +2393,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3360.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3360/IMPEPS3360_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2306,6 +2415,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3640.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3640/IMPEPS3640_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2327,6 +2437,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3500.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3500/IMPEPS3500_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2348,6 +2459,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3510.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3510/IMPEPS3510_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2369,6 +2481,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3430.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3430/IMPEPS3430_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2390,6 +2503,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3470.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3470/IMPEPS3470_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2411,6 +2525,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3760.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3760/IMPEPS3760_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2432,6 +2547,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3530.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3530/IMPEPS3530_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2453,6 +2569,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3540.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3540/IMPEPS3540_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2474,6 +2591,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3740.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3740/IMPEPS3740_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2495,6 +2613,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3550.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3550/IMPEPS3550_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2516,6 +2635,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3210.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3210/IMPEPS3210_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2537,6 +2657,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS1490.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS1490/IMPEPS1490_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2558,6 +2679,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS2520.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS2520/IMPEPS2520_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2579,6 +2701,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3160.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3160/IMPEPS3160_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2600,6 +2723,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3030.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3030/IMPEPS3030_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2621,6 +2745,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3250.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3250/IMPEPS3250_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2642,6 +2767,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS3120.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS3120/IMPEPS3120_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2663,6 +2789,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPEPS1140.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPEPS1140/IMPEPS1140_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2684,6 +2811,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ACCEPS630.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCEPS630/ACCEPS630_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2705,6 +2833,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS830.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS830/SCAEPS830_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2726,6 +2855,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS840.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS840/SCAEPS840_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2747,6 +2877,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS850.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS850/SCAEPS850_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2768,6 +2899,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS860.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS860/SCAEPS860_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2789,6 +2921,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS800.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS800/SCAEPS800_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2810,6 +2943,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS710.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS710/SCAEPS710_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2831,6 +2965,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS720.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS720/SCAEPS720_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2852,6 +2987,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS760.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS760/SCAEPS760_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2873,6 +3009,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS810.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS810/SCAEPS810_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2894,6 +3031,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS730.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS730/SCAEPS730_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2915,6 +3053,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS740.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS740/SCAEPS740_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2936,6 +3075,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS750.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS750/SCAEPS750_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2957,6 +3097,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS680.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS680/SCAEPS680_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2978,6 +3119,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS670.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS670/SCAEPS670_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2999,6 +3141,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS550.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS550/SCAEPS550_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3020,6 +3163,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS700.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS700/SCAEPS700_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3041,6 +3185,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS780.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS780/SCAEPS780_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3062,6 +3207,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS790.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS790/SCAEPS790_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3083,6 +3229,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS390.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS390/SCAEPS390_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3104,6 +3251,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS330.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS330/SCAEPS330_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3125,6 +3273,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAEPS820.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAEPS820/SCAEPS820_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3146,6 +3295,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPCNN2340.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPCNN2340/IMPCNN2340_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3167,6 +3317,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPCNN2310.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPCNN2310/IMPCNN2310_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3188,6 +3339,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPCNN2250.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPCNN2250/IMPCNN2250_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3209,6 +3361,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPCNN2260.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPCNN2260/IMPCNN2260_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3230,6 +3383,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPCNN2320.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPCNN2320/IMPCNN2320_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3251,6 +3405,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPCNN2180.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPCNN2180/IMPCNN2180_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3272,6 +3427,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPCNN2190.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPCNN2190/IMPCNN2190_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3293,6 +3449,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPCNN2410.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPCNN2410/IMPCNN2410_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3314,6 +3471,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPCNN2420.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPCNN2420/IMPCNN2420_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3335,6 +3493,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/COPCNN590.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/COPCNN590/COPCNN590_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3356,6 +3515,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/COPCNN440.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/COPCNN440/COPCNN440_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3377,6 +3537,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPCNN2400.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPCNN2400/IMPCNN2400_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3398,6 +3559,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPCNN2430.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPCNN2430/IMPCNN2430_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3419,6 +3581,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/COPCNN340.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/COPCNN340/COPCNN340_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3440,6 +3603,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPCNN2080.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPCNN2080/IMPCNN2080_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3461,6 +3625,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCACNN490.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCACNN490/SCACNN490_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3482,6 +3647,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCACNN430.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCACNN430/SCACNN430_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3503,6 +3669,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCACNN550.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCACNN550/SCACNN550_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3524,6 +3691,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCACNN500.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCACNN500/SCACNN500_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3545,6 +3713,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCACNN540.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCACNN540/SCACNN540_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3566,6 +3735,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCACNN520.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCACNN520/SCACNN520_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3587,6 +3757,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCACNN530.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCACNN530/SCACNN530_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3608,6 +3779,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOCNN370.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOCNN370/PLOCNN370_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3629,6 +3801,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOCNN380.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOCNN380/PLOCNN380_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3650,6 +3823,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOCNN350.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOCNN350/PLOCNN350_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3671,6 +3845,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PLOCNN390.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PLOCNN390/PLOCNN390_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3692,6 +3867,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM2140.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM2140/IMPLXM2140_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3713,6 +3889,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM2150.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM2150/IMPLXM2150_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3734,6 +3911,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM2330.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM2330/IMPLXM2330_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3755,6 +3933,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM2170.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM2170/IMPLXM2170_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3776,6 +3955,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM2190.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM2190/IMPLXM2190_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3797,6 +3977,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM1600.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM1600/IMPLXM1600_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3818,6 +3999,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM1620.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM1620/IMPLXM1620_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3839,6 +4021,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM2310.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM2310/IMPLXM2310_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3860,6 +4043,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM2320.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM2320/IMPLXM2320_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3881,6 +4065,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM2160.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM2160/IMPLXM2160_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3902,6 +4087,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM2180.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM2180/IMPLXM2180_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3923,6 +4109,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM2200.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM2200/IMPLXM2200_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3944,6 +4131,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM2100.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM2100/IMPLXM2100_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3965,6 +4153,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM2090.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM2090/IMPLXM2090_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3986,6 +4175,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM1460.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM1460/IMPLXM1460_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4007,6 +4197,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM1680.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM1680/IMPLXM1680_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4028,6 +4219,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM1690.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM1690/IMPLXM1690_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4049,6 +4241,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM1700.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM1700/IMPLXM1700_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4070,6 +4263,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM1710.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM1710/IMPLXM1710_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4091,6 +4285,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM1720.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM1720/IMPLXM1720_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4112,6 +4307,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM1730.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM1730/IMPLXM1730_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4133,6 +4329,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM2120.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM2120/IMPLXM2120_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4154,6 +4351,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM1870.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM1870/IMPLXM1870_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4175,6 +4373,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM1450.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM1450/IMPLXM1450_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4196,6 +4395,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPLXM1780.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPLXM1780/IMPLXM1780_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4217,6 +4417,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2730.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2730/IMPXRX2730_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4238,6 +4439,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2800.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2800/IMPXRX2800_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4259,6 +4461,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2810.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2810/IMPXRX2810_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4280,6 +4483,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2250.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2250/IMPXRX2250_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4301,6 +4505,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2560.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2560/IMPXRX2560_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4322,6 +4527,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2760.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2760/IMPXRX2760_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4343,6 +4549,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX3020.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX3020/IMPXRX3020_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4364,6 +4571,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX1130.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX1130/IMPXRX1130_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4385,6 +4593,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2620.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2620/IMPXRX2620_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4406,6 +4615,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2580.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2580/IMPXRX2580_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4427,6 +4637,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2630.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2630/IMPXRX2630_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4448,6 +4659,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2640.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2640/IMPXRX2640_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4469,6 +4681,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2600.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2600/IMPXRX2600_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4490,6 +4703,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2740.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2740/IMPXRX2740_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4511,6 +4725,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2750.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2750/IMPXRX2750_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4532,6 +4747,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2590.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2590/IMPXRX2590_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4553,6 +4769,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2980.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2980/IMPXRX2980_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4574,6 +4791,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2780.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2780/IMPXRX2780_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4595,6 +4813,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2700.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2700/IMPXRX2700_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4616,6 +4835,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2710.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2710/IMPXRX2710_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4637,6 +4857,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2720.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2720/IMPXRX2720_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4658,6 +4879,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2890.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2890/IMPXRX2890_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4679,6 +4901,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2900.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2900/IMPXRX2900_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4700,6 +4923,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2910.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2910/IMPXRX2910_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4721,6 +4945,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2920.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2920/IMPXRX2920_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4742,6 +4967,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2930.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2930/IMPXRX2930_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4763,6 +4989,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2940.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2940/IMPXRX2940_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4784,6 +5011,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2990.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2990/IMPXRX2990_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4805,6 +5033,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX3000.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX3000/IMPXRX3000_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4826,6 +5055,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX3010.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX3010/IMPXRX3010_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4847,6 +5077,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX3030.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX3030/IMPXRX3030_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4868,6 +5099,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2950.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2950/IMPXRX2950_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4889,6 +5121,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2960.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2960/IMPXRX2960_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4910,6 +5143,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2970.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2970/IMPXRX2970_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4931,6 +5165,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2570.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2570/IMPXRX2570_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4952,6 +5187,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2670.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2670/IMPXRX2670_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4973,6 +5209,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2680.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2680/IMPXRX2680_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -4994,6 +5231,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2690.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2690/IMPXRX2690_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5015,6 +5253,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2820.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2820/IMPXRX2820_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5036,6 +5275,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2830.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2830/IMPXRX2830_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5057,6 +5297,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2840.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2840/IMPXRX2840_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5078,6 +5319,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2850.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2850/IMPXRX2850_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5099,6 +5341,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2530.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2530/IMPXRX2530_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5120,6 +5363,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2860.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2860/IMPXRX2860_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5141,6 +5385,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2870.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2870/IMPXRX2870_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5162,6 +5407,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2880.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2880/IMPXRX2880_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5183,6 +5429,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX2790.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX2790/IMPXRX2790_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5204,6 +5451,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPXRX1930.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPXRX1930/IMPXRX1930_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5225,6 +5473,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAXRX510.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAXRX510/SCAXRX510_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5246,6 +5495,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAXRX470.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAXRX470/SCAXRX470_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5267,6 +5517,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAXRX520.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAXRX520/SCAXRX520_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5288,6 +5539,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAXRX390.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAXRX390/SCAXRX390_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5309,6 +5561,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAXRX460.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAXRX460/SCAXRX460_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5330,6 +5583,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAXRX530.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAXRX530/SCAXRX530_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5351,6 +5605,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAXRX480.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAXRX480/SCAXRX480_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5372,6 +5627,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAXRX490.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAXRX490/SCAXRX490_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5393,6 +5649,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAXRX500.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAXRX500/SCAXRX500_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5414,6 +5671,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAXRX540.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAXRX540/SCAXRX540_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5435,6 +5693,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ACCXRX1980.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCXRX1980/ACCXRX1980_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5456,6 +5715,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ACCXRX610.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCXRX610/ACCXRX610_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5477,6 +5737,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ACCXRX680.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCXRX680/ACCXRX680_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5498,6 +5759,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ACCXRX700.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCXRX700/ACCXRX700_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5519,6 +5781,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ACCXRX870.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCXRX870/ACCXRX870_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5540,6 +5803,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ACCXRX2000.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCXRX2000/ACCXRX2000_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5561,6 +5825,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK200.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK200/SCAKDK200_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5582,6 +5847,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK820.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK820/SCAKDK820_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5603,6 +5869,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK830.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK830/SCAKDK830_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5624,6 +5891,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK720.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK720/SCAKDK720_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5645,6 +5913,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK730.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK730/SCAKDK730_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5666,6 +5935,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK690.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK690/SCAKDK690_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5687,6 +5957,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK640.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK640/SCAKDK640_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5708,6 +5979,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK650.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK650/SCAKDK650_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5729,6 +6001,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK660.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK660/SCAKDK660_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5750,6 +6023,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK670.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK670/SCAKDK670_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5771,6 +6045,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK440.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK440/SCAKDK440_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5792,6 +6067,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK770.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK770/SCAKDK770_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5813,6 +6089,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK740.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK740/SCAKDK740_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5834,6 +6111,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK750.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK750/SCAKDK750_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5855,6 +6133,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK780.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK780/SCAKDK780_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5876,6 +6155,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK610.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK610/SCAKDK610_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5897,6 +6177,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK790.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK790/SCAKDK790_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5918,6 +6199,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK800.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK800/SCAKDK800_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5939,6 +6221,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAKDK110.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAKDK110/SCAKDK110_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5960,6 +6243,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC360.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC360/IMPKYC360_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -5981,6 +6265,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC370.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC370/IMPKYC370_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6002,6 +6287,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC990.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC990/IMPKYC990_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6023,6 +6309,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC460.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC460/IMPKYC460_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6044,6 +6331,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC340.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC340/IMPKYC340_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6065,6 +6353,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC350.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC350/IMPKYC350_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6086,6 +6375,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC1000.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC1000/IMPKYC1000_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6107,6 +6397,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC840.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC840/IMPKYC840_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6128,6 +6419,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC1050.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC1050/IMPKYC1050_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6149,6 +6441,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC820.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC820/IMPKYC820_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6170,6 +6463,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC800.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC800/IMPKYC800_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6191,6 +6485,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC390.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC390/IMPKYC390_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6212,6 +6507,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC530.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC530/IMPKYC530_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6233,6 +6529,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC1020.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC1020/IMPKYC1020_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6254,6 +6551,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC1030.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC1030/IMPKYC1030_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6275,6 +6573,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC1010.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC1010/IMPKYC1010_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6296,6 +6595,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC730.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC730/IMPKYC730_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6317,6 +6617,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC810.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC810/IMPKYC810_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6338,6 +6639,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC550.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC550/IMPKYC550_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6359,6 +6661,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC560.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC560/IMPKYC560_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6380,6 +6683,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC570.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC570/IMPKYC570_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6401,6 +6705,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC850.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC850/IMPKYC850_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6422,6 +6727,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC860.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC860/IMPKYC860_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6443,6 +6749,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC870.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC870/IMPKYC870_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6464,6 +6771,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC880.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC880/IMPKYC880_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6485,6 +6793,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC890.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC890/IMPKYC890_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6506,6 +6815,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC900.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC900/IMPKYC900_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6527,6 +6837,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC910.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC910/IMPKYC910_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6548,6 +6859,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC920.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC920/IMPKYC920_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6569,6 +6881,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC930.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC930/IMPKYC930_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6590,6 +6903,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC940.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC940/IMPKYC940_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6611,6 +6925,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC950.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC950/IMPKYC950_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6632,6 +6947,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC960.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC960/IMPKYC960_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6653,6 +6969,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC970.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC970/IMPKYC970_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6674,6 +6991,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPKYC980.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPKYC980/IMPKYC980_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6695,6 +7013,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT830.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT830/IMPBRT830_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6716,6 +7035,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT750.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT750/IMPBRT750_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6737,6 +7057,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT770.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT770/IMPBRT770_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6758,6 +7079,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT820.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT820/IMPBRT820_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6779,6 +7101,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT920.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT920/IMPBRT920_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6800,6 +7123,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT740.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT740/IMPBRT740_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6821,6 +7145,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT780.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT780/IMPBRT780_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6842,6 +7167,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT790.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT790/IMPBRT790_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6863,6 +7189,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPMTB560.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPMTB560/IMPMTB560_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6884,6 +7211,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT840.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT840/IMPBRT840_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6905,6 +7233,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT760.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT760/IMPBRT760_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6926,6 +7255,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT800.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT800/IMPBRT800_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6947,6 +7277,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT810.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT810/IMPBRT810_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6968,6 +7299,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPMTB1020.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPMTB1020/IMPMTB1020_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -6989,6 +7321,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPMTB1030.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPMTB1030/IMPMTB1030_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7010,6 +7343,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPMTB1010.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPMTB1010/IMPMTB1010_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7031,6 +7365,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPMTB990.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPMTB990/IMPMTB990_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7052,6 +7387,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPMTB870.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPMTB870/IMPMTB870_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7073,6 +7409,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPMTB970.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPMTB970/IMPMTB970_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7094,6 +7431,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPMTB980.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPMTB980/IMPMTB980_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7115,6 +7453,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT690.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT690/IMPBRT690_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7136,6 +7475,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT700.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT700/IMPBRT700_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7157,6 +7497,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT730.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT730/IMPBRT730_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7178,6 +7519,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT860.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT860/IMPBRT860_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7199,6 +7541,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT850.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT850/IMPBRT850_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7220,6 +7563,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT870.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT870/IMPBRT870_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7241,6 +7585,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT890.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT890/IMPBRT890_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7262,6 +7607,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT880.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT880/IMPBRT880_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7283,6 +7629,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPBRT900.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPBRT900/IMPBRT900_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7304,6 +7651,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCABRT210.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCABRT210/SCABRT210_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7325,6 +7673,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCABRT220.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCABRT220/SCABRT220_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7346,6 +7695,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCABRT270.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCABRT270/SCABRT270_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7367,6 +7717,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCABRT230.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCABRT230/SCABRT230_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7388,6 +7739,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCABRT240.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCABRT240/SCABRT240_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7409,6 +7761,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCABRT250.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCABRT250/SCABRT250_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7430,6 +7783,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ROTBRT120.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ROTBRT120/ROTBRT120_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7451,6 +7805,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ROTBRT100.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ROTBRT100/ROTBRT100_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7472,6 +7827,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ROTBRT180.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ROTBRT180/ROTBRT180_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7493,6 +7849,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ROTBRT160.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ROTBRT160/ROTBRT160_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7514,6 +7871,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ROTBRT170.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ROTBRT170/ROTBRT170_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7535,6 +7893,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ROTBRT190.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ROTBRT190/ROTBRT190_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7556,6 +7915,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ROTBRT210.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ROTBRT210/ROTBRT210_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7577,6 +7937,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ROTBRT220.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ROTBRT220/ROTBRT220_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7598,6 +7959,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ROTBRT200.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ROTBRT200/ROTBRT200_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7619,6 +7981,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/ROTBRT110.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ROTBRT110/ROTBRT110_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7640,6 +8003,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/PAPPOL010.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/PAPPOL010/PAPPOL010_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7661,6 +8025,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT360.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT360/SCAFJT360_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7682,6 +8047,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT430.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT430/SCAFJT430_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7703,6 +8069,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT320.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT320/SCAFJT320_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7724,6 +8091,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT280.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT280/SCAFJT280_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7745,6 +8113,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT390.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT390/SCAFJT390_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7766,6 +8135,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT040.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT040/SCAFJT040_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7787,6 +8157,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT300.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT300/SCAFJT300_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7808,6 +8179,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT330.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT330/SCAFJT330_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7829,6 +8201,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT340.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT340/SCAFJT340_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7850,6 +8223,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT350.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT350/SCAFJT350_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7871,6 +8245,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT380.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT380/SCAFJT380_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7892,6 +8267,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT310.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT310/SCAFJT310_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7913,6 +8289,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT400.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT400/SCAFJT400_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7934,6 +8311,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT130.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT130/SCAFJT130_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7955,6 +8333,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT070.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT070/SCAFJT070_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7976,6 +8355,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT270.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT270/SCAFJT270_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -7997,6 +8377,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT440.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT440/SCAFJT440_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -8018,6 +8399,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT450.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT450/SCAFJT450_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -8039,6 +8421,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT460.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT460/SCAFJT460_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -8060,6 +8443,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT470.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT470/SCAFJT470_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -8081,6 +8465,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT480.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT480/SCAFJT480_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -8102,6 +8487,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/SCAFJT490.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SCAFJT490/SCAFJT490_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -8123,6 +8509,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPPTM030.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPPTM030/IMPPTM030_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -8144,6 +8531,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/IMPPTM020.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/IMPPTM020/IMPPTM020_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -8165,6 +8553,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFPTM060.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFPTM060/MTFPTM060_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -8186,6 +8575,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFPTM020.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFPTM020/MTFPTM020_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -8207,6 +8597,7 @@
     "categoria_clasificada": "impresoras",
     "img": "./assets/img/catalog/impresoras/MTFPTM040.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/MTFPTM040/MTFPTM040_400.jpg",
+    "placeholder": "./assets/img/placeholders/imp_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   }

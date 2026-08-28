@@ -17,6 +17,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/VENITL280.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/VENITL280/VENITL280_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -38,6 +39,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/VENITL040.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/VENITL040/VENITL040_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -59,6 +61,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABEVO530.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO530/GABEVO530_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -80,6 +83,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABEVO540.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO540/GABEVO540_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -101,6 +105,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABEVO550.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO550/GABEVO550_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -122,6 +127,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABEVO350.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO350/GABEVO350_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -143,6 +149,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABEVO360.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO360/GABEVO360_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -164,6 +171,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABEVO300.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO300/GABEVO300_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -185,6 +193,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABEVO460.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO460/GABEVO460_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -206,6 +215,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABEVO510.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO510/GABEVO510_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -227,6 +237,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABEVO470.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO470/GABEVO470_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -248,6 +259,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABEVO480.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO480/GABEVO480_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -269,6 +281,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABEVO490.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO490/GABEVO490_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -290,6 +303,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABEVO500.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO500/GABEVO500_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -311,6 +325,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABGEN125.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABGEN125/GABGEN125_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -332,6 +347,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABACT680.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT680/GABACT680_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -353,6 +369,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABACT690.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT690/GABACT690_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -374,6 +391,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABACT100.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT100/GABACT100_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -395,6 +413,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABACT110.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT110/GABACT110_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -416,6 +435,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABACT080.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT080/GABACT080_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -437,6 +457,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR910.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR910/GABBLR910_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -458,6 +479,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR030.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR030/GABBLR030_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -479,6 +501,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR250.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR250/GABBLR250_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -500,6 +523,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR260.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR260/GABBLR260_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -521,6 +545,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR270.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR270/GABBLR270_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -542,6 +567,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR940.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR940/GABBLR940_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -563,6 +589,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR950.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR950/GABBLR950_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -584,6 +611,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR860.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR860/GABBLR860_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -605,6 +633,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR870.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR870/GABBLR870_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -626,6 +655,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR880.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR880/GABBLR880_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -647,6 +677,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR890.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR890/GABBLR890_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -668,6 +699,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR920.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR920/GABBLR920_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -689,6 +721,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR930.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR930/GABBLR930_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -710,6 +743,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR650.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR650/GABBLR650_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -731,6 +765,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR660.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR660/GABBLR660_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -752,6 +787,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR670.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR670/GABBLR670_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -773,6 +809,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR680.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR680/GABBLR680_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -794,6 +831,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR700.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR700/GABBLR700_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -815,6 +853,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR710.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR710/GABBLR710_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -836,6 +875,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR720.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR720/GABBLR720_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -857,6 +897,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR740.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR740/GABBLR740_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -878,6 +919,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR750.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR750/GABBLR750_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -899,6 +941,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR760.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR760/GABBLR760_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -920,6 +963,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR590.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR590/GABBLR590_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -941,6 +985,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR600.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR600/GABBLR600_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -962,6 +1007,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR610.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR610/GABBLR610_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -983,6 +1029,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR620.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR620/GABBLR620_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1004,6 +1051,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR630.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR630/GABBLR630_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1025,6 +1073,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR640.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR640/GABBLR640_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1046,6 +1095,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR280.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR280/GABBLR280_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1067,6 +1117,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR290.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR290/GABBLR290_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1088,6 +1139,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR300.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR300/GABBLR300_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1109,6 +1161,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR310.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR310/GABBLR310_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1130,6 +1183,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR320.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR320/GABBLR320_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1151,6 +1205,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR330.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR330/GABBLR330_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1172,6 +1227,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR340.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR340/GABBLR340_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1193,6 +1249,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBLR180.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR180/GABBLR180_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1214,6 +1271,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABCLR840.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABCLR840/GABCLR840_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1235,6 +1293,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABCLR1200.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABCLR1200/GABCLR1200_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1256,6 +1315,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABCLR1210.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABCLR1210/GABCLR1210_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1277,6 +1337,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABVGO320.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO320/GABVGO320_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1298,6 +1359,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABVGO330.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO330/GABVGO330_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1319,6 +1381,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABVGO050.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO050/GABVGO050_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1340,6 +1403,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABVGO340.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO340/GABVGO340_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1361,6 +1425,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABVGO190.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO190/GABVGO190_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1382,6 +1447,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABVGO290.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO290/GABVGO290_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1403,6 +1469,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABDAT030.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT030/GABDAT030_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1424,6 +1491,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABDAT040.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT040/GABDAT040_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1445,6 +1513,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABDAT510.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT510/GABDAT510_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1466,6 +1535,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABDAT210.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT210/GABDAT210_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1487,6 +1557,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABDAT270.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT270/GABDAT270_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1508,6 +1579,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABDAT010.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT010/GABDAT010_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1529,6 +1601,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABDAT020.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT020/GABDAT020_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1550,6 +1623,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABDAT490.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT490/GABDAT490_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1571,6 +1645,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABDAT410.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT410/GABDAT410_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1592,6 +1667,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABDAT440.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT440/GABDAT440_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1613,6 +1689,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABDAT430.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT430/GABDAT430_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1634,6 +1711,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBEQ020.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBEQ020/GABBEQ020_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1655,6 +1733,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBEQ250.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBEQ250/GABBEQ250_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1676,6 +1755,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABBEQ270.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBEQ270/GABBEQ270_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1697,6 +1777,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABNCB180.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB180/GABNCB180_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1718,6 +1799,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABNCB170.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB170/GABNCB170_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1739,6 +1821,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABNCB260.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB260/GABNCB260_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1760,6 +1843,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABNCB270.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB270/GABNCB270_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1781,6 +1865,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABNCB280.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB280/GABNCB280_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1802,6 +1887,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABNCB200.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB200/GABNCB200_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1823,6 +1909,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABNCB190.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB190/GABNCB190_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1844,6 +1931,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABNCB210.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB210/GABNCB210_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1865,6 +1953,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABSTY400.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY400/GABSTY400_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1886,6 +1975,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABSTY410.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY410/GABSTY410_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1907,6 +1997,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABSTY250.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY250/GABSTY250_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1928,6 +2019,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABSTY260.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY260/GABSTY260_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1949,6 +2041,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABSTY380.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY380/GABSTY380_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1970,6 +2063,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABSTY390.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY390/GABSTY390_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -1991,6 +2085,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABSTY310.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY310/GABSTY310_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2012,6 +2107,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABSTY320.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY320/GABSTY320_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2033,6 +2129,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABSTY470.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY470/GABSTY470_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2054,6 +2151,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABSTY480.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY480/GABSTY480_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2075,6 +2173,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABGET200.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABGET200/GABGET200_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2096,6 +2195,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABYEY040.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY040/GABYEY040_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2117,6 +2217,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABYEY290.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY290/GABYEY290_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2138,6 +2239,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABYEY390.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY390/GABYEY390_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2159,6 +2261,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABYEY120.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY120/GABYEY120_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2180,6 +2283,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABYEY230.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY230/GABYEY230_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2201,6 +2305,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABYEY200.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY200/GABYEY200_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2222,6 +2327,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABYEY210.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY210/GABYEY210_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2243,6 +2349,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABYEY250.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY250/GABYEY250_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2264,6 +2371,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABYEY410.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY410/GABYEY410_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2285,6 +2393,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABYEY280.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY280/GABYEY280_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2306,6 +2415,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABQIA010.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABQIA010/GABQIA010_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2327,6 +2437,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABYEY240.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY240/GABYEY240_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2348,6 +2459,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABYEY380.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY380/GABYEY380_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2369,6 +2481,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABYEY370.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY370/GABYEY370_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2390,6 +2503,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABYEY340.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY340/GABYEY340_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2411,6 +2525,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABYEY350.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY350/GABYEY350_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2432,6 +2547,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABTMK2890.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2890/GABTMK2890_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2453,6 +2569,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABTMK2840.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2840/GABTMK2840_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2474,6 +2591,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABTMK2810.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2810/GABTMK2810_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2495,6 +2613,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABTMK2710.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2710/GABTMK2710_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2516,6 +2635,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABTMK2720.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2720/GABTMK2720_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2537,6 +2657,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABTMK2730.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2730/GABTMK2730_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2558,6 +2679,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABASS320.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS320/GABASS320_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2579,6 +2701,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABASS210.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS210/GABASS210_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2600,6 +2723,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABASS220.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS220/GABASS220_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2621,6 +2745,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABASS120.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS120/GABASS120_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2642,6 +2767,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABASS180.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS180/GABASS180_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2663,6 +2789,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABASS200.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS200/GABASS200_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2684,6 +2811,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABASS070.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS070/GABASS070_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2705,6 +2833,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABASS010.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS010/GABASS010_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2726,6 +2855,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABASS060.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS060/GABASS060_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2747,6 +2877,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABASS100.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS100/GABASS100_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2768,6 +2899,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABASS230.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS230/GABASS230_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2789,6 +2921,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABASS250.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS250/GABASS250_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2810,6 +2943,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABASS260.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS260/GABASS260_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2831,48 +2965,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABASS150.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS150/GABASS150_400.jpg",
-    "garantia": "48h Directa / 1 Año Fábrica",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
-  },
-  {
-    "sku": "AIRLGE330",
-    "clave": "AIRLGE330",
-    "nombre": "Aire LG de Ventana  W051CE On/Off, Enfriamiento, 5000 BTU/h, 0.5 TON. 115V/60Hz. Solo frio. Tip",
-    "descripcion_completa": "Aire LG de Ventana  W051CE On/Off, Enfriamiento, 5000 BTU/h, 0.5 TON. 115V/60Hz. Solo frio. Tipo de Refrigerant: R410A. CERTIFICADO ENERGY STAR®, Enfriamiento máximo, Flujo de aire vertical y horizontal en 2 vías. Bajo nivel de ruido, Chasis corredizo para una fácil instalación y mantenimiento. Control Remoto. Si. Medidas y Peso del Equipo: Peso: 18kg. Ancho 440mm, x Alto 282mm x Profundo 365mm. Garantia 3 años en compresor.",
-    "marca": "CT",
-    "moneda_origen": "m",
-    "costo_origen": 2708.3333333333335,
-    "costo_base_mxn": 2708.33,
-    "costo_base_usd": 138.89,
-    "precio": 4062.49,
-    "precio_mxn": 4062.49,
-    "precio_original": 5416.66,
-    "precio_mayoreo_10pzs": 3791.66,
-    "precio_piso_minimo_20": 3250.0,
-    "categoria_clasificada": "gabinetes",
-    "img": "./assets/img/catalog/gabinetes/AIRLGE330.jpg",
-    "cdn_url": "https://static.ctonline.mx/imagenes/AIRLGE330/AIRLGE330_400.jpg",
-    "garantia": "48h Directa / 1 Año Fábrica",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
-  },
-  {
-    "sku": "AIRLGE230",
-    "clave": "AIRLGE230",
-    "nombre": "Aire LG de Ventana W122CE On/Off, Enfriamiento, 12000 BTU/h, 1 TON. 220V/60Hz. Solo frio. Tipo ",
-    "descripcion_completa": "Aire LG de Ventana W122CE On/Off, Enfriamiento, 12000 BTU/h, 1 TON. 220V/60Hz. Solo frio. Tipo de Refrigerante: R32. CERTIFICADO ENERGY STAR®, Enfriamiento máximo, Flujo de aire vertical y horizontal en 4 vías. Bajo nivel de ruido. Chasis corredizo para una fácil instalación y Mantenimiento. Voltaje (230V / 60 HZ) Control Remoto. Si.  Medidas y Peso del Equipo: Peso: 37.4kg. Ancho 600mm, x Alto 381mm x Profundo 563mm. Garantia 3 años en compresor.",
-    "marca": "CT",
-    "moneda_origen": "m",
-    "costo_origen": 4958.333333333333,
-    "costo_base_mxn": 4958.33,
-    "costo_base_usd": 254.27,
-    "precio": 7437.49,
-    "precio_mxn": 7437.49,
-    "precio_original": 9916.66,
-    "precio_mayoreo_10pzs": 6941.66,
-    "precio_piso_minimo_20": 5950.0,
-    "categoria_clasificada": "gabinetes",
-    "img": "./assets/img/catalog/gabinetes/AIRLGE230.jpg",
-    "cdn_url": "https://static.ctonline.mx/imagenes/AIRLGE230/AIRLGE230_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2894,6 +2987,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCACT4760.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCACT4760/ACCACT4760_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2915,6 +3009,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCNCB770.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCNCB770/ACCNCB770_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2936,6 +3031,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/VENNCB020.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/VENNCB020/VENNCB020_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2957,6 +3053,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/VENNCB040.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/VENNCB040/VENNCB040_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2978,6 +3075,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/VENNCB050.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/VENNCB050/VENNCB050_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -2999,6 +3097,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/VENNCB080.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/VENNCB080/VENNCB080_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3020,6 +3119,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/VENNCB090.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/VENNCB090/VENNCB090_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3041,6 +3141,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/VENNCB100.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/VENNCB100/VENNCB100_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3062,6 +3163,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/VENNCB110.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/VENNCB110/VENNCB110_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3083,6 +3185,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCYEY070.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCYEY070/ACCYEY070_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3104,6 +3207,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCDAT1410.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCDAT1410/ACCDAT1410_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3125,6 +3229,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCDAT1480.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCDAT1480/ACCDAT1480_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3146,6 +3251,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCDAT1670.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCDAT1670/ACCDAT1670_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3167,6 +3273,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCDAT1680.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCDAT1680/ACCDAT1680_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3188,6 +3295,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABITL750.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABITL750/GABITL750_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3209,6 +3317,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABITL760.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABITL760/GABITL760_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3230,6 +3339,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABITL770.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABITL770/GABITL770_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3251,6 +3361,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABITL780.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABITL780/GABITL780_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3272,6 +3383,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/GABITL790.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/GABITL790/GABITL790_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3293,6 +3405,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/CABITL2070.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/CABITL2070/CABITL2070_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3314,6 +3427,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/SLXLMP030.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SLXLMP030/SLXLMP030_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3335,6 +3449,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/SLXLMP130.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SLXLMP130/SLXLMP130_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3356,6 +3471,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/SLXLMP680.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/SLXLMP680/SLXLMP680_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3377,6 +3493,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCTRL560.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL560/ACCTRL560_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3398,6 +3515,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCTRL1670.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL1670/ACCTRL1670_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3419,6 +3537,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCTRL380.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL380/ACCTRL380_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3440,6 +3559,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCTRL3810.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL3810/ACCTRL3810_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3461,6 +3581,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCTRL5450.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL5450/ACCTRL5450_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3482,6 +3603,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCTRL3910.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL3910/ACCTRL3910_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3503,6 +3625,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCTRL4070.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL4070/ACCTRL4070_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3524,6 +3647,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCTRL5110.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL5110/ACCTRL5110_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3545,6 +3669,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCVGO2550.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCVGO2550/ACCVGO2550_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3566,6 +3691,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCRBT8930.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCRBT8930/ACCRBT8930_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3587,6 +3713,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCRBT5930.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCRBT5930/ACCRBT5930_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3608,6 +3735,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCRBT5950.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCRBT5950/ACCRBT5950_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3629,6 +3757,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCRBT7670.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCRBT7670/ACCRBT7670_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3650,6 +3779,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCSTY500.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCSTY500/ACCSTY500_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
@@ -3671,6 +3801,7 @@
     "categoria_clasificada": "gabinetes",
     "img": "./assets/img/catalog/gabinetes/ACCSTY510.jpg",
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCSTY510/ACCSTY510_400.jpg",
+    "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fábrica",
     "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   }

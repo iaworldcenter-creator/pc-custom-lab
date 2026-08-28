@@ -1,5 +1,5 @@
 // =========================================================================
-// MOTOR OFICIAL PC CUSTOM LAB (3 BLOQUES TAXONÓMICOS Y BÚSQUEDA PREDICTIVA INSTANTÁNEA)
+// MOTOR OFICIAL PC CUSTOM LAB (24 CATEGORÍAS COMPLETAS, SCROLLBAR Y CERO HUECOS)
 // =========================================================================
 
 let currentViewStyle = 'grid'; // 'grid' (5x4) o 'list'
@@ -58,6 +58,36 @@ function getFilteredList() {
     return items;
 }
 
+function getPlaceholderForCat(cat) {
+    const map = {
+        'procesadores': 'cpu_placeholder.jpg',
+        'tarjetas_madre': 'mbd_placeholder.jpg',
+        'memorias_ram': 'ram_placeholder.jpg',
+        'discos_duros': 'ssd_placeholder.jpg',
+        'tarjetas_de_video': 'gpu_placeholder.jpg',
+        'gabinetes': 'gab_placeholder.jpg',
+        'fuentes_energia': 'psu_placeholder.jpg',
+        'enfriamiento': 'cooling_placeholder.jpg',
+        'reguladores_ups': 'ups_placeholder.jpg',
+        'monitores': 'mon_placeholder.jpg',
+        'mini_pcs_ia': 'minipc_placeholder.jpg',
+        'computadoras_ensambladas': 'pc_placeholder.jpg',
+        'laptops': 'lap_placeholder.jpg',
+        'all_in_one': 'aio_placeholder.jpg',
+        'consumibles': 'toner_placeholder.jpg',
+        'impresoras': 'imp_placeholder.jpg',
+        'accesorios_perifericos': 'acc_placeholder.jpg',
+        'conectividad_redes': 'redes_placeholder.jpg',
+        'software': 'sof_placeholder.jpg',
+        'telefonia_seguridad': 'cctv_placeholder.jpg',
+        'punto_de_venta': 'pos_placeholder.jpg',
+        'electronica_consumo': 'elec_placeholder.jpg',
+        'linea_blanca': 'lb_placeholder.jpg',
+        'outlet_liquidaciones': 'outlet_placeholder.jpg'
+    };
+    return `./assets/img/placeholders/${map[cat] || 'acc_placeholder.jpg'}`;
+}
+
 function renderExactCatalogView() {
     const container = document.getElementById("products-grid-container");
     const resultsCountTxt = document.getElementById("results-count-display");
@@ -81,14 +111,14 @@ function renderExactCatalogView() {
         container.className = "w-full py-16 text-center text-slate-400 font-mono text-sm bg-slate-900/90 border border-slate-800 rounded-2xl";
         container.innerHTML = `
             <i class="fa-solid fa-box-open text-4xl text-cyan-400 mb-3 block"></i>
-            No se encontraron productos con los filtros seleccionados.
-            <br><button onclick="resetFacets()" class="mt-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-black px-5 py-2 rounded-xl text-xs uppercase cursor-pointer shadow-lg hover:shadow-cyan-500/30">Limpiar Filtros</button>
+            No se encontraron productos en esta categoría.
+            <br><button onclick="resetFacets()" class="mt-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-black px-5 py-2 rounded-xl text-xs uppercase cursor-pointer shadow-lg hover:shadow-cyan-500/30">Ver Todo el Catálogo</button>
         `;
         return;
     }
 
     if (currentViewStyle === 'grid') {
-        // CUADRÍCULA 5 FILAS X 4 COLUMNAS (20 ARTÍCULOS EXACTOS)
+        // CUADRÍCULA 5 FILAS X 4 COLUMNAS (20 ARTÍCULOS EXACTOS SIN HUECOS)
         container.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-2";
         container.innerHTML = pageItems.map(p => {
             const sku = p.sku;
@@ -99,6 +129,7 @@ function renderExactCatalogView() {
             const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
             const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
             const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+            const placeholder = getPlaceholderForCat(cat);
 
             return `
                 <div class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
@@ -111,8 +142,8 @@ function renderExactCatalogView() {
                     </button>
 
                     <div>
-                        <!-- Fotografía Real con Vinculación 1 a 1 por SKU -->
-                        <div onclick="openProductDetailModal('${sku}')" class="w-full h-36 bg-slate-950/80 border border-slate-800/80 rounded-xl flex items-center justify-center p-2 mb-2.5 relative group-hover:border-cyan-500/40 transition cursor-pointer overflow-hidden">
+                        <!-- Fotografía Real con Fallback Limpio a Placeholder HD -->
+                        <div onclick="openProductDetailModal('${sku}')" class="w-full h-36 bg-slate-950/90 border border-slate-800/80 rounded-xl flex items-center justify-center p-2 mb-2.5 relative group-hover:border-cyan-500/40 transition cursor-pointer overflow-hidden">
                             <img 
                                 src="${localImg}" 
                                 alt="${title}" 
@@ -120,7 +151,7 @@ function renderExactCatalogView() {
                                 height="150" 
                                 loading="lazy" 
                                 class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
-                                onerror="this.onerror=null; this.src='${cdnImg}';"
+                                onerror="if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='${cdnImg}'; } else { this.src='${placeholder}'; }"
                             />
                         </div>
 
@@ -179,6 +210,7 @@ function renderExactCatalogView() {
             const usdPrice = (price / 19.50).toFixed(2);
             const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
             const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+            const placeholder = getPlaceholderForCat(cat);
             const desc = p.descripcion_completa || p.desc || '';
 
             return `
@@ -187,7 +219,7 @@ function renderExactCatalogView() {
                         <span class="text-[7px] font-black text-white uppercase">-25%</span>
                     </div>
 
-                    <div onclick="openProductDetailModal('${sku}')" class="w-full md:w-32 h-28 bg-slate-950/80 border border-slate-800 rounded-xl flex items-center justify-center p-2 shrink-0 relative cursor-pointer overflow-hidden">
+                    <div onclick="openProductDetailModal('${sku}')" class="w-full md:w-32 h-28 bg-slate-950/90 border border-slate-800 rounded-xl flex items-center justify-center p-2 shrink-0 relative cursor-pointer overflow-hidden">
                         <img 
                             src="${localImg}" 
                             alt="${title}" 
@@ -195,7 +227,7 @@ function renderExactCatalogView() {
                             height="110" 
                             loading="lazy" 
                             class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
-                            onerror="this.onerror=null; this.src='${cdnImg}';"
+                            onerror="if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='${cdnImg}'; } else { this.src='${placeholder}'; }"
                         />
                     </div>
 
@@ -239,7 +271,7 @@ function renderExactCatalogView() {
 }
 
 // =========================================================================
-// BARRA LATERAL IZQUIERDA: 3 BLOQUES TAXONÓMICOS CON CONTEOS REALES
+// BARRA LATERAL IZQUIERDA: 24 CATEGORÍAS COMPLETAS CON SCROLLBAR ELEGANTE
 // =========================================================================
 function renderSidebarFacets() {
     const root = document.getElementById("sidebar-facets-root");
@@ -267,7 +299,7 @@ function renderSidebarFacets() {
         { id: 'all_in_one', name: 'Equipos All-in-One e iMac', icon: 'fa-tv' }
     ];
 
-    // BLOQUE 3 - CONSUMIBLES Y SOLUCIONES
+    // BLOQUE 3 - CONSUMIBLES, SOLUCIONES Y ELECTRÓNICA
     const block3 = [
         { id: 'consumibles', name: 'Tóners, Tintas y Consumibles', icon: 'fa-fill-drip' },
         { id: 'impresoras', name: 'Impresoras y Multifuncionales', icon: 'fa-print' },
@@ -275,7 +307,10 @@ function renderSidebarFacets() {
         { id: 'conectividad_redes', name: 'Redes & Conectividad WiFi', icon: 'fa-network-wired' },
         { id: 'software', name: 'Software & Licencias Originales', icon: 'fa-compact-disc' },
         { id: 'telefonia_seguridad', name: 'Telefonía & Videovigilancia (CCTV)', icon: 'fa-video' },
-        { id: 'punto_de_venta', name: 'Punto de Venta (POS)', icon: 'fa-barcode' }
+        { id: 'punto_de_venta', name: 'Punto de Venta (POS)', icon: 'fa-barcode' },
+        { id: 'electronica_consumo', name: 'Audio, Video & Electrónica', icon: 'fa-headphones' },
+        { id: 'linea_blanca', name: 'Línea Blanca & Electrodomésticos', icon: 'fa-blender' },
+        { id: 'outlet_liquidaciones', name: 'Outlet & Liquidaciones', icon: 'fa-tag' }
     ];
 
     const all = window.CT_CATALOG_DATA || [];
@@ -292,9 +327,9 @@ function renderSidebarFacets() {
             <span class="text-[9px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono font-bold">${all.length.toLocaleString('es-MX')} Items</span>
         </div>
 
-        <div class="p-3.5 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-300 text-xs space-y-4 shadow-2xl flex flex-col justify-between min-h-[980px]">
+        <div class="p-3 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-300 text-xs shadow-2xl flex flex-col justify-between">
             
-            <div class="flex gap-2">
+            <div class="flex gap-2 mb-3">
                 <button onclick="renderExactCatalogView()" class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2 rounded-xl text-[11px] uppercase transition cursor-pointer shadow">
                     Aplicar
                 </button>
@@ -304,7 +339,7 @@ function renderSidebarFacets() {
             </div>
 
             <!-- ENLACE A TODAS LAS CATEGORÍAS -->
-            <div class="bg-slate-950 p-2 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition">
+            <div class="bg-slate-950 p-2 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition mb-3">
                 <label class="flex items-center justify-between cursor-pointer">
                     <span class="flex items-center gap-2 truncate">
                         <input type="radio" name="cat_facet" ${activeSelectedCategory === 'Todas' ? 'checked' : ''} onchange="activeSelectedCategory='Todas'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
@@ -315,65 +350,70 @@ function renderSidebarFacets() {
                 </label>
             </div>
 
-            <!-- BLOQUE 1 - COMPONENTES DE ENSAMBLE -->
-            <div class="border-b border-slate-800 pb-3">
-                <h4 class="font-bold text-cyan-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
-                    <i class="fa-solid fa-microchip text-cyan-400"></i> 1. Componentes de Ensamble
-                </h4>
-                <div class="space-y-1 text-slate-400">
-                    ${block1.map(c => `
-                        <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-0.5 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
-                            <span class="flex items-center gap-2 truncate">
-                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
-                                <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : ''}">${c.name}</span>
-                            </span>
-                            <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
-                        </label>
-                    `).join('')}
+            <!-- CONTENEDOR CON BARRA DE DESPLAZAMIENTO FLUIDA (SCROLLBAR) -->
+            <div class="max-h-[640px] overflow-y-auto pr-1 space-y-4 custom-scrollbar">
+                
+                <!-- BLOQUE 1 - COMPONENTES DE ENSAMBLE -->
+                <div class="border-b border-slate-800 pb-3">
+                    <h4 class="font-bold text-cyan-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                        <i class="fa-solid fa-microchip text-cyan-400"></i> 1. Componentes de Ensamble
+                    </h4>
+                    <div class="space-y-1 text-slate-400">
+                        ${block1.map(c => `
+                            <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-0.5 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
+                                <span class="flex items-center gap-2 truncate">
+                                    <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
+                                    <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
+                                    <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : ''}">${c.name}</span>
+                                </span>
+                                <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
+                            </label>
+                        `).join('')}
+                    </div>
                 </div>
-            </div>
 
-            <!-- BLOQUE 2 - SISTEMAS Y EQUIPOS COMPLETOS -->
-            <div class="border-b border-slate-800 pb-3">
-                <h4 class="font-bold text-purple-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
-                    <i class="fa-solid fa-cube text-purple-400"></i> 2. Sistemas & Mini PCs IA
-                </h4>
-                <div class="space-y-1 text-slate-400">
-                    ${block2.map(c => `
-                        <label class="flex items-center justify-between cursor-pointer hover:text-purple-300 py-0.5 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
-                            <span class="flex items-center gap-2 truncate">
-                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-purple-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
-                                <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-purple-300' : ''}">${c.name}</span>
-                            </span>
-                            <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
-                        </label>
-                    `).join('')}
+                <!-- BLOQUE 2 - SISTEMAS Y EQUIPOS COMPLETOS -->
+                <div class="border-b border-slate-800 pb-3">
+                    <h4 class="font-bold text-purple-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                        <i class="fa-solid fa-cube text-purple-400"></i> 2. Sistemas & Mini PCs IA
+                    </h4>
+                    <div class="space-y-1 text-slate-400">
+                        ${block2.map(c => `
+                            <label class="flex items-center justify-between cursor-pointer hover:text-purple-300 py-0.5 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
+                                <span class="flex items-center gap-2 truncate">
+                                    <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-purple-400 cursor-pointer shrink-0" />
+                                    <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
+                                    <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-purple-300' : ''}">${c.name}</span>
+                                </span>
+                                <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
+                            </label>
+                        `).join('')}
+                    </div>
                 </div>
-            </div>
 
-            <!-- BLOQUE 3 - CONSUMIBLES Y SOLUCIONES -->
-            <div class="border-b border-slate-800 pb-3">
-                <h4 class="font-bold text-amber-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
-                    <i class="fa-solid fa-puzzle-piece text-amber-400"></i> 3. Consumibles & Soluciones
-                </h4>
-                <div class="space-y-1 text-slate-400">
-                    ${block3.map(c => `
-                        <label class="flex items-center justify-between cursor-pointer hover:text-amber-300 py-0.5 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
-                            <span class="flex items-center gap-2 truncate">
-                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-amber-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
-                                <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-amber-300' : ''}">${c.name}</span>
-                            </span>
-                            <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
-                        </label>
-                    `).join('')}
+                <!-- BLOQUE 3 - CONSUMIBLES, SOLUCIONES Y ELECTRÓNICA -->
+                <div class="border-b border-slate-800 pb-3">
+                    <h4 class="font-bold text-amber-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                        <i class="fa-solid fa-puzzle-piece text-amber-400"></i> 3. Consumibles & Soluciones
+                    </h4>
+                    <div class="space-y-1 text-slate-400">
+                        ${block3.map(c => `
+                            <label class="flex items-center justify-between cursor-pointer hover:text-amber-300 py-0.5 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
+                                <span class="flex items-center gap-2 truncate">
+                                    <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-amber-400 cursor-pointer shrink-0" />
+                                    <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
+                                    <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-amber-300' : ''}">${c.name}</span>
+                                </span>
+                                <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
+                            </label>
+                        `).join('')}
+                    </div>
                 </div>
+
             </div>
 
             <!-- TOP 3 MÁS VENDIDOS -->
-            <div class="pt-1 space-y-2">
+            <div class="pt-3 border-t border-slate-800 space-y-2">
                 <div class="flex items-center justify-between">
                     <h4 class="font-bold text-amber-400 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
                         <i class="fa-solid fa-fire text-amber-400"></i> Top 3 Más Vendidos
@@ -390,11 +430,12 @@ function renderSidebarFacets() {
                         const mayoreo = b.precio_mayoreo_10pzs || (price * 0.93);
                         const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
                         const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+                        const placeholder = getPlaceholderForCat(cat);
 
                         return `
                             <div class="bg-slate-950 border border-slate-800 hover:border-cyan-500/50 p-2 rounded-xl flex items-center gap-2.5 transition group cursor-pointer" onclick="openProductDetailModal('${sku}')">
-                                <div class="w-11 h-11 bg-slate-900 rounded-lg p-1 shrink-0 flex items-center justify-center">
-                                    <img src="${localImg}" alt="${title}" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='${cdnImg}';" />
+                                <div class="w-11 h-11 bg-slate-900 rounded-lg p-1 shrink-0 flex items-center justify-center overflow-hidden">
+                                    <img src="${localImg}" alt="${title}" class="w-full h-full object-contain" onerror="if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='${cdnImg}'; } else { this.src='${placeholder}'; }" />
                                 </div>
                                 <div class="flex-1 min-w-0">
                                     <div class="text-[11px] font-bold text-slate-200 truncate group-hover:text-cyan-300 transition">${title}</div>
@@ -421,7 +462,7 @@ function renderSidebarFacets() {
 }
 
 // =========================================================================
-// MOTOR DE BÚSQUEDA PREDICTIVA INSTANTÁNEA (SEARCH-AS-YOU-TYPE DESDE 1 LETRA)
+// MOTOR DE BÚSQUEDA PREDICTIVA INSTANTÁNEA (SEARCH-AS-YOU-TYPE)
 // =========================================================================
 function initPredictiveSearchEngine() {
     const input = document.getElementById("boutiqueSearchInput");
@@ -471,11 +512,12 @@ function initPredictiveSearchEngine() {
                     const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
                     const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
                     const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+                    const placeholder = getPlaceholderForCat(cat);
 
                     return `
                         <div class="flex items-center justify-between gap-3 p-2.5 hover:bg-slate-850 transition cursor-pointer group" onclick="openProductDetailModal('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');">
-                            <div class="w-12 h-12 bg-slate-950 rounded-xl p-1 shrink-0 flex items-center justify-center border border-slate-800 group-hover:border-cyan-400/50">
-                                <img src="${localImg}" alt="${title}" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='${cdnImg}';" />
+                            <div class="w-12 h-12 bg-slate-950 rounded-xl p-1 shrink-0 flex items-center justify-center border border-slate-800 group-hover:border-cyan-400/50 overflow-hidden">
+                                <img src="${localImg}" alt="${title}" class="w-full h-full object-contain" onerror="if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='${cdnImg}'; } else { this.src='${placeholder}'; }" />
                             </div>
                             <div class="flex-1 min-w-0 text-left">
                                 <div class="text-xs font-bold text-white group-hover:text-cyan-300 transition truncate">${title}</div>
@@ -534,6 +576,7 @@ window.openProductDetailModal = function(sku) {
     const mayoreo = prod.precio_mayoreo_10pzs || (price * 0.93);
     const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
     const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+    const placeholder = getPlaceholderForCat(cat);
     const desc = prod.descripcion_completa || '';
     const marca = prod.marca || 'CT';
 
@@ -560,7 +603,7 @@ window.openProductDetailModal = function(sku) {
                         src="${localImg}" 
                         alt="${title}" 
                         class="w-full h-full object-contain group-hover:scale-110 transition duration-300"
-                        onerror="this.onerror=null; this.src='${cdnImg}';"
+                        onerror="if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='${cdnImg}'; } else { this.src='${placeholder}'; }"
                     />
                     <div class="absolute top-3 left-3 bg-red-600 text-white font-black text-[10px] uppercase px-2.5 py-1 rounded-md shadow">
                         -25% Oferta
@@ -568,11 +611,11 @@ window.openProductDetailModal = function(sku) {
                 </div>
 
                 <div class="grid grid-cols-4 gap-2">
-                    <button onclick="document.getElementById('pdp-main-image').src='${localImg}'" class="h-16 bg-slate-950 border border-cyan-400 rounded-xl p-1 flex items-center justify-center hover:opacity-80 transition cursor-pointer">
-                        <img src="${localImg}" alt="Vista Local" class="w-full h-full object-contain" onerror="this.src='${cdnImg}';" />
+                    <button onclick="document.getElementById('pdp-main-image').src='${localImg}'" class="h-16 bg-slate-950 border border-cyan-400 rounded-xl p-1 flex items-center justify-center hover:opacity-80 transition cursor-pointer overflow-hidden">
+                        <img src="${localImg}" alt="Vista Local" class="w-full h-full object-contain" onerror="this.src='${placeholder}';" />
                     </button>
-                    <button onclick="document.getElementById('pdp-main-image').src='${cdnImg}'" class="h-16 bg-slate-950 border border-slate-800 rounded-xl p-1 flex items-center justify-center hover:border-cyan-400 transition cursor-pointer">
-                        <img src="${cdnImg}" alt="Vista CDN" class="w-full h-full object-contain" />
+                    <button onclick="document.getElementById('pdp-main-image').src='${cdnImg}'" class="h-16 bg-slate-950 border border-slate-800 rounded-xl p-1 flex items-center justify-center hover:border-cyan-400 transition cursor-pointer overflow-hidden">
+                        <img src="${cdnImg}" alt="Vista CDN" class="w-full h-full object-contain" onerror="this.src='${placeholder}';" />
                     </button>
                 </div>
             </div>

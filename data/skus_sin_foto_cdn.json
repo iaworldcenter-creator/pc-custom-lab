@@ -1,0 +1,7930 @@
+[
+  {
+    "sku": "CPUINT5090",
+    "categoria": "procesadores"
+  },
+  {
+    "sku": "CPUINT5020",
+    "categoria": "procesadores"
+  },
+  {
+    "sku": "CPUINT4910",
+    "categoria": "procesadores"
+  },
+  {
+    "sku": "CPUAMD2850",
+    "categoria": "procesadores"
+  },
+  {
+    "sku": "ACCITL420",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MEMKGN2690",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN5150",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN3590",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN5070",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN3470",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN4850",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN3150",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN2280",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN2350",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN3320",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN2710",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN3510",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN2620",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN3310",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN3300",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN3370",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN3690",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "MEMKGN3900",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "MEMKGN5010",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN4600",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN1620",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN1630",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN1640",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN5320",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN4280",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMKGN5230",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "DDUKGT2570",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUKGT2580",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUKGT2530",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "MEMDAT4730",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMDAT6490",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMDAT4140",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMDAT3240",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMDAT7120",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMDAT7130",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMDAT7090",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMDAT2530",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMDAT3040",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "DDUDAT670",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUDAT680",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "ACCDAT1300",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUDAT110",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "ACCDAT1260",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUDAT830",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUDAT2560",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUDAT2580",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUDAT1300",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUDAT1310",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "MEMDAT7240",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMDAT7250",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMDAT7260",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMDAT7270",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMDAT7280",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMDAT7320",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMDAT7410",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMSTY160",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMSTY200",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMSTY220",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMSTY190",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMSTY180",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMSTY400",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMSTY410",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "DDUSTY010",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUSTY030",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "MEMNCB020",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMNCB040",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMNCB030",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMLEX010",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMNEX040",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMSAN2400",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMSAN2440",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMSAN2480",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMSAN2420",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "MEMSAN2320",
+    "categoria": "memorias_ram"
+  },
+  {
+    "sku": "DDUHYU160",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUHYU200",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUSAN480",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "DDUSGT960",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUWSD2600",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUHTC020",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUSGT1450",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "DDUWSD2430",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUWSD1920",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUWSD1740",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUWSD2180",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUWSD2170",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUWSD2240",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUTOS1060",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "DDUTOS1070",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "MBDINT4090",
+    "categoria": "tarjetas_madre"
+  },
+  {
+    "sku": "MBDINT3970",
+    "categoria": "tarjetas_madre"
+  },
+  {
+    "sku": "MBDECS2290",
+    "categoria": "tarjetas_madre"
+  },
+  {
+    "sku": "MBDHYU010",
+    "categoria": "tarjetas_madre"
+  },
+  {
+    "sku": "MBDASS6170",
+    "categoria": "tarjetas_madre"
+  },
+  {
+    "sku": "MBDASS5420",
+    "categoria": "tarjetas_madre"
+  },
+  {
+    "sku": "MBDASS6100",
+    "categoria": "tarjetas_madre"
+  },
+  {
+    "sku": "MBDASS5600",
+    "categoria": "tarjetas_madre"
+  },
+  {
+    "sku": "MBDASS6270",
+    "categoria": "tarjetas_madre"
+  },
+  {
+    "sku": "CPUASS1250",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "MBDGIG5180",
+    "categoria": "tarjetas_madre"
+  },
+  {
+    "sku": "MBDGIG5700",
+    "categoria": "tarjetas_madre"
+  },
+  {
+    "sku": "TVIGIG3530",
+    "categoria": "tarjetas_de_video"
+  },
+  {
+    "sku": "TVIGIG3540",
+    "categoria": "tarjetas_de_video"
+  },
+  {
+    "sku": "TVIGIG3520",
+    "categoria": "tarjetas_de_video"
+  },
+  {
+    "sku": "TVIGIG3490",
+    "categoria": "tarjetas_de_video"
+  },
+  {
+    "sku": "TVIGIG3570",
+    "categoria": "tarjetas_de_video"
+  },
+  {
+    "sku": "TVIGIG3580",
+    "categoria": "tarjetas_de_video"
+  },
+  {
+    "sku": "TVIASS3900",
+    "categoria": "tarjetas_de_video"
+  },
+  {
+    "sku": "TVIASS3920",
+    "categoria": "tarjetas_de_video"
+  },
+  {
+    "sku": "MONSMG2360",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONSMG2090",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONSMG2240",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONSMG1960",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONSMG2110",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONLGE3200",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONLGE3670",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONLGE3620",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONACR1870",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONACR1810",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONNCB010",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONBNQ1270",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONBNQ1280",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONBNQ1730",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONBNQ1310",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONAOC700",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONAOC900",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONAOC840",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONAOC920",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONASS1750",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONASS1760",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONASS1850",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONASS900",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONDAT030",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONVGO210",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONVGO180",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONGIG320",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONGIG340",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONGIG250",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONLNX180",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONLNX120",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONNNN060",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONNNN070",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONBLR380",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONBLR030",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONBLR020",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONBLR010",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONBLR110",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MONSTY020",
+    "categoria": "tarjetas_de_video"
+  },
+  {
+    "sku": "MONSTY150",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "GABGEN125",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "GABACT130",
+    "categoria": "fuentes_energia"
+  },
+  {
+    "sku": "GABACT160",
+    "categoria": "fuentes_energia"
+  },
+  {
+    "sku": "GABACT140",
+    "categoria": "fuentes_energia"
+  },
+  {
+    "sku": "GABACT170",
+    "categoria": "fuentes_energia"
+  },
+  {
+    "sku": "GABACT010",
+    "categoria": "fuentes_energia"
+  },
+  {
+    "sku": "GABACT100",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "GABACT110",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "GABACT080",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "GABBLR030",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "GABBLR1050",
+    "categoria": "tarjetas_de_video"
+  },
+  {
+    "sku": "GABBLR180",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "GABGEN2360",
+    "categoria": "fuentes_energia"
+  },
+  {
+    "sku": "VENDCO530",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENDCO330",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENDCO390",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENCLR690",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENCLR700",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENCLR710",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENCLR720",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "GABVGO040",
+    "categoria": "fuentes_energia"
+  },
+  {
+    "sku": "VENVGO100",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENVGO080",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENVGO090",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "GABDAT040",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "GABDAT210",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "VENDAT060",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENBEQ250",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "GABNCB180",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "GABNCB220",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "GABNCB110",
+    "categoria": "fuentes_energia"
+  },
+  {
+    "sku": "GABNCB120",
+    "categoria": "fuentes_energia"
+  },
+  {
+    "sku": "GABNCB130",
+    "categoria": "fuentes_energia"
+  },
+  {
+    "sku": "GABNCB140",
+    "categoria": "fuentes_energia"
+  },
+  {
+    "sku": "GABNCB300",
+    "categoria": "fuentes_energia"
+  },
+  {
+    "sku": "VENNCB120",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENNCB130",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENNCB140",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "GABSTY060",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "GABSTY330",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "GABSTY350",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "GABSTY370",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "GABSTY140",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "GABGET180",
+    "categoria": "fuentes_energia"
+  },
+  {
+    "sku": "GABGET190",
+    "categoria": "fuentes_energia"
+  },
+  {
+    "sku": "GABYEY120",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "GABYEY330",
+    "categoria": "fuentes_energia"
+  },
+  {
+    "sku": "GABYEY350",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "VENYEY080",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "GABNZX010",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "GABASS200",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "GABASS070",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "GABASS100",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "COMMAC5520",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMMAC5250",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUMAC1080",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMDDL7930",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMDDL7460",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMDDL9500",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMDEE300",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUDDL5190",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUDDL5070",
+    "categoria": "all_in_one"
+  },
+  {
+    "sku": "CPUDDL5000",
+    "categoria": "all_in_one"
+  },
+  {
+    "sku": "MONDLL8360",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "MONDLL8580",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "MONDLL8520",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "MONDLL8550",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "MONDLL6730",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "MONDLL5630",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "MONDLL8390",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CDRDLL040",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "MEMDLL1780",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SOFDLL1140",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SOFDLL1350",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "EXTDLL7260",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "EXTDLL7090",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "EXTDLL9600",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "EXTDLL8990",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "SERHPE1710",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERHPE1620",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "DDUHPE1020",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "DDUHPE1290",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "STOHPE990",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "STOHPE1020",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "STOHPE1030",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "STOHPE1040",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCHPE2530",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "ACCHPE3890",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCHPE3900",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCHPE3910",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCHPE3920",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCHPE3560",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCHPE3730",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCHPE3940",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCHPE3960",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCHPE3760",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCHPE3970",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCHPE3980",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCHPE3990",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCHPE2950",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "RELLEN7000",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "WKSLEV160",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "ACCLEN4520",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "MEMLEN450",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "MEMLEN460",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "SOFLEN380",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SOFLEN390",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "LICLEN010",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "LICLEN020",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "LICLEN030",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "LICLEN040",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "LICLEN050",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "LICLEN060",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "DDULEN1020",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "DDULEN1040",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "DDULEN1050",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "DDULEN1060",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "DDULEN1070",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "DDULEN1080",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "DDULEN1090",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "SERLEN1560",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERLEN1570",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERLEN1580",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERLEN1590",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "RELLEN5130",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "MONLEN1490",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "WKSXFN020",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "COMHPI4430",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMHPI4850",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMHPI4130",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "TABLEN1370",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "TABLEN1400",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMLEV6540",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMLEV6720",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMLEV6020",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMLEV6660",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "RELLEV1220",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "WKSLEV170",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "WKSLEV190",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "WKSLEV200",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "RELLEN9180",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "RELLEN5690",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMACR9790",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMACR9860",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMACR9460",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMASS9780",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMASS9810",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMASS9820",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMASS9900",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMASS9910",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMASS9940",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMASS9350",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMASS9970",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMASS9990",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMASU040",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMASU050",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMASS9980",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUASS1480",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "TLCSTY610",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "TLCSTY620",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUECS360",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "CPUECS120",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "CPUECS270",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "AIOLNX420",
+    "categoria": "all_in_one"
+  },
+  {
+    "sku": "COMLNX1630",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "TABLNX640",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUVGO6170",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUVGO4510",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUVGO5760",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUVGO5790",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUYEY660",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUYEY670",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUYEY680",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUYEY690",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUNCB190",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUNCB200",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUEVO1150",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUEVO1190",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUEVO1170",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUEVO1180",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUEVO740",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CPUGEK010",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "CPUGEK020",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "CPUGEK030",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "CPUGEK040",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "CPUGEK050",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "CPUGEK060",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "CPUGEK070",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "CPUHYU140",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "CPUHYU250",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "COMHYU530",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "TLCHYU530",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "TLCHYU550",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "COMMSI530",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "TLCNNN150",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "TLCNNN160",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "TLCNNN170",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "TLCNNN180",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCBNQ830",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "SERCLO880",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO850",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO860",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO870",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO660",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO670",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO690",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO700",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO710",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO720",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO740",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO750",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO760",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO770",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO780",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO790",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO810",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO820",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO830",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO840",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO900",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO890",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO910",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO920",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO930",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO940",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO950",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO960",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO970",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "SERCLO980",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "PLOHPD830",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "PLOHPD860",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPHPI4090",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "MTFHPI3000",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "SCAHPI465",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "SCAHPI455",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPEPS4110",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPEPS4120",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPEPS4130",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "ACCEPS630",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "SCAEPS860",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPCNN2260",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPCNN2400",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "SCACNN540",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "PLOCNN390",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPLXM2140",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPXRX2680",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPXRX2690",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "SCAXRX540",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "SCAKDK820",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "SCAKDK830",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "SCAKDK690",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPKYC990",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPKYC1000",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPKYC1050",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPKYC800",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPKYC1020",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPKYC1010",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPKYC810",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "ROTBRT120",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "ROTBRT210",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "ROTBRT220",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "SCAFJT360",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "SCAFJT340",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "SCAFJT130",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "SCAFJT270",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "SCAFJT460",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "SCAFJT470",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "IMPPTM030",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "MTFPTM020",
+    "categoria": "impresoras"
+  },
+  {
+    "sku": "CARHPP2120",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARHPP2130",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARHPP2140",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARHPP2220",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARHPP2230",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARHPP2240",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARHPP2650",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARHPP4090",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARHPP4100",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARHPP4110",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARHPP4130",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARHPP4140",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARHPP4150",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARHPP4160",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARHPP2510",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARHPP3630",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONHPP3710",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONHPP4220",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONHPP4240",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONHPP4250",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONHPP3620",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONHPP3870",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONHPP4000",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONHPS290",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONHPS140",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONHPS120",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONHPS480",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS280",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS6530",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS7190",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS7160",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS7070",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS7300",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS7310",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS7320",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS7330",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS6520",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS6660",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS6670",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS6680",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS6690",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS6700",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS6710",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS6200",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS7420",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS6590",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CAREPS6600",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCEPS570",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "PAPEPS340",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONKYC2220",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONKYC2070",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONKYC2080",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONKYC2090",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONKYC1250",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONKYC1170",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONKYC2420",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCKYC280",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCKYC290",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "KITKYC190",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCKYC620",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "KITKYC200",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONLXM3530",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCLXM570",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARZBR1170",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARZBR1180",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARZBR1190",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARZBR1240",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARZBR1260",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARZBR1270",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "RIBZBR740",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARZBR820",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARZBR630",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCPCM020",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCPCM120",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCPCM090",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCPCM180",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCPCM220",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCPCM150",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCPCM170",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCPCM200",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCPCM585",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCPCM645",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCPCM1040",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARBRT1240",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARBRT540",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARBRT1090",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ETIBRT040",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARBRT4430",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARBRT1130",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARBRT340",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARBRT1640",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCBRT1170",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCBRT1180",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCBRT1140",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCBRT940",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCBRT950",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCBRT840",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCBRT870",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCBRT910",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARCNN6380",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARCNN6520",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARCNN6750",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARCNN5940",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARCNN7270",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARCNN6470",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONCNN160",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARCNN4870",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARXRX6710",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARXRX7010",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARXRX7020",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARXRX7050",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARXRX7090",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARXRX7100",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARXRX7110",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARXRX7150",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARXRX7190",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARXRX6600",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARXRX6760",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARXRX7480",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "CARXRX3860",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCXRX2260",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCXRX2170",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCXRX2220",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCXRX2040",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCXRX1990",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCXRX1290",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ACCXRX1840",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "PAPXRX090",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "PAPXRX100",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "PAPXRX110",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "PAPXRX120",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "PAPXRX130",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "PAPXRX140",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "PAPXRX150",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONPTM070",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONPTM080",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "TONPTM040",
+    "categoria": "consumibles"
+  },
+  {
+    "sku": "ROUTPL120",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTTPL1350",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTTPL730",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTTPL040",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTTPL155",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTTPL250",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTTPL710",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTTPL600",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTTPL200",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL220",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL010",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL060",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL070",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL080",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL090",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL100",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL120",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL300",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL380",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL200",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL180",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL290",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL920",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "KITTPL620",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "KITTPL630",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "KITTPL640",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "KITTPL180",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "KITTPL220",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "KITTPL210",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "KITTPL190",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "TARTPL410",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL1610",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL1620",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL1630",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "TARTPL740",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "TARTPL500",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "TARTPL450",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "TARTPL510",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "TARTPL520",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "TARTPL440",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPTPL200",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPTPL360",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPTPL450",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPTPL460",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "KITTPL360",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPTPL400",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPTPL190",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPTPL390",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPTPL280",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPTPL570",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPTPL370",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUTPL960",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUTPL710",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUTPL840",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL630",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL640",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL1590",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL1600",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTPL580",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTMER010",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTMER030",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "TARMER150",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "TARMER160",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "TARMER010",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUMER020",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUMER060",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "KITMER140",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "KITMER150",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "KITMER160",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUMER170",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPLNK310",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTLNK1130",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTCIS4790",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUCIS940",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "LICCIS390",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTCIS3930",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTCIS3610",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "LICCIS2860",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCCIS740",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTARU550",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTARU300",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCARU290",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCARU280",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTPVS210",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "RCKLCS190",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCLCS240",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTTND210",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUTND600",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUTND610",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUTND410",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUTND590",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUTND520",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ANTTND040",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTDAH370",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTDAH470",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTDAH380",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUDAH030",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCDAH2780",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCDAH690",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTITL520",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "GABITL520",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "RCKACC1950",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "RCKACC2030",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "RCKACC560",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "RCKACC620",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABITL4350",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABITL4380",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABITL4400",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABITL4410",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABITL265",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "RCKACC520",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "RCKACC1280",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABITL1790",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABITL805",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "RCKACC1690",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCITL1990",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "RCKACC970",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "RCKACC1200",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "RCKACC1700",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "RCKACC1430",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "RCKACC070",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCITL790",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCCDM970",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCCDM1010",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCCDM1030",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCCDM1040",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCCDM1180",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCCDM1080",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCCDM1210",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCNSY020",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCPNT100",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCPNT5620",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCPNT5570",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCPNT5710",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCPNT460",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCPNT3480",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCPNT5560",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCPNT160",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCPNT5550",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCRBT6460",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABRBT120",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABRBT140",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABRBT1890",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCRBT940",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCRBT700",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCRBT710",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCRBT1720",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCRBT1730",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCRBT3670",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCRBT3680",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCRBT3690",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCRBT3700",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCRBT730",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCRBT740",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCRBT1810",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCUBI770",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABUBI040",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPUBI690",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPUBI700",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPUBI430",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPUBI070",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUUBI120",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUUBI150",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTUBI430",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTUBI520",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTUBI530",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCEPC470",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "KITEPC070",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "KITEPC080",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCEPC200",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTGDM150",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTGDM140",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUMTK250",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCBEL330",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCBEL420",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCBEL140",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABBEL150",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCBEL1390",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCBEL530",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCBEL470",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCBEL480",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCBEL520",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCBEL1420",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABBEL240",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCBEL360",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCBEL080",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCBEL1360",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCBEL1370",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCBEL490",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCBEL1380",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCENS010",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS020",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS030",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS040",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS050",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS060",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS070",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS080",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS090",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS100",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS110",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS120",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS130",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS140",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS150",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS160",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS170",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS180",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS190",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS200",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS210",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS220",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS230",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS240",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS250",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS260",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS270",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS280",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS290",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS300",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS310",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CABENS320",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "GABMVA070",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCENS020",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCMVA1430",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCMVA1390",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "TERTEL010",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTEL100",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCTEL110",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUHKV040",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTRUI010",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPRUI110",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACCRUI030",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ANTCAM060",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ANTCAM080",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ANTCAM120",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SERTRD1410",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "DDUTRD120",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ROUNET010",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTNET140",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTNET160",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "SWTNET120",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPNET010",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPNET020",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "ACPNET030",
+    "categoria": "conectividad_redes"
+  },
+  {
+    "sku": "CAMPVS2670",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCPVS220",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CONGDM100",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "TELGDM300",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "TELGDM430",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "TELGDM330",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCGDM110",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "GRDDAH820",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "NVRDAH430",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "NVRDAH660",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMDAH2470",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMDAH3950",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMDAH5900",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMDAH3820",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMDAH5150",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMDAH5110",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCDAH1150",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCDAH1240",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCDAH540",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCDAH2370",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCDAH820",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCDAH2470",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCDAH2480",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CABDAH130",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "MONDAH170",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "MONDAH180",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "MONDAH220",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMTPL760",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMMER010",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "NVRTPL070",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMHKV5400",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMHKV4320",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMHKV4220",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMHKV4550",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMHKV4570",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMHKV3830",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMHKV2120",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMHKV4310",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMHKV3710",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMHKV4020",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMHKV2970",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMHKV5480",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMHKV4360",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMHKV4350",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "KITHKV380",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCHKV3310",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "KITHKV790",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMEPC010",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "DVRHKV890",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "NVRHKV690",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "DVRHKV820",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "GRDHKV480",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "NVRHKV640",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCHKV1620",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "GABHKV090",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "GABLKP030",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "GABLKP060",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCHKV4580",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "LCTHKV110",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCHKV5220",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCHKV4940",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCLKP190",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCHKV960",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "LCTHKV100",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCHKV4260",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCHKV2240",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCHKV1080",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCHKV350",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCHKV4900",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "SWTHKV250",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMHLK790",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "TELPAN1110",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCPTS2320",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCPTS2400",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCPTS2410",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCPTS1880",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCPTS2510",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCPOL1580",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCPOL1570",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMTND070",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMTND030",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMTND130",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMTND140",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMTND150",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCTND090",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCEZV070",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "ACCEZV180",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMEZV280",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMEZV580",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMEZV590",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMEZV600",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMEZV150",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMUNI330",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "GRDUNI010",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "NVRUNI030",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "NVRUNI040",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "CAMUBI050",
+    "categoria": "telefonia_seguridad"
+  },
+  {
+    "sku": "PANSMG5150",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PANSMG5140",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PANSMG5370",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "LFDSMG1390",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "LFDSMG1510",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "LFDSMG1410",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCSMG900",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCSMG920",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PANLGE4230",
+    "categoria": "tarjetas_de_video"
+  },
+  {
+    "sku": "PANLGE4270",
+    "categoria": "tarjetas_de_video"
+  },
+  {
+    "sku": "PANLGE4250",
+    "categoria": "tarjetas_de_video"
+  },
+  {
+    "sku": "PANLGE4330",
+    "categoria": "tarjetas_de_video"
+  },
+  {
+    "sku": "PANLGE4260",
+    "categoria": "tarjetas_de_video"
+  },
+  {
+    "sku": "PANLGE4150",
+    "categoria": "all_in_one"
+  },
+  {
+    "sku": "PANLGE4190",
+    "categoria": "all_in_one"
+  },
+  {
+    "sku": "MONLGE3610",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "LICLGE060",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "LICLGE130",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "LICLGE140",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "AUDLGE510",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PANHSM360",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PANHSE1860",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PANHSM750",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PANHSE1890",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PANTOS310",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PANPIO010",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PANPIO020",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCROK180",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELSMG2840",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELSMG2860",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELSMG2890",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELSMG2910",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELSMG2920",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELSMG2700",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELSMG2710",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELSMG2720",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELSMG2810",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELSMG2750",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELSMG2760",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELSMG2770",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELSMG2640",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELOPP020",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELMAC1450",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELMAC570",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CELMAC580",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCNIN430",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCSNY1450",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCVGO2670",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCVGO2340",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PROVAN050",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "PROYAB060",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PROYAB070",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PROBNQ2230",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PROBNQ2120",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PANBNQ850",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCBNQ450",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCBNQ800",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCBNQ270",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PROMTD050",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PROMTD160",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCMTD290",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "ACCMTD450",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCUPS020",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PANQIA070",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "TABDTE020",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "AIRLGE330",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "AIRLGE230",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "AIRLGE510",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "REFLGE130",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "LAVLGE060",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "HORHSE010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "REFHSE040",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "REFHSE050",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "REFHSE060",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "AIRHSE340",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "AIRHSE270",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "AIRHSE250",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "AIRHSE220",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "LCTSYB040",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "LCTSYB050",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "TERSYB040",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "IMPZBR3170",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "IMPZBR2790",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "ACCZBR2420",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "ACCZBR970",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "ACCZBR480",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "IMPSMP1250",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "IMPSMP830",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "IMPCTZ140",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "IMPECL300",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "LCTMTR1880",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "ACCHHP370",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "ACCHHP290",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "ACCZBR1050",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "ACCECL290",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "ACCECL300",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "IMPEPS4100",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "IMPEPS3940",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "IMPEPS3960",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "ACCQIA040",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "SOFPDV820",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "KITNTS2060",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "KITNTS4480",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "KITNTS4450",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "KITNTS4470",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "KITNTS4460",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "KITNTS4370",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "TERTSN400",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "ACCECL210",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "ACCETI810",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "RIBEVL870",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "RIBEVL890",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "RIBEVL900",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "RIBEVL550",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "SOFAVZ350",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "IMPTCH100",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "LCTTCH010",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "CJNNTE060",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "CJNNTE070",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "CJNNTE080",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "IMPZKT060",
+    "categoria": "punto_de_venta"
+  },
+  {
+    "sku": "SOFMSC1980",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFMSC1990",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDMSF3140",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDMSF3150",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDMSF3160",
+    "categoria": "software"
+  },
+  {
+    "sku": "CSPMSP1750",
+    "categoria": "software"
+  },
+  {
+    "sku": "CSPMSP1790",
+    "categoria": "software"
+  },
+  {
+    "sku": "CSPMSP1720",
+    "categoria": "software"
+  },
+  {
+    "sku": "CSPMSP1730",
+    "categoria": "software"
+  },
+  {
+    "sku": "CSPMSP1810",
+    "categoria": "software"
+  },
+  {
+    "sku": "CSPMSP1820",
+    "categoria": "software"
+  },
+  {
+    "sku": "CSPMSP1830",
+    "categoria": "software"
+  },
+  {
+    "sku": "CSPMSP1690",
+    "categoria": "software"
+  },
+  {
+    "sku": "CSPMSP1700",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFNRT1610",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFNRT1620",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT870",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT880",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT890",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT900",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT910",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT920",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT830",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT840",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT850",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT860",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT720",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT560",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT570",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT580",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT590",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT600",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT660",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT680",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT420",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT530",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT540",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT550",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT760",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT780",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT790",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT800",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT810",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDNRT820",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFBIT1320",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFBIT1330",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFBIT1340",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFBIT1350",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFBIT1360",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFBIT1370",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFBIT1380",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFBIT1390",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFBIT1400",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFBIT1410",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFBIT890",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFBIT900",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT060",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT180",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT070",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT190",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT080",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT200",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT090",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT210",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT100",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT220",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT110",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT230",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT120",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT240",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT130",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT250",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT140",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT260",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT150",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDBIT270",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK6770",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7420",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7430",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7440",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7450",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7460",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7470",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7480",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7490",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7500",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7510",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7520",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7530",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7540",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7550",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7560",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7390",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7400",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFKPK7410",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFEST1620",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFEST2030",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFEST2100",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDEST110",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDEST120",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDEST130",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDEST140",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDEST150",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDEST160",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDEST170",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDEST180",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDEST190",
+    "categoria": "software"
+  },
+  {
+    "sku": "ESDEST200",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC090",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC100",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC2530",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1290",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1300",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1310",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1130",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1710",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1720",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1050",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1910",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3510",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1330",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3290",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3300",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3560",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3570",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1350",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1360",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1370",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1730",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1740",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1380",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1390",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1400",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1150",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1760",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1770",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3590",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3430",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3550",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3410",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3420",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3190",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC2490",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3200",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3210",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1490",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1590",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1690",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3170",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3330",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3340",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3350",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3360",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3540",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3000",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3010",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1120",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3310",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC3320",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1230",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1250",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1260",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC1170",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC4020",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC4120",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFCPC4130",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6360",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6370",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6380",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6390",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6400",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6410",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6420",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6430",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6320",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6330",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6340",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6350",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6440",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6450",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6460",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6470",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6480",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6490",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5250",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5390",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5400",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5410",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5420",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5430",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5440",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5450",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5460",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5470",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5480",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5260",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5270",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5280",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5290",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5300",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5310",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5320",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5330",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5340",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5350",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5360",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5370",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5380",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5600",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5610",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5620",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL5630",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6300",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6080",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6090",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6100",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6110",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6120",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6180",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6190",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6200",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6210",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6220",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6130",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6140",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6150",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6160",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6170",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6230",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6240",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6250",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL6260",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL4440",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL4400",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFAPL4910",
+    "categoria": "software"
+  },
+  {
+    "sku": "LCTZKT560",
+    "categoria": "software"
+  },
+  {
+    "sku": "LCTZKT570",
+    "categoria": "software"
+  },
+  {
+    "sku": "LCTZKT590",
+    "categoria": "software"
+  },
+  {
+    "sku": "ACCZKT880",
+    "categoria": "software"
+  },
+  {
+    "sku": "ACCZKT930",
+    "categoria": "software"
+  },
+  {
+    "sku": "ACCZKT920",
+    "categoria": "software"
+  },
+  {
+    "sku": "ACCZKT440",
+    "categoria": "software"
+  },
+  {
+    "sku": "ACCZKT190",
+    "categoria": "software"
+  },
+  {
+    "sku": "ACCZKT650",
+    "categoria": "software"
+  },
+  {
+    "sku": "ACCZKT380",
+    "categoria": "software"
+  },
+  {
+    "sku": "LCTZKT010",
+    "categoria": "software"
+  },
+  {
+    "sku": "LCTHKV080",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFING1410",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFING1420",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFING1430",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFING310",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFATD740",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFATD750",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFATD780",
+    "categoria": "software"
+  },
+  {
+    "sku": "SOFATD680",
+    "categoria": "software"
+  },
+  {
+    "sku": "TECACT010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUACT050",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUACT060",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUGEN1740",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUACT480",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUACT490",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUACT500",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUACT510",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUACT520",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUACT530",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUACT540",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUACT260",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUACT280",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITACT1130",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABACT930",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABACT1030",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABACT1020",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABACT1050",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACT4150",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACT4140",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACT4680",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACT4300",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCBLR180",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "BOCEVK050",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABACT870",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCGEN2820",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCGEN2830",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCGEN2840",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCGEN2890",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCGEN2900",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCGEN3270",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCGEN3180",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCACT100",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCACT740",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCACT750",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCACT760",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCACT770",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCACT240",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCACT260",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCGEN300",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCACT480",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CAMACT480",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCBLR060",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCBLR010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUBLR100",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUBLR110",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MOUBLR130",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUBLR170",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCBLR170",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCBLR040",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCBLR300",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCBLR310",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CAMBLR020",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCBLR030",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "VENACT010",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENACT020",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENBLR490",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENBLR500",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENBLR400",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENBLR360",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENBLR310",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENBLR300",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENBLR270",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENBLR280",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENBLR630",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "VENBLR560",
+    "categoria": "enfriamiento"
+  },
+  {
+    "sku": "ACCBLR020",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILACT160",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILBLR160",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILBLR250",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILBLR410",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILBLR050",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILBLR320",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILBLR340",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACT4250",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACT4240",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACT4270",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACT4290",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACT4210",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACT4130",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACT5300",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACT4110",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACT4120",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNCB010",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "MOUNCB390",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUNCB370",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUNCB680",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUNCB690",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITNCB070",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITNCB100",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITNCB120",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITNCB150",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCNCB680",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABNCB500",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABNCB510",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABNCB130",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABNCB470",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNCB1300",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNCB220",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNCB770",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "ACCNCB340",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ESCNCB080",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ESCNCB050",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ESCNCB060",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ESCNCB070",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILNCB020",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILNCB110",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "VENNCB020",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "VENNCB040",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "VENNCB110",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "ACCNCB1340",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCNCB1350",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCNCB1360",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCNCB1370",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCNCB1380",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "TECYEY140",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TECYEY160",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TECYEY180",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCYEY070",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "BOCYEY060",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCQIA430",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TECGET010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUGET070",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCGET260",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCGET100",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABGET050",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMAC4640",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMAC4660",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMAC2270",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "TECDLL080",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TECDLL530",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUDLL740",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITDLL180",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCDLL160",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "DOCDLL020",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCDLL9190",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCDLL4850",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CONASS020",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "RELLEN1970",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MALLEN110",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUHPI100",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MALHPI060",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCHPI2990",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOULOG1760",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOULOG2270",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOULOG2280",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOULOG1440",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOULOG1450",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOULOG2300",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOULOG3210",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOULOG3220",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOULOG2960",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOULOG3270",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOULOG3310",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCLOG570",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TECLOG1100",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "TECLOG1110",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "KITLOG620",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITLOG520",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITLOG1010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCLOG2330",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCLOG2170",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCLOG2380",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCLOG2390",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CAMLOG810",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TECMST1120",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "MOUMST1430",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUMST1150",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUMST1570",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUMST1840",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUMST1510",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUMST1770",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUMST1780",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMST095",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMST2220",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCMST1060",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMST1680",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMST1700",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMST1070",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMST4290",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMST4310",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMST4510",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMST4810",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMST4520",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCMST4550",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMST4540",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMST4770",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMST4780",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMST4760",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MALGEN4050",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "MALGEN4740",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MALGEN4760",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "MALGEN4810",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "MALGEN5000",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "BOCMST2340",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST3530",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST3540",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST2730",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST3550",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST3140",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST4160",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST3760",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "BOCMST3770",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "BOCMST4090",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST4100",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST4230",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST4150",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST3990",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST4000",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST4010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST4060",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST3520",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCMST3620",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCKNS2230",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCKNS020",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCKNS630",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCKNS810",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCKNS1140",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCKNS2410",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCKNS1850",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUKNS180",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCKNS750",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCKNS1690",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCKNS1710",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCKNS1800",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCKNS1810",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCKNS2440",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCKNS2350",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCKNS790",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCDAT1630",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCDAT1640",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITITL030",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCITL7120",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCITL2610",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL4960",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCITL7830",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "GABITL770",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "GABITL780",
+    "categoria": "gabinetes"
+  },
+  {
+    "sku": "ACCITL300",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCITL4400",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCITL2590",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCITL4040",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCITL6920",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CABITL4970",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCITL7130",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL815",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "TARITL790",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCITL4750",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCITL7570",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCITL7950",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "SWTITL630",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCITL5690",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCITL6370",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCITL2205",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCITL7220",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCITL7370",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCITL7380",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCITL8060",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCITL7840",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCITL7850",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCITL1055",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL4020",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCITL7860",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CABITL3690",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL4050",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL620",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL160",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL080",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CABITL090",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CABITL350",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CABITL180",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CABITL1465",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL2220",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL1975",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL1255",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CABITL1520",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL415",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL2045",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL2120",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL4220",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL195",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL2210",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL1320",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CABITL370",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL025",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABITL810",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SLXLMP730",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SLXLMP520",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SLXLMP270",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "SLXLMP120",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SLXLMP720",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "PROLMP270",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "SABLMP050",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCOVL1200",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCOVL020",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCOVL030",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCOVL290",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCOVL360",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BATOVL1330",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL920",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL700",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL670",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL650",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL680",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL760",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "BATOVL490",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL010",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL040",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL090",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL260",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL1210",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL820",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL790",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL800",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL780",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL570",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL910",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL1090",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATOVL250",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "BATOVL220",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCOVL640",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCOVL780",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCOVL600",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCOVL760",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCOVL800",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCOVL650",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCOVL880",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCOVL860",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCOVL890",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCOVL870",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCOVL1150",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "CAMGEN020",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CAMOVL010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCGEN300",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCGEN310",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCGEN330",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCGEN390",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCTRL4890",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCTRL400",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABTRL1610",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCTRL5410",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCTRL3240",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TECVGO060",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TECVGO220",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TECVGO240",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TECVGO150",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MOUVGO560",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCVGO2440",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITVGO170",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILVGO170",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILVGO010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABVGO730",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABVGO220",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABVGO250",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABVGO500",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABVGO200",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABVGO640",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCVGO2730",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCVGO010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MALVGO030",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "BOCVGO1070",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCVGO470",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCVGO560",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCVGO1640",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCVGO1410",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCVGO700",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCVGO920",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCVGO1560",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCVGO2700",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCVGO2710",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCVGO750",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCVGO2110",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCVGO2380",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCVGO2720",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "MALTCH450",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCTCH5530",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITTCH150",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITTCH260",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CAMTCH030",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "TECTCH070",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCTCH420",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCTCH9730",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCRBT4010",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCRBT4060",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "TECRBT050",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITRBT300",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITRBT310",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITRBT320",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITRBT330",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT4170",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT5250",
+    "categoria": "discos_duros"
+  },
+  {
+    "sku": "ACCRBT9290",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCRBT210",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT220",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT2400",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT9300",
+    "categoria": "mini_pcs_ia"
+  },
+  {
+    "sku": "ACCRBT9310",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCRBT1010",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCRBT1030",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CABRBT2000",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABRBT2080",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABRBT2520",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT5230",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABRBT1440",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABRBT2450",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CABRBT2460",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT280",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT5150",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT5160",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT5170",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT5180",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT5190",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT5200",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT5210",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT6500",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT7370",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCRBT7440",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCRBT7780",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCRBT7770",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCRBT9320",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCRBT9270",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT1660",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "CONRBT010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CONRBT030",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CONRBT050",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CONRBT060",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCRBT7180",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITRBT280",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "TECSTY030",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TECSTY040",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCSTY350",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCSTY360",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "SILSTY030",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILSTY040",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILSTY070",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILSTY120",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILSTY140",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILSTY150",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILSTY160",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILSTY170",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILSTY180",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TARGEN040",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TARGEN050",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TARGEN060",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCKSA150",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "CUBPCO110",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TERKSA020",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TERYOB010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "TERGEN010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR020",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR030",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR200",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR270",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR290",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR310",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR320",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR330",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR430",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR440",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR450",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR460",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR470",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR480",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR490",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR500",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR510",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR520",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR530",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR540",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR560",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR570",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR580",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR590",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR600",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR610",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR620",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR630",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCAZR650",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCBAC030",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCBAC060",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCJAN100",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCJAN140",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCKOR010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMAE190",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCMAE340",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNAS040",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACO010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACO020",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCACO030",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNEX1510",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNTE160",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNTE190",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNTE060",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNTE090",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNTE200",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNTE130",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNTE410",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNTE010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNTE590",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ACCNTE580",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "ESCNEX030",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNTE830",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNTE840",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNEX1340",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCHUW390",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCHUW400",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCHUW1490",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "BOCJBL190",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "KITNNN020",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCNNN850",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCNNN860",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCNNN240",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCNNN320",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCNNN380",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCNNN440",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCNNN500",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCNNN570",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCNNN810",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCNNN340",
+    "categoria": "monitores"
+  },
+  {
+    "sku": "SILNNN010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SILNNN080",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCAMZ070",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCHYU130",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "ACCHYU140",
+    "categoria": "laptops"
+  },
+  {
+    "sku": "MOUHYU010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCUBA160",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCXIA050",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCHPC1010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCHPC020",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCHPC030",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCCRT100",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "BOCCRT260",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCTRL260",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKTRL580",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKTRL3040",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKTRL1155",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKTRL250",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKTRL2150",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKTRL2730",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKTRL110",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKTRL640",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKTRL130",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKTRL3070",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "EXTTRL160",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "EXTTRL360",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "REGCOM250",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "REGCOM360",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "REGCOM140",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCOM270",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCOM280",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCOM290",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCOM490",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCOM340",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCOM780",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCOM240",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCOM450",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCOM910",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCOM730",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCOM740",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCOM750",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCOM760",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "SUPCOM010",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "REGDTS070",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKDTS520",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKDTS180",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKDTS470",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKDTS480",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATDTS130",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATDTS100",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATDTS110",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "TARDTS020",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATDTS160",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVGO040",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "REGCDP080",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCDP1730",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCDP1670",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCDP1690",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCDP1680",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCDP1440",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCDP1450",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCDP1460",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCDP1480",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCDP1490",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCDP1500",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCDP1100",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCDP320",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCDP220",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCDP610",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCDP670",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATCDP110",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "ACCCDP580",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "ACCCDP380",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKAPC2530",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKAPC2540",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKAPC2460",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKAPC2220",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "ACCAPC730",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATAPC840",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "ACCAPC250",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATAPC290",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATAPC780",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATAPC670",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "REGVIC090",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "REGVIC070",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "REGVIC060",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC390",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC360",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC400",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC700",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC690",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC160",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC110",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC150",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC140",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC240",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC210",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC180",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC190",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC100",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC250",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC260",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC710",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC720",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC730",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC740",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC750",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC760",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC770",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC780",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC920",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKVIC930",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATVIC050",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATVIC020",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATVIC040",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATVIC060",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATVIC110",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATVIC210",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "ACCVIC300",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATVIC240",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "EXTVIC030",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP1130",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP1150",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP1170",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP1650",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP670",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP780",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP970",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP960",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP640",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP630",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP770",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP610",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP1820",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP1720",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP1680",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP1440",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP800",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP810",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP690",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP150",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP160",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP170",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP180",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP190",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP200",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP220",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP230",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKCYP380",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATCYP100",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATCYP080",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATCYP310",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATCYP350",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATCYP370",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "ACCCYP470",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "TARCYP020",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "ACCCYP570",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "REGBIT090",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "BATBIT130",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKBIT190",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKBIT200",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKBIT040",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKBIT220",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKBIT230",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKBIT170",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKBIT290",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "SUPKBZ050",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "REGKBZ240",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKKBZ390",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKHKV010",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKHKV070",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "ACCDAH2110",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKDLL060",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKDLL050",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKDLL090",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKDLL070",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKSKE120",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKSKE100",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKSKE140",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKSKE150",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "NBKSKE160",
+    "categoria": "reguladores_ups"
+  },
+  {
+    "sku": "ACCHPB010",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "ACCHPD265",
+    "categoria": "accesorios_perifericos"
+  },
+  {
+    "sku": "SOFNRT080",
+    "categoria": "accesorios_perifericos"
+  }
+]
