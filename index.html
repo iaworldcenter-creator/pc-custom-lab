@@ -341,231 +341,137 @@ if ('serviceWorker' in navigator) {
         </div>
     </header>
 
-    <main class="w-full max-w-[99%] 2xl:max-w-[1850px] mx-auto px-2 sm:px-4 py-6 flex-1">
+        <main class="w-full max-w-[99%] 2xl:max-w-[1850px] mx-auto px-2 sm:px-4 py-4 flex-1">
         
-        <div class="flex flex-col lg:flex-row gap-8 items-start justify-center">
+        <!-- CONTENEDOR PRINCIPAL: SIDEBAR FILTROS (IZQUIERDA) + CATÁLOGO COMPLETO (DERECHA) -->
+        <div class="flex flex-col lg:flex-row gap-6 items-start justify-center">
             
-            <aside class="w-full lg:w-[340px] xl:w-[370px] shrink-0 bg-slate-900/90 rounded-3xl p-5 shadow-2xl relative" id="boutique-sidebar-root">
-                <div class="flex items-center justify-between border-b border-slate-800 pb-3.5 mb-3.5">
-                    <h2 class="font-mono text-sm font-black text-white uppercase tracking-wider flex items-center gap-2 truncate"><i class="fa-solid fa-layer-group text-amber-400"></i> Departamentos</h2>
-                </div>
-                <div class="mb-3.5">
-                    <span class="text-[10px] font-mono text-cyan-400 font-bold bg-cyan-950/40 border border-cyan-500/30 px-3 py-1 rounded-xl block text-center uppercase tracking-widest">
-                        Compras Rápidas
-                    </span>
-                </div>
+            <!-- 1. BARRA LATERAL IZQUIERDA (FILTROS DE BÚSQUEDA Y FACETS) -->
+            <aside class="w-full lg:w-[280px] xl:w-[310px] shrink-0 bg-slate-900/90 rounded-3xl p-4 sm:p-5 shadow-2xl border border-slate-800" id="boutique-sidebar-root">
+                <!-- Inyectado dinámicamente por JS con estilo idéntico a la referencia CT -->
+            </aside>
 
-                <nav class="flex flex-col gap-2" id="sidebar-categories-list">
-
-                    <button 
-                        onclick="filterCategory('Tarjetas de Video RTX & Radeon')"
-                        aria-label="Filtrar por Tarjetas de Video RTX & Radeon"
-                        class="w-full text-left p-3.5 rounded-2xl bg-slate-950/70 hover:bg-slate-800/90 shadow-md flex justify-between items-center transition group cursor-pointer"
-                    >
-                        <div class="flex items-center gap-3.5 min-w-0">
-                            <div class="w-8 h-8 rounded-xl bg-slate-900 flex items-center justify-center text-cyan-400 shrink-0 shadow">
-                                <i class="fa-solid fa-microchip text-sm"></i>
-                            </div>
-                            <strong class="text-white text-xs block group-hover:text-cyan-300 truncate font-bold">Tarjetas de Video RTX & Radeon</strong>
-                        </div>
-                        <i class="fa-solid fa-chevron-right text-[10px] text-slate-400 group-hover:text-cyan-400 transition group-hover:translate-x-0.5 shrink-0 ml-2"></i>
-                    </button>
-
-                    <button 
-                        onclick="filterCategory('Procesadores Intel & AMD Ryzen')"
-                        aria-label="Filtrar por Procesadores Intel & AMD Ryzen"
-                        class="w-full text-left p-3.5 rounded-2xl bg-slate-950/70 hover:bg-slate-800/90 shadow-md flex justify-between items-center transition group cursor-pointer"
-                    >
-                        <div class="flex items-center gap-3.5 min-w-0">
-                            <div class="w-8 h-8 rounded-xl bg-slate-900 flex items-center justify-center text-cyan-400 shrink-0 shadow">
-                                <i class="fa-solid fa-bolt text-sm"></i>
-                            </div>
-                            <strong class="text-white text-xs block group-hover:text-cyan-300 truncate font-bold">Procesadores Intel & AMD Ryzen</strong>
-                        </div>
-                        <i class="fa-solid fa-chevron-right text-[10px] text-slate-400 group-hover:text-cyan-400 transition group-hover:translate-x-0.5 shrink-0 ml-2"></i>
-                    </button>
-
-                    <button 
-                        onclick="filterCategory('Tarjetas Madre LGA1700 & AM5')"
-                        aria-label="Filtrar por Tarjetas Madre LGA1700 & AM5"
-                        class="w-full text-left p-3.5 rounded-2xl bg-slate-950/70 hover:bg-slate-800/90 shadow-md flex justify-between items-center transition group cursor-pointer"
-                    >
-                        <div class="flex items-center gap-3.5 min-w-0">
-                            <div class="w-8 h-8 rounded-xl bg-slate-900 flex items-center justify-center text-cyan-400 shrink-0 shadow">
-                                <i class="fa-solid fa-server text-sm"></i>
-                            </div>
-                            <strong class="text-white text-xs block group-hover:text-cyan-300 truncate font-bold">Tarjetas Madre LGA1700 & AM5</strong>
-                        </div>
-                        <i class="fa-solid fa-chevron-right text-[10px] text-slate-400 group-hover:text-cyan-400 transition group-hover:translate-x-0.5 shrink-0 ml-2"></i>
-                    </button>
-
-                    <button 
-                        onclick="filterCategory('Memorias RAM DDR5 & DDR4')"
-                        aria-label="Filtrar por Memorias RAM DDR5 & DDR4"
-                        class="w-full text-left p-3.5 rounded-2xl bg-slate-950/70 hover:bg-slate-800/90 shadow-md flex justify-between items-center transition group cursor-pointer"
-                    >
-                        <div class="flex items-center gap-3.5 min-w-0">
-                            <div class="w-8 h-8 rounded-xl bg-slate-900 flex items-center justify-center text-cyan-400 shrink-0 shadow">
-                                <i class="fa-solid fa-memory text-sm"></i>
-                            </div>
-                            <strong class="text-white text-xs block group-hover:text-cyan-300 truncate font-bold">Memorias RAM DDR5 & DDR4</strong>
-                        </div>
-                        <i class="fa-solid fa-chevron-right text-[10px] text-slate-400 group-hover:text-cyan-400 transition group-hover:translate-x-0.5 shrink-0 ml-2"></i>
-                    </button>
-
-                    <button 
-                        onclick="filterCategory('Discos SSD M.2 NVMe PCIe 4.0')"
-                        aria-label="Filtrar por Discos SSD M.2 NVMe PCIe 4.0"
-                        class="w-full text-left p-3.5 rounded-2xl bg-slate-950/70 hover:bg-slate-800/90 shadow-md flex justify-between items-center transition group cursor-pointer"
-                    >
-                        <div class="flex items-center gap-3.5 min-w-0">
-                            <div class="w-8 h-8 rounded-xl bg-slate-900 flex items-center justify-center text-cyan-400 shrink-0 shadow">
-                                <i class="fa-solid fa-hard-drive text-sm"></i>
-                            </div>
-                            <strong class="text-white text-xs block group-hover:text-cyan-300 truncate font-bold">Discos SSD M.2 NVMe PCIe 4.0</strong>
-                        </div>
-                        <i class="fa-solid fa-chevron-right text-[10px] text-slate-400 group-hover:text-cyan-400 transition group-hover:translate-x-0.5 shrink-0 ml-2"></i>
-                    </button>
-
-                    <button 
-                        onclick="filterCategory('Gabinetes & Fuentes Modulares')"
-                        aria-label="Filtrar por Gabinetes & Fuentes Modulares"
-                        class="w-full text-left p-3.5 rounded-2xl bg-slate-950/70 hover:bg-slate-800/90 shadow-md flex justify-between items-center transition group cursor-pointer"
-                    >
-                        <div class="flex items-center gap-3.5 min-w-0">
-                            <div class="w-8 h-8 rounded-xl bg-slate-900 flex items-center justify-center text-cyan-400 shrink-0 shadow">
-                                <i class="fa-solid fa-cube text-sm"></i>
-                            </div>
-                            <strong class="text-white text-xs block group-hover:text-cyan-300 truncate font-bold">Gabinetes & Fuentes Modulares</strong>
-                        </div>
-                        <i class="fa-solid fa-chevron-right text-[10px] text-slate-400 group-hover:text-cyan-400 transition group-hover:translate-x-0.5 shrink-0 ml-2"></i>
-                    </button>
-                </nav>
-
-                <!-- CÓDIGO QR PERSUASIVO -->
+            <!-- 2. ÁREA DE CATÁLOGO PRINCIPAL (DERECHA, ANCHO COMPLETO) -->
+            <section class="flex-1 min-w-0 w-full flex flex-col gap-4">
                 
-</aside>
-
-                            <!-- BARRA SUPERIOR DE CONTROL: SELECTOR DE VISTA (GRID VS. LIST), TAMAÑO Y PAGINACIÓN 1..7...N ARRIBA -->
-                <div id="catalog-top-bar" class="p-3.5 sm:p-4 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-950 border border-slate-800 shadow-2xl flex flex-col gap-3">
-                    
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2.5">
-                        <div>
-                            <h2 id="section-title" class="text-base sm:text-lg font-black text-white tracking-wide uppercase font-mono leading-tight">
-                                Catálogo General de Productos
-                            </h2>
-                            <span class="results-count-text text-xs font-mono text-cyan-400 font-bold" id="results-count-txt">
-                                Mostrando 1 - 20 Productos
-                            </span>
+                <!-- BANNER PROMOCIONAL SUPERIOR -->
+                <div class="w-full rounded-2xl overflow-hidden bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 border border-cyan-500/30 p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/20 border border-cyan-400 flex items-center justify-center text-cyan-300 text-2xl shrink-0">
+                            <i class="fa-solid fa-bolt"></i>
                         </div>
-
-                        <!-- SELECTOR DE VISTA (GRID VS. LIST) Y TAMAÑO DE TARJETA -->
-                        <div class="flex items-center gap-2 flex-wrap">
-                            <!-- Selector Grid vs List -->
-                            <div class="bg-slate-950 p-1 rounded-2xl border border-slate-800 flex items-center gap-1 shadow-inner">
-                                <button onclick="setCatalogView('grid')" title="Vista Cuadrícula / Grupos (5 Columnas)" aria-label="Vista Cuadrícula" class="btn-view-toggle-grid px-2.5 sm:px-3 py-1.5 rounded-xl bg-cyan-500 text-slate-950 font-mono font-black text-xs shadow-lg shadow-cyan-500/30 flex items-center gap-1 transition active:scale-95 cursor-pointer">
-                                    <i class="fa-solid fa-table-cells text-xs"></i> <span class="hidden sm:inline">Cuadrícula</span>
-                                </button>
-                                <button onclick="setCatalogView('list')" title="Vista Listado Horizontal Detallado" aria-label="Vista Listado" class="btn-view-toggle-list px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-mono font-bold text-xs flex items-center gap-1 transition active:scale-95 cursor-pointer">
-                                    <i class="fa-solid fa-list-ul text-xs"></i> <span class="hidden sm:inline">Listado</span>
-                                </button>
-                            </div>
-
-                            <!-- Selector Tamaño Pequeña / Grande -->
-                            <div class="bg-slate-950 p-1 rounded-2xl border border-slate-800 flex items-center gap-1 shadow-inner hidden md:flex">
-                                <button onclick="setCardSize('normal')" title="Tarjetas Normales" class="btn-size-normal px-2 py-1 rounded-lg bg-slate-800 text-cyan-400 font-mono text-[10px] font-bold border border-cyan-500/40 cursor-pointer">
-                                    Normal
-                                </button>
-                                <button onclick="setCardSize('large')" title="Tarjetas Grandes" class="btn-size-large px-2 py-1 rounded-lg bg-slate-950 text-slate-400 font-mono text-[10px] hover:text-white cursor-pointer">
-                                    Grande
-                                </button>
-                            </div>
+                        <div>
+                            <span class="text-[10px] font-mono text-cyan-400 font-bold uppercase tracking-widest block">Distribución Directa Oficial</span>
+                            <h3 class="text-white font-bold text-sm sm:text-base">Precios de Mayoreo y Entrega Inmediata en Guadalajara</h3>
                         </div>
                     </div>
+                    <button onclick="document.getElementById('boutiqueSearchInput').focus()" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black px-4 py-2 rounded-xl text-xs uppercase font-mono tracking-wider shadow-lg shadow-cyan-500/30 transition active:scale-95 cursor-pointer shrink-0">
+                        Explorar Catálogo
+                    </button>
+                </div>
+
+                <!-- BARRA DE CONTROL SUPERIOR (RESULTADOS + VISTAS + PAGINACIÓN 1..7...N + ORDEN) -->
+                <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-xl flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                    <div>
+                        <h2 class="text-sm sm:text-base font-black text-white font-mono uppercase tracking-wide" id="section-title">
+                            Resultados de Búsqueda
+                        </h2>
+                        <span class="results-count-text text-xs font-mono text-cyan-400 font-bold" id="results-count-txt">
+                            Mostrando 1 - 20 Productos
+                        </span>
+                    </div>
+
+                    <!-- CONTROLES A LA DERECHA: SELECTOR VISTA + PAGINACIÓN ARRIBA + ORDENAR -->
+                    <div class="flex items-center gap-3 flex-wrap justify-between w-full md:w-auto">
+                        <!-- Iconos Vista Grid / List -->
+                        <div class="bg-slate-950 p-1 rounded-xl border border-slate-800 flex items-center gap-1">
+                            <button onclick="setCatalogView('list')" title="Vista Listado Horizontal" aria-label="Vista Listado" class="btn-view-toggle-list p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition cursor-pointer">
+                                <i class="fa-solid fa-list-ul text-sm"></i>
+                            </button>
+                            <button onclick="setCatalogView('grid')" title="Vista Cuadrícula / Grupos" aria-label="Vista Cuadrícula" class="btn-view-toggle-grid p-2 rounded-lg bg-cyan-500 text-slate-950 font-black shadow-lg shadow-cyan-500/30 transition cursor-pointer">
+                                <i class="fa-solid fa-table-cells text-sm"></i>
+                            </button>
+                        </div>
+
+                        <!-- Paginación 1..7...N Arriba -->
+                        <div class="pagination-controls-container">
+                            <!-- Inyectado por JS -->
+                        </div>
+
+                        <!-- Selector Ordenar por -->
+                        <div class="hidden xl:flex items-center gap-1.5 text-xs font-mono text-slate-400">
+                            <span>Ordenar:</span>
+                            <select onchange="onSortChange(event)" class="bg-slate-950 border border-slate-800 text-slate-200 rounded-lg px-2 py-1 text-xs font-mono cursor-pointer">
+                                <option value="existencia">Existencia</option>
+                                <option value="precio_asc">Precio: Menor a Mayor</option>
+                                <option value="precio_desc">Precio: Mayor a Menor</option>
+                                <option value="nombre">Nombre A-Z</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENEDOR DE PRODUCTOS (GRID DE 5 COLUMNAS EN ESCRITORIO, 2 EN MÓVIL, O LISTA HORIZONTAL) -->
+                <div id="products-grid-container" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 pb-2">
+                    <!-- Inyectado por JS -->
+                </div>
 
                 <!-- PAGINACIÓN NUMÉRICA INFERIOR 1..7 ... N -->
-                <div class="pagination-controls-container p-4 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl mt-4">
+                <div class="pagination-controls-container p-4 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-xl flex justify-center items-center">
                     <!-- Inyectado por JS -->
-                </div>
-
-                <!-- BANNER DE CONVERSIÓN NUMÉRICA SUPERIOR 1..7 ... N -->
-                    <div class="pagination-controls-container pt-2 border-t border-slate-800/80">
-                        <!-- Inyectado por JS -->
-                    </div>
-                </div>
-
-                <div id="products-grid-container" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 pb-4">
-                    <!-- Inyectado por JS -->
-                </div>
-
-                <!-- Paginador de 11 Secciones -->
-                <div class="border-t border-slate-800/80 pt-6 pb-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <button onclick="cambiarSeccion(currentSectionIdx - 1)" class="w-full sm:w-auto px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white font-mono font-bold text-xs border border-slate-800 flex items-center justify-center gap-2 transition active:scale-95">
-                        <i class="fa-solid fa-chevron-left text-[10px]"></i> Anterior
-                    </button>
-
-                    <div id="catalog-pagination-nums" class="flex items-center gap-1.5 flex-wrap justify-center">
-                        <!-- Botones 1..11 -->
-                    </div>
-
-                    <button onclick="cambiarSeccion(currentSectionIdx + 1)" class="w-full sm:w-auto px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white font-mono font-bold text-xs border border-slate-800 flex items-center justify-center gap-2 transition active:scale-95">
-                        Siguiente <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                    </button>
-                </div>
-            
-                <!-- BANNER DE CONVERSIÓN: CÓDIGO QR APP + DESCARGAS GOOGLE GEMINI & ANTI-GRAVITY (ABAJO DE PRODUCTOS) -->
-                <div class="mt-8 pt-8 border-t border-slate-800/80 grid grid-cols-1 md:grid-cols-3 gap-5">
-                    
-                    <!-- 1. Código QR App Oficial -->
-                    <div class="p-5 bg-slate-950 border-2 border-cyan-400 rounded-3xl shadow-[0_0_25px_rgba(6,182,212,0.25)] text-center flex flex-col justify-between items-center gap-3">
-                        <div class="flex items-center gap-2 text-white font-mono font-black text-xs uppercase tracking-wider">
-                            <i class="fa-solid fa-mobile-screen text-cyan-400 text-lg"></i>
-                            <span>App Móvil Pedidos Rápidos</span>
-                        </div>
-                        <div class="w-36 h-36 bg-white p-2 rounded-2xl shadow-xl flex items-center justify-center aspect-square shrink-0">
-                            <img src="https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/codigo_qr_bazar_nfl.png" alt="Código QR App BAZAR NFL" width="144" height="144" loading="lazy" decoding="async" class="w-full h-full object-contain rounded-lg" onerror="this.onerror=null;this.src='https://quickchart.io/qr?text=https%3A//iaworldcenter-creator.github.io/sitios-web/app.html&size=300';" />
-                        </div>
-                        <p class="text-[11px] text-slate-300">Escanea con tu cámara para pedir por Uber Flash con código PIN.</p>
-                        <a href="https://iaworldcenter-creator.github.io/sitios-web/app.html" target="_blank" class="w-full bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-emerald-400 text-white font-bold py-2 rounded-xl text-xs flex items-center justify-center gap-2 transition">
-                            <i class="fa-brands fa-google-play text-emerald-400"></i> <span>Abrir App Oficial</span>
-                        </a>
-                    </div>
-
-                    <!-- 2. Tarjeta Google Gemini AI -->
-                    <div class="bg-gradient-to-b from-slate-950 to-slate-900 border border-cyan-500/40 rounded-3xl p-5 flex flex-col justify-between gap-3 shadow-xl">
-                        <div class="space-y-2">
-                            <div class="flex items-center gap-2 text-cyan-300 font-mono font-bold text-xs uppercase">
-                                <i class="fa-solid fa-wand-magic-sparkles text-cyan-400 text-base"></i>
-                                <span>Creado con Google Gemini</span>
-                            </div>
-                            <h3 class="text-white font-black text-sm">Inteligencia Artificial para tu Negocio</h3>
-                            <p class="text-[11px] text-slate-300 leading-relaxed">Concebido y programado con la IA más avanzada de Google para crear tiendas de ultra velocidad.</p>
-                        </div>
-                        <a href="https://gemini.google.com" target="_blank" rel="noopener" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black py-2.5 rounded-xl text-xs text-center uppercase tracking-wider transition active:scale-95 shadow">
-                            Suscribirse a Google Gemini
-                        </a>
-                    </div>
-
-                    <!-- 3. Tarjeta Anti-Gravity Copilot -->
-                    <div class="bg-gradient-to-b from-slate-950 to-slate-900 border border-amber-500/40 rounded-3xl p-5 flex flex-col justify-between gap-3 shadow-xl">
-                        <div class="space-y-2">
-                            <div class="flex items-center gap-2 text-amber-300 font-mono font-bold text-xs uppercase">
-                                <i class="fa-solid fa-robot text-amber-400 text-base"></i>
-                                <span>Desarrollado por Anti-Gravity</span>
-                            </div>
-                            <h3 class="text-white font-black text-sm">Agente Autónomo de Ingeniería de Software</h3>
-                            <p class="text-[11px] text-slate-300 leading-relaxed">Desarrollado, optimizado y desplegado por Anti-Gravity Copilot. Crea tus propias páginas gratis.</p>
-                        </div>
-                        <a href="https://antigravity.google/download" target="_blank" rel="noopener" class="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-black py-2.5 rounded-xl text-xs text-center uppercase tracking-wider transition active:scale-95 shadow">
-                            Descargar Anti-Gravity Gratis
-                        </a>
-                    </div>
-
                 </div>
 
             </section>
-
         </div>
+
+        <!-- BANNER INFERIOR DE CONVERSIÓN: CÓDIGO QR APP + DESCARGAS GOOGLE GEMINI & ANTI-GRAVITY (ANCHO COMPLETO AL FINAL) -->
+        <div class="mt-10 pt-8 border-t border-slate-800 grid grid-cols-1 md:grid-cols-3 gap-5">
+            <!-- 1. Código QR App Oficial -->
+            <div class="p-5 bg-slate-950 border-2 border-cyan-400 rounded-3xl shadow-[0_0_25px_rgba(6,182,212,0.25)] text-center flex flex-col justify-between items-center gap-3">
+                <div class="flex items-center gap-2 text-white font-mono font-black text-xs uppercase tracking-wider">
+                    <i class="fa-solid fa-mobile-screen text-cyan-400 text-lg"></i>
+                    <span>App Móvil Pedidos Rápidos</span>
+                </div>
+                <div class="w-36 h-36 bg-white p-2 rounded-2xl shadow-xl flex items-center justify-center aspect-square shrink-0">
+                    <img src="https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/codigo_qr_bazar_nfl.png" alt="Código QR App BAZAR NFL" width="144" height="144" loading="lazy" decoding="async" class="w-full h-full object-contain rounded-lg" onerror="this.onerror=null;this.src='https://quickchart.io/qr?text=https%3A//iaworldcenter-creator.github.io/sitios-web/app.html&size=300';" />
+                </div>
+                <p class="text-[11px] text-slate-300">Escanea con tu cámara para pedir por Uber Flash con código PIN.</p>
+                <a href="https://iaworldcenter-creator.github.io/sitios-web/app.html" target="_blank" class="w-full bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-emerald-400 text-white font-bold py-2 rounded-xl text-xs flex items-center justify-center gap-2 transition">
+                    <i class="fa-brands fa-google-play text-emerald-400"></i> <span>Abrir App Oficial</span>
+                </a>
+            </div>
+
+            <!-- 2. Tarjeta Google Gemini AI -->
+            <div class="bg-gradient-to-b from-slate-950 to-slate-900 border border-cyan-500/40 rounded-3xl p-5 flex flex-col justify-between gap-3 shadow-xl">
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2 text-cyan-300 font-mono font-bold text-xs uppercase">
+                        <i class="fa-solid fa-wand-magic-sparkles text-cyan-400 text-base"></i>
+                        <span>Creado con Google Gemini</span>
+                    </div>
+                    <h4 class="text-white font-bold text-sm">Inteligencia Artificial para tu Negocio</h4>
+                    <p class="text-slate-300 text-xs leading-relaxed">Concebido y programado con la IA más avanzada de Google para crear tiendas de ultra velocidad.</p>
+                </div>
+                <a href="https://gemini.google.com" target="_blank" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 text-white font-bold py-2 rounded-xl text-xs text-center flex items-center justify-center gap-2 transition">
+                    <i class="fa-solid fa-robot"></i> <span>Suscribir a Google Gemini</span>
+                </a>
+            </div>
+
+            <!-- 3. Tarjeta Anti-Gravity -->
+            <div class="bg-gradient-to-b from-slate-950 to-slate-900 border border-amber-500/40 rounded-3xl p-5 flex flex-col justify-between gap-3 shadow-xl">
+                <div class="space-y-2">
+                    <div class="flex items-center gap-2 text-amber-300 font-mono font-bold text-xs uppercase">
+                        <i class="fa-solid fa-laptop-code text-amber-400 text-base"></i>
+                        <span>Desarrollado por Anti-Gravity</span>
+                    </div>
+                    <h4 class="text-white font-bold text-sm">Agente Autónomo de Ingeniería de Software</h4>
+                    <p class="text-slate-300 text-xs leading-relaxed">Desarrollado, optimizado y desplegado por Anti-Gravity Copilot. Crea tus propias páginas gratis.</p>
+                </div>
+                <a href="https://github.com" target="_blank" class="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-black py-2 rounded-xl text-xs text-center flex items-center justify-center gap-2 transition">
+                    <i class="fa-brands fa-github"></i> <span>Descarga Anti-Gravity Gratis</span>
+                </a>
+            </div>
+        </div>
+
     </main>
 
     

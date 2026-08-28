@@ -1,10 +1,8 @@
 // =========================================================================
-// MOTOR UNIVERSAL DE CATÁLOGO MULTI-VISTA (GRID/LIST), PAGINACIÓN DUAL (ARRIBA/ABAJO)
-// Y NAVEGACIÓN RESPONSIVA PARA EL ECOSISTEMA BAZAR NFL.GDL (8 SITIOS)
+// MOTOR UNIVERSAL DE CATÁLOGO: FORMATO EXACTO CT ONLINE (GRID & LIST VIEW)
 // =========================================================================
 
 let globalViewMode = 'grid'; // 'grid' o 'list'
-let globalCardSize = 'normal'; // 'normal' o 'large'
 let globalCurrentPage = 1;
 const globalItemsPerPage = 20;
 
@@ -12,8 +10,8 @@ let filterCategoryActive = 'Todos';
 let filterBrandActive = 'Todas';
 let filterMaxBudget = 35000;
 let filterStockGdl = false;
+let currentSortOrder = 'existencia';
 
-// Inicializar al cargar el DOM
 document.addEventListener("DOMContentLoaded", () => {
     initUniversalCatalog();
 });
@@ -23,10 +21,15 @@ function initUniversalCatalog() {
     renderUniversalCatalog();
 }
 
+function onSortChange(e) {
+    currentSortOrder = e.target.value;
+    renderUniversalCatalog();
+}
+
 function getActiveCatalogItems() {
     let prods = [];
     if (window.boutiqueProducts && Array.isArray(window.boutiqueProducts) && window.boutiqueProducts.length > 0) {
-        prods = window.boutiqueProducts;
+        prods = [...window.boutiqueProducts];
     } else if (window.CT_ALL_PRODUCTS && Array.isArray(window.CT_ALL_PRODUCTS)) {
         prods = [...(window.PC_COMBOS || []), ...window.CT_ALL_PRODUCTS];
     } else if (window.UNIFIED_CATALOG && Array.isArray(window.UNIFIED_CATALOG)) {
@@ -35,7 +38,7 @@ function getActiveCatalogItems() {
         });
     }
 
-    // Filtrar por Categoría
+    // Filtro Categoría
     if (filterCategoryActive !== 'Todos') {
         prods = prods.filter(p => {
             const cat = (p.categoria || p.categoria_ct || p.category || '').toLowerCase();
@@ -43,7 +46,7 @@ function getActiveCatalogItems() {
         });
     }
 
-    // Filtrar por Marca
+    // Filtro Marca
     if (filterBrandActive !== 'Todas') {
         prods = prods.filter(p => {
             const b = (p.marca || p.brand || '').toUpperCase();
@@ -51,11 +54,20 @@ function getActiveCatalogItems() {
         });
     }
 
-    // Filtrar por Presupuesto
+    // Filtro Presupuesto
     prods = prods.filter(p => {
         const pr = p.precio || p.precio_mxn || p.price || 0;
         return pr <= filterMaxBudget;
     });
+
+    // Ordenamiento
+    if (currentSortOrder === 'precio_asc') {
+        prods.sort((a, b) => (a.precio || a.precio_mxn || 0) - (b.precio || b.precio_mxn || 0));
+    } else if (currentSortOrder === 'precio_desc') {
+        prods.sort((a, b) => (b.precio || b.precio_mxn || 0) - (a.precio || a.precio_mxn || 0));
+    } else if (currentSortOrder === 'nombre') {
+        prods.sort((a, b) => (a.nombre || a.title || '').localeCompare(b.nombre || b.title || ''));
+    }
 
     return prods;
 }
@@ -66,42 +78,20 @@ function setCatalogView(mode) {
     renderUniversalCatalog();
 }
 
-function setCardSize(size) {
-    globalCardSize = size;
-    updateViewButtonsUI();
-    renderUniversalCatalog();
-}
-
 function updateViewButtonsUI() {
     document.querySelectorAll(".btn-view-toggle-grid").forEach(el => {
         if (globalViewMode === 'grid') {
-            el.className = "px-2.5 sm:px-3 py-1.5 rounded-xl bg-cyan-500 text-slate-950 font-mono font-black text-xs shadow-lg shadow-cyan-500/30 flex items-center gap-1 transition active:scale-95 cursor-pointer btn-view-toggle-grid";
+            el.className = "btn-view-toggle-grid p-2 rounded-lg bg-cyan-500 text-slate-950 font-black shadow-lg shadow-cyan-500/30 transition cursor-pointer";
         } else {
-            el.className = "px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-mono font-bold text-xs flex items-center gap-1 transition active:scale-95 cursor-pointer btn-view-toggle-grid";
+            el.className = "btn-view-toggle-grid p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition cursor-pointer";
         }
     });
 
     document.querySelectorAll(".btn-view-toggle-list").forEach(el => {
         if (globalViewMode === 'list') {
-            el.className = "px-2.5 sm:px-3 py-1.5 rounded-xl bg-cyan-500 text-slate-950 font-mono font-black text-xs shadow-lg shadow-cyan-500/30 flex items-center gap-1 transition active:scale-95 cursor-pointer btn-view-toggle-list";
+            el.className = "btn-view-toggle-list p-2 rounded-lg bg-cyan-500 text-slate-950 font-black shadow-lg shadow-cyan-500/30 transition cursor-pointer";
         } else {
-            el.className = "px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-mono font-bold text-xs flex items-center gap-1 transition active:scale-95 cursor-pointer btn-view-toggle-list";
-        }
-    });
-
-    document.querySelectorAll(".btn-size-normal").forEach(el => {
-        if (globalCardSize === 'normal') {
-            el.className = "px-2 py-1 rounded-lg bg-slate-800 text-cyan-400 font-mono text-[10px] font-bold border border-cyan-500/40 btn-size-normal";
-        } else {
-            el.className = "px-2 py-1 rounded-lg bg-slate-950 text-slate-400 font-mono text-[10px] hover:text-white btn-size-normal";
-        }
-    });
-
-    document.querySelectorAll(".btn-size-large").forEach(el => {
-        if (globalCardSize === 'large') {
-            el.className = "px-2 py-1 rounded-lg bg-slate-800 text-cyan-400 font-mono text-[10px] font-bold border border-cyan-500/40 btn-size-large";
-        } else {
-            el.className = "px-2 py-1 rounded-lg bg-slate-950 text-slate-400 font-mono text-[10px] hover:text-white btn-size-large";
+            el.className = "btn-view-toggle-list p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white transition cursor-pointer";
         }
     });
 }
@@ -147,7 +137,7 @@ function resetCatalogFilters() {
 }
 
 function scrollToProducts() {
-    const el = document.getElementById("section-title") || document.getElementById("catalog-top-bar") || document.getElementById("products-grid-container");
+    const el = document.getElementById("section-title") || document.getElementById("products-grid-container");
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
@@ -163,12 +153,10 @@ function renderUniversalCatalog() {
     const startIdx = (globalCurrentPage - 1) * globalItemsPerPage;
     const pageItems = items.slice(startIdx, startIdx + globalItemsPerPage);
 
-    // Actualizar contadores
     document.querySelectorAll(".results-count-text").forEach(el => {
         el.innerText = `Mostrando ${startIdx + 1} - ${Math.min(startIdx + globalItemsPerPage, totalItems)} de ${totalItems} Productos`;
     });
 
-    // Renderizar Paginación DUAL (Arriba y Abajo) con formato 1..7 ... N
     renderDualPagination(totalPages);
 
     if (pageItems.length === 0) {
@@ -182,24 +170,34 @@ function renderUniversalCatalog() {
     }
 
     if (globalViewMode === 'grid') {
-        // VISTA CUADRÍCULA (5 Columnas en Pantalla Grande / TV / PC, 2 Columnas en Celular)
-        const gridCols = (globalCardSize === 'large') 
-            ? "grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 pb-4" 
-            : "grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 pb-4";
-        
-        container.className = gridCols;
+        // ==========================================
+        // VISTA CUADRÍCULA / GRUPOS (IMAGEN 2 DE REFERENCIA)
+        // 5 columnas en PC/TV, 2 columnas en Móvil
+        // ==========================================
+        container.className = "grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 pb-2";
         container.innerHTML = pageItems.map(p => {
             const sku = p.sku || p.id || 'SKU';
             const title = (p.nombre || p.model || p.title || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
             const price = p.precio || p.precio_mxn || p.price || 0;
             const original = p.original || p.precio_original || (price * 1.28);
+            const usdPrice = (price / 19.50).toFixed(2);
             const img = p.local_img || p.img || p.image || `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
-            const marca = p.marca || p.brand || 'Bazar';
-            const desc = (p.desc || p.descripcion_completa || '').slice(0, 70);
+            const marca = p.marca || p.brand || 'CT';
 
             return `
-                <div class="bg-slate-950/90 hover:bg-slate-900/90 rounded-2xl p-3 flex flex-col justify-between transition group shadow-xl hover:shadow-[0_8px_30px_rgba(6,182,212,0.25)] border border-slate-800/80 hover:border-cyan-500/50 relative overflow-hidden">
+                <div class="bg-slate-950/90 hover:bg-slate-900/95 rounded-2xl p-3 flex flex-col justify-between transition group shadow-xl hover:shadow-[0_8px_30px_rgba(6,182,212,0.25)] border border-slate-800/80 hover:border-cyan-500/50 relative overflow-hidden">
+                    <!-- Badge Diagonal de Promoción en esquina izquierda -->
+                    <div class="absolute -top-6 -left-6 w-16 h-16 bg-red-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow z-10">
+                        <span class="text-[8px] font-mono font-black text-white uppercase tracking-tighter">PROMO</span>
+                    </div>
+
+                    <!-- Corazón de Favoritos -->
+                    <button class="absolute top-2 right-2 text-slate-500 hover:text-red-500 transition text-xs z-10 cursor-pointer" title="Guardar en Favoritos">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
                     <div>
+                        <!-- Foto centrada -->
                         <div class="w-full h-32 sm:h-36 overflow-hidden rounded-xl bg-slate-900 flex items-center justify-center p-2 relative mb-2 shadow-inner border border-slate-800/50">
                             <img 
                                 src="${img}" 
@@ -211,80 +209,69 @@ function renderUniversalCatalog() {
                                 class="w-full h-full object-contain group-hover:scale-105 transition duration-300"
                                 onerror="this.onerror=null; this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre_thumb.webp';"
                             />
-                            <span class="absolute top-1.5 left-1.5 bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[8px] font-mono font-black px-1.5 py-0.5 rounded shadow uppercase truncate max-w-[80px]">
-                                ${marca}
+                        </div>
+
+                        <!-- Precios Grandes en Verde/Ámbar -->
+                        <div class="text-center mb-1">
+                            <span class="text-xs sm:text-sm font-black font-mono text-emerald-400 block">
+                                $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
                             </span>
-                            <span class="absolute top-1.5 right-1.5 text-[8px] font-mono text-emerald-400 font-bold bg-slate-950/80 px-1.5 py-0.5 rounded border border-emerald-500/30 flex items-center gap-1">
-                                <span class="w-1 h-1 rounded-full bg-emerald-400 animate-pulse"></span> Stock GDL
+                            <span class="text-[9px] font-mono text-slate-500 line-through">
+                                $${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
                             </span>
                         </div>
 
-                        <div class="flex justify-between items-center text-[9px] font-mono mb-1">
-                            <span class="text-cyan-400 font-bold uppercase truncate">${marca}</span>
-                            <span class="text-slate-400 font-bold">${sku}</span>
+                        <div class="text-center text-[8px] font-mono text-cyan-400 font-bold mb-1 flex items-center justify-center gap-1">
+                            <i class="fa-solid fa-cloud-arrow-down"></i> Entrega Digital / Express
                         </div>
 
-                        <h4 class="text-white font-bold text-xs mb-1 line-clamp-2 leading-snug group-hover:text-cyan-300 transition" title="${title}">${title}</h4>
-                        <p class="text-slate-400 text-[10px] leading-relaxed line-clamp-2 mb-2 font-normal">${desc}...</p>
+                        <!-- Título y Clave CT -->
+                        <h4 class="text-white text-xs font-bold text-center line-clamp-2 leading-snug group-hover:text-cyan-300 transition mb-1" title="${title}">
+                            ${title}
+                        </h4>
+
+                        <div class="text-center text-[9px] font-mono text-slate-400 mb-2">
+                            <span>SKU: ${sku}</span>
+                        </div>
                     </div>
 
-                    <div>
-                        <div class="mb-1.5 flex items-center justify-between">
-                            <span class="text-[8px] font-mono text-amber-300 bg-amber-500/10 border border-amber-500/30 px-1.5 py-0.5 rounded">
-                                Mayoreo 10+ pzs (-5%)
-                            </span>
-                        </div>
-
-                        <div class="pt-1.5 border-t border-slate-900 mb-2 flex flex-col gap-0.5">
-                            <div class="flex items-center justify-between gap-1 text-[10px] font-mono">
-                                <span class="text-slate-400 font-bold uppercase text-[8px]">Antes:</span>
-                                <span class="text-red-400 font-bold line-through bg-red-950/50 border border-red-500/40 px-1 py-0.2 rounded">$${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
-                            </div>
-                            <div class="flex items-baseline justify-between">
-                                <span class="text-[9px] font-mono text-emerald-400 font-bold uppercase">Contado:</span>
-                                <span class="text-sm sm:text-base font-black font-mono text-amber-400">
-                                    $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} <span class="text-[9px] text-amber-300/80 font-normal">MXN</span>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-2 gap-1.5">
-                            <button 
-                                onclick="addToCartUniversal('${sku}', '${title}', ${price}, '${img}')" 
-                                aria-label="Terminar Compra ${sku}" 
-                                class="bg-slate-900 hover:bg-slate-800 text-cyan-300 font-bold py-1.5 px-1 rounded-xl text-[9px] flex items-center justify-center gap-1 transition active:scale-95 cursor-pointer shadow border border-cyan-500/30 truncate" 
-                                title="Agregar a la canasta"
-                            >
-                                <i class="fa-solid fa-cart-plus text-[9px]"></i> <span>Terminar Compra</span>
-                            </button>
-                            <button 
-                                onclick="buyNowUniversal('${sku}', '${title}', ${price}, '${img}')" 
-                                aria-label="Pagar ${sku} Ahora" 
-                                class="bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-black py-1.5 px-1 rounded-xl text-[9px] flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer uppercase tracking-wider truncate" 
-                                title="Pagar Ahora Directamente"
-                            >
-                                <i class="fa-solid fa-bolt text-[9px]"></i> <span>Pagar Ahora</span>
-                            </button>
-                        </div>
+                    <!-- Botón Azul Comprar / Terminar Compra -->
+                    <div class="pt-1">
+                        <button 
+                            onclick="buyNowUniversal('${sku}', '${title}', ${price}, '${img}')" 
+                            class="w-full bg-blue-600 hover:bg-blue-500 text-white font-mono font-bold py-1.5 px-2 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition active:scale-95 shadow cursor-pointer"
+                        >
+                            <i class="fa-solid fa-cart-shopping text-[10px]"></i> <span>Comprar</span>
+                        </button>
                     </div>
                 </div>
             `;
         }).join('');
     } else {
-        // VISTA LISTADO HORIZONTAL DETALLADO (Línea por Línea con Ficha Técnica Extendida)
-        container.className = "flex flex-col gap-3 pb-4";
+        // ==========================================
+        // VISTA LISTADO HORIZONTAL (IMAGEN 1 DE REFERENCIA)
+        // Fila extendida de izquierda a derecha
+        // ==========================================
+        container.className = "flex flex-col gap-3 pb-2";
         container.innerHTML = pageItems.map(p => {
             const sku = p.sku || p.id || 'SKU';
             const title = (p.nombre || p.model || p.title || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
             const price = p.precio || p.precio_mxn || p.price || 0;
             const original = p.original || p.precio_original || (price * 1.28);
+            const usdPrice = (price / 19.50).toFixed(2);
             const img = p.local_img || p.img || p.image || `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
-            const marca = p.marca || p.brand || 'Bazar';
+            const marca = p.marca || p.brand || 'CT';
             const desc = p.descripcion_completa || p.desc || '';
 
             return `
-                <div class="bg-slate-950/90 hover:bg-slate-900/90 rounded-2xl p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition group shadow-xl border border-slate-800/80 hover:border-cyan-500/50">
-                    <div class="w-full md:w-36 h-32 md:h-28 overflow-hidden rounded-xl bg-slate-900 flex items-center justify-center p-2 relative shadow-inner shrink-0 border border-slate-800">
+                <div class="bg-slate-950/90 hover:bg-slate-900/95 rounded-2xl p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition group shadow-xl border border-slate-800/80 hover:border-cyan-500/50 relative overflow-hidden">
+                    <!-- Badge Diagonal Promo -->
+                    <div class="absolute -top-5 -left-5 w-14 h-14 bg-red-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow z-10">
+                        <span class="text-[7px] font-mono font-black text-white uppercase">PROMO</span>
+                    </div>
+
+                    <!-- Miniatura Izquierda -->
+                    <div class="w-full md:w-36 h-28 overflow-hidden rounded-xl bg-slate-900 flex items-center justify-center p-2 relative shadow-inner shrink-0 border border-slate-800">
                         <img 
                             src="${img}" 
                             alt="${title}" 
@@ -295,52 +282,51 @@ function renderUniversalCatalog() {
                             class="w-full h-full object-contain group-hover:scale-105 transition duration-300"
                             onerror="this.onerror=null; this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre_thumb.webp';"
                         />
-                        <span class="absolute top-1 left-1 bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[8px] font-mono font-black px-1.5 py-0.5 rounded uppercase">
-                            ${marca}
-                        </span>
                     </div>
 
+                    <!-- Información Central -->
                     <div class="flex-1 min-w-0">
-                        <div class="flex items-center gap-2 text-[10px] font-mono mb-1">
+                        <h4 class="text-white font-bold text-sm mb-1 group-hover:text-cyan-300 transition leading-snug">${title}</h4>
+                        <div class="flex items-center gap-2 text-[10px] font-mono text-slate-400 mb-1">
                             <span class="text-cyan-400 font-bold uppercase">${marca}</span>
-                            <span class="text-slate-500">•</span>
-                            <span class="text-slate-300 font-bold bg-slate-900 px-2 py-0.5 rounded border border-slate-800">SKU: ${sku}</span>
-                            <span class="text-emerald-400 font-bold ml-auto hidden sm:inline"><i class="fa-solid fa-check-circle"></i> En Existencia Guadalajara</span>
+                            <span>•</span>
+                            <span>SKU: ${sku}</span>
+                            <span>•</span>
+                            <span>Clave CT: ${sku}</span>
                         </div>
-                        <h4 class="text-white font-bold text-sm mb-1.5 group-hover:text-cyan-300 transition leading-snug">${title}</h4>
-                        <p class="text-slate-400 text-xs leading-relaxed font-normal">${desc}</p>
                         
-                        <div class="mt-2 flex items-center gap-2 flex-wrap">
-                            <span class="text-[10px] font-mono text-amber-300 bg-amber-500/10 border border-amber-500/30 px-2 py-0.5 rounded">
-                                🏷️ Precio de Mayoreo a partir de 10 piezas (-5%)
-                            </span>
-                            <span class="text-[10px] font-mono text-cyan-300 bg-cyan-950/60 border border-cyan-500/30 px-2 py-0.5 rounded">
-                                🛡️ Garantía Física 48h Pedro Moreno 501 A
-                            </span>
+                        <!-- Calificación Estrellas -->
+                        <div class="flex items-center gap-1 text-red-500 text-xs mb-1.5">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
                         </div>
+
+                        <p class="text-slate-400 text-xs leading-relaxed line-clamp-2 font-normal">${desc}</p>
                     </div>
 
+                    <!-- Precios y Botón de Compra Derecha -->
                     <div class="w-full md:w-56 flex flex-col justify-between items-end border-t md:border-t-0 md:border-l border-slate-800/80 pt-3 md:pt-0 md:pl-4 shrink-0">
-                        <div class="text-right w-full mb-3">
-                            <span class="text-[10px] font-mono text-slate-400 block line-through">Antes: $${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
-                            <div class="text-lg sm:text-xl font-black font-mono text-amber-400">
-                                $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} <span class="text-xs text-amber-300 font-normal">MXN</span>
+                        <div class="text-right w-full mb-2">
+                            <span class="text-[9px] font-mono text-cyan-400 font-bold uppercase block"><i class="fa-solid fa-cloud-arrow-down"></i> Entrega Express</span>
+                            <span class="text-[10px] font-mono text-slate-500 line-through block">$${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                            <div class="text-base sm:text-lg font-black font-mono text-emerald-400 leading-tight">
+                                $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
                             </div>
-                            <span class="text-[9px] font-mono text-emerald-400 block uppercase">IVA Incluido / Factura</span>
+                            <span class="text-[9px] font-mono text-slate-400 block">$${usdPrice} USD</span>
                         </div>
 
-                        <div class="flex flex-col sm:flex-row md:flex-col gap-2 w-full">
-                            <button 
-                                onclick="addToCartUniversal('${sku}', '${title}', ${price}, '${img}')" 
-                                class="w-full bg-slate-900 hover:bg-slate-800 text-cyan-300 font-mono font-bold py-2 px-3 rounded-xl text-xs flex items-center justify-center gap-2 border border-cyan-500/40 transition active:scale-95 shadow cursor-pointer"
-                            >
-                                <i class="fa-solid fa-cart-plus text-xs"></i> <span>Terminar Compra</span>
+                        <div class="flex items-center gap-2 w-full">
+                            <button class="p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-red-500 transition cursor-pointer" title="Favoritos">
+                                <i class="fa-regular fa-heart"></i>
                             </button>
                             <button 
-                                onclick="buyNowUniversal('${sku}', '${title}', ${price}, '${img}')" 
-                                class="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 text-slate-950 font-mono font-black py-2 px-3 rounded-xl text-xs flex items-center justify-center gap-2 uppercase tracking-wider transition active:scale-95 shadow cursor-pointer"
+                                onclick="addToCartUniversal('${sku}', '${title}', ${price}, '${img}')" 
+                                class="flex-1 bg-blue-600 hover:bg-blue-500 text-white font-mono font-bold py-2 px-3 rounded-xl text-xs flex items-center justify-center gap-1.5 transition active:scale-95 shadow cursor-pointer uppercase tracking-wider"
                             >
-                                <i class="fa-solid fa-bolt text-xs"></i> <span>Pagar Ahora</span>
+                                <i class="fa-solid fa-cart-plus text-xs"></i> <span>Agregar al carrito</span>
                             </button>
                         </div>
                     </div>
@@ -350,7 +336,7 @@ function renderUniversalCatalog() {
     }
 }
 
-// RENDERIZADO DUAL DE PAGINACIÓN (ARRIBA Y ABAJO CON FORMATO 1..7 ... N)
+// PAGINACIÓN DUAL IDÉNTICA A LA REFERENCIA (1 2 3 4 5 6 7 ... N)
 function renderDualPagination(totalPages) {
     const containers = document.querySelectorAll(".pagination-controls-container");
     if (!containers || containers.length === 0) return;
@@ -370,34 +356,22 @@ function renderDualPagination(totalPages) {
 
     const htmlPages = pages.map(p => {
         if (p === '...') {
-            return `<span class="px-1.5 sm:px-2 text-slate-600 font-mono font-bold text-xs">...</span>`;
+            return `<span class="px-1 text-slate-500 font-mono text-xs">...</span>`;
         }
         const isAct = (p === globalCurrentPage);
-        const cls = isAct ? "bg-cyan-500 text-slate-950 font-black shadow-lg shadow-cyan-500/30 border-cyan-400 scale-110" : "bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:bg-slate-800";
-        return `<button onclick="goCatalogPage(${p})" class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl font-mono font-bold text-xs flex items-center justify-center transition border cursor-pointer ${cls}">${p}</button>`;
+        const cls = isAct ? "bg-blue-600 text-white font-bold border-blue-500" : "bg-slate-950 border-slate-800 text-slate-400 hover:text-white hover:bg-slate-800";
+        return `<button onclick="goCatalogPage(${p})" class="w-6 h-6 sm:w-7 sm:h-7 rounded text-xs font-mono border transition flex items-center justify-center cursor-pointer ${cls}">${p}</button>`;
     }).join('');
 
     containers.forEach(box => {
         box.innerHTML = `
-            <div class="flex items-center justify-between gap-2 sm:gap-4 w-full flex-wrap">
-                <button 
-                    onclick="goCatalogPage(${globalCurrentPage - 1})" 
-                    ${globalCurrentPage <= 1 ? 'disabled class="opacity-40 cursor-not-allowed"' : 'class="cursor-pointer hover:bg-slate-800 hover:text-white"'}
-                    class="px-3 py-1.5 rounded-xl bg-slate-900 text-slate-300 font-mono font-bold text-xs border border-slate-800 flex items-center gap-1.5 transition active:scale-95"
-                >
-                    <i class="fa-solid fa-chevron-left text-[10px]"></i> <span class="hidden sm:inline">Anterior</span>
+            <div class="flex items-center gap-1">
+                <button onclick="goCatalogPage(${globalCurrentPage - 1})" ${globalCurrentPage <= 1 ? 'disabled class="opacity-30 cursor-not-allowed"' : 'class="cursor-pointer hover:text-white"'} class="w-6 h-6 sm:w-7 sm:h-7 rounded bg-slate-950 border border-slate-800 text-slate-400 text-xs flex items-center justify-center">
+                    <i class="fa-solid fa-chevron-left text-[9px]"></i>
                 </button>
-
-                <div class="flex items-center gap-1 sm:gap-1.5 flex-wrap justify-center">
-                    ${htmlPages}
-                </div>
-
-                <button 
-                    onclick="goCatalogPage(${globalCurrentPage + 1})" 
-                    ${globalCurrentPage >= totalPages ? 'disabled class="opacity-40 cursor-not-allowed"' : 'class="cursor-pointer hover:bg-slate-800 hover:text-white"'}
-                    class="px-3 py-1.5 rounded-xl bg-slate-900 text-slate-300 font-mono font-bold text-xs border border-slate-800 flex items-center gap-1.5 transition active:scale-95"
-                >
-                    <span class="hidden sm:inline">Siguiente</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                ${htmlPages}
+                <button onclick="goCatalogPage(${globalCurrentPage + 1})" ${globalCurrentPage >= totalPages ? 'disabled class="opacity-30 cursor-not-allowed"' : 'class="cursor-pointer hover:text-white"'} class="w-6 h-6 sm:w-7 sm:h-7 rounded bg-slate-950 border border-slate-800 text-slate-400 text-xs flex items-center justify-center">
+                    <i class="fa-solid fa-chevron-right text-[9px]"></i>
                 </button>
             </div>
         `;
@@ -414,7 +388,7 @@ function goCatalogPage(p) {
     scrollToProducts();
 }
 
-// RENDERIZADO DE FILTROS LATERALES UNIFORMES
+// BARRA LATERAL CON DISEÑO EXACTO DE LA IMAGEN 1/2
 function renderUniversalFilters() {
     const root = document.getElementById("boutique-sidebar-root");
     if (!root) return;
@@ -424,15 +398,73 @@ function renderUniversalFilters() {
             <h2 class="font-mono text-xs font-black text-white uppercase tracking-wider flex items-center gap-2">
                 <i class="fa-solid fa-sliders text-cyan-400"></i> Filtros de Búsqueda
             </h2>
-            <button onclick="resetCatalogFilters()" class="text-[10px] font-mono text-cyan-400 hover:text-cyan-300 font-bold uppercase transition cursor-pointer">
-                <i class="fa-solid fa-rotate-left"></i> Limpiar
+        </div>
+
+        <div class="flex gap-2 mb-4">
+            <button onclick="renderUniversalCatalog()" class="flex-1 bg-blue-600 hover:bg-blue-500 text-white font-mono text-[10px] font-bold py-1.5 rounded-lg uppercase tracking-wider transition cursor-pointer">
+                Aplicar Filtros
+            </button>
+            <button onclick="resetCatalogFilters()" class="flex-1 bg-red-600 hover:bg-red-500 text-white font-mono text-[10px] font-bold py-1.5 rounded-lg uppercase tracking-wider transition cursor-pointer">
+                Limpiar Filtros
             </button>
         </div>
 
-        <!-- CONTROL DE PRESUPUESTO PRICE SLIDER -->
-        <div class="mb-4 p-3 rounded-2xl bg-slate-950/80 border border-slate-800">
-            <div class="flex justify-between items-center mb-1.5">
-                <span class="text-[10px] font-mono text-slate-300 font-bold uppercase">Presupuesto Máx:</span>
+        <!-- PROMOCIONES -->
+        <div class="mb-4">
+            <h3 class="text-[11px] font-mono font-bold text-slate-300 uppercase mb-2">Promociones</h3>
+            <div class="flex flex-col gap-1 text-xs text-slate-400">
+                <label class="flex items-center gap-2 cursor-pointer hover:text-white">
+                    <input type="checkbox" checked class="w-3.5 h-3.5 accent-blue-600 cursor-pointer" /> Promociones
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer hover:text-white">
+                    <input type="checkbox" class="w-3.5 h-3.5 accent-blue-600 cursor-pointer" /> Nuevos
+                </label>
+            </div>
+        </div>
+
+        <!-- CATEGORÍAS -->
+        <div class="mb-4">
+            <h3 class="text-[11px] font-mono font-bold text-slate-300 uppercase mb-2">Categorías</h3>
+            <div class="flex flex-col gap-1 text-xs text-slate-400 max-h-48 overflow-y-auto no-scrollbar">
+                ${['Todos', 'Procesadores', 'Tarjetas Madre', 'Tarjetas de Video', 'Memorias RAM', 'Almacenamiento', 'Fuentes de Poder', 'Gabinetes', 'Equipos Armados'].map(cat => `
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-white">
+                        <input type="radio" name="sidebar_cat" ${filterCategoryActive === cat ? 'checked' : ''} onchange="selectCategoryFilter('${cat}')" class="w-3.5 h-3.5 accent-blue-600 cursor-pointer" />
+                        <span>${cat}</span>
+                    </label>
+                `).join('')}
+            </div>
+        </div>
+
+        <!-- MARCAS -->
+        <div class="mb-4">
+            <h3 class="text-[11px] font-mono font-bold text-slate-300 uppercase mb-2">Marcas</h3>
+            <div class="flex flex-col gap-1 text-xs text-slate-400 max-h-44 overflow-y-auto no-scrollbar">
+                ${['Todas', 'ASUS', 'INTEL', 'AMD', 'KINGSTON', 'MSI', 'GIGABYTE', 'ACTECK', 'TRIPP-LITE', 'ADATA', 'CORSAIR'].map(b => `
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-white">
+                        <input type="radio" name="sidebar_brand" ${filterBrandActive === b ? 'checked' : ''} onchange="selectBrandFilter('${b}')" class="w-3.5 h-3.5 accent-blue-600 cursor-pointer" />
+                        <span>${b}</span>
+                    </label>
+                `).join('')}
+            </div>
+        </div>
+
+        <!-- STOCK / SUCURSALES -->
+        <div class="mb-4">
+            <h3 class="text-[11px] font-mono font-bold text-slate-300 uppercase mb-2">Sucursales</h3>
+            <div class="flex flex-col gap-1 text-xs text-slate-400">
+                <label class="flex items-center gap-2 cursor-pointer hover:text-white">
+                    <input type="checkbox" checked class="w-3.5 h-3.5 accent-blue-600 cursor-pointer" /> Guadalajara (Pedro Moreno 501 A)
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer hover:text-white">
+                    <input type="checkbox" class="w-3.5 h-3.5 accent-blue-600 cursor-pointer" /> Envío Nacional Express
+                </label>
+            </div>
+        </div>
+
+        <!-- RANGO DE PRECIO -->
+        <div class="mb-2 p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+            <div class="flex justify-between items-center mb-1">
+                <span class="text-[9px] font-mono text-slate-400 uppercase">Presupuesto Máx:</span>
                 <span class="budget-slider-val text-xs font-mono font-black text-amber-400">$${filterMaxBudget.toLocaleString('es-MX')} MXN</span>
             </div>
             <input 
@@ -441,64 +473,13 @@ function renderUniversalFilters() {
                 max="35000" 
                 step="500" 
                 value="${filterMaxBudget}" 
-                class="budget-slider-input w-full accent-cyan-400 cursor-pointer h-1.5 bg-slate-800 rounded-lg" 
+                class="budget-slider-input w-full accent-blue-500 cursor-pointer h-1.5 bg-slate-800 rounded-lg" 
                 oninput="onBudgetSliderInput(event)" 
             />
-            <div class="flex justify-between text-[8px] font-mono text-slate-500 mt-1">
-                <span>$500 MXN</span>
-                <span>$35,000 MXN</span>
-            </div>
-        </div>
-
-        <!-- FILTRO STOCK GUADALAJARA -->
-        <div class="mb-4 p-2.5 rounded-2xl bg-slate-950/80 border border-slate-800">
-            <label class="flex items-center gap-2 text-xs text-slate-300 font-bold cursor-pointer">
-                <input type="checkbox" class="chk-gdl-stock w-4 h-4 rounded accent-emerald-500 cursor-pointer" onchange="filterStockGdl = this.checked; globalCurrentPage=1; renderUniversalCatalog();" />
-                <span class="flex items-center gap-1 text-[11px]">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    Entrega Hoy Guadalajara (Pedro Moreno 501 A)
-                </span>
-            </label>
-        </div>
-
-        <!-- CATEGORÍAS -->
-        <div class="mb-4">
-            <h3 class="text-[11px] font-mono font-black text-slate-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                <i class="fa-solid fa-layer-group text-amber-400"></i> Departamentos
-            </h3>
-            <div class="flex flex-col gap-1 max-h-48 overflow-y-auto no-scrollbar">
-                ${['Todos', 'Tarjetas Madre', 'Procesadores', 'Tarjetas de Video', 'Memorias RAM', 'Almacenamiento', 'Fuentes de Poder', 'Gabinetes', 'Equipos Armados'].map(cat => `
-                    <button 
-                        onclick="selectCategoryFilter('${cat}')" 
-                        class="w-full text-left px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition flex justify-between items-center ${filterCategoryActive === cat ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50' : 'bg-slate-950/60 text-slate-400 hover:text-white hover:bg-slate-800 border border-transparent'}"
-                    >
-                        <span>${cat}</span>
-                        <i class="fa-solid fa-chevron-right text-[9px] opacity-70"></i>
-                    </button>
-                `).join('')}
-            </div>
-        </div>
-
-        <!-- MARCAS -->
-        <div class="mb-3">
-            <h3 class="text-[11px] font-mono font-black text-slate-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                <i class="fa-solid fa-tags text-cyan-400"></i> Marcas
-            </h3>
-            <div class="flex flex-wrap gap-1.5">
-                ${['Todas', 'ASUS', 'INTEL', 'AMD', 'KINGSTON', 'MSI', 'GIGABYTE', 'ACTECK', 'TRIPP-LITE'].map(b => `
-                    <button 
-                        onclick="selectBrandFilter('${b}')" 
-                        class="px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold transition border ${filterBrandActive === b ? 'bg-amber-500/20 text-amber-300 border-amber-500/60' : 'bg-slate-950 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-white'}"
-                    >
-                        ${b}
-                    </button>
-                `).join('')}
-            </div>
         </div>
     `;
 }
 
-// Funciones globales de Carrito y Pago
 window.addToCartUniversal = function(sku, title, price, img) {
     let cart = JSON.parse(localStorage.getItem('ecosystem_global_cart') || localStorage.getItem('cart_items') || '[]');
     const existing = cart.find(i => i.sku === sku);
