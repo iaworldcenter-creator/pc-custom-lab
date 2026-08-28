@@ -446,39 +446,54 @@ if ('serviceWorker' in navigator) {
                 
 </aside>
 
-            <!-- ESCAPARATE DE 11 SECCIONES (5 COLUMNAS X 4 FILAS = 20 PRODUCTOS POR PÁGINA) -->
-            <section class="flex-1 w-full flex flex-col gap-5 min-w-0">
-                                <!-- HEADER DE SECCIÓN + SELECTOR DE VISTA (GRID VS. LIST) + ORDENAMIENTO -->
-                <div class="p-4 sm:p-5 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-950 border border-slate-800 shadow-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                    <div>
-                        <h2 id="section-title" class="text-lg sm:text-xl font-black text-white tracking-wide uppercase font-mono">
-                            Catálogo General de Hardware
-                        </h2>
-                        <span class="text-xs font-mono text-cyan-400 font-bold" id="results-count-txt">
-                            Mostrando 1 - 20 de Componentes
-                        </span>
-                    </div>
+                            <!-- BARRA SUPERIOR DE CONTROL: SELECTOR DE VISTA (GRID VS. LIST), TAMAÑO Y PAGINACIÓN 1..7...N ARRIBA -->
+                <div id="catalog-top-bar" class="p-3.5 sm:p-4 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-950 border border-slate-800 shadow-2xl flex flex-col gap-3">
+                    
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2.5">
+                        <div>
+                            <h2 id="section-title" class="text-base sm:text-lg font-black text-white tracking-wide uppercase font-mono leading-tight">
+                                Catálogo General de Productos
+                            </h2>
+                            <span class="results-count-text text-xs font-mono text-cyan-400 font-bold" id="results-count-txt">
+                                Mostrando 1 - 20 Productos
+                            </span>
+                        </div>
 
-                    <!-- SELECTOR DE VISTA DE PRODUCTOS (GRID VS. LIST) -->
-                    <div class="flex items-center gap-2 self-end md:self-auto">
-                        <span class="text-[10px] font-mono text-slate-400 uppercase hidden sm:inline">Vista:</span>
-                        <div class="bg-slate-950 p-1 rounded-2xl border border-slate-800 flex items-center gap-1 shadow-inner">
-                            <button id="btn-view-grid" onclick="setViewMode('grid')" title="Vista en Cuadrícula (5 Columnas)" aria-label="Vista en Cuadrícula" class="px-3 py-1.5 rounded-xl bg-cyan-500 text-slate-950 font-mono font-bold text-xs shadow-lg shadow-cyan-500/30 flex items-center gap-1.5 transition active:scale-95 cursor-pointer">
-                                <i class="fa-solid fa-table-cells text-xs"></i> <span class="hidden sm:inline">Cuadrícula</span>
-                            </button>
-                            <button id="btn-view-list" onclick="setViewMode('list')" title="Vista en Listado Detallado" aria-label="Vista en Listado" class="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-mono font-bold text-xs flex items-center gap-1.5 transition active:scale-95 cursor-pointer">
-                                <i class="fa-solid fa-list-ul text-xs"></i> <span class="hidden sm:inline">Listado</span>
-                            </button>
+                        <!-- SELECTOR DE VISTA (GRID VS. LIST) Y TAMAÑO DE TARJETA -->
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <!-- Selector Grid vs List -->
+                            <div class="bg-slate-950 p-1 rounded-2xl border border-slate-800 flex items-center gap-1 shadow-inner">
+                                <button onclick="setCatalogView('grid')" title="Vista Cuadrícula / Grupos (5 Columnas)" aria-label="Vista Cuadrícula" class="btn-view-toggle-grid px-2.5 sm:px-3 py-1.5 rounded-xl bg-cyan-500 text-slate-950 font-mono font-black text-xs shadow-lg shadow-cyan-500/30 flex items-center gap-1 transition active:scale-95 cursor-pointer">
+                                    <i class="fa-solid fa-table-cells text-xs"></i> <span class="hidden sm:inline">Cuadrícula</span>
+                                </button>
+                                <button onclick="setCatalogView('list')" title="Vista Listado Horizontal Detallado" aria-label="Vista Listado" class="btn-view-toggle-list px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white font-mono font-bold text-xs flex items-center gap-1 transition active:scale-95 cursor-pointer">
+                                    <i class="fa-solid fa-list-ul text-xs"></i> <span class="hidden sm:inline">Listado</span>
+                                </button>
+                            </div>
+
+                            <!-- Selector Tamaño Pequeña / Grande -->
+                            <div class="bg-slate-950 p-1 rounded-2xl border border-slate-800 flex items-center gap-1 shadow-inner hidden md:flex">
+                                <button onclick="setCardSize('normal')" title="Tarjetas Normales" class="btn-size-normal px-2 py-1 rounded-lg bg-slate-800 text-cyan-400 font-mono text-[10px] font-bold border border-cyan-500/40 cursor-pointer">
+                                    Normal
+                                </button>
+                                <button onclick="setCardSize('large')" title="Tarjetas Grandes" class="btn-size-large px-2 py-1 rounded-lg bg-slate-950 text-slate-400 font-mono text-[10px] hover:text-white cursor-pointer">
+                                    Grande
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Barra de pestañas horizontales de las 11 secciones -->
-                <div class="flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar scroll-smooth" id="catalog-horizontal-tabs">
+                <!-- PAGINACIÓN NUMÉRICA INFERIOR 1..7 ... N -->
+                <div class="pagination-controls-container p-4 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl mt-4">
                     <!-- Inyectado por JS -->
                 </div>
 
-                <!-- Grid de 5 Columnas x 4 Filas -->
+                <!-- BANNER DE CONVERSIÓN NUMÉRICA SUPERIOR 1..7 ... N -->
+                    <div class="pagination-controls-container pt-2 border-t border-slate-800/80">
+                        <!-- Inyectado por JS -->
+                    </div>
+                </div>
+
                 <div id="products-grid-container" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 pb-4">
                     <!-- Inyectado por JS -->
                 </div>
@@ -4274,5 +4289,6 @@ function saveUserProfile() {
     <script defer src="js/ux-engine.js"></script>
     <script defer src="js/ct-search-engine.js"></script>
     <script defer src="js/pc-custom-ui-engine.js"></script>
+    <script defer src="js/ecosystem-catalog-engine.js"></script>
 </body>
 </html>

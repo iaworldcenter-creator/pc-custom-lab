@@ -10,7 +10,8 @@
     "precio_original": 16460.14,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4720/CPUINT4720_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4720"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4720",
+    "local_img": "assets/img/catalog/CPUINT4720.jpg"
   },
   {
     "sku": "CPUINT4730",
@@ -23,7 +24,8 @@
     "precio_original": 9734.83,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4730/CPUINT4730_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4730"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4730",
+    "local_img": "assets/img/catalog/CPUINT4730.jpg"
   },
   {
     "sku": "CPUINT4740",
@@ -36,7 +38,8 @@
     "precio_original": 8181.33,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4740/CPUINT4740_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4740"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4740",
+    "local_img": "assets/img/catalog/CPUINT4740.jpg"
   },
   {
     "sku": "CPUINT4750",
@@ -49,7 +52,8 @@
     "precio_original": 6151.02,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4750/CPUINT4750_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4750"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4750",
+    "local_img": "assets/img/catalog/CPUINT4750.jpg"
   },
   {
     "sku": "CPUINT4760",
@@ -62,7 +66,8 @@
     "precio_original": 5821.21,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4760/CPUINT4760_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4760"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4760",
+    "local_img": "assets/img/catalog/CPUINT4760.jpg"
   },
   {
     "sku": "CPUINT4770",
@@ -75,7 +80,8 @@
     "precio_original": 16075.04,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4770/CPUINT4770_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4770"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4770",
+    "local_img": "assets/img/catalog/CPUINT4770.jpg"
   },
   {
     "sku": "CPUINT4780",
@@ -88,7 +94,8 @@
     "precio_original": 11153.46,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4780/CPUINT4780_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4780"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4780",
+    "local_img": "assets/img/catalog/CPUINT4780.jpg"
   },
   {
     "sku": "CPUINT4790",
@@ -101,7 +108,8 @@
     "precio_original": 10004.56,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4790/CPUINT4790_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4790"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4790",
+    "local_img": "assets/img/catalog/CPUINT4790.jpg"
   },
   {
     "sku": "CPUINT4800",
@@ -114,7 +122,8 @@
     "precio_original": 5145.29,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4800/CPUINT4800_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4800"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4800",
+    "local_img": "assets/img/catalog/CPUINT4800.jpg"
   },
   {
     "sku": "CPUINT4810",
@@ -127,7 +136,8 @@
     "precio_original": 4133.81,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4810/CPUINT4810_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4810"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4810",
+    "local_img": "assets/img/catalog/CPUINT4810.jpg"
   },
   {
     "sku": "CPUINT5030",
@@ -140,7 +150,8 @@
     "precio_original": 8820.5,
     "img": "https://static.ctonline.mx/imagenes/CPUINT5030/CPUINT5030_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5030"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5030",
+    "local_img": "assets/img/catalog/CPUINT5030.jpg"
   },
   {
     "sku": "CPUINT5040",
@@ -153,7 +164,8 @@
     "precio_original": 6704.22,
     "img": "https://static.ctonline.mx/imagenes/CPUINT5040/CPUINT5040_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5040"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5040",
+    "local_img": "assets/img/catalog/CPUINT5040.jpg"
   },
   {
     "sku": "CPUINT5050",
@@ -166,7 +178,8 @@
     "precio_original": 6182.66,
     "img": "https://static.ctonline.mx/imagenes/CPUINT5050/CPUINT5050_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5050"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5050",
+    "local_img": "assets/img/catalog/CPUINT5050.jpg"
   },
   {
     "sku": "CPUINT4440",
@@ -179,7 +192,8 @@
     "precio_original": 10897.79,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4440/CPUINT4440_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4440"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4440",
+    "local_img": "assets/img/catalog/CPUINT4440.jpg"
   },
   {
     "sku": "CPUINT4550",
@@ -192,7 +206,8 @@
     "precio_original": 9140.08,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4550/CPUINT4550_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4550"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4550",
+    "local_img": "assets/img/catalog/CPUINT4550.jpg"
   },
   {
     "sku": "CPUINT4430",
@@ -205,7 +220,8 @@
     "precio_original": 10678.88,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4430/CPUINT4430_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4430"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4430",
+    "local_img": "assets/img/catalog/CPUINT4430.jpg"
   },
   {
     "sku": "CPUINT4540",
@@ -218,7 +234,8 @@
     "precio_original": 11079.31,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4540/CPUINT4540_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4540"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4540",
+    "local_img": "assets/img/catalog/CPUINT4540.jpg"
   },
   {
     "sku": "CPUINT4460",
@@ -231,7 +248,8 @@
     "precio_original": 12913.72,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4460/CPUINT4460_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4460"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4460",
+    "local_img": "assets/img/catalog/CPUINT4460.jpg"
   },
   {
     "sku": "CPUINT4450",
@@ -244,7 +262,8 @@
     "precio_original": 13791.62,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4450/CPUINT4450_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4450"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4450",
+    "local_img": "assets/img/catalog/CPUINT4450.jpg"
   },
   {
     "sku": "CPUINT4570",
@@ -257,7 +276,8 @@
     "precio_original": 15383.14,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4570/CPUINT4570_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4570"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4570",
+    "local_img": "assets/img/catalog/CPUINT4570.jpg"
   },
   {
     "sku": "CPUINT4560",
@@ -270,7 +290,8 @@
     "precio_original": 16122.98,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4560/CPUINT4560_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4560"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4560",
+    "local_img": "assets/img/catalog/CPUINT4560.jpg"
   },
   {
     "sku": "CPUINT5080",
@@ -283,7 +304,8 @@
     "precio_original": 9747.29,
     "img": "https://static.ctonline.mx/imagenes/CPUINT5080/CPUINT5080_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5080"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5080",
+    "local_img": "assets/img/catalog/CPUINT5080.jpg"
   },
   {
     "sku": "CPUINT4490",
@@ -296,7 +318,8 @@
     "precio_original": 7350.42,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4490/CPUINT4490_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4490"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4490",
+    "local_img": "assets/img/catalog/CPUINT4490.jpg"
   },
   {
     "sku": "CPUINT4420",
@@ -309,7 +332,8 @@
     "precio_original": 6986.09,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4420/CPUINT4420_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4420"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4420",
+    "local_img": "assets/img/catalog/CPUINT4420.jpg"
   },
   {
     "sku": "CPUINT4520",
@@ -322,7 +346,8 @@
     "precio_original": 5720.54,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4520/CPUINT4520_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4520"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4520",
+    "local_img": "assets/img/catalog/CPUINT4520.jpg"
   },
   {
     "sku": "CPUINT4530",
@@ -335,7 +360,8 @@
     "precio_original": 5004.67,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4530/CPUINT4530_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4530"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4530",
+    "local_img": "assets/img/catalog/CPUINT4530.jpg"
   },
   {
     "sku": "CPUINT5070",
@@ -348,7 +374,8 @@
     "precio_original": 4523.7,
     "img": "https://static.ctonline.mx/imagenes/CPUINT5070/CPUINT5070_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5070"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5070",
+    "local_img": "assets/img/catalog/CPUINT5070.jpg"
   },
   {
     "sku": "CPUINT5090",
@@ -361,7 +388,8 @@
     "precio_original": 5052.61,
     "img": "https://static.ctonline.mx/imagenes/CPUINT5090/CPUINT5090_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5090"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5090",
+    "local_img": "https://static.ctonline.mx/imagenes/CPUINT5090/CPUINT5090_400.jpg"
   },
   {
     "sku": "CPUINT4510",
@@ -374,7 +402,8 @@
     "precio_original": 3931.19,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4510/CPUINT4510_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4510"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4510",
+    "local_img": "assets/img/catalog/CPUINT4510.jpg"
   },
   {
     "sku": "CPUINT5020",
@@ -387,7 +416,8 @@
     "precio_original": 10514.29,
     "img": "https://static.ctonline.mx/imagenes/CPUINT5020/CPUINT5020_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5020"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5020",
+    "local_img": "https://static.ctonline.mx/imagenes/CPUINT5020/CPUINT5020_400.jpg"
   },
   {
     "sku": "CPUINT4010",
@@ -400,7 +430,8 @@
     "precio_original": 10586.2,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4010/CPUINT4010_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4010"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4010",
+    "local_img": "assets/img/catalog/CPUINT4010.jpg"
   },
   {
     "sku": "CPUINT4020",
@@ -413,7 +444,8 @@
     "precio_original": 12287.98,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4020/CPUINT4020_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4020"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4020",
+    "local_img": "assets/img/catalog/CPUINT4020.jpg"
   },
   {
     "sku": "CPUINT4210",
@@ -426,7 +458,8 @@
     "precio_original": 12853.32,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4210/CPUINT4210_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4210"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4210",
+    "local_img": "assets/img/catalog/CPUINT4210.jpg"
   },
   {
     "sku": "CPUINT4160",
@@ -439,7 +472,8 @@
     "precio_original": 9435.7,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4160/CPUINT4160_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4160"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4160",
+    "local_img": "assets/img/catalog/CPUINT4160.jpg"
   },
   {
     "sku": "CPUINT3990",
@@ -452,7 +486,8 @@
     "precio_original": 9619.46,
     "img": "https://static.ctonline.mx/imagenes/CPUINT3990/CPUINT3990_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT3990"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT3990",
+    "local_img": "assets/img/catalog/CPUINT3990.jpg"
   },
   {
     "sku": "CPUINT4000",
@@ -465,7 +500,8 @@
     "precio_original": 8468.96,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4000/CPUINT4000_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4000"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4000",
+    "local_img": "assets/img/catalog/CPUINT4000.jpg"
   },
   {
     "sku": "CPUINT4090",
@@ -478,7 +514,8 @@
     "precio_original": 6677.69,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4090/CPUINT4090_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4090"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4090",
+    "local_img": "assets/img/catalog/CPUINT4090.jpg"
   },
   {
     "sku": "CPUINT3970",
@@ -491,7 +528,8 @@
     "precio_original": 5672.6,
     "img": "https://static.ctonline.mx/imagenes/CPUINT3970/CPUINT3970_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT3970"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT3970",
+    "local_img": "assets/img/catalog/CPUINT3970.jpg"
   },
   {
     "sku": "CPUINT3980",
@@ -504,7 +542,8 @@
     "precio_original": 4868.85,
     "img": "https://static.ctonline.mx/imagenes/CPUINT3980/CPUINT3980_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT3980"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT3980",
+    "local_img": "assets/img/catalog/CPUINT3980.jpg"
   },
   {
     "sku": "CPUINT4070",
@@ -517,7 +556,8 @@
     "precio_original": 4921.58,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4070/CPUINT4070_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4070"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4070",
+    "local_img": "assets/img/catalog/CPUINT4070.jpg"
   },
   {
     "sku": "CPUINT4910",
@@ -530,7 +570,8 @@
     "precio_original": 4646.1,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4910/CPUINT4910_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4910"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4910",
+    "local_img": "https://static.ctonline.mx/imagenes/CPUINT4910/CPUINT4910_400.jpg"
   },
   {
     "sku": "CPUINT4080",
@@ -543,7 +584,8 @@
     "precio_original": 4250.46,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4080/CPUINT4080_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4080"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4080",
+    "local_img": "assets/img/catalog/CPUINT4080.jpg"
   },
   {
     "sku": "CPUINT4170",
@@ -556,7 +598,8 @@
     "precio_original": 3675.21,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4170/CPUINT4170_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4170"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4170",
+    "local_img": "assets/img/catalog/CPUINT4170.jpg"
   },
   {
     "sku": "CPUINT4060",
@@ -569,7 +612,8 @@
     "precio_original": 2696.64,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4060/CPUINT4060_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4060"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4060",
+    "local_img": "assets/img/catalog/CPUINT4060.jpg"
   },
   {
     "sku": "CPUINT4140",
@@ -582,7 +626,8 @@
     "precio_original": 1851.99,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4140/CPUINT4140_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4140"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4140",
+    "local_img": "assets/img/catalog/CPUINT4140.jpg"
   },
   {
     "sku": "CPUINT4180",
@@ -595,7 +640,8 @@
     "precio_original": 2665.32,
     "img": "https://static.ctonline.mx/imagenes/CPUINT4180/CPUINT4180_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4180"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT4180",
+    "local_img": "assets/img/catalog/CPUINT4180.jpg"
   },
   {
     "sku": "CPUINT5010",
@@ -608,7 +654,8 @@
     "precio_original": 2301.0,
     "img": "https://static.ctonline.mx/imagenes/CPUINT5010/CPUINT5010_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/INTEL.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5010"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUINT5010",
+    "local_img": "assets/img/catalog/CPUINT5010.jpg"
   },
   {
     "sku": "VENINT060",
@@ -621,7 +668,8 @@
     "precio_original": 290.5,
     "img": "https://static.ctonline.mx/imagenes/VENINT060/VENINT060_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/DISIPADOR.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=VENINT060"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=VENINT060",
+    "local_img": "assets/img/catalog/VENINT060.jpg"
   },
   {
     "sku": "VENINT070",
@@ -634,7 +682,8 @@
     "precio_original": 188.55,
     "img": "https://static.ctonline.mx/imagenes/VENINT070/VENINT070_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/DISIPADOR.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=VENINT070"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=VENINT070",
+    "local_img": "assets/img/catalog/VENINT070.jpg"
   },
   {
     "sku": "CPUAMD2050",
@@ -647,7 +696,8 @@
     "precio_original": 926.79,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2050/CPUAMD2050_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2050"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2050",
+    "local_img": "assets/img/catalog/CPUAMD2050.jpg"
   },
   {
     "sku": "CPUAMD2540",
@@ -660,7 +710,8 @@
     "precio_original": 1658.64,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2540/CPUAMD2540_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/RYZEN.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2540"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2540",
+    "local_img": "assets/img/catalog/CPUAMD2540.jpg"
   },
   {
     "sku": "CPUAMD2000",
@@ -673,7 +724,8 @@
     "precio_original": 1821.62,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2000/CPUAMD2000_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2000"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2000",
+    "local_img": "assets/img/catalog/CPUAMD2000.jpg"
   },
   {
     "sku": "CPUAMD2820",
@@ -686,7 +738,8 @@
     "precio_original": 2578.72,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2820/CPUAMD2820_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2820"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2820",
+    "local_img": "assets/img/catalog/CPUAMD2820.jpg"
   },
   {
     "sku": "CPUAMD2140",
@@ -699,7 +752,8 @@
     "precio_original": 3296.5,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2140/CPUAMD2140_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2140"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2140",
+    "local_img": "assets/img/catalog/CPUAMD2140.jpg"
   },
   {
     "sku": "CPUAMD2350",
@@ -712,7 +766,8 @@
     "precio_original": 3331.66,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2350/CPUAMD2350_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/RYZEN.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2350"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2350",
+    "local_img": "assets/img/catalog/CPUAMD2350.jpg"
   },
   {
     "sku": "CPUAMD2270",
@@ -725,7 +780,8 @@
     "precio_original": 3387.58,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2270/CPUAMD2270_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2270"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2270",
+    "local_img": "assets/img/catalog/CPUAMD2270.jpg"
   },
   {
     "sku": "CPUAMD2570",
@@ -738,7 +794,8 @@
     "precio_original": 3387.58,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2570/CPUAMD2570_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2570"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2570",
+    "local_img": "assets/img/catalog/CPUAMD2570.jpg"
   },
   {
     "sku": "CPUAMD2680",
@@ -751,7 +808,8 @@
     "precio_original": 3630.47,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2680/CPUAMD2680_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2680"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2680",
+    "local_img": "assets/img/catalog/CPUAMD2680.jpg"
   },
   {
     "sku": "CPUAMD2660",
@@ -764,7 +822,8 @@
     "precio_original": 3726.34,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2660/CPUAMD2660_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2660"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2660",
+    "local_img": "assets/img/catalog/CPUAMD2660.jpg"
   },
   {
     "sku": "CPUAMD2800",
@@ -777,7 +836,8 @@
     "precio_original": 4058.71,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2800/CPUAMD2800_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2800"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2800",
+    "local_img": "assets/img/catalog/CPUAMD2800.jpg"
   },
   {
     "sku": "CPUAMD2520",
@@ -790,7 +850,8 @@
     "precio_original": 3314.08,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2520/CPUAMD2520_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/RYZEN.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2520"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2520",
+    "local_img": "assets/img/catalog/CPUAMD2520.jpg"
   },
   {
     "sku": "CPUAMD2670",
@@ -803,7 +864,8 @@
     "precio_original": 4540.32,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2670/CPUAMD2670_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2670"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2670",
+    "local_img": "assets/img/catalog/CPUAMD2670.jpg"
   },
   {
     "sku": "CPUAMD2890",
@@ -816,7 +878,8 @@
     "precio_original": 4616.38,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2890/CPUAMD2890_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2890"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2890",
+    "local_img": "assets/img/catalog/CPUAMD2890.jpg"
   },
   {
     "sku": "CPUAMD2930",
@@ -829,7 +892,8 @@
     "precio_original": 4857.67,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2930/CPUAMD2930_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2930"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2930",
+    "local_img": "assets/img/catalog/CPUAMD2930.jpg"
   },
   {
     "sku": "CPUAMD2530",
@@ -842,7 +906,8 @@
     "precio_original": 4929.57,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2530/CPUAMD2530_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/RYZEN.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2530"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2530",
+    "local_img": "assets/img/catalog/CPUAMD2530.jpg"
   },
   {
     "sku": "CPUAMD2290",
@@ -855,7 +920,8 @@
     "precio_original": 5416.94,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2290/CPUAMD2290_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2290"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2290",
+    "local_img": "assets/img/catalog/CPUAMD2290.jpg"
   },
   {
     "sku": "CPUAMD2580",
@@ -868,7 +934,8 @@
     "precio_original": 5416.94,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2580/CPUAMD2580_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2580"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2580",
+    "local_img": "assets/img/catalog/CPUAMD2580.jpg"
   },
   {
     "sku": "CPUAMD2370",
@@ -881,7 +948,8 @@
     "precio_original": 5036.95,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2370/CPUAMD2370_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/RYZEN.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2370"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2370",
+    "local_img": "assets/img/catalog/CPUAMD2370.jpg"
   },
   {
     "sku": "CPUAMD2500",
@@ -894,7 +962,8 @@
     "precio_original": 5627.22,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2500/CPUAMD2500_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/RYZEN.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2500"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2500",
+    "local_img": "assets/img/catalog/CPUAMD2500.jpg"
   },
   {
     "sku": "CPUAMD2810",
@@ -907,7 +976,8 @@
     "precio_original": 5952.24,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2810/CPUAMD2810_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2810"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2810",
+    "local_img": "assets/img/catalog/CPUAMD2810.jpg"
   },
   {
     "sku": "CPUAMD2880",
@@ -920,7 +990,8 @@
     "precio_original": 6112.03,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2880/CPUAMD2880_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2880"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2880",
+    "local_img": "assets/img/catalog/CPUAMD2880.jpg"
   },
   {
     "sku": "CPUAMD2420",
@@ -933,7 +1004,8 @@
     "precio_original": 6147.19,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2420/CPUAMD2420_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2420"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2420",
+    "local_img": "assets/img/catalog/CPUAMD2420.jpg"
   },
   {
     "sku": "CPUAMD2730",
@@ -946,7 +1018,8 @@
     "precio_original": 6327.75,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2730/CPUAMD2730_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2730"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2730",
+    "local_img": "assets/img/catalog/CPUAMD2730.jpg"
   },
   {
     "sku": "CPUAMD2720",
@@ -959,7 +1032,8 @@
     "precio_original": 6404.45,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2720/CPUAMD2720_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2720"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2720",
+    "local_img": "assets/img/catalog/CPUAMD2720.jpg"
   },
   {
     "sku": "CPUAMD2150",
@@ -972,7 +1046,8 @@
     "precio_original": 6404.45,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2150/CPUAMD2150_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2150"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2150",
+    "local_img": "assets/img/catalog/CPUAMD2150.jpg"
   },
   {
     "sku": "CPUAMD2650",
@@ -985,7 +1060,8 @@
     "precio_original": 6586.61,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2650/CPUAMD2650_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2650"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2650",
+    "local_img": "assets/img/catalog/CPUAMD2650.jpg"
   },
   {
     "sku": "CPUAMD2950",
@@ -998,7 +1074,8 @@
     "precio_original": 7456.52,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2950/CPUAMD2950_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2950"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2950",
+    "local_img": "assets/img/catalog/CPUAMD2950.jpg"
   },
   {
     "sku": "CPUAMD2510",
@@ -1011,7 +1088,8 @@
     "precio_original": 8092.49,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2510/CPUAMD2510_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/RYZEN.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2510"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2510",
+    "local_img": "assets/img/catalog/CPUAMD2510.jpg"
   },
   {
     "sku": "CPUAMD2410",
@@ -1024,7 +1102,8 @@
     "precio_original": 8526.48,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2410/CPUAMD2410_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2410"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2410",
+    "local_img": "assets/img/catalog/CPUAMD2410.jpg"
   },
   {
     "sku": "CPUAMD2900",
@@ -1037,7 +1116,8 @@
     "precio_original": 8692.67,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2900/CPUAMD2900_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2900"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2900",
+    "local_img": "assets/img/catalog/CPUAMD2900.jpg"
   },
   {
     "sku": "CPUAMD2480",
@@ -1050,7 +1130,8 @@
     "precio_original": 9204.0,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2480/CPUAMD2480_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2480"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2480",
+    "local_img": "assets/img/catalog/CPUAMD2480.jpg"
   },
   {
     "sku": "CPUAMD2740",
@@ -1063,7 +1144,8 @@
     "precio_original": 9708.94,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2740/CPUAMD2740_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2740"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2740",
+    "local_img": "assets/img/catalog/CPUAMD2740.jpg"
   },
   {
     "sku": "CPUAMD2710",
@@ -1076,7 +1158,8 @@
     "precio_original": 10514.29,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2710/CPUAMD2710_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2710"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2710",
+    "local_img": "assets/img/catalog/CPUAMD2710.jpg"
   },
   {
     "sku": "CPUAMD2160",
@@ -1089,7 +1172,8 @@
     "precio_original": 10514.29,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2160/CPUAMD2160_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2160"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2160",
+    "local_img": "assets/img/catalog/CPUAMD2160.jpg"
   },
   {
     "sku": "CPUAMD2640",
@@ -1102,7 +1186,8 @@
     "precio_original": 11177.43,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2640/CPUAMD2640_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2640"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2640",
+    "local_img": "assets/img/catalog/CPUAMD2640.jpg"
   },
   {
     "sku": "CPUAMD2750",
@@ -1115,7 +1200,8 @@
     "precio_original": 11345.21,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2750/CPUAMD2750_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2750"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2750",
+    "local_img": "assets/img/catalog/CPUAMD2750.jpg"
   },
   {
     "sku": "CPUAMD2170",
@@ -1128,7 +1214,8 @@
     "precio_original": 11984.37,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2170/CPUAMD2170_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2170"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2170",
+    "local_img": "assets/img/catalog/CPUAMD2170.jpg"
   },
   {
     "sku": "CPUAMD2830",
@@ -1141,7 +1228,8 @@
     "precio_original": 12975.08,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2830/CPUAMD2830_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2830"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2830",
+    "local_img": "assets/img/catalog/CPUAMD2830.jpg"
   },
   {
     "sku": "CPUAMD2460",
@@ -1154,7 +1242,8 @@
     "precio_original": 9621.06,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2460/CPUAMD2460_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2460"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2460",
+    "local_img": "assets/img/catalog/CPUAMD2460.jpg"
   },
   {
     "sku": "CPUAMD2390",
@@ -1167,7 +1256,8 @@
     "precio_original": 13844.35,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2390/CPUAMD2390_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2390"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2390",
+    "local_img": "assets/img/catalog/CPUAMD2390.jpg"
   },
   {
     "sku": "CPUAMD2400",
@@ -1180,7 +1270,8 @@
     "precio_original": 15039.27,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2400/CPUAMD2400_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2400"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2400",
+    "local_img": "assets/img/catalog/CPUAMD2400.jpg"
   },
   {
     "sku": "CPUAMD2760",
@@ -1193,7 +1284,8 @@
     "precio_original": 15901.83,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2760/CPUAMD2760_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2760"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2760",
+    "local_img": "assets/img/catalog/CPUAMD2760.jpg"
   },
   {
     "sku": "CPUAMD2850",
@@ -1206,7 +1298,8 @@
     "precio_original": 16276.38,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2850/CPUAMD2850_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2850"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2850",
+    "local_img": "https://static.ctonline.mx/imagenes/CPUAMD2850/CPUAMD2850_400.jpg"
   },
   {
     "sku": "CPUAMD2450",
@@ -1219,7 +1312,8 @@
     "precio_original": 17992.54,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2450/CPUAMD2450_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2450"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2450",
+    "local_img": "assets/img/catalog/CPUAMD2450.jpg"
   },
   {
     "sku": "CPUAMD2860",
@@ -1232,7 +1326,8 @@
     "precio_original": 19015.21,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2860/CPUAMD2860_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2860"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2860",
+    "local_img": "assets/img/catalog/CPUAMD2860.jpg"
   },
   {
     "sku": "CPUAMD2490",
@@ -1245,7 +1340,8 @@
     "precio_original": 21220.33,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2490/CPUAMD2490_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/RYZEN.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2490"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2490",
+    "local_img": "assets/img/catalog/CPUAMD2490.jpg"
   },
   {
     "sku": "CPUAMD2940",
@@ -1258,7 +1354,8 @@
     "precio_original": 25504.67,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2940/CPUAMD2940_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2940"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2940",
+    "local_img": "assets/img/catalog/CPUAMD2940.jpg"
   },
   {
     "sku": "CPUAMD2690",
@@ -1271,7 +1368,8 @@
     "precio_original": 44709.71,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2690/CPUAMD2690_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2690"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2690",
+    "local_img": "assets/img/catalog/CPUAMD2690.jpg"
   },
   {
     "sku": "CPUAMD2620",
@@ -1284,7 +1382,8 @@
     "precio_original": 3849.75,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2620/CPUAMD2620_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2620"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2620",
+    "local_img": "assets/img/catalog/CPUAMD2620.jpg"
   },
   {
     "sku": "CPUAMD2600",
@@ -1297,7 +1396,8 @@
     "precio_original": 4095.58,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2600/CPUAMD2600_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2600"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2600",
+    "local_img": "assets/img/catalog/CPUAMD2600.jpg"
   },
   {
     "sku": "CPUAMD2610",
@@ -1310,7 +1410,8 @@
     "precio_original": 7701.14,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2610/CPUAMD2610_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2610"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2610",
+    "local_img": "assets/img/catalog/CPUAMD2610.jpg"
   },
   {
     "sku": "CPUAMD2590",
@@ -1323,7 +1424,8 @@
     "precio_original": 15813.64,
     "img": "https://static.ctonline.mx/imagenes/CPUAMD2590/CPUAMD2590_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/AMD.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2590"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=CPUAMD2590",
+    "local_img": "assets/img/catalog/CPUAMD2590.jpg"
   },
   {
     "sku": "VENITL280",
@@ -1336,7 +1438,8 @@
     "precio_original": 102.09,
     "img": "https://static.ctonline.mx/imagenes/VENITL280/VENITL280_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/VENTILADOR.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=VENITL280"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=VENITL280",
+    "local_img": "assets/img/catalog/VENITL280.jpg"
   },
   {
     "sku": "VENITL040",
@@ -1349,7 +1452,8 @@
     "precio_original": 94.19,
     "img": "https://static.ctonline.mx/imagenes/VENITL040/VENITL040_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/VENTILADOR.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=VENITL040"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=VENITL040",
+    "local_img": "assets/img/catalog/VENITL040.jpg"
   },
   {
     "sku": "ACCITL420",
@@ -1362,7 +1466,8 @@
     "precio_original": 37.61,
     "img": "https://static.ctonline.mx/imagenes/ACCITL420/ACCITL420_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/PASTA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCITL420"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCITL420",
+    "local_img": "https://static.ctonline.mx/imagenes/ACCITL420/ACCITL420_400.jpg"
   },
   {
     "sku": "ACCITL2450",
@@ -1375,7 +1480,8 @@
     "precio_original": 271.51,
     "img": "https://static.ctonline.mx/imagenes/ACCITL2450/ACCITL2450_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/PASTA.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCITL2450"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=ACCITL2450",
+    "local_img": "assets/img/catalog/ACCITL2450.jpg"
   },
   {
     "sku": "VENRBT090",
@@ -1388,7 +1494,8 @@
     "precio_original": 229.52,
     "img": "https://static.ctonline.mx/imagenes/VENRBT090/VENRBT090_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/VENTILADOR.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=VENRBT090"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=VENRBT090",
+    "local_img": "assets/img/catalog/VENRBT090.jpg"
   },
   {
     "sku": "VENRBT080",
@@ -1401,7 +1508,8 @@
     "precio_original": 305.2,
     "img": "https://static.ctonline.mx/imagenes/VENRBT080/VENRBT080_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/VENTILADOR.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=VENRBT080"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=VENRBT080",
+    "local_img": "assets/img/catalog/VENRBT080.jpg"
   },
   {
     "sku": "MEMKGN2870",
@@ -1414,7 +1522,8 @@
     "precio_original": 2000.59,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN2870/MEMKGN2870_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2870"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2870",
+    "local_img": "assets/img/catalog/MEMKGN2870.jpg"
   },
   {
     "sku": "MEMKGN2910",
@@ -1427,7 +1536,8 @@
     "precio_original": 3861.21,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN2910/MEMKGN2910_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2910"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2910",
+    "local_img": "assets/img/catalog/MEMKGN2910.jpg"
   },
   {
     "sku": "MEMKGN3750",
@@ -1440,7 +1550,8 @@
     "precio_original": 3732.09,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3750/MEMKGN3750_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3750"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3750",
+    "local_img": "assets/img/catalog/MEMKGN3750.jpg"
   },
   {
     "sku": "MEMKGN3250",
@@ -1453,7 +1564,8 @@
     "precio_original": 6551.46,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3250/MEMKGN3250_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3250"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3250",
+    "local_img": "assets/img/catalog/MEMKGN3250.jpg"
   },
   {
     "sku": "MEMKGN4390",
@@ -1466,7 +1578,8 @@
     "precio_original": 2818.72,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4390/MEMKGN4390_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4390"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4390",
+    "local_img": "assets/img/catalog/MEMKGN4390.jpg"
   },
   {
     "sku": "MEMKGN4400",
@@ -1479,7 +1592,8 @@
     "precio_original": 3875.75,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4400/MEMKGN4400_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4400"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4400",
+    "local_img": "assets/img/catalog/MEMKGN4400.jpg"
   },
   {
     "sku": "MEMKGN5950",
@@ -1492,7 +1606,8 @@
     "precio_original": 4786.08,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5950/MEMKGN5950_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5950"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5950",
+    "local_img": "assets/img/catalog/MEMKGN5950.jpg"
   },
   {
     "sku": "MEMKGN4760",
@@ -1505,7 +1620,8 @@
     "precio_original": 3875.75,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4760/MEMKGN4760_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4760"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4760",
+    "local_img": "assets/img/catalog/MEMKGN4760.jpg"
   },
   {
     "sku": "MEMKGN4420",
@@ -1518,7 +1634,8 @@
     "precio_original": 7514.2,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4420/MEMKGN4420_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4420"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4420",
+    "local_img": "assets/img/catalog/MEMKGN4420.jpg"
   },
   {
     "sku": "MEMKGN5140",
@@ -1531,7 +1648,8 @@
     "precio_original": 3662.48,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5140/MEMKGN5140_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5140"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5140",
+    "local_img": "assets/img/catalog/MEMKGN5140.jpg"
   },
   {
     "sku": "MEMKGN3060",
@@ -1544,7 +1662,8 @@
     "precio_original": 2214.71,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3060/MEMKGN3060_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3060"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3060",
+    "local_img": "assets/img/catalog/MEMKGN3060.jpg"
   },
   {
     "sku": "MEMKGN2920",
@@ -1557,7 +1676,8 @@
     "precio_original": 4098.66,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN2920/MEMKGN2920_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2920"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2920",
+    "local_img": "assets/img/catalog/MEMKGN2920.jpg"
   },
   {
     "sku": "MEMKGN3380",
@@ -1570,7 +1690,8 @@
     "precio_original": 4098.66,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3380/MEMKGN3380_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3380"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3380",
+    "local_img": "assets/img/catalog/MEMKGN3380.jpg"
   },
   {
     "sku": "MEMKGN4430",
@@ -1583,7 +1704,8 @@
     "precio_original": 2365.72,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4430/MEMKGN4430_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4430"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4430",
+    "local_img": "assets/img/catalog/MEMKGN4430.jpg"
   },
   {
     "sku": "MEMKGN4440",
@@ -1596,7 +1718,8 @@
     "precio_original": 4242.47,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4440/MEMKGN4440_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4440"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4440",
+    "local_img": "assets/img/catalog/MEMKGN4440.jpg"
   },
   {
     "sku": "MEMKGN5570",
@@ -1609,7 +1732,8 @@
     "precio_original": 5486.45,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5570/MEMKGN5570_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5570"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5570",
+    "local_img": "assets/img/catalog/MEMKGN5570.jpg"
   },
   {
     "sku": "MEMKGN5580",
@@ -1622,7 +1746,8 @@
     "precio_original": 12272.0,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5580/MEMKGN5580_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5580"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5580",
+    "local_img": "assets/img/catalog/MEMKGN5580.jpg"
   },
   {
     "sku": "MEMKGN5590",
@@ -1635,7 +1760,8 @@
     "precio_original": 6362.9,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5590/MEMKGN5590_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5590"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5590",
+    "local_img": "assets/img/catalog/MEMKGN5590.jpg"
   },
   {
     "sku": "MEMKGN3420",
@@ -1648,7 +1774,8 @@
     "precio_original": 6001.46,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3420/MEMKGN3420_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3420"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3420",
+    "local_img": "assets/img/catalog/MEMKGN3420.jpg"
   },
   {
     "sku": "MEMKGN4970",
@@ -1661,7 +1788,8 @@
     "precio_original": 11843.76,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4970/MEMKGN4970_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4970"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4970",
+    "local_img": "assets/img/catalog/MEMKGN4970.jpg"
   },
   {
     "sku": "MEMKGN5080",
@@ -1674,7 +1802,8 @@
     "precio_original": 6124.81,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5080/MEMKGN5080_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5080"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5080",
+    "local_img": "assets/img/catalog/MEMKGN5080.jpg"
   },
   {
     "sku": "MEMKGN4580",
@@ -1687,7 +1816,8 @@
     "precio_original": 41302.95,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4580/MEMKGN4580_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4580"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4580",
+    "local_img": "assets/img/catalog/MEMKGN4580.jpg"
   },
   {
     "sku": "MEMKGN3440",
@@ -1700,7 +1830,8 @@
     "precio_original": 6001.46,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3440/MEMKGN3440_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3440"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3440",
+    "local_img": "assets/img/catalog/MEMKGN3440.jpg"
   },
   {
     "sku": "MEMKGN3770",
@@ -1713,7 +1844,8 @@
     "precio_original": 11713.61,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3770/MEMKGN3770_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3770"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3770",
+    "local_img": "assets/img/catalog/MEMKGN3770.jpg"
   },
   {
     "sku": "MEMKGN4100",
@@ -1726,7 +1858,8 @@
     "precio_original": 6674.5,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4100/MEMKGN4100_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4100"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4100",
+    "local_img": "assets/img/catalog/MEMKGN4100.jpg"
   },
   {
     "sku": "MEMKGN4110",
@@ -1739,7 +1872,8 @@
     "precio_original": 10483.93,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4110/MEMKGN4110_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4110"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4110",
+    "local_img": "assets/img/catalog/MEMKGN4110.jpg"
   },
   {
     "sku": "MEMKGN5600",
@@ -1752,7 +1886,8 @@
     "precio_original": 2912.2,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5600/MEMKGN5600_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5600"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5600",
+    "local_img": "assets/img/catalog/MEMKGN5600.jpg"
   },
   {
     "sku": "MEMKGN5610",
@@ -1765,7 +1900,8 @@
     "precio_original": 6217.49,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5610/MEMKGN5610_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5610"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5610",
+    "local_img": "assets/img/catalog/MEMKGN5610.jpg"
   },
   {
     "sku": "MEMKGN2670",
@@ -1778,7 +1914,8 @@
     "precio_original": 639.17,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN2670/MEMKGN2670_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2670"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2670",
+    "local_img": "assets/img/catalog/MEMKGN2670.jpg"
   },
   {
     "sku": "MEMKGN2690",
@@ -1791,7 +1928,8 @@
     "precio_original": 1597.92,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN2690/MEMKGN2690_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2690"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2690",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN2690/MEMKGN2690_400.jpg"
   },
   {
     "sku": "MEMKGN5150",
@@ -1804,7 +1942,8 @@
     "precio_original": 1998.99,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5150/MEMKGN5150_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5150"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5150",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN5150/MEMKGN5150_400.jpg"
   },
   {
     "sku": "MEMKGN5060",
@@ -1817,7 +1956,8 @@
     "precio_original": 1998.99,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5060/MEMKGN5060_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5060"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5060",
+    "local_img": "assets/img/catalog/MEMKGN5060.jpg"
   },
   {
     "sku": "MEMKGN3590",
@@ -1830,7 +1970,8 @@
     "precio_original": 2048.53,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3590/MEMKGN3590_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3590"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3590",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN3590/MEMKGN3590_400.jpg"
   },
   {
     "sku": "MEMKGN5070",
@@ -1843,7 +1984,8 @@
     "precio_original": 1597.92,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5070/MEMKGN5070_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5070"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5070",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN5070/MEMKGN5070_400.jpg"
   },
   {
     "sku": "MEMKGN3470",
@@ -1856,7 +1998,8 @@
     "precio_original": 5279.2,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3470/MEMKGN3470_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3470"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3470",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN3470/MEMKGN3470_400.jpg"
   },
   {
     "sku": "MEMKGN4090",
@@ -1869,7 +2012,8 @@
     "precio_original": 3662.48,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4090/MEMKGN4090_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4090"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4090",
+    "local_img": "assets/img/catalog/MEMKGN4090.jpg"
   },
   {
     "sku": "MEMKGN3290",
@@ -1882,7 +2026,8 @@
     "precio_original": 3662.48,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3290/MEMKGN3290_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3290"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3290",
+    "local_img": "assets/img/catalog/MEMKGN3290.jpg"
   },
   {
     "sku": "MEMKGN4990",
@@ -1895,7 +2040,8 @@
     "precio_original": 2602.85,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4990/MEMKGN4990_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4990"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4990",
+    "local_img": "assets/img/catalog/MEMKGN4990.jpg"
   },
   {
     "sku": "MEMKGN4850",
@@ -1908,7 +2054,8 @@
     "precio_original": 11814.68,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4850/MEMKGN4850_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4850"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4850",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN4850/MEMKGN4850_400.jpg"
   },
   {
     "sku": "MEMKGN3080",
@@ -1921,7 +2068,8 @@
     "precio_original": 2109.25,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3080/MEMKGN3080_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3080"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3080",
+    "local_img": "assets/img/catalog/MEMKGN3080.jpg"
   },
   {
     "sku": "MEMKGN3150",
@@ -1934,7 +2082,8 @@
     "precio_original": 3579.33,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3150/MEMKGN3150_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3150"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3150",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN3150/MEMKGN3150_400.jpg"
   },
   {
     "sku": "MEMKGN3700",
@@ -1947,7 +2096,8 @@
     "precio_original": 3835.0,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3700/MEMKGN3700_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3700"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3700",
+    "local_img": "assets/img/catalog/MEMKGN3700.jpg"
   },
   {
     "sku": "MEMKGN3280",
@@ -1960,7 +2110,8 @@
     "precio_original": 7348.82,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3280/MEMKGN3280_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3280"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3280",
+    "local_img": "assets/img/catalog/MEMKGN3280.jpg"
   },
   {
     "sku": "MEMKGN3630",
@@ -1973,7 +2124,8 @@
     "precio_original": 7334.44,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3630/MEMKGN3630_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3630"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3630",
+    "local_img": "assets/img/catalog/MEMKGN3630.jpg"
   },
   {
     "sku": "MEMKGN4960",
@@ -1986,7 +2138,8 @@
     "precio_original": 3271.89,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4960/MEMKGN4960_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4960"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4960",
+    "local_img": "assets/img/catalog/MEMKGN4960.jpg"
   },
   {
     "sku": "MEMKGN5280",
@@ -1999,7 +2152,8 @@
     "precio_original": 3289.79,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5280/MEMKGN5280_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5280"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5280",
+    "local_img": "assets/img/catalog/MEMKGN5280.jpg"
   },
   {
     "sku": "MEMKGN3680",
@@ -2012,7 +2166,8 @@
     "precio_original": 5214.0,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3680/MEMKGN3680_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3680"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3680",
+    "local_img": "assets/img/catalog/MEMKGN3680.jpg"
   },
   {
     "sku": "MEMKGN4160",
@@ -2025,7 +2180,8 @@
     "precio_original": 16175.74,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4160/MEMKGN4160_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4160"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4160",
+    "local_img": "assets/img/catalog/MEMKGN4160.jpg"
   },
   {
     "sku": "MEMKGN6000",
@@ -2038,7 +2194,8 @@
     "precio_original": 16330.2,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN6000/MEMKGN6000_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6000"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6000",
+    "local_img": "assets/img/catalog/MEMKGN6000.jpg"
   },
   {
     "sku": "MEMKGN3530",
@@ -2051,7 +2208,8 @@
     "precio_original": 8169.13,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3530/MEMKGN3530_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3530"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3530",
+    "local_img": "assets/img/catalog/MEMKGN3530.jpg"
   },
   {
     "sku": "MEMKGN2280",
@@ -2064,7 +2222,8 @@
     "precio_original": 7001.61,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN2280/MEMKGN2280_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2280"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2280",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN2280/MEMKGN2280_400.jpg"
   },
   {
     "sku": "MEMKGN2350",
@@ -2077,7 +2236,8 @@
     "precio_original": 3007.74,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN2350/MEMKGN2350_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2350"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2350",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN2350/MEMKGN2350_400.jpg"
   },
   {
     "sku": "MEMKGN3320",
@@ -2090,7 +2250,8 @@
     "precio_original": 5621.01,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3320/MEMKGN3320_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3320"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3320",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN3320/MEMKGN3320_400.jpg"
   },
   {
     "sku": "MEMKGN2710",
@@ -2103,7 +2264,8 @@
     "precio_original": 13921.05,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN2710/MEMKGN2710_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2710"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2710",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN2710/MEMKGN2710_400.jpg"
   },
   {
     "sku": "MEMKGN3510",
@@ -2116,7 +2278,8 @@
     "precio_original": 3007.74,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3510/MEMKGN3510_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3510"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3510",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN3510/MEMKGN3510_400.jpg"
   },
   {
     "sku": "MEMKGN2620",
@@ -2129,7 +2292,8 @@
     "precio_original": 3541.9,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN2620/MEMKGN2620_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2620"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2620",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN2620/MEMKGN2620_400.jpg"
   },
   {
     "sku": "MEMKGN3310",
@@ -2142,7 +2306,8 @@
     "precio_original": 7001.61,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3310/MEMKGN3310_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3310"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3310",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN3310/MEMKGN3310_400.jpg"
   },
   {
     "sku": "MEMKGN3300",
@@ -2155,7 +2320,8 @@
     "precio_original": 13921.05,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3300/MEMKGN3300_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3300"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3300",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN3300/MEMKGN3300_400.jpg"
   },
   {
     "sku": "MEMKGN3370",
@@ -2168,7 +2334,8 @@
     "precio_original": 5498.69,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3370/MEMKGN3370_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3370"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3370",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN3370/MEMKGN3370_400.jpg"
   },
   {
     "sku": "MEMKGN3690",
@@ -2181,7 +2348,8 @@
     "precio_original": 16175.74,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3690/MEMKGN3690_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3690"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3690",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN3690/MEMKGN3690_400.jpg"
   },
   {
     "sku": "MEMKGN3900",
@@ -2194,7 +2362,8 @@
     "precio_original": 8169.13,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3900/MEMKGN3900_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3900"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3900",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN3900/MEMKGN3900_400.jpg"
   },
   {
     "sku": "MEMKGN4920",
@@ -2207,7 +2376,8 @@
     "precio_original": 16175.74,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4920/MEMKGN4920_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4920"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4920",
+    "local_img": "assets/img/catalog/MEMKGN4920.jpg"
   },
   {
     "sku": "MEMKGN5200",
@@ -2220,7 +2390,8 @@
     "precio_original": 15087.99,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5200/MEMKGN5200_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5200"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5200",
+    "local_img": "assets/img/catalog/MEMKGN5200.jpg"
   },
   {
     "sku": "MEMKGN5010",
@@ -2233,7 +2404,8 @@
     "precio_original": 7617.95,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5010/MEMKGN5010_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5010"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5010",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN5010/MEMKGN5010_400.jpg"
   },
   {
     "sku": "MEMKGN5170",
@@ -2246,7 +2418,8 @@
     "precio_original": 4158.24,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5170/MEMKGN5170_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5170"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5170",
+    "local_img": "assets/img/catalog/MEMKGN5170.jpg"
   },
   {
     "sku": "MEMKGN5130",
@@ -2259,7 +2432,8 @@
     "precio_original": 4158.24,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5130/MEMKGN5130_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5130"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5130",
+    "local_img": "assets/img/catalog/MEMKGN5130.jpg"
   },
   {
     "sku": "MEMKGN4600",
@@ -2272,7 +2446,8 @@
     "precio_original": 7617.95,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4600/MEMKGN4600_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4600"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4600",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN4600/MEMKGN4600_400.jpg"
   },
   {
     "sku": "MEMKGN5810",
@@ -2285,7 +2460,8 @@
     "precio_original": 25808.02,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5810/MEMKGN5810_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5810"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5810",
+    "local_img": "assets/img/catalog/MEMKGN5810.jpg"
   },
   {
     "sku": "MEMKGN5820",
@@ -2298,7 +2474,8 @@
     "precio_original": 13438.48,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5820/MEMKGN5820_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5820"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5820",
+    "local_img": "assets/img/catalog/MEMKGN5820.jpg"
   },
   {
     "sku": "MEMKGN5830",
@@ -2311,7 +2488,8 @@
     "precio_original": 64824.92,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5830/MEMKGN5830_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5830"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5830",
+    "local_img": "assets/img/catalog/MEMKGN5830.jpg"
   },
   {
     "sku": "MEMKGN5840",
@@ -2324,7 +2502,8 @@
     "precio_original": 25808.02,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5840/MEMKGN5840_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5840"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5840",
+    "local_img": "assets/img/catalog/MEMKGN5840.jpg"
   },
   {
     "sku": "MEMKGN5750",
@@ -2337,7 +2516,8 @@
     "precio_original": 12875.53,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5750/MEMKGN5750_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5750"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5750",
+    "local_img": "assets/img/catalog/MEMKGN5750.jpg"
   },
   {
     "sku": "MEMKGN5740",
@@ -2350,7 +2530,8 @@
     "precio_original": 25808.02,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5740/MEMKGN5740_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5740"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5740",
+    "local_img": "assets/img/catalog/MEMKGN5740.jpg"
   },
   {
     "sku": "MEMKGN5790",
@@ -2363,7 +2544,8 @@
     "precio_original": 25539.95,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5790/MEMKGN5790_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5790"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5790",
+    "local_img": "assets/img/catalog/MEMKGN5790.jpg"
   },
   {
     "sku": "MEMKGN5720",
@@ -2376,7 +2558,8 @@
     "precio_original": 13161.72,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5720/MEMKGN5720_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5720"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5720",
+    "local_img": "assets/img/catalog/MEMKGN5720.jpg"
   },
   {
     "sku": "MEMKGN5760",
@@ -2389,7 +2572,8 @@
     "precio_original": 25539.95,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5760/MEMKGN5760_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5760"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5760",
+    "local_img": "assets/img/catalog/MEMKGN5760.jpg"
   },
   {
     "sku": "MEMKGN5770",
@@ -2402,7 +2586,8 @@
     "precio_original": 13143.89,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5770/MEMKGN5770_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5770"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5770",
+    "local_img": "assets/img/catalog/MEMKGN5770.jpg"
   },
   {
     "sku": "MEMKGN5800",
@@ -2415,7 +2600,8 @@
     "precio_original": 25539.95,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5800/MEMKGN5800_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5800"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5800",
+    "local_img": "assets/img/catalog/MEMKGN5800.jpg"
   },
   {
     "sku": "MEMKGN4880",
@@ -2428,7 +2614,8 @@
     "precio_original": 15087.99,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4880/MEMKGN4880_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/KINGSTON.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4880"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4880",
+    "local_img": "assets/img/catalog/MEMKGN4880.jpg"
   },
   {
     "sku": "MEMKGN5500",
@@ -2441,7 +2628,8 @@
     "precio_original": 426.48,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5500/MEMKGN5500_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/SECURE.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5500"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5500",
+    "local_img": "assets/img/catalog/MEMKGN5500.jpg"
   },
   {
     "sku": "MEMKGN5510",
@@ -2454,7 +2642,8 @@
     "precio_original": 490.95,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5510/MEMKGN5510_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/SECURE.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5510"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5510",
+    "local_img": "assets/img/catalog/MEMKGN5510.jpg"
   },
   {
     "sku": "MEMKGN5520",
@@ -2467,7 +2656,8 @@
     "precio_original": 833.12,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5520/MEMKGN5520_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/SECURE.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5520"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5520",
+    "local_img": "assets/img/catalog/MEMKGN5520.jpg"
   },
   {
     "sku": "MEMKGN5530",
@@ -2480,7 +2670,8 @@
     "precio_original": 1779.31,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5530/MEMKGN5530_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/SECURE.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5530"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5530",
+    "local_img": "assets/img/catalog/MEMKGN5530.jpg"
   },
   {
     "sku": "MEMKGN5540",
@@ -2493,7 +2684,8 @@
     "precio_original": 2668.96,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5540/MEMKGN5540_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/SECURE.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5540"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5540",
+    "local_img": "assets/img/catalog/MEMKGN5540.jpg"
   },
   {
     "sku": "MEMKGN5410",
@@ -2506,7 +2698,8 @@
     "precio_original": 424.0,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5410/MEMKGN5410_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/SECURE.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5410"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5410",
+    "local_img": "assets/img/catalog/MEMKGN5410.jpg"
   },
   {
     "sku": "MEMKGN5370",
@@ -2519,7 +2712,8 @@
     "precio_original": 772.29,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5370/MEMKGN5370_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/SECURE.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5370"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5370",
+    "local_img": "assets/img/catalog/MEMKGN5370.jpg"
   },
   {
     "sku": "MEMKGN5390",
@@ -2532,7 +2726,8 @@
     "precio_original": 1099.42,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5390/MEMKGN5390_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/SECURE.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5390"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5390",
+    "local_img": "assets/img/catalog/MEMKGN5390.jpg"
   },
   {
     "sku": "MEMKGN5400",
@@ -2545,7 +2740,8 @@
     "precio_original": 2648.13,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5400/MEMKGN5400_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/SECURE.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5400"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5400",
+    "local_img": "assets/img/catalog/MEMKGN5400.jpg"
   },
   {
     "sku": "MEMKGN5380",
@@ -2558,7 +2754,8 @@
     "precio_original": 4690.77,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5380/MEMKGN5380_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/SECURE.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5380"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5380",
+    "local_img": "assets/img/catalog/MEMKGN5380.jpg"
   },
   {
     "sku": "MEMKGN5450",
@@ -2571,7 +2768,8 @@
     "precio_original": 311.1,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5450/MEMKGN5450_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/MICRO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5450"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5450",
+    "local_img": "assets/img/catalog/MEMKGN5450.jpg"
   },
   {
     "sku": "MEMKGN5460",
@@ -2584,7 +2782,8 @@
     "precio_original": 474.42,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5460/MEMKGN5460_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/MICRO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5460"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5460",
+    "local_img": "assets/img/catalog/MEMKGN5460.jpg"
   },
   {
     "sku": "MEMKGN5470",
@@ -2597,7 +2796,8 @@
     "precio_original": 852.63,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5470/MEMKGN5470_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/MICRO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5470"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5470",
+    "local_img": "assets/img/catalog/MEMKGN5470.jpg"
   },
   {
     "sku": "MEMKGN5480",
@@ -2610,7 +2810,8 @@
     "precio_original": 1696.33,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5480/MEMKGN5480_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/MICRO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5480"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5480",
+    "local_img": "assets/img/catalog/MEMKGN5480.jpg"
   },
   {
     "sku": "MEMKGN5490",
@@ -2623,7 +2824,8 @@
     "precio_original": 2668.96,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5490/MEMKGN5490_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/MICRO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5490"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5490",
+    "local_img": "assets/img/catalog/MEMKGN5490.jpg"
   },
   {
     "sku": "MEMKGN1620",
@@ -2636,7 +2838,8 @@
     "precio_original": 402.67,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN1620/MEMKGN1620_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/MICRO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN1620"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN1620",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN1620/MEMKGN1620_400.jpg"
   },
   {
     "sku": "MEMKGN1630",
@@ -2649,7 +2852,8 @@
     "precio_original": 563.75,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN1630/MEMKGN1630_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/MICRO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN1630"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN1630",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN1630/MEMKGN1630_400.jpg"
   },
   {
     "sku": "MEMKGN1640",
@@ -2662,7 +2866,8 @@
     "precio_original": 736.32,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN1640/MEMKGN1640_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/MICRO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN1640"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN1640",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN1640/MEMKGN1640_400.jpg"
   },
   {
     "sku": "MEMKGN5320",
@@ -2675,7 +2880,8 @@
     "precio_original": 1231.83,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5320/MEMKGN5320_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/MICRO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5320"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5320",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN5320/MEMKGN5320_400.jpg"
   },
   {
     "sku": "MEMKGN5360",
@@ -2688,7 +2894,8 @@
     "precio_original": 525.33,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5360/MEMKGN5360_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/MICRO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5360"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5360",
+    "local_img": "assets/img/catalog/MEMKGN5360.jpg"
   },
   {
     "sku": "MEMKGN5330",
@@ -2701,7 +2908,8 @@
     "precio_original": 633.77,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5330/MEMKGN5330_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/MICRO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5330"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5330",
+    "local_img": "assets/img/catalog/MEMKGN5330.jpg"
   },
   {
     "sku": "MEMKGN5270",
@@ -2714,7 +2922,8 @@
     "precio_original": 1568.05,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5270/MEMKGN5270_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/MICRO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5270"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5270",
+    "local_img": "assets/img/catalog/MEMKGN5270.jpg"
   },
   {
     "sku": "MEMKGN5350",
@@ -2727,7 +2936,8 @@
     "precio_original": 3421.75,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5350/MEMKGN5350_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/MICRO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5350"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5350",
+    "local_img": "assets/img/catalog/MEMKGN5350.jpg"
   },
   {
     "sku": "MEMKGN5340",
@@ -2740,7 +2950,8 @@
     "precio_original": 4690.77,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5340/MEMKGN5340_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/MICRO.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5340"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5340",
+    "local_img": "assets/img/catalog/MEMKGN5340.jpg"
   },
   {
     "sku": "MEMKGN2340",
@@ -2753,7 +2964,8 @@
     "precio_original": 309.2,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN2340/MEMKGN2340_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2340"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2340",
+    "local_img": "assets/img/catalog/MEMKGN2340.jpg"
   },
   {
     "sku": "MEMKGN2290",
@@ -2766,7 +2978,8 @@
     "precio_original": 503.34,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN2290/MEMKGN2290_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2290"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2290",
+    "local_img": "assets/img/catalog/MEMKGN2290.jpg"
   },
   {
     "sku": "MEMKGN3710",
@@ -2779,7 +2992,8 @@
     "precio_original": 920.4,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3710/MEMKGN3710_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3710"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3710",
+    "local_img": "assets/img/catalog/MEMKGN3710.jpg"
   },
   {
     "sku": "MEMKGN3640",
@@ -2792,7 +3006,8 @@
     "precio_original": 137.42,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3640/MEMKGN3640_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3640"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3640",
+    "local_img": "assets/img/catalog/MEMKGN3640.jpg"
   },
   {
     "sku": "MEMKGN3650",
@@ -2805,7 +3020,8 @@
     "precio_original": 223.71,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3650/MEMKGN3650_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3650"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3650",
+    "local_img": "assets/img/catalog/MEMKGN3650.jpg"
   },
   {
     "sku": "MEMKGN4700",
@@ -2818,7 +3034,8 @@
     "precio_original": 238.73,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4700/MEMKGN4700_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4700"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4700",
+    "local_img": "assets/img/catalog/MEMKGN4700.jpg"
   },
   {
     "sku": "MEMKGN4710",
@@ -2831,7 +3048,8 @@
     "precio_original": 238.73,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4710/MEMKGN4710_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4710"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4710",
+    "local_img": "assets/img/catalog/MEMKGN4710.jpg"
   },
   {
     "sku": "MEMKGN4720",
@@ -2844,7 +3062,8 @@
     "precio_original": 238.73,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4720/MEMKGN4720_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4720"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4720",
+    "local_img": "assets/img/catalog/MEMKGN4720.jpg"
   },
   {
     "sku": "MEMKGN4730",
@@ -2857,7 +3076,8 @@
     "precio_original": 238.73,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4730/MEMKGN4730_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4730"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4730",
+    "local_img": "assets/img/catalog/MEMKGN4730.jpg"
   },
   {
     "sku": "MEMKGN4740",
@@ -2870,7 +3090,8 @@
     "precio_original": 238.73,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4740/MEMKGN4740_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4740"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4740",
+    "local_img": "assets/img/catalog/MEMKGN4740.jpg"
   },
   {
     "sku": "MEMKGN3660",
@@ -2883,7 +3104,8 @@
     "precio_original": 540.74,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN3660/MEMKGN3660_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3660"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN3660",
+    "local_img": "assets/img/catalog/MEMKGN3660.jpg"
   },
   {
     "sku": "MEMKGN4230",
@@ -2896,7 +3118,8 @@
     "precio_original": 142.37,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4230/MEMKGN4230_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4230"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4230",
+    "local_img": "assets/img/catalog/MEMKGN4230.jpg"
   },
   {
     "sku": "MEMKGN4240",
@@ -2909,7 +3132,8 @@
     "precio_original": 143.81,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4240/MEMKGN4240_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4240"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4240",
+    "local_img": "assets/img/catalog/MEMKGN4240.jpg"
   },
   {
     "sku": "MEMKGN4250",
@@ -2922,7 +3146,8 @@
     "precio_original": 143.81,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4250/MEMKGN4250_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4250"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4250",
+    "local_img": "assets/img/catalog/MEMKGN4250.jpg"
   },
   {
     "sku": "MEMKGN4260",
@@ -2935,7 +3160,8 @@
     "precio_original": 143.81,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4260/MEMKGN4260_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4260"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4260",
+    "local_img": "assets/img/catalog/MEMKGN4260.jpg"
   },
   {
     "sku": "MEMKGN2200",
@@ -2948,7 +3174,8 @@
     "precio_original": 223.71,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN2200/MEMKGN2200_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2200"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2200",
+    "local_img": "assets/img/catalog/MEMKGN2200.jpg"
   },
   {
     "sku": "MEMKGN6030",
@@ -2961,7 +3188,8 @@
     "precio_original": 223.71,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN6030/MEMKGN6030_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6030"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6030",
+    "local_img": "assets/img/catalog/MEMKGN6030.jpg"
   },
   {
     "sku": "MEMKGN2210",
@@ -2974,7 +3202,8 @@
     "precio_original": 517.72,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN2210/MEMKGN2210_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2210"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2210",
+    "local_img": "assets/img/catalog/MEMKGN2210.jpg"
   },
   {
     "sku": "MEMKGN6040",
@@ -2987,7 +3216,8 @@
     "precio_original": 517.72,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN6040/MEMKGN6040_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6040"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6040",
+    "local_img": "assets/img/catalog/MEMKGN6040.jpg"
   },
   {
     "sku": "MEMKGN6060",
@@ -3000,7 +3230,8 @@
     "precio_original": 144.61,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN6060/MEMKGN6060_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6060"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6060",
+    "local_img": "assets/img/catalog/MEMKGN6060.jpg"
   },
   {
     "sku": "MEMKGN6070",
@@ -3013,7 +3244,8 @@
     "precio_original": 144.61,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN6070/MEMKGN6070_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6070"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6070",
+    "local_img": "assets/img/catalog/MEMKGN6070.jpg"
   },
   {
     "sku": "MEMKGN6080",
@@ -3026,7 +3258,8 @@
     "precio_original": 144.61,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN6080/MEMKGN6080_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6080"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6080",
+    "local_img": "assets/img/catalog/MEMKGN6080.jpg"
   },
   {
     "sku": "MEMKGN6090",
@@ -3039,7 +3272,8 @@
     "precio_original": 144.61,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN6090/MEMKGN6090_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6090"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6090",
+    "local_img": "assets/img/catalog/MEMKGN6090.jpg"
   },
   {
     "sku": "MEMKGN6100",
@@ -3052,7 +3286,8 @@
     "precio_original": 240.06,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN6100/MEMKGN6100_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6100"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6100",
+    "local_img": "assets/img/catalog/MEMKGN6100.jpg"
   },
   {
     "sku": "MEMKGN6110",
@@ -3065,7 +3300,8 @@
     "precio_original": 240.06,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN6110/MEMKGN6110_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6110"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6110",
+    "local_img": "assets/img/catalog/MEMKGN6110.jpg"
   },
   {
     "sku": "MEMKGN6120",
@@ -3078,7 +3314,8 @@
     "precio_original": 240.06,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN6120/MEMKGN6120_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6120"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6120",
+    "local_img": "assets/img/catalog/MEMKGN6120.jpg"
   },
   {
     "sku": "MEMKGN6130",
@@ -3091,7 +3328,8 @@
     "precio_original": 240.06,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN6130/MEMKGN6130_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6130"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6130",
+    "local_img": "assets/img/catalog/MEMKGN6130.jpg"
   },
   {
     "sku": "MEMKGN4280",
@@ -3104,7 +3342,8 @@
     "precio_original": 156.92,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4280/MEMKGN4280_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4280"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4280",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN4280/MEMKGN4280_400.jpg"
   },
   {
     "sku": "MEMKGN2570",
@@ -3117,7 +3356,8 @@
     "precio_original": 131.03,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN2570/MEMKGN2570_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2570"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2570",
+    "local_img": "assets/img/catalog/MEMKGN2570.jpg"
   },
   {
     "sku": "MEMKGN2580",
@@ -3130,7 +3370,8 @@
     "precio_original": 237.29,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN2580/MEMKGN2580_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2580"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN2580",
+    "local_img": "assets/img/catalog/MEMKGN2580.jpg"
   },
   {
     "sku": "MEMKGN4500",
@@ -3143,7 +3384,8 @@
     "precio_original": 540.74,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4500/MEMKGN4500_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4500"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4500",
+    "local_img": "assets/img/catalog/MEMKGN4500.jpg"
   },
   {
     "sku": "MEMKGN6020",
@@ -3156,7 +3398,8 @@
     "precio_original": 137.42,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN6020/MEMKGN6020_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6020"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6020",
+    "local_img": "assets/img/catalog/MEMKGN6020.jpg"
   },
   {
     "sku": "MEMKGN6050",
@@ -3169,7 +3412,8 @@
     "precio_original": 1214.42,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN6050/MEMKGN6050_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6050"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN6050",
+    "local_img": "assets/img/catalog/MEMKGN6050.jpg"
   },
   {
     "sku": "MEMKGN4620",
@@ -3182,7 +3426,8 @@
     "precio_original": 330.77,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4620/MEMKGN4620_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4620"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4620",
+    "local_img": "assets/img/catalog/MEMKGN4620.jpg"
   },
   {
     "sku": "MEMKGN4630",
@@ -3195,7 +3440,8 @@
     "precio_original": 532.11,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4630/MEMKGN4630_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4630"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4630",
+    "local_img": "assets/img/catalog/MEMKGN4630.jpg"
   },
   {
     "sku": "MEMKGN4640",
@@ -3208,7 +3454,8 @@
     "precio_original": 1007.97,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4640/MEMKGN4640_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4640"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4640",
+    "local_img": "assets/img/catalog/MEMKGN4640.jpg"
   },
   {
     "sku": "MEMKGN4650",
@@ -3221,7 +3468,8 @@
     "precio_original": 1776.08,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN4650/MEMKGN4650_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4650"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN4650",
+    "local_img": "assets/img/catalog/MEMKGN4650.jpg"
   },
   {
     "sku": "MEMKGN5230",
@@ -3234,7 +3482,8 @@
     "precio_original": 132.63,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5230/MEMKGN5230_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5230"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5230",
+    "local_img": "https://static.ctonline.mx/imagenes/MEMKGN5230/MEMKGN5230_400.jpg"
   },
   {
     "sku": "MEMKGN5240",
@@ -3247,7 +3496,8 @@
     "precio_original": 218.91,
     "img": "https://static.ctonline.mx/imagenes/MEMKGN5240/MEMKGN5240_400.jpg",
     "brand_logo": "https://static.ctonline.mx/marcas/png/USB.png",
-    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5240"
+    "ficha_url": "https://ctonline.mx/buscar/productos?b=MEMKGN5240",
+    "local_img": "assets/img/catalog/MEMKGN5240.jpg"
   },
   {
     "sku": "MEMKGN5250",
