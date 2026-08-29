@@ -16,7 +16,87 @@
 }
 
 
-/* === CATEGORÍAS EXTRA GRANDES Y TÁCTILES EN CELULAR (SOLO PC CUSTOM LAB) === */
+
+
+/* === CONTENEDOR CENTRAL EQUILIBRADO CON MÁRGENES LATERALES EN PC Y TELEVISIONES === */
+.product-img-wrapper {
+    aspect-ratio: 1 / 1 !important;
+    width: 100% !important;
+    height: 140px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    contain: layout size style paint !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background-color: #020617 !important;
+}
+
+.product-img-wrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    aspect-ratio: 1 / 1 !important;
+}
+
+.pagination-btn, .qty-btn, .btn-action {
+    min-width: 48px !important;
+    min-height: 48px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none !important; }
+.no-scrollbar { -ms-overflow-style: none !important; scrollbar-width: none !important; }
+.neon-glow-pc {
+    border: 1px solid rgba(6,182,212,0.9) !important;
+    box-shadow: 0 0 16px rgba(6,182,212,0.6), inset 0 0 10px rgba(6,182,212,0.3) !important;
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-display: swap;
+    ascent-override: 105%;
+    descent-override: 35%;
+    size-adjust: 98%;
+}
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-display: swap;
+    ascent-override: 105%;
+    descent-override: 35%;
+    size-adjust: 98%;
+}
+
+/* === EN ESCRITORIO Y TELEVISORES: CATEGORÍAS COMPACTAS Y ELEGANTES === */
+@media (min-width: 1025px) {
+    .category-link {
+        min-height: 38px !important;
+        padding: 6px 10px !important;
+        margin-bottom: 2px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        border-radius: 10px !important;
+        transition: background 0.15s ease !important;
+    }
+    .category-link input[type="radio"] {
+        width: 14px !important;
+        height: 14px !important;
+        accent-color: #06b6d4 !important;
+    }
+    .category-link .cat-title {
+        font-size: 12px !important;
+        font-weight: 500 !important;
+    }
+    .category-link .cat-count {
+        font-size: 10px !important;
+        color: #94a3b8 !important;
+    }
+}
+
+/* === EN CELULAR: CATEGORÍAS AMPLIADAS, CÓMODAS Y DE ALTA VISIBILIDAD === */
 @media (max-width: 1024px) {
     #sidebar-facets-root {
         width: 100% !important;
@@ -80,8 +160,5 @@
         display: flex !important;
         align-items: center !important;
         gap: 8px !important;
-    }
-    .dept-heading i {
-        font-size: 16px !important;
     }
 }
