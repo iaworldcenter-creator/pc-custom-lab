@@ -73,10 +73,8 @@ function getFilteredList() {
             return catClasif === activeSelectedCategory.toLowerCase();
         });
 
-        // Si es fuentes_energia, asegurar que las fuentes puras van primero (tipo_psu_order: 1)
-        if (activeSelectedCategory.toLowerCase() === 'fuentes_energia') {
-            items.sort((a, b) => (a.tipo_psu_order || 1) - (b.tipo_psu_order || 1));
-        }
+        // Ordenar por sort_priority (Reguladores primero en reguladores_ups, Fuentes puras primero en fuentes_energia)
+        items.sort((a, b) => (a.sort_priority || 1) - (b.sort_priority || 1));
     }
 
     if (activeSelectedBrand !== 'Todas') {
@@ -846,16 +844,18 @@ window.openProductDetailModal = function(sku) {
 
                         <div class="space-y-2 pt-1">
                             <button 
-                                onclick="executeAddToCartPDP('${sku}', '${title}', '${localImg}', ${price}, ${mayoreo})" 
-                                aria-label="Agregar ${title} al carrito de compra"
+                                type="button"
+                                onclick="executeAddToCartPDP('${sku}')" 
+                                aria-label="Agregar producto al carrito"
                                 class="btn-action w-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/50 hover:border-cyan-400 font-black py-3 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition cursor-pointer shadow hover:shadow-cyan-500/20 min-h-[48px]"
                             >
                                 <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> <span>Agregar al Carrito</span>
                             </button>
 
                             <button 
-                                onclick="executeBuyNowPDP('${sku}', '${title}', '${localImg}', ${price}, ${mayoreo})" 
-                                aria-label="Pagar ${title} ahora con SPEI o Mercado Pago"
+                                type="button"
+                                onclick="executeBuyNowPDP('${sku}')" 
+                                aria-label="Pagar producto ahora"
                                 class="btn-action w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black py-3 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition active:scale-95 shadow-lg cursor-pointer min-h-[48px]"
                             >
                                 <i class="fa-solid fa-bolt" aria-hidden="true"></i> <span>Pagar Ahora (SPEI / MP)</span>
@@ -992,20 +992,44 @@ window.updatePDPQuantity = function(delta, regularPrice, wholesalePrice, origina
     }
 };
 
-window.executeAddToCartPDP = function(sku, title, img, regularPrice, wholesalePrice) {
+window.executeAddToCartPDP = function(sku) {
+    const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
+    const prod = all.find(p => p.sku === sku);
+    if (!prod) {
+        alert("⚠️ No se encontró la información del producto.");
+        return;
+    }
+    const cat = prod.categoria_clasificada || 'accesorios_perifericos';
+    const title = prod.nombre || prod.descripcion_completa || sku;
+    const price = prod.precio_mxn || prod.precio || 0;
+    const wholesalePrice = prod.precio_mayoreo_10pzs || (price * 0.93);
+    const img = `./assets/img/catalog/${cat}/${sku}.jpg`;
+
     const input = document.getElementById("pdp-qty-input");
     const qty = parseInt(input ? input.value : 1) || 1;
-    const activePrice = (qty >= 10) ? wholesalePrice : regularPrice;
-    
+    const activePrice = (qty >= 10) ? wholesalePrice : price;
+
     addToCartCT(sku, title, activePrice, img, qty);
     closeProductDetailModal();
 };
 
-window.executeBuyNowPDP = function(sku, title, img, regularPrice, wholesalePrice) {
+window.executeBuyNowPDP = function(sku) {
+    const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
+    const prod = all.find(p => p.sku === sku);
+    if (!prod) {
+        alert("⚠️ No se encontró la información del producto.");
+        return;
+    }
+    const cat = prod.categoria_clasificada || 'accesorios_perifericos';
+    const title = prod.nombre || prod.descripcion_completa || sku;
+    const price = prod.precio_mxn || prod.precio || 0;
+    const wholesalePrice = prod.precio_mayoreo_10pzs || (price * 0.93);
+    const img = `./assets/img/catalog/${cat}/${sku}.jpg`;
+
     const input = document.getElementById("pdp-qty-input");
     const qty = parseInt(input ? input.value : 1) || 1;
-    const activePrice = (qty >= 10) ? wholesalePrice : regularPrice;
-    
+    const activePrice = (qty >= 10) ? wholesalePrice : price;
+
     addToCartCT(sku, title, activePrice, img, qty);
     window.location.href = "checkout.html";
 };
