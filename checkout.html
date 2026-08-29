@@ -1,132 +1,63 @@
 <!DOCTYPE html>
 <html lang="es" class="dark scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>PC Custom Lab | Checkout</title>
-  <meta name="description" content="Tienda mayorista y ensamble de computadoras en Guadalajara Centro. 16,139 productos en catálogo con entrega express el mismo día y garantía directa.">
-  <link rel="canonical" href="https://iaworldcenter-creator.github.io/pc-custom-lab/checkout.html">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#030712">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PC Custom Lab | Hardware & Ensambles | Carrito de Compras & Pago Seguro</title>
+    <meta name="description" content="Proceso de compra seguro para PC CUSTOM LAB. Entregas express el mismo día en Guadalajara vía Uber Flash.">
+    
+    <!-- Fuentes y Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Tailwind CSS Compilado Oficial con Reset Completo -->
+    <style>
+        *, ::after, ::before { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { font-family: ui-sans-serif, system-ui, sans-serif; background-color: #020617; color: #f8fafc; min-height: 100vh; }
+        
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .product-img-box {
+            width: 100px;
+            height: 100px;
+            min-width: 100px;
+            min-height: 100px;
+            aspect-ratio: 1 / 1;
+            background-color: #0b1329;
+            border: 1px solid #1e293b;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        @media (min-width: 640px) {
+            .product-img-box {
+                width: 120px;
+                height: 120px;
+                min-width: 120px;
+                min-height: 120px;
+            }
+        }
+        .product-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
 
-  <!-- SEGURIDAD PERIMETRAL: CSP, COOP, X-CONTENT-TYPE & REFERRER POLICY -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; img-src 'self' https: data: blob:; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com data:; connect-src 'self' https: data: blob:; ">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+        .btn-action, .qty-btn {
+            min-height: 48px;
+            min-width: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-  <!-- OPTIMIZACIÓN DE CONEXIONES -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preconnect" href="https://static.ctonline.mx" crossorigin>
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-  <link rel="dns-prefetch" href="https://static.ctonline.mx">
-
-  <!-- PRECARGA PRIORITARIA DE FUENTES WOFF2 (AHORRO 90ms LIGHTHOUSE) -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-
-  <!-- FONT AWESOME ESTILOS CON font-display: swap ASIGNADO Y ANULACIÓN MÉTRICA -->
-  <style>
-    @font-face {
-      font-family: 'Font Awesome 6 Free';
-      font-style: normal;
-      font-weight: 900;
-      font-display: swap;
-      src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'Font Awesome 6 Brands';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2') format('woff2');
-    }
-    @font-face {
-      font-family: 'Font Awesome 6 Free';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-regular-400.woff2') format('woff2');
-    }
-
-    @font-face {
-      font-family: 'Primary-Architect-Font';
-      src: local('Segoe UI'), local('SF Pro Text'), local('Roboto'), local('Helvetica Neue'), local('Arial');
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Fallback-Engineered';
-      src: local('Arial');
-      ascent-override: 92%;
-      descent-override: 18%;
-      line-gap-override: 0%;
-      size-adjust: 97%;
-    }
-    :root {
-      font-family: 'Primary-Architect-Font', 'Fallback-Engineered', system-ui, -apple-system, sans-serif;
-    }
-    body {
-      margin: 0;
-      background-color: #030712;
-      color: #f8fafc;
-      min-height: 100vh;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Contención dimensional estricta (CLS = 0.000) */
-    .product-img-wrapper, .responsive-media {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      contain: layout paint;
-      content-visibility: auto;
-      contain-intrinsic-size: auto 240px;
-    }
-    .product-img-wrapper img, .responsive-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      aspect-ratio: 1 / 1;
-    }
-
-    /* Áreas táctiles WCAG 2.2 AA (Mínimo 48x48px en interactivos móviles) */
-    button, a, select, input, .btn-action, .touch-target {
-      min-height: 48px;
-      min-width: 48px;
-      touch-action: manipulation;
-    }
-    .action-button-icon {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .action-button-icon::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      min-width: 48px;
-      min-height: 48px;
-      width: 100%;
-      height: 100%;
-    }
-
-    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-    .hidden { display: none !important; }
-  </style>
-
-  <!-- FONT AWESOME CSS DIFERIDO -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-
-      <!-- TAILWIND CSS CDN OFICIAL CON CONFIGURACIÓN DARK/CLASS -->
+        .transition-all-custom {
+            transition: all 0.25s ease-in-out;
+        }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -134,894 +65,847 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            gold: '#f59e0b',
-                            cyan: '#06b6d4',
-                            dark: '#030712'
-                        }
+                        slate: { 850: '#0f172a', 950: '#020617' }
                     }
                 }
             }
-        };
+        }
     </script>
-
-  <!-- CAPTURA GLOBAL DE ERRORES Y BLINDAJE DE CONSOLA (LIGHTHOUSE CLEAN CONSOLE) -->
-  <script>
-    window.addEventListener('error', function(e) {
-      if (e.target && (e.target.tagName === 'IMG' || e.target.tagName === 'SCRIPT')) {
-        e.preventDefault();
-      }
-    }, true);
-    window.addEventListener('unhandledrejection', function(e) {
-      e.preventDefault();
-    });
-
-    if (window.trustedTypes && window.trustedTypes.createPolicy) {
-      try {
-        window.trustedTypesPolicy = window.trustedTypes.createPolicy('default', {
-          createHTML: function(s) { return s; },
-          createScript: function(s) { return s; },
-          createScriptURL: function(s) { return s; }
-        });
-      } catch(err) {}
-    }
-
-    if ('modelContext' in navigator && navigator.modelContext && navigator.modelContext.registerTool) {
-      try {
-        navigator.modelContext.registerTool({
-          name: 'search_catalog',
-          description: 'Busca productos en el catálogo comercial.',
-          inputSchema: {
-            type: 'object',
-            properties: { query: { type: 'string', description: 'Término de búsqueda' } },
-            required: ['query']
-          },
-          execute: async ({ query }) => {
-            return { status: 'success', message: 'Búsqueda ejecutada' };
-          }
-        });
-      } catch(e) {}
-    }
-  </script>
-
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col justify-between selection:bg-cyan-500 selection:text-slate-950">
 
-  <!-- CABECERA PRINCIPAL DE 2 LÍNEAS CENTRADA -->
-  <header class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-2xl">
-    <!-- LÍNEA 1: Ecosistema de Boutiques -->
-    <div class="w-full border-b border-slate-900 bg-slate-950/90">
-      <div class="max-w-[1440px] mx-auto px-3 sm:px-6 py-2 flex items-center justify-between gap-3 overflow-x-auto no-scrollbar scroll-smooth">
-        <span class="text-[9px] font-mono font-black text-amber-300 bg-amber-500/10 border border-amber-500/30 px-2.5 py-1 rounded-full uppercase tracking-wider shrink-0">
-          ⚡ Envío Exprés El Mismo Día (< $2,000 MXN) (< $2,000 MXN)
-        </span>
+    <!-- CABECERA PRINCIPAL DE 2 LÍNEAS CENTRADA -->
+    <header class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-2xl">
+        <!-- LÍNEA 1: Ecosistema de Boutiques -->
+        <div class="w-full border-b border-slate-900 bg-slate-950/90">
+            <div class="max-w-[1440px] mx-auto px-3 sm:px-6 py-2 flex items-center justify-between gap-3 overflow-x-auto no-scrollbar scroll-smooth">
+                <span class="text-[9px] font-mono font-black text-amber-300 bg-amber-500/10 border border-amber-500/30 px-2.5 py-1 rounded-full uppercase tracking-wider shrink-0">
+                    ⚡ Envío Exprés El Mismo Día (< $2,000 MXN) (< $2,000 MXN)
+                </span>
+                
+                <nav class="flex items-center gap-1.5 shrink-0 text-xs font-mono font-bold mx-auto" aria-label="Ecosistema de Tiendas">
+                    <a href="https://iaworldcenter-creator.github.io/sitios-web/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] flex items-center">
+                        <i class="fa-solid fa-house text-amber-400 mr-1.5"></i> Matriz
+                    </a>
+                    <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-slate-800 transition min-h-[48px] flex items-center">
+                        <i class="fa-solid fa-microchip text-cyan-400 mr-1.5"></i> PC Custom
+                    </a>
+                    <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition min-h-[48px] flex items-center">
+                        <i class="fa-solid fa-gem text-cyan-300 mr-1.5"></i> Vía MX
+                    </a>
+                    <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition min-h-[48px] flex items-center">
+                        <i class="fa-solid fa-smoking text-amber-400 mr-1.5"></i> Cigarros
+                    </a>
+                    <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition min-h-[48px] flex items-center">
+                        <i class="fa-solid fa-candy-cane text-pink-400 mr-1.5"></i> Dulces
+                    </a>
+                    <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition min-h-[48px] flex items-center">
+                        <i class="fa-solid fa-newspaper text-indigo-400 mr-1.5"></i> Kiosco
+                    </a>
+                    <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition min-h-[48px] flex items-center">
+                        <i class="fa-solid fa-store text-emerald-400 mr-1.5"></i> Mi Puesto
+                    </a>
+                    <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition min-h-[48px] flex items-center">
+                        <i class="fa-solid fa-tags text-red-400 mr-1.5"></i> Liquidaciones
+                    </a>
+                </nav>
+
+                <div class="shrink-0 hidden md:block">
+                    <span class="text-[10px] font-mono text-emerald-400 font-bold bg-emerald-950/80 border border-emerald-500/40 px-2.5 py-1 rounded-full">
+                        🎁 5% Cashback
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- LÍNEA 2: Logo Oficial + Enlace Volver + Total Carrito -->
+        <div class="w-full bg-slate-950/95">
+            <div class="max-w-[1440px] mx-auto px-3 sm:px-6 py-2.5 flex items-center justify-between gap-4">
+                <a href="index.html" class="flex items-center gap-2.5 group min-h-[48px]">
+                    <div class="w-10 h-10 rounded-xl bg-slate-900 border border-cyan-500/40 p-1 flex items-center justify-center shrink-0">
+                        <img src="assets/img/mascota_tigre_thumb.webp" alt="Logo PC CUSTOM LAB" width="36" height="36" class="w-full h-full object-contain" onerror="this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';" />
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xs sm:text-sm font-black font-mono text-white tracking-wider uppercase group-hover:text-cyan-400 transition">PC CUSTOM LAB</span>
+                        <span class="text-[9px] font-mono text-slate-300">Hardware Mayorista & Ensamble de Cómputo</span>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-3">
+                    <a href="index.html" class="btn-action px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-cyan-300 font-mono text-xs font-bold transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-arrow-left"></i> <span>Regresar al Catálogo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL DEL CHECKOUT INTERACTIVO -->
+    <main class="w-full max-w-4xl mx-auto px-3 sm:px-6 py-6 flex-1 space-y-6" id="checkout-main-root">
         
-        <nav class="flex items-center gap-1.5 shrink-0 text-xs font-mono font-bold mx-auto" aria-label="Ecosistema de Tiendas">
-          <a href="https://iaworldcenter-creator.github.io/sitios-web/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] flex items-center">
-            <i class="fa-solid fa-house text-amber-400 mr-1.5"></i> Matriz
-          </a>
-          <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-slate-800 transition min-h-[48px] flex items-center">
-            <i class="fa-solid fa-microchip text-cyan-400 mr-1.5"></i> PC Custom
-          </a>
-          <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition min-h-[48px] flex items-center">
-            <i class="fa-solid fa-gem text-cyan-300 mr-1.5"></i> Vía MX
-          </a>
-          <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition min-h-[48px] flex items-center">
-            <i class="fa-solid fa-smoking text-amber-400 mr-1.5"></i> Cigarros
-          </a>
-          <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition min-h-[48px] flex items-center">
-            <i class="fa-solid fa-candy-cane text-pink-400 mr-1.5"></i> Dulces
-          </a>
-          <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition min-h-[48px] flex items-center">
-            <i class="fa-solid fa-newspaper text-indigo-400 mr-1.5"></i> Kiosco
-          </a>
-          <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition min-h-[48px] flex items-center">
-            <i class="fa-solid fa-store text-emerald-400 mr-1.5"></i> Mi Puesto
-          </a>
-          <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 transition min-h-[48px] flex items-center">
-            <i class="fa-solid fa-tags text-red-400 mr-1.5"></i> Liquidaciones
-          </a>
-        </nav>
+        <!-- ========================================================================= -->
+        <!-- SECCIÓN 1: DOMICILIO DE ENTREGA (EXPANDIDO / COLAPSABLE COMPACTO) -->
+        <!-- ========================================================================= -->
+        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-2xl transition-all-custom" id="sec-domicilio-root">
+            
+            <!-- ENCABEZADO DE DOMICILIO -->
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-400 font-bold text-sm shrink-0">
+                        1
+                    </div>
+                    <div>
+                        <h2 class="text-sm sm:text-base font-black text-white flex items-center gap-2">
+                            <span>Domicilio de Entrega</span>
+                            <span class="text-[10px] font-mono text-amber-300 bg-amber-500/10 border border-amber-500/30 px-2 py-0.5 rounded-full uppercase">Uber Flash GDL</span>
+                        </h2>
+                    </div>
+                </div>
 
-        <div class="shrink-0 hidden md:block">
-          <span class="text-[10px] font-mono text-emerald-400 font-bold bg-emerald-950/80 border border-emerald-500/40 px-2.5 py-1 rounded-full">
-            🎁 5% Cashback
-          </span>
-        </div>
-      </div>
-    </div>
+                <!-- Botón para modificar cuando está colapsado -->
+                <button type="button" id="btn-edit-domicilio" onclick="expandAddressForm()" class="hidden btn-action px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-mono font-bold border border-slate-700 transition">
+                    <i class="fa-solid fa-pen-to-square mr-1"></i> Modificar Domicilio
+                </button>
+            </div>
 
-    <!-- LÍNEA 2: Logo Oficial + Enlace Volver + Total Carrito -->
-    <div class="w-full bg-slate-950/95">
-      <div class="max-w-[1440px] mx-auto px-3 sm:px-6 py-2.5 flex items-center justify-between gap-4">
-        <a href="index.html" class="flex items-center gap-2.5 group min-h-[48px]">
-          <div class="w-10 h-10 rounded-xl bg-slate-900 border border-cyan-500/40 p-1 flex items-center justify-center shrink-0">
-            <img src="assets/img/mascota_tigre_thumb.webp" alt="Logo PC CUSTOM LAB" width="36" height="36" class="w-full h-full object-contain" onerror="this.src='https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp';" />
-          </div>
-          <div class="flex flex-col">
-            <span class="text-xs sm:text-sm font-black font-mono text-white tracking-wider uppercase group-hover:text-cyan-400 transition">PC CUSTOM LAB</span>
-            <span class="text-[9px] font-mono text-slate-300">Hardware Mayorista & Ensamble de Cómputo</span>
-          </div>
-        </a>
+            <!-- FORMULARIO DE DOMICILIO COMPLETO (SE OCULTA AL CONFIRMAR) -->
+            <div id="form-domicilio-full" class="space-y-4 text-xs">
+                <p class="text-slate-300 text-xs leading-relaxed">
+                    Ingresa tus datos de contacto y entrega. Esta información se guardará en tu cuenta para agilizar futuros pedidos y enviarte tus comprobantes.
+                </p>
 
-        <div class="flex items-center gap-3">
-          <a href="index.html" class="btn-action px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-cyan-300 font-mono text-xs font-bold transition flex items-center gap-1.5">
-            <i class="fa-solid fa-arrow-left"></i> <span>Regresar al Catálogo</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    <div>
+                        <label for="custName" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Nombre Completo de quien recibe: *</label>
+                        <input type="text" id="custName" placeholder="Ej. Juan Pérez González" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none focus:border-cyan-400 font-medium min-h-[48px]" required />
+                    </div>
+                    <div>
+                        <label for="custPhone" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">WhatsApp / Teléfono Móvil: *</label>
+                        <input type="tel" id="custPhone" placeholder="Ej. 33 2865 2309" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none focus:border-cyan-400 font-mono font-bold min-h-[48px]" required />
+                    </div>
+                </div>
 
-  <!-- CONTENEDOR PRINCIPAL DEL CHECKOUT INTERACTIVO -->
-  <main class="w-full max-w-4xl mx-auto px-3 sm:px-6 py-6 flex-1 space-y-6" id="checkout-main-root">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    <div>
+                        <label for="custEmail" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Correo Electrónico (Para envío de factura/recibo): *</label>
+                        <input type="email" id="custEmail" placeholder="Ej. juan.perez@email.com" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none focus:border-cyan-400 font-medium min-h-[48px]" required />
+                    </div>
+                    <div>
+                        <label for="custCP" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Código Postal (Guadalajara y ZMG): *</label>
+                        <input type="text" id="custCP" placeholder="Ej. 44100" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none focus:border-cyan-400 font-mono font-bold min-h-[48px]" required />
+                    </div>
+                </div>
+
+                <div>
+                    <label for="custAddress" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Dirección Completa (Calle, Número exterior/interior, Colonia, Referencias): *</label>
+                    <input type="text" id="custAddress" placeholder="Ej. Pedro Moreno #501 Int. A, entre 8 de Julio y Pavo, Col. Centro" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none focus:border-cyan-400 font-medium min-h-[48px]" required />
+                </div>
+
+                <div class="space-y-2">
+                    <label for="checkoutZoneSelect" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">
+                        Modalidad y Zona de Envío:
+                    </label>
+                    <select id="checkoutZoneSelect" onchange="calculateTotals()" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none focus:border-cyan-400 font-bold cursor-pointer min-h-[48px]">
+                        <optgroup label="⚡ Envíos Exprés en Moto (Únicamente compras < $2,000 MXN)">
+                            <option value="35">Zona 1 (0-2.5 km Centro): Moto Uber Flash ($35.00 MXN) [Compras < $2,000]</option>
+                            <option value="52">Zona 2 (2.5-5 km Zapopan/Minerva): Moto Uber Flash ($52.00 MXN) [Compras < $2,000]</option>
+                            <option value="75">Zona 3 (5+ km Periférico/Tonalá): Moto Uber Flash ($75.00 MXN) [Compras < $2,000]</option>
+                        </optgroup>
+                        <optgroup label="🛡️ Paquetería Blindada / Asegurada (Compras > $2,000 MXN)">
+                            <option value="180" id="opt-paqueteria">Paquetería Asegurada con Firma Obligatoria de Recibido ($180.00 MXN) [Compras > $2,000]</option>
+                            <option value="0">Retiro Directo en Mostrador Pedro Moreno 501 A ($0.00 MXN - Gratis)</option>
+                        </optgroup>
+                    </select>
+                    <div id="shipping-warning-box" class="p-3 bg-amber-950/60 border border-amber-500/50 rounded-xl text-[11px] text-amber-200 leading-relaxed font-mono flex items-start gap-2">
+                        <i class="fa-solid fa-triangle-exclamation text-amber-400 mt-0.5 shrink-0"></i>
+                        <span><strong>Regla de Seguridad & Seguro:</strong> Los envíos exprés en motocicleta aplican <em>únicamente para compras menores a $2,000 MXN</em>. Si tu compra supera los $2,000 MXN, por seguridad y cobertura de seguro se enviará por <strong>Paquetería Asegurada con Firma de Recibido</strong> o puedes recoger en sucursal.</span>
+                    </div>
+                </div>
+
+                <!-- Botón de Confirmación para colapsar -->
+                <div class="pt-2 flex justify-end">
+                    <button type="button" onclick="saveAndCollapseAddress()" class="btn-action w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg transition">
+                        <i class="fa-solid fa-circle-check mr-1.5"></i> Confirmar Domicilio de Entrega
+                    </button>
+                </div>
+            </div>
+
+            <!-- VISTA COLAPSADA RESUMEN (APARECE AL CONFIRMAR) -->
+            <div id="form-domicilio-collapsed" class="hidden bg-slate-950/90 border border-emerald-500/40 rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+                <div class="flex items-start gap-3">
+                    <i class="fa-solid fa-circle-check text-emerald-400 text-xl mt-0.5 shrink-0"></i>
+                    <div>
+                        <div class="font-bold text-white text-sm" id="col-cust-name">Juan Pérez</div>
+                        <div class="text-slate-300 font-mono text-[11px]" id="col-cust-contact">Tel: 33 2865 2309 • Email: juan@email.com</div>
+                        <div class="text-slate-300 text-[11px] mt-0.5" id="col-cust-address">Pedro Moreno #501 Int A, Col. Centro (CP 44100)</div>
+                    </div>
+                </div>
+                <div class="shrink-0 font-mono text-right sm:border-l sm:border-slate-800 sm:pl-4">
+                    <span class="text-[10px] text-amber-400 uppercase block font-bold">PIN de Seguridad:</span>
+                    <span class="text-lg font-black text-white tracking-widest" id="checkout-pin">7453</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- SECCIÓN 2: FORMA DE PAGO (COLAPSABLE, INMEDIATAMENTE DEBAJO DEL DOMICILIO) -->
+        <!-- ========================================================================= -->
+        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-2xl transition-all-custom" id="sec-pago-root">
+            
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-xl bg-purple-500/20 border border-purple-400/40 flex items-center justify-center text-purple-400 font-bold text-sm shrink-0">
+                        2
+                    </div>
+                    <div>
+                        <h2 class="text-sm sm:text-base font-black text-white flex items-center gap-2">
+                            <span>Forma de Pago</span>
+                            <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded-full uppercase">100% Seguro</span>
+                        </h2>
+                    </div>
+                </div>
+
+                <button type="button" id="btn-edit-pago" onclick="expandPaymentOptions()" class="hidden btn-action px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-mono font-bold border border-slate-700 transition">
+                    <i class="fa-solid fa-rotate mr-1"></i> Cambiar Forma de Pago
+                </button>
+            </div>
+
+            <!-- OPCIONES DE PAGO EXPANDIDAS -->
+            <div id="form-pago-full" class="space-y-4 text-xs">
+                
+                <!-- OPCIÓN 1: TARJETA DE CRÉDITO O DÉBITO (MERCADO PAGO) -->
+                <div class="p-4 bg-slate-950 border-2 border-slate-800 hover:border-cyan-500/60 rounded-2xl transition cursor-pointer" onclick="selectPaymentMethod('tarjeta')">
+                    <div class="flex items-center justify-between mb-2">
+                        <label class="flex items-center gap-2.5 cursor-pointer font-bold text-white text-xs sm:text-sm">
+                            <input type="radio" name="payment_method_radio" id="pay_card" value="tarjeta" checked class="accent-cyan-400 w-4 h-4 cursor-pointer" />
+                            <i class="fa-solid fa-credit-card text-cyan-400 text-base"></i>
+                            <span>Tarjeta de Crédito / Débito (Pasarela Mercado Pago)</span>
+                        </label>
+                        <span class="bg-cyan-500/20 text-cyan-300 text-[9px] font-mono font-bold px-2 py-0.5 rounded uppercase">Sin Almacenar Tarjetas</span>
+                    </div>
+                    <p class="text-slate-300 text-[11px] leading-relaxed pl-6">
+                        Procesa tu pago de forma instantánea a través de Mercado Pago. Compatible con Visa, Mastercard, American Express y tarjetas bancarias digitales. <em>Nosotros no solicitamos ni almacenamos ningún dato de tu tarjeta bancaria.</em>
+                    </p>
+                </div>
+
+                <!-- OPCIÓN 2: TRANSFERENCIA SPEI DIRECTA BBVA (0% COMISIÓN) -->
+                <div class="p-4 bg-slate-950 border-2 border-emerald-500/50 hover:border-emerald-400 rounded-2xl transition cursor-pointer" onclick="selectPaymentMethod('spei')">
+                    <div class="flex items-center justify-between mb-2">
+                        <label class="flex items-center gap-2.5 cursor-pointer font-bold text-white text-xs sm:text-sm">
+                            <input type="radio" name="payment_method_radio" id="pay_spei" value="spei" class="accent-emerald-400 w-4 h-4 cursor-pointer" />
+                            <i class="fa-solid fa-building-columns text-emerald-400 text-base"></i>
+                            <span>Transferencia SPEI Directa al Banco (0% Comisión)</span>
+                        </label>
+                        <span class="bg-emerald-500/20 text-emerald-300 text-[9px] font-mono font-bold px-2 py-0.5 rounded uppercase">0% Comisión</span>
+                    </div>
+                    
+                    <div class="pl-6 space-y-2">
+                        <p class="text-slate-300 text-[11px]">
+                            Transfiere desde tu banca móvil a nuestra cuenta concentradora en BBVA México:
+                        </p>
+                        <div class="bg-slate-900 border border-slate-800 p-3 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                            <div class="font-mono text-xs text-slate-300">
+                                <div>Banco: <strong class="text-white">BBVA México</strong> • Titular: <strong class="text-white">Pedro Moreno 501 A</strong></div>
+                                <div class="text-sm font-black text-cyan-300 select-all tracking-wider pt-0.5" id="clabe-txt">012 180 01542584394 9</div>
+                            </div>
+                            <button type="button" onclick="event.stopPropagation(); copyCLABE();" class="btn-action px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono font-bold rounded-lg border border-slate-700 transition">
+                                <i class="fa-solid fa-copy mr-1"></i> Copiar CLABE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OPCIÓN 3: DEPÓSITO O ABONO EN EFECTIVO (OXXO / TIENDAS) -->
+                <div class="p-4 bg-slate-950 border-2 border-slate-800 hover:border-amber-500/60 rounded-2xl transition cursor-pointer" onclick="selectPaymentMethod('oxxo')">
+                    <div class="flex items-center justify-between mb-2">
+                        <label class="flex items-center gap-2.5 cursor-pointer font-bold text-white text-xs sm:text-sm">
+                            <input type="radio" name="payment_method_radio" id="pay_oxxo" value="oxxo" class="accent-amber-400 w-4 h-4 cursor-pointer" />
+                            <i class="fa-solid fa-store text-amber-400 text-base"></i>
+                            <span>Depósito / Abono en Efectivo (OXXO, 7-Eleven, Farmacias)</span>
+                        </label>
+                        <span class="bg-amber-500/20 text-amber-300 text-[9px] font-mono font-bold px-2 py-0.5 rounded uppercase">Efectivo</span>
+                    </div>
+                    <p class="text-slate-300 text-[11px] leading-relaxed pl-6">
+                        Paga en efectivo en más de 20,000 establecimientos autorizados generando tu referencia digital de abono.
+                    </p>
+                </div>
+
+                <!-- Botón de Confirmación de Pago -->
+                <div class="pt-2 flex justify-end">
+                    <button type="button" onclick="confirmAndCollapsePayment()" class="btn-action w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-xs uppercase tracking-wider shadow-lg transition">
+                        <i class="fa-solid fa-check mr-1.5"></i> Confirmar Método de Pago
+                    </button>
+                </div>
+            </div>
+
+            <!-- VISTA COLAPSADA DE FORMA DE PAGO -->
+            <div id="form-pago-collapsed" class="hidden bg-slate-950/90 border border-purple-500/40 rounded-2xl p-4 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-credit-card text-purple-400 text-xl shrink-0" id="col-pay-icon"></i>
+                    <div>
+                        <span class="text-[10px] font-mono text-slate-400 uppercase block">Forma de Pago Seleccionada:</span>
+                        <strong class="text-white text-sm font-bold" id="col-pay-title">Tarjeta de Crédito / Débito (Mercado Pago)</strong>
+                    </div>
+                </div>
+                <button type="button" onclick="expandPaymentOptions()" class="text-xs font-mono font-bold text-cyan-300 hover:underline">
+                    Cambiar
+                </button>
+            </div>
+        </section>
+
+        <!-- ========================================================================= -->
+        <!-- SECCIÓN 3: ARTÍCULOS EN CANASTA (FOTO GRANDE, DESCRIPCIÓN AMPLIA, CONTROLES) -->
+        <!-- ========================================================================= -->
+        <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-2xl space-y-4" id="sec-articulos-root">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">
+                        3
+                    </div>
+                    <h2 class="text-sm sm:text-base font-black text-white flex items-center gap-2">
+                        <span>Artículos en tu Pedido</span>
+                    </h2>
+                </div>
+                <span id="items-count-badge" class="text-xs font-mono bg-cyan-950 border border-cyan-500/40 text-cyan-300 px-3 py-1 rounded-full font-bold">0 productos</span>
+            </div>
+
+            <!-- CONTENEDOR DE PRODUCTOS CON FOTO GRANDE -->
+            <div id="checkout-items-list" class="divide-y divide-slate-800 space-y-4">
+                <!-- Inyectado dinámicamente por JavaScript -->
+            </div>
+
+            <!-- DESGLOSE ECONÓMICO Y TOTALES -->
+            <div class="bg-slate-950/90 border border-slate-800 rounded-2xl p-4 space-y-2 text-xs font-mono">
+                <div class="flex justify-between text-slate-300">
+                    <span>Subtotal Productos:</span>
+                    <span id="chk-subtotal" class="text-white font-bold text-sm">$0.00 MXN</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-coins text-emerald-400"></i> 5% Cashback Acumulable:</span>
+                    <span id="chk-cashback" class="text-emerald-400 font-bold">$0.00 MXN</span>
+                </div>
+                <div class="flex justify-between text-slate-300">
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-motorcycle text-amber-400"></i> Envío Express Uber Flash:</span>
+                    <span id="chk-shipping" class="text-amber-400 font-bold">$35.00 MXN</span>
+                </div>
+                <div class="flex justify-between items-center text-sm font-bold text-white pt-3 border-t border-slate-800">
+                    <span class="text-base font-black">Total a Liquidar:</span>
+                    <span id="chk-total" class="text-2xl font-black text-emerald-300 font-mono tracking-tight drop-shadow-[0_0_10px_rgba(52,211,153,0.4)]">$0.00 MXN</span>
+                </div>
+            </div>
+
+            <!-- ========================================================================= -->
+            <!-- BOTONES DE ACCIÓN FINAL (SEGUIR COMPRANDO / PROCEDER AL PAGO) -->
+            <!-- ========================================================================= -->
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <a href="index.html" class="btn-action w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white font-mono text-xs uppercase font-bold transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-bag-shopping text-cyan-400"></i> <span>Seguir Comprando</span>
+                </a>
+
+                <button type="button" onclick="executeFinalCheckoutFlow()" class="btn-action w-full sm:flex-1 py-4 px-8 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black text-sm uppercase tracking-wider shadow-2xl flex items-center justify-center gap-2 transition active:scale-95 cursor-pointer">
+                    <i class="fa-solid fa-lock text-base"></i> <span id="btn-final-label">Proceder al Pago Seguro</span>
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER OFICIAL -->
     
-    <!-- ========================================================================= -->
-    <!-- SECCIÓN 1: DOMICILIO DE ENTREGA (EXPANDIDO / COLAPSABLE COMPACTO) -->
-    <!-- ========================================================================= -->
-    <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-2xl transition-all-custom" id="sec-domicilio-root">
-      
-      <!-- ENCABEZADO DE DOMICILIO -->
-      <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
-        <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded-xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-400 font-bold text-sm shrink-0">
-            1
-          </div>
-          <div>
-            <h2 class="text-sm sm:text-base font-black text-white flex items-center gap-2">
-              <span>Domicilio de Entrega</span>
-              <span class="text-[10px] font-mono text-amber-300 bg-amber-500/10 border border-amber-500/30 px-2 py-0.5 rounded-full uppercase">Uber Flash GDL</span>
-            </h2>
-          </div>
-        </div>
+    <!-- FOOTER INSTITUCIONAL OFICIAL (H2: Pie de Página) -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-300 text-xs mt-12 pt-10 pb-8" aria-label="Pie de página institucional" id="pie-de-pagina">
+        <h2 class="sr-only">Información Legal, Contacto y Garantías PC Custom Lab</h2>
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b border-slate-800/80">
+                
+                <!-- COLUMNA 1: CONTACTO Y REDES OFICIALES -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-cyan-300 uppercase tracking-wider text-xs font-mono flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot text-cyan-400" aria-hidden="true"></i> Contacto y Redes Oficiales
+                    </h3>
+                    <div class="space-y-2 text-slate-200 text-[11px] leading-relaxed">
+                        <p class="flex items-start gap-2">
+                            <i class="fa-solid fa-store text-cyan-400 mt-0.5 shrink-0" aria-hidden="true"></i>
+                            <span>Pedro Moreno 501 A, Guadalajara Centro, Jalisco (CP 44100)</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-cyan-400 shrink-0" aria-hidden="true"></i>
+                            <span>Teléfono Fijo: <strong>(33) 3653 6348</strong></span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 shrink-0" aria-hidden="true"></i>
+                            <span>WhatsApp: <a href="https://wa.me/523337271440" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" class="hover:text-emerald-300 font-bold text-white transition">+52 33 3727 1440</a></span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fa-solid fa-mobile-screen-button text-cyan-400 shrink-0" aria-hidden="true"></i>
+                            <span>Celular: <strong>+52 33 2865 2309</strong></span>
+                        </p>
+                    </div>
 
-        <!-- Botón para modificar cuando está colapsado -->
-        <button type="button" id="btn-edit-domicilio" onclick="expandAddressForm()" class="hidden btn-action px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-mono font-bold border border-slate-700 transition">
-          <i class="fa-solid fa-pen-to-square mr-1"></i> Modificar Domicilio
-        </button>
-      </div>
+                    <div class="pt-2 border-t border-slate-900 space-y-1.5 text-[10.5px]">
+                        <a href="https://www.facebook.com/profile.php?id=61593020515115" target="_blank" rel="noopener" aria-label="Perfil oficial de Facebook" class="text-slate-300 hover:text-blue-400 flex items-center gap-2 transition min-h-[44px]">
+                            <i class="fa-brands fa-facebook text-blue-500 w-4 text-center" aria-hidden="true"></i> <span>Facebook: <strong>BAZAR NFL.GDL</strong></span>
+                        </a>
+                        <a href="https://www.instagram.com/pccustomlab/" target="_blank" rel="noopener" aria-label="Perfil oficial de Instagram" class="text-slate-300 hover:text-pink-400 flex items-center gap-2 transition min-h-[44px]">
+                            <i class="fa-brands fa-instagram text-pink-500 w-4 text-center" aria-hidden="true"></i> <span>Instagram: <strong>@pccustomlab</strong></span>
+                        </a>
+                        <a href="https://www.youtube.com/@IAWorldCenter" target="_blank" rel="noopener" aria-label="Canal oficial de YouTube" class="text-slate-300 hover:text-red-400 flex items-center gap-2 transition min-h-[44px]">
+                            <i class="fa-brands fa-youtube text-red-500 w-4 text-center" aria-hidden="true"></i> <span>YouTube: <strong>IA World Center</strong></span>
+                        </a>
+                        <a href="https://t.me/pc_custom_lab" target="_blank" rel="noopener" aria-label="Canal oficial de Telegram" class="text-slate-300 hover:text-cyan-400 flex items-center gap-2 transition min-h-[44px]">
+                            <i class="fa-brands fa-telegram text-cyan-400 w-4 text-center" aria-hidden="true"></i> <span>Telegram: <strong>pc_custom_lab</strong></span>
+                        </a>
+                    </div>
+                </div>
 
-      <!-- FORMULARIO DE DOMICILIO COMPLETO (SE OCULTA AL CONFIRMAR) -->
-      <div id="form-domicilio-full" class="space-y-4 text-xs">
-        <p class="text-slate-300 text-xs leading-relaxed">
-          Ingresa tus datos de contacto y entrega. Esta información se guardará en tu cuenta para agilizar futuros pedidos y enviarte tus comprobantes.
-        </p>
+                <!-- COLUMNA 2: POLÍTICAS DE COMPRA, GARANTÍA Y SEGURIDAD DE ENVÍOS -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-cyan-300 uppercase tracking-wider text-xs font-mono flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-cyan-400" aria-hidden="true"></i> Políticas de Compra & Seguridad
+                    </h3>
+                    <div class="space-y-2 text-slate-200 text-[11px] leading-relaxed">
+                        <div class="bg-amber-950/40 border border-amber-500/40 p-2.5 rounded-xl space-y-1">
+                            <strong class="text-amber-300 flex items-center gap-1.5 font-mono text-[10.5px]">
+                                <i class="fa-solid fa-motorcycle text-amber-400"></i> LÍMITE DE ENVÍOS EXPRÉS ($2,000 MXN)
+                            </strong>
+                            <p class="text-slate-200 text-[10px]">
+                                Por seguridad y límites de seguro de transporte en motocicleta, el <strong>Envío Exprés El Mismo Día aplica únicamente para compras menores a $2,000 MXN</strong>.
+                            </p>
+                            <p class="text-amber-200 text-[10px] font-bold">
+                                Pedidos mayores a $2,000 MXN se despachan obligatoriamente vía Paquetería Asegurada con Firma de Recibido del comprador o retiro directo en mostrador.
+                            </p>
+                        </div>
+                        <p class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5 shrink-0" aria-hidden="true"></i>
+                            <span><strong>Garantía Directa de 48 Horas:</strong> Reemplazo inmediato en mostrador presentando empaque original intacto.</span>
+                        </p>
+                        <p class="flex items-start gap-2">
+                            <i class="fa-solid fa-box-open text-cyan-400 mt-0.5 shrink-0" aria-hidden="true"></i>
+                            <span><strong>Garantía de Fábrica de 1 Año:</strong> Gestión técnica sin costo de fletes ni trámites adicionales.</span>
+                        </p>
+                    </div>
+                </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-          <div>
-            <label for="custName" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Nombre Completo de quien recibe: *</label>
-            <input type="text" id="custName" placeholder="Ej. Juan Pérez González" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none focus:border-cyan-400 font-medium min-h-[48px]" required />
-          </div>
-          <div>
-            <label for="custPhone" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">WhatsApp / Teléfono Móvil: *</label>
-            <input type="tel" id="custPhone" placeholder="Ej. 33 2865 2309" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none focus:border-cyan-400 font-mono font-bold min-h-[48px]" required />
-          </div>
-        </div>
+                <!-- COLUMNA 3: AHORRO, CASHBACK Y DESPACHO LOCAL -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-cyan-300 uppercase tracking-wider text-xs font-mono flex items-center gap-2">
+                        <i class="fa-solid fa-coins text-emerald-400" aria-hidden="true"></i> Ahorro, Cashback & Despacho Local
+                    </h3>
+                    <div class="space-y-2 text-slate-200 text-[11px] leading-relaxed">
+                        <div class="bg-slate-900/90 p-3 rounded-2xl border border-emerald-500/40 space-y-1">
+                            <div class="flex items-center gap-2 text-emerald-300 font-mono font-black text-xs">
+                                <i class="fa-solid fa-piggy-bank text-amber-400" aria-hidden="true"></i>
+                                <span>5% DE CASHBACK EN CADA COMPRA</span>
+                            </div>
+                            <p class="text-[10.5px] text-slate-300">
+                                Registra tu teléfono al ordenar para acumular saldo electrónico reutilizable en todas las boutiques.
+                            </p>
+                        </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-          <div>
-            <label for="custEmail" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Correo Electrónico (Para envío de factura/recibo): *</label>
-            <input type="email" id="custEmail" placeholder="Ej. juan.perez@email.com" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none focus:border-cyan-400 font-medium min-h-[48px]" required />
-          </div>
-          <div>
-            <label for="custCP" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Código Postal (Guadalajara y ZMG): *</label>
-            <input type="text" id="custCP" placeholder="Ej. 44100" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none focus:border-cyan-400 font-mono font-bold min-h-[48px]" required />
-          </div>
-        </div>
+                        <div class="bg-slate-900/90 p-3 rounded-2xl border border-slate-800 space-y-1">
+                            <div class="flex items-center gap-2 text-cyan-300 font-mono font-bold text-xs">
+                                <i class="fa-solid fa-truck-fast text-cyan-400" aria-hidden="true"></i>
+                                <span>PAQUETERÍA ASEGURADA > $2,000 MXN</span>
+                            </div>
+                            <p class="text-[10.5px] text-slate-300">
+                                Envíos de alto valor protegidos con guía rastreable y firma de entrega obligatoria en destino.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-        <div>
-          <label for="custAddress" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">Dirección Completa (Calle, Número exterior/interior, Colonia, Referencias): *</label>
-          <input type="text" id="custAddress" placeholder="Ej. Pedro Moreno #501 Int. A, entre 8 de Julio y Pavo, Col. Centro" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none focus:border-cyan-400 font-medium min-h-[48px]" required />
-        </div>
-
-        <div class="space-y-2">
-          <label for="checkoutZoneSelect" class="text-[11px] font-mono text-slate-300 font-bold block mb-1">
-            Modalidad y Zona de Envío:
-          </label>
-          <select id="checkoutZoneSelect" onchange="calculateTotals()" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-3 text-white outline-none focus:border-cyan-400 font-bold cursor-pointer min-h-[48px]">
-            <optgroup label="⚡ Envíos Exprés en Moto (Únicamente compras < $2,000 MXN)">
-              <option value="35">Zona 1 (0-2.5 km Centro): Moto Uber Flash ($35.00 MXN) [Compras < $2,000]</option>
-              <option value="52">Zona 2 (2.5-5 km Zapopan/Minerva): Moto Uber Flash ($52.00 MXN) [Compras < $2,000]</option>
-              <option value="75">Zona 3 (5+ km Periférico/Tonalá): Moto Uber Flash ($75.00 MXN) [Compras < $2,000]</option>
-            </optgroup>
-            <optgroup label="🛡️ Paquetería Blindada / Asegurada (Compras > $2,000 MXN)">
-              <option value="180" id="opt-paqueteria">Paquetería Asegurada con Firma Obligatoria de Recibido ($180.00 MXN) [Compras > $2,000]</option>
-              <option value="0">Retiro Directo en Mostrador Pedro Moreno 501 A ($0.00 MXN - Gratis)</option>
-            </optgroup>
-          </select>
-          <div id="shipping-warning-box" class="p-3 bg-amber-950/60 border border-amber-500/50 rounded-xl text-[11px] text-amber-200 leading-relaxed font-mono flex items-start gap-2">
-            <i class="fa-solid fa-triangle-exclamation text-amber-400 mt-0.5 shrink-0"></i>
-            <span><strong>Regla de Seguridad & Seguro:</strong> Los envíos exprés en motocicleta aplican <em>únicamente para compras menores a $2,000 MXN</em>. Si tu compra supera los $2,000 MXN, por seguridad y cobertura de seguro se enviará por <strong>Paquetería Asegurada con Firma de Recibido</strong> o puedes recoger en sucursal.</span>
-          </div>
-        </div>
-
-        <!-- Botón de Confirmación para colapsar -->
-        <div class="pt-2 flex justify-end">
-          <button type="button" onclick="saveAndCollapseAddress()" class="btn-action w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg transition">
-            <i class="fa-solid fa-circle-check mr-1.5"></i> Confirmar Domicilio de Entrega
-          </button>
-        </div>
-      </div>
-
-      <!-- VISTA COLAPSADA RESUMEN (APARECE AL CONFIRMAR) -->
-      <div id="form-domicilio-collapsed" class="hidden bg-slate-950/90 border border-emerald-500/40 rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
-        <div class="flex items-start gap-3">
-          <i class="fa-solid fa-circle-check text-emerald-400 text-xl mt-0.5 shrink-0"></i>
-          <div>
-            <div class="font-bold text-white text-sm" id="col-cust-name">Juan Pérez</div>
-            <div class="text-slate-300 font-mono text-[11px]" id="col-cust-contact">Tel: 33 2865 2309 • Email: juan@email.com</div>
-            <div class="text-slate-300 text-[11px] mt-0.5" id="col-cust-address">Pedro Moreno #501 Int A, Col. Centro (CP 44100)</div>
-          </div>
-        </div>
-        <div class="shrink-0 font-mono text-right sm:border-l sm:border-slate-800 sm:pl-4">
-          <span class="text-[10px] text-amber-400 uppercase block font-bold">PIN de Seguridad:</span>
-          <span class="text-lg font-black text-white tracking-widest" id="checkout-pin">7453</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- SECCIÓN 2: FORMA DE PAGO (COLAPSABLE, INMEDIATAMENTE DEBAJO DEL DOMICILIO) -->
-    <!-- ========================================================================= -->
-    <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-2xl transition-all-custom" id="sec-pago-root">
-      
-      <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
-        <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded-xl bg-purple-500/20 border border-purple-400/40 flex items-center justify-center text-purple-400 font-bold text-sm shrink-0">
-            2
-          </div>
-          <div>
-            <h2 class="text-sm sm:text-base font-black text-white flex items-center gap-2">
-              <span>Forma de Pago</span>
-              <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded-full uppercase">100% Seguro</span>
-            </h2>
-          </div>
-        </div>
-
-        <button type="button" id="btn-edit-pago" onclick="expandPaymentOptions()" class="hidden btn-action px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-mono font-bold border border-slate-700 transition">
-          <i class="fa-solid fa-rotate mr-1"></i> Cambiar Forma de Pago
-        </button>
-      </div>
-
-      <!-- OPCIONES DE PAGO EXPANDIDAS -->
-      <div id="form-pago-full" class="space-y-4 text-xs">
-        
-        <!-- OPCIÓN 1: TARJETA DE CRÉDITO O DÉBITO (MERCADO PAGO) -->
-        <div class="p-4 bg-slate-950 border-2 border-slate-800 hover:border-cyan-500/60 rounded-2xl transition cursor-pointer" onclick="selectPaymentMethod('tarjeta')">
-          <div class="flex items-center justify-between mb-2">
-            <label class="flex items-center gap-2.5 cursor-pointer font-bold text-white text-xs sm:text-sm">
-              <input type="radio" name="payment_method_radio" id="pay_card" value="tarjeta" checked class="accent-cyan-400 w-4 h-4 cursor-pointer" />
-              <i class="fa-solid fa-credit-card text-cyan-400 text-base"></i>
-              <span>Tarjeta de Crédito / Débito (Pasarela Mercado Pago)</span>
-            </label>
-            <span class="bg-cyan-500/20 text-cyan-300 text-[9px] font-mono font-bold px-2 py-0.5 rounded uppercase">Sin Almacenar Tarjetas</span>
-          </div>
-          <p class="text-slate-300 text-[11px] leading-relaxed pl-6">
-            Procesa tu pago de forma instantánea a través de Mercado Pago. Compatible con Visa, Mastercard, American Express y tarjetas bancarias digitales. <em>Nosotros no solicitamos ni almacenamos ningún dato de tu tarjeta bancaria.</em>
-          </p>
-        </div>
-
-        <!-- OPCIÓN 2: TRANSFERENCIA SPEI DIRECTA BBVA (0% COMISIÓN) -->
-        <div class="p-4 bg-slate-950 border-2 border-emerald-500/50 hover:border-emerald-400 rounded-2xl transition cursor-pointer" onclick="selectPaymentMethod('spei')">
-          <div class="flex items-center justify-between mb-2">
-            <label class="flex items-center gap-2.5 cursor-pointer font-bold text-white text-xs sm:text-sm">
-              <input type="radio" name="payment_method_radio" id="pay_spei" value="spei" class="accent-emerald-400 w-4 h-4 cursor-pointer" />
-              <i class="fa-solid fa-building-columns text-emerald-400 text-base"></i>
-              <span>Transferencia SPEI Directa al Banco (0% Comisión)</span>
-            </label>
-            <span class="bg-emerald-500/20 text-emerald-300 text-[9px] font-mono font-bold px-2 py-0.5 rounded uppercase">0% Comisión</span>
-          </div>
-          
-          <div class="pl-6 space-y-2">
-            <p class="text-slate-300 text-[11px]">
-              Transfiere desde tu banca móvil a nuestra cuenta concentradora en BBVA México:
-            </p>
-            <div class="bg-slate-900 border border-slate-800 p-3 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-              <div class="font-mono text-xs text-slate-300">
-                <div>Banco: <strong class="text-white">BBVA México</strong> • Titular: <strong class="text-white">Pedro Moreno 501 A</strong></div>
-                <div class="text-sm font-black text-cyan-300 select-all tracking-wider pt-0.5" id="clabe-txt">012 180 01542584394 9</div>
-              </div>
-              <button type="button" onclick="event.stopPropagation(); copyCLABE();" class="btn-action px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono font-bold rounded-lg border border-slate-700 transition">
-                <i class="fa-solid fa-copy mr-1"></i> Copiar CLABE
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- OPCIÓN 3: DEPÓSITO O ABONO EN EFECTIVO (OXXO / TIENDAS) -->
-        <div class="p-4 bg-slate-950 border-2 border-slate-800 hover:border-amber-500/60 rounded-2xl transition cursor-pointer" onclick="selectPaymentMethod('oxxo')">
-          <div class="flex items-center justify-between mb-2">
-            <label class="flex items-center gap-2.5 cursor-pointer font-bold text-white text-xs sm:text-sm">
-              <input type="radio" name="payment_method_radio" id="pay_oxxo" value="oxxo" class="accent-amber-400 w-4 h-4 cursor-pointer" />
-              <i class="fa-solid fa-store text-amber-400 text-base"></i>
-              <span>Depósito / Abono en Efectivo (OXXO, 7-Eleven, Farmacias)</span>
-            </label>
-            <span class="bg-amber-500/20 text-amber-300 text-[9px] font-mono font-bold px-2 py-0.5 rounded uppercase">Efectivo</span>
-          </div>
-          <p class="text-slate-300 text-[11px] leading-relaxed pl-6">
-            Paga en efectivo en más de 20,000 establecimientos autorizados generando tu referencia digital de abono.
-          </p>
-        </div>
-
-        <!-- Botón de Confirmación de Pago -->
-        <div class="pt-2 flex justify-end">
-          <button type="button" onclick="confirmAndCollapsePayment()" class="btn-action w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-xs uppercase tracking-wider shadow-lg transition">
-            <i class="fa-solid fa-check mr-1.5"></i> Confirmar Método de Pago
-          </button>
-        </div>
-      </div>
-
-      <!-- VISTA COLAPSADA DE FORMA DE PAGO -->
-      <div id="form-pago-collapsed" class="hidden bg-slate-950/90 border border-purple-500/40 rounded-2xl p-4 flex items-center justify-between text-xs">
-        <div class="flex items-center gap-3">
-          <i class="fa-solid fa-credit-card text-purple-400 text-xl shrink-0" id="col-pay-icon"></i>
-          <div>
-            <span class="text-[10px] font-mono text-slate-400 uppercase block">Forma de Pago Seleccionada:</span>
-            <strong class="text-white text-sm font-bold" id="col-pay-title">Tarjeta de Crédito / Débito (Mercado Pago)</strong>
-          </div>
-        </div>
-        <button type="button" onclick="expandPaymentOptions()" class="text-xs font-mono font-bold text-cyan-300 hover:underline">
-          Cambiar
-        </button>
-      </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- SECCIÓN 3: ARTÍCULOS EN CANASTA (FOTO GRANDE, DESCRIPCIÓN AMPLIA, CONTROLES) -->
-    <!-- ========================================================================= -->
-    <section class="bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-6 shadow-2xl space-y-4" id="sec-articulos-root">
-      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-        <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded-xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">
-            3
-          </div>
-          <h2 class="text-sm sm:text-base font-black text-white flex items-center gap-2">
-            <span>Artículos en tu Pedido</span>
-          </h2>
-        </div>
-        <span id="items-count-badge" class="text-xs font-mono bg-cyan-950 border border-cyan-500/40 text-cyan-300 px-3 py-1 rounded-full font-bold">0 productos</span>
-      </div>
-
-      <!-- CONTENEDOR DE PRODUCTOS CON FOTO GRANDE -->
-      <div id="checkout-items-list" class="divide-y divide-slate-800 space-y-4">
-        <!-- Inyectado dinámicamente por JavaScript -->
-      </div>
-
-      <!-- DESGLOSE ECONÓMICO Y TOTALES -->
-      <div class="bg-slate-950/90 border border-slate-800 rounded-2xl p-4 space-y-2 text-xs font-mono">
-        <div class="flex justify-between text-slate-300">
-          <span>Subtotal Productos:</span>
-          <span id="chk-subtotal" class="text-white font-bold text-sm">$0.00 MXN</span>
-        </div>
-        <div class="flex justify-between text-slate-300">
-          <span class="flex items-center gap-1"><i class="fa-solid fa-coins text-emerald-400"></i> 5% Cashback Acumulable:</span>
-          <span id="chk-cashback" class="text-emerald-400 font-bold">$0.00 MXN</span>
-        </div>
-        <div class="flex justify-between text-slate-300">
-          <span class="flex items-center gap-1"><i class="fa-solid fa-motorcycle text-amber-400"></i> Envío Express Uber Flash:</span>
-          <span id="chk-shipping" class="text-amber-400 font-bold">$35.00 MXN</span>
-        </div>
-        <div class="flex justify-between items-center text-sm font-bold text-white pt-3 border-t border-slate-800">
-          <span class="text-base font-black">Total a Liquidar:</span>
-          <span id="chk-total" class="text-2xl font-black text-emerald-300 font-mono tracking-tight drop-shadow-[0_0_10px_rgba(52,211,153,0.4)]">$0.00 MXN</span>
-        </div>
-      </div>
-
-      <!-- ========================================================================= -->
-      <!-- BOTONES DE ACCIÓN FINAL (SEGUIR COMPRANDO / PROCEDER AL PAGO) -->
-      <!-- ========================================================================= -->
-      <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <a href="index.html" class="btn-action w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 hover:text-white font-mono text-xs uppercase font-bold transition flex items-center justify-center gap-2">
-          <i class="fa-solid fa-bag-shopping text-cyan-400"></i> <span>Seguir Comprando</span>
-        </a>
-
-        <button type="button" onclick="executeFinalCheckoutFlow()" class="btn-action w-full sm:flex-1 py-4 px-8 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black text-sm uppercase tracking-wider shadow-2xl flex items-center justify-center gap-2 transition active:scale-95 cursor-pointer">
-          <i class="fa-solid fa-lock text-base"></i> <span id="btn-final-label">Proceder al Pago Seguro</span>
-        </button>
-      </div>
-
-    </section>
-
-  </main>
-
-  <!-- FOOTER OFICIAL -->
-  
-  <!-- FOOTER INSTITUCIONAL OFICIAL (H2: Pie de Página) -->
-  
-  <!-- FOOTER INSTITUCIONAL OFICIAL (LANDMARK: CONTENTINFO / H2) -->
-  <footer role="contentinfo" class="bg-slate-950 border-t border-slate-800 text-slate-300 text-xs mt-12 pt-10 pb-8" aria-label="Pie de página institucional" id="pie-de-pagina">
-    <h2 class="sr-only">Información Legal, Contacto y Garantías PC Custom Lab</h2>
-    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b border-slate-800/80">
-        
-        <!-- COLUMNA 1: CONTACTO Y REDES OFICIALES -->
-        <div class="space-y-3">
-          <h3 class="font-bold text-cyan-300 uppercase tracking-wider text-xs font-mono flex items-center gap-2">
-            <i class="fa-solid fa-location-dot text-cyan-400" aria-hidden="true"></i> Contacto y Redes Oficiales
-          </h3>
-          <div class="space-y-2 text-slate-200 text-[11px] leading-relaxed">
-            <p class="flex items-start gap-2">
-              <i class="fa-solid fa-store text-cyan-400 mt-0.5 shrink-0" aria-hidden="true"></i>
-              <span>Pedro Moreno 501 A, Guadalajara Centro, Jalisco (CP 44100)</span>
-            </p>
-            <p class="flex items-center gap-2">
-              <i class="fa-solid fa-phone text-cyan-400 shrink-0" aria-hidden="true"></i>
-              <span>Teléfono Fijo: <strong>(33) 3653 6348</strong></span>
-            </p>
-            <p class="flex items-center gap-2">
-              <i class="fa-brands fa-whatsapp text-emerald-400 shrink-0" aria-hidden="true"></i>
-              <span>WhatsApp: <a href="https://wa.me/523337271440" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" class="hover:text-emerald-300 font-bold text-white transition min-h-[44px] inline-flex items-center">+52 33 3727 1440</a></span>
-            </p>
-            <p class="flex items-center gap-2">
-              <i class="fa-solid fa-mobile-screen-button text-cyan-400 shrink-0" aria-hidden="true"></i>
-              <span>Celular: <strong>+52 33 2865 2309</strong></span>
-            </p>
-          </div>
-
-          <div class="pt-2 border-t border-slate-900 space-y-1.5 text-[10.5px]">
-            <a href="https://www.facebook.com/profile.php?id=61593020515115" target="_blank" rel="noopener" aria-label="Perfil oficial de Facebook" class="text-slate-300 hover:text-blue-400 flex items-center gap-2 transition min-h-[44px]">
-              <i class="fa-brands fa-facebook text-blue-500 w-4 text-center" aria-hidden="true"></i> <span>Facebook: <strong>BAZAR NFL.GDL</strong></span>
-            </a>
-            <a href="https://www.instagram.com/pccustomlab/" target="_blank" rel="noopener" aria-label="Perfil oficial de Instagram" class="text-slate-300 hover:text-pink-400 flex items-center gap-2 transition min-h-[44px]">
-              <i class="fa-brands fa-instagram text-pink-500 w-4 text-center" aria-hidden="true"></i> <span>Instagram: <strong>@pccustomlab</strong></span>
-            </a>
-            <a href="https://www.youtube.com/@IAWorldCenter" target="_blank" rel="noopener" aria-label="Canal oficial de YouTube" class="text-slate-300 hover:text-red-400 flex items-center gap-2 transition min-h-[44px]">
-              <i class="fa-brands fa-youtube text-red-500 w-4 text-center" aria-hidden="true"></i> <span>YouTube: <strong>IA World Center</strong></span>
-            </a>
-            <a href="https://t.me/pc_custom_lab" target="_blank" rel="noopener" aria-label="Canal oficial de Telegram" class="text-slate-300 hover:text-cyan-400 flex items-center gap-2 transition min-h-[44px]">
-              <i class="fa-brands fa-telegram text-cyan-400 w-4 text-center" aria-hidden="true"></i> <span>Telegram: <strong>pc_custom_lab</strong></span>
-            </a>
-          </div>
-        </div>
-
-        <!-- COLUMNA 2: POLÍTICAS DE COMPRA, GARANTÍA Y SEGURIDAD DE ENVÍOS -->
-        <div class="space-y-3">
-          <h3 class="font-bold text-cyan-300 uppercase tracking-wider text-xs font-mono flex items-center gap-2">
-            <i class="fa-solid fa-shield-halved text-cyan-400" aria-hidden="true"></i> Políticas de Compra & Seguridad
-          </h3>
-          <div class="space-y-2 text-slate-200 text-[11px] leading-relaxed">
-            <div class="bg-amber-950/40 border border-amber-500/40 p-2.5 rounded-xl space-y-1">
-              <strong class="text-amber-300 flex items-center gap-1.5 font-mono text-[10.5px]">
-                <i class="fa-solid fa-motorcycle text-amber-400"></i> LÍMITE DE ENVÍOS EXPRÉS ($2,000 MXN)
-              </strong>
-              <p class="text-slate-200 text-[10px]">
-                Por seguridad y límites de seguro de transporte en motocicleta, el <strong>Envío Exprés El Mismo Día aplica únicamente para compras menores a $2,000 MXN</strong>.
-              </p>
-              <p class="text-amber-200 text-[10px] font-bold">
-                Pedidos mayores a $2,000 MXN se despachan obligatoriamente vía Paquetería Asegurada con Firma de Recibido del comprador o retiro directo en mostrador.
-              </p>
-            </div>
-            <p class="flex items-start gap-2">
-              <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5 shrink-0" aria-hidden="true"></i>
-              <span><strong>Garantía Directa de 48 Horas:</strong> Reemplazo inmediato en mostrador presentando empaque original intacto.</span>
-            </p>
-            <p class="flex items-start gap-2">
-              <i class="fa-solid fa-box-open text-cyan-400 mt-0.5 shrink-0" aria-hidden="true"></i>
-              <span><strong>Garantía de Fábrica de 1 Año:</strong> Gestión técnica sin costo de fletes ni trámites adicionales.</span>
-            </p>
-          </div>
-        </div>
-
-        <!-- COLUMNA 3: AHORRO, CASHBACK Y DESPACHO LOCAL -->
-        <div class="space-y-3">
-          <h3 class="font-bold text-cyan-300 uppercase tracking-wider text-xs font-mono flex items-center gap-2">
-            <i class="fa-solid fa-coins text-emerald-400" aria-hidden="true"></i> Ahorro, Cashback & Despacho Local
-          </h3>
-          <div class="space-y-2 text-slate-200 text-[11px] leading-relaxed">
-            <div class="bg-slate-900/90 p-3 rounded-2xl border border-emerald-500/40 space-y-1">
-              <div class="flex items-center gap-2 text-emerald-300 font-mono font-black text-xs">
-                <i class="fa-solid fa-piggy-bank text-amber-400" aria-hidden="true"></i>
-                <span>5% DE CASHBACK EN CADA COMPRA</span>
-              </div>
-              <p class="text-[10.5px] text-slate-300">
-                Registra tu teléfono al ordenar para acumular saldo electrónico reutilizable en todas las boutiques.
-              </p>
             </div>
 
-            <div class="bg-slate-900/90 p-3 rounded-2xl border border-slate-800 space-y-1">
-              <div class="flex items-center gap-2 text-cyan-300 font-mono font-bold text-xs">
-                <i class="fa-solid fa-truck-fast text-cyan-400" aria-hidden="true"></i>
-                <span>PAQUETERÍA ASEGURADA > $2,000 MXN</span>
-              </div>
-              <p class="text-[10.5px] text-slate-300">
-                Envíos de alto valor protegidos con guía rastreable y firma de entrega obligatoria en destino.
-              </p>
+            <!-- CLÁUSULAS LEGALES, VIGENCIA Y CONDICIONES COMERCIALES (PROFECO / SAT) -->
+            <div class="pt-6 pb-2 text-[10.5px] text-slate-300 space-y-2 text-center font-mono leading-relaxed">
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl max-w-5xl mx-auto space-y-1">
+                    <p class="text-amber-300 font-bold">
+                        <i class="fa-solid fa-calendar-check text-amber-400 mr-1" aria-hidden="true"></i>
+                        Vigencia de Precios y Promociones: Precios de lista y promociones de apertura (-25%) válidos del 24 al 29 de Agosto de 2026.
+                    </p>
+                    <p class="text-slate-300">
+                        <i class="fa-solid fa-triangle-exclamation text-amber-400 mr-1" aria-hidden="true"></i>
+                        Aviso Comercial: Precios exhibidos en Moneda Nacional (MXN) con IVA incluido. Precios sujetos a alza o cambio sin previo aviso por fluctuaciones cambiarias y existencias en almacén mayorista.
+                    </p>
+                    <p class="text-slate-300">
+                        Estructura comercial protegida con 20% de utilidad neta libre para cobertura de infraestructura tecnológica, licencias de inteligencia artificial, nómina, arrendamiento operativo y cumplimiento de obligaciones fiscales ante el SAT y PROFECO.
+                    </p>
+                </div>
+
+                <div class="pt-3 text-slate-400">
+                    © 2026 Ecosistema Comercial BAZAR NFL GDL & PC Custom Lab. Pedro Moreno 501 A, Guadalajara Centro, Jalisco. Todos los derechos reservados.
+                </div>
             </div>
-          </div>
+
         </div>
+    </footer>
+    
 
-      </div>
+    <!-- SCRIPT OFICIAL DE CHECKOUT DINÁMICO & PERSISTENCIA CRM -->
+    <script>
+        let currentPaymentMethod = 'tarjeta';
+        let isAddressCollapsed = false;
+        let isPaymentCollapsed = false;
 
-      <!-- CLÁUSULAS LEGALES, VIGENCIA Y CONDICIONES COMERCIALES (PROFECO / SAT) -->
-      <div class="pt-6 pb-2 text-[10.5px] text-slate-300 space-y-2 text-center font-mono leading-relaxed">
-        <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl max-w-5xl mx-auto space-y-1">
-          <p class="text-amber-300 font-bold">
-            <i class="fa-solid fa-calendar-check text-amber-400 mr-1" aria-hidden="true"></i>
-            Vigencia de Precios y Promociones: Precios de lista y promociones de apertura (-25%) válidos del 24 al 29 de Agosto de 2026.
-          </p>
-          <p class="text-slate-300">
-            <i class="fa-solid fa-triangle-exclamation text-amber-400 mr-1" aria-hidden="true"></i>
-            Aviso Comercial: Precios exhibidos en Moneda Nacional (MXN) con IVA incluido. Precios sujetos a alza o cambio sin previo aviso por fluctuaciones cambiarias y existencias en almacén mayorista.
-          </p>
-          <p class="text-slate-300">
-            Estructura comercial protegida con 20% de utilidad neta libre para cobertura de infraestructura tecnológica, licencias de inteligencia artificial, nómina, arrendamiento operativo y cumplimiento de obligaciones fiscales ante el SAT y PROFECO.
-          </p>
-        </div>
-
-        <div class="pt-3 text-slate-400">
-          © 2026 Ecosistema Comercial BAZAR NFL GDL & PC Custom Lab. Pedro Moreno 501 A, Guadalajara Centro, Jalisco. Todos los derechos reservados.
-        </div>
-      </div>
-
-    </div>
-  </footer>
-  
-  
-
-  <!-- SCRIPT OFICIAL DE CHECKOUT DINÁMICO & PERSISTENCIA CRM -->
-  <script>
-    let currentPaymentMethod = 'tarjeta';
-    let isAddressCollapsed = false;
-    let isPaymentCollapsed = false;
-
-    document.addEventListener("DOMContentLoaded", () => {
-      loadCustomerProfile();
-      renderCheckoutProducts();
-      calculateTotals();
-    });
-
-    // Cargar datos previos de cliente desde localStorage
-    function loadCustomerProfile() {
-      try {
-        const prof = JSON.parse(localStorage.getItem('ecosystem_customer_profile') || '{}');
-        if (prof.nombre) document.getElementById("custName").value = prof.nombre;
-        if (prof.telefono) document.getElementById("custPhone").value = prof.telefono;
-        if (prof.email) document.getElementById("custEmail").value = prof.email;
-        if (prof.cp) document.getElementById("custCP").value = prof.cp;
-        if (prof.direccion) document.getElementById("custAddress").value = prof.direccion;
-        
-        // Si ya tiene datos completos, colapsar automáticamente
-        if (prof.nombre && prof.telefono && prof.email && prof.direccion) {
-          saveAndCollapseAddress(false);
-        }
-      } catch(e) {}
-    }
-
-    // Guardar Domicilio y Colapsar a espacio pequeño
-    function saveAndCollapseAddress(showAlert = true) {
-      const name = (document.getElementById("custName").value || '').trim();
-      const phone = (document.getElementById("custPhone").value || '').trim();
-      const email = (document.getElementById("custEmail").value || '').trim();
-      const cp = (document.getElementById("custCP").value || '').trim();
-      const address = (document.getElementById("custAddress").value || '').trim();
-
-      if (!name || !phone || !email || !address) {
-        if (showAlert) alert("⚠️ Por favor completa todos los campos del domicilio de entrega.");
-        return;
-      }
-
-      const profile = { nombre: name, telefono: phone, email: email, cp: cp, direccion: address };
-      localStorage.setItem('ecosystem_customer_profile', JSON.stringify(profile));
-
-      // Actualizar vista colapsada
-      document.getElementById("col-cust-name").innerText = name;
-      document.getElementById("col-cust-contact").innerText = `Tel: ${phone} • Email: ${email}`;
-      document.getElementById("col-cust-address").innerText = `${address} (CP ${cp || '44100'});`;
-      
-      // Generar PIN de 4 dígitos si no existe
-      let pin = localStorage.getItem('checkout_uber_pin');
-      if (!pin) {
-        pin = Math.floor(1000 + Math.random() * 9000);
-        localStorage.setItem('checkout_uber_pin', pin);
-      }
-      const pinEl = document.getElementById("checkout-pin");
-      if (pinEl) pinEl.innerText = pin;
-
-      document.getElementById("form-domicilio-full").classList.add("hidden");
-      document.getElementById("form-domicilio-collapsed").classList.remove("hidden");
-      document.getElementById("btn-edit-domicilio").classList.remove("hidden");
-      isAddressCollapsed = true;
-    }
-
-    function expandAddressForm() {
-      document.getElementById("form-domicilio-full").classList.remove("hidden");
-      document.getElementById("form-domicilio-collapsed").classList.add("hidden");
-      document.getElementById("btn-edit-domicilio").classList.add("hidden");
-      isAddressCollapsed = false;
-    }
-
-    // Selección de forma de pago
-    function selectPaymentMethod(method) {
-      currentPaymentMethod = method;
-      const rCard = document.getElementById("pay_card");
-      const rSpei = document.getElementById("pay_spei");
-      const rOxxo = document.getElementById("pay_oxxo");
-      if (rCard) rCard.checked = (method === 'tarjeta');
-      if (rSpei) rSpei.checked = (method === 'spei');
-      if (rOxxo) rOxxo.checked = (method === 'oxxo');
-
-      const btnLabel = document.getElementById("btn-final-label");
-      if (btnLabel) {
-        if (method === 'tarjeta') btnLabel.innerText = "Pagar con Tarjeta (Mercado Pago)";
-        else if (method === 'spei') btnLabel.innerText = "Confirmar Pago SPEI (WhatsApp)";
-        else btnLabel.innerText = "Generar Ficha de Pago OXXO";
-      }
-    }
-
-    function confirmAndCollapsePayment() {
-      const payTitle = document.getElementById("col-pay-title");
-      const payIcon = document.getElementById("col-pay-icon");
-      
-      if (currentPaymentMethod === 'tarjeta') {
-        if (payTitle) payTitle.innerText = "Tarjeta de Crédito / Débito (Mercado Pago)";
-        if (payIcon) payIcon.className = "fa-solid fa-credit-card text-cyan-400 text-xl shrink-0";
-      } else if (currentPaymentMethod === 'spei') {
-        if (payTitle) payTitle.innerText = "Transferencia SPEI Directa (BBVA México - 0% Comisión)";
-        if (payIcon) payIcon.className = "fa-solid fa-building-columns text-emerald-400 text-xl shrink-0";
-      } else {
-        if (payTitle) payTitle.innerText = "Depósito / Abono en Efectivo (OXXO / 7-Eleven)";
-        if (payIcon) payIcon.className = "fa-solid fa-store text-amber-400 text-xl shrink-0";
-      }
-
-      document.getElementById("form-pago-full").classList.add("hidden");
-      document.getElementById("form-pago-collapsed").classList.remove("hidden");
-      document.getElementById("btn-edit-pago").classList.remove("hidden");
-      isPaymentCollapsed = true;
-    }
-
-    function expandPaymentOptions() {
-      document.getElementById("form-pago-full").classList.remove("hidden");
-      document.getElementById("form-pago-collapsed").classList.add("hidden");
-      document.getElementById("btn-edit-pago").classList.add("hidden");
-      isPaymentCollapsed = false;
-    }
-
-    function copyCLABE() {
-      const clabe = "012180015425843949";
-      navigator.clipboard.writeText(clabe).then(() => {
-        alert("📋 ¡CLABE BBVA copiada al portapapeles!\n012 180 01542584394 9");
-      });
-    }
-
-    // Renderizado de productos en el carrito con FOTO GRANDE y CONTROLES
-        // Recuperación blindada del carrito unificado del ecosistema
-    function getCartItems() {
-      try {
-        const raw1 = localStorage.getItem('ecosystem_global_cart');
-        const raw2 = localStorage.getItem('cart_items');
-        let items = [];
-        if (raw1) {
-          try { items = JSON.parse(raw1); } catch(e) {}
-        }
-        if ((!items || items.length === 0) && raw2) {
-          try { items = JSON.parse(raw2); } catch(e) {}
-        }
-        if (!Array.isArray(items)) return [];
-        return items.map(item => {
-          return {
-            sku: item.sku || item.id || 'ITEM-GEN',
-            nombre: item.nombre || item.title || item.name || 'Producto del Catálogo',
-            title: item.title || item.nombre || item.name || 'Producto del Catálogo',
-            precio: parseFloat(item.precio || item.price || 0),
-            price: parseFloat(item.precio || item.price || 0),
-            quantity: parseInt(item.quantity || item.qty || 1),
-            qty: parseInt(item.quantity || item.qty || 1),
-            imagen: item.imagen || item.image || item.img || './assets/img/placeholders/acc_placeholder.jpg',
-            tienda: item.tienda || 'Ecosistema Comercial'
-          };
+        document.addEventListener("DOMContentLoaded", () => {
+            loadCustomerProfile();
+            renderCheckoutProducts();
+            calculateTotals();
         });
-      } catch(e) { return []; }
-    }
 
-    function renderCheckoutProducts() {
-      const list = document.getElementById("checkout-items-list");
-      const badge = document.getElementById("items-count-badge");
-      if (!list) return;
-
-      const items = getCartItems();
-      const totalUnits = items.reduce((s, i) => s + (parseInt(i.quantity || i.qty) || 1), 0);
-      if (badge) badge.innerText = `${totalUnits} ${totalUnits === 1 ? 'producto' : 'productos'}`;
-
-      if (items.length === 0) {
-        list.innerHTML = `
-          <div class="py-12 text-center text-slate-400 font-mono text-sm space-y-3">
-            <i class="fa-solid fa-cart-shopping text-4xl text-slate-600 block"></i>
-            <p>Tu carrito de compras está vacío.</p>
-            <a href="index.html" class="btn-action px-6 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-black text-xs uppercase tracking-wider">
-              Explorar Catálogo
-            </a>
-          </div>
-        `;
-        return;
-      }
-
-      list.innerHTML = items.map((p, idx) => {
-        const sku = p.sku || `ITEM-${idx}`;
-        const title = p.nombre || p.title || 'Producto del Catálogo';
-        const price = parseFloat(p.precio || p.price || 0);
-        const qty = parseInt(p.quantity || p.qty || 1);
-        const subtotal = price * qty;
-        const img = p.imagen || p.image || './assets/img/placeholders/acc_placeholder.jpg';
-
-        return `
-          <div class="pt-4 pb-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <!-- FOTO GRANDE DEL PRODUCTO -->
-            <div class="product-img-box shrink-0">
-              <img src="${img}" alt="${title}" loading="lazy" onerror="this.src='./assets/img/placeholders/acc_placeholder.jpg';" />
-            </div>
-
-            <!-- DESCRIPCIÓN AMPLIA -->
-            <div class="flex-1 min-w-0">
-              <h3 class="text-sm sm:text-base font-bold text-white leading-snug mb-1">${title}</h3>
-              <div class="flex items-center gap-2 text-[11px] font-mono text-slate-400 mb-1">
-                <span>SKU: <strong class="text-cyan-300">${sku}</strong></span>
-                <span>•</span>
-                <span class="text-emerald-400 font-bold">Garantía 48h / 1 Año</span>
-              </div>
-              <div class="text-xs font-mono font-black text-emerald-300">
-                Precio Unitario: $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
-              </div>
-            </div>
-
-            <!-- CONTROLES (+ / - / 🗑️) Y SUBTOTAL -->
-            <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-3 shrink-0">
-              <div class="text-right font-mono">
-                <span class="text-[10px] text-slate-400 block sm:inline">Subtotal:</span>
-                <div class="text-sm sm:text-base font-black text-white">$${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</div>
-              </div>
-
-              <div class="flex items-center gap-1.5 bg-slate-950 border border-slate-700 rounded-xl p-1">
-                <button type="button" onclick="updateItemQuantity('${sku}', -1)" aria-label="Disminuir cantidad" class="qty-btn w-9 h-9 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition">
-                  -
-                </button>
-                <span class="w-8 text-center text-white font-mono font-bold text-xs">${qty}</span>
-                <button type="button" onclick="updateItemQuantity('${sku}', 1)" aria-label="Aumentar cantidad" class="qty-btn w-9 h-9 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition">
-                  +
-                </button>
-                <button type="button" onclick="deleteItemFromCart('${sku}')" aria-label="Eliminar producto" class="btn-action w-9 h-9 rounded-lg hover:bg-red-950/80 text-slate-400 hover:text-red-400 flex items-center justify-center transition ml-1" title="Eliminar">
-                  <i class="fa-solid fa-trash-can text-xs"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
-
-    function updateItemQuantity(sku, delta) {
-      let items = getCartItems();
-      const item = items.find(i => i.sku === sku);
-      if (item) {
-        let q = parseInt(item.quantity || item.qty || 1) + delta;
-        if (q < 1) q = 1;
-        item.quantity = q;
-        item.qty = q;
-        localStorage.setItem('ecosystem_global_cart', JSON.stringify(items));
-        localStorage.setItem('cart_items', JSON.stringify(items));
-        renderCheckoutProducts();
-        calculateTotals();
-      }
-    }
-
-    function deleteItemFromCart(sku) {
-      let items = getCartItems();
-      items = items.filter(i => i.sku !== sku);
-      localStorage.setItem('ecosystem_global_cart', JSON.stringify(items));
-      localStorage.setItem('cart_items', JSON.stringify(items));
-      renderCheckoutProducts();
-      calculateTotals();
-    }
-
-    function calculateTotals() {
-      const items = getCartItems();
-      const subtotal = items.reduce((s, i) => s + ((parseFloat(i.precio || i.price) || 0) * (parseInt(i.quantity || i.qty) || 1)), 0);
-      const cashback = subtotal * 0.05;
-      const zoneSelect = document.getElementById("checkoutZoneSelect");
-      const warnBox = document.getElementById("shipping-warning-box");
-
-      // Si supera $2,000 MXN, asegurar modalidad paquetería asegurada o mostrador
-      if (subtotal > 2000) {
-        if (zoneSelect && (zoneSelect.value === '35' || zoneSelect.value === '52' || zoneSelect.value === '75')) {
-          zoneSelect.value = '180';
+        // Cargar datos previos de cliente desde localStorage
+        function loadCustomerProfile() {
+            try {
+                const prof = JSON.parse(localStorage.getItem('ecosystem_customer_profile') || '{}');
+                if (prof.nombre) document.getElementById("custName").value = prof.nombre;
+                if (prof.telefono) document.getElementById("custPhone").value = prof.telefono;
+                if (prof.email) document.getElementById("custEmail").value = prof.email;
+                if (prof.cp) document.getElementById("custCP").value = prof.cp;
+                if (prof.direccion) document.getElementById("custAddress").value = prof.direccion;
+                
+                // Si ya tiene datos completos, colapsar automáticamente
+                if (prof.nombre && prof.telefono && prof.email && prof.direccion) {
+                    saveAndCollapseAddress(false);
+                }
+            } catch(e) {}
         }
-        if (warnBox) {
-          warnBox.className = "p-3 bg-red-950/70 border border-red-500/60 rounded-xl text-[11px] text-red-200 leading-relaxed font-mono flex items-start gap-2";
-          warnBox.innerHTML = `<i class="fa-solid fa-shield-halved text-red-400 text-base mt-0.5 shrink-0"></i>
-          <span><strong>COMPRA SUPERIOR A $2,000 MXN:</strong> Por la seguridad de tu equipo y del chofer, las motocicletas de Uber solo aseguran hasta $2,000 MXN. Tu pedido se despachará vía <strong>Paquetería Asegurada con Firma Obligatoria de Recibido</strong> ($180 MXN) o puedes recogerlo sin costo en mostrador.</span>`;
+
+        // Guardar Domicilio y Colapsar a espacio pequeño
+        function saveAndCollapseAddress(showAlert = true) {
+            const name = (document.getElementById("custName").value || '').trim();
+            const phone = (document.getElementById("custPhone").value || '').trim();
+            const email = (document.getElementById("custEmail").value || '').trim();
+            const cp = (document.getElementById("custCP").value || '').trim();
+            const address = (document.getElementById("custAddress").value || '').trim();
+
+            if (!name || !phone || !email || !address) {
+                if (showAlert) alert("⚠️ Por favor completa todos los campos del domicilio de entrega.");
+                return;
+            }
+
+            const profile = { nombre: name, telefono: phone, email: email, cp: cp, direccion: address };
+            localStorage.setItem('ecosystem_customer_profile', JSON.stringify(profile));
+
+            // Actualizar vista colapsada
+            document.getElementById("col-cust-name").innerText = name;
+            document.getElementById("col-cust-contact").innerText = `Tel: ${phone} • Email: ${email}`;
+            document.getElementById("col-cust-address").innerText = `${address} (CP ${cp || '44100'});`;
+            
+            // Generar PIN de 4 dígitos si no existe
+            let pin = localStorage.getItem('checkout_uber_pin');
+            if (!pin) {
+                pin = Math.floor(1000 + Math.random() * 9000);
+                localStorage.setItem('checkout_uber_pin', pin);
+            }
+            const pinEl = document.getElementById("checkout-pin");
+            if (pinEl) pinEl.innerText = pin;
+
+            document.getElementById("form-domicilio-full").classList.add("hidden");
+            document.getElementById("form-domicilio-collapsed").classList.remove("hidden");
+            document.getElementById("btn-edit-domicilio").classList.remove("hidden");
+            isAddressCollapsed = true;
         }
-      } else {
-        if (warnBox) {
-          warnBox.className = "p-3 bg-amber-950/60 border border-amber-500/50 rounded-xl text-[11px] text-amber-200 leading-relaxed font-mono flex items-start gap-2";
-          warnBox.innerHTML = `<i class="fa-solid fa-motorcycle text-amber-400 text-base mt-0.5 shrink-0"></i>
-          <span><strong>COMPRA MENOR A $2,000 MXN:</strong> Califica para <strong>Envío Exprés El Mismo Día</strong> en motocicleta vía Uber Flash con código PIN de entrega segura.</span>`;
+
+        function expandAddressForm() {
+            document.getElementById("form-domicilio-full").classList.remove("hidden");
+            document.getElementById("form-domicilio-collapsed").classList.add("hidden");
+            document.getElementById("btn-edit-domicilio").classList.add("hidden");
+            isAddressCollapsed = false;
         }
-      }
 
-      const shipping = parseFloat(zoneSelect ? zoneSelect.value : (subtotal > 2000 ? 180 : 35));
-      const total = subtotal + shipping;
+        // Selección de forma de pago
+        function selectPaymentMethod(method) {
+            currentPaymentMethod = method;
+            const rCard = document.getElementById("pay_card");
+            const rSpei = document.getElementById("pay_spei");
+            const rOxxo = document.getElementById("pay_oxxo");
+            if (rCard) rCard.checked = (method === 'tarjeta');
+            if (rSpei) rSpei.checked = (method === 'spei');
+            if (rOxxo) rOxxo.checked = (method === 'oxxo');
 
-      const elSub = document.getElementById("chk-subtotal");
-      const elCash = document.getElementById("chk-cashback");
-      const elShip = document.getElementById("chk-shipping");
-      const elTot = document.getElementById("chk-total");
+            const btnLabel = document.getElementById("btn-final-label");
+            if (btnLabel) {
+                if (method === 'tarjeta') btnLabel.innerText = "Pagar con Tarjeta (Mercado Pago)";
+                else if (method === 'spei') btnLabel.innerText = "Confirmar Pago SPEI (WhatsApp)";
+                else btnLabel.innerText = "Generar Ficha de Pago OXXO";
+            }
+        }
 
-      if (elSub) elSub.innerText = `$${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-      if (elCash) elCash.innerText = `$${cashback.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-      if (elShip) elShip.innerText = `$${shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-      if (elTot) elTot.innerText = `$${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-    })} MXN`;
-      if (elCash) elCash.innerText = `$${cashback.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-      if (elShip) elShip.innerText = `$${shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-      if (elTot) elTot.innerText = `$${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-    }
+        function confirmAndCollapsePayment() {
+            const payTitle = document.getElementById("col-pay-title");
+            const payIcon = document.getElementById("col-pay-icon");
+            
+            if (currentPaymentMethod === 'tarjeta') {
+                if (payTitle) payTitle.innerText = "Tarjeta de Crédito / Débito (Mercado Pago)";
+                if (payIcon) payIcon.className = "fa-solid fa-credit-card text-cyan-400 text-xl shrink-0";
+            } else if (currentPaymentMethod === 'spei') {
+                if (payTitle) payTitle.innerText = "Transferencia SPEI Directa (BBVA México - 0% Comisión)";
+                if (payIcon) payIcon.className = "fa-solid fa-building-columns text-emerald-400 text-xl shrink-0";
+            } else {
+                if (payTitle) payTitle.innerText = "Depósito / Abono en Efectivo (OXXO / 7-Eleven)";
+                if (payIcon) payIcon.className = "fa-solid fa-store text-amber-400 text-xl shrink-0";
+            }
 
-    // =========================================================================
-    // FLUJO FINAL Y REGISTRO SEGURO DE CLIENTES (CRM LOCAL)
-    // =========================================================================
-    function executeFinalCheckoutFlow() {
-      const items = getCartItems();
-      if (items.length === 0) {
-        alert("⚠️ Tu carrito está vacío. Agrega productos antes de pagar.");
-        return;
-      }
+            document.getElementById("form-pago-full").classList.add("hidden");
+            document.getElementById("form-pago-collapsed").classList.remove("hidden");
+            document.getElementById("btn-edit-pago").classList.remove("hidden");
+            isPaymentCollapsed = true;
+        }
 
-      const name = (document.getElementById("custName").value || '').trim();
-      const phone = (document.getElementById("custPhone").value || '').trim();
-      const email = (document.getElementById("custEmail").value || '').trim();
-      const address = (document.getElementById("custAddress").value || '').trim();
-      const cp = (document.getElementById("custCP").value || '').trim();
+        function expandPaymentOptions() {
+            document.getElementById("form-pago-full").classList.remove("hidden");
+            document.getElementById("form-pago-collapsed").classList.add("hidden");
+            document.getElementById("btn-edit-pago").classList.add("hidden");
+            isPaymentCollapsed = false;
+        }
 
-      if (!name || !phone || !email || !address) {
-        expandAddressForm();
-        alert("⚠️ Por favor ingresa y confirma tu nombre, teléfono, correo y domicilio de entrega.");
-        document.getElementById("custName").focus();
-        return;
-      }
+        function copyCLABE() {
+            const clabe = "012180015425843949";
+            navigator.clipboard.writeText(clabe).then(() => {
+                alert("📋 ¡CLABE BBVA copiada al portapapeles!\n012 180 01542584394 9");
+            });
+        }
 
-      // Guardar Lead de Cliente en Base de Datos Local de Clientes (CRM)
-      const customerLead = {
-        fecha: new Date().toISOString().replace('T', ' ').substring(0, 16),
-        tienda: "PC CUSTOM LAB",
-        nombre: name,
-        telefono: phone,
-        email: email,
-        direccion: address,
-        cp: cp,
-        articulos_comprados: items.map(i => `${i.quantity || 1}x ${i.nombre || i.title} (${i.sku})`).join('; '),
-        total_mxn: document.getElementById("chk-total").innerText,
-        metodo_pago: currentPaymentMethod.toUpperCase()
-      };
+        // Renderizado de productos en el carrito con FOTO GRANDE y CONTROLES
+                // Recuperación blindada del carrito unificado del ecosistema
+        function getCartItems() {
+            try {
+                const raw1 = localStorage.getItem('ecosystem_global_cart');
+                const raw2 = localStorage.getItem('cart_items');
+                let items = [];
+                if (raw1) {
+                    try { items = JSON.parse(raw1); } catch(e) {}
+                }
+                if ((!items || items.length === 0) && raw2) {
+                    try { items = JSON.parse(raw2); } catch(e) {}
+                }
+                if (!Array.isArray(items)) return [];
+                return items.map(item => {
+                    return {
+                        sku: item.sku || item.id || 'ITEM-GEN',
+                        nombre: item.nombre || item.title || item.name || 'Producto del Catálogo',
+                        title: item.title || item.nombre || item.name || 'Producto del Catálogo',
+                        precio: parseFloat(item.precio || item.price || 0),
+                        price: parseFloat(item.precio || item.price || 0),
+                        quantity: parseInt(item.quantity || item.qty || 1),
+                        qty: parseInt(item.quantity || item.qty || 1),
+                        imagen: item.imagen || item.image || item.img || './assets/img/placeholders/acc_placeholder.jpg',
+                        tienda: item.tienda || 'Ecosistema Comercial'
+                    };
+                });
+            } catch(e) { return []; }
+        }
 
-      let crmList = JSON.parse(localStorage.getItem('ecosystem_crm_leads') || '[]');
-      crmList.unshift(customerLead);
-      localStorage.setItem('ecosystem_crm_leads', JSON.stringify(crmList));
+        function renderCheckoutProducts() {
+            const list = document.getElementById("checkout-items-list");
+            const badge = document.getElementById("items-count-badge");
+            if (!list) return;
 
-      // Si es SPEI -> Enviar por WhatsApp con formato profesional
-      if (currentPaymentMethod === 'spei') {
-        const msg = `*NUEVO PEDIDO EN PC CUSTOM LAB*%0A` +
-          `👤 *Cliente:* ${name}%0A` +
-          `📱 *Tel:* ${phone}%0A` +
-          `✉️ *Email:* ${email}%0A` +
-          `📍 *Entrega:* ${address} (CP ${cp})%0A` +
-          `💳 *Pago:* SPEI Directo BBVA (012 180 01542584394 9)%0A` +
-          `📦 *Artículos:*%0A` +
-          items.map(i => `• (${i.quantity || 1}) ${i.nombre || i.title} - $${((i.precio || 0)*(i.quantity || 1)).toLocaleString('es-MX')}`).join('%0A') +
-          `%0A💰 *${document.getElementById("chk-total").innerText}*%0A` +
-          `Adjunto mi comprobante de transferencia.`;
+            const items = getCartItems();
+            const totalUnits = items.reduce((s, i) => s + (parseInt(i.quantity || i.qty) || 1), 0);
+            if (badge) badge.innerText = `${totalUnits} ${totalUnits === 1 ? 'producto' : 'productos'}`;
 
-        window.open(`https://wa.me/523337271440?text=${msg}`, '_blank');
-      } 
-      // Si es Tarjeta / Mercado Pago
-      else if (currentPaymentMethod === 'tarjeta') {
-        alert("💳 Redirigiendo a la pasarela segura de Mercado Pago para procesar tu pago de forma encriptada...");
-        window.location.href = "https://www.mercadopago.com.mx/";
-      } 
-      // Si es OXXO
-      else {
-        alert("🏪 Ficha de pago generada. Presenta el código de convenio en cualquier tienda OXXO o 7-Eleven.");
-      }
-    }
-  </script>
+            if (items.length === 0) {
+                list.innerHTML = `
+                    <div class="py-12 text-center text-slate-400 font-mono text-sm space-y-3">
+                        <i class="fa-solid fa-cart-shopping text-4xl text-slate-600 block"></i>
+                        <p>Tu carrito de compras está vacío.</p>
+                        <a href="index.html" class="btn-action px-6 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-black text-xs uppercase tracking-wider">
+                            Explorar Catálogo
+                        </a>
+                    </div>
+                `;
+                return;
+            }
+
+            list.innerHTML = items.map((p, idx) => {
+                const sku = p.sku || `ITEM-${idx}`;
+                const title = p.nombre || p.title || 'Producto del Catálogo';
+                const price = parseFloat(p.precio || p.price || 0);
+                const qty = parseInt(p.quantity || p.qty || 1);
+                const subtotal = price * qty;
+                const img = p.imagen || p.image || './assets/img/placeholders/acc_placeholder.jpg';
+
+                return `
+                    <div class="pt-4 pb-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <!-- FOTO GRANDE DEL PRODUCTO -->
+                        <div class="product-img-box shrink-0">
+                            <img src="${img}" alt="${title}" loading="lazy" onerror="this.src='./assets/img/placeholders/acc_placeholder.jpg';" />
+                        </div>
+
+                        <!-- DESCRIPCIÓN AMPLIA -->
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-sm sm:text-base font-bold text-white leading-snug mb-1">${title}</h3>
+                            <div class="flex items-center gap-2 text-[11px] font-mono text-slate-400 mb-1">
+                                <span>SKU: <strong class="text-cyan-300">${sku}</strong></span>
+                                <span>•</span>
+                                <span class="text-emerald-400 font-bold">Garantía 48h / 1 Año</span>
+                            </div>
+                            <div class="text-xs font-mono font-black text-emerald-300">
+                                Precio Unitario: $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
+                            </div>
+                        </div>
+
+                        <!-- CONTROLES (+ / - / 🗑️) Y SUBTOTAL -->
+                        <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-auto gap-3 shrink-0">
+                            <div class="text-right font-mono">
+                                <span class="text-[10px] text-slate-400 block sm:inline">Subtotal:</span>
+                                <div class="text-sm sm:text-base font-black text-white">$${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</div>
+                            </div>
+
+                            <div class="flex items-center gap-1.5 bg-slate-950 border border-slate-700 rounded-xl p-1">
+                                <button type="button" onclick="updateItemQuantity('${sku}', -1)" aria-label="Disminuir cantidad" class="qty-btn w-9 h-9 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition">
+                                    -
+                                </button>
+                                <span class="w-8 text-center text-white font-mono font-bold text-xs">${qty}</span>
+                                <button type="button" onclick="updateItemQuantity('${sku}', 1)" aria-label="Aumentar cantidad" class="qty-btn w-9 h-9 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition">
+                                    +
+                                </button>
+                                <button type="button" onclick="deleteItemFromCart('${sku}')" aria-label="Eliminar producto" class="btn-action w-9 h-9 rounded-lg hover:bg-red-950/80 text-slate-400 hover:text-red-400 flex items-center justify-center transition ml-1" title="Eliminar">
+                                    <i class="fa-solid fa-trash-can text-xs"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function updateItemQuantity(sku, delta) {
+            let items = getCartItems();
+            const item = items.find(i => i.sku === sku);
+            if (item) {
+                let q = parseInt(item.quantity || item.qty || 1) + delta;
+                if (q < 1) q = 1;
+                item.quantity = q;
+                item.qty = q;
+                localStorage.setItem('ecosystem_global_cart', JSON.stringify(items));
+                localStorage.setItem('cart_items', JSON.stringify(items));
+                renderCheckoutProducts();
+                calculateTotals();
+            }
+        }
+
+        function deleteItemFromCart(sku) {
+            let items = getCartItems();
+            items = items.filter(i => i.sku !== sku);
+            localStorage.setItem('ecosystem_global_cart', JSON.stringify(items));
+            localStorage.setItem('cart_items', JSON.stringify(items));
+            renderCheckoutProducts();
+            calculateTotals();
+        }
+
+        function calculateTotals() {
+            const items = getCartItems();
+            const subtotal = items.reduce((s, i) => s + ((parseFloat(i.precio || i.price) || 0) * (parseInt(i.quantity || i.qty) || 1)), 0);
+            const cashback = subtotal * 0.05;
+            const zoneSelect = document.getElementById("checkoutZoneSelect");
+            const warnBox = document.getElementById("shipping-warning-box");
+
+            // Si supera $2,000 MXN, asegurar modalidad paquetería asegurada o mostrador
+            if (subtotal > 2000) {
+                if (zoneSelect && (zoneSelect.value === '35' || zoneSelect.value === '52' || zoneSelect.value === '75')) {
+                    zoneSelect.value = '180';
+                }
+                if (warnBox) {
+                    warnBox.className = "p-3 bg-red-950/70 border border-red-500/60 rounded-xl text-[11px] text-red-200 leading-relaxed font-mono flex items-start gap-2";
+                    warnBox.innerHTML = `<i class="fa-solid fa-shield-halved text-red-400 text-base mt-0.5 shrink-0"></i>
+                    <span><strong>COMPRA SUPERIOR A $2,000 MXN:</strong> Por la seguridad de tu equipo y del chofer, las motocicletas de Uber solo aseguran hasta $2,000 MXN. Tu pedido se despachará vía <strong>Paquetería Asegurada con Firma Obligatoria de Recibido</strong> ($180 MXN) o puedes recogerlo sin costo en mostrador.</span>`;
+                }
+            } else {
+                if (warnBox) {
+                    warnBox.className = "p-3 bg-amber-950/60 border border-amber-500/50 rounded-xl text-[11px] text-amber-200 leading-relaxed font-mono flex items-start gap-2";
+                    warnBox.innerHTML = `<i class="fa-solid fa-motorcycle text-amber-400 text-base mt-0.5 shrink-0"></i>
+                    <span><strong>COMPRA MENOR A $2,000 MXN:</strong> Califica para <strong>Envío Exprés El Mismo Día</strong> en motocicleta vía Uber Flash con código PIN de entrega segura.</span>`;
+                }
+            }
+
+            const shipping = parseFloat(zoneSelect ? zoneSelect.value : (subtotal > 2000 ? 180 : 35));
+            const total = subtotal + shipping;
+
+            const elSub = document.getElementById("chk-subtotal");
+            const elCash = document.getElementById("chk-cashback");
+            const elShip = document.getElementById("chk-shipping");
+            const elTot = document.getElementById("chk-total");
+
+            if (elSub) elSub.innerText = `$${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+            if (elCash) elCash.innerText = `$${cashback.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+            if (elShip) elShip.innerText = `$${shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+            if (elTot) elTot.innerText = `$${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+        })} MXN`;
+            if (elCash) elCash.innerText = `$${cashback.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+            if (elShip) elShip.innerText = `$${shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+            if (elTot) elTot.innerText = `$${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+        }
+
+        // =========================================================================
+        // FLUJO FINAL Y REGISTRO SEGURO DE CLIENTES (CRM LOCAL)
+        // =========================================================================
+        function executeFinalCheckoutFlow() {
+            const items = getCartItems();
+            if (items.length === 0) {
+                alert("⚠️ Tu carrito está vacío. Agrega productos antes de pagar.");
+                return;
+            }
+
+            const name = (document.getElementById("custName").value || '').trim();
+            const phone = (document.getElementById("custPhone").value || '').trim();
+            const email = (document.getElementById("custEmail").value || '').trim();
+            const address = (document.getElementById("custAddress").value || '').trim();
+            const cp = (document.getElementById("custCP").value || '').trim();
+
+            if (!name || !phone || !email || !address) {
+                expandAddressForm();
+                alert("⚠️ Por favor ingresa y confirma tu nombre, teléfono, correo y domicilio de entrega.");
+                document.getElementById("custName").focus();
+                return;
+            }
+
+            // Guardar Lead de Cliente en Base de Datos Local de Clientes (CRM)
+            const customerLead = {
+                fecha: new Date().toISOString().replace('T', ' ').substring(0, 16),
+                tienda: "PC CUSTOM LAB",
+                nombre: name,
+                telefono: phone,
+                email: email,
+                direccion: address,
+                cp: cp,
+                articulos_comprados: items.map(i => `${i.quantity || 1}x ${i.nombre || i.title} (${i.sku})`).join('; '),
+                total_mxn: document.getElementById("chk-total").innerText,
+                metodo_pago: currentPaymentMethod.toUpperCase()
+            };
+
+            let crmList = JSON.parse(localStorage.getItem('ecosystem_crm_leads') || '[]');
+            crmList.unshift(customerLead);
+            localStorage.setItem('ecosystem_crm_leads', JSON.stringify(crmList));
+
+            // Si es SPEI -> Enviar por WhatsApp con formato profesional
+            if (currentPaymentMethod === 'spei') {
+                const msg = `*NUEVO PEDIDO EN PC CUSTOM LAB*%0A` +
+                    `👤 *Cliente:* ${name}%0A` +
+                    `📱 *Tel:* ${phone}%0A` +
+                    `✉️ *Email:* ${email}%0A` +
+                    `📍 *Entrega:* ${address} (CP ${cp})%0A` +
+                    `💳 *Pago:* SPEI Directo BBVA (012 180 01542584394 9)%0A` +
+                    `📦 *Artículos:*%0A` +
+                    items.map(i => `• (${i.quantity || 1}) ${i.nombre || i.title} - $${((i.precio || 0)*(i.quantity || 1)).toLocaleString('es-MX')}`).join('%0A') +
+                    `%0A💰 *${document.getElementById("chk-total").innerText}*%0A` +
+                    `Adjunto mi comprobante de transferencia.`;
+
+                window.open(`https://wa.me/523337271440?text=${msg}`, '_blank');
+            } 
+            // Si es Tarjeta / Mercado Pago
+            else if (currentPaymentMethod === 'tarjeta') {
+                alert("💳 Redirigiendo a la pasarela segura de Mercado Pago para procesar tu pago de forma encriptada...");
+                window.location.href = "https://www.mercadopago.com.mx/";
+            } 
+            // Si es OXXO
+            else {
+                alert("🏪 Ficha de pago generada. Presenta el código de convenio en cualquier tienda OXXO o 7-Eleven.");
+            }
+        }
+    </script>
 </body>
 </html>

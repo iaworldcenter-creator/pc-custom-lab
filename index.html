@@ -2,109 +2,43 @@
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PC Custom Lab | Hardware Mayorista & Ensamble de Cómputo</title>
-    <meta name="description" content="Catálogo oficial de hardware mayorista PC Custom Lab, procesadores Intel/AMD, placas ASUS, tarjetas gráficas RTX, memorias RAM y configuraciones armadas en Guadalajara.">
-    <link rel="canonical" href="https://iaworldcenter-creator.github.io/pc-custom-lab/">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#030712">
-
-    <!-- SEGURIDAD PERIMETRAL: CSP & COOP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; img-src 'self' https: data: blob:; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com data:; connect-src 'self' https: data: blob:;">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-
-    <!-- OPTIMIZACIÓN DE CONEXIONES Y PRECARGA DE FUENTES -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://static.ctonline.mx" crossorigin>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-
-    <!-- TAILWIND CSS CDN OFICIAL CON CONFIGURACIÓN -->
+    <meta name="description" content="Catálogo oficial de hardware mayorista PC Custom Lab, procesadores Intel/AMD, placas ASUS, tarjetas gráficas RTX y configuraciones armadas.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            gold: '#f59e0b',
-                            cyan: '#06b6d4',
-                            dark: '#030712'
-                        }
-                    }
-                }
-            }
-        };
-    </script>
-
-    <!-- FONT AWESOME CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <style>
-        @font-face {
-            font-family: 'Font Awesome 6 Free';
-            font-style: normal;
-            font-weight: 900;
-            font-display: swap;
-            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2') format('woff2');
-        }
-        @font-face {
-            font-family: 'Font Awesome 6 Brands';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2') format('woff2');
-        }
-
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .neon-glow-pc {
             border: 1px solid rgba(6,182,212,0.9) !important;
             box-shadow: 0 0 16px rgba(6,182,212,0.6), inset 0 0 10px rgba(6,182,212,0.3) !important;
         }
-
-        /* Contención dimensional y áreas táctiles */
-        .product-img-wrapper {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .product-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        button, a, select, input, .btn-action {
-            min-height: 44px;
-            touch-action: manipulation;
-        }
-        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
     </style>
 
-    <!-- CAPTURA GLOBAL DE ERRORES (LIGHTHOUSE CLEAN CONSOLE) -->
-    <script>
-        window.addEventListener('error', function(e) {
-            if (e.target && (e.target.tagName === 'IMG' || e.target.tagName === 'SCRIPT')) {
-                e.preventDefault();
-            }
-        }, true);
-        window.addEventListener('unhandledrejection', function(e) {
-            e.preventDefault();
-        });
-    </script>
+    <style>
+        /* scrollbar removed */ .custom-scrollbar-disabled {
+            width: 6px;
+        }
+        /* scrollbar removed */ .custom-scrollbar-disabled-track {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 8px;
+        }
+        /* scrollbar removed */ .custom-scrollbar-disabled-thumb {
+            background: rgba(6, 182, 212, 0.4);
+            border-radius: 8px;
+        }
+        /* scrollbar removed */ .custom-scrollbar-disabled-thumb:hover {
+            background: rgba(6, 182, 212, 0.8);
+        }
+    </style>
+
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col antialiased">
 
-    <!-- CABECERA DE 2 LÍNEAS (LANDMARK: BANNER) -->
-    <header role="banner" class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-xl">
-        
-        <!-- Línea 1: Desplazamiento Horizontal con Ecosistema de Tiendas -->
+    <!-- CABECERA DE 2 LÍNEAS (MÓVIL Y ESCRITORIO) -->
+    <header class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-xl">
+        <!-- Línea 1: Desplazamiento Horizontal con Botón Neón Activo -->
         <div class="w-full max-w-[1850px] mx-auto px-2 sm:px-4 py-2 border-b border-slate-900/80 flex items-center justify-between gap-2 overflow-x-auto no-scrollbar scroll-smooth">
             <div class="flex items-center gap-1.5 shrink-0">
                 <span class="text-[9px] font-mono font-black text-amber-400 bg-amber-500/10 border border-amber-500/30 px-2 py-0.5 rounded-full uppercase tracking-wider">
@@ -112,68 +46,65 @@
                 </span>
             </div>
             
-            <nav role="navigation" class="flex items-center gap-1.5 shrink-0 text-xs font-mono font-bold" aria-label="Ecosistema de Tiendas">
-                <a href="https://iaworldcenter-creator.github.io/sitios-web/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition flex items-center gap-1">
+            <nav class="flex items-center gap-1.5 shrink-0 text-xs font-mono font-bold" aria-label="Ecosistema de Tiendas">
+                <a href="https://iaworldcenter-creator.github.io/sitios-web/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
                     <i class="fa-solid fa-house text-amber-400"></i> Matriz
                 </a>
-                <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="px-2.5 py-1 rounded-xl bg-cyan-950 text-cyan-300 border border-cyan-400 neon-glow-pc flex items-center gap-1">
+                <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="px-3 py-1 rounded-xl bg-cyan-950/80 text-cyan-300 font-black neon-glow-pc transition">
                     <i class="fa-solid fa-microchip text-cyan-400"></i> PC Custom
                 </a>
-                <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition flex items-center gap-1">
-                    <i class="fa-solid fa-gem text-cyan-400"></i> Vía MX
+                <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
+                    <i class="fa-solid fa-gem text-cyan-300"></i> Vía MX
                 </a>
-                <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition flex items-center gap-1">
-                    <i class="fa-solid fa-smoking text-amber-500"></i> Cigarros
+                <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
+                    <i class="fa-solid fa-smoking text-amber-400"></i> Cigarros
                 </a>
-                <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition flex items-center gap-1">
+                <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
                     <i class="fa-solid fa-candy-cane text-pink-400"></i> Dulces
                 </a>
-                <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition flex items-center gap-1">
+                <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
                     <i class="fa-solid fa-newspaper text-indigo-400"></i> Kiosco
                 </a>
-                <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition flex items-center gap-1">
+                <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
                     <i class="fa-solid fa-store text-emerald-400"></i> Mi Puesto
                 </a>
-                <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition flex items-center gap-1">
+                <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
                     <i class="fa-solid fa-tags text-red-400"></i> Liquidaciones
                 </a>
             </nav>
         </div>
 
-        <!-- Línea 2: Logo + H1 + Barra Buscadora + Carrito -->
+        <!-- Línea 2: Logo + Barra de Búsqueda Blanca + Botón Carrito -->
         <div class="w-full max-w-[1850px] mx-auto px-2 sm:px-4 py-2.5 flex items-center justify-between gap-3">
             <a href="index.html" class="flex items-center gap-2.5 shrink-0 group">
                 <div class="w-9 h-9 rounded-xl bg-slate-900 border border-cyan-500/40 p-1 flex items-center justify-center shrink-0">
-                    <img src="assets/img/mascota_tigre_thumb.webp" alt="Logo Tigre PC Custom Lab" width="32" height="32" class="w-full h-full object-contain" />
+                    <img src="assets/img/mascota_tigre_thumb.webp" alt="Logo PC Custom Lab" width="32" height="32" class="w-full h-full object-contain" />
                 </div>
                 <div class="flex flex-col">
-                    <h1 class="text-xs sm:text-sm font-black font-mono text-white tracking-wider uppercase group-hover:text-cyan-400 transition m-0">PC CUSTOM LAB</h1>
+                    <span class="text-xs sm:text-sm font-black font-mono text-white tracking-wider uppercase group-hover:text-cyan-400 transition">PC CUSTOM LAB</span>
                     <span class="text-[8px] font-mono text-slate-400 truncate hidden sm:block">Pedro Moreno 501 A, Guadalajara</span>
                 </div>
             </a>
 
-            <!-- Formulario de Búsqueda -->
-            <form role="search" onsubmit="event.preventDefault(); window.executeSearchQuery(document.getElementById('boutiqueSearchInput').value);" toolname="search_catalog_form" tooldescription="Buscador semántico de 16,139 productos" class="flex-1 max-w-2xl relative">
+            <div class="flex-1 max-w-2xl relative">
                 <div class="flex items-center bg-white rounded-xl border border-slate-300 shadow-inner px-3 py-1.5">
-                    <i class="fa-solid fa-magnifying-glass text-slate-400 text-sm mr-2 shrink-0" aria-hidden="true"></i>
-                    <label for="boutiqueSearchInput" class="sr-only">Buscar componentes o hardware</label>
+                    <i class="fa-solid fa-magnifying-glass text-slate-400 text-sm mr-2 shrink-0"></i>
                     <input 
                         type="search" 
                         id="boutiqueSearchInput" 
-                        name="q"
                         placeholder="Busca por SKU, procesador, RTX 4070, B760M, RAM DDR5..." 
                         class="w-full bg-transparent text-slate-900 placeholder-slate-400 text-xs sm:text-sm outline-none font-medium" 
                     />
-                    <button type="submit" aria-label="Buscar productos" class="bg-blue-700 hover:bg-blue-600 text-white font-mono font-black px-3 py-1 rounded-lg text-xs uppercase tracking-wider shadow shrink-0">
+                    <button class="bg-blue-700 hover:bg-blue-600 text-white font-mono font-black px-3 py-1 rounded-lg text-xs uppercase tracking-wider shadow shrink-0">
                         Buscar
                     </button>
                 </div>
                 <div id="boutique-autocomplete-box" class="absolute top-full left-0 w-full bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl mt-1.5 p-2 z-[100] hidden max-h-96 overflow-y-auto no-scrollbar"></div>
-            </form>
+            </div>
 
             <a href="checkout.html" class="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 border border-cyan-500/40 text-white px-3 py-1.5 rounded-xl font-mono text-xs font-bold transition shrink-0 shadow">
                 <div class="relative">
-                    <i class="fa-solid fa-cart-shopping text-cyan-400 text-sm" aria-hidden="true"></i>
+                    <i class="fa-solid fa-cart-shopping text-cyan-400 text-sm"></i>
                     <span id="boutique-cart-badge" class="absolute -top-2 -right-2 bg-amber-400 text-slate-950 text-[9px] font-black w-4 h-4 rounded-full flex items-center justify-center">0</span>
                 </div>
                 <span id="boutique-cart-total" class="hidden sm:inline text-amber-400 font-bold">$0.00 MXN</span>
@@ -181,17 +112,17 @@
         </div>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL (LANDMARK: MAIN) -->
-    <main role="main" class="w-full max-w-[1880px] mx-auto px-2 sm:px-4 py-4 flex-1" id="catalog-main-content-root">
+    <!-- CONTENIDO PRINCIPAL: ESTRUCTURA EXACTA DE 2 COLUMNAS (PC CUSTOM LAB STYLE) -->
+    <main class="w-full max-w-[1880px] mx-auto px-2 sm:px-4 py-4 flex-1" id="catalog-main-content-root">
         
         <div class="flex flex-col lg:flex-row gap-4 items-start justify-center">
             
-            <!-- COLUMNA LATERAL IZQUIERDA: CATEGORÍAS (LANDMARK: ASIDE) -->
-            <aside role="complementary" aria-label="Departamentos y Filtros" style="width: 280px; min-width: 280px; max-width: 280px;" class="w-full lg:w-[280px] shrink-0" id="sidebar-facets-root">
-                <!-- Inyectado dinámicamente por JS: 24 Departamentos y Tarjetas -->
+            <!-- COLUMNA LATERAL IZQUIERDA: CATEGORÍAS Y FILTROS EN 2 BLOQUES (ANCHO FIJO 255px) -->
+            <aside style="width: 280px; min-width: 280px; max-width: 280px;" class="w-full lg:w-[280px] shrink-0" id="sidebar-facets-root">
+                <!-- Inyectado por JS: Bloque 1 (Ensamble) + Bloque 2 (Complementos) -->
             </aside>
 
-            <!-- COLUMNA CENTRAL: ESCAPARATE PRINCIPAL -->
+            <!-- COLUMNA CENTRAL: ESCAPARATE PRINCIPAL (5 FILAS X 4 COLUMNAS = 20 PRODUCTOS) -->
             <section style="flex: 1 1 0%; min-width: 0;" class="flex-1 min-w-0 w-full flex flex-col gap-3.5">
                 
                 <!-- Banner Superior Promocional -->
@@ -202,7 +133,7 @@
                         </div>
                         <div>
                             <span class="text-[10px] font-mono text-cyan-300 font-bold uppercase tracking-wider block">Distribución Mayorista Directa</span>
-                            <h2 class="font-bold text-xs sm:text-sm text-white">Precios Especiales con Entrega Inmediata en Guadalajara (Pedro Moreno 501 A)</h2>
+                            <h3 class="font-bold text-xs sm:text-sm">Precios Especiales con Entrega Inmediata en Guadalajara (Pedro Moreno 501 A)</h3>
                         </div>
                     </div>
                     <button onclick="document.getElementById('boutiqueSearchInput').focus()" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-black px-4 py-1.5 rounded-xl text-xs uppercase font-mono tracking-wider shadow-lg transition shrink-0 cursor-pointer">
@@ -210,15 +141,16 @@
                     </button>
                 </div>
 
-                <!-- Barra Superior de Control -->
+                <!-- Barra Superior de Control (Resultados + Alternador Vista + Paginación 1..7...50 + Ordenar) -->
                 <div class="p-3.5 bg-slate-900/95 border border-slate-800 rounded-2xl shadow-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-white">
                     <div>
                         <h2 class="text-xs sm:text-sm font-bold text-cyan-300 leading-tight font-mono" id="results-count-display">
-                            Aparador Principal (20 de 16,139)
+                            Aparador Principal (20 de 16,122)
                         </h2>
                     </div>
 
                     <div class="flex items-center gap-2 flex-wrap justify-between w-full sm:w-auto">
+                        <!-- Alternador de Vista (Cuadrícula 5x4 vs. Lista) -->
                         <div class="bg-slate-950 p-1 rounded-xl border border-slate-800 flex items-center gap-1">
                             <button id="btn-view-list" onclick="setViewStyle('list')" title="Vista Listado Horizontal" class="p-1.5 rounded-lg text-slate-400 hover:text-white transition cursor-pointer text-xs">
                                 <i class="fa-solid fa-list-ul"></i>
@@ -228,12 +160,14 @@
                             </button>
                         </div>
 
+                        <!-- Paginación Superior 1..7...50 -->
                         <div class="pagination-target-bar">
                             <!-- Inyectado por JS -->
                         </div>
 
+                        <!-- Menú Desplegable 'Ordenar por' -->
                         <div class="flex items-center gap-1.5 text-xs font-mono text-slate-400">
-                            <label for="sort-select">Ordenar:</label>
+                            <span>Ordenar:</span>
                             <select id="sort-select" onchange="currentSortCriterion=this.value; renderExactCatalogView();" class="bg-slate-950 border border-slate-800 text-white rounded-xl px-2.5 py-1 text-xs outline-none cursor-pointer">
                                 <option value="existencia">Disponibilidad</option>
                                 <option value="precio_asc">Precio: Menor a Mayor</option>
@@ -244,36 +178,39 @@
                     </div>
                 </div>
 
-                <!-- CONTENEDOR DEL APARADOR DE 20 PRODUCTOS -->
+                <!-- CONTENEDOR DEL APARADOR DE 20 PRODUCTOS (5 FILAS X 4 COLUMNAS) -->
                 <div id="products-grid-container" class="min-h-[700px]">
                     <!-- Inyectado por JS: 20 productos -->
                 </div>
 
-                <!-- Paginación Inferior y Barra de Salto Rápido -->
+                <!-- Paginación Inferior 1..7...50 -->
                 <div class="pagination-target-bar p-3.5 bg-slate-900/95 border border-slate-800 rounded-2xl shadow-xl flex justify-center items-center">
                     <!-- Inyectado por JS -->
                 </div>
 
-                <div id="catalog-bottom-nav-root"></div>
-
             </section>
 
-        </div>
-
-        <!-- MODAL DE FICHA TÉCNICA (PDP) -->
-        <div id="productDetailModal" class="fixed inset-0 z-[200] hidden flex items-center justify-center p-2 sm:p-4">
-            <div class="absolute inset-0 bg-slate-950/85 backdrop-blur-md" onclick="closeProductDetailModal()"></div>
-            <div class="relative w-full max-w-6xl max-h-[92vh] overflow-y-auto bg-slate-900 border-2 border-cyan-500/60 rounded-3xl shadow-[0_0_50px_rgba(6,182,212,0.3)] p-4 sm:p-6 z-10 no-scrollbar">
-                <div id="productDetailModalContent">
-                    <!-- Inyectado por JS -->
-                </div>
+            </div>
+    
+    <!-- MODAL DE FICHA TÉCNICA EN 3 COLUMNAS (PDP) -->
+    <div id="productDetailModal" class="fixed inset-0 z-[200] hidden flex items-center justify-center p-2 sm:p-4">
+        <div class="absolute inset-0 bg-slate-950/85 backdrop-blur-md" onclick="closeProductDetailModal()"></div>
+        <div class="relative w-full max-w-6xl max-h-[92vh] overflow-y-auto bg-slate-900 border-2 border-cyan-500/60 rounded-3xl shadow-[0_0_50px_rgba(6,182,212,0.3)] p-4 sm:p-6 z-10 no-scrollbar">
+            <div id="productDetailModalContent">
+                <!-- Inyectado dinámicamente en 3 columnas por JS -->
             </div>
         </div>
+    </div>
 
     </main>
 
-    <!-- FOOTER OFICIAL A 3 COLUMNAS (LANDMARK: CONTENTINFO) -->
-    <footer role="contentinfo" class="bg-slate-950 border-t border-slate-800 text-slate-300 text-xs mt-12 pt-10 pb-8" aria-label="Pie de página institucional" id="pie-de-pagina">
+    <!-- PIE DE PÁGINA A 3 COLUMNAS -->
+    
+    <!-- FOOTER OFICIAL PC CUSTOM LAB (3 COLUMNAS + CLÁUSULAS LEGALES PROFECO / SAT) -->
+    
+    
+    <!-- FOOTER INSTITUCIONAL OFICIAL (H2: Pie de Página) -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-300 text-xs mt-12 pt-10 pb-8" aria-label="Pie de página institucional" id="pie-de-pagina">
         <h2 class="sr-only">Información Legal, Contacto y Garantías PC Custom Lab</h2>
         <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
             
@@ -295,7 +232,7 @@
                         </p>
                         <p class="flex items-center gap-2">
                             <i class="fa-brands fa-whatsapp text-emerald-400 shrink-0" aria-hidden="true"></i>
-                            <span>WhatsApp: <a href="https://wa.me/523337271440" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" class="hover:text-emerald-300 font-bold text-white transition min-h-[44px] inline-flex items-center">+52 33 3727 1440</a></span>
+                            <span>WhatsApp: <a href="https://wa.me/523337271440" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" class="hover:text-emerald-300 font-bold text-white transition">+52 33 3727 1440</a></span>
                         </p>
                         <p class="flex items-center gap-2">
                             <i class="fa-solid fa-mobile-screen-button text-cyan-400 shrink-0" aria-hidden="true"></i>
@@ -319,7 +256,7 @@
                     </div>
                 </div>
 
-                <!-- COLUMNA 2: POLÍTICAS DE COMPRA Y SEGURIDAD -->
+                <!-- COLUMNA 2: POLÍTICAS DE COMPRA, GARANTÍA Y SEGURIDAD DE ENVÍOS -->
                 <div class="space-y-3">
                     <h3 class="font-bold text-cyan-300 uppercase tracking-wider text-xs font-mono flex items-center gap-2">
                         <i class="fa-solid fa-shield-halved text-cyan-400" aria-hidden="true"></i> Políticas de Compra & Seguridad
@@ -333,24 +270,24 @@
                                 Por seguridad y límites de seguro de transporte en motocicleta, el <strong>Envío Exprés El Mismo Día aplica únicamente para compras menores a $2,000 MXN</strong>.
                             </p>
                             <p class="text-amber-200 text-[10px] font-bold">
-                                Pedidos mayores a $2,000 MXN se despachan vía Paquetería Asegurada con Firma de Recibido o retiro en tienda.
+                                Pedidos mayores a $2,000 MXN se despachan obligatoriamente vía Paquetería Asegurada con Firma de Recibido del comprador o retiro directo en mostrador.
                             </p>
                         </div>
                         <p class="flex items-start gap-2">
                             <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5 shrink-0" aria-hidden="true"></i>
-                            <span><strong>Garantía Directa de 48 Horas:</strong> Reemplazo en mostrador con empaque original.</span>
+                            <span><strong>Garantía Directa de 48 Horas:</strong> Reemplazo inmediato en mostrador presentando empaque original intacto.</span>
                         </p>
                         <p class="flex items-start gap-2">
                             <i class="fa-solid fa-box-open text-cyan-400 mt-0.5 shrink-0" aria-hidden="true"></i>
-                            <span><strong>Garantía de Fábrica de 1 Año:</strong> Gestión técnica sin costo de trámites.</span>
+                            <span><strong>Garantía de Fábrica de 1 Año:</strong> Gestión técnica sin costo de fletes ni trámites adicionales.</span>
                         </p>
                     </div>
                 </div>
 
-                <!-- COLUMNA 3: CASHBACK Y DESPACHO -->
+                <!-- COLUMNA 3: AHORRO, CASHBACK Y DESPACHO LOCAL -->
                 <div class="space-y-3">
                     <h3 class="font-bold text-cyan-300 uppercase tracking-wider text-xs font-mono flex items-center gap-2">
-                        <i class="fa-solid fa-coins text-emerald-400" aria-hidden="true"></i> Ahorro, Cashback & Despacho
+                        <i class="fa-solid fa-coins text-emerald-400" aria-hidden="true"></i> Ahorro, Cashback & Despacho Local
                     </h3>
                     <div class="space-y-2 text-slate-200 text-[11px] leading-relaxed">
                         <div class="bg-slate-900/90 p-3 rounded-2xl border border-emerald-500/40 space-y-1">
@@ -359,7 +296,7 @@
                                 <span>5% DE CASHBACK EN CADA COMPRA</span>
                             </div>
                             <p class="text-[10.5px] text-slate-300">
-                                Acumula saldo electrónico reutilizable en todas las boutiques del ecosistema.
+                                Registra tu teléfono al ordenar para acumular saldo electrónico reutilizable en todas las boutiques.
                             </p>
                         </div>
 
@@ -369,7 +306,7 @@
                                 <span>PAQUETERÍA ASEGURADA > $2,000 MXN</span>
                             </div>
                             <p class="text-[10.5px] text-slate-300">
-                                Envíos de alto valor protegidos con guía rastreable y firma de entrega obligatoria.
+                                Envíos de alto valor protegidos con guía rastreable y firma de entrega obligatoria en destino.
                             </p>
                         </div>
                     </div>
@@ -377,6 +314,7 @@
 
             </div>
 
+            <!-- CLÁUSULAS LEGALES, VIGENCIA Y CONDICIONES COMERCIALES (PROFECO / SAT) -->
             <div class="pt-6 pb-2 text-[10.5px] text-slate-300 space-y-2 text-center font-mono leading-relaxed">
                 <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl max-w-5xl mx-auto space-y-1">
                     <p class="text-amber-300 font-bold">
@@ -385,20 +323,25 @@
                     </p>
                     <p class="text-slate-300">
                         <i class="fa-solid fa-triangle-exclamation text-amber-400 mr-1" aria-hidden="true"></i>
-                        Aviso Comercial: Precios exhibidos en Moneda Nacional (MXN) con IVA incluido. Precios sujetos a alza o cambio sin previo aviso.
+                        Aviso Comercial: Precios exhibidos en Moneda Nacional (MXN) con IVA incluido. Precios sujetos a alza o cambio sin previo aviso por fluctuaciones cambiarias y existencias en almacén mayorista.
+                    </p>
+                    <p class="text-slate-300">
+                        Estructura comercial protegida con 20% de utilidad neta libre para cobertura de infraestructura tecnológica, licencias de inteligencia artificial, nómina, arrendamiento operativo y cumplimiento de obligaciones fiscales ante el SAT y PROFECO.
                     </p>
                 </div>
 
                 <div class="pt-3 text-slate-400">
-                    © 2026 Ecosistema Comercial BAZAR NFL GDL & PC Custom Lab. Pedro Moreno 501 A, Guadalajara Centro, Jalisco.
+                    © 2026 Ecosistema Comercial BAZAR NFL GDL & PC Custom Lab. Pedro Moreno 501 A, Guadalajara Centro, Jalisco. Todos los derechos reservados.
                 </div>
             </div>
 
         </div>
     </footer>
+    
 
-    <!-- CARGA DE DATOS Y MOTOR DEL CATÁLOGO -->
-    <script src="js/ct-catalog-data.js"></script>
-    <script src="js/ct-exact-catalog-engine.js"></script>
+
+    <script src="js/ct-catalog-data.js?v=20260828_1900"></script>
+    <script defer src="js/ct-exact-catalog-engine.js?v=20260828_1900"></script>
+    
 </body>
 </html>
