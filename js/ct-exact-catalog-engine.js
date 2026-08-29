@@ -210,7 +210,7 @@ function initFullCatalog() {
     }
 }
 
-// Selección de categorías y auto-scroll
+// Selección de categorías y auto-scroll instantáneo en celular y desktop
 window.selectCategoryFacet = function(catId) {
     activeSelectedCategory = catId;
     activeSelectedBrand = 'Todas';
@@ -223,12 +223,17 @@ window.selectCategoryFacet = function(catId) {
     renderSidebarFacets();
     renderExactCatalogView();
 
+    // Auto-scroll inmediato garantizado a la vitrina
+    const target = document.getElementById("results-count-display") || document.getElementById("products-grid-container") || document.getElementById("catalog-main-content-root");
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
     setTimeout(() => {
-        const showcaseTarget = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
-        if (showcaseTarget) {
-            showcaseTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const target2 = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
+        if (target2) {
+            target2.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-    }, 60);
+    }, 80);
 };
 
 window.scrollToDepartments = function() {
@@ -642,51 +647,73 @@ function renderSidebarFacets() {
                 </div>
             </div>
 
-                        <!-- 3 TARJETAS DE CONVERSIÓN INTEGRADAS -->
-            <div class="pt-2 space-y-3 border-t border-slate-800">
+                                    <!-- 3 TARJETAS DE CONVERSIÓN INTEGRADAS -->
+            <div class="pt-3 space-y-3.5 border-t border-slate-800">
                 
-                <!-- TARJETA 1: APP MÓVIL WHATSAPP CON QR -->
-                <div class="bg-slate-950/90 border border-cyan-500/40 rounded-2xl p-3 text-center shadow-lg">
-                    <span class="text-[11px] font-mono font-bold text-cyan-400 uppercase tracking-wider flex items-center justify-center gap-1.5 mb-2">
-                        <i class="fa-solid fa-mobile-screen-button"></i> App Móvil Pedidos
+                <!-- TARJETA 1: APP MÓVIL OFICIAL CON QR, GOOGLE PLAY Y APP STORE -->
+                <div class="bg-slate-950/90 border border-cyan-500/40 rounded-2xl p-3.5 text-center shadow-lg space-y-2.5">
+                    <span class="text-[11px] font-mono font-black text-cyan-300 uppercase tracking-wider flex items-center justify-center gap-1.5">
+                        <i class="fa-solid fa-mobile-screen-button text-cyan-400"></i> App Móvil & Pedidos
                     </span>
-                    <div class="w-28 h-28 mx-auto bg-white p-1.5 rounded-xl shadow mb-2 flex items-center justify-center">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://iaworldcenter-creator.github.io/pc-custom-lab/&color=0-0-0&bgcolor=255-255-255" alt="QR App" width="110" height="110" class="w-full h-full object-contain" />
+                    
+                    <!-- Código QR Oficial -->
+                    <div class="w-32 h-32 mx-auto bg-white p-2 rounded-2xl shadow-md flex items-center justify-center">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://iaworldcenter-creator.github.io/pc-custom-lab/&color=0-0-0&bgcolor=255-255-255" alt="Código QR Descargar App" width="120" height="120" class="w-full h-full object-contain" />
                     </div>
-                    <a href="https://wa.me/523337271440" target="_blank" rel="noopener" class="w-full bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-cyan-500/40 font-mono font-bold rounded-lg text-[10px] uppercase py-2 flex items-center justify-center gap-1 min-h-[40px]">
-                        ▶ Abrir App Oficial
+                    <span class="text-[9.5px] font-mono text-slate-400 block">Escanea con la cámara de tu celular</span>
+
+                    <!-- Botones de Tiendas de Aplicaciones: Google Play & App Store -->
+                    <div class="grid grid-cols-2 gap-2 pt-1">
+                        <a href="https://play.google.com/store" target="_blank" rel="noopener" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-400 text-white rounded-xl p-2 flex flex-col items-center justify-center transition shadow group min-h-[44px]">
+                            <i class="fa-brands fa-google-play text-cyan-400 text-sm mb-0.5 group-hover:scale-110 transition"></i>
+                            <span class="text-[8px] font-mono uppercase text-slate-400 leading-none">Disponible en</span>
+                            <span class="text-[9.5px] font-bold text-white leading-tight">Google Play</span>
+                        </a>
+                        <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-400 text-white rounded-xl p-2 flex flex-col items-center justify-center transition shadow group min-h-[44px]">
+                            <i class="fa-brands fa-apple text-slate-200 text-sm mb-0.5 group-hover:scale-110 transition"></i>
+                            <span class="text-[8px] font-mono uppercase text-slate-400 leading-none">Consíguelo en</span>
+                            <span class="text-[9.5px] font-bold text-white leading-tight">App Store</span>
+                        </a>
+                    </div>
+
+                    <!-- Acceso Directo por WhatsApp -->
+                    <a href="https://wa.me/523337271440" target="_blank" rel="noopener" class="w-full bg-slate-900 hover:bg-slate-800 text-emerald-300 hover:text-white border border-emerald-500/40 hover:border-emerald-400 font-mono font-bold rounded-xl text-[10.5px] uppercase py-2.5 flex items-center justify-center gap-1.5 transition shadow min-h-[40px]">
+                        <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
+                        <span>▶ Abrir App Oficial</span>
                     </a>
                 </div>
 
-                <!-- TARJETA 2: CREADO CON GOOGLE GEMINI -->
-                <div class="bg-slate-950/90 border border-blue-500/40 hover:border-blue-400 rounded-2xl p-3.5 shadow-lg transition text-left">
-                    <span class="text-[11px] font-mono font-bold text-blue-400 uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
+                <!-- TARJETA 2: CREADO CON GOOGLE GEMINI (ABAJO DEL CÓDIGO QR) -->
+                <div class="bg-slate-950/90 border border-blue-500/40 hover:border-blue-400 rounded-2xl p-3.5 shadow-lg transition text-left space-y-2">
+                    <span class="text-[11px] font-mono font-bold text-blue-400 uppercase tracking-wider flex items-center gap-1.5">
                         <i class="fa-solid fa-wand-magic-sparkles text-blue-400" aria-hidden="true"></i> Creado con Google Gemini
                     </span>
-                    <div class="text-white font-bold text-xs leading-snug mb-1">
+                    <div class="text-white font-bold text-xs leading-snug">
                         Inteligencia Artificial para tu Negocio
                     </div>
-                    <p class="text-slate-300 text-[10px] leading-tight mb-2.5">
+                    <p class="text-slate-300 text-[10px] leading-tight">
                         Concebido y programado con la IA más avanzada de Google para crear tiendas de ultra velocidad.
                     </p>
-                    <a href="https://gemini.google.com/" target="_blank" rel="noopener" aria-label="Suscribirse a Google Gemini" class="btn-action w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-lg text-[10px] uppercase tracking-wider flex items-center justify-center gap-1 transition shadow min-h-[40px]">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> <span>SUSCRÍBETE A GOOGLE GEMINI</span>
+                    <a href="https://gemini.google.com/" target="_blank" rel="noopener" aria-label="Suscribirse a Google Gemini" class="btn-action w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[10.5px] font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition shadow min-h-[42px]">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        <span>SUSCRÍBETE A GOOGLE GEMINI</span>
                     </a>
                 </div>
 
-                <!-- TARJETA 3: DESARROLLADO POR ANTI-GRAVITY -->
-                <div class="bg-slate-950/90 border border-amber-500/40 hover:border-amber-400 rounded-2xl p-3.5 shadow-lg transition text-left">
-                    <span class="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
+                <!-- TARJETA 3: DESARROLLADO POR ANTI-GRAVITY (ABAJO DE GEMINI) -->
+                <div class="bg-slate-950/90 border border-amber-500/40 hover:border-amber-400 rounded-2xl p-3.5 shadow-lg transition text-left space-y-2">
+                    <span class="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
                         <i class="fa-solid fa-robot text-amber-400" aria-hidden="true"></i> Desarrollado por Anti-Gravity
                     </span>
-                    <div class="text-white font-bold text-xs leading-snug mb-1">
+                    <div class="text-white font-bold text-xs leading-snug">
                         Agente Autónomo de Software
                     </div>
-                    <p class="text-slate-300 text-[10px] leading-tight mb-2.5">
+                    <p class="text-slate-300 text-[10px] leading-tight">
                         Desarrollado, optimizado y desplegado por Anti-Gravity Copilot. Crea tus páginas web gratis.
                     </p>
-                    <a href="https://antigravity.google/download" target="_blank" rel="noopener" aria-label="Descargar Anti-Gravity Gratis" class="btn-action w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black rounded-lg text-[10px] uppercase tracking-wider flex items-center justify-center gap-1 transition shadow min-h-[40px]">
-                        <i class="fa-solid fa-download text-[9px]"></i> <span>DESCARGAR Y PRUEBA ANTI-GRAVITY</span>
+                    <a href="https://antigravity.google/download" target="_blank" rel="noopener" aria-label="Descargar Anti-Gravity Gratis" class="btn-action w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black rounded-xl text-[10.5px] font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition shadow min-h-[42px]">
+                        <i class="fa-solid fa-download text-[10px]"></i>
+                        <span>DESCARGAR Y PRUEBA ANTI-GRAVITY</span>
                     </a>
                 </div>
 
