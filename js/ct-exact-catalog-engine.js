@@ -67,6 +67,15 @@ function setViewStyle(style) {
 function getFilteredList() {
     let items = [...(window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [])];
 
+    // Filtro por búsqueda activa si existe
+    if (activeSearchQuery && activeSearchQuery.trim() !== '') {
+        const tokens = normalizeText(activeSearchQuery).split(' ').filter(t => t.length > 0);
+        items = items.filter(p => {
+            const searchable = normalizeText(`${p.sku || ''} ${p.nombre || ''} ${p.descripcion_completa || ''} ${p.marca || ''} ${p.categoria_clasificada || ''}`);
+            return tokens.every(t => searchable.includes(t));
+        });
+    }
+
     if (activeSelectedCategory !== 'Todas') {
         items = items.filter(p => {
             const catClasif = (p.categoria_clasificada || '').toLowerCase();
@@ -558,34 +567,78 @@ function renderSidebarFacets() {
 }
 
 // =========================================================================
-// MOTOR DE BÚSQUEDA PREDICTIVA INSTANTÁNEA (16,139 ITEMS EN TIEMPO REAL)
+// MOTOR DE BÚSQUEDA PREDICTIVA MULTI-TOKEN INTELIGENTE (16,139 ITEMS)
 // =========================================================================
+
+function normalizeText(str) {
+    return (str || '')
+        .toLowerCase()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .replace(/[®™©]/g, "")
+        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+let activeSearchQuery = '';
+
+window.executeSearchQuery = function(query) {
+    activeSearchQuery = (query || '').trim();
+    activeSelectedCategory = 'Todas';
+    activeSelectedBrand = 'Todas';
+    currentPageNumber = 1;
+    renderSidebarFacets();
+    renderExactCatalogView();
+    
+    const box = document.getElementById("boutique-autocomplete-box");
+    if (box) box.classList.add("hidden");
+    
+    const target = document.getElementById("catalog-main-content-root");
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
+
 let searchDebounceTimer = null;
 function initPredictiveSearchEngine() {
     const input = document.getElementById("boutiqueSearchInput");
     const box = document.getElementById("boutique-autocomplete-box");
     if (!input || !box) return;
 
+    // Escuchar submit del formulario
+    const form = input.closest("form");
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            box.classList.add("hidden");
+            window.executeSearchQuery(input.value);
+        });
+    }
+
     input.addEventListener("input", (e) => {
         clearTimeout(searchDebounceTimer);
-        const query = (e.target.value || '').trim().toLowerCase();
+        const rawQuery = (e.target.value || '').trim();
         
-        if (query.length < 1) {
+        if (rawQuery.length < 1) {
             box.classList.add("hidden");
             box.innerHTML = "";
+            if (activeSearchQuery !== '') {
+                activeSearchQuery = '';
+                renderExactCatalogView();
+            }
             return;
         }
 
         searchDebounceTimer = setTimeout(() => {
             const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
+            const tokens = normalizeText(rawQuery).split(' ').filter(t => t.length > 0);
+            
             const matches = [];
             for (let i = 0; i < all.length; i++) {
                 const p = all[i];
-                const sku = (p.sku || '').toLowerCase();
-                const name = (p.nombre || p.descripcion_completa || '').toLowerCase();
-                const marca = (p.marca || '').toLowerCase();
-                const cat = (p.categoria_clasificada || '').toLowerCase();
-                if (sku.includes(query) || name.includes(query) || marca.includes(query) || cat.includes(query)) {
+                const searchable = normalizeText(`${p.sku || ''} ${p.nombre || ''} ${p.descripcion_completa || ''} ${p.marca || ''} ${p.categoria_clasificada || ''}`);
+                
+                // Coincidencia: Todos los términos deben estar presentes
+                const isMatch = tokens.every(token => searchable.includes(token));
+                if (isMatch) {
                     matches.push(p);
                     if (matches.length >= 10) break;
                 }
@@ -593,9 +646,10 @@ function initPredictiveSearchEngine() {
 
             if (matches.length === 0) {
                 box.innerHTML = `
-                    <div class="p-3.5 text-center text-slate-300 font-mono text-xs">
-                        <i class="fa-solid fa-magnifying-glass text-cyan-400 mb-1 block" aria-hidden="true"></i>
-                        No se encontraron coincidencias directas para "<strong>${query}</strong>" entre los 16,139 productos.
+                    <div class="p-4 text-center text-slate-300 font-mono text-xs">
+                        <i class="fa-solid fa-magnifying-glass text-cyan-400 text-lg mb-1 block" aria-hidden="true"></i>
+                        No se encontraron coincidencias para "<strong>${rawQuery}</strong>".
+                        <br><span class="text-[10px] text-slate-400">Prueba con términos como: i9, 14900k, RTX 4070, DDR5 16gb, Ryzen, Koblenz...</span>
                     </div>
                 `;
                 box.classList.remove("hidden");
@@ -603,9 +657,11 @@ function initPredictiveSearchEngine() {
             }
 
             box.innerHTML = `
-                <div class="p-2 border-b border-slate-800 flex justify-between items-center text-[10px] font-mono text-slate-300 bg-slate-950/80">
-                    <span>Coincidencias en catálogo maestro (16,139 items) para: "<strong>${query}</strong>"</span>
-                    <span class="text-cyan-300 font-bold">${matches.length} sugerencias</span>
+                <div class="p-2.5 border-b border-slate-800 flex justify-between items-center text-[10.5px] font-mono text-slate-300 bg-slate-950/90">
+                    <span>Resultados en catálogo maestro (16,139 items) para: "<strong>${rawQuery}</strong>"</span>
+                    <button type="button" onclick="window.executeSearchQuery(document.getElementById('boutiqueSearchInput').value);" class="text-cyan-300 font-bold hover:underline cursor-pointer">
+                        Ver todos (${matches.length}+) »
+                    </button>
                 </div>
                 <div class="divide-y divide-slate-800/60 max-h-96 overflow-y-auto">
                     ${matches.map(p => {
@@ -619,7 +675,7 @@ function initPredictiveSearchEngine() {
                         const placeholder = getPlaceholderForCat(cat);
 
                         return `
-                            <div class="flex items-center justify-between gap-3 p-2.5 hover:bg-slate-850 transition cursor-pointer group min-h-[48px]" onclick="openProductDetailModal('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" role="button" tabindex="0" aria-label="Ver detalle de ${title}">
+                            <div class="flex items-center justify-between gap-3 p-3 hover:bg-slate-850 transition cursor-pointer group min-h-[48px]" onclick="openProductDetailModal('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" role="button" tabindex="0" aria-label="Ver detalle de ${title}">
                                 <div class="product-img-wrapper w-12 h-12 bg-slate-950 rounded-xl p-1 shrink-0 border border-slate-800 group-hover:border-cyan-400/50">
                                     <img src="${localImg}" alt="${title}" width="48" height="48" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='${cdnImg}'; } else { this.src='${placeholder}'; }" />
                                 </div>
@@ -635,13 +691,13 @@ function initPredictiveSearchEngine() {
                                 </div>
                                 <div class="text-right shrink-0 flex items-center gap-2">
                                     <div class="text-xs font-mono font-black text-emerald-300">$${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</div>
-                                    <button onclick="event.stopPropagation(); openProductDetailModal('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" aria-label="Ver ficha técnica de ${title}" class="btn-action bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[10px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-700 uppercase min-h-[44px]">
+                                    <button type="button" onclick="event.stopPropagation(); openProductDetailModal('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" aria-label="Ver ficha técnica de ${title}" class="btn-action bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[10px] font-bold px-2.5 py-1.5 rounded-lg border border-slate-700 uppercase min-h-[44px]">
                                         Ficha
                                     </button>
-                                    <button onclick="event.stopPropagation(); addToCartCT('${sku}', '${title}', ${price}, '${localImg}');" aria-label="Agregar ${title} al carrito" class="btn-action bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-bold px-2.5 py-1.5 rounded-lg uppercase min-h-[44px]">
+                                    <button type="button" onclick="event.stopPropagation(); addToCartCT('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" aria-label="Agregar ${title} al carrito" class="btn-action bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-bold px-2.5 py-1.5 rounded-lg uppercase min-h-[44px]">
                                         + Carrito
                                     </button>
-                                    <button onclick="event.stopPropagation(); buyNowCT('${sku}', '${title}', ${price}, '${localImg}');" aria-label="Comprar ${title} ahora" class="btn-action bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 text-[10px] font-black px-2.5 py-1.5 rounded-lg uppercase shadow min-h-[44px]">
+                                    <button type="button" onclick="event.stopPropagation(); buyNowCT('${sku}');" aria-label="Comprar ${title} ahora" class="btn-action bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 text-[10px] font-black px-2.5 py-1.5 rounded-lg uppercase shadow min-h-[44px]">
                                         ⚡ Comprar
                                     </button>
                                 </div>
@@ -652,7 +708,7 @@ function initPredictiveSearchEngine() {
             `;
 
             box.classList.remove("hidden");
-        }, 120);
+        }, 100);
     });
 
     document.addEventListener("click", (e) => {
@@ -956,6 +1012,9 @@ function goToPageNumber(p) {
 function resetFacets() {
     activeSelectedCategory = 'Todas';
     activeSelectedBrand = 'Todas';
+    activeSearchQuery = '';
+    const input = document.getElementById("boutiqueSearchInput");
+    if (input) input.value = '';
     currentPageNumber = 1;
     renderSidebarFacets();
     renderExactCatalogView();
