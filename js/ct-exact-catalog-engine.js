@@ -402,66 +402,66 @@ function renderSidebarFacets() {
                         <span class="flex items-center gap-2 truncate">
                             <input type="radio" id="cat_todas" name="cat_facet" aria-label="Todas las categorías" ${activeSelectedCategory === 'Todas' ? 'checked' : ''} onchange="activeSelectedCategory='Todas'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-4 h-4 accent-cyan-400 cursor-pointer shrink-0" />
                             <i class="fa-solid fa-layer-group text-xs text-cyan-400 shrink-0" aria-hidden="true"></i>
-                            <span class="truncate text-xs font-bold text-white">Todas las Categorías</span>
+                            <span class="cat-title truncate font-black text-white text-xs sm:text-sm">Todas las Categorías</span>
                         </span>
-                        <span class="text-[10px] text-cyan-300 font-mono font-bold">(${all.length.toLocaleString('es-MX')})</span>
+                        <span class="cat-count font-mono font-bold">(${all.length.toLocaleString('es-MX')})</span>
                     </label>
                 </div>
 
                 <!-- BLOQUE 1 - COMPONENTES DE ENSAMBLE -->
                 <div class="border-b border-slate-800 pb-3">
-                    <h3 class="font-bold text-cyan-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                    <h3 class="dept-heading text-cyan-300 font-mono uppercase text-xs sm:text-sm font-black mb-2">
                         <i class="fa-solid fa-microchip text-cyan-400" aria-hidden="true"></i> 1. Componentes de Ensamble
                     </h3>
                     <div class="space-y-1 text-slate-300">
                         ${block1.map(c => `
-                            <label for="cat_${c.id}" class="category-link flex items-center justify-between cursor-pointer hover:text-cyan-300 py-2 px-2 rounded-xl hover:bg-slate-800/80 transition min-h-[48px]">
-                                <span class="flex items-center gap-2.5 truncate">
-                                    <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-4 h-4 accent-cyan-400 cursor-pointer shrink-0" />
-                                    <i class="fa-solid ${c.icon} text-xs text-slate-300 w-3.5 text-center shrink-0" aria-hidden="true"></i>
-                                    <span class="cat-title truncate text-xs sm:text-xs md:text-sm font-bold ${activeSelectedCategory === c.id ? "text-cyan-300" : "text-slate-100"}">${c.name}</span>
-                                </span>
-                                <span class="cat-count text-[11px] sm:text-[10px] text-slate-300 font-mono">(${getCount(c.id)})</span>
-                            </label>
-                        `).join('')}
+                        <label for="cat_${c.id}" class="category-link flex items-center justify-between cursor-pointer hover:text-cyan-300 transition">
+                            <span class="flex items-center gap-3 truncate">
+                                <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="accent-cyan-400 cursor-pointer shrink-0" />
+                                <i class="fa-solid ${c.icon} text-cyan-400 shrink-0" aria-hidden="true"></i>
+                                <span class="cat-title truncate ${activeSelectedCategory === c.id ? 'font-black text-cyan-300' : 'text-slate-100'}">${c.name}</span>
+                            </span>
+                            <span class="cat-count font-mono">(${getCount(c.id)})</span>
+                        </label>
+                    `).join('')}
                     </div>
                 </div>
 
                 <!-- BLOQUE 2 - SISTEMAS Y EQUIPOS COMPLETOS -->
                 <div class="border-b border-slate-800 pb-3">
-                    <h3 class="font-bold text-purple-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                    <h3 class="dept-heading text-purple-300 font-mono uppercase text-xs sm:text-sm font-black mb-2">
                         <i class="fa-solid fa-cube text-purple-400" aria-hidden="true"></i> 2. Sistemas & Mini PCs IA
                     </h3>
                     <div class="space-y-1 text-slate-300">
                         ${block2.map(c => `
-                            <label for="cat_${c.id}" class="category-link flex items-center justify-between cursor-pointer hover:text-purple-300 py-2 px-2 rounded-xl hover:bg-slate-800/80 transition min-h-[48px]">
-                                <span class="flex items-center gap-2.5 truncate">
-                                    <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-4 h-4 accent-purple-400 cursor-pointer shrink-0" />
-                                    <i class="fa-solid ${c.icon} text-xs text-slate-300 w-3.5 text-center shrink-0" aria-hidden="true"></i>
-                                    <span class="cat-title truncate text-xs sm:text-xs md:text-sm font-bold ${activeSelectedCategory === c.id ? "text-cyan-300" : "text-slate-100"}">${c.name}</span>
-                                </span>
-                                <span class="cat-count text-[11px] sm:text-[10px] text-slate-300 font-mono">(${getCount(c.id)})</span>
-                            </label>
-                        `).join('')}
+                        <label for="cat_${c.id}" class="category-link flex items-center justify-between cursor-pointer hover:text-purple-300 transition">
+                            <span class="flex items-center gap-3 truncate">
+                                <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="accent-purple-400 cursor-pointer shrink-0" />
+                                <i class="fa-solid ${c.icon} text-purple-400 shrink-0" aria-hidden="true"></i>
+                                <span class="cat-title truncate ${activeSelectedCategory === c.id ? 'font-black text-purple-300' : 'text-slate-100'}">${c.name}</span>
+                            </span>
+                            <span class="cat-count font-mono">(${getCount(c.id)})</span>
+                        </label>
+                    `).join('')}
                     </div>
                 </div>
 
                 <!-- BLOQUE 3 - CONSUMIBLES, SOLUCIONES Y ELECTRÓNICA -->
                 <div class="border-b border-slate-800 pb-3">
-                    <h3 class="font-bold text-amber-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                    <h3 class="dept-heading text-amber-300 font-mono uppercase text-xs sm:text-sm font-black mb-2">
                         <i class="fa-solid fa-puzzle-piece text-amber-400" aria-hidden="true"></i> 3. Consumibles & Soluciones
                     </h3>
                     <div class="space-y-1 text-slate-300">
                         ${block3.map(c => `
-                            <label for="cat_${c.id}" class="category-link flex items-center justify-between cursor-pointer hover:text-amber-300 py-2 px-2 rounded-xl hover:bg-slate-800/80 transition min-h-[48px]">
-                                <span class="flex items-center gap-2.5 truncate">
-                                    <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-4 h-4 accent-amber-400 cursor-pointer shrink-0" />
-                                    <i class="fa-solid ${c.icon} text-xs text-slate-300 w-3.5 text-center shrink-0" aria-hidden="true"></i>
-                                    <span class="cat-title truncate text-xs sm:text-xs md:text-sm font-bold ${activeSelectedCategory === c.id ? "text-cyan-300" : "text-slate-100"}">${c.name}</span>
-                                </span>
-                                <span class="cat-count text-[11px] sm:text-[10px] text-slate-300 font-mono">(${getCount(c.id)})</span>
-                            </label>
-                        `).join('')}
+                        <label for="cat_${c.id}" class="category-link flex items-center justify-between cursor-pointer hover:text-amber-300 transition">
+                            <span class="flex items-center gap-3 truncate">
+                                <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="accent-amber-400 cursor-pointer shrink-0" />
+                                <i class="fa-solid ${c.icon} text-amber-400 shrink-0" aria-hidden="true"></i>
+                                <span class="cat-title truncate ${activeSelectedCategory === c.id ? 'font-black text-amber-300' : 'text-slate-100'}">${c.name}</span>
+                            </span>
+                            <span class="cat-count font-mono">(${getCount(c.id)})</span>
+                        </label>
+                    `).join('')}
                     </div>
                 </div>
 
