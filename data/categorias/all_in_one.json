@@ -9,9 +9,9 @@
     "costo_origen": 202.12765957446808,
     "costo_base_mxn": 3941.49,
     "costo_base_usd": 202.13,
-    "precio": 4729.79,
-    "precio_mxn": 4729.79,
-    "precio_original": 6306.39,
+    "precio": 4729.78,
+    "precio_mxn": 4729.78,
+    "precio_original": 6306.38,
     "precio_mayoreo_10pzs": 4532.71,
     "precio_piso_minimo_20": 4729.79,
     "categoria_clasificada": "all_in_one",
@@ -19,9 +19,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/MONASS1620/MONASS1620_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "MONASS1640",
@@ -43,9 +41,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/MONASS1640/MONASS1640_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUMAC1590",
@@ -67,9 +63,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUMAC1590/CPUMAC1590_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUMAC1610",
@@ -91,16 +85,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUMAC1610/CPUMAC1610_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUMAC1190",
     "clave": "CPUMAC1190",
     "nombre": "Computadora de escritorio iMac MGPM3E/A Pantalla de 24 pulgadas (diagonal) Chip M1 de Apple CPU",
     "descripcion_completa": "Computadora de escritorio iMac MGPM3E/A Pantalla de 24 pulgadas (diagonal) Chip M1 de Apple CPU de 8 núcleos con 4 núcleos de rendimiento y 4 de eficiencia GPU de 8 núcleos Neural Engine de 16 núcleos, 8 GB de memoria  Almacenamiento SSD de 256 GB. Resolución de 4480 x 2520 a 218 pixeles por pulgada compatible con 1,000 millones de colores Brillo de 500 nits Amplia gama de colores (P3) Tecnología True Tone, Cámara FaceTime HD de 1080p con procesador de señal de imagen en el chip M1, Es compatible simultáneamente con la resolución nativa de la pantalla integrada en 1,000 millones de colores y Un monitor externo con resolución de hasta 6K a 60 Hz Salida de video digital Thunderbolt 3 Salida DisplayPort nativa a través de USB‑C Compatible con salidas VGA, HDMI, DVI y Thunderbolt 2 mediante adaptadores (se venden por separado)Magic Keyboard con Touch ID, Magic Mouse, Wi-Fi Conexión inalámbrica Wi-Fi 6 802.11ax, Compatible con IEEE 802.11a/b/g/n/ac Bluetooth, Tecnología inalámbrica Bluetooth 5.0, Sistema Operativo macOS Big Sur. Cada Mac viene con una cobertura de reparación de hardware de un año a través de su garantía limitada y hasta 90 días de soporte técnico gratuito. Color Rosa",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 31683.157894736843,
     "costo_base_mxn": 31683.16,
@@ -115,9 +107,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUMAC1190/CPUMAC1190_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUMAC1860",
@@ -139,9 +129,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUMAC1860/CPUMAC1860_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUDDL3800",
@@ -163,9 +151,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUDDL3800/CPUDDL3800_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUDDL5070",
@@ -187,9 +173,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUDDL5070/CPUDDL5070_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUDDL5110",
@@ -211,9 +195,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUDDL5110/CPUDDL5110_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUDDL5000",
@@ -235,16 +217,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUDDL5000/CPUDDL5000_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOHPI1410",
     "clave": "AIOHPI1410",
     "nombre": "Computadora de escritorio All in One HP ProOne 240 G10 23.8\" (CS4D4LT#ABM). Procesador Core Ult",
     "descripcion_completa": "Computadora de escritorio All in One HP ProOne 240 G10 23.8\" (CS4D4LT#ABM). Procesador Core Ultra 5 125U , Memoria RAM 8GB 5600MT/s DDR5 (1X8GB), Almacenamiento SSD 512 GB, Windows 11 Home.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 13723.40425531915,
     "costo_base_mxn": 13723.4,
@@ -259,16 +239,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOHPI1410/AIOHPI1410_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOHPI1350",
     "clave": "AIOHPI1350",
     "nombre": "Computadora de escritorio All in One HP ProOne 240 G10 23.8\" (C27NZLT#ABM). Procesador Core Ult",
     "descripcion_completa": "Computadora de escritorio All in One HP ProOne 240 G10 23.8\" (C27NZLT#ABM). Procesador Core Ultra 5 125U (0.70 GHz, up to 4.30 GHz, 12 cores / 14 threads - 14th Generation) , Memoria RAM 8GB 5600MT/s DDR5 (1X8GB), Almacenamiento SSD 512 GB, Windows 11 Home.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 15106.382978723404,
     "costo_base_mxn": 15106.38,
@@ -283,16 +261,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOHPI1350/AIOHPI1350_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOHPI1420",
     "clave": "AIOHPI1420",
     "nombre": "Computadora de escritorio All in One HP ProStudio 2 All-in-One G2a 23.8'' (D44W9LT#ABM). Proces",
     "descripcion_completa": "Computadora de escritorio All in One HP ProStudio 2 All-in-One G2a 23.8'' (D44W9LT#ABM). Procesador AMD Ryzen 5 220 (aumento máximo del reloj de hasta 4,9 GHz, 16 MB L3 de memoria caché , 6 núcleos y 12 subprocesos), Memoria RAM 16GB DDR5 -5600MT/s (1X16GB), Almacenamiento SSD 512 GB PCIe® NVMe™ M.2, 23.8\" diagonal, FHD (1920 x 1080), Windows 11 Home.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 15472.631578947368,
     "costo_base_mxn": 15472.63,
@@ -307,16 +283,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOHPI1420/AIOHPI1420_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOHPI1460",
     "clave": "AIOHPI1460",
     "nombre": "Computadora de escritorio All in One HP ProOne 240 G10 23.8\" (D71Y0LT#ABM). Procesador Intel Co",
     "descripcion_completa": "Computadora de escritorio All in One HP ProOne 240 G10 23.8\" (D71Y0LT#ABM). Procesador Intel Core Ultra 5 125U , Memoria RAM 8GB 5600MT/s DDR5 (1X8GB), Almacenamiento SSD 512 GB, Windows 11 Home.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 16789.473684210527,
     "costo_base_mxn": 16789.47,
@@ -331,23 +305,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOHPI1460/AIOHPI1460_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOHPI1440",
     "clave": "AIOHPI1440",
     "nombre": "Computadora de escritorio All in One HP ProStudio 2 All-in-One G2a Next Gen AI 23.8'' (D31RJLT#",
     "descripcion_completa": "Computadora de escritorio All in One HP ProStudio 2 All-in-One G2a Next Gen AI 23.8'' (D31RJLT#ABM). Procesador AMD Ryzen AI 7 445 (2.00 GHz, up to 4.60 GHz, 6 cores / 12 threads), Memoria 16GB DDR5-5600MT/s (1X16GB) SODIMM, Almacenamiento SSD 512 GB PCIe® NVMe™ M.2, 23.8\" diagonal, FHD (1920 x 1080), Windows 11 Pro 64-bit.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 19041.48936170213,
     "costo_base_mxn": 19041.49,
     "costo_base_usd": 976.49,
-    "precio": 22849.79,
-    "precio_mxn": 22849.79,
-    "precio_original": 30466.39,
+    "precio": 22849.78,
+    "precio_mxn": 22849.78,
+    "precio_original": 30466.38,
     "precio_mayoreo_10pzs": 21897.71,
     "precio_piso_minimo_20": 22849.79,
     "categoria_clasificada": "all_in_one",
@@ -355,16 +327,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOHPI1440/AIOHPI1440_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLEN1760",
     "clave": "AIOLEN1760",
     "nombre": "All In One IdeaCentre AIO 24IRH9, F0HN00FQLD, Intel® Core™ i5-13420H, 8C (4P + 4E) / 12T, P-cor",
     "descripcion_completa": "All In One IdeaCentre AIO 24IRH9, F0HN00FQLD, Intel® Core™ i5-13420H, 8C (4P + 4E) / 12T, P-core up to 4.6GHz, E-core up to 3.4GHz, 12MB,  RAM 1x 8GB SO-DIMM DDR5-5200, Almacenamiento 512GB SSD M.2 2280, Tamaño  23.8\" FHD (1920x1080) IPS Anti-glare 250nits, 100Hz, 99% sRGB, hardware low blue light, 3-side borderless, TOUCH, PCIe® 4.0x4 NVMe®, 2x USB 2.0, 1x HDMI-out 1.4, 1x Ethernet (RJ-45) Color nube gris, Windows 11 Home, Incluye teclado y mouse, Garantía de 1 año en centro de servicio.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 16968.42105263158,
     "costo_base_mxn": 16968.42,
@@ -379,9 +349,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLEN1760/AIOLEN1760_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLEN1800",
@@ -403,9 +371,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLEN1800/AIOLEN1800_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLEN1810",
@@ -427,16 +393,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLEN1810/AIOLEN1810_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLEN1840",
     "clave": "AIOLEN1840",
     "nombre": "ThinkCentre neo 55a 24 G6, 13FA003VLS. AMD Ryzen 7 250 (8C / 16T, 3.3 / 5.1GHz, 8MB L2 / 16MB L",
     "descripcion_completa": "ThinkCentre neo 55a 24 G6, 13FA003VLS. AMD Ryzen 7 250 (8C / 16T, 3.3 / 5.1GHz, 8MB L2 / 16MB L3), 1x 16GB SODIMM DDR5-5600, 1TB SSD M.2 2280 PCIe 4.0x4 NVMe, Integrated AMD Radeon 780M Graphics, Windows 11 Pro, Spanish, Case color - Luna Grey, garantía 1 año en sitio.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 20094.736842105263,
     "costo_base_mxn": 20094.74,
@@ -451,16 +415,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLEN1840/AIOLEN1840_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLEN1830",
     "clave": "AIOLEN1830",
     "nombre": "ThinkCentre neo 55a 24 G6, 13FA003ULS. AMD Ryzen 5 220 (6C/12T, 3,2/4,9 GHz, 6 MB L2/16 MB L3),",
     "descripcion_completa": "ThinkCentre neo 55a 24 G6, 13FA003ULS. AMD Ryzen 5 220 (6C/12T, 3,2/4,9 GHz, 6 MB L2/16 MB L3), 1x 16 GB SODIMM DDR5-5600, SSD de 512 GB M.2 2280 PCIe 4.0x4 NVMe, Gráficos AMD Radeon 740M integrados, Windows 11 Pro, español, garantía 1 año en sitio.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 17042.105263157897,
     "costo_base_mxn": 17042.11,
@@ -475,9 +437,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLEN1830/AIOLEN1830_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLEN1640",
@@ -499,16 +459,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLEN1640/AIOLEN1640_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLEN1820",
     "clave": "AIOLEN1820",
     "nombre": "Lenovo ThinkCentre neo 50a 24 Gen 5, 12SD00AMLS, Tamaño 23.8\"  FHD (1920x1080) IPS Anti-glare 2",
     "descripcion_completa": "Lenovo ThinkCentre neo 50a 24 Gen 5, 12SD00AMLS, Tamaño 23.8\"  FHD (1920x1080) IPS Anti-glare 250nits, 99% sRGB, Intel Core 5 210H, 8C (4P + 4E) / 12T, P-core 2.2 / 4.8GHz, E-core 1.6 / 3.6GHz, 12MB Intel Smart Cache, Memoria RAM 1x 16GB SODIMM DDR5-5200, Almacenamiento 512GB SSD M.2 2280 PCIe 4.0x4 NVMe, luna gris, Teclado y Mouse USB español(LA) Garantía 1 año en sitio, Sistema operativo Windows® 11 pro.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 17591.0,
     "costo_base_mxn": 17591.0,
@@ -523,16 +481,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLEN1820/AIOLEN1820_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLEN1860",
     "clave": "AIOLEN1860",
     "nombre": "Lenovo ThinkCentre neo 50a 27 Gen 5, 12SB0075LS, Tamaño 27\" FHD (1920x1080) IPS Anti-glare 300n",
     "descripcion_completa": "Lenovo ThinkCentre neo 50a 27 Gen 5, 12SB0075LS, Tamaño 27\" FHD (1920x1080) IPS Anti-glare 300nits, 99% sRGB, Intel Core™ 5 210H, 8C (4P + 4E) / 12T, P-core 2.2 / 4.8GHz, E-core 1.6 / 3.6GHz, 12MB Intel® Smart Cache, Memoria RAM 1x 16GB SODIMM DDR5-5200, Almacenamiento 512GB SSD M.2 2280 PCIe 4.0x4 NVMe, luna gris, Teclado y Mouse USB español(LA) Garantía 1 año en sitio, Sistema operativo Windows 11 pro.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 18491.578947368424,
     "costo_base_mxn": 18491.58,
@@ -547,16 +503,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLEN1860/AIOLEN1860_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLEN1880",
     "clave": "AIOLEN1880",
     "nombre": "ThinkCentre neo 50a 24 G5 C7, 12SD00ANLS. Intel Core 7 240H, 10C (6P + 4E) / 16T, P-core 2.5 / ",
     "descripcion_completa": "ThinkCentre neo 50a 24 G5 C7, 12SD00ANLS. Intel Core 7 240H, 10C (6P + 4E) / 16T, P-core 2.5 / 5.2GHz, E-core 1.8 / 4.0GHz,1x 16GB SODIMM DDR5-5200, 1TB SSD M.2 2280 PCIe 4.0x4 NVMe Gráficos Intel  Integrados, Windows 11 Pro, Español, garantía 1 año en sitio.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 24726.315789473687,
     "costo_base_mxn": 24726.32,
@@ -571,16 +525,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLEN1880/AIOLEN1880_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLNX330",
     "clave": "AIOLNX330",
     "nombre": "All in one Lanix X240 V3 41985. Con diseño elegante y moderno ahorre espacio en su escritorio y",
     "descripcion_completa": "All in one Lanix X240 V3 41985. Con diseño elegante y moderno ahorre espacio en su escritorio y elimine cables con el nuevo sistema todo en uno. Pantalla 23.8” LED Full HD (1920 x 1080), IPS, curvo, borde delgado. Procesador Intel® Core i3 1220P, Dual Core, 1.70Ghz Hasta 4.10Ghz, 6Mb Caché. Gráficos Integrados, UHD Intel® 600. Almacenamiento: 256GB SSD M.2 + 1 espacio adicional para SSD/HDD 2.5” para expansión. Memoria RAM 8GB. Tarjeta de red Ethernet  integrada10/100/1000 Mb Base-TX. Tarjeta de red inalámbrica 802.11 b/g/n Almacenamiento SSD 256GB M.2. Lector de tarjetas Micro SD. Mouse y teclado inalámbrico. Sistema Operativo Windows® 11 Profesional. Garantía e 1 año directo con proveedor.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 8655.38,
     "costo_base_mxn": 8655.38,
@@ -595,16 +547,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLNX330/AIOLNX330_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLNX410",
     "clave": "AIOLNX410",
     "nombre": "All in one Lanix X240 V3 42113. Con diseño elegante y moderno ahorre espacio en su escritorio y",
     "descripcion_completa": "All in one Lanix X240 V3 42113. Con diseño elegante y moderno ahorre espacio en su escritorio y elimine cables con el nuevo sistema todo en uno. Pantalla 23.8” LED Full HD (1920 x 1080), IPS, curvo, borde delgado. Procesador Intel® Core i3 1315U, Dual Core, 1.70Ghz Hasta 4.10Ghz, 6Mb Caché. Gráficos Integrados, UHD Intel® 600. Almacenamiento: 512GB SSD M.2 + 1 espacio adicional para SSD/HDD 2.5” para expansión. Memoria RAM 8GB. Tarjeta de red Ethernet  integrada10/100/1000 Mb Base-TX. Tarjeta de red inalámbrica 802.11 b/g/n Almacenamiento SSD 256GB M.2. Lector de tarjetas Micro SD. Mouse y teclado inalámbrico. Sistema Operativo Windows® 11 Profesional. Garantía e 1 año directo con proveedor.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 9834.408602150537,
     "costo_base_mxn": 9834.41,
@@ -619,16 +569,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLNX410/AIOLNX410_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLNX420",
     "clave": "AIOLNX420",
     "nombre": "All in one Lanix X240 V3 42115. Con diseño elegante y moderno ahorre espacio en su escritorio y",
     "descripcion_completa": "All in one Lanix X240 V3 42115. Con diseño elegante y moderno ahorre espacio en su escritorio y elimine cables con el nuevo sistema todo en uno. Pantalla 23.8” LED Full HD (1920 x 1080), IPS, curvo, borde delgado. Procesador Intel® Core i3 1315U, Dual Core, 1.70Ghz Hasta 4.10Ghz, 6Mb Caché. Gráficos Integrados, UHD Intel® 600. Almacenamiento: 512GB SSD M.2 + 1 espacio adicional para SSD/HDD 2.5” para expansión. Memoria RAM 16GB. Tarjeta de red Ethernet  integrada10/100/1000 Mb Base-TX. Tarjeta de red inalámbrica 802.11 b/g/n Almacenamiento SSD 256GB M.2. Lector de tarjetas Micro SD. Mouse y teclado inalámbrico. Sistema Operativo Windows® 11 Profesional. Garantía e 1 año directo con proveedor.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 10715.05376344086,
     "costo_base_mxn": 10715.05,
@@ -643,16 +591,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLNX420/AIOLNX420_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLNX380",
     "clave": "AIOLNX380",
     "nombre": "All in one Lanix X240 V5. 42089 Con diseño elegante y moderno ahorre espacio en su escritorio y",
     "descripcion_completa": "All in one Lanix X240 V5. 42089 Con diseño elegante y moderno ahorre espacio en su escritorio y elimine cables con el nuevo sistema todo en uno. Pantalla 23.8” LED Full HD (1920 x 1080), IPS, curvo, borde delgado. Procesador Intel® Core i5 13600H, Quad Core, 1.60Ghz, Hasta 4.20Ghz, 6Mb Caché. Gráficos Integrados, UHD Intel® 600. Memoria RAM 8GB. Tarjeta de red Ethernet  integrada10/100/1000 Mb Base-TX. Tarjeta de red inalámbrica 802.11 b/g/n Almacenamiento SSD 512GB M.2. Lector de tarjetas Micro SD. Mouse y teclado inalambrico. Sistema Operativo Windows® 11 Profesional. Garantía e 1 año directo con proveedor.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 11436.881720430107,
     "costo_base_mxn": 11436.88,
@@ -667,16 +613,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLNX380/AIOLNX380_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLNX390",
     "clave": "AIOLNX390",
     "nombre": "All in one Lanix X240 V5. 42091 Con diseño elegante y moderno ahorre espacio en su escritorio y",
     "descripcion_completa": "All in one Lanix X240 V5. 42091 Con diseño elegante y moderno ahorre espacio en su escritorio y elimine cables con el nuevo sistema todo en uno. Pantalla 23.8” LED Full HD (1920 x 1080), IPS, curvo, borde delgado. Procesador Intel® Core i5 13600H, Quad Core, 1.60Ghz, Hasta 4.20Ghz, 6Mb Caché. Gráficos Integrados, UHD Intel® 600. Memoria RAM 16GB. Tarjeta de red Ethernet  integrada10/100/1000 Mb Base-TX. Tarjeta de red inalámbrica 802.11 b/g/n Almacenamiento SSD 512GB M.2. Lector de tarjetas Micro SD. Mouse y teclado inalambrico. Sistema Operativo Windows® 11 Profesional. Garantía e 1 año directo con proveedor.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 12349.462365591397,
     "costo_base_mxn": 12349.46,
@@ -691,16 +635,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLNX390/AIOLNX390_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLNX400",
     "clave": "AIOLNX400",
     "nombre": "All in one Lanix X240 V5. 42082 Con diseño elegante y moderno ahorre espacio en su escritorio y",
     "descripcion_completa": "All in one Lanix X240 V5. 42082 Con diseño elegante y moderno ahorre espacio en su escritorio y elimine cables con el nuevo sistema todo en uno. Pantalla 23.8” LED Full HD (1920 x 1080), IPS, curvo, borde delgado. Procesador Intel® Core i7 13620H, Quad Core, 1.60Ghz, Hasta 4.20Ghz, 6Mb Caché. Gráficos Integrados, UHD Intel® 600. Memoria RAM 32GB. Tarjeta de red Ethernet  integrada10/100/1000 Mb Base-TX. Tarjeta de red inalámbrica 802.11 b/g/n Almacenamiento SSD 1TB M.2. Lector de tarjetas Micro SD. Mouse y teclado inalambrico. Sistema Operativo Windows® 11 Profesional. Garantía e 1 año directo con proveedor.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 14526.774193548386,
     "costo_base_mxn": 14526.77,
@@ -715,16 +657,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLNX400/AIOLNX400_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLNX450",
     "clave": "AIOLNX450",
     "nombre": "All in one Lanix X240. 42188 Con diseño elegante y moderno ahorre espacio en su escritorio y el",
     "descripcion_completa": "All in one Lanix X240. 42188 Con diseño elegante y moderno ahorre espacio en su escritorio y elimine cables con el nuevo sistema todo en uno. Pantalla 23.8” LED Full HD (1920 x 1080), IPS, curvo, borde delgado. Procesador Intel® Core i7 13620H, Quad Core, 1.60Ghz, Hasta 4.20Ghz, 6Mb Caché. Gráficos Integrados, UHD Intel® 600. Memoria RAM 32GB. Tarjeta de red Ethernet  integrada10/100/1000 Mb Base-TX. Tarjeta de red inalámbrica 802.11 b/g/n Almacenamiento SSD 1TB M.2. Lector de tarjetas Micro SD. Mouse y teclado inalambrico. Sistema Operativo Windows® 11 Profesional. Garantía e 1 año directo con proveedor.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 16587.956989247312,
     "costo_base_mxn": 16587.96,
@@ -739,16 +679,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLNX450/AIOLNX450_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOLNX460",
     "clave": "AIOLNX460",
     "nombre": "All in one Lanix X240. 42190 Con diseño elegante y moderno ahorre espacio en su escritorio y el",
     "descripcion_completa": "All in one Lanix X240. 42190 Con diseño elegante y moderno ahorre espacio en su escritorio y elimine cables con el nuevo sistema todo en uno. Pantalla 23.8” LED Full HD (1920 x 1080), IPS, curvo, borde delgado. Procesador Intel® Core i7 13620H, Quad Core, 1.60Ghz, Hasta 4.20Ghz, 6Mb Caché. Gráficos Integrados, UHD Intel® 600. Memoria RAM 16GB. Tarjeta de red Ethernet  integrada10/100/1000 Mb Base-TX. Tarjeta de red inalámbrica 802.11 b/g/n Almacenamiento SSD 512 GB. M.2. Mouse y teclado inalambrico. Lector de tarjetas Micro SD. Sistema Operativo Windows® 11 Profesional. Garantía e 1 año directo con proveedor.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 15721.290322580644,
     "costo_base_mxn": 15721.29,
@@ -763,16 +701,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOLNX460/AIOLNX460_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOQIA040",
     "clave": "AIOQIA040",
     "nombre": "Computadora All in One PC 27''QIAN modelo QZI-275T15-MK , Pantalla de 27\" Full HD (1920 × 1080)",
     "descripcion_completa": "Computadora All in One PC 27''QIAN modelo QZI-275T15-MK , Pantalla de 27\" Full HD (1920 × 1080) con relación de aspecto 16:9 para una visualización cómoda y mayor productividad, Procesador Intel® Core™ i5-1135G7 para un desempeño confiable en tareas diarias y multitarea, Gráficos integrados Intel® HD para imágenes fluidas, streaming y aplicaciones de oficina, 16GB DDR4 para una multitarea eficiente y mayor productividad, 512GB SSD para arranques rápidos del sistema y acceso ágil a tus archivos. Color: Negro. Garantía. 1 año.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 751.7826086956521,
     "costo_base_mxn": 14659.76,
@@ -787,16 +723,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOQIA040/AIOQIA040_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "AIOQIA050",
     "clave": "AIOQIA050",
     "nombre": "Computadora All in One PC 24''QIAN modelo QZI-243T15-MK,  Pantalla de 23.8\" Full HD (1920 x 108",
     "descripcion_completa": "Computadora All in One PC 24''QIAN modelo QZI-243T15-MK,  Pantalla de 23.8\" Full HD (1920 x 1080) con relación de aspecto 16:9 para una visualización cómoda y mayor productividad, Procesador Intel® Core™ i3-1115G4 para un desempeño confiable en tareas diarias y multitarea, Gráficos integrados Intel® UHD Graphics para imágenes fluidas en trabajo, streaming y aplicaciones, 16 GB DDR4 para un rendimiento ágil y eficiente en múltiples aplicaciones,  512 GB SSD para arranque rápido del sistema y acceso veloz a archivos. Color: Negro. Garantía: 1 año.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 520.3804347826086,
     "costo_base_mxn": 10147.42,
@@ -811,9 +745,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/AIOQIA050/AIOQIA050_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCMAC2120",
@@ -835,9 +767,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCMAC2120/ACCMAC2120_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCMAC1870",
@@ -859,9 +789,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCMAC1870/ACCMAC1870_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCMAC1880",
@@ -883,9 +811,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCMAC1880/ACCMAC1880_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "TECLOG1190",
@@ -907,9 +833,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/TECLOG1190/TECLOG1190_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCUBA200",
@@ -921,9 +845,9 @@
     "costo_origen": 81.24444444444445,
     "costo_base_mxn": 81.24,
     "costo_base_usd": 4.17,
-    "precio": 97.49,
-    "precio_mxn": 97.49,
-    "precio_original": 129.99,
+    "precio": 97.48,
+    "precio_mxn": 97.48,
+    "precio_original": 129.98,
     "precio_mayoreo_10pzs": 93.43,
     "precio_piso_minimo_20": 97.49,
     "categoria_clasificada": "all_in_one",
@@ -931,8 +855,6 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCUBA200/ACCUBA200_400.jpg",
     "placeholder": "./assets/img/placeholders/aio_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   }
 ]

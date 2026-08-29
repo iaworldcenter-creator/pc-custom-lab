@@ -4,7 +4,7 @@
     "clave": "GABEVO560",
     "nombre": "Gabinete Mini Torre Toledo (EV-1026), Gabinete Mini Torre Toledo / Mini Torre / MB Micro ATX, I",
     "descripcion_completa": "Gabinete Mini Torre Toledo (EV-1026), Gabinete Mini Torre Toledo / Mini Torre / MB Micro ATX, ITX / 1x USB A + 1x USB 3.0 + 1x Audio / Micrófono / Incluye Fuente de poder TFX 500 W / Negro Modelo: EV-1026",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 558.8235294117648,
     "costo_base_mxn": 558.82,
@@ -19,16 +19,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO560/GABEVO560_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO570",
     "clave": "GABEVO570",
     "nombre": "Gabinete Mini Torre Toledo (EV-1027), Gabinete Mini Torre Toledo / Mini Torre / MB Micro ATX, I",
     "descripcion_completa": "Gabinete Mini Torre Toledo (EV-1027), Gabinete Mini Torre Toledo / Mini Torre / MB Micro ATX, ITX / 1x USB A + 1x USB 3.0 + 1x Audio / Micrófono / Incluye Fuente de poder TFX 500 W / Negro Modelo: EV-1027",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 558.8235294117648,
     "costo_base_mxn": 558.82,
@@ -43,9 +41,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO570/GABEVO570_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO150",
@@ -67,20 +63,18 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO150/GABEVO150_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO170",
     "clave": "GABEVO170",
     "nombre": "Fuente de Poder para Ensamble. Compatible con Gabinetes ATX entrega un rendimiento de 600W mode",
     "descripcion_completa": "Fuente de Poder para Ensamble. Compatible con Gabinetes ATX entrega un rendimiento de 600W modelo PSUEV1 Cuenta con dos conectores de energía SATA2 y conector de voltaje de 4 pines para VGA.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 301.7647058823529,
     "costo_base_mxn": 301.76,
-    "costo_base_usd": 15.48,
+    "costo_base_usd": 15.47,
     "precio": 362.12,
     "precio_mxn": 362.12,
     "precio_original": 482.82,
@@ -91,9 +85,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO170/GABEVO170_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO520",
@@ -115,9 +107,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO520/GABEVO520_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO290",
@@ -139,9 +129,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO290/GABEVO290_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT660",
@@ -163,9 +151,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT660/GABACT660_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT670",
@@ -187,16 +173,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT670/GABACT670_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT530",
     "clave": "GABACT530",
     "nombre": "Gabinete Mini Torre Fuji GC470 Advanced Series, Factor: Micro Atx - Mini ITX, Panel Lateral Cri",
     "descripcion_completa": "Gabinete Mini Torre Fuji GC470 Advanced Series, Factor: Micro Atx - Mini ITX, Panel Lateral Cristal Templado, Incluye 2 Ventiladores 120mm FRGB, Espacio para Ventilador 80mm trasero no Incluido, Puertos: 1x USB 2.0, 1x USB 3.0 y 1x 3.5mm Dual (Audio y micrófono), Bahías 1x 3.5\"/2.5\" combo, 3x 2.5\" SSD, Fuente de poder 500w Color Blanco. AC-939515",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 623.5294117647059,
     "costo_base_mxn": 623.53,
@@ -211,16 +195,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT530/GABACT530_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT540",
     "clave": "GABACT540",
     "nombre": "Gabinete Mini Torre Acteck KIOTO GC220 ESSENTIAL SERIES Factor de forma: Mini Torre, Panel Late",
     "descripcion_completa": "Gabinete Mini Torre Acteck KIOTO GC220 ESSENTIAL SERIES Factor de forma: Mini Torre, Panel Lateral Cristal Templado, Tarjetas madre compatibles: Micro ATX y Mini ITX, Soporte para ventiladores: Superior 2 * 120 mm 1* 80mm, No Incluido, Bahías: 1x3.5\"/2.5 Combo ODD, 3x2.5 SSD, Ranuras PCI: 4 (no compatible), Puertos:  2xUSB 2.0, 1x3.5mm Audio+ Micrófono, Fuente de poder ATX 500w. Color Blanco AC-939522",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 464.7058823529412,
     "costo_base_mxn": 464.71,
@@ -235,16 +217,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT540/GABACT540_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT550",
     "clave": "GABACT550",
     "nombre": "Gabinete Mini Torre Acteck KIOTO GC220F ESSENTIAL SERIES Factor de forma: Mini Torre, Tarjetas ",
     "descripcion_completa": "Gabinete Mini Torre Acteck KIOTO GC220F ESSENTIAL SERIES Factor de forma: Mini Torre, Tarjetas madre compatibles: Micro ATX y Mini ITX, Soporte para ventiladores: Superior 2 * 120 mm 1* 80mm, No Incluido, Bahías: 1x3.5\"/2.5 Combo ODD, 3x2.5 SSD, Ranuras PCI: 4 (no compatible), Puertos:  2xUSB 2.0, 1x3.5mm Audio+ Micrófono, Fuente de poder ATX 500w. Color Blanco AC-939546",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 411.7647058823529,
     "costo_base_mxn": 411.76,
@@ -259,16 +239,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT550/GABACT550_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT560",
     "clave": "GABACT560",
     "nombre": "Gabinete Mini Torre Acteck KIOTO GC220F ESSENTIAL SERIES Factor de forma: Mini Torre, Tarjetas ",
     "descripcion_completa": "Gabinete Mini Torre Acteck KIOTO GC220F ESSENTIAL SERIES Factor de forma: Mini Torre, Tarjetas madre compatibles: Micro ATX y Mini ITX, Soporte para ventiladores: Superior 2 * 120 mm 1* 80mm, No Incluido, Bahías: 1x3.5\"/2.5 Combo ODD, 3x2.5 SSD, Ranuras PCI: 4 (no compatible), Puertos:  2xUSB 2.0, 1x3.5mm Audio+ Micrófono, Fuente de poder ATX 500w. Color Negro AC-939539",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 411.7647058823529,
     "costo_base_mxn": 411.76,
@@ -283,9 +261,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT560/GABACT560_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT130",
@@ -307,16 +283,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT130/GABACT130_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT410",
     "clave": "GABACT410",
     "nombre": "Gabinete Mini Torre Acteck NEUSS PRO GI717 ELITE SERIES Tarjetas madre compatibles:  Micro  ATX",
     "descripcion_completa": "Gabinete Mini Torre Acteck NEUSS PRO GI717 ELITE SERIES Tarjetas madre compatibles:  Micro  ATX/ITX. Panel Lateral Cristal Templado, Soporte para ventiladores: Trasero 1* 120mm, Costado 2* 120mm, Superior 2*120mm, No Incluidos, Bahías: 2 x 3.5 HDD, 2 x 2.5 SSD, Ranuras PCI: 4, Puertos:  1x USB 2.0, 1x USB 3.0 1x USB C 1 x 3.5mm Audio+ Micrófono, SIN FUENTE DE PODER, Color NEGRO AC-935937",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 400.0,
     "costo_base_mxn": 400.0,
@@ -331,16 +305,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT410/GABACT410_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT420",
     "clave": "GABACT420",
     "nombre": "Gabinete Mini Torre Acteck NEUSS PRO GI717 ELITE SERIES Tarjetas madre compatibles:  Micro  ATX",
     "descripcion_completa": "Gabinete Mini Torre Acteck NEUSS PRO GI717 ELITE SERIES Tarjetas madre compatibles:  Micro  ATX/ITX. Panel Lateral Cristal Templado, Soporte para ventiladores: Trasero 1* 120mm, Costado 2* 120mm, Superior 2*120mm, No Incluidos, Bahías: 2 x 3.5 HDD, 2 x 2.5 SSD, Ranuras PCI: 4, Puertos:  1x USB 2.0, 1x USB 3.0 1x USB C 1 x 3.5mm Audio+ Micrófono, SIN FUENTE DE PODER, Color Blanco AC-936002",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 400.0,
     "costo_base_mxn": 400.0,
@@ -355,16 +327,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT420/GABACT420_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT440",
     "clave": "GABACT440",
     "nombre": "Gabinete Mini Torre Acteck NEUSS PLUS GI707 ELITE SERIES Tarjetas madre compatibles:  Micro  AT",
     "descripcion_completa": "Gabinete Mini Torre Acteck NEUSS PLUS GI707 ELITE SERIES Tarjetas madre compatibles:  Micro  ATX/ITX. Soporte para ventiladores: Trasero 1* 80mm, No Incluido, Bahías: 2 x 3.5 HDD, 2 x 2.5 SSD, Ranuras PCI: 4, Puertos: 1x USB 2.0, 1xUSB 3.0,  1 x 3.5mm Audio+ Micrófono, Fuente de poder SFX 500w. atx 20 + 4 PIN, ATX 12V 4PIN, PCIe 6+2 PIN, 2 SATA, 1 Molex 4 PIN, Color Blanco AC-936026",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 423.5294117647059,
     "costo_base_mxn": 423.53,
@@ -379,9 +349,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT440/GABACT440_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT160",
@@ -403,16 +371,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT160/GABACT160_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT320",
     "clave": "GABACT320",
     "nombre": "Gabinete micro Torre Performance II GI215 Essential Series, Factor: Micro Atx - Mini ITX, Sopor",
     "descripcion_completa": "Gabinete micro Torre Performance II GI215 Essential Series, Factor: Micro Atx - Mini ITX, Soporte para ventiladores: Superior 2x120mm no incluidos 1x120mm frontal y lateral no incluidos, Ranuras PCI 4, Puertos: 2x USB 2.0 y 1x 3.5mm Dual (Audio y micrófono), Bahías 1x 3.5\" HDD 1x 2.5\" SSD, Fuente de poder 500w Color Negro. AC-935777",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 464.7058823529412,
     "costo_base_mxn": 464.71,
@@ -427,16 +393,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT320/GABACT320_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT580",
     "clave": "GABACT580",
     "nombre": "Gabinete Micro Torre Performance II GI215F Essential Series Factor: Micro Atx - Mini ITX, Sopor",
     "descripcion_completa": "Gabinete Micro Torre Performance II GI215F Essential Series Factor: Micro Atx - Mini ITX, Soporte para ventiladores: Superior 2x120mm no incluidos 1x120mm frontal y lateral no incluidos, Ranuras PCI 4, Puertos: 2x USB 2.0 y 1x 3.5mm Dual (Audio y micrófono), Bahías 1x 3.5\" HDD 1x 2.5\" SSD, Fuente de poder 500w Color Blanco. AC-940047",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 464.7058823529412,
     "costo_base_mxn": 464.71,
@@ -451,16 +415,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT580/GABACT580_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT270",
     "clave": "GABACT270",
     "nombre": "Gabinete media Torre Kiruna II GM420 Advanced Series, Factor: ATX, Micro Atx - Mini ITX,, Sopor",
     "descripcion_completa": "Gabinete media Torre Kiruna II GM420 Advanced Series, Factor: ATX, Micro Atx - Mini ITX,, Soporte de ventiladores: 3x120mm Superior 1x120mm Frontal no incluidos, Ranuras PCI 7, Puertos: 2x USB 2.0, 1x3.5mm Dual(Audio y micrófono), Bahías: 1x5.25\" ODD,2x 2.5/3.5 (SSD, HDD) combo, 2x 2.5\" SSD, Fuente de poder 500w Color Negro. AC-935685",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 469.5294117647059,
     "costo_base_mxn": 469.53,
@@ -475,16 +437,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT270/GABACT270_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT140",
     "clave": "GABACT140",
     "nombre": "Gabinete Micro ATX Acteck Gc240 KIOTO ESSENTIAL SERIES Factor de forma: Mini Torre. Tarjetas ma",
     "descripcion_completa": "Gabinete Micro ATX Acteck Gc240 KIOTO ESSENTIAL SERIES Factor de forma: Mini Torre. Tarjetas madre compatibles: Micro ATX y Mini ITX, Soporte para ventiladores: Lateral 1*120 mm, Frontal 1*120 mm, No Incluidos, Bahías: 1x5.25\" ODD, 2x 3,5/2.5\"(Combo) SSD, Ranuras PCI 4, Puertos: 1xUSB 3.0 1xUSB 2.0, 2x3.5mm Audio+ Micrófono, Fuente de poder ATX 500w. Color NEGRO AC-932547",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 494.11764705882354,
     "costo_base_mxn": 494.12,
@@ -499,16 +459,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT140/GABACT140_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT300",
     "clave": "GABACT300",
     "nombre": "Gabinete micro Torre Performance II GI215w Essential Series, Factor: Micro Atx - Mini ITX, Pane",
     "descripcion_completa": "Gabinete micro Torre Performance II GI215w Essential Series, Factor: Micro Atx - Mini ITX, Panel de acrílico, Soporte para ventiladores: Superior 2x120mm no incluidos 1x120mm frontal y lateral no incluidos, Ranuras PCI 4, Puertos: 2x USB 2.0 y 1x 3.5mm Dual (Audio y micrófono), Bahías 1x 3.5\" HDD 1x 2.5\" SSD, Fuente de poder 500w Color Negro. AC-935784",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 500.0,
     "costo_base_mxn": 500.0,
@@ -523,16 +481,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT300/GABACT300_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT310",
     "clave": "GABACT310",
     "nombre": "Gabinete micro Torre Performance II GI215w Essential Series, Factor: Micro Atx - Mini ITX, Pane",
     "descripcion_completa": "Gabinete micro Torre Performance II GI215w Essential Series, Factor: Micro Atx - Mini ITX, Panel de acrílico, Soporte para ventiladores: Superior 2x120mm no incluidos 1x120mm frontal y lateral no incluidos, Ranuras PCI 4, Puertos: 2x USB 2.0 y 1x 3.5mm Dual (Audio y micrófono), Bahías 1x 3.5\" HDD 1x 2.5\" SSD, Fuente de poder 500w Color Blanco. AC-935852",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 500.0,
     "costo_base_mxn": 500.0,
@@ -547,16 +503,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT310/GABACT310_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT280",
     "clave": "GABACT280",
     "nombre": "Gabinete micro Torre Fusión II GI440 Advanced Series, Factor: Micro Atx - Mini ITX, Panel de ac",
     "descripcion_completa": "Gabinete micro Torre Fusión II GI440 Advanced Series, Factor: Micro Atx - Mini ITX, Panel de acrílico, Soporte para ventiladores: Superior 2x120mm no incluidos, Ranuras PCI 4, Puertos: 1x USB 2.0, 1x USB 3.0 y 1x 3.5mm Dual(Audio y micrófono), Bahías 1x 3.5\" HDD 1x 2.5\" SSD, Fuente de poder 500w Color Negro. AC-935753",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 564.7058823529412,
     "costo_base_mxn": 564.71,
@@ -571,16 +525,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT280/GABACT280_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT290",
     "clave": "GABACT290",
     "nombre": "Gabinete micro Torre Fusión II GI440 Advanced Series, Factor: Micro Atx - Mini ITX, Panel de ac",
     "descripcion_completa": "Gabinete micro Torre Fusión II GI440 Advanced Series, Factor: Micro Atx - Mini ITX, Panel de acrílico, Soporte para ventiladores: Superior 2x120mm no incluidos, Ranuras PCI 4, Puertos: 1x USB 2.0, 1x USB 3.0 y 1x 3.5mm Dual(Audio y micrófono), Bahías 1x 3.5\" HDD 1x 2.5\" SSD, Fuente de poder 500w Color Blanco. AC-935760",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 564.7058823529412,
     "costo_base_mxn": 564.71,
@@ -595,16 +547,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT290/GABACT290_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT250",
     "clave": "GABACT250",
     "nombre": "Gabinete media Torre Draco GM450 Advanced Series, Factor: ATX, Micro Atx - Mini ITX, Panel Late",
     "descripcion_completa": "Gabinete media Torre Draco GM450 Advanced Series, Factor: ATX, Micro Atx - Mini ITX, Panel Lateral de cristal templado, Soporte de ventiladores: 3x120mm Superior 1x120mm Frontal no incluidos, Ranuras PCI 7, Puertos: 2x USB 2.0, 1x3.5mm Dual(Audio y micrófono), Fuente de poder 500w Color Negro. AC-935715",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 693.5294117647059,
     "costo_base_mxn": 693.53,
@@ -619,16 +569,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT250/GABACT250_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT260",
     "clave": "GABACT260",
     "nombre": "Gabinete media Torre Draco GM450 Advanced Series, Factor: ATX, Micro Atx - Mini ITX, Panel Late",
     "descripcion_completa": "Gabinete media Torre Draco GM450 Advanced Series, Factor: ATX, Micro Atx - Mini ITX, Panel Lateral de cristal templado, Soporte de ventiladores: 3x120mm Superior 1x120mm Frontal no incluidos, Ranuras PCI 7, Puertos: 2x USB 2.0, 1x3.5mm Dual(Audio y micrófono), Fuente de poder 500w Color Blanco. AC-935722",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 693.5294117647059,
     "costo_base_mxn": 693.53,
@@ -643,9 +591,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT260/GABACT260_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT170",
@@ -667,9 +613,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT170/GABACT170_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT190",
@@ -691,23 +635,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT190/GABACT190_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT230",
     "clave": "GABACT230",
     "nombre": "Gabinete micro Torre Viken GM434 Advanced Series, Factor:ATX, Micro Atx - Mini ITX, ATX Plus, C",
     "descripcion_completa": "Gabinete micro Torre Viken GM434 Advanced Series, Factor:ATX, Micro Atx - Mini ITX, ATX Plus, Cristal Templado, Soporte para ventiladores: Trasero 120mm, Ranuras PCI 7, Puertos: 2x USB 2.0 y 1x 3.5mm Dual(Audio y micrófono), Fuente de poder 500w Color Negro. AC-935692",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 685.9882352941177,
     "costo_base_mxn": 685.99,
     "costo_base_usd": 35.18,
-    "precio": 823.19,
-    "precio_mxn": 823.19,
-    "precio_original": 1097.59,
+    "precio": 823.18,
+    "precio_mxn": 823.18,
+    "precio_original": 1097.58,
     "precio_mayoreo_10pzs": 788.89,
     "precio_piso_minimo_20": 823.19,
     "categoria_clasificada": "fuentes_energia",
@@ -715,23 +657,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT230/GABACT230_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT240",
     "clave": "GABACT240",
     "nombre": "Gabinete micro Torre Viken GM434 Advanced Series, Factor:ATX, Micro Atx - Mini ITX, ATX Plus, C",
     "descripcion_completa": "Gabinete micro Torre Viken GM434 Advanced Series, Factor:ATX, Micro Atx - Mini ITX, ATX Plus, Cristal Templado, Soporte para ventiladores: Trasero 120mm, Ranuras PCI 7, Puertos: 2x USB 2.0 y 1x 3.5mm Dual(Audio y micrófono), Fuente de poder 500w Color Blanco. AC-935708",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 685.9882352941177,
     "costo_base_mxn": 685.99,
     "costo_base_usd": 35.18,
-    "precio": 823.19,
-    "precio_mxn": 823.19,
-    "precio_original": 1097.59,
+    "precio": 823.18,
+    "precio_mxn": 823.18,
+    "precio_original": 1097.58,
     "precio_mayoreo_10pzs": 788.89,
     "precio_piso_minimo_20": 823.19,
     "categoria_clasificada": "fuentes_energia",
@@ -739,16 +679,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT240/GABACT240_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT200",
     "clave": "GABACT200",
     "nombre": "Gabinete Micro Torre Acteck Neuss GI485 Advanced Series Factor: Micro Atx, Mini ITX, Puertos: 2",
     "descripcion_completa": "Gabinete Micro Torre Acteck Neuss GI485 Advanced Series Factor: Micro Atx, Mini ITX, Puertos: 2 USB 1 USB C 1 puerto dual 3.5mm(audio y micrófono), Bahías: 2 2.5\" SSD, 2 3.5\" HDD, Ranura PCI: 4, Fuente de poder SFX 450w, Color Blanco. AC-935159",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 458.8235294117647,
     "costo_base_mxn": 458.82,
@@ -763,16 +701,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT200/GABACT200_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT330",
     "clave": "GABACT330",
     "nombre": "Gabinete compacto mini Torre Fuji GC470 Advanced Series, Factor: Micro Atx - Mini ITX, Panel de",
     "descripcion_completa": "Gabinete compacto mini Torre Fuji GC470 Advanced Series, Factor: Micro Atx - Mini ITX, Panel de acrílico, Soporte para ventiladores: Superior 2x120mm FRGB incluidos, 1x120mm lateral no incluidos, Ranuras PCI 4, Puertos: 2x USB 2.0, 1x USB 3.0 y 1x 3.5mm Dual (Audio y micrófono), Bahías 1x 3.5\"/2.5\" combo, 3x 2.5\" SSD, Fuente de poder 500w Color Negro. AC-935838",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 623.5294117647059,
     "costo_base_mxn": 623.53,
@@ -787,16 +723,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT330/GABACT330_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT010",
     "clave": "GABACT010",
     "nombre": "Gabinete Slim Atom Acteck-E  Lector de tarjetas SD, 2 puerto USB 2.0, Bahía 5.25\" ODD, 1 bahía ",
     "descripcion_completa": "Gabinete Slim Atom Acteck-E  Lector de tarjetas SD, 2 puerto USB 2.0, Bahía 5.25\" ODD, 1 bahía 3.5\"mm DD, Salida de audio y entrada de micrófono 3.5mm, Fuente de poder de 450w, Factor Micro ATX- Mini ITX. AC-929042",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 642.3529411764706,
     "costo_base_mxn": 642.35,
@@ -811,23 +745,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT010/GABACT010_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT700",
     "clave": "GABACT700",
     "nombre": "Gabinete Mini Torre Acteck DOOM ULTRA MESH GI750M Factor: Micro Atx, Mini ITX, Puertos: 2 USB 2",
     "descripcion_completa": "Gabinete Mini Torre Acteck DOOM ULTRA MESH GI750M Factor: Micro Atx, Mini ITX, Puertos: 2 USB 2.0 1 Puerto dual 3.5mm(audio y micrófono), Bahías: 1 2.5\" SSD, 1 3.5/2.5 Combo, 1 3.5 , Frente Malla, Panel Izquierdo de Cristal templado, , Fuente de poder ATX 500w, Incluye 2 Ventiladores 120mm FRGB, Color Negro. AC-943772",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 588.2352941176471,
     "costo_base_mxn": 588.24,
     "costo_base_usd": 30.17,
-    "precio": 705.89,
-    "precio_mxn": 705.89,
-    "precio_original": 941.19,
+    "precio": 705.88,
+    "precio_mxn": 705.88,
+    "precio_original": 941.18,
     "precio_mayoreo_10pzs": 676.48,
     "precio_piso_minimo_20": 705.89,
     "categoria_clasificada": "fuentes_energia",
@@ -835,9 +767,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT700/GABACT700_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT710",
@@ -859,9 +789,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT710/GABACT710_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT720",
@@ -883,9 +811,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT720/GABACT720_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT630",
@@ -907,9 +833,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT630/GABACT630_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT590",
@@ -931,9 +855,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT590/GABACT590_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT600",
@@ -955,16 +877,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT600/GABACT600_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT610",
     "clave": "GABACT610",
     "nombre": "Gabinete Mini Torre Slim ONEX GS455 ACTECK  Factor Micro ATX- Mini ITX, Lector de tarjetas SD, ",
     "descripcion_completa": "Gabinete Mini Torre Slim ONEX GS455 ACTECK  Factor Micro ATX- Mini ITX, Lector de tarjetas SD, 1 Puerto USB C,3 puerto USB 2.0, 1 puerto USB 3.0, 1 bahía 5.25, 2 bahía 3.5\" 1 bahía 2.5'', Salida de audio y entrada de micrófono 3.5mm, Fuente de poder de 500w, Soportes Magnéticos, Color Negro. AC-943079",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 764.7058823529412,
     "costo_base_mxn": 764.71,
@@ -979,16 +899,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT610/GABACT610_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT620",
     "clave": "GABACT620",
     "nombre": "Gabinete Mini Torre Slim ONEX GS450 ACTECK  Factor Micro ATX- Mini ITX, Lector de tarjetas SD, ",
     "descripcion_completa": "Gabinete Mini Torre Slim ONEX GS450 ACTECK  Factor Micro ATX- Mini ITX, Lector de tarjetas SD, 1 Puerto USB C, 2 puerto USB 2.0, 1 puerto USB 3.0,  2 bahía 3.5\" 1 bahía 2.5'', Salida de audio y entrada de micrófono 3.5mm, Fuente de poder de 400w, Soportes Magnéticos, Color Negro. AC-943086",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 623.5294117647059,
     "costo_base_mxn": 623.53,
@@ -1003,16 +921,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT620/GABACT620_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT210",
     "clave": "GABACT210",
     "nombre": "Gabinete Mini Torre Acteck Doom GI630 Elite Series Factor: Micro Atx, Mini ITX, Puertos: 1 USB ",
     "descripcion_completa": "Gabinete Mini Torre Acteck Doom GI630 Elite Series Factor: Micro Atx, Mini ITX, Puertos: 1 USB 2.0 1 USB 3.0  Puerto dual 3.5mm(audio y micrófono), Bahías: 1 2.5\" SSD, 1 3.5\" HDD, Ranura PCI: 4, Fuente de poder ATX 500w, Incluye 3 Ventiladores 120mm FRGB, Color Negro. AC-935739",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 764.7058823529412,
     "costo_base_mxn": 764.71,
@@ -1027,16 +943,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT210/GABACT210_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT490",
     "clave": "GABACT490",
     "nombre": "Gabinete Mini Torre Acteck ZENITH GI656 Factor: Micro Atx, Mini ITX, Puertos: 2 USB 2.0 1 USB 3",
     "descripcion_completa": "Gabinete Mini Torre Acteck ZENITH GI656 Factor: Micro Atx, Mini ITX, Puertos: 2 USB 2.0 1 USB 3.0  Puerto dual 3.5mm(audio y micrófono), Bahías: 1 2.5\" SSD, 1 3.5/2.5 Combo, 1 3.5 , Fuente de poder ATX 500w, Incluye 1 Ventiladores 120mm , Color Negro. AC-939263",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 700.9176470588235,
     "costo_base_mxn": 700.92,
@@ -1051,16 +965,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT490/GABACT490_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT500",
     "clave": "GABACT500",
     "nombre": "Gabinete Mini Torre Acteck ZENITH GI656 Factor: Micro Atx, Mini ITX, Puertos: 2 USB 2.0 1 USB 3",
     "descripcion_completa": "Gabinete Mini Torre Acteck ZENITH GI656 Factor: Micro Atx, Mini ITX, Puertos: 2 USB 2.0 1 USB 3.0  Puerto dual 3.5mm(audio y micrófono), Bahías: 1 2.5\" SSD, 1 3.5/2.5 Combo, 1 3.5 , Fuente de poder ATX 500w, Incluye 1 Ventiladores 120mm , Color Blanco. AC-939270",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 700.9176470588235,
     "costo_base_mxn": 700.92,
@@ -1075,16 +987,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT500/GABACT500_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT450",
     "clave": "GABACT450",
     "nombre": "Gabinete Mini Torre Acteck DOOM PRO CRYSTAL GI730C Factor: Micro Atx, Mini ITX, Puertos: 1 USB ",
     "descripcion_completa": "Gabinete Mini Torre Acteck DOOM PRO CRYSTAL GI730C Factor: Micro Atx, Mini ITX, Puertos: 1 USB 2.0 1 USB 3.0  Puerto dual 3.5mm(audio y micrófono), Bahías: 1 2.5\" SSD, 1 3.5/2.5 Combo, 1 3.5 , Frente Cristal, Panel Izquierdo de Cristal templado, , Fuente de poder ATX 600w, Incluye 3 Ventiladores 120mm FRGB, Color Negro. AC-939225",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 932.3176470588236,
     "costo_base_mxn": 932.32,
@@ -1099,9 +1009,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT450/GABACT450_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT650",
@@ -1123,23 +1031,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT650/GABACT650_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT640",
     "clave": "GABACT640",
     "nombre": "Gabinete Mini Torre Acteck DOOM ULTRA CRYSTAL GI750C Factor: Micro Atx, Mini ITX, Paneles de Cr",
     "descripcion_completa": "Gabinete Mini Torre Acteck DOOM ULTRA CRYSTAL GI750C Factor: Micro Atx, Mini ITX, Paneles de Cristal Templado, Puertos: 1 USB 2.0 1 USB Puerto dual 3.5mm(audio y micrófono), Bahías: 1 2.5\" SSD, 1 3.5/2.5 Combo, 1 3.5, Fuente de poder ATX 500w, Incluye 2 Ventiladores 120mm FRGB, Color Negro. AC-943789",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 588.2352941176471,
     "costo_base_mxn": 588.24,
     "costo_base_usd": 30.17,
-    "precio": 705.89,
-    "precio_mxn": 705.89,
-    "precio_original": 941.19,
+    "precio": 705.88,
+    "precio_mxn": 705.88,
+    "precio_original": 941.18,
     "precio_mayoreo_10pzs": 676.48,
     "precio_piso_minimo_20": 705.89,
     "categoria_clasificada": "fuentes_energia",
@@ -1147,16 +1053,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT640/GABACT640_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT460",
     "clave": "GABACT460",
     "nombre": "Gabinete Mini Torre Acteck DOOM PRO CRYSTAL GI730C Factor: Micro Atx, Mini ITX, Puertos: 1 USB ",
     "descripcion_completa": "Gabinete Mini Torre Acteck DOOM PRO CRYSTAL GI730C Factor: Micro Atx, Mini ITX, Puertos: 1 USB 2.0 1 USB 3.0  Puerto dual 3.5mm(audio y micrófono), Bahías: 1 2.5\" SSD, 1 3.5/2.5 Combo, 1 3.5 ,Frente Criatal, Panel Izquierdo de Cristal templado, Fuente de poder ATX 600w, Incluye 3 Ventiladores 120mm FRGB, Color Blanco. AC-939232",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 932.3176470588236,
     "costo_base_mxn": 932.32,
@@ -1171,16 +1075,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT460/GABACT460_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT220",
     "clave": "GABACT220",
     "nombre": "Gabinete Mini Torre Acteck Doom GI630 Elite Series Factor: Micro Atx, Mini ITX, Puertos: 1 USB ",
     "descripcion_completa": "Gabinete Mini Torre Acteck Doom GI630 Elite Series Factor: Micro Atx, Mini ITX, Puertos: 1 USB 2.0 1 USB 3.0  Puerto dual 3.5mm(audio y micrófono), Bahías: 1 2.5\" SSD, 1 3.5\" HDD, Ranura PCI: 4, Fuente de poder ATX 500w, Incluye 3 Ventiladores 120mm FRGB, Color Blanco. AC-935746",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 764.7058823529412,
     "costo_base_mxn": 764.71,
@@ -1195,9 +1097,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT220/GABACT220_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT120",
@@ -1209,9 +1109,9 @@
     "costo_origen": 870.5882352941177,
     "costo_base_mxn": 870.59,
     "costo_base_usd": 44.65,
-    "precio": 1044.71,
-    "precio_mxn": 1044.71,
-    "precio_original": 1392.95,
+    "precio": 1044.7,
+    "precio_mxn": 1044.7,
+    "precio_original": 1392.94,
     "precio_mayoreo_10pzs": 1001.18,
     "precio_piso_minimo_20": 1044.71,
     "categoria_clasificada": "fuentes_energia",
@@ -1219,16 +1119,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT120/GABACT120_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR1140",
     "clave": "GABBLR1140",
     "nombre": "Gabinete Gamer Mini Torre TANK GLOW PLUS 3700 Factor: Micro Atx - Mini ITX, Panel Frontal y Lat",
     "descripcion_completa": "Gabinete Gamer Mini Torre TANK GLOW PLUS 3700 Factor: Micro Atx - Mini ITX, Panel Frontal y Lateral de Crystal templado, Incluye 2 Ventiladores Laterales de 120mm ARGB, 1 Ventilador de 120mm Trasero, Puertos 1 X USB 3.0, 1 X USB 2.0, 1x3.5mm Audio y 1x3.5mm micrófono, Fuente de poder: no incluida. Color Negro. BR-943864",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 505.88235294117646,
     "costo_base_mxn": 505.88,
@@ -1243,16 +1141,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR1140/GABBLR1140_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR1150",
     "clave": "GABBLR1150",
     "nombre": "Gabinete Gamer Mini Torre TANK GLOW MINI 3500 Factor: Micro Atx - Mini ITX, Panel Frontal y Lat",
     "descripcion_completa": "Gabinete Gamer Mini Torre TANK GLOW MINI 3500 Factor: Micro Atx - Mini ITX, Panel Frontal y Lateral de Crystal templado, Incluye 2 Ventiladores Laterales de 120mm ARGB, 1 Ventilador de 120mm Trasero, Puertos 1 X USB 3.0, 2 X USB 2.0, 1x3.5mm Audio y 1x3.5mm micrófono, Fuente de poder: no incluida. Color Negro. BR-943871",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 470.5882352941177,
     "costo_base_mxn": 470.59,
@@ -1267,16 +1163,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR1150/GABBLR1150_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR1160",
     "clave": "GABBLR1160",
     "nombre": "Gabinete Gamer Mini Torre NITROX EDGE PRO AIRCOOL 4900C  Factor: Mini ITX, Panel Lateral de Cry",
     "descripcion_completa": "Gabinete Gamer Mini Torre NITROX EDGE PRO AIRCOOL 4900C  Factor: Mini ITX, Panel Lateral de Crystal templado, Incluye 3 Ventiladores Frontales de 120mm ARGB, 1 Ventilador Trasero de 120mm ARGB, Puertos: 1 X USB 3.0, 2 X USB 2.0, 1x3.5mm Audio y 1x3.5mm micrófono, Fuente de Poder: No Incluida. Color Negro. BR-943895",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 529.4117647058823,
     "costo_base_mxn": 529.41,
@@ -1291,23 +1185,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR1160/GABBLR1160_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR1170",
     "clave": "GABBLR1170",
     "nombre": "Gabinete Gamer Media Torre ATX DRAGONFLY VENTRA GM570  Factor: ATX, Micro Atx - Mini ITX, Panel",
     "descripcion_completa": "Gabinete Gamer Media Torre ATX DRAGONFLY VENTRA GM570  Factor: ATX, Micro Atx - Mini ITX, Panel Lateral de Cristal templado, Incluye 3 ventiladores de 120mm ARGB Frontales, 1 Ventilador de 120mm ARGB Trasero, Puertos: 1x USB 2.0 Y 1X USB 3.0, 2 3.5mm (Audio y micrófono), No incluye fuente de poder. Color Negro. BR-943956",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 788.2352941176471,
     "costo_base_mxn": 788.24,
     "costo_base_usd": 40.42,
-    "precio": 945.89,
-    "precio_mxn": 945.89,
-    "precio_original": 1261.19,
+    "precio": 945.88,
+    "precio_mxn": 945.88,
+    "precio_original": 1261.18,
     "precio_mayoreo_10pzs": 906.48,
     "precio_piso_minimo_20": 945.89,
     "categoria_clasificada": "fuentes_energia",
@@ -1315,23 +1207,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR1170/GABBLR1170_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR1180",
     "clave": "GABBLR1180",
     "nombre": "Gabinete Gamer Media Torre ATX DRAGONFLY HEX GM560  Factor: ATX, Micro Atx - Mini ITX, Panel La",
     "descripcion_completa": "Gabinete Gamer Media Torre ATX DRAGONFLY HEX GM560  Factor: ATX, Micro Atx - Mini ITX, Panel Lateral de Cristal templado, Incluye 3 ventiladores de 120mm ARGB Frontales, 1 Ventilador de 120mm ARGB Trasero, Puertos: 2x USB 2.0 Y 1X USB 3.0, 2 3.5mm (Audio y micrófono), No incluye fuente de poder. Color Negro. BR-943963",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 788.2352941176471,
     "costo_base_mxn": 788.24,
     "costo_base_usd": 40.42,
-    "precio": 945.89,
-    "precio_mxn": 945.89,
-    "precio_original": 1261.19,
+    "precio": 945.88,
+    "precio_mxn": 945.88,
+    "precio_original": 1261.18,
     "precio_mayoreo_10pzs": 906.48,
     "precio_piso_minimo_20": 945.89,
     "categoria_clasificada": "fuentes_energia",
@@ -1339,9 +1229,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR1180/GABBLR1180_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR1060",
@@ -1363,9 +1251,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR1060/GABBLR1060_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR1070",
@@ -1387,9 +1273,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR1070/GABBLR1070_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR1080",
@@ -1411,9 +1295,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR1080/GABBLR1080_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR420",
@@ -1435,16 +1317,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR420/GABBLR420_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR430",
     "clave": "GABBLR430",
     "nombre": "Gabinete Mini Torre Artic GI725 Legend Nova, Factor: Micro Atx - Mini ITX, Panel Lateral de Cry",
     "descripcion_completa": "Gabinete Mini Torre Artic GI725 Legend Nova, Factor: Micro Atx - Mini ITX, Panel Lateral de Crystal templado, Incluye: 2 ventiladores de 120mm Superior RGB y 1 120mm RGB Trasero, Ranuras PCI 4, Puertos: 2x USB 2.0 Y 1X USB 3.0, 1x3.5mm Audio y 1x3.5mm micrófono, Longitud de GPU Máxima: 280 mm, Altura máxima de disipador: 150 mm. Fuente de poder: no incluida. Color Negro. BR-936118",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 641.2008235294119,
     "costo_base_mxn": 641.2,
@@ -1459,16 +1339,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR430/GABBLR430_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR440",
     "clave": "GABBLR440",
     "nombre": "Gabinete Mini Torre Artic GI725 Legend Nova, Factor: Micro Atx - Mini ITX, Panel Lateral de Cry",
     "descripcion_completa": "Gabinete Mini Torre Artic GI725 Legend Nova, Factor: Micro Atx - Mini ITX, Panel Lateral de Crystal templado, Incluye: 2 ventiladores de 120mm Superior RGB y 1 120mm RGB Trasero, Ranuras PCI 4, Puertos: 2x USB 2.0 Y 1X USB 3.0, 1x3.5mm Audio y 1x3.5mm micrófono, Longitud de GPU Máxima: 280 mm, Altura máxima de disipador: 150 mm. Fuente de poder: no incluida. Color Blanco. BR-936125",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 641.2008235294119,
     "costo_base_mxn": 641.2,
@@ -1483,9 +1361,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR440/GABBLR440_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR1090",
@@ -1507,9 +1383,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR1090/GABBLR1090_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR1100",
@@ -1531,9 +1405,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR1100/GABBLR1100_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR1110",
@@ -1555,16 +1427,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR1110/GABBLR1110_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR1120",
     "clave": "GABBLR1120",
     "nombre": "Gabinete Gamer Media Torre ATX Dragonfly Wood GM580CB  Factor: ATX, Micro Atx - Mini ITX, Panel",
     "descripcion_completa": "Gabinete Gamer Media Torre ATX Dragonfly Wood GM580CB  Factor: ATX, Micro Atx - Mini ITX, Panel Lateral de Cristal templado, Incluye 3 ventiladores de 120mm ARGB Frontales, 1 Ventilador de 120mm ARGB Trasero, Puertos: 2x USB 2.0 Y 1X USB 3.0, 2 3.5mm (Audio y micrófono), No incluye fuente de poder. Color Negro. BR-943949",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 811.7647058823529,
     "costo_base_mxn": 811.76,
@@ -1579,16 +1449,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR1120/GABBLR1120_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR1130",
     "clave": "GABBLR1130",
     "nombre": "Gabinete Gamer Media Torre ATX Dragonfly Wood GM580CW  Factor: ATX, Micro Atx - Mini ITX, Panel",
     "descripcion_completa": "Gabinete Gamer Media Torre ATX Dragonfly Wood GM580CW  Factor: ATX, Micro Atx - Mini ITX, Panel Lateral de Cristal templado, Incluye 3 ventiladores de 120mm ARGB Frontales, 1 Ventilador de 120mm ARGB Trasero, Puertos: 2x USB 2.0 Y 1X USB 3.0, 2 3.5mm (Audio y micrófono), No incluye fuente de poder. Color Blanco. BR-943970",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 811.7647058823529,
     "costo_base_mxn": 811.76,
@@ -1603,16 +1471,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR1130/GABBLR1130_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR350",
     "clave": "GABBLR350",
     "nombre": "Gabinete Gamer Mini Torre ATX Dragonfly Crystal GM745 Azender Series, Factor: ATX, Micro Atx - ",
     "descripcion_completa": "Gabinete Gamer Mini Torre ATX Dragonfly Crystal GM745 Azender Series, Factor: ATX, Micro Atx - Mini ITX, Panel Lateral de Cristal templado, Incluye 4 ventiladores de 120mm RGB, se pueden instalar hasta 8 ventiladores de 120 mm, Ranuras PCI 7, Puertos: 2x USB 2.0 Y 1X USB 3.0, 2 3.5mm (Audio y micrófono), No incluye fuente de poder. Color Negro. BR-935968",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 785.8823529411765,
     "costo_base_mxn": 785.88,
@@ -1627,16 +1493,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR350/GABBLR350_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR360",
     "clave": "GABBLR360",
     "nombre": "Gabinete Gamer Mini Torre ATX Dragonfly Crystal GM745 Azender Series, Factor: ATX, Micro Atx - ",
     "descripcion_completa": "Gabinete Gamer Mini Torre ATX Dragonfly Crystal GM745 Azender Series, Factor: ATX, Micro Atx - Mini ITX, Panel Lateral de Cristal templado, Incluye 4 ventiladores de 120mm RGB, se pueden instalar hasta 8 ventiladores de 120 mm, Ranuras PCI 7, Puertos: 2x USB 2.0 Y 1X USB 3.0, 2 3.5mm (Audio y micrófono), No incluye fuente de poder. Color Blanco. BR-935975",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 731.7647058823529,
     "costo_base_mxn": 731.76,
@@ -1651,16 +1515,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR360/GABBLR360_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR370",
     "clave": "GABBLR370",
     "nombre": "Gabinete Gamer Mini Torre ATX Dragonfly Mesh GM740 Azender Series, Factor: ATX, Micro Atx - Min",
     "descripcion_completa": "Gabinete Gamer Mini Torre ATX Dragonfly Mesh GM740 Azender Series, Factor: ATX, Micro Atx - Mini ITX, Panel Lateral de Cristal templado, Incluye 4 ventiladores de 120mm RGB, se pueden instalar hasta 8 ventiladores de 120 mm, Ranuras PCI 7, Puertos: 2x USB 2.0 Y 1X USB 3.0, 2 3.5mm (Audio y micrófono), No incluye fuente de poder. Color Negro. BR-935982",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 770.5882352941177,
     "costo_base_mxn": 770.59,
@@ -1675,16 +1537,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR370/GABBLR370_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR380",
     "clave": "GABBLR380",
     "nombre": "Gabinete Gamer Mini Torre ATX Dragonfly Mesh GM740 Azender Series, Factor: ATX, Micro Atx - Min",
     "descripcion_completa": "Gabinete Gamer Mini Torre ATX Dragonfly Mesh GM740 Azender Series, Factor: ATX, Micro Atx - Mini ITX, Panel Lateral de Cristal templado, Incluye 4 ventiladores de 120mm RGB, se pueden instalar hasta 8 ventiladores de 120 mm, Ranuras PCI 7, Puertos: 2x USB 2.0 Y 1X USB 3.0, 2 3.5mm (Audio y micrófono), No incluye fuente de poder. Color Blanco. BR-935999",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 769.9764705882353,
     "costo_base_mxn": 769.98,
@@ -1699,16 +1559,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR380/GABBLR380_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR390",
     "clave": "GABBLR390",
     "nombre": "Gabinete Gamer Mini Torre ATX Dragonfly 2 Crystal GM745s Azender Series, Factor: Micro Atx - Mi",
     "descripcion_completa": "Gabinete Gamer Mini Torre ATX Dragonfly 2 Crystal GM745s Azender Series, Factor: Micro Atx - Mini ITX, Panel Lateral de Cristal templado, Incluye 2 ventiladores de 120mm RGB Frontales, se pueden instalar hasta 8 ventiladores de 120 mm, Ranuras PCI 7, Puertos: 2x USB 2.0 Y 1X USB 3.0, 2 3.5mm (Audio y micrófono), No incluye fuente de poder. Color Negro. BR-936057",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 686.0,
     "costo_base_mxn": 686.0,
@@ -1723,16 +1581,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR390/GABBLR390_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT340",
     "clave": "GABACT340",
     "nombre": "Fuente de Poder Blazar Prime ACTECK FT500P 500W. Ventilador: 80Mm. Bajo nivel de ruido, Switch ",
     "descripcion_completa": "Fuente de Poder Blazar Prime ACTECK FT500P 500W. Ventilador: 80Mm. Bajo nivel de ruido, Switch de encendido, Conectores: (1) ATX 20+4 pin, (1) ATX 12V (4 pin) (2) X SATA, (2) X MOLEX, Garantía limitada: 1 años.  AC-938143",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 208.25882352941179,
     "costo_base_mxn": 208.26,
@@ -1747,23 +1603,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT340/GABACT340_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABGEN2360",
     "clave": "GABGEN2360",
     "nombre": "Fuente de poder ATX 500 Watts. TBFA-001. ACTECK,. 1 x Conector principal de 24 pines, 1 x Conec",
     "descripcion_completa": "Fuente de poder ATX 500 Watts. TBFA-001. ACTECK,. 1 x Conector principal de 24 pines, 1 x Conector de +12V de 4 pines, 2 x Conectores S-ATA, 2 x Conectores Molex de 4 pines para Periféricos, 1 x Conector de 4 pines para Floppy Disk TB-05003",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 228.23529411764707,
     "costo_base_mxn": 228.24,
     "costo_base_usd": 11.7,
-    "precio": 273.89,
-    "precio_mxn": 273.89,
-    "precio_original": 365.19,
+    "precio": 273.88,
+    "precio_mxn": 273.88,
+    "precio_original": 365.18,
     "precio_mayoreo_10pzs": 262.48,
     "precio_piso_minimo_20": 273.89,
     "categoria_clasificada": "fuentes_energia",
@@ -1771,9 +1625,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABGEN2360/GABGEN2360_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT380",
@@ -1795,9 +1647,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT380/GABACT380_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT510",
@@ -1819,9 +1669,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT510/GABACT510_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT520",
@@ -1843,9 +1691,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT520/GABACT520_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT390",
@@ -1867,9 +1713,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT390/GABACT390_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT570",
@@ -1881,9 +1725,9 @@
     "costo_origen": 588.2352941176471,
     "costo_base_mxn": 588.24,
     "costo_base_usd": 30.17,
-    "precio": 705.89,
-    "precio_mxn": 705.89,
-    "precio_original": 941.19,
+    "precio": 705.88,
+    "precio_mxn": 705.88,
+    "precio_original": 941.18,
     "precio_mayoreo_10pzs": 676.48,
     "precio_piso_minimo_20": 705.89,
     "categoria_clasificada": "fuentes_energia",
@@ -1891,9 +1735,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT570/GABACT570_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT370",
@@ -1915,9 +1757,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT370/GABACT370_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT350",
@@ -1939,9 +1779,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT350/GABACT350_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT360",
@@ -1963,16 +1801,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT360/GABACT360_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT400",
     "clave": "GABACT400",
     "nombre": "Pack 12 Fuente de Poder ACTECK Blazar Basic ACTECK FT500B ESSENTIAL SERIES 500W. Ventilador: 12",
     "descripcion_completa": "Pack 12 Fuente de Poder ACTECK Blazar Basic ACTECK FT500B ESSENTIAL SERIES 500W. Ventilador: 120mm. Bajo nivel de ruido, Conectores: (1) ATX 20+4 pin, (1) ATX 12V (4 pin) (2) X SATA, (1) X MOLEX, Garantía limitada: 1 años. Color Metalico. AC-938150",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 2014.764705882353,
     "costo_base_mxn": 2014.76,
@@ -1987,9 +1823,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT400/GABACT400_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR540",
@@ -2011,9 +1845,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR540/GABBLR540_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR530",
@@ -2025,9 +1857,9 @@
     "costo_origen": 559.0941176470589,
     "costo_base_mxn": 559.09,
     "costo_base_usd": 28.67,
-    "precio": 670.91,
-    "precio_mxn": 670.91,
-    "precio_original": 894.55,
+    "precio": 670.9,
+    "precio_mxn": 670.9,
+    "precio_original": 894.54,
     "precio_mayoreo_10pzs": 642.95,
     "precio_piso_minimo_20": 670.91,
     "categoria_clasificada": "fuentes_energia",
@@ -2035,9 +1867,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR530/GABBLR530_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR520",
@@ -2059,9 +1889,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR520/GABBLR520_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR510",
@@ -2083,9 +1911,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR510/GABBLR510_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR500",
@@ -2107,9 +1933,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR500/GABBLR500_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR490",
@@ -2131,9 +1955,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR490/GABBLR490_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR480",
@@ -2155,9 +1977,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR480/GABBLR480_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR470",
@@ -2169,9 +1989,9 @@
     "costo_origen": 1305.5411764705884,
     "costo_base_mxn": 1305.54,
     "costo_base_usd": 66.95,
-    "precio": 1566.65,
-    "precio_mxn": 1566.65,
-    "precio_original": 2088.87,
+    "precio": 1566.64,
+    "precio_mxn": 1566.64,
+    "precio_original": 2088.86,
     "precio_mayoreo_10pzs": 1501.37,
     "precio_piso_minimo_20": 1566.65,
     "categoria_clasificada": "fuentes_energia",
@@ -2179,9 +1999,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR470/GABBLR470_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR800",
@@ -2203,9 +2021,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR800/GABBLR800_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR810",
@@ -2227,9 +2043,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR810/GABBLR810_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR820",
@@ -2241,9 +2055,9 @@
     "costo_origen": 1305.5415294117647,
     "costo_base_mxn": 1305.54,
     "costo_base_usd": 66.95,
-    "precio": 1566.65,
-    "precio_mxn": 1566.65,
-    "precio_original": 2088.87,
+    "precio": 1566.64,
+    "precio_mxn": 1566.64,
+    "precio_original": 2088.86,
     "precio_mayoreo_10pzs": 1501.37,
     "precio_piso_minimo_20": 1566.65,
     "categoria_clasificada": "fuentes_energia",
@@ -2251,9 +2065,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR820/GABBLR820_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR830",
@@ -2275,9 +2087,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR830/GABBLR830_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR570",
@@ -2299,9 +2109,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR570/GABBLR570_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR580",
@@ -2323,9 +2131,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR580/GABBLR580_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR550",
@@ -2347,9 +2153,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR550/GABBLR550_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR560",
@@ -2371,9 +2175,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR560/GABBLR560_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABGIG350",
@@ -2395,9 +2197,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABGIG350/GABGIG350_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABGIG360",
@@ -2419,9 +2219,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABGIG360/GABGIG360_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABGIG330",
@@ -2443,9 +2241,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABGIG330/GABGIG330_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABCLR750",
@@ -2467,16 +2263,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABCLR750/GABCLR750_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO250",
     "clave": "GABVGO250",
     "nombre": "Gabinete Start The Game mATX. CSG-350 Factor: Micro ATX. Slots de expansión: 6. Bahías 3 1/2 oc",
     "descripcion_completa": "Gabinete Start The Game mATX. CSG-350 Factor: Micro ATX. Slots de expansión: 6. Bahías 3 1/2 ocultas: 2. Bahías 2 1/2 ocultas: 2. Puertos superiores: USB 2.0 x2, USB 3.0 x2, Audio 3.5mm x1, Micrófono 3.5mm x1. Ventilación: 1 posterior, 3 frontal, 2 lateral de 120mm. Panel lateral de cristal templado. Fuente de poder: No incluida. Dimensiones: 210x420x375mm. Color Negro",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 26.666666666666664,
     "costo_base_mxn": 520.0,
@@ -2491,16 +2285,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO250/GABVGO250_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO260",
     "clave": "GABVGO260",
     "nombre": "Gabinete Game Factor mATX. CSG570 Factor: ATX. Calibre: 0.5mm. Tarjetas soportadas ATX, Micro A",
     "descripcion_completa": "Gabinete Game Factor mATX. CSG570 Factor: ATX. Calibre: 0.5mm. Tarjetas soportadas ATX, Micro ATX, Mini ITX Slots de expansión: 4. Bahías 3 1/2 ocultas: 2, Bahías 2 1/2 ocultas: 2. Ventilación: 120mm ARGB-RAINBOW. Lateral de vidrio templado. Fuente de poder: No incluida. Dimensiones: 393x193x415mm. Color Negro",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 52.666666666666664,
     "costo_base_mxn": 1027.0,
@@ -2515,16 +2307,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO260/GABVGO260_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO300",
     "clave": "GABVGO300",
     "nombre": "Gabinete Game Factor mATX. CSG570-WH Factor: ATX. Calibre: 0.5mm. Tarjetas soportadas ATX, Micr",
     "descripcion_completa": "Gabinete Game Factor mATX. CSG570-WH Factor: ATX. Calibre: 0.5mm. Tarjetas soportadas ATX, Micro ATX, Mini ITX Slots de expansión: 4. Bahías 3 1/2 ocultas: 2, Bahías 2 1/2 ocultas: 2. Ventilación: 120mm ARGB-RAINBOW. Lateral de vidrio templado. Fuente de poder: No incluida. Dimensiones: 393x193x415mm. Color Blanco",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 54.05555555555555,
     "costo_base_mxn": 1054.08,
@@ -2539,16 +2329,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO300/GABVGO300_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO310",
     "clave": "GABVGO310",
     "nombre": "Gabinete Game Factor mATX. CSG700-BK Factor: ATX. Mother Board: ATX. M-ATX, ITX- E-ATX, Slots d",
     "descripcion_completa": "Gabinete Game Factor mATX. CSG700-BK Factor: ATX. Mother Board: ATX. M-ATX, ITX- E-ATX, Slots de expansión: 10. Bahías 2 1/2 ocultas: 1. Bahías 3 1/2 ocultas: 1. Puertos Laterales: USB 2.0 x2, USB 3.0 x1, Audio 3.5mm x1. Panel lateral vidrio templado. Fuente de poder: No incluida. Dimensiones: 416.5x300x385mm. Color Negro",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 83.33333333333333,
     "costo_base_mxn": 1625.0,
@@ -2563,16 +2351,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO310/GABVGO310_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO270",
     "clave": "GABVGO270",
     "nombre": "Gabinete Game Factor mATX. CSG700 Factor: ATX. Mother Board: ATX. M-ATX, ITX- E-ATX, Slots de e",
     "descripcion_completa": "Gabinete Game Factor mATX. CSG700 Factor: ATX. Mother Board: ATX. M-ATX, ITX- E-ATX, Slots de expansión: 10. Bahías 2 1/2 ocultas: 1. Bahías 3 1/2 ocultas: 1. Puertos Laterales: USB 2.0 x2, USB 3.0 x1, Audio 3.5mm x1. Panel lateral vidrio templado. Fuente de poder: No incluida. Dimensiones: 416.5x300x385mm. Color Blanco",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 83.33333333333333,
     "costo_base_mxn": 1625.0,
@@ -2587,16 +2373,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO270/GABVGO270_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO010",
     "clave": "GABVGO010",
     "nombre": "Fuente de Poder. Gabnet. PSU-101 500W. 20+4 pines x 1, CPU 4 pines x 1, SATA x2, Periféricos 4 ",
     "descripcion_completa": "Fuente de Poder. Gabnet. PSU-101 500W. 20+4 pines x 1, CPU 4 pines x 1, SATA x2, Periféricos 4 pines x 2, Floppy 4 pines x 1",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 10.355555555555556,
     "costo_base_mxn": 201.93,
@@ -2611,16 +2395,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO010/GABVGO010_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO350",
     "clave": "GABVGO350",
     "nombre": "Fuente de Poder Slim 500W ATX Vorago PSU-102 20+4 pines x 1, CPU 4 pines x 1, SATA x 2 Periféri",
     "descripcion_completa": "Fuente de Poder Slim 500W ATX Vorago PSU-102 20+4 pines x 1, CPU 4 pines x 1, SATA x 2 Periféricos 4 pines x 2  Longitud cable alimentación 120 cms. Frecuencia: 50 - 60 Hz Corriente: 10.0 A - 8.0 A Potencia: 500 W Garantia 1 Año",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 13.333333333333332,
     "costo_base_mxn": 260.0,
@@ -2635,9 +2417,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO350/GABVGO350_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO070",
@@ -2659,9 +2439,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO070/GABVGO070_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO040",
@@ -2683,9 +2461,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO040/GABVGO040_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO360",
@@ -2707,9 +2483,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO360/GABVGO360_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO240",
@@ -2731,9 +2505,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO240/GABVGO240_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT360",
@@ -2755,9 +2527,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT360/GABDAT360_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT050",
@@ -2779,9 +2549,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT050/GABDAT050_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT370",
@@ -2803,9 +2571,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT370/GABDAT370_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT070",
@@ -2827,9 +2593,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT070/GABDAT070_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT080",
@@ -2851,9 +2615,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT080/GABDAT080_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB070",
@@ -2875,9 +2637,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB070/GABNCB070_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB080",
@@ -2899,9 +2659,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB080/GABNCB080_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB090",
@@ -2923,23 +2681,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB090/GABNCB090_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB110",
     "clave": "GABNCB110",
     "nombre": "Gabinete Gaming Naceb Colosus, RGB, 3 ventiladores incluidos de 120mm, Soporta ventiladores de ",
     "descripcion_completa": "Gabinete Gaming Naceb Colosus, RGB, 3 ventiladores incluidos de 120mm, Soporta ventiladores de 120 y 140 mm, 6 espacios para ventiladores 3x frontales 2x superiores 1x posterior, 2 SSD 2.5\", 2 HDD 3.5\", 7 Ranuras PCI, Soporte de GPU Vertical,  USB 3.0x2 frontal, Salida de audio y entrada de micrófono superior, Panel lateral y frontal de Cristal Templado, espacio para radiador de 360 mm en panel frontal y 240mm panel superior, compatible con AURA SYNC, Sin fuente de poder, NA-0610",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1344.4444444444443,
     "costo_base_mxn": 1344.44,
     "costo_base_usd": 68.95,
-    "precio": 1613.33,
-    "precio_mxn": 1613.33,
-    "precio_original": 2151.11,
+    "precio": 1613.32,
+    "precio_mxn": 1613.32,
+    "precio_original": 2151.1,
     "precio_mayoreo_10pzs": 1546.11,
     "precio_piso_minimo_20": 1613.33,
     "categoria_clasificada": "fuentes_energia",
@@ -2947,23 +2703,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB110/GABNCB110_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB100",
     "clave": "GABNCB100",
     "nombre": "Gabinete Gaming Naceb Orion, RGB, 3 ventiladores incluidos de 120mm, Soporta ventiladores de 12",
     "descripcion_completa": "Gabinete Gaming Naceb Orion, RGB, 3 ventiladores incluidos de 120mm, Soporta ventiladores de 120 y 140 mm, 7 espacios para ventiladores 3x frontales 3x superiores 1x posterior, 2 SSD 2.5\", 2 HDD 3.5\", 7 Ranuras PCI, Soporte de GPU Vertical, USB 2.0x2 y USB 3.0x1 frontal, Salida de audio y entrada de micrófono Superior, Panel lateral y frontal de Cristal Templado, espacio para radiador de 360 mm en panel frontal y superior, Sin fuente de poder, NA-0609",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1344.4444444444443,
     "costo_base_mxn": 1344.44,
     "costo_base_usd": 68.95,
-    "precio": 1613.33,
-    "precio_mxn": 1613.33,
-    "precio_original": 2151.11,
+    "precio": 1613.32,
+    "precio_mxn": 1613.32,
+    "precio_original": 2151.1,
     "precio_mayoreo_10pzs": 1546.11,
     "precio_piso_minimo_20": 1613.33,
     "categoria_clasificada": "fuentes_energia",
@@ -2971,16 +2725,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB100/GABNCB100_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB120",
     "clave": "GABNCB120",
     "nombre": "Fuente de poder Naceb (NA-0625), Certificación 80 plus Bronze, Capacidad 700w, Formato: ATX, Ca",
     "descripcion_completa": "Fuente de poder Naceb (NA-0625), Certificación 80 plus Bronze, Capacidad 700w, Formato: ATX, Cable de entrada 1.5m, Conectores: 1x 20+4pin - 2x 8pin (p4+p4) - 3x PCIe 6+2p - 4x Molex - 6xSATA, ventilador 120mm, peso 1.54KG, dimensiones 140x150x86mm.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 700.0,
     "costo_base_mxn": 700.0,
@@ -2995,23 +2747,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB120/GABNCB120_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB160",
     "clave": "GABNCB160",
     "nombre": "Fuente de poder Naceb 750W Atx Modular 80+ Bronze NA-0635",
     "descripcion_completa": "Fuente de poder Naceb 750W Atx Modular 80+ Bronze NA-0635",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 844.4444444444445,
     "costo_base_mxn": 844.44,
     "costo_base_usd": 43.3,
-    "precio": 1013.33,
-    "precio_mxn": 1013.33,
-    "precio_original": 1351.11,
+    "precio": 1013.32,
+    "precio_mxn": 1013.32,
+    "precio_original": 1351.1,
     "precio_mayoreo_10pzs": 971.11,
     "precio_piso_minimo_20": 1013.33,
     "categoria_clasificada": "fuentes_energia",
@@ -3019,23 +2769,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB160/GABNCB160_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB130",
     "clave": "GABNCB130",
     "nombre": "Fuente de poder Naceb (NA-0626), Certificación 80 plus Bronze, Capacidad 800w, Formato: ATX, Ca",
     "descripcion_completa": "Fuente de poder Naceb (NA-0626), Certificación 80 plus Bronze, Capacidad 800w, Formato: ATX, Cable de entrada 1.5m, Conectores: 1x 20+4pin - 2x 8pin (p4+p4) - 3x PCIe 6+2p - 4x Molex - 6xSATA, ventilador 120mm, peso 1.54KG, dimensiones 140x150x86mm.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 844.4444444444445,
     "costo_base_mxn": 844.44,
     "costo_base_usd": 43.3,
-    "precio": 1013.33,
-    "precio_mxn": 1013.33,
-    "precio_original": 1351.11,
+    "precio": 1013.32,
+    "precio_mxn": 1013.32,
+    "precio_original": 1351.1,
     "precio_mayoreo_10pzs": 971.11,
     "precio_piso_minimo_20": 1013.33,
     "categoria_clasificada": "fuentes_energia",
@@ -3043,16 +2791,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB130/GABNCB130_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB140",
     "clave": "GABNCB140",
     "nombre": "Fuente de poder Naceb (NA-0627), Certificación 80 plus Gold, Capacidad 1000w, Formato: ATX, Cab",
     "descripcion_completa": "Fuente de poder Naceb (NA-0627), Certificación 80 plus Gold, Capacidad 1000w, Formato: ATX, Cable de entrada 1.5m, Conectores: 1x 20+4pin -2x 8pin (p4+p4) - 3x PCIe 6+2p -3x Molex -4xSATA, 1PCIe 5.0, ventilador 140mm, peso 1.54KG, dimensiones 160x140x86mm,",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1965.5555555555554,
     "costo_base_mxn": 1965.56,
@@ -3067,16 +2813,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB140/GABNCB140_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB290",
     "clave": "GABNCB290",
     "nombre": "Fuente de poder Volt Pulse 500 NA-2918 Potencia 500 W, Factor de forma ATX, Ideal para Equipos ",
     "descripcion_completa": "Fuente de poder Volt Pulse 500 NA-2918 Potencia 500 W, Factor de forma ATX, Ideal para Equipos básicos de oficina y hogar, Protecciones OPP, OVP, UVP, SCP, Capacitores Grado industrial, Ventilador 120 mm hidráulico, Garantía 1 año.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 186.66666666666666,
     "costo_base_mxn": 186.67,
@@ -3091,16 +2835,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB290/GABNCB290_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB300",
     "clave": "GABNCB300",
     "nombre": "Fuente de poder Volt Pulse 600 NA-2925 Potencia 600 W, Factor de forma ATX, Ideal para Equipos ",
     "descripcion_completa": "Fuente de poder Volt Pulse 600 NA-2925 Potencia 600 W, Factor de forma ATX, Ideal para Equipos de oficina con mayor demanda, Protecciones OPP, OVP, UVP, SCP, Capacitores Grado industrial, Ventilador 120 mm hidráulico, Garantía 1 año.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 284.75555555555553,
     "costo_base_mxn": 284.76,
@@ -3115,16 +2857,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB300/GABNCB300_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB310",
     "clave": "GABNCB310",
     "nombre": "Fuente de poder Volt Pulse 700 NA-2956 Potencia 700 W, Factor de forma ATX, Ideal para Equipos ",
     "descripcion_completa": "Fuente de poder Volt Pulse 700 NA-2956 Potencia 700 W, Factor de forma ATX, Ideal para Equipos con tarjetas de expansión y mayor consumo, Protecciones OPP, OVP, UVP, SCP, Capacitores Grado industrial, Ventilador 120 mm hidráulico, Garantía 1 año.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 361.6666666666667,
     "costo_base_mxn": 361.67,
@@ -3139,16 +2879,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB310/GABNCB310_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB320",
     "clave": "GABNCB320",
     "nombre": "Fuente de poder Grid Pulse 500 NA-2963 Potencia 500 W, Factor de forma SFX, Ideal para Equipos ",
     "descripcion_completa": "Fuente de poder Grid Pulse 500 NA-2963 Potencia 500 W, Factor de forma SFX, Ideal para Equipos compactos y gabinetes SFX, Protecciones OPP, OVP, UVP, SCP, Capacitores Grado industrial, Ventilador 80 mm hidráulico, Garantía 1 año.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 243.11111111111111,
     "costo_base_mxn": 243.11,
@@ -3163,16 +2901,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB320/GABNCB320_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB330",
     "clave": "GABNCB330",
     "nombre": "Fuente de poder Fusion Nova 850 Gold NA-2581 Fuente de poder ATX 3.1 de 850 W con certificación",
     "descripcion_completa": "Fuente de poder Fusion Nova 850 Gold NA-2581 Fuente de poder ATX 3.1 de 850 W con certificación 80 Plus Gold y diseño full modular para un armado limpio y eficiente. Incluye PCIe 5.1, capacitores japoneses y múltiples protecciones para equipos gaming y de alto rendimiento.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1215.5555555555554,
     "costo_base_mxn": 1215.56,
@@ -3187,16 +2923,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB330/GABNCB330_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB340",
     "clave": "GABNCB340",
     "nombre": "Fuente de poder Fusion Nova 750 Gold NA-2598 Potencia eficiente y estable para equipos de alto ",
     "descripcion_completa": "Fuente de poder Fusion Nova 750 Gold NA-2598 Potencia eficiente y estable para equipos de alto rendimiento. Su diseño Full Modular mejora la administración de cables, mientras que la certificación 80 Plus Gold optimiza el consumo energético para gaming, creación de contenido y estaciones de trabajo. Potencia de 750W, Diseño ATX 3.1 Full Modular para mejor gestión de cables, eficiencia energética de hasta 95%, capacitores japoneses y topología DC-DC/LLC, ventilador FDB silencioso de 125 mm, compatible con PCIe 5.1 y conector 12VHPWR, Protecciones OVP / OPP / SCP / OCP / UVP / OTP, Entrada Full Voltage 100–240 V, Cables reforzados de alta resistencia ideal para setups gamer y estaciones de alto rendimiento.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1133.3333333333333,
     "costo_base_mxn": 1133.33,
@@ -3211,16 +2945,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB340/GABNCB340_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB350",
     "clave": "GABNCB350",
     "nombre": "Fuente de poder Pulse Core 750 Bronze NA-2604 Fuente de poder de 750W con certificación 80 Plus",
     "descripcion_completa": "Fuente de poder Pulse Core 750 Bronze NA-2604 Fuente de poder de 750W con certificación 80 Plus Bronze, diseñada para ofrecer un suministro de energía estable y eficiente. Su diseño modular, ventilación optimizada y protecciones integradas la convierten en una excelente opción para setups gamer y equipos de alto rendimiento. Potencia de 750W (650W reales), Certificación 80 Plus Bronze con eficiencia de hasta 95%, Diseño ATX 3.1 modular para mejor gestión de cables, Topología Three OC  y capacitores japoneses, Ventilador silencioso de 125 mm con rodamiento RGB, Protecciones OVP / OPP / SCP / OCP / UVP, Compatible con Windows y Mac, Cables reforzados y conectores PCIe 5+2, Entrada Full Voltage 100–240 V, Ideal para equipos gamer y de alto desempeño.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 905.5555555555555,
     "costo_base_mxn": 905.56,
@@ -3235,16 +2967,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB350/GABNCB350_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY420",
     "clave": "GABSTY420",
     "nombre": "Fuente de Poder Stylos SFX 500W Negro STFPSFX1B",
     "descripcion_completa": "Fuente de Poder Stylos SFX 500W Negro STFPSFX1B",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 263.3666666666667,
     "costo_base_mxn": 263.37,
@@ -3259,16 +2989,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY420/GABSTY420_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY430",
     "clave": "GABSTY430",
     "nombre": "Fuente de poder Stylos 500W ATX STFPATX1B",
     "descripcion_completa": "Fuente de poder Stylos 500W ATX STFPATX1B",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 217.56666666666666,
     "costo_base_mxn": 217.57,
@@ -3283,9 +3011,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY430/GABSTY430_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY280",
@@ -3307,9 +3033,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY280/GABSTY280_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY070",
@@ -3331,9 +3055,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY070/GABSTY070_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY270",
@@ -3355,9 +3077,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY270/GABSTY270_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY290",
@@ -3369,9 +3089,9 @@
     "costo_origen": 1029.4444444444443,
     "costo_base_mxn": 1029.44,
     "costo_base_usd": 52.79,
-    "precio": 1235.33,
-    "precio_mxn": 1235.33,
-    "precio_original": 1647.11,
+    "precio": 1235.32,
+    "precio_mxn": 1235.32,
+    "precio_original": 1647.1,
     "precio_mayoreo_10pzs": 1183.86,
     "precio_piso_minimo_20": 1235.33,
     "categoria_clasificada": "fuentes_energia",
@@ -3379,16 +3099,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY290/GABSTY290_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY460",
     "clave": "GABSTY460",
     "nombre": "Fuente de Poder Xzeal XZ1000M ATX 1000W 80 Plus Gold Modular 1x20+4pin + 2xP8(4+4)pin +3x PCI-E",
     "descripcion_completa": "Fuente de Poder Xzeal XZ1000M ATX 1000W 80 Plus Gold Modular 1x20+4pin + 2xP8(4+4)pin +3x PCI-E/CPU (8pin) + 1x PCI-E 5.1+ 4x SATA/Molex Negro XZPS1000MB",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1525.611111111111,
     "costo_base_mxn": 1525.61,
@@ -3403,9 +3121,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY460/GABSTY460_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABGET020",
@@ -3427,9 +3143,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABGET020/GABGET020_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABGET180",
@@ -3451,9 +3165,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABGET180/GABGET180_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABGET190",
@@ -3475,9 +3187,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABGET190/GABGET190_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY330",
@@ -3499,9 +3209,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY330/GABYEY330_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY300",
@@ -3523,16 +3231,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY300/GABYEY300_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY310",
     "clave": "GABYEY310",
     "nombre": "Fuente de Poder Raiden YEYIAN YFB-90000-01 de 650W con certificación 80 Plus Bronce excelente o",
     "descripcion_completa": "Fuente de Poder Raiden YEYIAN YFB-90000-01 de 650W con certificación 80 Plus Bronce excelente opción para aquellos que necesitan energía confiable y estable para su computadora gamer. ATX 2.0 proporciona un voltaje más estable a los componente, 650W fuente de poder estable para tu equipo, ATX 12V Ver 2.0 650W,110 Vca- 240 Vca, tipo de corriente Alterna,10A 50Hz - 60Hz, longitud del cable 1.5m, 2 Conectores 50cm+15cm, 2 Cables, 6 Conectores 45cm+15cm+15cm, 3 Conectores 45cm+1,15cm1.5 m12v + 5V+ 3.3V + -12V +5Vsb potencia de salida. 650W  Diemnsiones: 140 x 150 x 86mm 1.7kg Fuente de poder, Manual de usuario, Póliza de garantía 750061901105",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 35.0,
     "costo_base_mxn": 682.5,
@@ -3547,16 +3253,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY310/GABYEY310_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY320",
     "clave": "GABYEY320",
     "nombre": "Fuente de Poder Raiden, 650W de YEYIAN YFG-65002-01, diseñada para brindar energía eficiente y ",
     "descripcion_completa": "Fuente de Poder Raiden, 650W de YEYIAN YFG-65002-01, diseñada para brindar energía eficiente y confiable a tu computadora gamer. Con un diseño semimodular y certificación 80 Plus Gold, Semi Modular ATX 12V Ver 2.0,650W,110 Vca- 240 Vca  tipo de  Corriente:Alterna,10,frecuencia50Hz60Hz longitud de cable 1.5m,1 Cable 55cm,1 Cable con 1 Conector 60cm,2 Cables, 4 Conectores 50cm 15cm 2 Cables, 6 Conectores 45cm+15cm+15c. dimensiones: 160 x 150 x 86mm, 1.7kg, Fuente de poder, Manual de usuario, Póliza de garantía 750061901104",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 58.47777777777778,
     "costo_base_mxn": 1140.32,
@@ -3571,9 +3275,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY320/GABYEY320_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY260",
@@ -3595,9 +3297,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY260/GABYEY260_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY270",
@@ -3619,9 +3319,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY270/GABYEY270_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2400",
@@ -3643,16 +3341,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2400/GABTMK2400_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2540",
     "clave": "GABTMK2540",
     "nombre": "Gabinete Thermaltake The Tower 100 Black (CA-1R3-00S1WN-00), Color Negro, Mini Torre, 3 Paneles",
     "descripcion_completa": "Gabinete Thermaltake The Tower 100 Black (CA-1R3-00S1WN-00), Color Negro, Mini Torre, 3 Paneles de 4mm de Cristal Templado, Soporta Tarjetas Madre Micro ATX y Mini ATX, Cuenta con 1 USB 3.2(Gen 2) Tipo C, 2 USB 3.0,  1 Entrada de Auriculares y 1 de Micrófono, Soporta 2 Discos de 3.5\" y 3 de 2.5\". Soporta Tarjetas de Video de 330mm, Enfriamiento de CPU de 190mm, Soporta Fuentes de Poder Máximo de 180mm. Incluye 2 Ventiladores de 120mm, Sin Fuente de Poder.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 100.05882352941177,
     "costo_base_mxn": 1951.15,
@@ -3667,16 +3363,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2540/GABTMK2540_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2150",
     "clave": "GABTMK2150",
     "nombre": "Gabinete Thermaltake The Tower 100 Snow Mini Chassis (CA-1R3-00S6WN-00), Color Blanco, Mini Tor",
     "descripcion_completa": "Gabinete Thermaltake The Tower 100 Snow Mini Chassis (CA-1R3-00S6WN-00), Color Blanco, Mini Torre, Soporta Tarjetas Madre Mini-ITX, Cuenta con 2 USB 3.0, 2 Puertos USB 3.2(Gen 2) Tipo C, 1 Entrada de Auriculares y 1 de Micrófono, Soporta 2 Discos de 3.5\" y 2 de 2.5\". Soporta Tarjetas de Video de 330mm, Enfriamiento de CPU de 190mm, Soporta Fuentes de Poder Máximo de 180mm. Incluye 2 Ventilador de 120mm. Sin Fuente de Poder.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 100.05882352941177,
     "costo_base_mxn": 1951.15,
@@ -3691,16 +3385,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2150/GABTMK2150_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2160",
     "clave": "GABTMK2160",
     "nombre": "Gabinete Thermaltake The Tower 100 Turquoise Mini Chassis (CA-1R3-00SBWN-00), Color Turquesa, M",
     "descripcion_completa": "Gabinete Thermaltake The Tower 100 Turquoise Mini Chassis (CA-1R3-00SBWN-00), Color Turquesa, Mini Torre, Soporta Tarjetas Madre Mini-ITX, Cuenta con 2 USB 3.0, 2 Puertos USB 3.2(Gen 2) Tipo C, 1 Entrada de Auriculares y 1 de Micrófono, Soporta 2 Discos de 3.5\" y 2 de 2.5\". Soporta Tarjetas de Video de 330mm, Enfriamiento de CPU de 190mm, Soporta Fuentes de Poder Máximo de 180mm. Incluye 2 Ventilador de 120mm. Sin Fuente de Poder.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 100.05882352941177,
     "costo_base_mxn": 1951.15,
@@ -3715,16 +3407,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2160/GABTMK2160_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2430",
     "clave": "GABTMK2430",
     "nombre": "Gabinete Thermaltake Core P3 TG Pro(CA-1G4-00M1WN-09), Color Negro, Tamaño Media Torre, Soporta",
     "descripcion_completa": "Gabinete Thermaltake Core P3 TG Pro(CA-1G4-00M1WN-09), Color Negro, Tamaño Media Torre, Soporta Tarjetas Madre Mini-ITX hasta E-ATX, Cuenta con 1 USB 3.0, 2 Puertos USB 2.0,  1 Entrada de Auriculares y 1 de Micrófono, 1 Botón LED, Soporta 2 Discos de 3.5\" y 2 de 2.5\". Soporta Tarjetas de Video de 340mm, Enfriamiento de CPU de 180mm, Soporta Fuentes de Poder Máximo de 220mm. Sin Fuente de Poder.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 130.23529411764707,
     "costo_base_mxn": 2539.59,
@@ -3739,16 +3429,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2430/GABTMK2430_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2440",
     "clave": "GABTMK2440",
     "nombre": "Gabinete Thermaltake Core P3 TG Pro Snow(CA-1G4-00M6WN-09), Color Blanco, Tamaño Media Torre, S",
     "descripcion_completa": "Gabinete Thermaltake Core P3 TG Pro Snow(CA-1G4-00M6WN-09), Color Blanco, Tamaño Media Torre, Soporta Tarjetas Madre Mini-ITX hasta E-ATX, Cuenta con 1 USB 3.0, 2 Puertos USB 2.0,  1 Entrada de Auriculares y 1 de Micrófono, 1 Botón LED, Soporta 2 Discos de 3.5\" y 2 de 2.5\". Soporta Tarjetas de Video de 340mm, Enfriamiento de CPU de 180mm, Soporta Fuentes de Poder Máximo de 220mm. Sin Fuente de Poder.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 130.48235294117646,
     "costo_base_mxn": 2544.41,
@@ -3763,16 +3451,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2440/GABTMK2440_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2420",
     "clave": "GABTMK2420",
     "nombre": "Gabinete Thermaltake Ceres 500 TG ARGB Snow(CA-1X5-00M6WN-00), Color Blanco, Tamaño Media Torre",
     "descripcion_completa": "Gabinete Thermaltake Ceres 500 TG ARGB Snow(CA-1X5-00M6WN-00), Color Blanco, Tamaño Media Torre, Soporta Tarjetas Madre Mini-ITX hasta E-ATX, Cuenta con 1 USB 3.0, 2 Puertos USB 2.0,  1 Entrada de Auriculares y 1 de Micrófono, 1 Botón LED, Soporta 2 Discos de 3.5\" y 2 de 2.5\". Soporta Tarjetas de Video de 340mm, Enfriamiento de CPU de 180mm, Soporta Fuentes de Poder Máximo de 220mm. Incluye 4 Ventilador de 140mm. Sin Fuente de Poder.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 149.1764705882353,
     "costo_base_mxn": 2908.94,
@@ -3787,16 +3473,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2420/GABTMK2420_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2330",
     "clave": "GABTMK2330",
     "nombre": "Gabinete Thermaltake Core P6 TG Snow(CA-1V2-00M6WN-00), Color Blanco, Tamaño Micro, Soporta Tar",
     "descripcion_completa": "Gabinete Thermaltake Core P6 TG Snow(CA-1V2-00M6WN-00), Color Blanco, Tamaño Micro, Soporta Tarjetas Madre Mini-ITX hasta E-ATX, Cuenta con 1 USB 3.0, 2 Puertos USB 2.0,  1 Entrada de Auriculares y 1 de Micrófono, 1 Botón LED, Soporta 2 Discos de 3.5\" y 2 de 2.5\". Soporta Tarjetas de Video de 340mm, Enfriamiento de CPU de 180mm, Soporta Fuentes de Poder Máximo de 220mm. Incluye 1 Ventilador de 120mm Frontal y 1 Ventilador de 120mm Trasero. Sin Fuente de Poder.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 185.29411764705884,
     "costo_base_mxn": 3613.24,
@@ -3811,16 +3495,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2330/GABTMK2330_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2450",
     "clave": "GABTMK2450",
     "nombre": "Fuente de Poder Thermaltake Toughpower GF A3 850W TT Premium Edition (PS-TPD-0850FNFAGU-H), Col",
     "descripcion_completa": "Fuente de Poder Thermaltake Toughpower GF A3 850W TT Premium Edition (PS-TPD-0850FNFAGU-H), Color Negra, 80+ Gold, ATX 3.0, PCIE Gen 5.0 Nativo, PFC Activo, Potencia Buena Señal 100-150mseg, Tiempo de Espera 17mseg, Corriente de Entrada 15A-8A, Rango de Frecuencia de Entrada 50Hz/60Hz, Voltaje de Entrada 100-240V, 1 Conector PCIE de 12+4 de 450W.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 128.61111111111111,
     "costo_base_mxn": 2507.92,
@@ -3835,16 +3517,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2450/GABTMK2450_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2270",
     "clave": "GABTMK2270",
     "nombre": "Fuente de Poder Thermaltake Toughpower GF3 850W 80+ Plus Gold Full Modular(PS-TPD-0850FNFAGU-4)",
     "descripcion_completa": "Fuente de Poder Thermaltake Toughpower GF3 850W 80+ Plus Gold Full Modular(PS-TPD-0850FNFAGU-4), Color Negro, Compatible con Intel PSDG ATX 3.0, Listo para PCIe 5.0, Condensadores Japoneses 100% de Alta Calidad de 105°C,  Cable Plano Totalmente Modular de Perfil Bajo, Contiene 4 PCIe 6+2Pin, 1 PCIe 12+4, 1 Cable de 24Pin, 4 Cables SATA, 1 Adaptador Floppy y 4 Cables Periférico.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 150.16666666666666,
     "costo_base_mxn": 2928.25,
@@ -3859,9 +3539,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2270/GABTMK2270_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABASS130",
@@ -3883,8 +3561,6 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS130/GABASS130_400.jpg",
     "placeholder": "./assets/img/placeholders/psu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   }
 ]

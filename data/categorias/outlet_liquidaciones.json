@@ -9,9 +9,9 @@
     "costo_origen": 463.9175257731959,
     "costo_base_mxn": 9046.39,
     "costo_base_usd": 463.92,
-    "precio": 10855.67,
-    "precio_mxn": 10855.67,
-    "precio_original": 14474.23,
+    "precio": 10855.66,
+    "precio_mxn": 10855.66,
+    "precio_original": 14474.22,
     "precio_mayoreo_10pzs": 10403.35,
     "precio_piso_minimo_20": 10855.67,
     "categoria_clasificada": "outlet_liquidaciones",
@@ -19,16 +19,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/COMTOS5370/COMTOS5370_400.jpg",
     "placeholder": "./assets/img/placeholders/outlet_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCHPB010",
     "clave": "ACCHPB010",
     "nombre": "Hands Free HP Bluethooth 5220.",
     "descripcion_completa": "Hands Free HP Bluethooth 5220.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 150.0,
     "costo_base_mxn": 150.0,
@@ -43,9 +41,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCHPB010/ACCHPB010_400.jpg",
     "placeholder": "./assets/img/placeholders/outlet_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCHPD130",
@@ -67,16 +63,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCHPD130/ACCHPD130_400.jpg",
     "placeholder": "./assets/img/placeholders/outlet_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCHPD265",
     "clave": "ACCHPD265",
     "nombre": "Combo Micrófono y Web Cam WB9181A.",
     "descripcion_completa": "Combo Micrófono y Web Cam WB9181A.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 99.0,
     "costo_base_mxn": 99.0,
@@ -91,9 +85,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCHPD265/ACCHPD265_400.jpg",
     "placeholder": "./assets/img/placeholders/outlet_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "SOFNRT080",
@@ -115,9 +107,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/SOFNRT080/SOFNRT080_400.jpg",
     "placeholder": "./assets/img/placeholders/outlet_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "MEMRAM080",
@@ -139,9 +129,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/MEMRAM080/MEMRAM080_400.jpg",
     "placeholder": "./assets/img/placeholders/outlet_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "MEMRAM720",
@@ -163,8 +151,6 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/MEMRAM720/MEMRAM720_400.jpg",
     "placeholder": "./assets/img/placeholders/outlet_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   }
 ]

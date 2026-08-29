@@ -4,7 +4,7 @@
     "clave": "VENITL280",
     "nombre": "Ventilador para Fuentes de Poder/Gabinetes (700955) 80 mm, 3 pines, rodamientos tipo sleeve.",
     "descripcion_completa": "Ventilador para Fuentes de Poder/Gabinetes (700955) 80 mm, 3 pines, rodamientos tipo sleeve.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 3.5494505494505493,
     "costo_base_mxn": 69.21,
@@ -19,16 +19,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/VENITL280/VENITL280_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "VENITL040",
     "clave": "VENITL040",
     "nombre": "Ventilador de fuente de poder/gabinetes, 8mm, 4 pines, rodamiento tipo SLEEVE (700320)",
     "descripcion_completa": "Ventilador de fuente de poder/gabinetes, 8mm, 4 pines, rodamiento tipo SLEEVE (700320)",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 3.2747252747252746,
     "costo_base_mxn": 63.86,
@@ -43,16 +41,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/VENITL040/VENITL040_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO530",
     "clave": "GABEVO530",
     "nombre": "Evotec Gabinete Mini Atx Fuente 500W Ev-1023",
     "descripcion_completa": "Evotec Gabinete Mini Atx Fuente 500W Ev-1023",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 414.11764705882354,
     "costo_base_mxn": 414.12,
@@ -67,16 +63,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO530/GABEVO530_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO540",
     "clave": "GABEVO540",
     "nombre": "Evotec Gabinete Mini Atx Fuente 500W Ev-1024",
     "descripcion_completa": "Evotec Gabinete Mini Atx Fuente 500W Ev-1024",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 414.11764705882354,
     "costo_base_mxn": 414.12,
@@ -91,16 +85,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO540/GABEVO540_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO550",
     "clave": "GABEVO550",
     "nombre": "Evotec Gabinete Atx Fuente 500W Ev-1025",
     "descripcion_completa": "Evotec Gabinete Atx Fuente 500W Ev-1025",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 529.4117647058823,
     "costo_base_mxn": 529.41,
@@ -115,16 +107,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO550/GABEVO550_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO350",
     "clave": "GABEVO350",
     "nombre": "Gabinete Evotec Aruba Slim, Compartimiento: 1 Bahia HDD 3.5\", 1 Bahia SSD 2.5\", Había 5.25\",Con",
     "descripcion_completa": "Gabinete Evotec Aruba Slim, Compartimiento: 1 Bahia HDD 3.5\", 1 Bahia SSD 2.5\", Había 5.25\",Conector 2*USB 2.0, 1*entrada/salida de audio HD, Compatibilidad: M-ATX Tarjeta Madre (380*103*305mm), Incluye fuente de 600, Modelo: EV-1010",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 661.1764705882354,
     "costo_base_mxn": 661.18,
@@ -139,16 +129,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO350/GABEVO350_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO360",
     "clave": "GABEVO360",
     "nombre": "Gabinete Evotec Viena Slim, Compartimiento: 1 Bahia HDD 3.5\", 1 Bahia SSD 2.5\", Había 5.25\",Con",
     "descripcion_completa": "Gabinete Evotec Viena Slim, Compartimiento: 1 Bahia HDD 3.5\", 1 Bahia SSD 2.5\", Había 5.25\",Conector 2*USB 2.0, 1*entrada/salida de audio HD, Compatibilidad: M-ATX Tarjeta Madre (380*103*305mm), Incluye fuente de 600, Modelo: EV-1011",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 661.1764705882354,
     "costo_base_mxn": 661.18,
@@ -163,9 +151,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO360/GABEVO360_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO300",
@@ -187,16 +173,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO300/GABEVO300_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO460",
     "clave": "GABEVO460",
     "nombre": "Gabinete Evotec Lisboa Slim EV-1017, Compartimiento: 1 Bahia HDD 3.5\", 1 Bahia SSD 2.5\", 5 pci-",
     "descripcion_completa": "Gabinete Evotec Lisboa Slim EV-1017, Compartimiento: 1 Bahia HDD 3.5\", 1 Bahia SSD 2.5\", 5 pci-e, Conector 2*USB 3.0, 1*entrada/salida de audio HD, Compatibilidad: M-ATX Tarjeta Madre (380*103*305mm), Incluye fuente de 500 y 1 ventilador lateral.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 682.3529411764706,
     "costo_base_mxn": 682.35,
@@ -211,16 +195,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO460/GABEVO460_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO510",
     "clave": "GABEVO510",
     "nombre": "Gabinete Evotec Valencia Slim EV-1022, Compartimiento: 1 Bahía HDD 3.5\", 1 Bahía SSD 2.5\", 1 Ba",
     "descripcion_completa": "Gabinete Evotec Valencia Slim EV-1022, Compartimiento: 1 Bahía HDD 3.5\", 1 Bahía SSD 2.5\", 1 Bahía ODD 5.25\", 5 pci-e, Conector 2*USB 3.0 2 USB 2.0, Espacio para 2x6cm ventiladores lateral / 1x6cm superior, 1*entrada/salida de audio HD, Compatibilidad: M-ATX / ITX Tarjeta Madre (380*103*305mm), Incluye fuente de 600 y 1 ventilador lateral.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 729.4117647058823,
     "costo_base_mxn": 729.41,
@@ -235,9 +217,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO510/GABEVO510_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO470",
@@ -259,9 +239,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO470/GABEVO470_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO480",
@@ -283,9 +261,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO480/GABEVO480_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO490",
@@ -297,9 +273,9 @@
     "costo_origen": 688.2352941176471,
     "costo_base_mxn": 688.24,
     "costo_base_usd": 35.29,
-    "precio": 825.89,
-    "precio_mxn": 825.89,
-    "precio_original": 1101.19,
+    "precio": 825.88,
+    "precio_mxn": 825.88,
+    "precio_original": 1101.18,
     "precio_mayoreo_10pzs": 791.48,
     "precio_piso_minimo_20": 825.89,
     "categoria_clasificada": "gabinetes",
@@ -307,9 +283,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO490/GABEVO490_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABEVO500",
@@ -331,9 +305,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABEVO500/GABEVO500_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABGEN125",
@@ -355,9 +327,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABGEN125/GABGEN125_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT680",
@@ -379,9 +349,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT680/GABACT680_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT690",
@@ -403,9 +371,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT690/GABACT690_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT100",
@@ -427,9 +393,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT100/GABACT100_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT110",
@@ -451,9 +415,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT110/GABACT110_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABACT080",
@@ -475,16 +437,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABACT080/GABACT080_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR910",
     "clave": "GABBLR910",
     "nombre": "Gabinete Gamer Mini Torre Tank Perform 3600 Legend Series, Factor:  Micro ATX, ITX, Panel Front",
     "descripcion_completa": "Gabinete Gamer Mini Torre Tank Perform 3600 Legend Series, Factor:  Micro ATX, ITX, Panel Frontal y Lateral de Cristal Templado, Panel Derecho Metal, 2 Ventiladores Laterales  de 120mm (ARGB), 1 Ventilador Trasero 120mm,  1 HDD, 1 SSD, Puertos: 1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono),  Color Blanco, BR-941648",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 823.5294117647059,
     "costo_base_mxn": 823.53,
@@ -499,9 +459,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR910/GABBLR910_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR030",
@@ -523,23 +481,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR030/GABBLR030_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR250",
     "clave": "GABBLR250",
     "nombre": "Gabinete Gamer Media Torre ATX Eris Special GM985 Legend Series, Factor: ATX Micro Atx - Mini I",
     "descripcion_completa": "Gabinete Gamer Media Torre ATX Eris Special GM985 Legend Series, Factor: ATX Micro Atx - Mini ITX, Paneles laterales de cristal templado, hasta 5 ventiladores de 120mm (no incluidos), Ranuras PCI 4, Puertos: 1x USB C Y 1X USB 3.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED (color estático), Color Gris. AC-935654",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1118.9411764705883,
     "costo_base_mxn": 1118.94,
     "costo_base_usd": 57.38,
-    "precio": 1342.73,
-    "precio_mxn": 1342.73,
-    "precio_original": 1790.31,
+    "precio": 1342.72,
+    "precio_mxn": 1342.72,
+    "precio_original": 1790.3,
     "precio_mayoreo_10pzs": 1286.78,
     "precio_piso_minimo_20": 1342.73,
     "categoria_clasificada": "gabinetes",
@@ -547,23 +503,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR250/GABBLR250_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR260",
     "clave": "GABBLR260",
     "nombre": "Gabinete Gamer Media Torre ATX Eris Jet GM985 Legend Series, Factor: ATX Micro Atx - Mini ITX, ",
     "descripcion_completa": "Gabinete Gamer Media Torre ATX Eris Jet GM985 Legend Series, Factor: ATX Micro Atx - Mini ITX, Paneles laterales de cristal templado, hasta 5 ventiladores de 120mm (no incluidos), Ranuras PCI 4, Puertos: 1x USB C Y 1X USB 3.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED (color estático), Color Negro. AC-935661",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1118.9411764705883,
     "costo_base_mxn": 1118.94,
     "costo_base_usd": 57.38,
-    "precio": 1342.73,
-    "precio_mxn": 1342.73,
-    "precio_original": 1790.31,
+    "precio": 1342.72,
+    "precio_mxn": 1342.72,
+    "precio_original": 1790.3,
     "precio_mayoreo_10pzs": 1286.78,
     "precio_piso_minimo_20": 1342.73,
     "categoria_clasificada": "gabinetes",
@@ -571,23 +525,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR260/GABBLR260_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR270",
     "clave": "GABBLR270",
     "nombre": "Gabinete Gamer Media Torre ATX Eris Frost GM985 Legend Series, Factor: ATX Micro Atx - Mini ITX",
     "descripcion_completa": "Gabinete Gamer Media Torre ATX Eris Frost GM985 Legend Series, Factor: ATX Micro Atx - Mini ITX, Paneles laterales de cristal templado, hasta 5 ventiladores de 120mm (no incluidos), Ranuras PCI 4, Puertos: 1x USB C Y 1X USB 3.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED (color estático), Color Blanco. AC-935678",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1118.9411764705883,
     "costo_base_mxn": 1118.94,
     "costo_base_usd": 57.38,
-    "precio": 1342.73,
-    "precio_mxn": 1342.73,
-    "precio_original": 1790.31,
+    "precio": 1342.72,
+    "precio_mxn": 1342.72,
+    "precio_original": 1790.3,
     "precio_mayoreo_10pzs": 1286.78,
     "precio_piso_minimo_20": 1342.73,
     "categoria_clasificada": "gabinetes",
@@ -595,16 +547,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR270/GABBLR270_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR940",
     "clave": "GABBLR940",
     "nombre": "Gabinete Gamer Media Torre Carbono Polar Twin Mate 9900 Legend Series, Factor: ATX, Micro ATX, ",
     "descripcion_completa": "Gabinete Gamer Media Torre Carbono Polar Twin Mate 9900 Legend Series, Factor: ATX, Micro ATX, Mini ATX, Panel Frontal y Lateral de Cristal Templado, Panel Derecho Metal, 3 Ventiladores Superior  de 120mm (ARGB), 1 Ventiladores Inferioir 120mm Ajustable, 1 Ventilador 120mm Trasero, Soporta Enfriamiento Liquido,   1 HDD, 2 SSD, Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono),  Color Negro, BR-941457",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1647.0588235294117,
     "costo_base_mxn": 1647.06,
@@ -619,16 +569,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR940/GABBLR940_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR950",
     "clave": "GABBLR950",
     "nombre": "Gabinete Gamer Media Torre Carbono Polar Twin Mate 9900 Legend Series, Factor: ATX, Micro ATX, ",
     "descripcion_completa": "Gabinete Gamer Media Torre Carbono Polar Twin Mate 9900 Legend Series, Factor: ATX, Micro ATX, Mini ATX, Panel Frontal y Lateral de Cristal Templado, Panel Derecho Metal, 3 Ventiladores Superior  de 120mm (ARGB), 1 Ventiladores Inferioir 120mm Ajustable, 1 Ventilador 120mm Trasero, Soporta Enfriamiento Liquido,   1 HDD, 2 SSD, Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono),  Color Blanco, BR-941464",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1647.0588235294117,
     "costo_base_mxn": 1647.06,
@@ -643,23 +591,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR950/GABBLR950_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR860",
     "clave": "GABBLR860",
     "nombre": "Gabinete Gamer Mini Torre Tank Expert  Curve 7400 Legend Series, Factor: Micro ATX, Mini ATX, P",
     "descripcion_completa": "Gabinete Gamer Mini Torre Tank Expert  Curve 7400 Legend Series, Factor: Micro ATX, Mini ATX, Pantalla de Monitoreo, Panel Frontal y Lateral de Cristal Templado, Panel Derecho Metal, Ventilador tracero  1 de 120mm (ARGB), Ventiladores Inferiores 2 de 120mm, Soporta Enfriamiento Liquido,  1 HDD, 2 SSD, Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono),  Color Negro, BR-941617",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1470.5882352941178,
     "costo_base_mxn": 1470.59,
     "costo_base_usd": 75.41,
-    "precio": 1764.71,
-    "precio_mxn": 1764.71,
-    "precio_original": 2352.95,
+    "precio": 1764.7,
+    "precio_mxn": 1764.7,
+    "precio_original": 2352.94,
     "precio_mayoreo_10pzs": 1691.18,
     "precio_piso_minimo_20": 1764.71,
     "categoria_clasificada": "gabinetes",
@@ -667,23 +613,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR860/GABBLR860_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR870",
     "clave": "GABBLR870",
     "nombre": "Gabinete Gamer Mini Torre Tank Expert  Curve 7400 Legend Series, Factor: Micro ATX, Mini ATX, P",
     "descripcion_completa": "Gabinete Gamer Mini Torre Tank Expert  Curve 7400 Legend Series, Factor: Micro ATX, Mini ATX, Pantalla de Monitoreo, Panel Frontal y Lateral de Cristal Templado, Panel Derecho Metal, Ventilador tracero  1 de 120mm (ARGB), Ventiladores Inferiores 2 de 120mm, Soporta Enfriamiento Liquido,  1 HDD, 2 SSD, Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono),  Color Blanco, BR-941624",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1470.5882352941178,
     "costo_base_mxn": 1470.59,
     "costo_base_usd": 75.41,
-    "precio": 1764.71,
-    "precio_mxn": 1764.71,
-    "precio_original": 2352.95,
+    "precio": 1764.7,
+    "precio_mxn": 1764.7,
+    "precio_original": 2352.94,
     "precio_mayoreo_10pzs": 1691.18,
     "precio_piso_minimo_20": 1764.71,
     "categoria_clasificada": "gabinetes",
@@ -691,23 +635,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR870/GABBLR870_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR880",
     "clave": "GABBLR880",
     "nombre": "Gabinete Gamer Media Torre Tank Polar 7900 Legend Series, Factor: ATX, Micro ATX, Mini ATX, Pan",
     "descripcion_completa": "Gabinete Gamer Media Torre Tank Polar 7900 Legend Series, Factor: ATX, Micro ATX, Mini ATX, Panel Frontal y Lateral de Cristal Templado, Panel Derecho Metal, 3 Ventiladores Superior  de 120mm (ARGB), 2 Ventiladores 140mm 1 Ventilador 120mm, Soporta Enfriamiento Liquido,  1 HDD, 2 SSD, Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono),  Color Negro, BR-941471",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1588.235294117647,
     "costo_base_mxn": 1588.24,
     "costo_base_usd": 81.45,
-    "precio": 1905.89,
-    "precio_mxn": 1905.89,
-    "precio_original": 2541.19,
+    "precio": 1905.88,
+    "precio_mxn": 1905.88,
+    "precio_original": 2541.18,
     "precio_mayoreo_10pzs": 1826.48,
     "precio_piso_minimo_20": 1905.89,
     "categoria_clasificada": "gabinetes",
@@ -715,23 +657,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR880/GABBLR880_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR890",
     "clave": "GABBLR890",
     "nombre": "Gabinete Gamer Media Torre Tank Polar 7900 Legend Series, Factor: ATX, Micro ATX, Mini ATX, Pan",
     "descripcion_completa": "Gabinete Gamer Media Torre Tank Polar 7900 Legend Series, Factor: ATX, Micro ATX, Mini ATX, Panel Frontal y Lateral de Cristal Templado, Panel Derecho Metal, 3 Ventiladores Superior  de 120mm (ARGB), 2 Ventiladores 140mm 1 Ventilador 120mm, Soporta Enfriamiento Liquido,  1 HDD, 2 SSD, Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono),  Color Blanco, BR-941488",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1588.235294117647,
     "costo_base_mxn": 1588.24,
     "costo_base_usd": 81.45,
-    "precio": 1905.89,
-    "precio_mxn": 1905.89,
-    "precio_original": 2541.19,
+    "precio": 1905.88,
+    "precio_mxn": 1905.88,
+    "precio_original": 2541.18,
     "precio_mayoreo_10pzs": 1826.48,
     "precio_piso_minimo_20": 1905.89,
     "categoria_clasificada": "gabinetes",
@@ -739,16 +679,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR890/GABBLR890_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR920",
     "clave": "GABBLR920",
     "nombre": "Gabinete Gamer Mini Torre Tank Perform 3200 Legend Series, Factor:  Micro ATX, ITX, Panel Front",
     "descripcion_completa": "Gabinete Gamer Mini Torre Tank Perform 3200 Legend Series, Factor:  Micro ATX, ITX, Panel Frontal y Lateral de Cristal Templado, Panel Derecho Metal, 2 Ventiladores Laterales  de 120mm (ARGB), 1 Ventilador Trasero 120mm,  1 HDD, 1 SSD, Puertos: 1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono),  Color Negro, BR-941655",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 764.7058823529412,
     "costo_base_mxn": 764.71,
@@ -763,16 +701,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR920/GABBLR920_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR930",
     "clave": "GABBLR930",
     "nombre": "Gabinete Gamer Mini Torre Tank Perform 3200 Legend Series, Factor:  Micro ATX, ITX, Panel Front",
     "descripcion_completa": "Gabinete Gamer Mini Torre Tank Perform 3200 Legend Series, Factor:  Micro ATX, ITX, Panel Frontal y Lateral de Cristal Templado, Panel Derecho Metal, 2 Ventiladores Laterales  de 120mm (ARGB), 1 Ventilador Trasero 120mm,  1 HDD, 1 SSD, Puertos: 1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono),  Color Blanco, BR-941662",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 764.7058823529412,
     "costo_base_mxn": 764.71,
@@ -787,16 +723,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR930/GABBLR930_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR650",
     "clave": "GABBLR650",
     "nombre": "Gabinete Gamer Mini Torre  Carbono Twin Mate 6000 Legend Series, Factor: Micro Atx - Mini ITX, ",
     "descripcion_completa": "Gabinete Gamer Mini Torre  Carbono Twin Mate 6000 Legend Series, Factor: Micro Atx - Mini ITX, Panel Frontal Intercambiable Cristal y Malla, Panel Izquierdo Cristal Templado, Panel Derecho Metal,  4 ventiladores de 120mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Negro, BR-938815",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1044.284,
     "costo_base_mxn": 1044.28,
@@ -811,16 +745,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR650/GABBLR650_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR660",
     "clave": "GABBLR660",
     "nombre": "Gabinete Gamer Mini Torre  Carbono Twin Mate 6000 Legend Series, Factor: Micro Atx - Mini ITX, ",
     "descripcion_completa": "Gabinete Gamer Mini Torre  Carbono Twin Mate 6000 Legend Series, Factor: Micro Atx - Mini ITX, Panel Frontal Intercambiable Cristal y Malla, Panel Izquierdo Cristal Templado, Panel Derecho Metal,  4 ventiladores de 120mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Blanco, BR-938822",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1044.284,
     "costo_base_mxn": 1044.28,
@@ -835,16 +767,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR660/GABBLR660_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR670",
     "clave": "GABBLR670",
     "nombre": "Gabinete Gamer Media Torre  Carbono Twin Mate 5000 Legend Series, Factor:  ATX,  Micro Atx - Mi",
     "descripcion_completa": "Gabinete Gamer Media Torre  Carbono Twin Mate 5000 Legend Series, Factor:  ATX,  Micro Atx - Mini ITX, Panel Frontal Intercambiable Cristal y Malla, Panel Izquierdo Cristal Templado, Panel Derecho Metal,  4 ventiladores de 120mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Negro, BR-938839",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 969.6389411764706,
     "costo_base_mxn": 969.64,
@@ -859,16 +789,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR670/GABBLR670_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR680",
     "clave": "GABBLR680",
     "nombre": "Gabinete Gamer Media Torre  Carbono Twin Mate 5000 Legend Series, Factor:   ATX, Micro Atx - Mi",
     "descripcion_completa": "Gabinete Gamer Media Torre  Carbono Twin Mate 5000 Legend Series, Factor:   ATX, Micro Atx - Mini ITX, Panel Frontal Intercambiable Cristal y Malla, Panel Izquierdo Cristal Templado, Panel Derecho Metal,  4 ventiladores de 120mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Blanco, BR-938846",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 969.6389411764706,
     "costo_base_mxn": 969.64,
@@ -883,16 +811,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR680/GABBLR680_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR700",
     "clave": "GABBLR700",
     "nombre": "Gabinete Gamer Mini Torre  Carbono Twin Mate 4000 Legend Series, Factor: Micro Atx - Mini ITX, ",
     "descripcion_completa": "Gabinete Gamer Mini Torre  Carbono Twin Mate 4000 Legend Series, Factor: Micro Atx - Mini ITX, Panel Frontal Intercambiable Cristal y Malla, Panel Izquierdo Cristal Templado, Panel Derecho Metal, 2 Ventiladores 140mm, 1  Ventilador de 120mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Blanco, BR-938860",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 820.3529411764706,
     "costo_base_mxn": 820.35,
@@ -907,16 +833,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR700/GABBLR700_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR710",
     "clave": "GABBLR710",
     "nombre": "Gabinete Gamer Media Torre Tank Super 9200TB Legend Series, Factor: ATX, Micro Atx, ITX, Panel ",
     "descripcion_completa": "Gabinete Gamer Media Torre Tank Super 9200TB Legend Series, Factor: ATX, Micro Atx, ITX, Panel Frontal  Cristal, Panel Izquierdo Cristal Templado, Panel Derecho Metal,  3 ventiladores de 120mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Negro, BR-938723.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1044.284,
     "costo_base_mxn": 1044.28,
@@ -931,16 +855,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR710/GABBLR710_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR720",
     "clave": "GABBLR720",
     "nombre": "Gabinete Gamer Media Torre Tank Super 9200TB Legend Series, Factor: ATX, Micro Atx, ITX, Panel ",
     "descripcion_completa": "Gabinete Gamer Media Torre Tank Super 9200TB Legend Series, Factor: ATX, Micro Atx, ITX, Panel Frontal  Cristal, Panel Izquierdo Cristal Templado, Panel Derecho Metal,  3 ventiladores de 120mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Blanco, BR-938730.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1044.284,
     "costo_base_mxn": 1044.28,
@@ -955,16 +877,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR720/GABBLR720_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR740",
     "clave": "GABBLR740",
     "nombre": "Gabinete Gamer Mini Torre  Carbono Crystal 4000C Legend Series, Factor:  Micro Atx - Mini ITX, ",
     "descripcion_completa": "Gabinete Gamer Mini Torre  Carbono Crystal 4000C Legend Series, Factor:  Micro Atx - Mini ITX, Panel Frontal Intercambiable Cristal y Malla, Panel Izquierdo Cristal Templado, Panel Derecho Metal,  1 Ventilador de 120mm, 2 Ventiladores 140mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Blanco, BR-938884",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 745.7058823529412,
     "costo_base_mxn": 745.71,
@@ -979,16 +899,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR740/GABBLR740_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR750",
     "clave": "GABBLR750",
     "nombre": "Gabinete Gamer Media Torre Nitrox Aircool  5500ABW Legend Series, Factor: ATX, Micro Atx - Mini",
     "descripcion_completa": "Gabinete Gamer Media Torre Nitrox Aircool  5500ABW Legend Series, Factor: ATX, Micro Atx - Mini ITX, Panel Frontal Intercambiable Cristal y Malla, Panel Izquierdo Cristal Templado, Panel Derecho Metal, 2 Ventiladores 140mm, 1  Ventilador de 120mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Negro, BR-938914",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 894.9938823529412,
     "costo_base_mxn": 894.99,
@@ -1003,16 +921,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR750/GABBLR750_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR760",
     "clave": "GABBLR760",
     "nombre": "Gabinete Gamer Media Torre Nitrox Crystal  5500CBW Legend Series, Factor: ATX, Micro Atx - Mini",
     "descripcion_completa": "Gabinete Gamer Media Torre Nitrox Crystal  5500CBW Legend Series, Factor: ATX, Micro Atx - Mini ITX, Panel Frontal Intercambiable Cristal y Malla, Panel Izquierdo Cristal Templado, Panel Derecho Metal, 2 Ventiladores 140mm, 1  Ventilador de 120mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Blanco, BR-93898921",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 894.9938823529412,
     "costo_base_mxn": 894.99,
@@ -1027,23 +943,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR760/GABBLR760_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR590",
     "clave": "GABBLR590",
     "nombre": "Gabinete Gamer Full Torre Carbono Twin Mate 9000 Legend Series, Factor: E-ATX, ATX,  Micro Atx ",
     "descripcion_completa": "Gabinete Gamer Full Torre Carbono Twin Mate 9000 Legend Series, Factor: E-ATX, ATX,  Micro Atx - Mini ITX, Panel Frontal Intercambiable Cristal y Malla, Panel Izquierdo Cristal Templado, Panel Derecho Metal,  4 ventiladores de 120mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Negro, BR-938754",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1305.5415294117647,
     "costo_base_mxn": 1305.54,
     "costo_base_usd": 66.95,
-    "precio": 1566.65,
-    "precio_mxn": 1566.65,
-    "precio_original": 2088.87,
+    "precio": 1566.64,
+    "precio_mxn": 1566.64,
+    "precio_original": 2088.86,
     "precio_mayoreo_10pzs": 1501.37,
     "precio_piso_minimo_20": 1566.65,
     "categoria_clasificada": "gabinetes",
@@ -1051,23 +965,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR590/GABBLR590_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR600",
     "clave": "GABBLR600",
     "nombre": "Gabinete Gamer Full Torre  Carbono Twin Mate 9000 Legend Series, Factor: E-ATX, ATX,  Micro Atx",
     "descripcion_completa": "Gabinete Gamer Full Torre  Carbono Twin Mate 9000 Legend Series, Factor: E-ATX, ATX,  Micro Atx - Mini ITX, Panel Frontal Intercambiable Cristal y Malla, Panel Izquierdo Cristal Templado, Panel Derecho Metal,  4 ventiladores de 120mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Blanco, BR-938761",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1305.5415294117647,
     "costo_base_mxn": 1305.54,
     "costo_base_usd": 66.95,
-    "precio": 1566.65,
-    "precio_mxn": 1566.65,
-    "precio_original": 2088.87,
+    "precio": 1566.64,
+    "precio_mxn": 1566.64,
+    "precio_original": 2088.86,
     "precio_mayoreo_10pzs": 1501.37,
     "precio_piso_minimo_20": 1566.65,
     "categoria_clasificada": "gabinetes",
@@ -1075,16 +987,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR600/GABBLR600_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR610",
     "clave": "GABBLR610",
     "nombre": "Gabinete Gamer Mini Torre  Carbono Twin Mate 8000 Legend Series, Factor:    Micro Atx - Mini IT",
     "descripcion_completa": "Gabinete Gamer Mini Torre  Carbono Twin Mate 8000 Legend Series, Factor:    Micro Atx - Mini ITX, Panel Frontal Intercambiable Cristal y Malla, Panel Izquierdo Cristal Templado, Panel Derecho Metal,  4 ventiladores de 120mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Negro, BR-938778",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1193.5764705882352,
     "costo_base_mxn": 1193.58,
@@ -1099,16 +1009,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR610/GABBLR610_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR620",
     "clave": "GABBLR620",
     "nombre": "Gabinete Gamer Mini Torre  Carbono Twin Mate 8000 Legend Series, Factor:   Micro Atx - Mini ITX",
     "descripcion_completa": "Gabinete Gamer Mini Torre  Carbono Twin Mate 8000 Legend Series, Factor:   Micro Atx - Mini ITX, Panel Frontal Intercambiable Cristal y Malla, Panel Izquierdo Cristal Templado, Panel Derecho Metal,  4 ventiladores de 120mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Blanco, BR-938785",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1193.5764705882352,
     "costo_base_mxn": 1193.58,
@@ -1123,16 +1031,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR620/GABBLR620_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR630",
     "clave": "GABBLR630",
     "nombre": "Gabinete Gamer Media Torre  Carbono Twin Mate 7000 Legend Series, Factor:  ATX,  Micro Atx - Mi",
     "descripcion_completa": "Gabinete Gamer Media Torre  Carbono Twin Mate 7000 Legend Series, Factor:  ATX,  Micro Atx - Mini ITX, Panel Frontal Intercambiable Cristal y Malla, Panel Izquierdo Cristal Templado, Panel Derecho Metal,  4 ventiladores de 120mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Negro, BR-938792",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1118.929411764706,
     "costo_base_mxn": 1118.93,
@@ -1147,16 +1053,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR630/GABBLR630_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR640",
     "clave": "GABBLR640",
     "nombre": "Gabinete Gamer Media Torre  Carbono Twin Mate 7000 Legend Series, Factor:   ATX, Micro Atx - Mi",
     "descripcion_completa": "Gabinete Gamer Media Torre  Carbono Twin Mate 7000 Legend Series, Factor:   ATX, Micro Atx - Mini ITX, Panel Frontal Intercambiable Cristal y Malla, Panel Izquierdo Cristal Templado, Panel Derecho Metal,  4 ventiladores de 120mm (ARGB), Puertos: 1x USB C 3.1,  1X USB 3.0, 1X USB 2.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED, Color Blanco, BR-938808",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1118.929411764706,
     "costo_base_mxn": 1118.93,
@@ -1171,23 +1075,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR640/GABBLR640_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR280",
     "clave": "GABBLR280",
     "nombre": "Gabinete Gamer Micro Torre ATX Eris Special GI985 Legend Series, Factor: Micro Atx - Mini ITX, ",
     "descripcion_completa": "Gabinete Gamer Micro Torre ATX Eris Special GI985 Legend Series, Factor: Micro Atx - Mini ITX, Paneles laterales de cristal templado, hasta 5 ventiladores de 120mm (no incluidos), Ranuras PCI 4, Puertos: 1x USB C Y 1X USB 3.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED (color estático), Color Gris. AC-935371",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 999.4941176470589,
     "costo_base_mxn": 999.49,
     "costo_base_usd": 51.26,
-    "precio": 1199.39,
-    "precio_mxn": 1199.39,
-    "precio_original": 1599.19,
+    "precio": 1199.38,
+    "precio_mxn": 1199.38,
+    "precio_original": 1599.18,
     "precio_mayoreo_10pzs": 1149.41,
     "precio_piso_minimo_20": 1199.39,
     "categoria_clasificada": "gabinetes",
@@ -1195,23 +1097,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR280/GABBLR280_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR290",
     "clave": "GABBLR290",
     "nombre": "Gabinete Gamer Micro Torre ATX Eris Jet GI985 Legend Series, Factor: Micro Atx - Mini ITX, Pane",
     "descripcion_completa": "Gabinete Gamer Micro Torre ATX Eris Jet GI985 Legend Series, Factor: Micro Atx - Mini ITX, Paneles laterales de cristal templado, hasta 5 ventiladores de 120mm (no incluidos), Ranuras PCI 4, Puertos: 1x USB C Y 1X USB 3.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED (color estático), Color Negro. AC-934947",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 999.4941176470589,
     "costo_base_mxn": 999.49,
     "costo_base_usd": 51.26,
-    "precio": 1199.39,
-    "precio_mxn": 1199.39,
-    "precio_original": 1599.19,
+    "precio": 1199.38,
+    "precio_mxn": 1199.38,
+    "precio_original": 1599.18,
     "precio_mayoreo_10pzs": 1149.41,
     "precio_piso_minimo_20": 1199.39,
     "categoria_clasificada": "gabinetes",
@@ -1219,23 +1119,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR290/GABBLR290_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR300",
     "clave": "GABBLR300",
     "nombre": "Gabinete Gamer Micro Torre ATX Eris Frost GI985 Legend Series, Factor: Micro Atx - Mini ITX, Pa",
     "descripcion_completa": "Gabinete Gamer Micro Torre ATX Eris Frost GI985 Legend Series, Factor: Micro Atx - Mini ITX, Paneles laterales de cristal templado, hasta 5 ventiladores de 120mm (no incluidos), Ranuras PCI 4, Puertos: 1x USB C Y 1X USB 3.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED (color estático), Color Blanco. AC-935647",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 999.4941176470589,
     "costo_base_mxn": 999.49,
     "costo_base_usd": 51.26,
-    "precio": 1199.39,
-    "precio_mxn": 1199.39,
-    "precio_original": 1599.19,
+    "precio": 1199.38,
+    "precio_mxn": 1199.38,
+    "precio_original": 1599.18,
     "precio_mayoreo_10pzs": 1149.41,
     "precio_piso_minimo_20": 1199.39,
     "categoria_clasificada": "gabinetes",
@@ -1243,16 +1141,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR300/GABBLR300_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR310",
     "clave": "GABBLR310",
     "nombre": "Gabinete Gamer Micro Torre ATX Tank Pro GM930 Legend Series, Factor: Micro Atx - Mini ITX, Pane",
     "descripcion_completa": "Gabinete Gamer Micro Torre ATX Tank Pro GM930 Legend Series, Factor: Micro Atx - Mini ITX, Paneles laterales de cristal templado, hasta 5 120mm (no incluidos), Ranuras PCI 4, Puertos: 1x USB C Y 1X USB 3.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED (color estático), Color Negro. BR-935944",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1138.5294117647059,
     "costo_base_mxn": 1138.53,
@@ -1267,16 +1163,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR310/GABBLR310_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR320",
     "clave": "GABBLR320",
     "nombre": "Gabinete Gamer Micro Torre ATX Tank Pro GM930 Legend Series, Factor: Micro Atx - Mini ITX, Pane",
     "descripcion_completa": "Gabinete Gamer Micro Torre ATX Tank Pro GM930 Legend Series, Factor: Micro Atx - Mini ITX, Paneles laterales de cristal templado, hasta 5 120mm (no incluidos), Ranuras PCI 4, Puertos: 1x USB C Y 1X USB 3.0, 1 3.5mm Dual(Audio y micrófono), Iluminación LED (color estático), Color Blanco. BR-935951",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1138.5294117647059,
     "costo_base_mxn": 1138.53,
@@ -1291,9 +1185,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR320/GABBLR320_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR330",
@@ -1315,9 +1207,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR330/GABBLR330_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR340",
@@ -1339,9 +1229,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR340/GABBLR340_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBLR180",
@@ -1363,9 +1251,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBLR180/GABBLR180_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABCLR840",
@@ -1387,16 +1273,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABCLR840/GABCLR840_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABCLR1200",
     "clave": "GABCLR1200",
     "nombre": "Gabinete Gaming Cooler Master Ncore 100 Air White (NR100-WNNN-S00), Color Blanco,  ITX, puertos",
     "descripcion_completa": "Gabinete Gaming Cooler Master Ncore 100 Air White (NR100-WNNN-S00), Color Blanco,  ITX, puertos 2x USB 3.2 Gen 1 Type A, 1x USB 3.2 Gen 2X2 Type C, \n1x Audio Combo (Audio In / Out 3.5mm)",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 125.55555555555556,
     "costo_base_mxn": 2448.33,
@@ -1411,16 +1295,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABCLR1200/GABCLR1200_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABCLR1210",
     "clave": "GABCLR1210",
     "nombre": "Gabinete Gaming Cooler Master Ncore 100 Air Black (NR100-KNNN-S00), Color Negro,  ITX, puertos ",
     "descripcion_completa": "Gabinete Gaming Cooler Master Ncore 100 Air Black (NR100-KNNN-S00), Color Negro,  ITX, puertos 2x USB 3.2 Gen 1 Type A, 1x USB 3.2 Gen 2X2 Type C, \n1x Audio Combo (Audio In / Out 3.5mm)",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 125.55555555555556,
     "costo_base_mxn": 2448.33,
@@ -1435,9 +1317,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABCLR1210/GABCLR1210_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO320",
@@ -1459,9 +1339,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO320/GABVGO320_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO330",
@@ -1483,9 +1361,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO330/GABVGO330_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO050",
@@ -1507,9 +1383,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO050/GABVGO050_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO340",
@@ -1531,9 +1405,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO340/GABVGO340_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO190",
@@ -1555,9 +1427,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO190/GABVGO190_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABVGO290",
@@ -1579,9 +1449,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABVGO290/GABVGO290_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT030",
@@ -1603,9 +1471,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT030/GABDAT030_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT040",
@@ -1627,9 +1493,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT040/GABDAT040_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT510",
@@ -1651,9 +1515,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT510/GABDAT510_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT210",
@@ -1675,9 +1537,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT210/GABDAT210_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT270",
@@ -1699,9 +1559,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT270/GABDAT270_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT010",
@@ -1723,9 +1581,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT010/GABDAT010_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT020",
@@ -1747,9 +1603,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT020/GABDAT020_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT490",
@@ -1771,9 +1625,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT490/GABDAT490_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT410",
@@ -1795,9 +1647,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT410/GABDAT410_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT440",
@@ -1819,9 +1669,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT440/GABDAT440_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABDAT430",
@@ -1843,9 +1691,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABDAT430/GABDAT430_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBEQ020",
@@ -1867,9 +1713,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBEQ020/GABBEQ020_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBEQ250",
@@ -1891,9 +1735,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBEQ250/GABBEQ250_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABBEQ270",
@@ -1915,16 +1757,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABBEQ270/GABBEQ270_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB180",
     "clave": "GABNCB180",
     "nombre": "Naceb Gabinete Gamer C/Ventana M-Atx Negro 3 Ventiladores Rgb Na-0636N",
     "descripcion_completa": "Naceb Gabinete Gamer C/Ventana M-Atx Negro 3 Ventiladores Rgb Na-0636N",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 687.7777777777777,
     "costo_base_mxn": 687.78,
@@ -1939,16 +1779,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB180/GABNCB180_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB170",
     "clave": "GABNCB170",
     "nombre": "Naceb Gabinete Gamer C/Ventana M-Atx Blanco 3 Ventiladores Rgb Na-0636B",
     "descripcion_completa": "Naceb Gabinete Gamer C/Ventana M-Atx Blanco 3 Ventiladores Rgb Na-0636B",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 701.1111111111111,
     "costo_base_mxn": 701.11,
@@ -1963,9 +1801,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB170/GABNCB170_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB260",
@@ -1977,9 +1813,9 @@
     "costo_origen": 888.8888888888889,
     "costo_base_mxn": 888.89,
     "costo_base_usd": 45.58,
-    "precio": 1066.67,
-    "precio_mxn": 1066.67,
-    "precio_original": 1422.23,
+    "precio": 1066.66,
+    "precio_mxn": 1066.66,
+    "precio_original": 1422.22,
     "precio_mayoreo_10pzs": 1022.22,
     "precio_piso_minimo_20": 1066.67,
     "categoria_clasificada": "gabinetes",
@@ -1987,9 +1823,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB260/GABNCB260_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB270",
@@ -2001,9 +1835,9 @@
     "costo_origen": 844.4444444444445,
     "costo_base_mxn": 844.44,
     "costo_base_usd": 43.3,
-    "precio": 1013.33,
-    "precio_mxn": 1013.33,
-    "precio_original": 1351.11,
+    "precio": 1013.32,
+    "precio_mxn": 1013.32,
+    "precio_original": 1351.1,
     "precio_mayoreo_10pzs": 971.11,
     "precio_piso_minimo_20": 1013.33,
     "categoria_clasificada": "gabinetes",
@@ -2011,9 +1845,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB270/GABNCB270_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB280",
@@ -2025,9 +1857,9 @@
     "costo_origen": 1388.888888888889,
     "costo_base_mxn": 1388.89,
     "costo_base_usd": 71.23,
-    "precio": 1666.67,
-    "precio_mxn": 1666.67,
-    "precio_original": 2222.23,
+    "precio": 1666.66,
+    "precio_mxn": 1666.66,
+    "precio_original": 2222.22,
     "precio_mayoreo_10pzs": 1597.22,
     "precio_piso_minimo_20": 1666.67,
     "categoria_clasificada": "gabinetes",
@@ -2035,23 +1867,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB280/GABNCB280_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB200",
     "clave": "GABNCB200",
     "nombre": "Naceb Gabinete Gamer Media Torre Atx Negro Na-0637N",
     "descripcion_completa": "Naceb Gabinete Gamer Media Torre Atx Negro Na-0637N",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1138.888888888889,
     "costo_base_mxn": 1138.89,
     "costo_base_usd": 58.4,
-    "precio": 1366.67,
-    "precio_mxn": 1366.67,
-    "precio_original": 1822.23,
+    "precio": 1366.66,
+    "precio_mxn": 1366.66,
+    "precio_original": 1822.22,
     "precio_mayoreo_10pzs": 1309.72,
     "precio_piso_minimo_20": 1366.67,
     "categoria_clasificada": "gabinetes",
@@ -2059,16 +1889,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB200/GABNCB200_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB190",
     "clave": "GABNCB190",
     "nombre": "Naceb Gabinete Gamer Media Torre Atx Blanco  Na-0637B",
     "descripcion_completa": "Naceb Gabinete Gamer Media Torre Atx Blanco  Na-0637B",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1197.7777777777778,
     "costo_base_mxn": 1197.78,
@@ -2083,16 +1911,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB190/GABNCB190_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABNCB210",
     "clave": "GABNCB210",
     "nombre": "Naceb Gabinete Gamer E-Atx Aluminio Y Cristal Templado Na-0640",
     "descripcion_completa": "Naceb Gabinete Gamer E-Atx Aluminio Y Cristal Templado Na-0640",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1967.2222222222222,
     "costo_base_mxn": 1967.22,
@@ -2107,9 +1933,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABNCB210/GABNCB210_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY400",
@@ -2121,9 +1945,9 @@
     "costo_origen": 549.6444444444444,
     "costo_base_mxn": 549.64,
     "costo_base_usd": 28.19,
-    "precio": 659.57,
-    "precio_mxn": 659.57,
-    "precio_original": 879.43,
+    "precio": 659.56,
+    "precio_mxn": 659.56,
+    "precio_original": 879.42,
     "precio_mayoreo_10pzs": 632.09,
     "precio_piso_minimo_20": 659.57,
     "categoria_clasificada": "gabinetes",
@@ -2131,9 +1955,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY400/GABSTY400_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY410",
@@ -2145,9 +1967,9 @@
     "costo_origen": 572.5444444444444,
     "costo_base_mxn": 572.54,
     "costo_base_usd": 29.36,
-    "precio": 687.05,
-    "precio_mxn": 687.05,
-    "precio_original": 916.07,
+    "precio": 687.04,
+    "precio_mxn": 687.04,
+    "precio_original": 916.06,
     "precio_mayoreo_10pzs": 658.42,
     "precio_piso_minimo_20": 687.05,
     "categoria_clasificada": "gabinetes",
@@ -2155,9 +1977,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY410/GABSTY410_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY250",
@@ -2169,9 +1989,9 @@
     "costo_origen": 708.8888888888889,
     "costo_base_mxn": 708.89,
     "costo_base_usd": 36.35,
-    "precio": 850.67,
-    "precio_mxn": 850.67,
-    "precio_original": 1134.23,
+    "precio": 850.66,
+    "precio_mxn": 850.66,
+    "precio_original": 1134.22,
     "precio_mayoreo_10pzs": 815.22,
     "precio_piso_minimo_20": 850.67,
     "categoria_clasificada": "gabinetes",
@@ -2179,9 +1999,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY250/GABSTY250_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY260",
@@ -2203,16 +2021,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY260/GABSTY260_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY380",
     "clave": "GABSTY380",
     "nombre": "Gabinete Gamer Xzeal X-Tron Mid Tower ATX XZGAXT1B Panel Der. Vidrio + Metal 2xUSB1.0 + 1xUSD3.",
     "descripcion_completa": "Gabinete Gamer Xzeal X-Tron Mid Tower ATX XZGAXT1B Panel Der. Vidrio + Metal 2xUSB1.0 + 1xUSD3.0 + 3.5 mm + 4 ARGB Fans Puerto para Ventilador 1 x 12 cm trasero (incluido con ARGB) 3 x 12 cm tapa superior 3 x 12 cm placa base de la tarjeta madre (incluido con ARGB) 3 x 12 cm tapa inferior, Espacios PCI,  NEGRO 7 espacios de expansión",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1062.2222222222222,
     "costo_base_mxn": 1062.22,
@@ -2227,16 +2043,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY380/GABSTY380_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY390",
     "clave": "GABSTY390",
     "nombre": "Gabinete Gamer X-Tron Mid Tower Xzeal ATX XZGAXT1W Panel Der. Vidrio + Metal 2xUSB1.0 + 1xUSD3.",
     "descripcion_completa": "Gabinete Gamer X-Tron Mid Tower Xzeal ATX XZGAXT1W Panel Der. Vidrio + Metal 2xUSB1.0 + 1xUSD3.0 + 3.5 mm + 4 ARGB Fans, Puerto para Ventilador 1 x 12 cm trasero (incluido con ARGB) 3 x 12 cm tapa superior 3 x 12 cm placa base de la tarjeta madre (incluido con ARGB) 3 x 12 cm tapa inferior, Espacios PCI, BLANCO",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1097.2222222222222,
     "costo_base_mxn": 1097.22,
@@ -2251,16 +2065,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY390/GABSTY390_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY310",
     "clave": "GABSTY310",
     "nombre": "Gabinete Gamer Mid Tower Xzeal ATX  XZCGB08B, Panel Der. Vidrio + Metal 2xUSB1.0  + 1xUSD3.0 + ",
     "descripcion_completa": "Gabinete Gamer Mid Tower Xzeal ATX  XZCGB08B, Panel Der. Vidrio + Metal 2xUSB1.0  + 1xUSD3.0 + 3.5 mm + 4 ARGB Fans + 1 HUB Negro",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1075.2777777777778,
     "costo_base_mxn": 1075.28,
@@ -2275,16 +2087,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY310/GABSTY310_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY320",
     "clave": "GABSTY320",
     "nombre": "Gabinete Gamer Mid Tower Xzeal ATX XZCGB08W, Panel Der. Vidrio + Metal 2xUSB1.0 + 1xUSD3.0 + 3.",
     "descripcion_completa": "Gabinete Gamer Mid Tower Xzeal ATX XZCGB08W, Panel Der. Vidrio + Metal 2xUSB1.0 + 1xUSD3.0 + 3.5 mm + 4 ARGB Fans + 1 HUB Blanco",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1075.2444444444445,
     "costo_base_mxn": 1075.24,
@@ -2299,16 +2109,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY320/GABSTY320_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY470",
     "clave": "GABSTY470",
     "nombre": "Gabinete Gamer Xzeal Full Tower XZ160, EATX/ATX Panel Der.Front. Cristal templado 1xUSB2.0 + 1x",
     "descripcion_completa": "Gabinete Gamer Xzeal Full Tower XZ160, EATX/ATX Panel Der.Front. Cristal templado 1xUSB2.0 + 1xUSB3.0 + 1x USB Tipo C+ 1x3.5mm + 4 Ventiladores ARGB Negro XZGAEX1B",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1178.3333333333333,
     "costo_base_mxn": 1178.33,
@@ -2323,16 +2131,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY470/GABSTY470_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABSTY480",
     "clave": "GABSTY480",
     "nombre": "Gabinete Gamer Xzeal Full Tower XZ160, EATX/ATX Panel Der.Front. Cristal templado 1xUSB2.0 + 1x",
     "descripcion_completa": "Gabinete Gamer Xzeal Full Tower XZ160, EATX/ATX Panel Der.Front. Cristal templado 1xUSB2.0 + 1xUSB3.0 + 1x USB Tipo C+ 1x3.5mm + 4 Ventiladores ARGB Blanco XZGAEX1W",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 1247.011111111111,
     "costo_base_mxn": 1247.01,
@@ -2347,9 +2153,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABSTY480/GABSTY480_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABGET200",
@@ -2371,9 +2175,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABGET200/GABGET200_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY040",
@@ -2395,9 +2197,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY040/GABYEY040_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY290",
@@ -2419,16 +2219,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY290/GABYEY290_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY390",
     "clave": "GABYEY390",
     "nombre": "Gabinete para PC Gaming, ATX Hussar Plus, White- Modelo: YCM-ASHUS-01WH, Admite posiciones de i",
     "descripcion_completa": "Gabinete para PC Gaming, ATX Hussar Plus, White- Modelo: YCM-ASHUS-01WH, Admite posiciones de instalación de ventiladores de 6 x 12 cm. Gracias al tamaño del chasis compacto, el flujo del aire de arriba hacia abajo crea una presión positiva para eliminar el calor rápidamente.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 50.61111111111111,
     "costo_base_mxn": 986.92,
@@ -2443,9 +2241,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY390/GABYEY390_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY120",
@@ -2467,9 +2263,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY120/GABYEY120_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY230",
@@ -2491,9 +2285,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY230/GABYEY230_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY200",
@@ -2515,9 +2307,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY200/GABYEY200_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY210",
@@ -2539,9 +2329,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY210/GABYEY210_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY250",
@@ -2563,9 +2351,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY250/GABYEY250_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY410",
@@ -2587,9 +2373,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY410/GABYEY410_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY280",
@@ -2611,9 +2395,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY280/GABYEY280_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABQIA010",
@@ -2635,9 +2417,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABQIA010/GABQIA010_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY240",
@@ -2659,16 +2439,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY240/GABYEY240_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY380",
     "clave": "GABYEY380",
     "nombre": "Yeyian Gabinete para PC Gaming ATX Hussar Plus, Negro - Modelo: YCM-ASHUS-01 Admite posiciones ",
     "descripcion_completa": "Yeyian Gabinete para PC Gaming ATX Hussar Plus, Negro - Modelo: YCM-ASHUS-01 Admite posiciones de instalacion de ventiladores de 6 x 12 cm. Gracias al tamaño de chasis compacto, el flujo de aire de arriba hacia abajo crea una presion positiva para eliminar el calor rapidamente",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 44.888888888888886,
     "costo_base_mxn": 875.33,
@@ -2683,16 +2461,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY380/GABYEY380_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY370",
     "clave": "GABYEY370",
     "nombre": "Yeyian Gabinete Gamer Mirage S - Modelo: YCM-APMIR-S1 Vidrio templado personalizado para una ex",
     "descripcion_completa": "Yeyian Gabinete Gamer Mirage S - Modelo: YCM-APMIR-S1 Vidrio templado personalizado para una exhibicion inmersiva de tu plataforma de juego. Chasis de metal de 0.8mm para una durabilidad y resistencia",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 77.94444444444444,
     "costo_base_mxn": 1519.92,
@@ -2707,9 +2483,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY370/GABYEY370_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY340",
@@ -2731,9 +2505,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY340/GABYEY340_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABYEY350",
@@ -2755,9 +2527,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABYEY350/GABYEY350_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2890",
@@ -2779,9 +2549,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2890/GABTMK2890_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2840",
@@ -2803,9 +2571,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2840/GABTMK2840_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2810",
@@ -2827,9 +2593,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2810/GABTMK2810_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2710",
@@ -2851,9 +2615,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2710/GABTMK2710_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2720",
@@ -2875,9 +2637,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2720/GABTMK2720_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABTMK2730",
@@ -2899,9 +2659,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABTMK2730/GABTMK2730_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABASS320",
@@ -2923,9 +2681,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS320/GABASS320_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABASS210",
@@ -2947,9 +2703,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS210/GABASS210_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABASS220",
@@ -2971,9 +2725,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS220/GABASS220_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABASS120",
@@ -2995,9 +2747,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS120/GABASS120_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABASS180",
@@ -3019,9 +2769,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS180/GABASS180_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABASS200",
@@ -3043,9 +2791,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS200/GABASS200_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABASS070",
@@ -3067,9 +2813,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS070/GABASS070_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABASS010",
@@ -3091,9 +2835,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS010/GABASS010_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABASS060",
@@ -3115,9 +2857,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS060/GABASS060_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABASS100",
@@ -3139,9 +2879,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS100/GABASS100_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABASS230",
@@ -3163,9 +2901,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS230/GABASS230_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABASS250",
@@ -3187,9 +2923,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS250/GABASS250_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABASS260",
@@ -3211,9 +2945,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS260/GABASS260_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABASS150",
@@ -3235,9 +2967,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABASS150/GABASS150_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCACT4760",
@@ -3259,9 +2989,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCACT4760/ACCACT4760_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCNCB770",
@@ -3283,9 +3011,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCNCB770/ACCNCB770_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "VENNCB020",
@@ -3307,9 +3033,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/VENNCB020/VENNCB020_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "VENNCB040",
@@ -3331,9 +3055,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/VENNCB040/VENNCB040_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "VENNCB050",
@@ -3355,9 +3077,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/VENNCB050/VENNCB050_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "VENNCB080",
@@ -3379,9 +3099,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/VENNCB080/VENNCB080_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "VENNCB090",
@@ -3403,9 +3121,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/VENNCB090/VENNCB090_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "VENNCB100",
@@ -3427,9 +3143,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/VENNCB100/VENNCB100_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "VENNCB110",
@@ -3451,9 +3165,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/VENNCB110/VENNCB110_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCYEY070",
@@ -3475,9 +3187,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCYEY070/ACCYEY070_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCDAT1410",
@@ -3499,9 +3209,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCDAT1410/ACCDAT1410_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCDAT1480",
@@ -3523,9 +3231,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCDAT1480/ACCDAT1480_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCDAT1670",
@@ -3547,9 +3253,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCDAT1670/ACCDAT1670_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCDAT1680",
@@ -3571,16 +3275,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCDAT1680/ACCDAT1680_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABITL750",
     "clave": "GABITL750",
     "nombre": "102254 Estación de carga con 6 puertos USB, Seis puertos USB-A, hasta 5 V / 2.4 A por puerto, 5",
     "descripcion_completa": "102254 Estación de carga con 6 puertos USB, Seis puertos USB-A, hasta 5 V / 2.4 A por puerto, 50 W de salida en total, negro: Cargador USB para tablets, teléfonos móviles y otros dispositivos portátiles, con 6 puertos de carga, Cada puerto soporta hasta 5 V / 2.4 A, Circuito integrado inteligente para una asignación de energía correcta, General: Puertos: Seis puertos de carga USB-A, Características de salida: Salida USB-A: 5 V, máximo 2.4 A, 50 W , 3 Años de Garantía Directo con Fabricante.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 26.153846153846153,
     "costo_base_mxn": 510.0,
@@ -3595,16 +3297,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABITL750/GABITL750_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABITL760",
     "clave": "GABITL760",
     "nombre": "716000 Gabinete móvil de carga profesional con 32 puertos USB-C - 576W: 32 puertos USB-C PD, co",
     "descripcion_completa": "716000 Gabinete móvil de carga profesional con 32 puertos USB-C - 576W: 32 puertos USB-C PD, compartimientos espaciosos para teléfonos y tabletas, 576 W en total, hasta 18 W por puerto, bloqueo con código PIN, protección contra sobretensiones, ventilación silenciosa, carcasa de metal, negro, Almacena de forma segura y carga rápidamente hasta 32 smartphones, tabletas y otros dispositivos USB, Puertos de carga USB - C Power Delivery (PD 3.0) con potencia de hasta 3 A / 18 W por puerto y 576 W en total, Carcasa de metal resistente, segura y con recubrimiento de polvo; bloqueable con código PIN Eléctrico: Entrada AC: 110 - 240 V; 16 A; 50 -60 Hz, Salida AC: 110 - 240 V; 16 A; 50 - 60 Hz, 2 puertos de salida (EU CEE 7/3), Potencia de carga USB - C: 5 - 12 V; máximo 3 A; 18 W; 32 puertos de salida con 576 W en total, Potencia de carga USB - A: 5 V; 2.1 A; 1 puerto de salida , 3 Años de Garantía Directo con Fabricante.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 1046.1538461538462,
     "costo_base_mxn": 20400.0,
@@ -3619,23 +3319,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABITL760/GABITL760_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABITL770",
     "clave": "GABITL770",
     "nombre": "715959 Gabinete profesional para carga de energía con 20 puertos USB-C - 360 W: Carga rápidamen",
     "descripcion_completa": "715959 Gabinete profesional para carga de energía con 20 puertos USB-C - 360 W: Carga rápidamente y almacena de forma segura hasta 20 dispositivos inteligentes como tabletas, y otros dispositivos USB, Puertos de carga USB-C (PD 3.0) con potencia de hasta 3 A / 18 W por puerto y 360 W en total, Protección contra sobrecarga, sobre corriente, cortocircuito, picos de voltaje y rayos, Eléctrico: Entrada AC: 110 - 240 V; 16 A; 50 -60 Hz, Potencia de salida USB-C Ajustes de voltaje/corriente (máximo): USB-C: 5 V / 3 A, 9 V / 2 A, 12 V / 1.5 A , 3 Años de Garantía Directo con Fabricante.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 643.5714285714286,
     "costo_base_mxn": 12549.64,
     "costo_base_usd": 643.57,
-    "precio": 15059.57,
-    "precio_mxn": 15059.57,
-    "precio_original": 20079.43,
+    "precio": 15059.56,
+    "precio_mxn": 15059.56,
+    "precio_original": 20079.42,
     "precio_mayoreo_10pzs": 14432.09,
     "precio_piso_minimo_20": 15059.57,
     "categoria_clasificada": "gabinetes",
@@ -3643,16 +3341,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABITL770/GABITL770_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABITL780",
     "clave": "GABITL780",
     "nombre": "715942 Gabinete de carga con 10 puertos USB-C - 180 W: 10 puertos USB-C PD, bahías para teléfon",
     "descripcion_completa": "715942 Gabinete de carga con 10 puertos USB-C - 180 W: 10 puertos USB-C PD, bahías para teléfonos y tabletas de hasta 10.2\", 180 W en total, hasta 18 W por puerto, con cerradura, protección contra sobretensiones, ventilación integrada, carcasa metálica, negro, Almacena de forma segura y carga rápidamente hasta 10 smartphones, tabletas y otros dispositivos USB de hasta 10.2\",Puertos de carga USB-C Power Delivery (PD 3.0) con una potencia de hasta 3 A / 18 W por puerto y 180 W en total; no se necesitan cargadores de pared adicionales. Protección contra sobrecarga, sobre corriente, cortocircuito, picos de tensión y rayos Eléctrico: Entrada AC: 110 - 240 V; 16 A; 50 -60 Hz, Potencia de salida USB-C Ajustes de voltaje/corriente (máximo): USB-C: 5 V / 3 A, 9 V / 2 A, 12 V / 1.5 A , 3 Años de Garantía Directo con Fabricante.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 456.7582417582417,
     "costo_base_mxn": 8906.79,
@@ -3667,16 +3363,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABITL780/GABITL780_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "GABITL790",
     "clave": "GABITL790",
     "nombre": "102353 Carro de carga con 32 puertos USB-C - 576 W: 32 puertos USB-C PD, amplias bahías para Ch",
     "descripcion_completa": "102353 Carro de carga con 32 puertos USB-C - 576 W: 32 puertos USB-C PD, amplias bahías para Chromebooks, tabletas y teléfonos, hasta 18 W por puerto, protección contra sobretensiones, ventilación silenciosa, carcasa metálica, negro; Almacena y carga de forma segura hasta 32 Chromebooks, tabletas, smartphones y otros dispositivos USB, Puertos de carga USB - C Power Delivery (PD 3.0) con potencia de hasta 3 A / 18 W por puerto y 576 W en total, Protección contra sobrecarga, sobre corriente, cortocircuito, picos de voltaje y rayos Eléctrico: Entrada AC: 110 - 240 V; 16 A; 50 -60 Hz, Salida AC: 110 - 240 V; 16 A; 50 - 60 Hz, 2 puertos de salida (EU CEE 7/3), Potencia de carga USB - C: 5 - 12 V; máximo 3 A; 18 W; 32 puertos de salida con 576 W en total, Potencia de carga USB - A: 5 V; 2.1 A; 1 puerto de salida , 3 Años de Garantía Directo con Fabricante.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 1195.6043956043957,
     "costo_base_mxn": 23314.29,
@@ -3691,9 +3385,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/GABITL790/GABITL790_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CABITL2070",
@@ -3715,9 +3407,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CABITL2070/CABITL2070_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "SLXLMP030",
@@ -3739,9 +3429,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/SLXLMP030/SLXLMP030_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "SLXLMP130",
@@ -3763,9 +3451,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/SLXLMP130/SLXLMP130_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "SLXLMP680",
@@ -3787,16 +3473,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/SLXLMP680/SLXLMP680_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCTRL560",
     "clave": "ACCTRL560",
     "nombre": "Gabinete. Cerrado de 19\" Estandar, Soporte 2500 LBS (1133.98 KG) con side panels y puertas incl",
     "descripcion_completa": "Gabinete. Cerrado de 19\" Estandar, Soporte 2500 LBS (1133.98 KG) con side panels y puertas incluidas, su altura en  EIA unit (42U)",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 26737.922217074018,
     "costo_base_mxn": 26737.92,
@@ -3811,9 +3495,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL560/ACCTRL560_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCTRL1670",
@@ -3835,9 +3517,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL1670/ACCTRL1670_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCTRL380",
@@ -3859,16 +3539,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL380/ACCTRL380_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCTRL3810",
     "clave": "ACCTRL3810",
     "nombre": "Gabinete pared SmartRack de 12U, puerta delantera y laterales ventiladas. MEDIDAS 65CM DE ALTO,",
     "descripcion_completa": "Gabinete pared SmartRack de 12U, puerta delantera y laterales ventiladas. MEDIDAS 65CM DE ALTO, 60CM ANCHO, 45CM PROFUNDIDAD SRW12U",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 3890.5178969072213,
     "costo_base_mxn": 3890.52,
@@ -3883,16 +3561,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL3810/ACCTRL3810_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCTRL5450",
     "clave": "ACCTRL5450",
     "nombre": "Gabinete para Cableado Estructurado SmartRack de 3U de Bajo Perfil de Profundidad de Switch par",
     "descripcion_completa": "Gabinete para Cableado Estructurado SmartRack de 3U de Bajo Perfil de Profundidad de Switch para instalación vertical en pared SRWF6UMOD",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 3915.1811134020636,
     "costo_base_mxn": 3915.18,
@@ -3907,23 +3583,21 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL5450/ACCTRL5450_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCTRL3910",
     "clave": "ACCTRL3910",
     "nombre": "Bloque de potencia de respaldo para audio/video de 550VA - Protección exclusiva para UPS para g",
     "descripcion_completa": "Bloque de potencia de respaldo para audio/video de 550VA - Protección exclusiva para UPS para gabinete con cableado estructurado, Incluye: Bloque de potencia de respaldo AV550SC, Cable de alimentación NEMA 5-15P desprendible de 152 mm [6\"], Manual del Propietario con información sobre la garantía, Incluye garantía de 1 año",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 3442.194874319471,
     "costo_base_mxn": 3442.19,
     "costo_base_usd": 176.52,
-    "precio": 4130.63,
-    "precio_mxn": 4130.63,
-    "precio_original": 5507.51,
+    "precio": 4130.62,
+    "precio_mxn": 4130.62,
+    "precio_original": 5507.5,
     "precio_mayoreo_10pzs": 3958.52,
     "precio_piso_minimo_20": 4130.63,
     "categoria_clasificada": "gabinetes",
@@ -3931,16 +3605,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL3910/ACCTRL3910_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCTRL4070",
     "clave": "ACCTRL4070",
     "nombre": "Administrador de Cables Tripp lite Horizontal de 2U de Alta Capacidad - conducto de peine con t",
     "descripcion_completa": "Administrador de Cables Tripp lite Horizontal de 2U de Alta Capacidad - conducto de peine con tapa de bisagra doble SRCABLEDUCT2UHD) organiza cables dentro del gabinete SmartRack o rack abierto. Incluye los accesorios de instalación necesarios.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 389.0267826943125,
     "costo_base_mxn": 389.03,
@@ -3955,16 +3627,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL4070/ACCTRL4070_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCTRL5110",
     "clave": "ACCTRL5110",
     "nombre": "Juego de Accesorios Tripplite para Orificio Cuadrado con 50 Tornillos M5 y Arandelas Los SmartR",
     "descripcion_completa": "Juego de Accesorios Tripplite para Orificio Cuadrado con 50 Tornillos M5 y Arandelas Los SmartRack SRCAGENUTS son compatibles con todos los gabinetes con orificio cuadrado.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "m",
     "costo_origen": 194.42163210934783,
     "costo_base_mxn": 194.42,
@@ -3979,9 +3649,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCTRL5110/ACCTRL5110_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCVGO2550",
@@ -4003,9 +3671,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCVGO2550/ACCVGO2550_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCRBT8930",
@@ -4027,9 +3693,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCRBT8930/ACCRBT8930_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCRBT5930",
@@ -4051,9 +3715,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCRBT5930/ACCRBT5930_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCRBT5950",
@@ -4075,9 +3737,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCRBT5950/ACCRBT5950_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCRBT7670",
@@ -4099,9 +3759,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCRBT7670/ACCRBT7670_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCSTY500",
@@ -4113,9 +3771,9 @@
     "costo_origen": 101.94444444444444,
     "costo_base_mxn": 101.94,
     "costo_base_usd": 5.23,
-    "precio": 122.33,
-    "precio_mxn": 122.33,
-    "precio_original": 163.11,
+    "precio": 122.32,
+    "precio_mxn": 122.32,
+    "precio_original": 163.1,
     "precio_mayoreo_10pzs": 117.23,
     "precio_piso_minimo_20": 122.33,
     "categoria_clasificada": "gabinetes",
@@ -4123,9 +3781,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCSTY500/ACCSTY500_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "ACCSTY510",
@@ -4147,8 +3803,6 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/ACCSTY510/ACCSTY510_400.jpg",
     "placeholder": "./assets/img/placeholders/gab_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   }
 ]

@@ -4,7 +4,7 @@
     "clave": "CPUINT4720",
     "nombre": "Procesador Intel® Core™ Ultra 9 285K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili",
     "descripcion_completa": "Procesador Intel® Core™ Ultra 9 285K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibilidad con PCIe 5.0 y 4.0 y compatibilidad con DDR5, los procesadores de escritorio Intel® Core™ Ultra 9 (serie 2) desbloqueados están optimizados para jugadores entusiastas y creadores serios y ayudan a ofrecer un alto rendimiento. Compatible con placas base chipset serie 800. Potencia base del procesador de 125 W. NO INCLUYE DISIPADOR.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 572.2777777777777,
     "costo_base_mxn": 11159.42,
@@ -19,16 +19,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4720/CPUINT4720_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4730",
     "clave": "CPUINT4730",
     "nombre": "Procesador Intel® Core™ Ultra 7 265K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili",
     "descripcion_completa": "Procesador Intel® Core™ Ultra 7 265K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibilidad con PCIe 5.0 y 4.0 y compatibilidad con DDR5, los procesadores de escritorio Intel® Core™ Ultra 7 (serie 2) desbloqueados están optimizados para los jugadores y la productividad y ayudan a ofrecer un alto rendimiento. Compatible con placas base chipset serie 800. Potencia base del procesador de 125 W. NO INCLUYE DISIPADOR.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 338.4555555555556,
     "costo_base_mxn": 6599.88,
@@ -43,16 +41,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4730/CPUINT4730_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4740",
     "clave": "CPUINT4740",
     "nombre": "Procesador Intel® Core™ Ultra 7 265KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad",
     "descripcion_completa": "Procesador Intel® Core™ Ultra 7 265KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad con PCIe 5.0 y 4.0 y compatibilidad con DDR5, los procesadores de escritorio Intel® Core™ Ultra 7 (serie 2) desbloqueados están optimizados para los jugadores y la productividad y ayudan a ofrecer un alto rendimiento. Se requieren gráficos discretos. Compatible con placas base chipset serie 800. Potencia base del procesador de 125 W. NO INCLUYE DISIPADOR.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 284.44444444444446,
     "costo_base_mxn": 5546.67,
@@ -67,16 +63,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4740/CPUINT4740_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4750",
     "clave": "CPUINT4750",
     "nombre": "Procesador Intel® Core™ Ultra 5 245K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili",
     "descripcion_completa": "Procesador Intel® Core™ Ultra 5 245K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibilidad con PCIe 5.0 y 4.0 y compatibilidad con DDR5, los procesadores de escritorio Intel® Core™ Ultra 5 (serie 2) desbloqueados están optimizados para los jugadores y la productividad y ayudan a ofrecer un alto rendimiento. Compatible con placas base chipset serie 800. Potencia base del procesador de 125 W. NO INCLUYE DISIPADOR.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 213.85555555555555,
     "costo_base_mxn": 4170.18,
@@ -91,16 +85,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4750/CPUINT4750_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4760",
     "clave": "CPUINT4760",
     "nombre": "Procesador Intel® Core™ Ultra 5 245KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad",
     "descripcion_completa": "Procesador Intel® Core™ Ultra 5 245KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad con PCIe 5.0 y 4.0 y compatibilidad con DDR5, los procesadores de escritorio Intel® Core™ Ultra 5 (serie 2) desbloqueados están optimizados para los jugadores y la productividad y ayudan a ofrecer un alto rendimiento. Se requieren gráficos discretos. Compatible con placas base chipset serie 800. Potencia base del procesador de 125 W. NO INCLUYE DISIPADOR.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 202.38888888888889,
     "costo_base_mxn": 3946.58,
@@ -115,16 +107,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4760/CPUINT4760_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4770",
     "clave": "CPUINT4770",
     "nombre": "Procesador Intel® Core™ Ultra 9 para escritorio 285 LGA 1851, 24 cores (8P + 16E) Hasta 5.4 GHz",
     "descripcion_completa": "Procesador Intel® Core™ Ultra 9 para escritorio 285 LGA 1851, 24 cores (8P + 16E) Hasta 5.4 GHz. Compatible con PCIe 5.0 y 4.0, así como con DDR5-6400, caché total 40 MB. Los procesadores Intel® Core™ Ultra 9 para escritorio (serie 2) están optimizados para jugadores entusiastas y creadores profesionales, y ofrecen un alto rendimiento. Compatible con placas base serie 800. Potencia base del procesador: 65 W. Intel® RH2 incluido. INCLUYE GRAFICOS.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 558.8888888888889,
     "costo_base_mxn": 10898.33,
@@ -139,16 +129,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4770/CPUINT4770_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4780",
     "clave": "CPUINT4780",
     "nombre": "Procesador Intel® Core™ Ultra 7 para escritorio 265 LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GHz",
     "descripcion_completa": "Procesador Intel® Core™ Ultra 7 para escritorio 265 LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GHz. Compatible con PCIe 5.0 y 4.0, así como con DDR5-6400, caché total 36 MB. Los procesadores Intel® Core™ Ultra 7 para escritorio (serie 2) están optimizados para jugadores y productividad, y ofrecen un alto rendimiento. Compatible con placas base serie 800. Potencia base del procesador: 65 W. Intel® RM2 incluido. INCLUYE GRAFICOS.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 387.77777777777777,
     "costo_base_mxn": 7561.67,
@@ -163,16 +151,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4780/CPUINT4780_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4790",
     "clave": "CPUINT4790",
     "nombre": "Procesador Intel® Core™ Ultra 7 para escritorio 265F LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GH",
     "descripcion_completa": "Procesador Intel® Core™ Ultra 7 para escritorio 265F LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GHz. Compatible con PCIe 5.0 y 4.0, así como con DDR5-6400, caché total 36 MB. Los procesadores Intel® Core™ Ultra 7 para escritorio (serie 2) están optimizados para jugadores y productividad, y ofrecen un alto rendimiento. Compatible con placas base serie 800. Potencia base del procesador: 65 W. Intel® RM2 incluido. NECESITA GRAFICOS.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 347.8333333333333,
     "costo_base_mxn": 6782.75,
@@ -187,16 +173,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4790/CPUINT4790_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4800",
     "clave": "CPUINT4800",
     "nombre": "Procesador Intel® Core™ Ultra 5 para escritorio 225 LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz.",
     "descripcion_completa": "Procesador Intel® Core™ Ultra 5 para escritorio 225 LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz. Compatible con PCIe 5.0 y 4.0, así como con DDR5-6400, caché total 22 MB. Los procesadores Intel® Core™ Ultra 5 para escritorio (serie 2) están optimizados para jugadores y productividad, y ofrecen un alto rendimiento. Compatible con placas base serie 800. Potencia base del procesador: 65 W. Intel® RM2 incluido. INCLUYE GRAFICOS.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 178.88888888888889,
     "costo_base_mxn": 3488.33,
@@ -211,16 +195,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4800/CPUINT4800_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4810",
     "clave": "CPUINT4810",
     "nombre": "Procesador Intel® Core™ Ultra 5 para escritorio 225F LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz",
     "descripcion_completa": "Procesador Intel® Core™ Ultra 5 para escritorio 225F LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz. Compatible con PCIe 5.0 y 4.0, así como con DDR5-6400, caché total 22 MB. Los procesadores Intel® Core™ Ultra 5 para escritorio (serie 2) están optimizados para jugadores y productividad, y ofrecen un alto rendimiento. Compatible con placas base serie 800. Potencia base del procesador: 65 W. Intel® RM2 incluido. NECESITA GRAFICOS.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 143.7222222222222,
     "costo_base_mxn": 2802.58,
@@ -235,16 +217,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4810/CPUINT4810_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT5030",
     "clave": "CPUINT5030",
     "nombre": "Procesador Intel Core Ultra 7 270K Plus BX80768270K, 36 TOPS - 24 núcleos (8+16), 3.2 Ghz base,",
     "descripcion_completa": "Procesador Intel Core Ultra 7 270K Plus BX80768270K, 36 TOPS - 24 núcleos (8+16), 3.2 Ghz base, 5.5 Ghz turbo, 36 MB Caché, 125 W base, tecnologías de IA (OpenVINO™, WindowsML, DirectML, ONNX RT, WebNN). Tamaño de memoria máximo 256 GB / hasta DDR5-7200 MTs (2 canales de memoria). INCLUYE GRAFICOS - LGA 1851 - Compatible con chipset serie 800. NECESITA DISIPADOR.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 306.6666666666667,
     "costo_base_mxn": 5980.0,
@@ -259,16 +239,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT5030/CPUINT5030_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT5040",
     "clave": "CPUINT5040",
     "nombre": "Procesador Intel Core Ultra 5 250K Plus BX80768250K, 30 TOPS - 18 núcleos (6+12), 3.3 Ghz base,",
     "descripcion_completa": "Procesador Intel Core Ultra 5 250K Plus BX80768250K, 30 TOPS - 18 núcleos (6+12), 3.3 Ghz base, 5.3 Ghz turbo, 30 MB Caché, 125 W base, tecnologías de IA (OpenVINO™, WindowsML, DirectML, ONNX RT, WebNN). Tamaño de memoria máximo 256 GB / hasta DDR5-7200 MTs (2 canales de memoria). INCLUYE GRAFICOS - LGA 1851 - Compatible con chipset serie 800. NECESITA DISIPADOR.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 233.08888888888887,
     "costo_base_mxn": 4545.23,
@@ -283,16 +261,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT5040/CPUINT5040_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT5050",
     "clave": "CPUINT5050",
     "nombre": "Procesador Intel Core Ultra 5 250KF Plus BX80768250KF, 22 TOPS - 18 núcleos (6+12), 3.3 Ghz bas",
     "descripcion_completa": "Procesador Intel Core Ultra 5 250KF Plus BX80768250KF, 22 TOPS - 18 núcleos (6+12), 3.3 Ghz base, 5.3 Ghz turbo, 30 MB Caché, 125 W base, tecnologías de IA (OpenVINO™, WindowsML, DirectML, ONNX RT, WebNN). Tamaño de memoria máximo 256 GB / hasta DDR5-7200 MTs (2 canales de memoria) - LGA 1851 - Compatible con chipset serie 800. NECESITA GRAFICOS. NECESITA DISIPADOR.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 214.95555555555555,
     "costo_base_mxn": 4191.63,
@@ -307,16 +283,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT5050/CPUINT5050_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4440",
     "clave": "CPUINT4440",
     "nombre": "Procesador Intel® Core™ i7-14700KF (14.a generación), LGA1700, sin gráficos de procesador. 33 M",
     "descripcion_completa": "Procesador Intel® Core™ i7-14700KF (14.a generación), LGA1700, sin gráficos de procesador. 33 MB caché, 28 hilos. Con tecnología Intel® Turbo Boost Max 3.0 y compatibilidad con PCIe 5.0 y 4.0, compatibilidad con DDR5 5600 y DDR4 3200, los procesadores de escritorio Intel® Core™ i7 de 14.ª generación desbloqueados están optimizados para los jugadores y la productividad y ayudan a ofrecer un alto rendimiento. SE REQUIEREN GRÁFICOS. Compatible con placas base serie 700 y serie 600. Potencia base del procesador de 125 W. DESBLOQUEADO, NECESITA DISIPADOR, NECESITA GRAFICOS, NECESITA ACTUALIZAR BIOS.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 378.88888888888886,
     "costo_base_mxn": 7388.33,
@@ -331,16 +305,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4440/CPUINT4440_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4550",
     "clave": "CPUINT4550",
     "nombre": "Procesador Intel® Core™ i7-14700F (14.ª generación), sin procesador gráfico. Con tecnología Int",
     "descripcion_completa": "Procesador Intel® Core™ i7-14700F (14.ª generación), sin procesador gráfico. Con tecnología Intel® Turbo Boost Max 3.0, compatibilidad con PCIe 5.0 y 4.0, compatibilidad con DDR5 y DDR4, los procesadores de escritorio Intel® Core™ i7 (14.ª generación) están optimizados para los jugadores y la productividad y ayudan a ofrecer un alto rendimiento. Se requieren gráficos discretos. Compatible con placas base chipsets serie 700 y serie 600. Potencia base del procesador de 65 W. NECESITA VIDEO.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 317.77777777777777,
     "costo_base_mxn": 6196.67,
@@ -355,16 +327,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4550/CPUINT4550_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4430",
     "clave": "CPUINT4430",
     "nombre": "Procesador Intel® Core™ i7-14700K (14.ª generación), LGA1700, 33 MB caché, 28 hilos. Con tecnol",
     "descripcion_completa": "Procesador Intel® Core™ i7-14700K (14.ª generación), LGA1700, 33 MB caché, 28 hilos. Con tecnología Intel® Turbo Boost Max 3.0 y compatibilidad con PCIe 5.0 y 4.0, compatibilidad con DDR5 5600 y DDR4 3200, los procesadores de escritorio Intel® Core™ i7 de 14.ª generación desbloqueados están optimizados para los jugadores y la productividad y ayudan a ofrecer un alto rendimiento. Compatible con placas base serie 700 y serie 600. Potencia base del procesador de 125 W. DESBLOQUEADO, NECESITA DISIPADOR, INCLUYE GRAFICOS, NECESITA ACTUALIZAR BIOS.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 371.27777777777777,
     "costo_base_mxn": 7239.92,
@@ -379,16 +349,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4430/CPUINT4430_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4540",
     "clave": "CPUINT4540",
     "nombre": "Procesador Intel® Core™ i7-14700 (14.ª generación). Con tecnología Intel® Turbo Boost Max 3.0, ",
     "descripcion_completa": "Procesador Intel® Core™ i7-14700 (14.ª generación). Con tecnología Intel® Turbo Boost Max 3.0, compatibilidad con PCIe 5.0 y 4.0, compatibilidad con DDR5 y DDR4, los procesadores de escritorio Intel® Core™ i7 (14.ª generación) están optimizados para los jugadores y la productividad y ayudan a ofrecer un alto rendimiento. Compatible con placas base chipsets serie 700 y serie 600. Potencia base del procesador de 65 W.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 385.2,
     "costo_base_mxn": 7511.4,
@@ -403,16 +371,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4540/CPUINT4540_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4460",
     "clave": "CPUINT4460",
     "nombre": "Procesador Intel® Core™ i9-14900KF (14.a generación), LGA1700, sin gráficos de procesador. 36 M",
     "descripcion_completa": "Procesador Intel® Core™ i9-14900KF (14.a generación), LGA1700, sin gráficos de procesador. 36 MB caché, 32 hilos. Con Intel® Thermal Velocity Boost, Intel® Turbo Boost Max Technology 3.0 y compatibilidad con PCIe 5.0 y 4.0, compatibilidad con DDR5 5600 y DDR4 3200, los procesadores de escritorio Intel® Core™ i9 de 14.ª generación desbloqueados están optimizados para jugadores entusiastas y creadores serios y ayudan a ofrecer un alto rendimiento. SE REQUIEREN GRÁFICOS. Compatible con placas base serie 700 y serie 600. Potencia base del procesador de 125 W. DESBLOQUEADO, NECESITA DISIPADOR, NECESITA GRAFICOS, NECESITA ACTUALIZAR BIOS.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 448.97777777777776,
     "costo_base_mxn": 8755.07,
@@ -427,16 +393,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4460/CPUINT4460_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4450",
     "clave": "CPUINT4450",
     "nombre": "Procesador Intel® Core™ i9-14900K (14.ª generación), LGA 1700, 36 MB caché, 32 hilos. Con Intel",
     "descripcion_completa": "Procesador Intel® Core™ i9-14900K (14.ª generación), LGA 1700, 36 MB caché, 32 hilos. Con Intel® Thermal Velocity Boost, Intel® Turbo Boost Max Technology 3.0 y compatibilidad con PCIe 5.0 y 4.0, compatibilidad con DDR5 5600 y DDR4 3200, los procesadores de escritorio Intel® Core™ i9 de 14.ª generación desbloqueados están optimizados para jugadores entusiastas y creadores serios y ayudan a ofrecer un alto rendimiento. Compatible con placas base serie 700 y serie 600. Potencia base del procesador de 125 W. DESBLOQUEADO, NECESITA DISIPADOR, INCLUYE GRAFICOS, NECESITA ACTUALIZAR BIOS.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 479.5,
     "costo_base_mxn": 9350.25,
@@ -451,16 +415,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4450/CPUINT4450_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4570",
     "clave": "CPUINT4570",
     "nombre": "Procesador Intel® Core™ i9-14900F (14.ª generación), sin procesador gráfico. Con Intel® Thermal",
     "descripcion_completa": "Procesador Intel® Core™ i9-14900F (14.ª generación), sin procesador gráfico. Con Intel® Thermal Velocity Boost, Intel® Turbo Boost Max Technology 3.0, compatibilidad con PCIe 5.0 y 4.0, compatibilidad con DDR5 y DDR4, los procesadores de escritorio Intel® Core™ i9 (14.ª generación) están optimizados para jugadores entusiastas y creadores serios y ayudan a ofrecer un alto rendimiento. . Se requieren gráficos discretos. Compatible con placas base chipsets serie 700 y serie 600. Potencia base del procesador de 65 W. NECESITA VIDEO.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 534.8333333333334,
     "costo_base_mxn": 10429.25,
@@ -475,16 +437,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4570/CPUINT4570_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4560",
     "clave": "CPUINT4560",
     "nombre": "Procesador Intel® Core™ i9-14900 (14.ª generación). Con Intel® Thermal Velocity Boost, Intel® T",
     "descripcion_completa": "Procesador Intel® Core™ i9-14900 (14.ª generación). Con Intel® Thermal Velocity Boost, Intel® Turbo Boost Max Technology 3.0, compatibilidad con PCIe 5.0 y 4.0, compatibilidad con DDR5 y DDR4, los procesadores de escritorio Intel® Core™ i9 (14.ª generación) están optimizados para jugadores entusiastas y creadores serios y ayudan a ofrecer un alto rendimiento. Compatible con placas base chipsets serie 700 y serie 600. Potencia base del procesador de 65 W.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 560.5555555555555,
     "costo_base_mxn": 10930.83,
@@ -499,9 +459,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4560/CPUINT4560_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT5080",
@@ -523,16 +481,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT5080/CPUINT5080_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4490",
     "clave": "CPUINT4490",
     "nombre": "Procesador Intel® Core™ i5-14600K (14.a generación), LGA1700, 24 MB caché, 20 hilos. Con compat",
     "descripcion_completa": "Procesador Intel® Core™ i5-14600K (14.a generación), LGA1700, 24 MB caché, 20 hilos. Con compatibilidad con PCIe 5.0 y 4.0, compatibilidad con DDR5 5600 y DDR4 3200, los procesadores de escritorio Intel® Core™ i5 de 14.ª generación desbloqueados están optimizados para los jugadores y la productividad y ayudan a ofrecer un alto rendimiento. Compatible con placas base serie 700 y serie 600. Potencia base del procesador de 125 W. Intel® UHD Graphics 770. DESBLOQUEADO, NECESITA DISIPADOR, INCLUYE GRAFICOS, NECESITA ACTUALIZAR BIOS.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 255.55555555555554,
     "costo_base_mxn": 4983.33,
@@ -547,16 +503,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4490/CPUINT4490_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4420",
     "clave": "CPUINT4420",
     "nombre": "Procesador Intel® Core™ i5-14600KF (14.a generación), LGA1700 sin gráficos de procesador. 24 MB",
     "descripcion_completa": "Procesador Intel® Core™ i5-14600KF (14.a generación), LGA1700 sin gráficos de procesador. 24 MB caché, 20 hilos. Con compatibilidad con PCIe 5.0 y 4.0, compatibilidad con DDR5 5600 y DDR4 3200, los procesadores de escritorio Intel® Core™ i5 de 14.ª generación desbloqueados están optimizados para los jugadores y la productividad y ayudan a ofrecer un alto rendimiento. SE REQUIEREN GRÁFICOS. Compatible con placas base serie 700 y serie 600. Potencia base del procesador de 125 W. DESBLOQUEADO, NECESITA DISIPADOR, NECESITA GRAFICOS, NECESITA ACTUALIZAR BIOS.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 242.88888888888889,
     "costo_base_mxn": 4736.33,
@@ -571,16 +525,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4420/CPUINT4420_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4520",
     "clave": "CPUINT4520",
     "nombre": "Procesador Intel® Core™ i5-14400 (14.ª generación). Con compatibilidad con PCIe 5.0 y 4.0, comp",
     "descripcion_completa": "Procesador Intel® Core™ i5-14400 (14.ª generación). Con compatibilidad con PCIe 5.0 y 4.0, compatibilidad con DDR5 y DDR4, los procesadores de escritorio Intel® Core™ i5 (14.ª generación) están optimizados para los jugadores y la productividad y ayudan a ofrecer un alto rendimiento. Compatible con placas base chipsets serie 700 y serie 600. Potencia base del procesador de 65 W.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 198.88888888888889,
     "costo_base_mxn": 3878.33,
@@ -595,16 +547,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4520/CPUINT4520_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4530",
     "clave": "CPUINT4530",
     "nombre": "Procesador Intel® Core™ i5-14400F (14.ª generación), sin procesador gráfico. Con compatibilidad",
     "descripcion_completa": "Procesador Intel® Core™ i5-14400F (14.ª generación), sin procesador gráfico. Con compatibilidad con PCIe 5.0 y 4.0, compatibilidad con DDR5 y DDR4, los procesadores de escritorio Intel® Core™ i5 (14.ª generación) están optimizados para los jugadores y la productividad y ayudan a ofrecer. un alto rendimiento. Se requieren gráficos discretos. Compatible con placas base chipsets serie 700 y serie 600. Potencia base del procesador de 65 W. NECESITA VIDEO.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 174.0,
     "costo_base_mxn": 3393.0,
@@ -619,9 +569,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4530/CPUINT4530_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT5070",
@@ -643,9 +591,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT5070/CPUINT5070_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT5090",
@@ -667,16 +613,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT5090/CPUINT5090_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4510",
     "clave": "CPUINT4510",
     "nombre": "Procesador Intel® Core™ i3-14100 (14.ª generación). Con compatibilidad con PCIe 5.0 y 4.0, DDR5",
     "descripcion_completa": "Procesador Intel® Core™ i3-14100 (14.ª generación). Con compatibilidad con PCIe 5.0 y 4.0, DDR5 y DDR4, los procesadores de escritorio Intel® Core™ i3 (14.ª generación) están optimizados para la productividad. Compatible con placas base serie 700 y serie 600. Potencia base del procesador de 60 W.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 136.67777777777778,
     "costo_base_mxn": 2665.22,
@@ -691,9 +635,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4510/CPUINT4510_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT5020",
@@ -715,9 +657,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT5020/CPUINT5020_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4010",
@@ -739,16 +679,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4010/CPUINT4010_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4020",
     "clave": "CPUINT4020",
     "nombre": "Intel Core i9-12900KF Alder Lake 3.20GHz (5.20GHz Turbo) LGA 1700 30 MB Intel Smart Cache, 8 Nú",
     "descripcion_completa": "Intel Core i9-12900KF Alder Lake 3.20GHz (5.20GHz Turbo) LGA 1700 30 MB Intel Smart Cache, 8 Núcleos y 8 subprocesos. COMPATIBLE SOLO CON MOTHERBOARDS CHIPSET SERIE  600. NO INCLUYE VENTILADOR. NECESITA TARJETA DE VIDEO INDEPENDIENTE.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 427.22222222222223,
     "costo_base_mxn": 8330.83,
@@ -763,16 +701,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4020/CPUINT4020_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4210",
     "clave": "CPUINT4210",
     "nombre": "Intel Core i9-12900 Alder Lake 2.40GHz (5.10GHz Turbo) LGA 1700 30 MB Intel Smart Cache, 16 Núc",
     "descripcion_completa": "Intel Core i9-12900 Alder Lake 2.40GHz (5.10GHz Turbo) LGA 1700 30 MB Intel Smart Cache, 16 Núcleos. COMPATIBLE SOLO CON MOTHERBOARDS CHIPSET SERIE  600.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 446.87777777777774,
     "costo_base_mxn": 8714.12,
@@ -787,16 +723,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4210/CPUINT4210_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4160",
     "clave": "CPUINT4160",
     "nombre": "Intel Core i7-12700 Alder Lake 2.10GHz (4.90GHz Turbo) LGA 1700 25 MB Intel Smart Cache, 8 Núcl",
     "descripcion_completa": "Intel Core i7-12700 Alder Lake 2.10GHz (4.90GHz Turbo) LGA 1700 25 MB Intel Smart Cache, 8 Núcleos y 4 subprocesos. COMPATIBLE SOLO CON MOTHERBOARDS CHIPSET SERIE  600.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 328.05555555555554,
     "costo_base_mxn": 6397.08,
@@ -811,9 +745,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4160/CPUINT4160_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT3990",
@@ -835,9 +767,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT3990/CPUINT3990_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4000",
@@ -859,16 +789,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4000/CPUINT4000_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4090",
     "clave": "CPUINT4090",
     "nombre": "Intel Core i7-12700F Alder Lake 2.10GHz (4.90GHz Turbo) LGA 1700 25 MB Intel Smart Cache, 8 Núc",
     "descripcion_completa": "Intel Core i7-12700F Alder Lake 2.10GHz (4.90GHz Turbo) LGA 1700 25 MB Intel Smart Cache, 8 Núcleos y 4 subprocesos. COMPATIBLE SOLO CON MOTHERBOARDS CHIPSET SERIE  600. REQUIERE TARJETA DE VIDEO INDEPENDIENTE",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 232.16666666666666,
     "costo_base_mxn": 4527.25,
@@ -883,9 +811,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4090/CPUINT4090_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT3970",
@@ -907,16 +833,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT3970/CPUINT3970_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT3980",
     "clave": "CPUINT3980",
     "nombre": "Intel Core i5-12600KF Alder Lake 3.70GHz (4.90GHz Turbo) LGA 1700 20 MB Intel Smart Cache, 10 N",
     "descripcion_completa": "Intel Core i5-12600KF Alder Lake 3.70GHz (4.90GHz Turbo) LGA 1700 20 MB Intel Smart Cache, 10 Núcleos. COMPATIBLE SOLO CON MOTHERBOARDS CHIPSET SERIE 600. REQUIERE TARJETA DE VIDEO Y VENTILADOR/ENFRIAMIENTO)",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 169.27777777777777,
     "costo_base_mxn": 3300.92,
@@ -931,16 +855,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT3980/CPUINT3980_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4070",
     "clave": "CPUINT4070",
     "nombre": "Intel Core i5-12400 Alder Lake 2.50GHz (4.40GHz Turbo) LGA 1700 18 MB Intel Smart Cache, 6 Núcl",
     "descripcion_completa": "Intel Core i5-12400 Alder Lake 2.50GHz (4.40GHz Turbo) LGA 1700 18 MB Intel Smart Cache, 6 Núcleos. COMPATIBLE SOLO CON MOTHERBOARDS CHIPSET SERIE  600.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 171.11111111111111,
     "costo_base_mxn": 3336.67,
@@ -955,16 +877,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4070/CPUINT4070_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4910",
     "clave": "CPUINT4910",
     "nombre": "Procesador Intel® Core™ i5-12400 VERSION TRAY - SIN DISIPADOR LGA 1700, 18MB caché, hasta 4.40 ",
     "descripcion_completa": "Procesador Intel® Core™ i5-12400 VERSION TRAY - SIN DISIPADOR LGA 1700, 18MB caché, hasta 4.40 Ghz. 6 núcleos, compatible con memorias DDR4 y DDR5, hasta 128GB. Compatible con placas base serie 600. Potencia base del procesador: 65 W. Para ensamble - Procesador OEM - SIN CAJA",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 161.53333333333333,
     "costo_base_mxn": 3149.9,
@@ -979,16 +899,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4910/CPUINT4910_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4080",
     "clave": "CPUINT4080",
     "nombre": "Intel Core i5-12400F Alder Lake 2.50GHz (4.40GHz Turbo) LGA 1700 18 MB Intel Smart Cache, 6 Núc",
     "descripcion_completa": "Intel Core i5-12400F Alder Lake 2.50GHz (4.40GHz Turbo) LGA 1700 18 MB Intel Smart Cache, 6 Núcleos. COMPATIBLE SOLO CON MOTHERBOARDS CHIPSET SERIE  600. REQUIERE TARJETA DE VIDEO INDEPENDIENTE",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 147.77777777777777,
     "costo_base_mxn": 2881.67,
@@ -1003,16 +921,14 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4080/CPUINT4080_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4170",
     "clave": "CPUINT4170",
     "nombre": "Intel Core i3-12100 Alder Lake 3.20GHz (4.30GHz Turbo) LGA 1700 12 MB Intel Smart Cache, 4 Núcl",
     "descripcion_completa": "Intel Core i3-12100 Alder Lake 3.20GHz (4.30GHz Turbo) LGA 1700 12 MB Intel Smart Cache, 4 Núcleos y 4 subprocesos. COMPATIBLE SOLO CON MOTHERBOARDS CHIPSET SERIE  600.",
-    "marca": "CT",
+    "marca": "PC CUSTOM",
     "moneda_origen": "d",
     "costo_origen": 127.77777777777777,
     "costo_base_mxn": 2491.67,
@@ -1027,9 +943,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4170/CPUINT4170_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4060",
@@ -1051,9 +965,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4060/CPUINT4060_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4140",
@@ -1075,9 +987,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4140/CPUINT4140_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT4180",
@@ -1099,9 +1009,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT4180/CPUINT4180_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUINT5010",
@@ -1123,9 +1031,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUINT5010/CPUINT5010_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2050",
@@ -1147,9 +1053,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2050/CPUAMD2050_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2540",
@@ -1171,9 +1075,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2540/CPUAMD2540_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2000",
@@ -1195,9 +1097,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2000/CPUAMD2000_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2820",
@@ -1219,9 +1119,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2820/CPUAMD2820_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2140",
@@ -1243,9 +1141,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2140/CPUAMD2140_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2350",
@@ -1267,9 +1163,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2350/CPUAMD2350_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2270",
@@ -1291,9 +1185,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2270/CPUAMD2270_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2680",
@@ -1315,9 +1207,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2680/CPUAMD2680_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2660",
@@ -1339,9 +1229,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2660/CPUAMD2660_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2570",
@@ -1363,9 +1251,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2570/CPUAMD2570_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2800",
@@ -1387,9 +1273,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2800/CPUAMD2800_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2520",
@@ -1411,9 +1295,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2520/CPUAMD2520_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2670",
@@ -1435,9 +1317,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2670/CPUAMD2670_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2890",
@@ -1459,9 +1339,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2890/CPUAMD2890_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2930",
@@ -1483,9 +1361,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2930/CPUAMD2930_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2530",
@@ -1507,9 +1383,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2530/CPUAMD2530_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2290",
@@ -1531,9 +1405,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2290/CPUAMD2290_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2370",
@@ -1555,9 +1427,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2370/CPUAMD2370_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2500",
@@ -1579,9 +1449,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2500/CPUAMD2500_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2810",
@@ -1603,9 +1471,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2810/CPUAMD2810_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2880",
@@ -1627,9 +1493,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2880/CPUAMD2880_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2420",
@@ -1651,9 +1515,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2420/CPUAMD2420_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2730",
@@ -1675,9 +1537,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2730/CPUAMD2730_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2720",
@@ -1699,9 +1559,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2720/CPUAMD2720_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2650",
@@ -1723,9 +1581,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2650/CPUAMD2650_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2950",
@@ -1747,9 +1603,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2950/CPUAMD2950_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2510",
@@ -1771,9 +1625,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2510/CPUAMD2510_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2410",
@@ -1795,9 +1647,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2410/CPUAMD2410_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2900",
@@ -1819,9 +1669,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2900/CPUAMD2900_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2580",
@@ -1843,9 +1691,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2580/CPUAMD2580_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2480",
@@ -1867,9 +1713,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2480/CPUAMD2480_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2740",
@@ -1891,9 +1735,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2740/CPUAMD2740_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2710",
@@ -1915,9 +1757,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2710/CPUAMD2710_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2640",
@@ -1939,9 +1779,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2640/CPUAMD2640_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2750",
@@ -1963,9 +1801,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2750/CPUAMD2750_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2170",
@@ -1987,9 +1823,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2170/CPUAMD2170_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2830",
@@ -2011,9 +1845,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2830/CPUAMD2830_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2460",
@@ -2035,9 +1867,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2460/CPUAMD2460_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2390",
@@ -2059,9 +1889,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2390/CPUAMD2390_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2400",
@@ -2083,9 +1911,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2400/CPUAMD2400_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2760",
@@ -2107,9 +1933,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2760/CPUAMD2760_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2850",
@@ -2131,9 +1955,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2850/CPUAMD2850_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2450",
@@ -2155,9 +1977,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2450/CPUAMD2450_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2860",
@@ -2179,9 +1999,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2860/CPUAMD2860_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2490",
@@ -2203,9 +2021,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2490/CPUAMD2490_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2940",
@@ -2227,9 +2043,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2940/CPUAMD2940_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2690",
@@ -2251,9 +2065,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2690/CPUAMD2690_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2620",
@@ -2275,9 +2087,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2620/CPUAMD2620_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2600",
@@ -2299,9 +2109,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2600/CPUAMD2600_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2610",
@@ -2323,9 +2131,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2610/CPUAMD2610_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUAMD2590",
@@ -2347,9 +2153,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUAMD2590/CPUAMD2590_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUASS1160",
@@ -2371,9 +2175,7 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUASS1160/CPUASS1160_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   },
   {
     "sku": "CPUASS1360",
@@ -2395,8 +2197,6 @@
     "cdn_url": "https://static.ctonline.mx/imagenes/CPUASS1360/CPUASS1360_400.jpg",
     "placeholder": "./assets/img/placeholders/cpu_placeholder.jpg",
     "garantia": "48h Directa / 1 Año Fabricante",
-    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)",
-    "vigencia_precios": "Válido del 24 al 29 de Agosto de 2026",
-    "clausula_precios": "Precios sujetos a alza o cambio sin previo aviso"
+    "disponibilidad_gdl": "Pedro Moreno 501 A (Entrega Inmediata)"
   }
 ]
