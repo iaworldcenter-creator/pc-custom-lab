@@ -51,11 +51,11 @@ function setViewStyle(style) {
     
     if (btnList && btnGrid) {
         if (style === 'list') {
-            btnList.className = "p-1.5 rounded-lg bg-cyan-500 text-slate-950 font-bold transition shadow cursor-pointer text-xs";
-            btnGrid.className = "p-1.5 rounded-lg text-slate-400 hover:text-white transition cursor-pointer text-xs";
+            btnList.className = "min-w-[44px] min-h-[44px] p-2 rounded-lg bg-cyan-500 text-slate-950 font-bold transition shadow cursor-pointer text-xs flex items-center justify-center"; btnList.setAttribute("aria-pressed", "true"); btnGrid.setAttribute("aria-pressed", "false");
+            btnGrid.className = "p-1.5 rounded-lg text-slate-200 hover:text-white transition cursor-pointer text-xs";
         } else {
-            btnGrid.className = "p-1.5 rounded-lg bg-cyan-500 text-slate-950 font-bold transition shadow cursor-pointer text-xs";
-            btnList.className = "p-1.5 rounded-lg text-slate-400 hover:text-white transition cursor-pointer text-xs";
+            btnGrid.className = "min-w-[44px] min-h-[44px] p-2 rounded-lg bg-cyan-500 text-slate-950 font-bold transition shadow cursor-pointer text-xs flex items-center justify-center"; btnGrid.setAttribute("aria-pressed", "true"); btnList.setAttribute("aria-pressed", "false");
+            btnList.className = "p-1.5 rounded-lg text-slate-200 hover:text-white transition cursor-pointer text-xs";
         }
     }
     renderExactCatalogView();
@@ -136,7 +136,7 @@ function renderExactCatalogView() {
     renderPaginationBar(totalPages);
 
     if (pageItems.length === 0) {
-        container.className = "w-full py-16 text-center text-slate-400 font-mono text-sm bg-slate-900/90 border border-slate-800 rounded-2xl";
+        container.className = "w-full py-16 text-center text-slate-200 font-mono text-sm bg-slate-900/90 border border-slate-800 rounded-2xl";
         container.innerHTML = `
             <i class="fa-solid fa-box-open text-4xl text-cyan-400 mb-3 block"></i>
             No se encontraron productos con los filtros seleccionados.
@@ -165,7 +165,7 @@ function renderExactCatalogView() {
                         <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
                     </div>
 
-                    <button class="absolute top-2.5 right-2.5 text-slate-500 hover:text-pink-400 transition text-sm z-10 cursor-pointer" title="Favoritos" aria-label="Agregar a lista de favoritos" class="absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-w-[44px] min-h-[44px] flex items-center justify-center">
+                    <button class="absolute top-2.5 right-2.5 text-slate-300 hover:text-pink-400 transition text-sm z-10 cursor-pointer" title="Favoritos" aria-label="Agregar a lista de favoritos" class="absolute top-2.5 right-2.5 text-slate-200 hover:text-pink-400 transition text-base z-10 cursor-pointer min-w-[44px] min-h-[44px] flex items-center justify-center">
                         <i class="fa-regular fa-heart"></i>
                     </button>
 
@@ -190,7 +190,7 @@ function renderExactCatalogView() {
                                 $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
                             </span>
                             <div class="flex items-center justify-center gap-1.5 text-[9.5px] font-mono">
-                                <span class="text-slate-500 line-through">$${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                                <span class="text-slate-300 line-through">$${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
                                 <span class="text-amber-400 font-bold">Mayoreo: $${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
                             </div>
                         </div>
@@ -204,7 +204,7 @@ function renderExactCatalogView() {
                             ${title}
                         </h4>
 
-                        <div class="text-center text-[9px] font-mono text-slate-400 mb-2">
+                        <div class="text-center text-[9px] font-mono text-slate-200 mb-2">
                             <span>SKU: ${sku}</span>
                         </div>
                     </div>
@@ -265,25 +265,25 @@ function renderExactCatalogView() {
                         <h4 onclick="openProductDetailModal('${sku}')" class="text-cyan-300 font-bold text-sm mb-1 hover:text-cyan-200 transition leading-snug cursor-pointer">
                             ${title}
                         </h4>
-                        <div class="flex items-center gap-2 text-[10px] font-mono text-slate-400 mb-1">
+                        <div class="flex items-center gap-2 text-[10px] font-mono text-slate-200 mb-1">
                             <span>SKU: ${sku}</span>
                             <span>•</span>
                             <span class="text-emerald-400 font-bold">20% Neto Libre Garantizado</span>
                         </div>
-                        <p class="text-slate-400 text-xs leading-relaxed line-clamp-2">${desc}</p>
+                        <p class="text-slate-200 text-xs leading-relaxed line-clamp-2">${desc}</p>
                     </div>
 
                     <div class="w-full md:w-56 flex flex-col justify-between items-end border-t md:border-t-0 md:border-l border-slate-800 pt-3 md:pt-0 md:pl-4 shrink-0 text-right">
                         <div class="w-full mb-1.5">
-                            <span class="text-[10px] text-slate-500 line-through block font-mono">$${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                            <span class="text-[10px] text-slate-300 line-through block font-mono">$${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
                             <div class="text-base font-black text-emerald-400 leading-tight font-mono drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
                                 $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
                             </div>
-                            <span class="text-[9.5px] text-slate-400 block font-mono">$${usdPrice} USD • Mayoreo: $${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                            <span class="text-[9.5px] text-slate-200 block font-mono">$${usdPrice} USD • Mayoreo: $${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
                         </div>
 
                         <div class="flex items-center gap-2 w-full">
-                            <button onclick="openProductDetailModal('${sku}')" class="p-2.5 rounded-xl border border-slate-800 bg-slate-800 hover:bg-slate-700 text-cyan-300 transition text-xs font-bold" title="Ficha Técnica">
+                            <button onclick="openProductDetailModal('${sku}')" class="p-2.5 rounded-xl border border-slate-800 bg-slate-800 hover:bg-slate-700 text-cyan-300 transition text-xs font-bold" title="Ficha Técnica" aria-label="Ver ficha técnica completa">
                                 <i class="fa-solid fa-file-lines"></i>
                             </button>
                             <button 
@@ -360,10 +360,10 @@ function renderSidebarFacets() {
         <div class="p-3 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-300 text-xs shadow-2xl flex flex-col justify-between space-y-4">
             
             <div class="flex gap-2">
-                <button onclick="renderExactCatalogView()" class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2 rounded-xl text-[11px] uppercase transition cursor-pointer shadow">
+                <button onclick="renderExactCatalogView()" aria-label="Aplicar filtros seleccionados" class="flex-1 min-h-[44px] bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2 rounded-xl text-[11px] uppercase transition cursor-pointer shadow">
                     Aplicar
                 </button>
-                <button onclick="resetFacets()" class="flex-1 bg-slate-800 hover:bg-red-950/60 border border-slate-700 hover:border-red-500/50 text-slate-300 hover:text-red-400 font-bold py-2 rounded-xl text-[11px] uppercase transition cursor-pointer">
+                <button onclick="resetFacets()" aria-label="Limpiar todos los filtros" class="flex-1 min-h-[44px] bg-slate-800 hover:bg-red-950/60 border border-slate-700 hover:border-red-500/50 text-slate-300 hover:text-red-400 font-bold py-2 rounded-xl text-[11px] uppercase transition cursor-pointer">
                     Limpiar
                 </button>
             </div>
@@ -385,15 +385,15 @@ function renderSidebarFacets() {
                 <h4 class="font-bold text-cyan-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
                     <i class="fa-solid fa-microchip text-cyan-400"></i> 1. Componentes de Ensamble
                 </h4>
-                <div class="space-y-1 text-slate-400">
+                <div class="space-y-1 text-slate-200">
                     ${block1.map(c => `
                         <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-0.5 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
                             <span class="flex items-center gap-2 truncate">
                                 <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
+                                <i class="fa-solid ${c.icon} text-[11px] text-slate-200 w-3 text-center shrink-0"></i>
                                 <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : ''}">${c.name}</span>
                             </span>
-                            <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
+                            <span class="text-[10px] text-slate-200 font-mono">(${getCount(c.id)})</span>
                         </label>
                     `).join('')}
                 </div>
@@ -404,15 +404,15 @@ function renderSidebarFacets() {
                 <h4 class="font-bold text-purple-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
                     <i class="fa-solid fa-cube text-purple-400"></i> 2. Sistemas & Mini PCs IA
                 </h4>
-                <div class="space-y-1 text-slate-400">
+                <div class="space-y-1 text-slate-200">
                     ${block2.map(c => `
                         <label class="flex items-center justify-between cursor-pointer hover:text-purple-300 py-0.5 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
                             <span class="flex items-center gap-2 truncate">
                                 <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-purple-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
+                                <i class="fa-solid ${c.icon} text-[11px] text-slate-200 w-3 text-center shrink-0"></i>
                                 <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-purple-300' : ''}">${c.name}</span>
                             </span>
-                            <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
+                            <span class="text-[10px] text-slate-200 font-mono">(${getCount(c.id)})</span>
                         </label>
                     `).join('')}
                 </div>
@@ -423,15 +423,15 @@ function renderSidebarFacets() {
                 <h4 class="font-bold text-amber-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
                     <i class="fa-solid fa-puzzle-piece text-amber-400"></i> 3. Consumibles & Soluciones
                 </h4>
-                <div class="space-y-1 text-slate-400">
+                <div class="space-y-1 text-slate-200">
                     ${block3.map(c => `
                         <label class="flex items-center justify-between cursor-pointer hover:text-amber-300 py-0.5 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
                             <span class="flex items-center gap-2 truncate">
                                 <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-amber-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-[11px] text-slate-400 w-3 text-center shrink-0"></i>
+                                <i class="fa-solid ${c.icon} text-[11px] text-slate-200 w-3 text-center shrink-0"></i>
                                 <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-amber-300' : ''}">${c.name}</span>
                             </span>
-                            <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
+                            <span class="text-[10px] text-slate-200 font-mono">(${getCount(c.id)})</span>
                         </label>
                     `).join('')}
                 </div>
@@ -586,7 +586,7 @@ function initPredictiveSearchEngine() {
 
             if (matches.length === 0) {
                 box.innerHTML = `
-                    <div class="p-3.5 text-center text-slate-400 font-mono text-xs">
+                    <div class="p-3.5 text-center text-slate-200 font-mono text-xs">
                         <i class="fa-solid fa-magnifying-glass text-cyan-400 mb-1 block"></i>
                         No se encontraron coincidencias directas para "<strong>${query}</strong>".
                     </div>
@@ -596,7 +596,7 @@ function initPredictiveSearchEngine() {
             }
 
             box.innerHTML = `
-                <div class="p-2 border-b border-slate-800 flex justify-between items-center text-[10px] font-mono text-slate-400 bg-slate-950/80">
+                <div class="p-2 border-b border-slate-800 flex justify-between items-center text-[10px] font-mono text-slate-200 bg-slate-950/80">
                     <span>Resultados en tiempo real para: "<strong>${query}</strong>"</span>
                     <span class="text-cyan-400 font-bold">${matches.length} sugerencias</span>
                 </div>
@@ -618,7 +618,7 @@ function initPredictiveSearchEngine() {
                                 </div>
                                 <div class="flex-1 min-w-0 text-left">
                                     <div class="text-xs font-bold text-white group-hover:text-cyan-300 transition truncate">${title}</div>
-                                    <div class="text-[10px] font-mono text-slate-400 flex items-center gap-1.5">
+                                    <div class="text-[10px] font-mono text-slate-200 flex items-center gap-1.5">
                                         <span class="text-cyan-400 font-bold">SKU: ${sku}</span>
                                         <span>•</span>
                                         <span>${p.marca || 'PC CUSTOM'}</span>
@@ -684,9 +684,9 @@ window.openProductDetailModal = function(sku) {
                 <span class="text-xs font-mono font-bold text-cyan-400 bg-cyan-950/80 border border-cyan-500/40 px-2.5 py-1 rounded-full uppercase">
                     Ficha Técnica Oficial PC Custom Lab
                 </span>
-                <span class="text-xs font-mono text-slate-400">SKU: <strong>${sku}</strong></span>
+                <span class="text-xs font-mono text-slate-200">SKU: <strong>${sku}</strong></span>
             </div>
-            <button onclick="closeProductDetailModal()" class="text-slate-400 hover:text-white text-lg p-1 transition cursor-pointer">
+            <button onclick="closeProductDetailModal()" aria-label="Cerrar ventana de ficha técnica" class="text-slate-200 hover:text-white text-lg p-1 transition cursor-pointer">
                 <i class="fa-solid fa-xmark text-xl"></i>
             </button>
         </div>
@@ -726,7 +726,7 @@ window.openProductDetailModal = function(sku) {
                     <span class="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider block mb-1">Marca Oficial: ${marca}</span>
                     <h2 class="text-base sm:text-xl font-bold text-white leading-snug mb-2">${title}</h2>
                     
-                    <div class="flex items-center gap-2 text-xs font-mono text-slate-400 pb-3 border-b border-slate-800">
+                    <div class="flex items-center gap-2 text-xs font-mono text-slate-200 pb-3 border-b border-slate-800">
                         <div class="flex items-center text-amber-400">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -755,10 +755,10 @@ window.openProductDetailModal = function(sku) {
                     <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-3 space-y-2 text-slate-300 leading-relaxed font-sans">
                         <p><strong>Descripción:</strong> ${desc}</p>
                         <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800 text-[11px] font-mono">
-                            <div><span class="text-slate-500">Categoría:</span> <strong class="text-cyan-300">${cat.toUpperCase()}</strong></div>
-                            <div><span class="text-slate-500">Garantía:</span> <strong class="text-white">48h Directa / 1 Año</strong></div>
-                            <div><span class="text-slate-500">Clave Interna:</span> <strong class="text-white">${sku}</strong></div>
-                            <div><span class="text-slate-500">Embalaje:</span> <strong class="text-white">Caja Sellada Fábrica</strong></div>
+                            <div><span class="text-slate-300">Categoría:</span> <strong class="text-cyan-300">${cat.toUpperCase()}</strong></div>
+                            <div><span class="text-slate-300">Garantía:</span> <strong class="text-white">48h Directa / 1 Año</strong></div>
+                            <div><span class="text-slate-300">Clave Interna:</span> <strong class="text-white">${sku}</strong></div>
+                            <div><span class="text-slate-300">Embalaje:</span> <strong class="text-white">Caja Sellada Fábrica</strong></div>
                         </div>
                     </div>
                 </div>
@@ -770,7 +770,7 @@ window.openProductDetailModal = function(sku) {
                 <div>
                     <div class="border-b border-slate-800 pb-3 space-y-1">
                         <div class="flex justify-between items-center">
-                            <span class="text-[10px] text-slate-400 font-mono line-through" id="pdp-original-price">
+                            <span class="text-[10px] text-slate-200 font-mono line-through" id="pdp-original-price">
                                 Lista: $${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}
                             </span>
                             <span id="pdp-wholesale-badge" class="hidden text-[8.5px] font-black bg-amber-500 text-slate-950 px-2 py-0.5 rounded-md uppercase tracking-wider animate-pulse">
@@ -779,12 +779,12 @@ window.openProductDetailModal = function(sku) {
                         </div>
 
                         <div class="text-2xl font-black text-emerald-400 font-mono tracking-tight drop-shadow-[0_0_10px_rgba(52,211,153,0.4)]" id="pdp-unit-price-display">
-                            $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} <span class="text-xs font-normal text-slate-400">MXN c/u</span>
+                            $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} <span class="text-xs font-normal text-slate-200">MXN c/u</span>
                         </div>
 
                         <div class="flex justify-between items-center text-[10px] font-mono text-cyan-300 font-bold">
                             <span>Ahorro: -25% Apertura</span>
-                            <span class="text-slate-400" id="pdp-subtotal-display">Subtotal: $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                            <span class="text-slate-200" id="pdp-subtotal-display">Subtotal: $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
                         </div>
                     </div>
 
@@ -798,7 +798,7 @@ window.openProductDetailModal = function(sku) {
                                     type="button" 
                                     onclick="updatePDPQuantity(-1, ${price}, ${mayoreo}, ${original})" 
                                     class="w-7 h-7 bg-slate-800 hover:bg-slate-700 active:scale-90 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition cursor-pointer text-sm"
-                                    title="Disminuir cantidad"
+                                    title="Disminuir cantidad" aria-label="Disminuir cantidad de compra"
                                 >
                                     -
                                 </button>
@@ -817,7 +817,7 @@ window.openProductDetailModal = function(sku) {
                                     type="button" 
                                     onclick="updatePDPQuantity(1, ${price}, ${mayoreo}, ${original})" 
                                     class="w-7 h-7 bg-slate-800 hover:bg-slate-700 active:scale-90 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition cursor-pointer text-sm"
-                                    title="Aumentar cantidad"
+                                    title="Aumentar cantidad" aria-label="Aumentar cantidad de compra"
                                 >
                                     +
                                 </button>
@@ -826,8 +826,8 @@ window.openProductDetailModal = function(sku) {
                             <button 
                                 type="button" 
                                 onclick="removeProductFromCart('${sku}'); closeProductDetailModal();" 
-                                class="w-8 h-8 rounded-xl bg-slate-900 border border-slate-800 hover:border-red-500 hover:bg-red-950/60 text-slate-400 hover:text-red-400 flex items-center justify-center transition cursor-pointer shrink-0" 
-                                title="Remover de la selección"
+                                class="w-8 h-8 rounded-xl bg-slate-900 border border-slate-800 hover:border-red-500 hover:bg-red-950/60 text-slate-200 hover:text-red-400 flex items-center justify-center transition cursor-pointer shrink-0" 
+                                title="Remover de la selección" aria-label="Remover este producto de la selección"
                             >
                                 <i class="fa-solid fa-trash-can text-xs"></i>
                             </button>
@@ -867,7 +867,7 @@ window.openProductDetailModal = function(sku) {
                     </div>
                 </div>
 
-                <div class="text-[10px] text-slate-500 font-mono text-center pt-1 border-t border-slate-900">
+                <div class="text-[10px] text-slate-300 font-mono text-center pt-1 border-t border-slate-900">
                     🔒 Transacción protegida SSL • Entrega express Guadalajara
                 </div>
 
@@ -905,7 +905,7 @@ function renderPaginationBar(totalPages) {
 
     const htmlPages = pages.map(p => {
         if (p === '...') {
-            return `<span class="px-1.5 text-slate-400 font-mono text-xs select-none">...</span>`;
+            return `<span class="px-1.5 text-slate-200 font-mono text-xs select-none">...</span>`;
         }
         const isAct = (p === currentPageNumber);
         const cls = isAct 
@@ -971,7 +971,7 @@ window.updatePDPQuantity = function(delta, regularPrice, wholesalePrice, origina
     }
 
     if (unitPriceDisplay) {
-        unitPriceDisplay.innerHTML = `$${activePrice.toLocaleString('es-MX', { minimumFractionDigits: 2 })} <span class="text-xs font-normal text-slate-400">MXN c/u</span>`;
+        unitPriceDisplay.innerHTML = `$${activePrice.toLocaleString('es-MX', { minimumFractionDigits: 2 })} <span class="text-xs font-normal text-slate-200">MXN c/u</span>`;
     }
 
     if (subtotalDisplay) {
