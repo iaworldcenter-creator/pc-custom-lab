@@ -1,5 +1,5 @@
 // =========================================================================
-// MOTOR OFICIAL PC CUSTOM LAB (INDEXACIÓN Y NAVEGACIÓN TOTAL DE 16,139 ITEMS)
+// MOTOR UNIVERSAL BILINGÜE PC CUSTOM LAB (16,139 PRODUCTOS INDEXADOS)
 // =========================================================================
 
 let currentViewStyle = 'grid'; // 'grid' (5x4) o 'list'
@@ -12,7 +12,188 @@ let activeSearchQuery = '';
 let currentSortCriterion = 'existencia';
 let isFullCatalogLoaded = false;
 
-// Inicialización instantánea del catálogo
+// Normalización de texto sin acentos, mayúsculas o símbolos
+function stripAccents(text) {
+    if (!text) return "";
+    return String(text)
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .trim();
+}
+
+// Diccionario de Sinónimos Bilingüe Español - Inglés
+const SYNONYM_DICTIONARY = {
+    // Ratón / Mouse
+    "raton": ["mouse", "raton", "mice", "ratones", "trackball"],
+    "ratones": ["mouse", "raton", "mice", "ratones", "trackball"],
+    "mouse": ["mouse", "raton", "mice", "ratones", "trackball"],
+    "mice": ["mouse", "raton", "mice", "ratones", "trackball"],
+    
+    // Teclado / Keyboard
+    "teclado": ["teclado", "keyboard", "teclados", "keyboards", "keypad"],
+    "teclados": ["teclado", "keyboard", "teclados", "keyboards", "keypad"],
+    "keyboard": ["teclado", "keyboard", "teclados", "keyboards"],
+    "keyboards": ["teclado", "keyboard", "teclados", "keyboards"],
+    
+    // Combos / Kits
+    "combo": ["combo", "kit", "bundle", "duo", "pack"],
+    "combos": ["combo", "kit", "bundle", "duo", "pack"],
+    "kit": ["combo", "kit", "bundle", "duo", "pack"],
+    "kits": ["combo", "kit", "bundle", "duo", "pack"],
+
+    // Reguladores / UPS / No-Breaks / Baterías
+    "regulador": ["regulador", "reguladores", "no-break", "nobreak", "ups", "koblenz", "sola basic", "complet", "tripp-lite", "tripp lite", "vica"],
+    "reguladores": ["regulador", "reguladores", "no-break", "nobreak", "ups", "koblenz", "sola basic", "complet", "tripp-lite", "tripp lite", "vica"],
+    "nobreak": ["no-break", "nobreak", "ups", "regulador", "reguladores", "respaldo"],
+    "ups": ["no-break", "nobreak", "ups", "regulador", "reguladores", "respaldo"],
+    "bateria": ["bateria", "baterias", "battery", "powerbank", "power bank", "pila", "pilas"],
+    "baterias": ["bateria", "baterias", "battery", "powerbank", "power bank", "pila", "pilas"],
+    "powerbank": ["powerbank", "power bank", "bateria externa", "cargador portatil", "banco de energia"],
+    "power": ["power", "fuente", "energia", "alimentacion", "supply", "psu", "powerbank"],
+
+    // Fuentes de Poder
+    "fuente": ["fuente", "fuentes", "psu", "power supply", "poder", "alimentacion"],
+    "fuentes": ["fuente", "fuentes", "psu", "power supply", "poder", "alimentacion"],
+    "psu": ["fuente", "fuentes", "psu", "power supply"],
+
+    // Pantallas / Monitores
+    "pantalla": ["monitor", "pantalla", "display", "monitores", "pantallas", "screen"],
+    "pantallas": ["monitor", "pantalla", "display", "monitores", "pantallas", "screen"],
+    "monitor": ["monitor", "pantalla", "display", "monitores", "pantallas", "screen"],
+    "monitores": ["monitor", "pantalla", "display", "monitores", "pantallas", "screen"],
+
+    // Tarjetas de Video / GPUs
+    "grafica": ["gpu", "video", "rtx", "gtx", "radeon", "grafica", "geforce", "tarjeta de video"],
+    "graficas": ["gpu", "video", "rtx", "gtx", "radeon", "grafica", "geforce", "tarjeta de video"],
+    "gpu": ["gpu", "video", "rtx", "gtx", "radeon", "grafica", "geforce", "tarjeta de video"],
+    "video": ["gpu", "video", "rtx", "gtx", "radeon", "grafica", "geforce", "tarjeta de video"],
+
+    // Almacenamiento / Discos
+    "disco": ["ssd", "disco", "solido", "nvme", "m2", "hdd", "almacenamiento", "hard drive"],
+    "discos": ["ssd", "disco", "solido", "nvme", "m2", "hdd", "almacenamiento", "hard drive"],
+    "solido": ["ssd", "solido", "nvme", "m2", "disco"],
+    "ssd": ["ssd", "solido", "nvme", "m2", "disco", "almacenamiento"],
+
+    // Memorias RAM
+    "ram": ["ram", "memoria", "memorias", "ddr4", "ddr5", "dimm", "sodimm", "kingston", "adata"],
+    "memoria": ["ram", "memoria", "memorias", "ddr4", "ddr5", "dimm", "sodimm", "kingston", "adata"],
+    "memorias": ["ram", "memoria", "memorias", "ddr4", "ddr5", "dimm", "sodimm", "kingston", "adata"],
+
+    // Tarjetas Madre
+    "placa": ["motherboard", "tarjeta madre", "placa madre", "mainboard", "mbd", "mobo", "asus", "gigabyte", "msi"],
+    "placas": ["motherboard", "tarjeta madre", "placa madre", "mainboard", "mbd", "mobo", "asus", "gigabyte", "msi"],
+    "madre": ["motherboard", "tarjeta madre", "placa madre", "mainboard", "mbd", "mobo"],
+    "motherboard": ["motherboard", "tarjeta madre", "placa madre", "mainboard", "mbd", "mobo"]
+};
+
+const STOP_WORDS_SET = new Set([
+    "el", "la", "los", "las", "un", "una", "unos", "unas",
+    "de", "del", "al", "a", "en", "con", "para", "por",
+    "que", "se", "es", "y", "e", "o", "u", "su", "sus",
+    "the", "and", "with", "for", "in", "on", "of"
+]);
+
+function cleanSearchTokens(query) {
+    const qClean = stripAccents(query).replace(/[^a-z0-9\s]/g, ' ');
+    const rawWords = qClean.split(' ').filter(w => w.length > 0);
+    const filtered = rawWords.filter(w => !STOP_WORDS_SET.has(w));
+    return filtered.length > 0 ? filtered : rawWords;
+}
+
+function searchCatalogMaster(query) {
+    const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
+    const tokens = cleanSearchTokens(query);
+    if (!tokens || tokens.length === 0) return all;
+
+    const tokenGroups = tokens.map(t => SYNONYM_DICTIONARY[t] || [t]);
+    const scoredResults = [];
+
+    const isComboSearch = tokens.some(t => ['teclado', 'teclados', 'keyboard'].includes(t)) && 
+        tokens.some(t => ['raton', 'ratones', 'mouse', 'mice', 'combo', 'kit'].includes(t));
+
+    const isRegulatorSearch = tokens.some(t => ['regulador', 'reguladores', 'nobreak', 'ups'].includes(t));
+    const isSolidSearch = tokens.some(t => ['solido', 'ssd', 'disco'].includes(t));
+    const isPowerSupplySearch = tokens.some(t => ['fuente', 'fuentes', 'psu'].includes(t));
+
+    for (let i = 0; i < all.length; i++) {
+        const p = all[i];
+        const skuNorm = stripAccents(p.sku || p.clave);
+        const nameNorm = stripAccents(p.nombre);
+        const catNorm = stripAccents(p.categoria_clasificada);
+        const brandNorm = stripAccents(p.marca);
+        const descNorm = stripAccents(p.descripcion_completa);
+
+        let matchAll = true;
+        let score = 0;
+
+        for (let j = 0; j < tokenGroups.length; j++) {
+            const syns = tokenGroups[j];
+            let tokenFound = false;
+
+            for (let k = 0; k < syns.length; k++) {
+                const s = syns[k];
+                if (skuNorm.includes(s)) {
+                    score += 500;
+                    tokenFound = true;
+                    break;
+                } else if (nameNorm.includes(s)) {
+                    score += 200;
+                    tokenFound = true;
+                    break;
+                } else if (catNorm.includes(s)) {
+                    score += 80;
+                    tokenFound = true;
+                    break;
+                } else if (brandNorm.includes(s)) {
+                    score += 60;
+                    tokenFound = true;
+                    break;
+                } else if (descNorm.includes(s)) {
+                    score += 20;
+                    tokenFound = true;
+                    break;
+                }
+            }
+
+            if (!tokenFound) {
+                matchAll = false;
+                break;
+            }
+        }
+
+        if (matchAll) {
+            // Ponderaciones especiales
+            if (isComboSearch) {
+                if (nameNorm.includes('teclado') && (nameNorm.includes('mouse') || nameNorm.includes('raton') || nameNorm.includes('kit') || nameNorm.includes('combo'))) {
+                    score += 3000;
+                }
+                if (catNorm === 'accesorios_perifericos') score += 500;
+            }
+
+            if (isRegulatorSearch) {
+                if (catNorm === 'reguladores_ups') score += 2000;
+                if (nameNorm.includes('regulador') || nameNorm.includes('no-break') || nameNorm.includes('ups')) score += 1500;
+            }
+
+            if (isSolidSearch) {
+                if (catNorm === 'discos_duros') score += 2000;
+            }
+
+            if (isPowerSupplySearch) {
+                if (catNorm === 'fuentes_energia') score += 2000;
+                if (nameNorm.includes('fuente') && (nameNorm.includes('poder') || nameNorm.includes('psu') || nameNorm.includes('600w') || nameNorm.includes('750w'))) score += 2500;
+            }
+
+            scoredResults.push({ score, product: p });
+        }
+    }
+
+    scoredResults.sort((a, b) => b.score - a.score);
+    return scoredResults.map(r => r.product);
+}
+
+// Inicialización instantánea
 function initFullCatalog() {
     if (window.CT_CATALOG_DATA && Array.isArray(window.CT_CATALOG_DATA) && window.CT_CATALOG_DATA.length > 0) {
         isFullCatalogLoaded = true;
@@ -29,7 +210,7 @@ function initFullCatalog() {
     }
 }
 
-// Función global de selección de categoría con reseteo de marcas y auto-scroll
+// Selección de categorías y auto-scroll
 window.selectCategoryFacet = function(catId) {
     activeSelectedCategory = catId;
     activeSelectedBrand = 'Todas';
@@ -42,7 +223,6 @@ window.selectCategoryFacet = function(catId) {
     renderSidebarFacets();
     renderExactCatalogView();
 
-    // Auto-scroll fluido al encabezado de la vitrina
     setTimeout(() => {
         const showcaseTarget = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
         if (showcaseTarget) {
@@ -167,7 +347,7 @@ function renderExactCatalogView() {
 
     if (resultsCountTxt) {
         if (activeSearchQuery) {
-            resultsCountTxt.innerHTML = `Búsqueda: "${activeSearchQuery}" <span class="text-slate-400 font-normal">(${totalCount} productos)</span>`;
+            resultsCountTxt.innerHTML = `Búsqueda: "${activeSearchQuery}" <span class="text-slate-400 font-normal">(${totalCount.toLocaleString('es-MX')} productos)</span>`;
         } else if (activeSelectedCategory !== 'Todas') {
             resultsCountTxt.innerHTML = `${activeSelectedCategory.replace(/_/g, ' ').toUpperCase()} <span class="text-slate-400 font-normal">(${startIdx + 1}-${Math.min(startIdx + productsPerPage, totalCount)} de ${totalCount.toLocaleString('es-MX')})</span>`;
         } else {
@@ -189,7 +369,7 @@ function renderExactCatalogView() {
 
     if (currentViewStyle === 'grid') {
         container.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-2";
-        container.innerHTML = pageItems.map((p, idx) => {
+        container.innerHTML = pageItems.map((p) => {
             const sku = p.sku;
             const cat = p.categoria_clasificada || 'accesorios_perifericos';
             const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
@@ -481,132 +661,6 @@ function renderSidebarFacets() {
     `;
 }
 
-// =========================================================================
-// MOTOR DE BÚSQUEDA SEMÁNTICA INTELIGENTE CON PONDERACIÓN PRIORITARIA
-// =========================================================================
-
-const STOP_WORDS_SET = new Set([
-    "de", "con", "para", "y", "e", "o", "en", "un", "una", "unos", "unas",
-    "el", "la", "los", "las", "del", "al", "a", "por", "que", "se", "es",
-    "su", "sus", "with", "and", "for", "the"
-]);
-
-function normalizeText(str) {
-    return (str || '')
-        .toLowerCase()
-        .normalize("NFD").replace(/[̀-ͯ]/g, "")
-        .replace(/[®™©]/g, "")
-        .replace(/[^a-z0-9\s]/g, " ")
-        .replace(/\s+/g, " ")
-        .trim();
-}
-
-function searchCatalogMaster(query) {
-    const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
-    const qNorm = normalizeText(query);
-    if (!qNorm) return all;
-
-    const rawTokens = qNorm.split(' ').filter(t => t.length > 0);
-    const tokens = (rawTokens.length > 1) 
-        ? rawTokens.filter(t => !STOP_WORDS_SET.has(t)) 
-        : rawTokens;
-    
-    const activeTokens = tokens.length > 0 ? tokens : rawTokens;
-    const scoredResults = [];
-
-    const isComboSearch = (activeTokens.includes('teclado') || activeTokens.includes('teclados')) && 
-        activeTokens.some(t => ['raton', 'ratones', 'mouse', 'mice', 'combo', 'kit'].includes(t));
-
-    const isRegulatorSearch = activeTokens.some(t => ['regulador', 'reguladores', 'nobreak', 'nobreaks', 'ups'].includes(t));
-
-    for (let i = 0; i < all.length; i++) {
-        const p = all[i];
-        const skuNorm = normalizeText(p.sku);
-        const nameNorm = normalizeText(p.nombre);
-        const descNorm = normalizeText(p.descripcion_completa);
-        const brandNorm = normalizeText(p.marca);
-        const catNorm = normalizeText(p.categoria_clasificada);
-
-        let matchAll = true;
-        let score = 0;
-
-        // Ponderación extrema para reguladores
-        if (isRegulatorSearch) {
-            if (catNorm === 'reguladores_ups') score += 2000;
-            if (nameNorm.includes('regulador') || nameNorm.includes('no-break') || nameNorm.includes('ups')) score += 1500;
-        }
-
-        // Ponderación extrema para combos de teclado con ratón
-        if (isComboSearch) {
-            if (nameNorm.includes('teclado') && (nameNorm.includes('mouse') || nameNorm.includes('raton') || nameNorm.includes('kit') || nameNorm.includes('combo'))) {
-                score += 3000;
-            }
-            if (catNorm === 'accesorios_perifericos') score += 500;
-        }
-
-        for (let j = 0; j < activeTokens.length; j++) {
-            const token = activeTokens[j];
-            let synList = [token];
-            
-            if (token === 'raton' || token === 'ratones') synList = ['raton', 'ratones', 'mouse', 'mice'];
-            else if (token === 'mouse' || token === 'mice') synList = ['mouse', 'mice', 'raton', 'ratones'];
-            else if (token === 'teclado' || token === 'teclados') synList = ['teclado', 'teclados', 'keyboard'];
-            else if (token === 'regulador' || token === 'reguladores') synList = ['regulador', 'reguladores', 'ups', 'nobreak', 'no-break', 'koblenz', 'sola basic', 'complet'];
-            else if (token === 'pantalla' || token === 'pantallas') synList = ['pantalla', 'pantallas', 'monitor', 'monitores', 'display'];
-            else if (token === 'monitor' || token === 'monitores') synList = ['monitor', 'monitores', 'pantalla', 'pantallas', 'display'];
-            else if (token === 'grafica' || token === 'graficas' || token === 'gpu') synList = ['gpu', 'video', 'rtx', 'gtx', 'radeon', 'grafica', 'geforce'];
-            else if (token === 'disco' || token === 'discos' || token === 'solido') synList = ['disco', 'discos', 'ssd', 'nvme', 'm2', 'almacenamiento'];
-            else if (token === 'placa' || token === 'placas' || token === 'madre') synList = ['motherboard', 'tarjeta madre', 'placa', 'mainboard', 'mbd'];
-            else if (token === 'fuente' || token === 'fuentes') synList = ['fuente', 'fuentes', 'psu', 'power supply'];
-            else if (token === 'gabinete' || token === 'gabinetes') synList = ['gabinete', 'gabinetes', 'chasis', 'case', 'torre'];
-            else if (token === 'ram' || token === 'memoria' || token === 'memorias') synList = ['ram', 'memoria', 'memorias', 'ddr4', 'ddr5', 'dimm'];
-            else if (token === 'laptop' || token === 'laptops') synList = ['laptop', 'laptops', 'portatil', 'portatiles', 'notebook'];
-            else if (token === 'procesador' || token === 'procesadores' || token === 'cpu') synList = ['procesador', 'procesadores', 'cpu', 'core', 'ryzen', 'intel'];
-
-            let tokenFound = false;
-
-            for (let k = 0; k < synList.length; k++) {
-                const syn = synList[k];
-                if (skuNorm.includes(syn)) {
-                    score += 500;
-                    tokenFound = true;
-                    break;
-                } else if (nameNorm.includes(syn)) {
-                    score += 200;
-                    tokenFound = true;
-                    break;
-                } else if (catNorm.includes(syn)) {
-                    score += 80;
-                    tokenFound = true;
-                    break;
-                } else if (brandNorm.includes(syn)) {
-                    score += 60;
-                    tokenFound = true;
-                    break;
-                } else if (descNorm.includes(syn)) {
-                    score += 20;
-                    tokenFound = true;
-                    break;
-                }
-            }
-
-            if (!tokenFound) {
-                matchAll = false;
-                break;
-            }
-        }
-
-        if (matchAll) {
-            if (nameNorm.includes(qNorm)) score += 1000;
-            if (skuNorm.includes(qNorm)) score += 1500;
-            scoredResults.push({ score, product: p });
-        }
-    }
-
-    scoredResults.sort((a, b) => b.score - a.score);
-    return scoredResults.map(r => r.product);
-}
-
 let searchDebounceTimer = null;
 function initPredictiveSearchEngine() {
     const input = document.getElementById("boutiqueSearchInput");
@@ -644,7 +698,7 @@ function initPredictiveSearchEngine() {
                     <div class="p-4 text-center text-slate-300 font-mono text-xs">
                         <i class="fa-solid fa-magnifying-glass text-cyan-400 text-lg mb-1 block" aria-hidden="true"></i>
                         No se encontraron coincidencias para "<strong>${rawQuery}</strong>".
-                        <br><span class="text-[10px] text-slate-400">Prueba con: regulador, teclado y mouse, i9, RTX 4070, DDR5...</span>
+                        <br><span class="text-[10px] text-slate-400">Prueba con: ratón y teclado, regulador, i9, RTX 4070, fuente de poder...</span>
                     </div>
                 `;
                 box.classList.remove("hidden");
@@ -662,7 +716,7 @@ function initPredictiveSearchEngine() {
                 </div>
                 <div class="divide-y divide-slate-800/60 max-h-96 overflow-y-auto">
                     ${topMatches.map(p => {
-                        const sku = p.sku;
+                        const sku = p.sku || p.clave;
                         const cat = p.categoria_clasificada || 'accesorios_perifericos';
                         const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
                         const price = p.precio_mxn || p.precio;
