@@ -408,8 +408,9 @@ function renderSidebarFacets() {
                 </div>
             </div>
 
+            
             <!-- TOP 3 MÁS VENDIDOS DINÁMICO -->
-            <div class="pt-2 space-y-2 hidden md:block">
+            <div class="pt-2 space-y-2 border-t border-slate-800 hidden md:block">
                 <div class="flex items-center justify-between">
                     <h4 class="font-bold text-amber-400 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
                         <i class="fa-solid fa-fire text-amber-400"></i> Top 3 Destacados
@@ -442,6 +443,82 @@ function renderSidebarFacets() {
                                 </div>
                             </div>
                         `;
+                    }).join('')}
+                </div>
+
+                <button 
+                    onclick="activeSelectedCategory='Todas'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView(); document.getElementById('catalog-main-content-root').scrollIntoView({behavior:'smooth'});" 
+                    class="w-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/40 font-mono font-bold py-2 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer shadow mt-2"
+                >
+                    <i class="fa-solid fa-layer-group text-xs"></i> <span>Ver Todo el Catálogo</span>
+                </button>
+            </div>
+
+            <!-- ========================================================================= -->
+            <!-- 3 TARJETAS DE CONVERSIÓN INTEGRADAS EN LA COLUMNA LATERAL IZQUIERDA       -->
+            <!-- (RELLENAN EL ESPACIO VACÍO Y NIVELAN CON LA ALTURA DE LOS 20 PRODUCTOS)    -->
+            <!-- ========================================================================= -->
+            <div class="pt-4 space-y-3.5 border-t border-slate-800 hidden md:block">
+                
+                <!-- TARJETA 1: APP MÓVIL PEDIDOS RÁPIDOS -->
+                <div class="bg-slate-950/90 border border-cyan-500/40 hover:border-cyan-400 rounded-2xl p-3.5 text-center shadow-lg transition">
+                    <span class="text-[11px] font-mono font-bold text-cyan-400 uppercase tracking-wider flex items-center justify-center gap-1.5 mb-2.5">
+                        <i class="fa-solid fa-mobile-screen-button"></i> App Móvil Pedidos Rápidos
+                    </span>
+                    
+                    <div class="w-32 h-32 mx-auto bg-white p-2 rounded-xl shadow-md flex items-center justify-center mb-2">
+                        <img 
+                            src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://iaworldcenter-creator.github.io/pc-custom-lab/&color=0-0-0&bgcolor=255-255-255" 
+                            alt="QR App Oficial" 
+                            class="w-full h-full object-contain" 
+                        />
+                    </div>
+                    
+                    <p class="text-slate-300 text-[10.5px] leading-tight mb-2.5">
+                        Escanea con tu cámara para pedir por <strong>Uber Flash</strong> con código PIN.
+                    </p>
+
+                    <a href="https://wa.me/523337271440" target="_blank" class="w-full bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-cyan-500/40 font-mono font-bold py-1.5 rounded-lg text-[10px] uppercase tracking-wider flex items-center justify-center gap-1.5 transition">
+                        <span>▶ Abrir App Oficial</span>
+                    </a>
+                </div>
+
+                <!-- TARJETA 2: CREADO CON GOOGLE GEMINI -->
+                <div class="bg-slate-950/90 border border-blue-500/40 hover:border-blue-400 rounded-2xl p-3.5 shadow-lg transition text-left">
+                    <span class="text-[11px] font-mono font-bold text-blue-400 uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
+                        <i class="fa-solid fa-microchip"></i> Creado con Google Gemini
+                    </span>
+                    <h5 class="text-white font-bold text-xs leading-snug mb-1">
+                        Inteligencia Artificial para tu Negocio
+                    </h5>
+                    <p class="text-slate-300 text-[10px] leading-tight mb-2.5">
+                        Concebido y programado con la IA más avanzada de Google para crear tiendas de ultra velocidad.
+                    </p>
+                    <a href="https://gemini.google.com/" target="_blank" class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-1.5 rounded-lg text-[10px] uppercase tracking-wider flex items-center justify-center gap-1 transition shadow">
+                        <span>SUSCRIBIRSE A GOOGLE GEMINI</span>
+                    </a>
+                </div>
+
+                <!-- TARJETA 3: DESARROLLADO POR ANTI-GRAVITY -->
+                <div class="bg-slate-950/90 border border-amber-500/40 hover:border-amber-400 rounded-2xl p-3.5 shadow-lg transition text-left">
+                    <span class="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
+                        <i class="fa-solid fa-robot"></i> Desarrollado por Anti-Gravity
+                    </span>
+                    <h5 class="text-white font-bold text-xs leading-snug mb-1">
+                        Agente Autónomo de Software
+                    </h5>
+                    <p class="text-slate-300 text-[10px] leading-tight mb-2.5">
+                        Desarrollado, optimizado y desplegado por Anti-Gravity Copilot. Crea tus páginas web gratis.
+                    </p>
+                    <a href="https://github.com/" target="_blank" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black py-1.5 rounded-lg text-[10px] uppercase tracking-wider flex items-center justify-center gap-1 transition shadow">
+                        <span>DESCARGAR ANTI-GRAVITY GRATIS</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    `;
                     }).join('')}
                 </div>
 
