@@ -369,10 +369,10 @@ function renderSidebarFacets() {
             </div>
 
             <!-- ENLACE A TODAS LAS CATEGORÍAS -->
-            <div class="bg-slate-950 p-2 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition">
+            <div class="bg-slate-950 p-2 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition min-h-[44px] flex items-center">
                 <label class="flex items-center justify-between cursor-pointer">
                     <span class="flex items-center gap-2 truncate">
-                        <input type="radio" name="cat_facet" ${activeSelectedCategory === 'Todas' ? 'checked' : ''} onchange="activeSelectedCategory='Todas'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
+                        <input type="radio" id="cat_todas" name="cat_facet" aria-label="Todas las categorías" ${activeSelectedCategory === 'Todas' ? 'checked' : ''} onchange="activeSelectedCategory='Todas'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
                         <i class="fa-solid fa-layer-group text-[11px] text-cyan-400 shrink-0"></i>
                         <span class="truncate text-xs font-bold text-white">Todas las Categorías</span>
                     </span>
@@ -382,18 +382,18 @@ function renderSidebarFacets() {
 
             <!-- BLOQUE 1 - COMPONENTES DE ENSAMBLE -->
             <div class="border-b border-slate-800 pb-3">
-                <h4 class="font-bold text-cyan-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                <h3 class="font-bold text-cyan-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
                     <i class="fa-solid fa-microchip text-cyan-400"></i> 1. Componentes de Ensamble
                 </h4>
                 <div class="space-y-1 text-slate-200">
                     ${block1.map(c => `
-                        <label class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-0.5 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
-                            <span class="flex items-center gap-2 truncate">
-                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-cyan-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-[11px] text-slate-200 w-3 text-center shrink-0"></i>
-                                <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : ''}">${c.name}</span>
+                        <label for="cat_${c.id}" class="flex items-center justify-between cursor-pointer hover:text-cyan-300 py-2 px-2 rounded-xl hover:bg-slate-800/80 transition min-h-[44px]">
+                            <span class="flex items-center gap-2.5 truncate">
+                                <input type="radio" id="cat_${c.id}" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-4 h-4 accent-cyan-400 cursor-pointer shrink-0" aria-label="${c.name}" />
+                                <i class="fa-solid ${c.icon} text-xs text-slate-300 w-3.5 text-center shrink-0" aria-hidden="true"></i>
+                                <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : 'text-slate-200'}">${c.name}</span>
                             </span>
-                            <span class="text-[10px] text-slate-200 font-mono">(${getCount(c.id)})</span>
+                            <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
                         </label>
                     `).join('')}
                 </div>
@@ -401,18 +401,18 @@ function renderSidebarFacets() {
 
             <!-- BLOQUE 2 - SISTEMAS Y EQUIPOS COMPLETOS -->
             <div class="border-b border-slate-800 pb-3">
-                <h4 class="font-bold text-purple-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                <h3 class="font-bold text-purple-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
                     <i class="fa-solid fa-cube text-purple-400"></i> 2. Sistemas & Mini PCs IA
                 </h4>
                 <div class="space-y-1 text-slate-200">
                     ${block2.map(c => `
-                        <label class="flex items-center justify-between cursor-pointer hover:text-purple-300 py-0.5 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
-                            <span class="flex items-center gap-2 truncate">
-                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-purple-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-[11px] text-slate-200 w-3 text-center shrink-0"></i>
-                                <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-purple-300' : ''}">${c.name}</span>
+                        <label for="cat_${c.id}" class="flex items-center justify-between cursor-pointer hover:text-purple-300 py-2 px-2 rounded-xl hover:bg-slate-800/80 transition min-h-[44px]">
+                            <span class="flex items-center gap-2.5 truncate">
+                                <input type="radio" id="cat_${c.id}" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-4 h-4 accent-purple-400 cursor-pointer shrink-0" aria-label="${c.name}" />
+                                <i class="fa-solid ${c.icon} text-xs text-slate-300 w-3.5 text-center shrink-0" aria-hidden="true"></i>
+                                <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-purple-300' : 'text-slate-200'}">${c.name}</span>
                             </span>
-                            <span class="text-[10px] text-slate-200 font-mono">(${getCount(c.id)})</span>
+                            <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
                         </label>
                     `).join('')}
                 </div>
@@ -420,18 +420,18 @@ function renderSidebarFacets() {
 
             <!-- BLOQUE 3 - CONSUMIBLES, SOLUCIONES Y ELECTRÓNICA -->
             <div class="border-b border-slate-800 pb-3">
-                <h4 class="font-bold text-amber-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                <h3 class="font-bold text-amber-300 mb-2 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
                     <i class="fa-solid fa-puzzle-piece text-amber-400"></i> 3. Consumibles & Soluciones
                 </h4>
                 <div class="space-y-1 text-slate-200">
                     ${block3.map(c => `
-                        <label class="flex items-center justify-between cursor-pointer hover:text-amber-300 py-0.5 px-1.5 rounded-lg hover:bg-slate-800/60 transition">
-                            <span class="flex items-center gap-2 truncate">
-                                <input type="radio" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-3.5 h-3.5 accent-amber-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-[11px] text-slate-200 w-3 text-center shrink-0"></i>
-                                <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-amber-300' : ''}">${c.name}</span>
+                        <label for="cat_${c.id}" class="flex items-center justify-between cursor-pointer hover:text-amber-300 py-2 px-2 rounded-xl hover:bg-slate-800/80 transition min-h-[44px]">
+                            <span class="flex items-center gap-2.5 truncate">
+                                <input type="radio" id="cat_${c.id}" name="cat_facet" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-4 h-4 accent-amber-400 cursor-pointer shrink-0" aria-label="${c.name}" />
+                                <i class="fa-solid ${c.icon} text-xs text-slate-300 w-3.5 text-center shrink-0" aria-hidden="true"></i>
+                                <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-amber-300' : 'text-slate-200'}">${c.name}</span>
                             </span>
-                            <span class="text-[10px] text-slate-200 font-mono">(${getCount(c.id)})</span>
+                            <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
                         </label>
                     `).join('')}
                 </div>
@@ -440,9 +440,9 @@ function renderSidebarFacets() {
             <!-- TOP 3 MÁS VENDIDOS DINÁMICO -->
             <div class="pt-2 space-y-2 border-t border-slate-800 hidden md:block">
                 <div class="flex items-center justify-between">
-                    <h4 class="font-bold text-amber-400 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
+                    <h3 class="font-bold text-amber-400 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
                         <i class="fa-solid fa-fire text-amber-400"></i> Top 3 Destacados
-                    </h4>
+                    </h3>
                     <span class="text-[9px] text-cyan-400 font-mono font-bold">${activeSelectedCategory.toUpperCase()}</span>
                 </div>
 
@@ -517,9 +517,9 @@ function renderSidebarFacets() {
                     <span class="text-[11px] font-mono font-bold text-blue-400 uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
                         <i class="fa-solid fa-microchip"></i> Creado con Google Gemini
                     </span>
-                    <h5 class="text-white font-bold text-xs leading-snug mb-1">
+                    <div class="text-white font-bold text-xs leading-snug mb-1">
                         Inteligencia Artificial para tu Negocio
-                    </h5>
+                    </div>
                     <p class="text-slate-300 text-[10px] leading-tight mb-2.5">
                         Concebido y programado con la IA más avanzada de Google para crear tiendas de ultra velocidad.
                     </p>
@@ -533,9 +533,9 @@ function renderSidebarFacets() {
                     <span class="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
                         <i class="fa-solid fa-robot"></i> Desarrollado por Anti-Gravity
                     </span>
-                    <h5 class="text-white font-bold text-xs leading-snug mb-1">
+                    <div class="text-white font-bold text-xs leading-snug mb-1">
                         Agente Autónomo de Software
-                    </h5>
+                    </div>
                     <p class="text-slate-300 text-[10px] leading-tight mb-2.5">
                         Desarrollado, optimizado y desplegado por Anti-Gravity Copilot. Crea tus páginas web gratis.
                     </p>
