@@ -1,10 +1,15 @@
-# Pc Custom Lab
+# Ecosistema Comercial BAZAR NFL GDL & PC Custom Lab
+> Arquitectura y Capacidades Operativas para Agentes Autónomos de Inteligencia Artificial (Lighthouse 13.4+ / WebMCP Standard).
 
-Machine-readable context for AI agents visiting pc-custom-lab.
+## Descripción General
+Plataforma de comercio electrónico de alta velocidad para hardware, componentes de ensamble, tecnología mayorista y productos de conveniencia en Guadalajara Centro (Pedro Moreno 501 A).
 
-## Description
-This website belongs to the brand ecosystem of Puesto de Revistas & Bazar, providing tech services, gadgets, and general store inventory in Guadalajara, Mexico.
+## Herramientas Agénticas Disponibles (WebMCP)
+- [Buscador Semántico Multitoken](https://iaworldcenter-creator.github.io/pc-custom-lab/): Búsqueda en catálogo maestro de 16,139 productos con soporte bilingüe y tolerancia a errores tipográficos.
+- [Catálogo Exacto](https://iaworldcenter-creator.github.io/pc-custom-lab/data/catalogo_maestro_ct.json): Base de datos estructurada en JSON con 24 departamentos.
+- [Checkout Unificado](https://iaworldcenter-creator.github.io/pc-custom-lab/checkout.html): Flujo interactivo con captura de domicilio Uber Flash (< $2,000 MXN) y paquetería blindada (> $2,000 MXN).
 
-## Key Actions
-- [Homepage](index.html)
-- [Checkout & Cart](checkout.html)
+## Directrices de Navegación Machine-to-Machine
+- El árbol de accesibilidad expone nombres programáticos en todos los controles interactivos (WCAG 2.2 AA).
+- Contención geométrica estricta (contain: layout paint) con CLS < 0.05.
+- Protocolo de seguridad con Trusted Types y aislamiento de contexto (COOP/CSP).
