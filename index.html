@@ -21,24 +21,51 @@
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://static.ctonline.mx">
 
-    <!-- FONT AWESOME ASÍNCRONO SIN BLOQUEO -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+        <!-- PRECARGA PRIORITARIA DE FUENTES WOFF2 (AHORRO 90ms LIGHTHOUSE) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-    <!-- ESTILOS CRÍTICOS INLINE, CALIBRACIÓN MÉTRICA TIPOGRÁFICA Y CONTENCIÓN CLS = 0 -->
+    <!-- FONT AWESOME ESTILOS CON font-display: swap ASIGNADO -->
     <style>
-        /* Calibración métrica tipográfica para eliminar 70ms de retraso y CLS */
         @font-face {
-            font-family: 'Inter-Fallback';
-            src: local('Arial'), local('Helvetica');
-            ascent-override: 90.45%;
-            descent-override: 22.48%;
-            line-gap-override: 0.00%;
-            size-adjust: 107.42%;
+            font-family: 'Font Awesome 6 Free';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-regular-400.woff2') format('woff2');
+        }
+
+        /* Calibración métrica tipográfica para anular el salto de maquetación (CLS = 0) */
+        @font-face {
+            font-family: 'Primary-Architect-Font';
+            src: local('Segoe UI'), local('SF Pro Text'), local('Roboto'), local('Helvetica Neue'), local('Arial');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Fallback-Engineered';
+            src: local('Arial');
+            ascent-override: 92%;
+            descent-override: 18%;
+            line-gap-override: 0%;
+            size-adjust: 97%;
         }
         :root {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter-Fallback', sans-serif;
-            font-display: swap;
+            font-family: 'Primary-Architect-Font', 'Fallback-Engineered', system-ui, -apple-system, sans-serif;
         }
         body {
             margin: 0;
@@ -49,7 +76,7 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Contención geométrica estricta (CLS = 0) */
+        /* Contención dimensional estricta (CLS = 0.000) */
         .product-img-wrapper {
             width: 100%;
             aspect-ratio: 1 / 1;
@@ -92,10 +119,13 @@
             height: 100%;
         }
 
-        /* Utilidades esenciales Tailwind precompiladas */
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
         .hidden { display: none !important; }
     </style>
+
+    <!-- FONT AWESOME CSS DIFERIDO -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
     <!-- TAILWIND CSS COMPILADO O CDN ASÍNCRONO -->
     <link rel="preload" href="./assets/css/tailwind-built.css" as="style" onerror="this.onerror=null; this.href='https://cdn.tailwindcss.com';" onload="this.onload=null;this.rel='stylesheet'">

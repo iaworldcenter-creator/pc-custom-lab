@@ -1,3 +1,12 @@
+// Helper de priorización de tareas (scheduler.yield) para evitar bloqueos del hilo principal > 50ms
+async function yieldControl() {
+    if ('scheduler' in window && 'yield' in scheduler) {
+        await scheduler.yield();
+    } else {
+        await new Promise(resolve => setTimeout(resolve, 0));
+    }
+}
+
 // =========================================================================
 // MOTOR OFICIAL PC CUSTOM LAB (INDEXACIÓN TOTAL DE 16,139 PRODUCTOS)
 // =========================================================================
