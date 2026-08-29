@@ -542,181 +542,149 @@ function renderSidebarFacets() {
     const root = document.getElementById("sidebar-facets-root");
     if (!root) return;
 
-    const block1 = [
-        { id: 'procesadores', name: 'Procesadores (Intel/AMD)', icon: 'fa-microchip' },
-        { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', icon: 'fa-chess-board' },
-        { id: 'memorias_ram', name: 'Memorias RAM (DDR4 / DDR5)', icon: 'fa-memory' },
-        { id: 'discos_duros', name: 'Almacenamiento (SSD & HDD)', icon: 'fa-hard-drive' },
-        { id: 'tarjetas_de_video', name: 'Tarjetas de Video (GPUs)', icon: 'fa-vr-cardboard' },
-        { id: 'gabinetes', name: 'Gabinetes & Chasis Gamer', icon: 'fa-server' },
-        { id: 'fuentes_energia', name: 'Fuentes de Poder (PSU)', icon: 'fa-bolt' },
-        { id: 'enfriamiento', name: 'Enfriamiento y Disipadores', icon: 'fa-fan' },
-        { id: 'reguladores_ups', name: 'Reguladores & No-Breaks', icon: 'fa-car-battery' },
-        { id: 'monitores', name: 'Monitores & Pantallas PC', icon: 'fa-desktop' }
-    ];
-
-    const block2 = [
-        { id: 'mini_pcs_ia', name: 'Mini PCs & Servidores IA (NUC)', icon: 'fa-brain' },
-        { id: 'laptops', name: 'Laptops y Portátiles', icon: 'fa-laptop' },
-        { id: 'all_in_one', name: 'Equipos All-in-One e iMac', icon: 'fa-tv' }
-    ];
-
-    const block3 = [
-        { id: 'consumibles', name: 'Tóners, Tintas y Consumibles', icon: 'fa-droplet' },
-        { id: 'impresoras', name: 'Impresoras y Multifuncionales', icon: 'fa-print' },
-        { id: 'accesorios_perifericos', name: 'Teclados, Mouse & Periféricos', icon: 'fa-keyboard' },
-        { id: 'conectividad_redes', name: 'Redes & Conectividad WiFi', icon: 'fa-wifi' },
-        { id: 'software', name: 'Software & Licencias Originales', icon: 'fa-compact-disc' },
-        { id: 'telefonia_seguridad', name: 'Telefonía & Videovigilancia (CCTV)', icon: 'fa-video' },
-        { id: 'punto_de_venta', name: 'Punto de Venta (POS)', icon: 'fa-barcode' },
-        { id: 'electronica_consumo', name: 'Audio, Video & Electrónica', icon: 'fa-headphones' },
-        { id: 'linea_blanca', name: 'Línea Blanca & Electrodomésticos', icon: 'fa-blender' },
-        { id: 'outlet_liquidaciones', name: 'Outlet & Liquidaciones', icon: 'fa-percent' }
-    ];
-
     const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
     const getCount = (id) => all.filter(p => (p.categoria_clasificada || '').toLowerCase() === id.toLowerCase()).length;
 
-    const renderBtn = (c) => `
-        <label for="cat_${c.id}" class="category-link flex items-center justify-between cursor-pointer hover:text-cyan-300 transition py-1">
-            <span class="flex items-center gap-2.5 truncate">
-                <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="window.selectCategoryFacet('${c.id}')" class="accent-cyan-400 cursor-pointer shrink-0" />
-                <i class="fa-solid ${c.icon} text-cyan-400 w-4 text-center shrink-0" aria-hidden="true"></i>
-                <span class="cat-title truncate ${activeSelectedCategory === c.id ? 'font-black text-cyan-300' : 'text-slate-200'} text-xs">${c.name}</span>
-            </span>
-            <span class="cat-count font-mono text-[10px] text-slate-400">(${getCount(c.id)})</span>
-        </label>
-    `;
+    const categories = [
+        { id: 'Todas', name: 'Todas las Categorías', icon: 'fa-boxes-stacked', group: 'General' },
+        { id: 'procesadores', name: 'Procesadores (Intel/AMD)', icon: 'fa-microchip', group: '1. Ensamble' },
+        { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', icon: 'fa-chess-board', group: '1. Ensamble' },
+        { id: 'memorias_ram', name: 'Memorias RAM (DDR4/DDR5)', icon: 'fa-memory', group: '1. Ensamble' },
+        { id: 'discos_duros', name: 'Almacenamiento (SSD/HDD)', icon: 'fa-hard-drive', group: '1. Ensamble' },
+        { id: 'tarjetas_de_video', name: 'Tarjetas de Video (GPUs)', icon: 'fa-vr-cardboard', group: '1. Ensamble' },
+        { id: 'gabinetes', name: 'Gabinetes & Chasis Gamer', icon: 'fa-server', group: '1. Ensamble' },
+        { id: 'fuentes_energia', name: 'Fuentes de Poder (PSU)', icon: 'fa-bolt', group: '1. Ensamble' },
+        { id: 'enfriamiento', name: 'Enfriamiento y Disipadores', icon: 'fa-fan', group: '1. Ensamble' },
+        { id: 'reguladores_ups', name: 'Reguladores & No-Breaks', icon: 'fa-car-battery', group: '1. Ensamble' },
+        { id: 'monitores', name: 'Monitores & Pantallas PC', icon: 'fa-desktop', group: '1. Ensamble' },
+        { id: 'mini_pcs_ia', name: 'Mini PCs & Servidores IA', icon: 'fa-brain', group: '2. Sistemas' },
+        { id: 'laptops', name: 'Laptops y Portátiles', icon: 'fa-laptop', group: '2. Sistemas' },
+        { id: 'all_in_one', name: 'Equipos All-in-One e iMac', icon: 'fa-tv', group: '2. Sistemas' },
+        { id: 'consumibles', name: 'Tóners, Tintas y Consumibles', icon: 'fa-droplet', group: '3. Soluciones' },
+        { id: 'impresoras', name: 'Impresoras y Multifuncionales', icon: 'fa-print', group: '3. Soluciones' },
+        { id: 'accesorios_perifericos', name: 'Teclados, Mouse & Periféricos', icon: 'fa-keyboard', group: '3. Soluciones' },
+        { id: 'conectividad_redes', name: 'Redes & Conectividad WiFi', icon: 'fa-wifi', group: '3. Soluciones' },
+        { id: 'software', name: 'Software & Licencias Originales', icon: 'fa-compact-disc', group: '3. Soluciones' },
+        { id: 'telefonia_seguridad', name: 'Telefonía & Videovigilancia', icon: 'fa-video', group: '3. Soluciones' },
+        { id: 'punto_de_venta', name: 'Punto de Venta (POS)', icon: 'fa-barcode', group: '3. Soluciones' },
+        { id: 'electronica_consumo', name: 'Audio, Video & Electrónica', icon: 'fa-headphones', group: '3. Soluciones' },
+        { id: 'linea_blanca', name: 'Línea Blanca & Hogar', icon: 'fa-blender', group: '3. Soluciones' },
+        { id: 'outlet_liquidaciones', name: 'Outlet & Liquidaciones', icon: 'fa-percent', group: '3. Soluciones' }
+    ];
 
     root.innerHTML = `
-        <div class="bg-gradient-to-r from-slate-900 to-cyan-950 border border-cyan-500/40 text-white p-3 rounded-t-2xl font-bold text-xs uppercase flex items-center justify-between shadow-lg">
-            <h2 class="flex items-center gap-2 text-cyan-300 font-mono text-xs"><i class="fa-solid fa-sliders text-cyan-400" aria-hidden="true"></i> Departamentos</h2>
-            <span class="text-[9px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono font-bold">${all.length.toLocaleString('es-MX')} Items</span>
-        </div>
-
-        <div class="p-3 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-200 text-xs shadow-2xl flex flex-col justify-between space-y-4">
+        <div class="bg-slate-900/95 border border-slate-800 rounded-2xl p-3 shadow-2xl space-y-2.5">
             
-            <div class="flex gap-2">
-                <button onclick="renderExactCatalogView()" aria-label="Aplicar filtros seleccionados" class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase transition cursor-pointer shadow min-h-[44px]">
-                    Aplicar
+            <!-- ENCABEZADO DEPARTAMENTOS -->
+            <div class="bg-gradient-to-r from-slate-950 to-cyan-950/80 border border-cyan-500/40 p-2 rounded-xl flex items-center justify-between">
+                <span class="text-xs font-mono font-black text-cyan-300 uppercase tracking-wider flex items-center gap-1.5">
+                    <i class="fa-solid fa-layer-group text-cyan-400"></i> Departamentos
+                </span>
+                <span class="text-[9.5px] font-mono bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded font-bold">${all.length.toLocaleString('es-MX')} Items</span>
+            </div>
+
+            <!-- SELECTOR RÁPIDO DESPLEGABLE DE DEPARTAMENTOS -->
+            <div class="space-y-1">
+                <label for="category-quick-select" class="text-[10px] font-mono text-slate-400 block font-bold">SELECCIONAR DEPARTAMENTO:</label>
+                <div class="relative">
+                    <select 
+                        id="category-quick-select" 
+                        onchange="window.selectCategoryFacet(this.value)" 
+                        class="w-full bg-slate-950 border border-cyan-500/50 hover:border-cyan-400 text-white rounded-xl px-3 py-2 text-xs font-mono font-bold outline-none cursor-pointer shadow-inner appearance-none transition"
+                    >
+                        ${categories.map(c => `
+                            <option value="${c.id}" ${activeSelectedCategory === c.id ? 'selected' : ''} class="bg-slate-950 text-white py-1">
+                                ${c.group}: ${c.name} (${c.id === 'Todas' ? all.length.toLocaleString('es-MX') : getCount(c.id)})
+                            </option>
+                        `).join('')}
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-cyan-400">
+                        <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHIPS DE ACCESO DIRECTO RÁPIDO (LOS 6 MÁS POPULARES) -->
+            <div class="grid grid-cols-2 gap-1.5 pt-1">
+                <button onclick="window.selectCategoryFacet('procesadores')" class="px-2 py-1.5 rounded-lg ${activeSelectedCategory === 'procesadores' ? 'bg-cyan-500 text-slate-950 font-black' : 'bg-slate-950 hover:bg-slate-800 text-slate-200 border border-slate-800'} text-[10.5px] font-mono truncate text-left transition flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-microchip ${activeSelectedCategory === 'procesadores' ? 'text-slate-950' : 'text-cyan-400'} text-[10px]"></i>
+                    <span class="truncate">CPUs (${getCount('procesadores')})</span>
                 </button>
-                <button onclick="window.resetFacets()" aria-label="Limpiar todos los filtros" class="btn-action flex-1 bg-slate-800 hover:bg-red-950/60 border border-slate-700 hover:border-red-500/50 text-slate-200 hover:text-red-400 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer min-h-[44px]">
-                    Limpiar
+                <button onclick="window.selectCategoryFacet('memorias_ram')" class="px-2 py-1.5 rounded-lg ${activeSelectedCategory === 'memorias_ram' ? 'bg-cyan-500 text-slate-950 font-black' : 'bg-slate-950 hover:bg-slate-800 text-slate-200 border border-slate-800'} text-[10.5px] font-mono truncate text-left transition flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-memory ${activeSelectedCategory === 'memorias_ram' ? 'text-slate-950' : 'text-emerald-400'} text-[10px]"></i>
+                    <span class="truncate">RAMs (${getCount('memorias_ram')})</span>
+                </button>
+                <button onclick="window.selectCategoryFacet('tarjetas_de_video')" class="px-2 py-1.5 rounded-lg ${activeSelectedCategory === 'tarjetas_de_video' ? 'bg-cyan-500 text-slate-950 font-black' : 'bg-slate-950 hover:bg-slate-800 text-slate-200 border border-slate-800'} text-[10.5px] font-mono truncate text-left transition flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-vr-cardboard ${activeSelectedCategory === 'tarjetas_de_video' ? 'text-slate-950' : 'text-purple-400'} text-[10px]"></i>
+                    <span class="truncate">GPUs (${getCount('tarjetas_de_video')})</span>
+                </button>
+                <button onclick="window.selectCategoryFacet('reguladores_ups')" class="px-2 py-1.5 rounded-lg ${activeSelectedCategory === 'reguladores_ups' ? 'bg-cyan-500 text-slate-950 font-black' : 'bg-slate-950 hover:bg-slate-800 text-slate-200 border border-slate-800'} text-[10.5px] font-mono truncate text-left transition flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-car-battery ${activeSelectedCategory === 'reguladores_ups' ? 'text-slate-950' : 'text-yellow-400'} text-[10px]"></i>
+                    <span class="truncate">UPS (${getCount('reguladores_ups')})</span>
+                </button>
+                <button onclick="window.selectCategoryFacet('laptops')" class="px-2 py-1.5 rounded-lg ${activeSelectedCategory === 'laptops' ? 'bg-cyan-500 text-slate-950 font-black' : 'bg-slate-950 hover:bg-slate-800 text-slate-200 border border-slate-800'} text-[10.5px] font-mono truncate text-left transition flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-laptop ${activeSelectedCategory === 'laptops' ? 'text-slate-950' : 'text-cyan-400'} text-[10px]"></i>
+                    <span class="truncate">Laptops (${getCount('laptops')})</span>
+                </button>
+                <button onclick="window.selectCategoryFacet('accesorios_perifericos')" class="px-2 py-1.5 rounded-lg ${activeSelectedCategory === 'accesorios_perifericos' ? 'bg-cyan-500 text-slate-950 font-black' : 'bg-slate-950 hover:bg-slate-800 text-slate-200 border border-slate-800'} text-[10.5px] font-mono truncate text-left transition flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-keyboard ${activeSelectedCategory === 'accesorios_perifericos' ? 'text-slate-950' : 'text-amber-400'} text-[10px]"></i>
+                    <span class="truncate">Kits/Mouse (${getCount('accesorios_perifericos')})</span>
                 </button>
             </div>
 
-            <!-- ENLACE A TODAS LAS CATEGORÍAS -->
-            <div class="bg-slate-950 p-2 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition flex items-center">
-                <label for="cat_todas" class="category-link flex items-center justify-between cursor-pointer w-full">
-                    <span class="flex items-center gap-2 truncate">
-                        <input type="radio" id="cat_todas" name="cat_facet" aria-label="Todas las categorías" ${activeSelectedCategory === 'Todas' ? 'checked' : ''} onchange="window.selectCategoryFacet('Todas')" class="accent-cyan-400 cursor-pointer shrink-0" />
-                        <i class="fa-solid fa-layer-group text-xs text-cyan-400 shrink-0" aria-hidden="true"></i>
-                        <span class="cat-title truncate font-black text-white text-xs">Todas las Categorías</span>
+            <!-- TARJETA 1: APP MÓVIL (QR + GOOGLE PLAY + APP STORE) COMPACTA -->
+            <div class="bg-slate-950/90 border border-cyan-500/40 rounded-xl p-2.5 text-center shadow-lg space-y-1.5">
+                <div class="flex items-center justify-between border-b border-slate-800 pb-1">
+                    <span class="text-[10.5px] font-mono font-black text-cyan-300 uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-mobile-screen-button text-cyan-400"></i> App Móvil
                     </span>
-                    <span class="cat-count font-mono font-bold text-[10px] text-cyan-300">(${all.length.toLocaleString('es-MX')})</span>
-                </label>
-            </div>
-
-            <!-- BLOQUE 1 - COMPONENTES DE ENSAMBLE -->
-            <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-cyan-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-microchip text-cyan-400" aria-hidden="true"></i> 1. Componentes de Ensamble
-                </h3>
-                <div class="space-y-1 text-slate-300">
-                    ${block1.map(renderBtn).join('')}
+                    <span class="text-[8.5px] font-mono text-emerald-400 font-bold bg-emerald-500/10 px-1.5 py-0.5 rounded">En Vivo</span>
                 </div>
-            </div>
-
-            <!-- BLOQUE 2 - SISTEMAS Y EQUIPOS COMPLETOS -->
-            <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-purple-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-cube text-purple-400" aria-hidden="true"></i> 2. Sistemas & Mini PCs IA
-                </h3>
-                <div class="space-y-1 text-slate-300">
-                    ${block2.map(renderBtn).join('')}
-                </div>
-            </div>
-
-            <!-- BLOQUE 3 - CONSUMIBLES, SOLUCIONES Y ELECTRÓNICA -->
-            <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-amber-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-puzzle-piece text-amber-400" aria-hidden="true"></i> 3. Consumibles & Soluciones
-                </h3>
-                <div class="space-y-1 text-slate-300">
-                    ${block3.map(renderBtn).join('')}
-                </div>
-            </div>
-
-                                                <!-- 3 TARJETAS DE CONVERSIÓN INTEGRADAS -->
-            <div class="pt-3 space-y-3.5 border-t border-slate-800">
                 
-                <!-- TARJETA 1: APP MÓVIL OFICIAL CON QR, GOOGLE PLAY Y APP STORE -->
-                <div class="bg-slate-950/90 border border-cyan-500/40 rounded-2xl p-3.5 text-center shadow-lg space-y-2.5">
-                    <span class="text-[11px] font-mono font-black text-cyan-300 uppercase tracking-wider flex items-center justify-center gap-1.5">
-                        <i class="fa-solid fa-mobile-screen-button text-cyan-400"></i> App Móvil & Pedidos
-                    </span>
-                    
-                    <!-- Código QR Oficial -->
-                    <div class="w-32 h-32 mx-auto bg-white p-2 rounded-2xl shadow-md flex items-center justify-center">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://iaworldcenter-creator.github.io/pc-custom-lab/&color=0-0-0&bgcolor=255-255-255" alt="Código QR Descargar App" width="120" height="120" class="w-full h-full object-contain" />
+                <div class="flex items-center gap-2.5">
+                    <!-- Código QR 80x80 -->
+                    <div class="w-20 h-20 bg-white p-1 rounded-xl shadow shrink-0 flex items-center justify-center">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://iaworldcenter-creator.github.io/pc-custom-lab/&color=0-0-0&bgcolor=255-255-255" alt="QR App" width="80" height="80" class="w-full h-full object-contain" />
                     </div>
-                    <span class="text-[9.5px] font-mono text-slate-400 block">Escanea con la cámara de tu celular</span>
-
-                    <!-- Botones de Tiendas de Aplicaciones: Google Play & App Store -->
-                    <div class="grid grid-cols-2 gap-2 pt-1">
-                        <a href="https://play.google.com/store" target="_blank" rel="noopener" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-400 text-white rounded-xl p-2 flex flex-col items-center justify-center transition shadow group min-h-[44px]">
-                            <i class="fa-brands fa-google-play text-cyan-400 text-sm mb-0.5 group-hover:scale-110 transition"></i>
-                            <span class="text-[8px] font-mono uppercase text-slate-400 leading-none">Disponible en</span>
-                            <span class="text-[9.5px] font-bold text-white leading-tight">Google Play</span>
+                    <!-- Botones Google Play y App Store -->
+                    <div class="flex-1 flex flex-col gap-1">
+                        <a href="https://play.google.com/store" target="_blank" rel="noopener" class="bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400 text-white rounded-lg py-1 px-1.5 flex items-center justify-center gap-1.5 transition text-[9.5px] font-bold">
+                            <i class="fa-brands fa-google-play text-cyan-400 text-xs"></i> Google Play
                         </a>
-                        <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-400 text-white rounded-xl p-2 flex flex-col items-center justify-center transition shadow group min-h-[44px]">
-                            <i class="fa-brands fa-apple text-slate-200 text-sm mb-0.5 group-hover:scale-110 transition"></i>
-                            <span class="text-[8px] font-mono uppercase text-slate-400 leading-none">Consíguelo en</span>
-                            <span class="text-[9.5px] font-bold text-white leading-tight">App Store</span>
+                        <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener" class="bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400 text-white rounded-lg py-1 px-1.5 flex items-center justify-center gap-1.5 transition text-[9.5px] font-bold">
+                            <i class="fa-brands fa-apple text-slate-300 text-xs"></i> App Store
+                        </a>
+                        <a href="https://wa.me/523337271440" target="_blank" rel="noopener" class="bg-emerald-950/60 hover:bg-emerald-900 text-emerald-300 border border-emerald-500/40 rounded-lg py-0.5 px-1.5 flex items-center justify-center gap-1 text-[9px] font-mono font-bold">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i> Pedir App WhatsApp
                         </a>
                     </div>
-
-                    <!-- Acceso Directo por WhatsApp -->
-                    <a href="https://wa.me/523337271440" target="_blank" rel="noopener" class="w-full bg-slate-900 hover:bg-slate-800 text-emerald-300 hover:text-white border border-emerald-500/40 hover:border-emerald-400 font-mono font-bold rounded-xl text-[10.5px] uppercase py-2.5 flex items-center justify-center gap-1.5 transition shadow min-h-[40px]">
-                        <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
-                        <span>▶ Abrir App Oficial</span>
-                    </a>
                 </div>
+            </div>
 
-                <!-- TARJETA 2: CREADO CON GOOGLE GEMINI (ABAJO DEL CÓDIGO QR) -->
-                <div class="bg-slate-950/90 border border-blue-500/40 hover:border-blue-400 rounded-2xl p-3.5 shadow-lg transition text-left space-y-2">
-                    <span class="text-[11px] font-mono font-bold text-blue-400 uppercase tracking-wider flex items-center gap-1.5">
-                        <i class="fa-solid fa-wand-magic-sparkles text-blue-400" aria-hidden="true"></i> Creado con Google Gemini
+            <!-- TARJETA 2: CREADO CON GOOGLE GEMINI (SIEMPRE VISIBLE DIRECTAMENTE ABAJO DEL QR) -->
+            <div class="bg-slate-950/90 border border-blue-500/40 rounded-xl p-2 shadow-lg space-y-1">
+                <div class="flex items-center justify-between">
+                    <span class="text-[10px] font-mono font-black text-blue-400 uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-wand-magic-sparkles text-blue-400"></i> Creado con Google Gemini
                     </span>
-                    <div class="text-white font-bold text-xs leading-snug">
-                        Inteligencia Artificial para tu Negocio
-                    </div>
-                    <p class="text-slate-300 text-[10px] leading-tight">
-                        Concebido y programado con la IA más avanzada de Google para crear tiendas de ultra velocidad.
-                    </p>
-                    <a href="https://gemini.google.com/" target="_blank" rel="noopener" aria-label="Suscribirse a Google Gemini" class="btn-action w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[10.5px] font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition shadow min-h-[42px]">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        <span>SUSCRÍBETE A GOOGLE GEMINI</span>
-                    </a>
                 </div>
+                <a href="https://gemini.google.com/" target="_blank" rel="noopener" aria-label="Suscribirse a Google Gemini" class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-mono font-black rounded-lg text-[10px] uppercase py-2 flex items-center justify-center gap-1.5 transition shadow min-h-[36px]">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                    <span>SUSCRÍBETE A GOOGLE GEMINI</span>
+                </a>
+            </div>
 
-                <!-- TARJETA 3: DESARROLLADO POR ANTI-GRAVITY (ABAJO DE GEMINI) -->
-                <div class="bg-slate-950/90 border border-amber-500/40 hover:border-amber-400 rounded-2xl p-3.5 shadow-lg transition text-left space-y-2">
-                    <span class="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
-                        <i class="fa-solid fa-robot text-amber-400" aria-hidden="true"></i> Desarrollado por Anti-Gravity
+            <!-- TARJETA 3: DESARROLLADO POR ANTI-GRAVITY (SIEMPRE VISIBLE DIRECTAMENTE ABAJO DE GEMINI) -->
+            <div class="bg-slate-950/90 border border-amber-500/40 rounded-xl p-2 shadow-lg space-y-1">
+                <div class="flex items-center justify-between">
+                    <span class="text-[10px] font-mono font-black text-amber-400 uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-robot text-amber-400"></i> Desarrollado por Anti-Gravity
                     </span>
-                    <div class="text-white font-bold text-xs leading-snug">
-                        Agente Autónomo de Software
-                    </div>
-                    <p class="text-slate-300 text-[10px] leading-tight">
-                        Desarrollado, optimizado y desplegado por Anti-Gravity Copilot. Crea tus páginas web gratis.
-                    </p>
-                    <a href="https://antigravity.google/download" target="_blank" rel="noopener" aria-label="Descargar Anti-Gravity Gratis" class="btn-action w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black rounded-xl text-[10.5px] font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition shadow min-h-[42px]">
-                        <i class="fa-solid fa-download text-[10px]"></i>
-                        <span>DESCARGAR Y PRUEBA ANTI-GRAVITY</span>
-                    </a>
                 </div>
-
+                <a href="https://antigravity.google/download" target="_blank" rel="noopener" aria-label="Descargar Anti-Gravity Gratis" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-mono font-black rounded-lg text-[10px] uppercase py-2 flex items-center justify-center gap-1.5 transition shadow min-h-[36px]">
+                    <i class="fa-solid fa-download text-[9px]"></i>
+                    <span>DESCARGAR Y PRUEBA ANTI-GRAVITY</span>
+                </a>
             </div>
 
         </div>
