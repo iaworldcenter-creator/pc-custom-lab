@@ -259,245 +259,237 @@
       
       <!-- COLUMNA LATERAL IZQUIERDA: CATEGORÍAS (LANDMARK: ASIDE) -->
       <aside role="complementary" aria-label="Departamentos y Filtros" style="width: 280px; min-width: 280px; max-width: 280px;" class="w-full lg:w-[280px] shrink-0" id="sidebar-facets-root">
+
+    <div class="bg-slate-900/95 border border-slate-800 rounded-2xl p-3 shadow-xl space-y-4">
         
-  <div class="bg-slate-900/95 border border-slate-800 rounded-2xl p-3 shadow-xl space-y-4">
+        <div class="p-2.5 bg-cyan-950/40 border border-cyan-500/30 rounded-xl flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-cyan-300 uppercase tracking-wider flex items-center gap-1.5">
+                <i class="fa-solid fa-layer-group"></i> Departamentos
+            </span>
+            <span class="text-[10px] font-mono bg-cyan-500/20 text-cyan-300 font-bold px-2 py-0.5 rounded-md">16,139 Items</span>
+        </div>
+
+        <div class="space-y-1">
+            <button onclick="window.selectCategoryFacet('Todas')" type="button" aria-label="Ver todas las categorías" class="w-full text-left px-3 py-2.5 rounded-xl bg-cyan-500 text-slate-950 font-black border border-cyan-400 transition flex items-center justify-between text-xs font-mono cursor-pointer min-h-[48px]">
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-boxes-stacked w-4 text-center"></i>
+                    <span>Todas las Categorías</span>
+                </span>
+                <span class="text-[10px] bg-slate-950 text-cyan-300 px-2 py-0.5 rounded-md font-bold">(16,139)</span>
+            </button>
+        </div>
+
+        <!-- BLOQUE 1: COMPONENTES DE ENSAMBLE -->
+        <div class="space-y-1 pt-2 border-t border-slate-800">
+            <span class="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-2 block">
+                1. Componentes de Ensamble
+            </span>
+            
+        <button onclick="window.selectCategoryFacet('procesadores')" type="button" aria-label="Filtrar por categoría Procesadores (CPUs Intel/AMD)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-microchip text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Procesadores (CPUs Intel/AMD)</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(100)</span>
+        </button>
     
-    <div class="p-2.5 bg-cyan-950/40 border border-cyan-500/30 rounded-xl flex items-center justify-between">
-      <span class="text-xs font-mono font-bold text-cyan-300 uppercase tracking-wider flex items-center gap-1.5">
-        <i class="fa-solid fa-layer-group"></i> Departamentos
-      </span>
-      <span class="text-[10px] font-mono bg-cyan-500/20 text-cyan-300 font-bold px-2 py-0.5 rounded-md">16,139 Items</span>
+        <button onclick="window.selectCategoryFacet('tarjetas_madre')" type="button" aria-label="Filtrar por categoría Tarjetas Madre (Motherboards)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-chess-board text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Tarjetas Madre (Motherboards)</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(105)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('memorias_ram')" type="button" aria-label="Filtrar por categoría Memorias RAM (DDR4 / DDR5)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-memory text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Memorias RAM (DDR4 / DDR5)</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(403)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('discos_duros')" type="button" aria-label="Filtrar por categoría Almacenamiento (SSD & HDD)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-hard-drive text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Almacenamiento (SSD & HDD)</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(347)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('tarjetas_de_video')" type="button" aria-label="Filtrar por categoría Tarjetas de Video (GPUs)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-vr-cardboard text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Tarjetas de Video (GPUs)</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(51)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('gabinetes')" type="button" aria-label="Filtrar por categoría Gabinetes & Chasis Gamer" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-server text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Gabinetes & Chasis Gamer</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(134)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('fuentes_energia')" type="button" aria-label="Filtrar por categoría Fuentes de Poder (PSU)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-bolt text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Fuentes de Poder (PSU)</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(201)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('enfriamiento')" type="button" aria-label="Filtrar por categoría Enfriamiento y Disipadores" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-fan text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Enfriamiento y Disipadores</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(221)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('reguladores_ups')" type="button" aria-label="Filtrar por categoría Reguladores, No-Breaks & UPS" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-car-battery text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Reguladores, No-Breaks & UPS</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(1028)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('monitores')" type="button" aria-label="Filtrar por categoría Monitores & Pantallas PC" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-desktop text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Monitores & Pantallas PC</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(840)</span>
+        </button>
+    
+        </div>
+
+        <!-- BLOQUE 2: SISTEMAS & COMPUTADORAS -->
+        <div class="space-y-1 pt-2 border-t border-slate-800">
+            <span class="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-2 block">
+                2. Sistemas & Computadoras
+            </span>
+            
+        <button onclick="window.selectCategoryFacet('mini_pcs_ia')" type="button" aria-label="Filtrar por categoría Mini PCs & Servidores IA (NUC)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-brain text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Mini PCs & Servidores IA (NUC)</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(319)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('laptops')" type="button" aria-label="Filtrar por categoría Laptops y Portátiles" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-laptop text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Laptops y Portátiles</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(1189)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('all_in_one')" type="button" aria-label="Filtrar por categoría Equipos All-in-One e iMac" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-tv text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Equipos All-in-One e iMac</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(39)</span>
+        </button>
+    
+        </div>
+
+        <!-- BLOQUE 3: CONSUMIBLES & SOLUCIONES -->
+        <div class="space-y-1 pt-2 border-t border-slate-800">
+            <span class="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-2 block">
+                3. Consumibles & Soluciones
+            </span>
+            
+        <button onclick="window.selectCategoryFacet('consumibles')" type="button" aria-label="Filtrar por categoría Tóner, Tintas y Consumibles" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-droplet text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Tóner, Tintas y Consumibles</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(2151)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('impresoras')" type="button" aria-label="Filtrar por categoría Impresoras y Multifuncionales" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-print text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Impresoras y Multifuncionales</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(391)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('accesorios_perifericos')" type="button" aria-label="Filtrar por categoría Teclados, Mouse & Periféricos" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-keyboard text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Teclados, Mouse & Periféricos</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(3182)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('conectividad_redes')" type="button" aria-label="Filtrar por categoría Redes & Conectividad WiFi" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-wifi text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Redes & Conectividad WiFi</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(1862)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('software')" type="button" aria-label="Filtrar por categoría Software & Licencias Originales" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-compact-disc text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Software & Licencias Originales</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(805)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('telefonia_seguridad')" type="button" aria-label="Filtrar por categoría Telefonía & Videovigilancia (CCTV)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-video text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Telefonía & Videovigilancia (CCTV)</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(1352)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('punto_de_venta')" type="button" aria-label="Filtrar por categoría Punto de Venta (POS)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-barcode text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Punto de Venta (POS)</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(731)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('electronica_consumo')" type="button" aria-label="Filtrar por categoría Audio, Video & Electrónica" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-headphones text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Audio, Video & Electrónica</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(621)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('linea_blanca')" type="button" aria-label="Filtrar por categoría Línea Blanca & Electrodomésticos" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-blender text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Línea Blanca & Electrodomésticos</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(60)</span>
+        </button>
+    
+        <button onclick="window.selectCategoryFacet('outlet_liquidaciones')" type="button" aria-label="Filtrar por categoría Outlet & Liquidaciones" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid fa-percent text-cyan-400 w-4 text-center shrink-0"></i>
+                <span class="truncate">Outlet & Liquidaciones</span>
+            </span>
+            <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(7)</span>
+        </button>
+    
+        </div>
+
     </div>
 
-    <div class="space-y-1">
-      <button onclick="selectCategoryFacet('Todas')" type="button" aria-label="Ver todas las categorías" class="w-full text-left px-3 py-2.5 rounded-xl bg-cyan-500 text-slate-950 font-black border border-cyan-400 transition flex items-center justify-between text-xs font-mono cursor-pointer min-h-[48px]">
-        <span class="flex items-center gap-2">
-          <i class="fa-solid fa-boxes-stacked w-4 text-center"></i>
-          <span>Todas las Categorías</span>
-        </span>
-        <span class="text-[10px] bg-slate-950 text-cyan-300 px-2 py-0.5 rounded-md font-bold">(16,139)</span>
-      </button>
-    </div>
-
-    <!-- BLOQUE 1: COMPONENTES DE ENSAMBLE -->
-    <div class="space-y-1 pt-2 border-t border-slate-800">
-      <span class="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-2 block">
-        1. Componentes de Ensamble
-      </span>
-      
-    <button onclick="selectCategoryFacet('procesadores')" type="button" aria-label="Filtrar por categoría Procesadores (CPUs Intel/AMD)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-microchip text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Procesadores (CPUs Intel/AMD)</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(100)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('tarjetas_madre')" type="button" aria-label="Filtrar por categoría Tarjetas Madre (Motherboards)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-chess-board text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Tarjetas Madre (Motherboards)</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(105)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('memorias_ram')" type="button" aria-label="Filtrar por categoría Memorias RAM (DDR4 / DDR5)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-memory text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Memorias RAM (DDR4 / DDR5)</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(403)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('almacenamiento')" type="button" aria-label="Filtrar por categoría Almacenamiento (SSD & HDD)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-hard-drive text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Almacenamiento (SSD & HDD)</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('tarjetas_video')" type="button" aria-label="Filtrar por categoría Tarjetas de Video (GPUs)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-vr-cardboard text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Tarjetas de Video (GPUs)</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('gabinetes')" type="button" aria-label="Filtrar por categoría Gabinetes & Chasis Gamer" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-server text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Gabinetes & Chasis Gamer</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(134)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('fuentes_energia')" type="button" aria-label="Filtrar por categoría Fuentes de Poder (PSU)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-bolt text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Fuentes de Poder (PSU)</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(201)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('enfriamiento_disipadores')" type="button" aria-label="Filtrar por categoría Enfriamiento y Disipadores" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-fan text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Enfriamiento y Disipadores</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('reguladores_ups')" type="button" aria-label="Filtrar por categoría Reguladores, No-Breaks & UPS" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-car-battery text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Reguladores, No-Breaks & UPS</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(1028)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('monitores_pantallas')" type="button" aria-label="Filtrar por categoría Monitores & Pantallas PC" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-desktop text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Monitores & Pantallas PC</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    </div>
-
-    <!-- BLOQUE 2: SISTEMAS & COMPUTADORAS -->
-    <div class="space-y-1 pt-2 border-t border-slate-800">
-      <span class="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-2 block">
-        2. Sistemas & Computadoras
-      </span>
-      
-    <button onclick="selectCategoryFacet('mini_pcs_ia')" type="button" aria-label="Filtrar por categoría Mini PCs & Servidores IA (NUC)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-brain text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Mini PCs & Servidores IA (NUC)</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(319)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('computadoras_ensamble')" type="button" aria-label="Filtrar por categoría Computadoras & PC Gamer" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-computer text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Computadoras & PC Gamer</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('laptops_portatiles')" type="button" aria-label="Filtrar por categoría Laptops y Portátiles" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-laptop text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Laptops y Portátiles</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('equipos_all_in_one')" type="button" aria-label="Filtrar por categoría Equipos All-in-One e iMac" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-tv text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Equipos All-in-One e iMac</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    </div>
-
-    <!-- BLOQUE 3: CONSUMIBLES & SOLUCIONES -->
-    <div class="space-y-1 pt-2 border-t border-slate-800">
-      <span class="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-2 block">
-        3. Consumibles & Soluciones
-      </span>
-      
-    <button onclick="selectCategoryFacet('toner_tintas_consumibles')" type="button" aria-label="Filtrar por categoría Tóner, Tintas y Consumibles" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-droplet text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Tóner, Tintas y Consumibles</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('impresoras_multifuncionales')" type="button" aria-label="Filtrar por categoría Impresoras y Multifuncionales" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-print text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Impresoras y Multifuncionales</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('teclados_mouse_perifericos')" type="button" aria-label="Filtrar por categoría Teclados, Mouse & Periféricos" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-keyboard text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Teclados, Mouse & Periféricos</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('redes_conectividad_wifi')" type="button" aria-label="Filtrar por categoría Redes & Conectividad WiFi" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-wifi text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Redes & Conectividad WiFi</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('software_licencias_originales')" type="button" aria-label="Filtrar por categoría Software & Licencias Originales" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-compact-disc text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Software & Licencias Originales</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('telefonia_videovigilancia')" type="button" aria-label="Filtrar por categoría Telefonía & Videovigilancia (CCTV)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-video text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Telefonía & Videovigilancia (CCTV)</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('punto_de_venta_pos')" type="button" aria-label="Filtrar por categoría Punto de Venta (POS)" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-barcode text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Punto de Venta (POS)</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('audio_video_electronica')" type="button" aria-label="Filtrar por categoría Audio, Video & Electrónica" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-headphones text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Audio, Video & Electrónica</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('linea_blanca_electrodomesticos')" type="button" aria-label="Filtrar por categoría Línea Blanca & Electrodomésticos" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-blender text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Línea Blanca & Electrodomésticos</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(0)</span>
-    </button>
-  
-    <button onclick="selectCategoryFacet('outlet_liquidaciones')" type="button" aria-label="Filtrar por categoría Outlet & Liquidaciones" class="w-full text-left px-3 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-slate-900 border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
-      <span class="flex items-center gap-2 truncate">
-        <i class="fa-solid fa-percent text-cyan-400 w-4 text-center shrink-0"></i>
-        <span class="truncate">Outlet & Liquidaciones</span>
-      </span>
-      <span class="text-[10px] bg-slate-950 px-2 py-0.5 rounded-md text-slate-400 font-bold shrink-0">(7)</span>
-    </button>
-  
-    </div>
-
-  </div>
-
-      </aside>
+</aside>
 
       <!-- COLUMNA CENTRAL: ESCAPARATE PRINCIPAL (LANDMARK: SECTION) -->
       <section aria-label="Catálogo de Productos" style="flex: 1 1 0%; min-width: 0;" class="flex-1 min-w-0 w-full flex flex-col gap-3.5">

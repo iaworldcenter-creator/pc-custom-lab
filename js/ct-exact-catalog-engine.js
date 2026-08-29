@@ -1,3 +1,24 @@
+// Función global para seleccionar categoría y viajar directamente a la vitrina en celular y desktop
+window.selectCategoryFacet = function(catId) {
+    activeSelectedCategory = catId;
+    activeSearchQuery = '';
+    activeSelectedBrand = 'Todas';
+    currentPageNumber = 1;
+    
+    // Limpiar input de búsqueda visualmente
+    const searchInput = document.getElementById("boutiqueSearchInput");
+    if (searchInput) searchInput.value = '';
+
+    renderSidebarFacets();
+    renderExactCatalogView();
+
+    // En celular y desktop: Desplazamiento directo y suave a la vitrina de productos
+    const showcaseTarget = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
+    if (showcaseTarget) {
+        showcaseTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+};
+
 // Helper de priorización de tareas (scheduler.yield) para evitar bloqueos del hilo principal > 50ms
 async function yieldControl() {
     if ('scheduler' in window && 'yield' in scheduler) {
@@ -332,236 +353,88 @@ function renderSidebarFacets() {
         { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', icon: 'fa-chess-board' },
         { id: 'memorias_ram', name: 'Memorias RAM (DDR4 / DDR5)', icon: 'fa-memory' },
         { id: 'discos_duros', name: 'Almacenamiento (SSD & HDD)', icon: 'fa-hard-drive' },
-        { id: 'tarjetas_de_video', name: 'Tarjetas de Video (GPUs)', icon: 'fa-gamepad' },
-        { id: 'fuentes_energia', name: 'Fuentes de Poder (PSU)', icon: 'fa-bolt' },
+        { id: 'tarjetas_de_video', name: 'Tarjetas de Video (GPUs)', icon: 'fa-vr-cardboard' },
         { id: 'gabinetes', name: 'Gabinetes & Chasis Gamer', icon: 'fa-server' },
-        { id: 'enfriamiento', name: 'Enfriamiento y Disipadores', icon: 'fa-snowflake' },
-        { id: 'reguladores_ups', name: 'Reguladores, No-Breaks & UPS', icon: 'fa-plug-circle-bolt' },
+        { id: 'fuentes_energia', name: 'Fuentes de Poder (PSU)', icon: 'fa-bolt' },
+        { id: 'enfriamiento', name: 'Enfriamiento y Disipadores', icon: 'fa-fan' },
+        { id: 'reguladores_ups', name: 'Reguladores, No-Breaks & UPS', icon: 'fa-car-battery' },
         { id: 'monitores', name: 'Monitores & Pantallas PC', icon: 'fa-desktop' }
     ];
 
     const block2 = [
-        { id: 'mini_pcs_ia', name: 'Mini PCs & Servidores IA (NUC)', icon: 'fa-cube' },
-        { id: 'computadoras_ensambladas', name: 'Computadoras & PC Gamer', icon: 'fa-desktop' },
+        { id: 'mini_pcs_ia', name: 'Mini PCs & Servidores IA (NUC)', icon: 'fa-brain' },
         { id: 'laptops', name: 'Laptops y Portátiles', icon: 'fa-laptop' },
         { id: 'all_in_one', name: 'Equipos All-in-One e iMac', icon: 'fa-tv' }
     ];
 
     const block3 = [
-        { id: 'consumibles', name: 'Tóners, Tintas y Consumibles', icon: 'fa-fill-drip' },
+        { id: 'consumibles', name: 'Tóners, Tintas y Consumibles', icon: 'fa-droplet' },
         { id: 'impresoras', name: 'Impresoras y Multifuncionales', icon: 'fa-print' },
         { id: 'accesorios_perifericos', name: 'Teclados, Mouse & Periféricos', icon: 'fa-keyboard' },
-        { id: 'conectividad_redes', name: 'Redes & Conectividad WiFi', icon: 'fa-network-wired' },
+        { id: 'conectividad_redes', name: 'Redes & Conectividad WiFi', icon: 'fa-wifi' },
         { id: 'software', name: 'Software & Licencias Originales', icon: 'fa-compact-disc' },
         { id: 'telefonia_seguridad', name: 'Telefonía & Videovigilancia (CCTV)', icon: 'fa-video' },
         { id: 'punto_de_venta', name: 'Punto de Venta (POS)', icon: 'fa-barcode' },
         { id: 'electronica_consumo', name: 'Audio, Video & Electrónica', icon: 'fa-headphones' },
         { id: 'linea_blanca', name: 'Línea Blanca & Electrodomésticos', icon: 'fa-blender' },
-        { id: 'outlet_liquidaciones', name: 'Outlet & Liquidaciones', icon: 'fa-tag' }
+        { id: 'outlet_liquidaciones', name: 'Outlet & Liquidaciones', icon: 'fa-percent' }
     ];
 
     const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
     const getCount = (id) => all.filter(p => (p.categoria_clasificada || '').toLowerCase() === id.toLowerCase()).length;
 
-    let topItems = all.filter(p => {
-        if (activeSelectedCategory === 'Todas') return true;
-        return (p.categoria_clasificada || '').toLowerCase() === activeSelectedCategory.toLowerCase();
-    }).slice(0, 3);
+    const renderBtn = (c) => `
+        <button onclick="window.selectCategoryFacet('${c.id}')" type="button" aria-label="Filtrar por categoría ${c.name}" class="w-full text-left px-3 py-2.5 rounded-xl ${activeSelectedCategory === c.id ? 'bg-cyan-500 text-slate-950 font-black' : 'text-slate-300 hover:text-white hover:bg-slate-900'} border border-transparent hover:border-slate-800 transition flex items-center justify-between text-xs font-mono group cursor-pointer min-h-[48px]">
+            <span class="flex items-center gap-2 truncate">
+                <i class="fa-solid ${c.icon} ${activeSelectedCategory === c.id ? 'text-slate-950' : 'text-cyan-400'} w-4 text-center shrink-0"></i>
+                <span class="truncate">${c.name}</span>
+            </span>
+            <span class="text-[10px] ${activeSelectedCategory === c.id ? 'bg-slate-950 text-cyan-300' : 'bg-slate-950 text-slate-400'} px-2 py-0.5 rounded-md font-bold shrink-0">(${getCount(c.id)})</span>
+        </button>
+    `;
 
     root.innerHTML = `
-        <div class="bg-gradient-to-r from-slate-900 to-cyan-950 border border-cyan-500/40 text-white p-3 rounded-t-2xl font-bold text-xs uppercase flex items-center justify-between shadow-lg">
-            <h2 class="flex items-center gap-2 text-cyan-300 font-mono text-xs"><i class="fa-solid fa-sliders text-cyan-400" aria-hidden="true"></i> Departamentos</h2>
-            <span class="text-[9px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono font-bold">${all.length.toLocaleString('es-MX')} Items</span>
-        </div>
-
-        <div class="p-3 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-200 text-xs shadow-2xl flex flex-col justify-between space-y-4">
+        <div class="bg-slate-900/95 border border-slate-800 rounded-2xl p-3 shadow-xl space-y-4">
             
-            <div class="flex gap-2">
-                <button onclick="renderExactCatalogView()" aria-label="Aplicar filtros seleccionados" class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase transition cursor-pointer shadow min-h-[48px]">
-                    Aplicar
-                </button>
-                <button onclick="resetFacets()" aria-label="Limpiar todos los filtros" class="btn-action flex-1 bg-slate-800 hover:bg-red-950/60 border border-slate-700 hover:border-red-500/50 text-slate-200 hover:text-red-400 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer min-h-[48px]">
-                    Limpiar
-                </button>
+            <div class="p-2.5 bg-cyan-950/40 border border-cyan-500/30 rounded-xl flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-cyan-300 uppercase tracking-wider flex items-center gap-1.5">
+                    <i class="fa-solid fa-layer-group"></i> Departamentos
+                </span>
+                <span class="text-[10px] font-mono bg-cyan-500/20 text-cyan-300 font-bold px-2 py-0.5 rounded-md">${all.length.toLocaleString('es-MX')} Items</span>
             </div>
 
-            <!-- ENLACE A TODAS LAS CATEGORÍAS -->
-            <div class="bg-slate-950 p-2 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition min-h-[48px] flex items-center">
-                <label for="cat_todas" class="category-link flex items-center justify-between cursor-pointer w-full">
-                    <span class="flex items-center gap-2 truncate">
-                        <input type="radio" id="cat_todas" name="cat_facet" aria-label="Todas las categorías" ${activeSelectedCategory === 'Todas' ? 'checked' : ''} onchange="activeSelectedCategory='Todas'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="accent-cyan-400 cursor-pointer shrink-0" />
-                        <i class="fa-solid fa-layer-group text-xs text-cyan-400 shrink-0" aria-hidden="true"></i>
-                        <span class="cat-title truncate font-black text-white text-xs sm:text-sm">Todas las Categorías</span>
+            <div class="space-y-1">
+                <button onclick="window.selectCategoryFacet('Todas')" type="button" aria-label="Ver todas las categorías" class="w-full text-left px-3 py-2.5 rounded-xl ${activeSelectedCategory === 'Todas' ? 'bg-cyan-500 text-slate-950 font-black' : 'text-slate-300 hover:text-white hover:bg-slate-900'} border border-cyan-400 transition flex items-center justify-between text-xs font-mono cursor-pointer min-h-[48px]">
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-boxes-stacked w-4 text-center"></i>
+                        <span>Todas las Categorías</span>
                     </span>
-                    <span class="cat-count font-mono font-bold">(${all.length.toLocaleString('es-MX')})</span>
-                </label>
-            </div>
-
-            <!-- BLOQUE 1 - COMPONENTES DE ENSAMBLE -->
-            <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-cyan-300 font-mono uppercase text-xs sm:text-sm font-black mb-2">
-                    <i class="fa-solid fa-microchip text-cyan-400" aria-hidden="true"></i> 1. Componentes de Ensamble
-                </h3>
-                <div class="space-y-1 text-slate-300">
-                    ${block1.map(c => `
-                        <label for="cat_${c.id}" class="category-link flex items-center justify-between cursor-pointer hover:text-cyan-300 transition">
-                            <span class="flex items-center gap-3 truncate">
-                                <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="accent-cyan-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-cyan-400 shrink-0" aria-hidden="true"></i>
-                                <span class="cat-title truncate ${activeSelectedCategory === c.id ? 'font-black text-cyan-300' : 'text-slate-100'}">${c.name}</span>
-                            </span>
-                            <span class="cat-count font-mono">(${getCount(c.id)})</span>
-                        </label>
-                    `).join('')}
-                </div>
-            </div>
-
-            <!-- BLOQUE 2 - SISTEMAS Y EQUIPOS COMPLETOS -->
-            <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-purple-300 font-mono uppercase text-xs sm:text-sm font-black mb-2">
-                    <i class="fa-solid fa-cube text-purple-400" aria-hidden="true"></i> 2. Sistemas & Mini PCs IA
-                </h3>
-                <div class="space-y-1 text-slate-300">
-                    ${block2.map(c => `
-                        <label for="cat_${c.id}" class="category-link flex items-center justify-between cursor-pointer hover:text-purple-300 transition">
-                            <span class="flex items-center gap-3 truncate">
-                                <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="accent-purple-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-purple-400 shrink-0" aria-hidden="true"></i>
-                                <span class="cat-title truncate ${activeSelectedCategory === c.id ? 'font-black text-purple-300' : 'text-slate-100'}">${c.name}</span>
-                            </span>
-                            <span class="cat-count font-mono">(${getCount(c.id)})</span>
-                        </label>
-                    `).join('')}
-                </div>
-            </div>
-
-            <!-- BLOQUE 3 - CONSUMIBLES, SOLUCIONES Y ELECTRÓNICA -->
-            <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-amber-300 font-mono uppercase text-xs sm:text-sm font-black mb-2">
-                    <i class="fa-solid fa-puzzle-piece text-amber-400" aria-hidden="true"></i> 3. Consumibles & Soluciones
-                </h3>
-                <div class="space-y-1 text-slate-300">
-                    ${block3.map(c => `
-                        <label for="cat_${c.id}" class="category-link flex items-center justify-between cursor-pointer hover:text-amber-300 transition">
-                            <span class="flex items-center gap-3 truncate">
-                                <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="accent-amber-400 cursor-pointer shrink-0" />
-                                <i class="fa-solid ${c.icon} text-amber-400 shrink-0" aria-hidden="true"></i>
-                                <span class="cat-title truncate ${activeSelectedCategory === c.id ? 'font-black text-amber-300' : 'text-slate-100'}">${c.name}</span>
-                            </span>
-                            <span class="cat-count font-mono">(${getCount(c.id)})</span>
-                        </label>
-                    `).join('')}
-                </div>
-            </div>
-
-            <!-- TOP 3 MÁS VENDIDOS DINÁMICO -->
-            <div class="pt-2 space-y-2 border-t border-slate-800 hidden md:block">
-                <div class="flex items-center justify-between">
-                    <h3 class="font-bold text-amber-400 text-xs flex items-center gap-1.5 font-mono uppercase tracking-wider">
-                        <i class="fa-solid fa-fire text-amber-400" aria-hidden="true"></i> Top 3 Destacados
-                    </h3>
-                    <span class="text-[9px] text-cyan-300 font-mono font-bold">${activeSelectedCategory.toUpperCase()}</span>
-                </div>
-
-                <div class="space-y-2">
-                    ${topItems.map((b, idx) => {
-                        const sku = b.sku;
-                        const cat = b.categoria_clasificada || 'accesorios_perifericos';
-                        const title = (b.nombre || b.descripcion_completa || '').replace(/'/g, "&#39;");
-                        const price = b.precio_mxn || b.precio;
-                        const mayoreo = b.precio_mayoreo_10pzs || (price * 0.93);
-                        const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
-                        const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
-                        const placeholder = getPlaceholderForCat(cat);
-
-                        return `
-                            <div class="bg-slate-950 border border-slate-800 hover:border-cyan-500/50 p-2 rounded-xl flex items-center gap-2.5 transition group cursor-pointer min-h-[48px]" onclick="openProductDetailModal('${sku}')" role="button" tabindex="0" aria-label="Ver destacado ${title}">
-                                <div class="w-12 h-12 bg-slate-900 rounded-lg p-1 shrink-0 flex items-center justify-center overflow-hidden">
-                                    <img src="${localImg}" alt="${title}" width="48" height="48" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='${cdnImg}'; } else { this.src='${placeholder}'; }" />
-                                </div>
-                                <div class="flex-1 min-w-0">
-                                    <div class="text-[11px] font-bold text-slate-100 truncate group-hover:text-cyan-300 transition">${title}</div>
-                                    <div class="flex items-center justify-between text-[10px] font-mono">
-                                        <span class="text-emerald-300 font-black">$${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
-                                        <span class="text-amber-300">May: $${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        `;
-                    }).join('')}
-                </div>
-
-                <button 
-                    onclick="activeSelectedCategory='Todas'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView(); document.getElementById('catalog-main-content-root').scrollIntoView({behavior:'smooth'});" 
-                    aria-label="Ver todos los productos del catálogo"
-                    class="btn-action w-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/40 font-mono font-bold rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer shadow mt-2 min-h-[48px]"
-                >
-                    <i class="fa-solid fa-layer-group text-xs" aria-hidden="true"></i> <span>Ver Todo el Catálogo</span>
+                    <span class="text-[10px] bg-slate-950 text-cyan-300 px-2 py-0.5 rounded-md font-bold">(${all.length.toLocaleString('es-MX')})</span>
                 </button>
             </div>
 
-            <!-- 3 TARJETAS DE CONVERSIÓN INTEGRADAS -->
-            <div class="pt-4 space-y-3.5 border-t border-slate-800 hidden md:block">
-                
-                <!-- TARJETA 1: APP MÓVIL PEDIDOS RÁPIDOS -->
-                <div class="bg-slate-950/90 border border-cyan-500/40 hover:border-cyan-400 rounded-2xl p-3.5 text-center shadow-lg transition">
-                    <span class="text-[11px] font-mono font-bold text-cyan-400 uppercase tracking-wider flex items-center justify-center gap-1.5 mb-2.5">
-                        <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> App Móvil Pedidos Rápidos
-                    </span>
-                    
-                    <div class="w-32 h-32 mx-auto bg-white p-2 rounded-xl shadow-md flex items-center justify-center mb-2">
-                        <img 
-                            src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=https://iaworldcenter-creator.github.io/pc-custom-lab/&color=0-0-0&bgcolor=255-255-255" 
-                            alt="Código QR de la App Oficial" 
-                            width="128" 
-                            height="128" 
-                            loading="lazy" 
-                            decoding="async" 
-                            class="w-full h-full object-contain" 
-                        />
-                    </div>
-                    
-                    <p class="text-slate-200 text-[10.5px] leading-tight mb-2.5">
-                        Escanea con tu cámara para pedir por <strong>Uber Flash</strong> con código PIN.
-                    </p>
+            <!-- BLOQUE 1: COMPONENTES DE ENSAMBLE -->
+            <div class="space-y-1 pt-2 border-t border-slate-800">
+                <span class="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-2 block">
+                    1. Componentes de Ensamble
+                </span>
+                ${block1.map(renderBtn).join('')}
+            </div>
 
-                    <a href="https://wa.me/523337271440" target="_blank" rel="noopener" aria-label="Abrir App Oficial de WhatsApp" class="btn-action w-full bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-cyan-500/40 font-mono font-bold rounded-lg text-[10px] uppercase tracking-wider flex items-center justify-center gap-1.5 transition min-h-[48px]">
-                        <span>▶ Abrir App Oficial</span>
-                    </a>
-                </div>
+            <!-- BLOQUE 2: SISTEMAS & COMPUTADORAS -->
+            <div class="space-y-1 pt-2 border-t border-slate-800">
+                <span class="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-2 block">
+                    2. Sistemas & Computadoras
+                </span>
+                ${block2.map(renderBtn).join('')}
+            </div>
 
-                <!-- TARJETA 2: CREADO CON GOOGLE GEMINI -->
-                <div class="bg-slate-950/90 border border-blue-500/40 hover:border-blue-400 rounded-2xl p-3.5 shadow-lg transition text-left">
-                    <span class="text-[11px] font-mono font-bold text-blue-400 uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
-                        <i class="fa-solid fa-microchip" aria-hidden="true"></i> Creado con Google Gemini
-                    </span>
-                    <div class="text-white font-bold text-xs leading-snug mb-1">
-                        Inteligencia Artificial para tu Negocio
-                    </div>
-                    <p class="text-slate-200 text-[10px] leading-tight mb-2.5">
-                        Concebido y programado con la IA más avanzada de Google para crear tiendas de ultra velocidad.
-                    </p>
-                    <a href="https://gemini.google.com/" target="_blank" rel="noopener" aria-label="Suscribirse a Google Gemini" class="btn-action w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-lg text-[10px] uppercase tracking-wider flex items-center justify-center gap-1 transition shadow min-h-[48px]">
-                        <span>SUSCRIBIRSE A GOOGLE GEMINI</span>
-                    </a>
-                </div>
-
-                <!-- TARJETA 3: DESARROLLADO POR ANTI-GRAVITY -->
-                <div class="bg-slate-950/90 border border-amber-500/40 hover:border-amber-400 rounded-2xl p-3.5 shadow-lg transition text-left">
-                    <span class="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
-                        <i class="fa-solid fa-robot" aria-hidden="true"></i> Desarrollado por Anti-Gravity
-                    </span>
-                    <div class="text-white font-bold text-xs leading-snug mb-1">
-                        Agente Autónomo de Software
-                    </div>
-                    <p class="text-slate-200 text-[10px] leading-tight mb-2.5">
-                        Desarrollado, optimizado y desplegado por Anti-Gravity Copilot. Crea tus páginas web gratis.
-                    </p>
-                    <a href="https://github.com/" target="_blank" rel="noopener" aria-label="Descargar Anti-Gravity Gratis" class="btn-action w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black rounded-lg text-[10px] uppercase tracking-wider flex items-center justify-center gap-1 transition shadow min-h-[48px]">
-                        <span>DESCARGAR ANTI-GRAVITY GRATIS</span>
-                    </a>
-                </div>
-
+            <!-- BLOQUE 3: CONSUMIBLES & SOLUCIONES -->
+            <div class="space-y-1 pt-2 border-t border-slate-800">
+                <span class="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-2 block">
+                    3. Consumibles & Soluciones
+                </span>
+                ${block3.map(renderBtn).join('')}
             </div>
 
         </div>
