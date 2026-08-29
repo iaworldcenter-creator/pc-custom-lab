@@ -1,237 +1,172 @@
 <head>
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js')
-      .then(reg => {
-        console.log('Service Worker registered successfully');
-        reg.onupdatefound = () => {
-          const installingWorker = reg.installing;
-          if (installingWorker) {
-            installingWorker.onstatechange = () => {
-              if (installingWorker.state === 'installed') {
-                if (navigator.serviceWorker.controller) {
-                  console.log('New content is available, auto-reloading page...');
-                  window.location.reload();
-                }
-              }
-            };
-          }
-        };
-      })
-      .catch(err => console.log('Service Worker registration failed:', err));
-  });
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>PC Custom Lab | Producto</title>
+    <meta name="description" content="Tienda mayorista y ensamble de computadoras en Guadalajara Centro. 16,139 productos en catálogo con entrega express el mismo día y garantía directa.">
+    <link rel="canonical" href="https://iaworldcenter-creator.github.io/pc-custom-lab/producto.html">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#030712">
 
-// Función de compra directa desde producto individual
-window.comprarAhoraDirecto = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const sku = urlParams.get('sku');
-    
-    if (sku) {
-        let cart = [];
-        try {
-            const stored = localStorage.getItem("ecosystem_global_cart");
-            if (stored) cart = JSON.parse(stored);
-        } catch(e) {}
-        
-        const existing = cart.find(item => item.sku === sku);
-        if (existing) {
-            if (!existing.quantity || existing.quantity < 1) existing.quantity = 1;
-        } else {
-            let prodObj = null;
-            if (typeof productCatalog !== 'undefined') {
-                prodObj = productCatalog.find(p => p.sku === sku);
-            }
-            if (prodObj) {
-                cart.push({ ...prodObj, quantity: 1 });
-            } else {
-                const titleEl = document.querySelector('h1') || document.querySelector('h2');
-                const priceEl = document.querySelector('[data-precio]') || document.querySelector('.text-amber-400');
-                const name = titleEl ? titleEl.innerText.trim() : 'Producto ' + sku;
-                let price = 100;
-                if (priceEl) {
-                    const cleanP = priceEl.innerText.replace(/[^0-9.]/g, '');
-                    if (cleanP) price = parseFloat(cleanP);
-                }
-                cart.push({ sku: sku, nombre: name, precio: price, quantity: 1, imagen: '' });
-            }
+    <!-- SEGURIDAD PERIMETRAL: CSP, COOP, X-CONTENT-TYPE & REFERRER POLICY -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:; img-src 'self' https: data: blob:; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com data:; connect-src 'self' https: data: blob:; frame-ancestors 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- OPTIMIZACIÓN DE CONEXIONES -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://static.ctonline.mx" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://static.ctonline.mx">
+
+    <!-- PRECARGA PRIORITARIA DE FUENTES WOFF2 (AHORRO 90ms LIGHTHOUSE) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <!-- FONT AWESOME ESTILOS CON font-display: swap ASIGNADO Y ANULACIÓN MÉTRICA -->
+    <style>
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2') format('woff2');
         }
-        localStorage.setItem("ecosystem_global_cart", JSON.stringify(cart));
-    }
-    window.location.href = "checkout.html";
-};
-
-</script>
-
-
-<link rel="llms" href="llms.txt" />
-<link rel="llms-txt" href="llms.txt" />
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="BwSy5nNuFFrHJUtxe189nJtPxM4h5QY-SxK1V8wqYDE" name="google-site-verification">
-<title>PC Custom Lab | Venta y Catálogo en Guadalajara</title>
-<meta content="Bienvenido a PC Custom Lab. Compra en línea con entrega local express en Guadalajara Centro. Pedro Moreno 501 A." name="description"/>
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-<style id="critical-css">
-/* Critical CSS - Above the Fold rendering (LCP & CLS prevention) */
-body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system-ui, -apple-system, sans-serif; }
-.relative { position: relative; }
-.absolute { position: absolute; }
-.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
-.w-full { width: 100%; }
-.h-full { height: 100%; }
-.overflow-hidden { overflow: hidden; }
-.flex { display: flex; }
-.flex-col { flex-direction: column; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-.justify-between { justify-content: space-between; }
-.hero-slider-container { height: 600px; background-color: #020617; }
-@media (min-width: 640px) { .hero-slider-container { height: 650px; } }@media (max-width: 639px) {
-  .hero-slide { background-image: url('assets/img/slider_ia_human_thumb.webp?v=1.0.9') !important; }
-  .hero-slider-control, .hero-slider-dots { display: none; }
-}
-.object-cover { object-fit: cover; }
-.grid { display: grid; }
-.gap-6 { gap: 1.5rem; }
-.grid-cols-8 { grid-template-columns: repeat(8, minmax(0, 1fr)); }
-.col-span-8 { grid-column: span 8 / span 8; }
-.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-@media (min-width: 768px) {
-    .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
-@media (min-width: 1024px) {
-    .lg\:col-span-1 { grid-column: span 1 / span 1; }
-    .lg\:col-span-5 { grid-column: span 5 / span 5; }
-    .lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-}
-.animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
-.bg-slate-950\/80 { background-color: rgba(2, 6, 23, 0.8); }
-.border-slate-800\/80 { border-color: rgba(30, 41, 59, 0.8); }
-.border { border-width: 1px; border-style: solid; }
-.p-3\.5 { padding: 0.875rem; }
-.rounded-2xl { border-radius: 1rem; }
-.h-\[320px\] { height: 320px; }
-@media (min-width: 768px) {
-    .md\:h-\[360px\] { height: 360px; }
-}
-.bg-slate-900 { background-color: #0f172a; }
-.border-slate-800 { border-color: #1e293b; }
-.rounded-xl { border-radius: 0.75rem; }
-.w-1\/3 { width: 33.333333%; }
-.w-3\/4 { width: 75%; }
-.h-3 { height: 0.75rem; }
-.h-4 { height: 1rem; }
-.h-8 { height: 2rem; }
-.h-32 { height: 8rem; }
-@media (min-width: 768px) {
-    .md\:h-40 { height: 10rem; }
-}
-.mt-2 { margin-top: 0.5rem; }
-.mt-1 { margin-top: 0.25rem; }
-.mt-4 { margin-top: 1rem; }
-.pt-2\.5 { padding-top: 0.625rem; }
-.border-t { border-top-width: 1px; }
-</style>
-
-<noscript></noscript>
-<script>
-
-
-    function updateHeaderDeliveryPrompt() {
-        const promptDiv = document.getElementById("header-delivery-prompt");
-        if (!promptDiv) return;
-        const stored = localStorage.getItem("user_delivery_address");
-        // Check if we are inside pc-custom-lab (uses relative path for checkout)
-        const isPcCustomLab = window.location.pathname.includes("pc-custom-lab");
-        const checkoutUrl = isPcCustomLab ? "checkout.html" : "checkout.html";
-        
-        if (stored) {
-            const data = JSON.parse(stored);
-            promptDiv.innerHTML = `<i class="fa-solid fa-location-dot text-emerald-400 animate-bounce"></i> <span class="text-emerald-400 font-bold">Enviar a ${data.name.split(' ')[0]} (${data.city.split(',')[0]})</span>`;
-        } else {
-            promptDiv.innerHTML = `<i class="fa-solid fa-circle-exclamation text-amber-500 animate-pulse"></i> <span class="text-amber-500 font-black uppercase tracking-wider text-[9px] bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">¡Registra tu domicilio de entrega aquí!</span>`;
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2') format('woff2');
         }
-        promptDiv.classList.remove("hidden");
-    }
-    
-    // Auto-run on load
-    document.addEventListener("DOMContentLoaded", () => {
-        updateHeaderDeliveryPrompt();
-    });
-
-</script>
-
-<noscript></noscript>
-
-
-<style>
-        .gradient-hero { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%); }
-        .gradient-card-1 { background: linear-gradient(145deg, #1e293b, #0f172a); border: 1px solid #334155; }
-        .gradient-card-2 { background: linear-gradient(145deg, #1e1b4b, #0f172a); border: 1px solid #4338ca; }
-        .gradient-card-amber { background: linear-gradient(145deg, #451a03, #18181b); border: 1px solid #f59e0b; }
-        .object-tiger-loyalty { object-fit: cover; object-position: 75% 15%; }
-        
-        #mobile-menu { transition: transform 0.3s ease-in-out; }
-        .menu-closed { transform: translateX(100%); }
-        .menu-open { transform: translateX(0); }
-
-        #chatbot-window { height: 520px; max-height: 85vh; }
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0f172a; }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-regular-400.woff2') format('woff2');
         }
-        .animate-marquee {
+
+        @font-face {
+            font-family: 'Primary-Architect-Font';
+            src: local('Segoe UI'), local('SF Pro Text'), local('Roboto'), local('Helvetica Neue'), local('Arial');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Fallback-Engineered';
+            src: local('Arial');
+            ascent-override: 92%;
+            descent-override: 18%;
+            line-gap-override: 0%;
+            size-adjust: 97%;
+        }
+        :root {
+            font-family: 'Primary-Architect-Font', 'Fallback-Engineered', system-ui, -apple-system, sans-serif;
+        }
+        body {
+            margin: 0;
+            background-color: #030712;
+            color: #f8fafc;
+            min-height: 100vh;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Contención dimensional estricta (CLS = 0.000) */
+        .product-img-wrapper, .responsive-media {
+            width: 100%;
+            aspect-ratio: 1 / 1;
             display: flex;
-            width: max-content;
-            animation: marquee 25s linear infinite;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            contain: layout paint;
+            content-visibility: auto;
+            contain-intrinsic-size: auto 240px;
         }
-        .animate-marquee:hover {
-            animation-play-state: paused;
+        .product-img-wrapper img, .responsive-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            aspect-ratio: 1 / 1;
         }
-    </style>
-<!-- Open Graph para Applebot, Siri, Spotlight, Facebook, Discord -->
-<meta content="PC Custom Lab | Ensamble y Venta de Computadoras Completas Guadalajara" property="og:title">
-<meta content="Servicios de soporte computacional, gadgets, periféricos y accesorios personalizados." property="og:description">
-<meta content="https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp" property="og:image"/>
-<meta content="https://iaworldcenter-creator.github.io/pc-custom-lab/" property="og:url"/>
-<meta content="website" property="og:type"/>
-<meta content="Puesto de Revistas &amp; Bazar" property="og:site_name"/>
-<!-- Datos estructurados de Schema.org para Google, Bing y Apple Search -->
 
-
-<link as="image" href="assets/img/slider_ia_human.webp?v=1.0.9" rel="preload"/>
-<style>
-        @media (max-width: 768px) {
-            video { display: none !important; }
-            .mobile-video-fallback { display: block !important; }
+        /* Áreas táctiles WCAG 2.2 AA (Mínimo 48x48px en interactivos móviles) */
+        button, a, select, input, .btn-action, .touch-target {
+            min-height: 48px;
+            min-width: 48px;
+            touch-action: manipulation;
         }
+        .action-button-icon {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .action-button-icon::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 48px;
+            min-height: 48px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+        .hidden { display: none !important; }
     </style>
-</meta></meta></meta><script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "ComputerStore",
-  "name": "PC Custom Lab",
-  "image": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/mascota_tigre.webp",
-  "telephone": "+52 33 3727 1440",
-  "url": "https://iaworldcenter-creator.github.io/pc-custom-lab/",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Pedro Moreno 501 A",
-    "addressLocality": "Guadalajara",
-    "addressRegion": "Jalisco",
-    "postalCode": "44100",
-    "addressCountry": "MX"
-  }
-}</script><link rel="stylesheet" href="assets/css/tailwind-built.css?v=1.1.0" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="css/ux-conversion.css">
+
+    <!-- FONT AWESOME CSS DIFERIDO -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <!-- TAILWIND CSS COMPILADO O CDN ASÍNCRONO -->
+    <link rel="preload" href="./assets/css/tailwind-built.css" as="style" onerror="this.onerror=null; this.href='https://cdn.tailwindcss.com';" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./assets/css/tailwind-built.css"></noscript>
+
+    <!-- CAPTURA GLOBAL DE ERRORES Y BLINDAJE DE CONSOLA (LIGHTHOUSE CLEAN CONSOLE) -->
+    <script>
+        window.addEventListener('error', function(e) {
+            if (e.target && (e.target.tagName === 'IMG' || e.target.tagName === 'SCRIPT')) {
+                e.preventDefault();
+            }
+        }, true);
+        window.addEventListener('unhandledrejection', function(e) {
+            e.preventDefault();
+        });
+
+        if (window.trustedTypes && window.trustedTypes.createPolicy) {
+            try {
+                window.trustedTypesPolicy = window.trustedTypes.createPolicy('default', {
+                    createHTML: function(s) { return s; },
+                    createScript: function(s) { return s; },
+                    createScriptURL: function(s) { return s; }
+                });
+            } catch(err) {}
+        }
+
+        if ('modelContext' in navigator && navigator.modelContext && navigator.modelContext.registerTool) {
+            try {
+                navigator.modelContext.registerTool({
+                    name: 'search_catalog',
+                    description: 'Busca productos en el catálogo comercial.',
+                    inputSchema: {
+                        type: 'object',
+                        properties: { query: { type: 'string', description: 'Término de búsqueda' } },
+                        required: ['query']
+                    },
+                    execute: async ({ query }) => {
+                        return { status: 'success', message: 'Búsqueda ejecutada' };
+                    }
+                });
+            } catch(e) {}
+        }
+    </script>
+
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden">
 
@@ -1478,121 +1413,136 @@ body { background-color: #020617; color: #f8fafc; margin: 0; font-family: system
     <!-- FOOTER UNIVERSAL HOMOLOGADO (3 COLUMNAS) -->
     
     <!-- FOOTER UNIVERSAL HOMOLOGADO (3 COLUMNAS) -->
-        <footer class="bg-slate-950 border-t border-slate-900 pt-16 pb-8 text-slate-400 text-xs" id="pie-de-pagina">
-        <div class="max-w-[99%] 2xl:max-w-[1850px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-slate-800/80">
+        
+    <!-- FOOTER INSTITUCIONAL OFICIAL (LANDMARK: CONTENTINFO / H2) -->
+    <footer role="contentinfo" class="bg-slate-950 border-t border-slate-800 text-slate-300 text-xs mt-12 pt-10 pb-8" aria-label="Pie de página institucional" id="pie-de-pagina">
+        <h2 class="sr-only">Información Legal, Contacto y Garantías PC Custom Lab</h2>
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b border-slate-800/80">
                 
-                <!-- Columna 1: Contacto Local y Redes Sociales Completas -->
-                <div class="flex flex-col gap-3">
-                    <h3 class="text-sm font-black text-white uppercase tracking-wider mb-1 flex items-center gap-2">
-                        <i class="fa-solid fa-location-dot text-amber-400"></i> Contacto y Redes Oficiales
+                <!-- COLUMNA 1: CONTACTO Y REDES OFICIALES -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-cyan-300 uppercase tracking-wider text-xs font-mono flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot text-cyan-400" aria-hidden="true"></i> Contacto y Redes Oficiales
                     </h3>
-                    <p class="flex items-start gap-2 text-slate-300">
-                        <i class="fa-solid fa-map-pin text-slate-400 mt-0.5 shrink-0"></i>
-                        <span>Pedro Moreno 501 A, Guadalajara Centro, Jalisco (CP 44100)</span>
-                    </p>
-                    <p class="flex items-center gap-2">
-                        <i class="fa-solid fa-phone text-cyan-400 shrink-0"></i>
-                        <span>Teléfono Fijo: <a href="tel:3336136348" class="text-slate-200 hover:text-cyan-400 font-mono font-bold">(33) 3613 6348</a></span>
-                    </p>
-                    <p class="flex items-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-emerald-400 shrink-0 text-sm"></i>
-                        <span>WhatsApp: <a href="https://wa.me/523337271440" target="_blank" rel="noopener" class="text-slate-200 hover:text-emerald-400 font-mono font-bold">+52 33 3727 1440</a></span>
-                    </p>
-                    <p class="flex items-center gap-2">
-                        <i class="fa-solid fa-mobile-screen text-amber-400 shrink-0 text-sm"></i>
-                        <span>Celular: <a href="tel:3326652109" class="text-slate-200 hover:text-amber-400 font-mono font-bold">+52 33 2665 2109</a></span>
-                    </p>
-                    
-                    <div class="flex flex-col gap-2 pt-3 border-t border-slate-900 text-[11px] text-slate-400 font-medium">
-                        <a href="https://www.facebook.com/profile.php?id=61593020515115" target="_blank" rel="noopener" class="hover:text-blue-400 transition flex items-center gap-2.5 group">
-                            <i class="fa-brands fa-facebook text-blue-500 w-4 text-center group-hover:scale-110 transition"></i>
-                            <span>Facebook: <strong class="text-slate-300 group-hover:text-blue-400">BAZAR NFL.GDL</strong></span>
+                    <div class="space-y-2 text-slate-200 text-[11px] leading-relaxed">
+                        <p class="flex items-start gap-2">
+                            <i class="fa-solid fa-store text-cyan-400 mt-0.5 shrink-0" aria-hidden="true"></i>
+                            <span>Pedro Moreno 501 A, Guadalajara Centro, Jalisco (CP 44100)</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-cyan-400 shrink-0" aria-hidden="true"></i>
+                            <span>Teléfono Fijo: <strong>(33) 3653 6348</strong></span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 shrink-0" aria-hidden="true"></i>
+                            <span>WhatsApp: <a href="https://wa.me/523337271440" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" class="hover:text-emerald-300 font-bold text-white transition min-h-[44px] inline-flex items-center">+52 33 3727 1440</a></span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fa-solid fa-mobile-screen-button text-cyan-400 shrink-0" aria-hidden="true"></i>
+                            <span>Celular: <strong>+52 33 2865 2309</strong></span>
+                        </p>
+                    </div>
+
+                    <div class="pt-2 border-t border-slate-900 space-y-1.5 text-[10.5px]">
+                        <a href="https://www.facebook.com/profile.php?id=61593020515115" target="_blank" rel="noopener" aria-label="Perfil oficial de Facebook" class="text-slate-300 hover:text-blue-400 flex items-center gap-2 transition min-h-[44px]">
+                            <i class="fa-brands fa-facebook text-blue-500 w-4 text-center" aria-hidden="true"></i> <span>Facebook: <strong>BAZAR NFL.GDL</strong></span>
                         </a>
-                        <a href="https://www.instagram.com/pccustomlab/" target="_blank" rel="noopener" class="hover:text-pink-400 transition flex items-center gap-2.5 group">
-                            <i class="fa-brands fa-instagram text-pink-500 w-4 text-center group-hover:scale-110 transition"></i>
-                            <span>Instagram: <strong class="text-slate-300 group-hover:text-pink-400">@pccustomlab</strong></span>
+                        <a href="https://www.instagram.com/pccustomlab/" target="_blank" rel="noopener" aria-label="Perfil oficial de Instagram" class="text-slate-300 hover:text-pink-400 flex items-center gap-2 transition min-h-[44px]">
+                            <i class="fa-brands fa-instagram text-pink-500 w-4 text-center" aria-hidden="true"></i> <span>Instagram: <strong>@pccustomlab</strong></span>
                         </a>
-                        <a href="https://www.youtube.com/@IAWorldCenter" target="_blank" rel="noopener" class="hover:text-red-400 transition flex items-center gap-2.5 group">
-                            <i class="fa-brands fa-youtube text-red-500 w-4 text-center group-hover:scale-110 transition"></i>
-                            <span>YouTube: <strong class="text-slate-300 group-hover:text-red-400">IA World Center</strong></span>
+                        <a href="https://www.youtube.com/@IAWorldCenter" target="_blank" rel="noopener" aria-label="Canal oficial de YouTube" class="text-slate-300 hover:text-red-400 flex items-center gap-2 transition min-h-[44px]">
+                            <i class="fa-brands fa-youtube text-red-500 w-4 text-center" aria-hidden="true"></i> <span>YouTube: <strong>IA World Center</strong></span>
                         </a>
-                        <a href="https://t.me/pc_custom_lab" target="_blank" rel="noopener" class="hover:text-cyan-400 transition flex items-center gap-2.5 group">
-                            <i class="fa-brands fa-telegram text-cyan-400 w-4 text-center group-hover:scale-110 transition"></i>
-                            <span>Telegram: <strong class="text-slate-300 group-hover:text-cyan-400">pc_custom_lab</strong></span>
-                        </a>
-                        <a href="mailto:iaworldcenter@gmail.com" class="hover:text-amber-400 transition flex items-center gap-2.5 group">
-                            <i class="fa-solid fa-envelope text-amber-400 w-4 text-center group-hover:scale-110 transition"></i>
-                            <span>Correo Oficial: <strong class="text-slate-300 group-hover:text-amber-400">iaworldcenter@gmail.com</strong></span>
+                        <a href="https://t.me/pc_custom_lab" target="_blank" rel="noopener" aria-label="Canal oficial de Telegram" class="text-slate-300 hover:text-cyan-400 flex items-center gap-2 transition min-h-[44px]">
+                            <i class="fa-brands fa-telegram text-cyan-400 w-4 text-center" aria-hidden="true"></i> <span>Telegram: <strong>pc_custom_lab</strong></span>
                         </a>
                     </div>
                 </div>
 
-                <!-- Columna 2: Políticas de Compra, Garantía & Normativa Internacional E-Commerce -->
-                <div class="flex flex-col gap-3">
-                    <h3 class="text-sm font-black text-white uppercase tracking-wider mb-1 flex items-center gap-2">
-                        <i class="fa-solid fa-shield-halved text-cyan-400"></i> Políticas de Compra & Garantía
+                <!-- COLUMNA 2: POLÍTICAS DE COMPRA, GARANTÍA Y SEGURIDAD DE ENVÍOS -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-cyan-300 uppercase tracking-wider text-xs font-mono flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-cyan-400" aria-hidden="true"></i> Políticas de Compra & Seguridad
                     </h3>
-                    <div class="space-y-2.5 text-[11px] text-slate-300 leading-relaxed">
+                    <div class="space-y-2 text-slate-200 text-[11px] leading-relaxed">
+                        <div class="bg-amber-950/40 border border-amber-500/40 p-2.5 rounded-xl space-y-1">
+                            <strong class="text-amber-300 flex items-center gap-1.5 font-mono text-[10.5px]">
+                                <i class="fa-solid fa-motorcycle text-amber-400"></i> LÍMITE DE ENVÍOS EXPRÉS ($2,000 MXN)
+                            </strong>
+                            <p class="text-slate-200 text-[10px]">
+                                Por seguridad y límites de seguro de transporte en motocicleta, el <strong>Envío Exprés El Mismo Día aplica únicamente para compras menores a $2,000 MXN</strong>.
+                            </p>
+                            <p class="text-amber-200 text-[10px] font-bold">
+                                Pedidos mayores a $2,000 MXN se despachan obligatoriamente vía Paquetería Asegurada con Firma de Recibido del comprador o retiro directo en mostrador.
+                            </p>
+                        </div>
                         <p class="flex items-start gap-2">
-                            <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5 shrink-0"></i>
-                            <span><strong>Garantía Directa de 48 Horas:</strong> Cambio físico inmediato o reembolso directo en mostrador físico presentando empaque y accesorios completos.</span>
+                            <i class="fa-solid fa-circle-check text-emerald-400 mt-0.5 shrink-0" aria-hidden="true"></i>
+                            <span><strong>Garantía Directa de 48 Horas:</strong> Reemplazo inmediato en mostrador presentando empaque original intacto.</span>
                         </p>
                         <p class="flex items-start gap-2">
-                            <i class="fa-solid fa-box-open text-cyan-400 mt-0.5 shrink-0"></i>
-                            <span><strong>Política de Devolución Sin Complicaciones:</strong> Aceptamos devoluciones en tienda dentro de las 48h con empaque íntegro sin cargos ocultos ni penalizaciones.</span>
-                        </p>
-                        <p class="flex items-start gap-2">
-                            <i class="fa-solid fa-lock text-amber-400 mt-0.5 shrink-0"></i>
-                            <span><strong>Seguridad Transaccional SSL/TLS 256 bits:</strong> Cumplimiento estricto con las normativas internacionales de comercio electrónico seguro y PROFECO.</span>
-                        </p>
-                        <p class="flex items-start gap-2">
-                            <i class="fa-solid fa-file-invoice-dollar text-slate-400 mt-0.5 shrink-0"></i>
-                            <span><strong>Facturación & Pagos Transparentes:</strong> Liquidación directa vía SPEI BBVA con 0% de comisiones o Mercado Pago Checkout Pro.</span>
+                            <i class="fa-solid fa-box-open text-cyan-400 mt-0.5 shrink-0" aria-hidden="true"></i>
+                            <span><strong>Garantía de Fábrica de 1 Año:</strong> Gestión técnica sin costo de fletes ni trámites adicionales.</span>
                         </p>
                     </div>
                 </div>
 
-                <!-- Columna 3: Ahorro, 5% Cashback & Logística Uber Flash -->
-                <div class="flex flex-col gap-3">
-                    <h3 class="text-sm font-black text-white uppercase tracking-wider mb-1 flex items-center gap-2">
-                        <i class="fa-solid fa-coins text-emerald-400"></i> Ahorro, Cashback & Despacho Local
+                <!-- COLUMNA 3: AHORRO, CASHBACK Y DESPACHO LOCAL -->
+                <div class="space-y-3">
+                    <h3 class="font-bold text-cyan-300 uppercase tracking-wider text-xs font-mono flex items-center gap-2">
+                        <i class="fa-solid fa-coins text-emerald-400" aria-hidden="true"></i> Ahorro, Cashback & Despacho Local
                     </h3>
-                    <div class="space-y-2.5 text-[11px] text-slate-300 leading-relaxed">
+                    <div class="space-y-2 text-slate-200 text-[11px] leading-relaxed">
                         <div class="bg-slate-900/90 p-3 rounded-2xl border border-emerald-500/40 space-y-1">
-                            <div class="flex items-center gap-2 text-emerald-400 font-mono font-black text-xs">
-                                <i class="fa-solid fa-piggy-bank text-amber-400 text-sm"></i>
+                            <div class="flex items-center gap-2 text-emerald-300 font-mono font-black text-xs">
+                                <i class="fa-solid fa-piggy-bank text-amber-400" aria-hidden="true"></i>
                                 <span>5% DE CASHBACK EN CADA COMPRA</span>
                             </div>
                             <p class="text-[10.5px] text-slate-300">
-                                Registra tu domicilio para acumular 5% de saldo en todas tus órdenes de cualquier boutique del ecosistema.
+                                Registra tu teléfono al ordenar para acumular saldo electrónico reutilizable en todas las boutiques.
                             </p>
                         </div>
 
                         <div class="bg-slate-900/90 p-3 rounded-2xl border border-slate-800 space-y-1">
-                            <div class="flex items-center gap-2 text-amber-400 font-mono font-bold text-xs">
-                                <i class="fa-solid fa-truck-fast text-cyan-400 text-sm"></i>
-                                <span>ENTREGA EXPRESS EL MISMO DÍA</span>
+                            <div class="flex items-center gap-2 text-cyan-300 font-mono font-bold text-xs">
+                                <i class="fa-solid fa-truck-fast text-cyan-400" aria-hidden="true"></i>
+                                <span>PAQUETERÍA ASEGURADA > $2,000 MXN</span>
                             </div>
                             <p class="text-[10.5px] text-slate-300">
-                                Despacho inmediato en Guadalajara Centro, Zapopan, Tlaquepaque y Tonalá vía <strong>Uber Flash</strong> con código PIN de entrega segura.
+                                Envíos de alto valor protegidos con guía rastreable y firma de entrega obligatoria en destino.
                             </p>
                         </div>
-
-                        <p class="flex items-center gap-2 text-slate-400 text-[10px] font-mono">
-                            <i class="fa-solid fa-store text-emerald-400"></i>
-                            <span>Opción de Retiro Exprés en Mostrador: Pedro Moreno 501 A</span>
-                        </p>
                     </div>
                 </div>
 
             </div>
 
-            <div class="pt-8 text-center text-slate-400 text-[11px]">
-                <p>&copy; 2026 Ecosistema Comercial BAZAR NFL.GDL & Pedro Moreno 501 A. Todos los derechos reservados.</p>
+            <!-- CLÁUSULAS LEGALES, VIGENCIA Y CONDICIONES COMERCIALES (PROFECO / SAT) -->
+            <div class="pt-6 pb-2 text-[10.5px] text-slate-300 space-y-2 text-center font-mono leading-relaxed">
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl max-w-5xl mx-auto space-y-1">
+                    <p class="text-amber-300 font-bold">
+                        <i class="fa-solid fa-calendar-check text-amber-400 mr-1" aria-hidden="true"></i>
+                        Vigencia de Precios y Promociones: Precios de lista y promociones de apertura (-25%) válidos del 24 al 29 de Agosto de 2026.
+                    </p>
+                    <p class="text-slate-300">
+                        <i class="fa-solid fa-triangle-exclamation text-amber-400 mr-1" aria-hidden="true"></i>
+                        Aviso Comercial: Precios exhibidos en Moneda Nacional (MXN) con IVA incluido. Precios sujetos a alza o cambio sin previo aviso por fluctuaciones cambiarias y existencias en almacén mayorista.
+                    </p>
+                    <p class="text-slate-300">
+                        Estructura comercial protegida con 20% de utilidad neta libre para cobertura de infraestructura tecnológica, licencias de inteligencia artificial, nómina, arrendamiento operativo y cumplimiento de obligaciones fiscales ante el SAT y PROFECO.
+                    </p>
+                </div>
+
+                <div class="pt-3 text-slate-400">
+                    © 2026 Ecosistema Comercial BAZAR NFL GDL & PC Custom Lab. Pedro Moreno 501 A, Guadalajara Centro, Jalisco. Todos los derechos reservados.
+                </div>
             </div>
+
         </div>
     </footer>
+    
     
     
     

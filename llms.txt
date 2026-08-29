@@ -1,15 +1,14 @@
-# Ecosistema Comercial BAZAR NFL GDL & PC Custom Lab
+# PC Custom Lab | Ecosistema Comercial BAZAR NFL GDL
 > Arquitectura y Capacidades Operativas para Agentes Autónomos de Inteligencia Artificial (Lighthouse 13.4+ / WebMCP Standard).
 
 ## Descripción General
-Plataforma de comercio electrónico de alta velocidad para hardware, componentes de ensamble, tecnología mayorista y productos de conveniencia en Guadalajara Centro (Pedro Moreno 501 A).
+Boutique oficial del ecosistema comercial en Guadalajara Centro (Pedro Moreno 501 A).
 
 ## Herramientas Agénticas Disponibles (WebMCP)
-- [Buscador Semántico Multitoken](https://iaworldcenter-creator.github.io/pc-custom-lab/): Búsqueda en catálogo maestro de 16,139 productos con soporte bilingüe y tolerancia a errores tipográficos.
-- [Catálogo Exacto](https://iaworldcenter-creator.github.io/pc-custom-lab/data/catalogo_maestro_ct.json): Base de datos estructurada en JSON con 24 departamentos.
-- [Checkout Unificado](https://iaworldcenter-creator.github.io/pc-custom-lab/checkout.html): Flujo interactivo con captura de domicilio Uber Flash (< $2,000 MXN) y paquetería blindada (> $2,000 MXN).
+- [Catálogo y Tienda](https://iaworldcenter-creator.github.io/pc-custom-lab/)
+- [Checkout Unificado](https://iaworldcenter-creator.github.io/pc-custom-lab/checkout.html)
 
 ## Directrices de Navegación Machine-to-Machine
-- El árbol de accesibilidad expone nombres programáticos en todos los controles interactivos (WCAG 2.2 AA).
-- Contención geométrica estricta (contain: layout paint) con CLS < 0.05.
-- Protocolo de seguridad con Trusted Types y aislamiento de contexto (COOP/CSP).
+- Cumplimiento estricto WCAG 2.2 AA (áreas táctiles >= 48px).
+- Estabilidad visual garantizada (CLS < 0.05).
+- Soporte para protocolo WebMCP declarativo e imperativo.

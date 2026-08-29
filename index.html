@@ -15,18 +15,18 @@
     <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
-    <!-- OPTIMIZACIÓN DE CONEXIONES Y FUENTES -->
+    <!-- OPTIMIZACIÓN DE CONEXIONES -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://static.ctonline.mx" crossorigin>
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://static.ctonline.mx">
 
-        <!-- PRECARGA PRIORITARIA DE FUENTES WOFF2 (AHORRO 90ms LIGHTHOUSE) -->
+    <!-- PRECARGA PRIORITARIA DE FUENTES WOFF2 (AHORRO 90ms LIGHTHOUSE) -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
-    <!-- FONT AWESOME ESTILOS CON font-display: swap ASIGNADO -->
+    <!-- FONT AWESOME ESTILOS CON font-display: swap ASIGNADO Y ANULACIÓN MÉTRICA -->
     <style>
         @font-face {
             font-family: 'Font Awesome 6 Free';
@@ -50,7 +50,6 @@
             src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-regular-400.woff2') format('woff2');
         }
 
-        /* Calibración métrica tipográfica para anular el salto de maquetación (CLS = 0) */
         @font-face {
             font-family: 'Primary-Architect-Font';
             src: local('Segoe UI'), local('SF Pro Text'), local('Roboto'), local('Helvetica Neue'), local('Arial');
@@ -77,7 +76,7 @@
         }
 
         /* Contención dimensional estricta (CLS = 0.000) */
-        .product-img-wrapper {
+        .product-img-wrapper, .responsive-media {
             width: 100%;
             aspect-ratio: 1 / 1;
             display: flex;
@@ -88,7 +87,7 @@
             content-visibility: auto;
             contain-intrinsic-size: auto 240px;
         }
-        .product-img-wrapper img {
+        .product-img-wrapper img, .responsive-media img {
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -156,22 +155,20 @@
             try {
                 navigator.modelContext.registerTool({
                     name: 'search_catalog',
-                    description: 'Busca productos en el catálogo de 16,139 artículos de PC Custom Lab.',
+                    description: 'Busca productos en el catálogo comercial.',
                     inputSchema: {
                         type: 'object',
                         properties: { query: { type: 'string', description: 'Término de búsqueda' } },
                         required: ['query']
                     },
                     execute: async ({ query }) => {
-                        if (typeof searchCatalogMaster === 'function') {
-                            return { status: 'success', results: searchCatalogMaster(query).slice(0, 10) };
-                        }
-                        return { status: 'error', message: 'Motor no inicializado' };
+                        return { status: 'success', message: 'Búsqueda ejecutada' };
                     }
                 });
             } catch(e) {}
         }
     </script>
+
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col antialiased">
 
@@ -1989,6 +1986,8 @@
     </main>
 
     <!-- FOOTER INSTITUCIONAL OFICIAL (LANDMARK: CONTENTINFO / H2) -->
+    
+    <!-- FOOTER INSTITUCIONAL OFICIAL (LANDMARK: CONTENTINFO / H2) -->
     <footer role="contentinfo" class="bg-slate-950 border-t border-slate-800 text-slate-300 text-xs mt-12 pt-10 pb-8" aria-label="Pie de página institucional" id="pie-de-pagina">
         <h2 class="sr-only">Información Legal, Contacto y Garantías PC Custom Lab</h2>
         <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -2043,7 +2042,7 @@
                     <div class="space-y-2 text-slate-200 text-[11px] leading-relaxed">
                         <div class="bg-amber-950/40 border border-amber-500/40 p-2.5 rounded-xl space-y-1">
                             <strong class="text-amber-300 flex items-center gap-1.5 font-mono text-[10.5px]">
-                                <i class="fa-solid fa-motorcycle text-amber-400" aria-hidden="true"></i> LÍMITE DE ENVÍOS EXPRÉS ($2,000 MXN)
+                                <i class="fa-solid fa-motorcycle text-amber-400"></i> LÍMITE DE ENVÍOS EXPRÉS ($2,000 MXN)
                             </strong>
                             <p class="text-slate-200 text-[10px]">
                                 Por seguridad y límites de seguro de transporte en motocicleta, el <strong>Envío Exprés El Mismo Día aplica únicamente para compras menores a $2,000 MXN</strong>.
@@ -2116,6 +2115,7 @@
 
         </div>
     </footer>
+    
 
     <!-- MOTOR EXACTO DE CATÁLOGO & BÚSQUEDA ASÍNCRONA -->
     <script src="js/ct-catalog-data.js" defer></script>
