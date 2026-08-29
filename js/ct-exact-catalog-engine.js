@@ -647,7 +647,7 @@ function renderSidebarFacets() {
                 </div>
             </div>
 
-                                    <!-- 3 TARJETAS DE CONVERSIÓN INTEGRADAS -->
+                                                <!-- 3 TARJETAS DE CONVERSIÓN INTEGRADAS -->
             <div class="pt-3 space-y-3.5 border-t border-slate-800">
                 
                 <!-- TARJETA 1: APP MÓVIL OFICIAL CON QR, GOOGLE PLAY Y APP STORE -->
