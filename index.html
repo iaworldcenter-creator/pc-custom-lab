@@ -53,6 +53,7 @@
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col antialiased">
+    <h1 class="sr-only">PC Custom Lab | Catálogo Mayorista de Hardware y Ensamble</h1>
 
     <!-- CABECERA DE 2 LÍNEAS (MÓVIL Y ESCRITORIO) -->
     <header class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-xl">
@@ -107,13 +108,11 @@
             <div class="flex-1 max-w-2xl relative">
                 <div class="flex items-center bg-white rounded-xl border border-slate-300 shadow-inner px-3 py-1.5">
                     <i class="fa-solid fa-magnifying-glass text-slate-400 text-sm mr-2 shrink-0"></i>
-                    <input 
-                        type="search" 
-                        id="boutiqueSearchInput" 
+                    <input type="search" id="boutiqueSearchInput" aria-label="Buscar en el catálogo por SKU o nombre" 
                         placeholder="Busca por SKU, procesador, RTX 4070, B760M, RAM DDR5..." 
                         class="w-full bg-transparent text-slate-900 placeholder-slate-400 text-xs sm:text-sm outline-none font-medium" 
                     />
-                    <button class="bg-blue-700 hover:bg-blue-600 text-white font-mono font-black px-3 py-1 rounded-lg text-xs uppercase tracking-wider shadow shrink-0">
+                    <button aria-label="Ejecutar búsqueda" class="bg-blue-700 hover:bg-blue-600 text-white font-mono font-black px-3 py-1 rounded-lg text-xs uppercase tracking-wider shadow shrink-0">
                         Buscar
                     </button>
                 </div>

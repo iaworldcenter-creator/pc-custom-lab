@@ -165,7 +165,7 @@ function renderExactCatalogView() {
                         <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
                     </div>
 
-                    <button class="absolute top-2.5 right-2.5 text-slate-500 hover:text-pink-400 transition text-sm z-10 cursor-pointer" title="Favoritos">
+                    <button class="absolute top-2.5 right-2.5 text-slate-500 hover:text-pink-400 transition text-sm z-10 cursor-pointer" title="Favoritos" aria-label="Agregar a lista de favoritos" class="absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-w-[44px] min-h-[44px] flex items-center justify-center">
                         <i class="fa-regular fa-heart"></i>
                     </button>
 
@@ -213,13 +213,13 @@ function renderExactCatalogView() {
                     <div class="pt-1 flex gap-1.5">
                         <button 
                             onclick="openProductDetailModal('${sku}')" 
-                            class="flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold py-1.5 rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700"
+                            aria-label="Ver ficha técnica detallada" class="flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold py-2.5 rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[44px] flex items-center justify-center"
                         >
-                            <span>Ficha</span>
+                            <span>Ficha Técnica</span>
                         </button>
                         <button 
                             onclick="buyNowCT('${sku}', '${title}', ${price}, '${localImg}')" 
-                            class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-1.5 rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer"
+                            aria-label="Comprar producto directamente" class="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2.5 rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[44px]"
                         >
                             <span>Comprar</span>
                         </button>
@@ -905,26 +905,26 @@ function renderPaginationBar(totalPages) {
 
     const htmlPages = pages.map(p => {
         if (p === '...') {
-            return `<span class="px-1 text-slate-500 font-mono text-xs">...</span>`;
+            return `<span class="px-1.5 text-slate-400 font-mono text-xs select-none">...</span>`;
         }
         const isAct = (p === currentPageNumber);
         const cls = isAct 
             ? "bg-cyan-500 text-slate-950 font-black border-cyan-400 shadow-[0_0_10px_rgba(6,182,212,0.5)]" 
-            : "bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800 hover:text-white";
-        return `<button onclick="goToPageNumber(${p})" class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg border text-xs font-mono transition flex items-center justify-center cursor-pointer ${cls}">${p}</button>`;
+            : "bg-slate-900 border-slate-800 text-slate-200 hover:bg-slate-800 hover:text-white";
+        return `<button onclick="goToPageNumber(${p})" aria-label="Ir a página ${p}" aria-current="${isAct ? 'page' : 'false'}" class="min-w-[44px] min-h-[44px] p-2 rounded-xl border text-xs font-mono transition flex items-center justify-center cursor-pointer ${cls}">${p}</button>`;
     }).join('');
 
     containers.forEach(box => {
         box.innerHTML = `
-            <div class="flex items-center gap-1">
-                <button onclick="goToPageNumber(${currentPageNumber - 1})" ${currentPageNumber <= 1 ? 'disabled class="opacity-30 cursor-not-allowed"' : 'class="cursor-pointer hover:bg-slate-800"'} class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 text-xs flex items-center justify-center">
-                    <i class="fa-solid fa-chevron-left text-[9px]"></i>
+            <nav aria-label="Paginación del catálogo" class="flex items-center gap-1.5 flex-wrap justify-center">
+                <button onclick="goToPageNumber(${currentPageNumber - 1})" aria-label="Página anterior" ${currentPageNumber <= 1 ? 'disabled class="opacity-30 cursor-not-allowed"' : 'class="cursor-pointer hover:bg-slate-800"'} class="min-w-[44px] min-h-[44px] p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs flex items-center justify-center">
+                    <i class="fa-solid fa-chevron-left text-xs" aria-hidden="true"></i>
                 </button>
                 ${htmlPages}
-                <button onclick="goToPageNumber(${currentPageNumber + 1})" ${currentPageNumber >= totalPages ? 'disabled class="opacity-30 cursor-not-allowed"' : 'class="cursor-pointer hover:bg-slate-800"'} class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 text-xs flex items-center justify-center">
-                    <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                <button onclick="goToPageNumber(${currentPageNumber + 1})" aria-label="Página siguiente" ${currentPageNumber >= totalPages ? 'disabled class="opacity-30 cursor-not-allowed"' : 'class="cursor-pointer hover:bg-slate-800"'} class="min-w-[44px] min-h-[44px] p-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs flex items-center justify-center">
+                    <i class="fa-solid fa-chevron-right text-xs" aria-hidden="true"></i>
                 </button>
-            </div>
+            </nav>
         `;
     });
 }
