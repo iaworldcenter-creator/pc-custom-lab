@@ -65,16 +65,9 @@ function setViewStyle(style) {
 }
 
 function getFilteredList() {
-    let items = [...(window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [])];
-
-    // Filtro por búsqueda activa si existe
-    if (activeSearchQuery && activeSearchQuery.trim() !== '') {
-        const tokens = normalizeText(activeSearchQuery).split(' ').filter(t => t.length > 0);
-        items = items.filter(p => {
-            const searchable = normalizeText(`${p.sku || ''} ${p.nombre || ''} ${p.descripcion_completa || ''} ${p.marca || ''} ${p.categoria_clasificada || ''}`);
-            return tokens.every(t => searchable.includes(t));
-        });
-    }
+    let items = (activeSearchQuery && activeSearchQuery.trim() !== '')
+        ? searchCatalogMaster(activeSearchQuery)
+        : [...(window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [])];
 
     if (activeSelectedCategory !== 'Todas') {
         items = items.filter(p => {
@@ -567,8 +560,107 @@ function renderSidebarFacets() {
 }
 
 // =========================================================================
-// MOTOR DE BÚSQUEDA PREDICTIVA MULTI-TOKEN INTELIGENTE (16,139 ITEMS)
+// MOTOR DE BÚSQUEDA SEMÁNTICA INTELIGENTE & TOLERANCIA HUMANA (16,139 ITEMS)
 // =========================================================================
+
+const WORD_SYNONYMS = {
+    // Periféricos y accesorios
+    "raton": ["mouse", "raton"],
+    "ratones": ["mouse", "raton"],
+    "mouse": ["mouse", "raton"],
+    "mice": ["mouse", "raton"],
+    "teclado": ["teclado", "keyboard"],
+    "teclados": ["teclado", "keyboard"],
+    "keyboard": ["teclado", "keyboard"],
+    "combo": ["combo", "kit", "bundle"],
+    "kit": ["combo", "kit", "bundle"],
+    
+    // Monitores y Pantallas
+    "pantalla": ["monitor", "pantalla", "display"],
+    "pantallas": ["monitor", "pantalla", "display"],
+    "monitor": ["monitor", "pantalla", "display"],
+    "monitores": ["monitor", "pantalla", "display"],
+    "display": ["monitor", "pantalla", "display"],
+    
+    // Tarjetas de Video / Gráficas
+    "grafica": ["video", "gpu", "rtx", "gtx", "radeon", "grafica", "geforce"],
+    "graficas": ["video", "gpu", "rtx", "gtx", "radeon", "grafica", "geforce"],
+    "gpu": ["video", "gpu", "rtx", "gtx", "radeon", "grafica", "geforce"],
+    "video": ["video", "grafica", "gpu", "rtx", "gtx", "radeon"],
+    
+    // Tarjetas Madre / Motherboards
+    "placa": ["motherboard", "tarjeta madre", "placa madre", "mainboard", "mbd"],
+    "placas": ["motherboard", "tarjeta madre", "placa madre", "mainboard", "mbd"],
+    "madre": ["motherboard", "tarjeta madre", "placa madre", "mainboard", "mbd"],
+    "motherboard": ["motherboard", "tarjeta madre", "placa madre", "mainboard", "mbd"],
+    "motherboards": ["motherboard", "tarjeta madre", "placa madre", "mainboard", "mbd"],
+    "mobo": ["motherboard", "tarjeta madre", "placa madre", "mbd"],
+    
+    // Almacenamiento / Discos
+    "disco": ["disco", "ssd", "hdd", "almacenamiento", "solido", "nvme", "m2"],
+    "discos": ["disco", "ssd", "hdd", "almacenamiento", "solido", "nvme", "m2"],
+    "solido": ["ssd", "solido", "nvme", "m2"],
+    "ssd": ["ssd", "solido", "nvme", "m2", "disco"],
+    "nvme": ["nvme", "ssd", "m2", "solido"],
+    "m2": ["m2", "nvme", "ssd"],
+    
+    // Fuentes de Poder y Gabinetes
+    "fuente": ["fuente", "psu", "power supply", "fuentes"],
+    "fuentes": ["fuente", "psu", "power supply", "fuentes"],
+    "psu": ["fuente", "psu", "power supply"],
+    "gabinete": ["gabinete", "chasis", "case", "torre", "chassis"],
+    "gabinetes": ["gabinete", "chasis", "case", "torre", "chassis"],
+    "chasis": ["gabinete", "chasis", "case", "torre"],
+    "case": ["gabinete", "chasis", "case", "torre"],
+    
+    // Enfriamiento y Disipadores
+    "disipador": ["enfriamiento", "disipador", "cooler", "ventilador", "fan", "heatsink"],
+    "disipadores": ["enfriamiento", "disipador", "cooler", "ventilador", "fan", "heatsink"],
+    "enfriamiento": ["enfriamiento", "disipador", "cooler", "ventilador", "fan", "heatsink", "liquida", "water"],
+    "ventilador": ["ventilador", "fan", "cooler", "disipador"],
+    "ventiladores": ["ventilador", "fan", "cooler", "disipador"],
+    "cooler": ["cooler", "disipador", "enfriamiento", "fan"],
+    
+    // Memorias RAM
+    "ram": ["ram", "memoria", "ddr4", "ddr5", "dimm"],
+    "memoria": ["ram", "memoria", "ddr4", "ddr5", "dimm"],
+    "memorias": ["ram", "memoria", "ddr4", "ddr5", "dimm"],
+    
+    // Reguladores y No-Breaks
+    "regulador": ["regulador", "reguladores", "no-break", "nobreak", "ups", "koblenz", "sola basic", "complet"],
+    "reguladores": ["regulador", "reguladores", "no-break", "nobreak", "ups", "koblenz", "sola basic", "complet"],
+    "nobreak": ["no-break", "nobreak", "ups", "regulador"],
+    "ups": ["no-break", "nobreak", "ups", "regulador"],
+    
+    // Audio y Auriculares
+    "bocina": ["bocina", "bocinas", "parlante", "speaker", "speakers", "audio"],
+    "bocinas": ["bocina", "bocinas", "parlante", "speaker", "speakers", "audio"],
+    "audifono": ["audifono", "audifonos", "auricular", "auriculares", "headset", "headphones", "diadema"],
+    "audifonos": ["audifono", "audifonos", "auricular", "auriculares", "headset", "headphones", "diadema"],
+    "diadema": ["audifono", "audifonos", "auricular", "auriculares", "headset", "headphones", "diadema"],
+    
+    // Equipos y Laptops
+    "impresora": ["impresora", "impresoras", "multifuncional", "printer"],
+    "laptop": ["laptop", "laptops", "portatil", "portatiles", "notebook"],
+    "laptops": ["laptop", "laptops", "portatil", "portatiles", "notebook"],
+    "portatil": ["laptop", "laptops", "portatil", "portatiles", "notebook"],
+    "computadora": ["computadora", "computadoras", "pc", "desktop", "cpu"],
+    
+    // Procesadores y Generaciones
+    "procesador": ["procesador", "cpu", "core", "ultra", "ryzen"],
+    "procesadores": ["procesador", "cpu", "core", "ultra", "ryzen"],
+    "cpu": ["procesador", "cpu", "core", "ultra", "ryzen"],
+    "i9": ["i9", "core i9", "ultra 9", "14900", "12900", "285k"],
+    "i7": ["i7", "core i7", "ultra 7", "14700", "12700", "265k"],
+    "i5": ["i5", "core i5", "ultra 5", "14600", "14400", "12600", "12400", "245k", "225"],
+    "i3": ["i3", "core i3", "14100", "12100"]
+};
+
+const STOP_WORDS_SET = new Set([
+    "de", "con", "para", "y", "e", "o", "en", "un", "una", "unos", "unas",
+    "el", "la", "los", "las", "del", "al", "a", "por", "que", "se", "es",
+    "su", "sus", "with", "and", "for", "the"
+]);
 
 function normalizeText(str) {
     return (str || '')
@@ -578,6 +670,73 @@ function normalizeText(str) {
         .replace(/[^a-z0-9\s]/g, " ")
         .replace(/\s+/g, " ")
         .trim();
+}
+
+function searchCatalogMaster(query) {
+    const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
+    const qNorm = normalizeText(query);
+    if (!qNorm) return all;
+
+    const rawTokens = qNorm.split(' ').filter(t => t.length > 0);
+    const tokens = (rawTokens.length > 1) 
+        ? rawTokens.filter(t => !STOP_WORDS_SET.has(t)) 
+        : rawTokens;
+    
+    const activeTokens = tokens.length > 0 ? tokens : rawTokens;
+    const scoredResults = [];
+
+    for (let i = 0; i < all.length; i++) {
+        const p = all[i];
+        const skuNorm = normalizeText(p.sku);
+        const nameNorm = normalizeText(p.nombre);
+        const descNorm = normalizeText(p.descripcion_completa);
+        const brandNorm = normalizeText(p.marca);
+        const catNorm = normalizeText(p.categoria_clasificada);
+
+        let matchAll = true;
+        let score = 0;
+
+        for (let j = 0; j < activeTokens.length; j++) {
+            const token = activeTokens[j];
+            const synList = WORD_SYNONYMS[token] || [token];
+            let tokenFound = false;
+
+            for (let k = 0; k < synList.length; k++) {
+                const syn = synList[k];
+                if (nameNorm.includes(syn)) {
+                    score += 120;
+                    tokenFound = true;
+                } else if (skuNorm.includes(syn)) {
+                    score += 100;
+                    tokenFound = true;
+                } else if (brandNorm.includes(syn)) {
+                    score += 60;
+                    tokenFound = true;
+                } else if (catNorm.includes(syn)) {
+                    score += 40;
+                    tokenFound = true;
+                } else if (descNorm.includes(syn)) {
+                    score += 20;
+                    tokenFound = true;
+                }
+            }
+
+            if (!tokenFound) {
+                matchAll = false;
+                break;
+            }
+        }
+
+        if (matchAll) {
+            // Bonificaciones por coincidencia exacta
+            if (nameNorm.includes(qNorm)) score += 500;
+            if (skuNorm.includes(qNorm)) score += 800;
+            scoredResults.push({ score, product: p });
+        }
+    }
+
+    scoredResults.sort((a, b) => b.score - a.score);
+    return scoredResults.map(r => r.product);
 }
 
 let activeSearchQuery = '';
@@ -603,7 +762,6 @@ function initPredictiveSearchEngine() {
     const box = document.getElementById("boutique-autocomplete-box");
     if (!input || !box) return;
 
-    // Escuchar submit del formulario
     const form = input.closest("form");
     if (form) {
         form.addEventListener("submit", (e) => {
@@ -628,43 +786,31 @@ function initPredictiveSearchEngine() {
         }
 
         searchDebounceTimer = setTimeout(() => {
-            const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
-            const tokens = normalizeText(rawQuery).split(' ').filter(t => t.length > 0);
-            
-            const matches = [];
-            for (let i = 0; i < all.length; i++) {
-                const p = all[i];
-                const searchable = normalizeText(`${p.sku || ''} ${p.nombre || ''} ${p.descripcion_completa || ''} ${p.marca || ''} ${p.categoria_clasificada || ''}`);
-                
-                // Coincidencia: Todos los términos deben estar presentes
-                const isMatch = tokens.every(token => searchable.includes(token));
-                if (isMatch) {
-                    matches.push(p);
-                    if (matches.length >= 10) break;
-                }
-            }
+            const matches = searchCatalogMaster(rawQuery);
 
             if (matches.length === 0) {
                 box.innerHTML = `
                     <div class="p-4 text-center text-slate-300 font-mono text-xs">
                         <i class="fa-solid fa-magnifying-glass text-cyan-400 text-lg mb-1 block" aria-hidden="true"></i>
                         No se encontraron coincidencias para "<strong>${rawQuery}</strong>".
-                        <br><span class="text-[10px] text-slate-400">Prueba con términos como: i9, 14900k, RTX 4070, DDR5 16gb, Ryzen, Koblenz...</span>
+                        <br><span class="text-[10px] text-slate-400">Prueba con: i9, teclado y mouse, 27 pulgadas, RTX 4070, DDR5, regulador...</span>
                     </div>
                 `;
                 box.classList.remove("hidden");
                 return;
             }
 
+            const topMatches = matches.slice(0, 10);
+
             box.innerHTML = `
                 <div class="p-2.5 border-b border-slate-800 flex justify-between items-center text-[10.5px] font-mono text-slate-300 bg-slate-950/90">
-                    <span>Resultados en catálogo maestro (16,139 items) para: "<strong>${rawQuery}</strong>"</span>
+                    <span>${matches.length} coincidencias encontradas para: "<strong>${rawQuery}</strong>"</span>
                     <button type="button" onclick="window.executeSearchQuery(document.getElementById('boutiqueSearchInput').value);" class="text-cyan-300 font-bold hover:underline cursor-pointer">
-                        Ver todos (${matches.length}+) »
+                        Ver todas en aparador »
                     </button>
                 </div>
                 <div class="divide-y divide-slate-800/60 max-h-96 overflow-y-auto">
-                    ${matches.map(p => {
+                    ${topMatches.map(p => {
                         const sku = p.sku;
                         const cat = p.categoria_clasificada || 'accesorios_perifericos';
                         const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
