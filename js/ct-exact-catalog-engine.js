@@ -49,14 +49,13 @@ window.selectCategoryFacet = function(catId) {
 
     // Desplazamiento suave directo al inicio de la vitrina de productos
     setTimeout(() => {
-        const showcaseTarget = document.getElementById("catalog-main-content-root") || document.getElementById("results-count-display") || document.getElementById("products-grid-container");
+        const showcaseTarget = document.getElementById("results-count-display") || document.getElementById("products-grid-container") || document.getElementById("catalog-main-content-root");
         if (showcaseTarget) {
             showcaseTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-    }, 50);
+    }, 60);
 };
 
-// Función para volver rápidamente a la lista de departamentos arriba
 window.scrollToDepartments = function() {
     const target = document.getElementById("sidebar-facets-root") || document.getElementById("boutiqueSearchInput");
     if (target) {
@@ -64,6 +63,17 @@ window.scrollToDepartments = function() {
     }
 };
 
+window.resetFacets = function() {
+    activeSelectedCategory = 'Todas';
+    activeSelectedBrand = 'Todas';
+    activeSearchQuery = '';
+    currentPageNumber = 1;
+    const searchInput = document.getElementById("boutiqueSearchInput");
+    if (searchInput) searchInput.value = '';
+    renderSidebarFacets();
+    renderExactCatalogView();
+    window.scrollToDepartments();
+};
 // Helper de priorización de tareas (scheduler.yield) para evitar bloqueos del hilo principal > 50ms
 async function yieldControl() {
     if ('scheduler' in window && 'yield' in scheduler) {
@@ -88,27 +98,18 @@ let isFullCatalogLoaded = false;
 
 // Inicialización instantánea y resiliente (Cero fallos de red en Lighthouse)
 function initFullCatalog() {
-    // 1. Usar inmediatamente los datos precargados locales (0ms, 0 network error)
+    if (window.CT_CATALOG_DATA && Array.isArray(window.CT_CATALOG_DATA) && window.CT_CATALOG_DATA.length > 0) {
+        isFullCatalogLoaded = true;
+        renderSidebarFacets();
+        renderExactCatalogView();
+        return;
+    }
     if (window.CT_CATALOG_DATA_INITIAL && Array.isArray(window.CT_CATALOG_DATA_INITIAL)) {
         window.CT_CATALOG_DATA = window.CT_CATALOG_DATA_INITIAL;
         isFullCatalogLoaded = true;
-    }
-
-    // 2. Si se requiere catálogo extendido, cargarlo en segundo plano cuando el navegador esté ocioso
-    if (window.requestIdleCallback) {
-        window.requestIdleCallback(() => {
-            fetch('./data/catalogo_maestro_ct.json')
-                .then(res => res.ok ? res.json() : null)
-                .then(fullData => {
-                    if (Array.isArray(fullData) && fullData.length > 0) {
-                        window.CT_CATALOG_DATA = fullData;
-                        isFullCatalogLoaded = true;
-                    }
-                })
-                .catch(() => {
-                    // Fallback silencioso sin manchar la consola de Lighthouse
-                });
-        }, { timeout: 3000 });
+        renderSidebarFacets();
+        renderExactCatalogView();
+        return;
     }
 }
 

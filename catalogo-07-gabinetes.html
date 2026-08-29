@@ -126,9 +126,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
-  <!-- TAILWIND CSS COMPILADO O CDN ASÍNCRONO -->
-  <link rel="preload" href="./assets/css/tailwind-built.css" as="style" onerror="this.onerror=null; this.href='https://cdn.tailwindcss.com';" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="./assets/css/tailwind-built.css"></noscript>
+      <!-- TAILWIND CSS CDN OFICIAL CON CONFIGURACIÓN DARK/CLASS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#f59e0b',
+                            cyan: '#06b6d4',
+                            dark: '#030712'
+                        }
+                    }
+                }
+            }
+        };
+    </script>
 
   <!-- CAPTURA GLOBAL DE ERRORES Y BLINDAJE DE CONSOLA (LIGHTHOUSE CLEAN CONSOLE) -->
   <script>
