@@ -10,17 +10,30 @@
     <link rel="preconnect" href="https://static.ctonline.mx" crossorigin>
     <link rel="dns-prefetch" href="https://static.ctonline.mx">
 
-    <!-- CSS Precompilado Local (Cero bloqueos de renderizado de cdn.tailwindcss.com) -->
-    <link rel="stylesheet" href="assets/css/tailwind-built.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="assets/css/fontawesome-all.min.css"></noscript>
+    <!-- CSS Asíncrono no bloqueante (Ahorro de ~500ms en FCP) -->
+    <link rel="preload" href="assets/css/tailwind-built.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/fontawesome-all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/tailwind-built.css">
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    </noscript>
 
     <style>
+        /* CSS Crítico Inmediato */
+        body { background-color: #020617; color: #f8fafc; margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; }
         .no-scrollbar::-webkit-scrollbar { display: none !important; }
         .no-scrollbar { -ms-overflow-style: none !important; scrollbar-width: none !important; }
         .neon-glow-pc {
             border: 1px solid rgba(6,182,212,0.9) !important;
             box-shadow: 0 0 16px rgba(6,182,212,0.6), inset 0 0 10px rgba(6,182,212,0.3) !important;
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-display: swap;
         }
     </style>
 </head>
@@ -345,8 +358,8 @@
     </footer>
 
 
-    <script src="js/ct-catalog-data.js?v=20260828_1940"></script>
-    <script defer src="js/ct-exact-catalog-engine.js?v=20260828_1940"></script>
+    <script src="js/ct-catalog-data.js?v=20260828_1945"></script>
+    <script defer src="js/ct-exact-catalog-engine.js?v=20260828_1945"></script>
     
 </body>
 </html>
