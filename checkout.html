@@ -544,7 +544,7 @@
     
 
     <!-- SCRIPT OFICIAL DE CHECKOUT DINÁMICO & PERSISTENCIA CRM -->
-    <script>
+        <script>
         let currentPaymentMethod = 'tarjeta';
         let isAddressCollapsed = false;
         let isPaymentCollapsed = false;
@@ -572,7 +572,7 @@
             } catch(e) {}
         }
 
-        // Guardar Domicilio y Colapsar a espacio pequeño
+        // Guardar Domicilio y Colapsar
         function saveAndCollapseAddress(showAlert = true) {
             const name = (document.getElementById("custName").value || '').trim();
             const phone = (document.getElementById("custPhone").value || '').trim();
@@ -589,9 +589,12 @@
             localStorage.setItem('ecosystem_customer_profile', JSON.stringify(profile));
 
             // Actualizar vista colapsada
-            document.getElementById("col-cust-name").innerText = name;
-            document.getElementById("col-cust-contact").innerText = `Tel: ${phone} • Email: ${email}`;
-            document.getElementById("col-cust-address").innerText = `${address} (CP ${cp || '44100'});`;
+            const colName = document.getElementById("col-cust-name");
+            const colContact = document.getElementById("col-cust-contact");
+            const colAddr = document.getElementById("col-cust-address");
+            if (colName) colName.innerText = name;
+            if (colContact) colContact.innerText = `Tel: ${phone} • Email: ${email}`;
+            if (colAddr) colAddr.innerText = `${address} (CP ${cp || '44100'})`;
             
             // Generar PIN de 4 dígitos si no existe
             let pin = localStorage.getItem('checkout_uber_pin');
@@ -668,8 +671,10 @@
             });
         }
 
-        // Renderizado de productos en el carrito con FOTO GRANDE y CONTROLES
-                // Recuperación blindada del carrito unificado del ecosistema
+        // =========================================================================
+        // RECUPERACIÓN Y RENDERIZADO DEL CARRITO CON FOTO GRANDE Y CONTROLES (+ / - / 🗑️)
+        // =========================================================================
+
         function getCartItems() {
             try {
                 const raw1 = localStorage.getItem('ecosystem_global_cart');
@@ -683,19 +688,27 @@
                 }
                 if (!Array.isArray(items)) return [];
                 return items.map(item => {
+                    const price = parseFloat(item.price || item.precio || 0);
+                    const qty = parseInt(item.quantity || item.qty || 1);
                     return {
                         sku: item.sku || item.id || 'ITEM-GEN',
-                        nombre: item.nombre || item.title || item.name || 'Producto del Catálogo',
-                        title: item.title || item.nombre || item.name || 'Producto del Catálogo',
-                        precio: parseFloat(item.precio || item.price || 0),
-                        price: parseFloat(item.precio || item.price || 0),
-                        quantity: parseInt(item.quantity || item.qty || 1),
-                        qty: parseInt(item.quantity || item.qty || 1),
-                        imagen: item.imagen || item.image || item.img || './assets/img/placeholders/acc_placeholder.jpg',
-                        tienda: item.tienda || 'Ecosistema Comercial'
+                        name: item.name || item.nombre || item.title || 'Producto del Catálogo',
+                        price: price,
+                        precio: price,
+                        quantity: qty > 0 ? qty : 1,
+                        qty: qty > 0 ? qty : 1,
+                        image: item.image || item.imagen || item.img || './assets/img/placeholders/acc_placeholder.jpg',
+                        cdn_url: item.cdn_url || (item.sku ? `https://static.ctonline.mx/imagenes/${item.sku}/${item.sku}_400.jpg` : ''),
+                        store: item.store || 'pc-custom-lab',
+                        storeName: item.storeName || 'PC Custom Lab'
                     };
                 });
             } catch(e) { return []; }
+        }
+
+        function saveCartItems(items) {
+            localStorage.setItem('ecosystem_global_cart', JSON.stringify(items));
+            localStorage.setItem('cart_items', JSON.stringify(items));
         }
 
         function renderCheckoutProducts() {
@@ -704,17 +717,20 @@
             if (!list) return;
 
             const items = getCartItems();
-            const totalUnits = items.reduce((s, i) => s + (parseInt(i.quantity || i.qty) || 1), 0);
+            const totalUnits = items.reduce((s, i) => s + (parseInt(i.quantity) || 1), 0);
             if (badge) badge.innerText = `${totalUnits} ${totalUnits === 1 ? 'producto' : 'productos'}`;
 
             if (items.length === 0) {
                 list.innerHTML = `
                     <div class="py-12 text-center text-slate-400 font-mono text-sm space-y-3">
-                        <i class="fa-solid fa-cart-shopping text-4xl text-slate-600 block"></i>
-                        <p>Tu carrito de compras está vacío.</p>
-                        <a href="index.html" class="btn-action px-6 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-black text-xs uppercase tracking-wider">
-                            Explorar Catálogo
-                        </a>
+                        <i class="fa-solid fa-cart-shopping text-4xl text-cyan-400 block mb-2"></i>
+                        <p class="text-base text-white font-bold">Tu carrito de compras está vacío.</p>
+                        <p class="text-xs text-slate-400">Selecciona componentes o productos en el catálogo para comenzar tu ensamble.</p>
+                        <div class="pt-2">
+                            <a href="index.html" class="btn-action inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg transition">
+                                <i class="fa-solid fa-layer-group"></i> Explorar Catálogo
+                            </a>
+                        </div>
                     </div>
                 `;
                 return;
@@ -722,29 +738,48 @@
 
             list.innerHTML = items.map((p, idx) => {
                 const sku = p.sku || `ITEM-${idx}`;
-                const title = p.nombre || p.title || 'Producto del Catálogo';
-                const price = parseFloat(p.precio || p.price || 0);
-                const qty = parseInt(p.quantity || p.qty || 1);
-                const subtotal = price * qty;
-                const img = p.imagen || p.image || './assets/img/placeholders/acc_placeholder.jpg';
+                const title = p.name || 'Producto del Catálogo';
+                const price = parseFloat(p.price || 0);
+                const qty = parseInt(p.quantity || 1);
+                
+                // Descuento por mayoreo solo si son 10 o más piezas del MISMO producto
+                const hasWholesale = qty >= 10;
+                const unitPrice = hasWholesale ? (price * 0.93) : price;
+                const subtotal = unitPrice * qty;
+                
+                const localImg = p.image || './assets/img/placeholders/acc_placeholder.jpg';
+                const cdnImg = p.cdn_url || `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+                const placeholder = './assets/img/placeholders/acc_placeholder.jpg';
 
                 return `
-                    <div class="pt-4 pb-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="pt-4 pb-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800/80">
                         <!-- FOTO GRANDE DEL PRODUCTO -->
-                        <div class="product-img-box shrink-0">
-                            <img src="${img}" alt="${title}" loading="lazy" onerror="this.src='./assets/img/placeholders/acc_placeholder.jpg';" />
+                        <div class="product-img-box shrink-0 bg-slate-950 border border-slate-800 rounded-2xl p-2 flex items-center justify-center">
+                            <img 
+                                src="${localImg}" 
+                                alt="${title}" 
+                                width="120" 
+                                height="120" 
+                                loading="lazy" 
+                                class="w-full h-full object-contain"
+                                onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='${cdnImg}'; } else { this.src='${placeholder}'; }"
+                            />
                         </div>
 
-                        <!-- DESCRIPCIÓN AMPLIA -->
+                        <!-- DESCRIPCIÓN AMPLIA Y CARACTERÍSTICAS -->
                         <div class="flex-1 min-w-0">
-                            <h3 class="text-sm sm:text-base font-bold text-white leading-snug mb-1">${title}</h3>
-                            <div class="flex items-center gap-2 text-[11px] font-mono text-slate-400 mb-1">
-                                <span>SKU: <strong class="text-cyan-300">${sku}</strong></span>
+                            <span class="text-[10px] font-mono text-cyan-400 font-bold uppercase tracking-wider block mb-1">
+                                <i class="fa-solid fa-microchip mr-1"></i> ${p.storeName || 'PC Custom Lab'}
+                            </span>
+                            <h3 class="text-sm sm:text-base font-bold text-white leading-snug mb-1.5">${title}</h3>
+                            <div class="flex flex-wrap items-center gap-2 text-[11px] font-mono text-slate-300 mb-1.5">
+                                <span>SKU: <strong class="text-cyan-300 font-bold">${sku}</strong></span>
                                 <span>•</span>
-                                <span class="text-emerald-400 font-bold">Garantía 48h / 1 Año</span>
+                                <span class="text-emerald-400 font-bold"><i class="fa-solid fa-shield-check"></i> Garantía 48h / 1 Año</span>
+                                ${hasWholesale ? '<span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[9.5px] px-2 py-0.5 rounded font-black uppercase">Mayoreo -7% Aplicado (10+ pzs)</span>' : ''}
                             </div>
                             <div class="text-xs font-mono font-black text-emerald-300">
-                                Precio Unitario: $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
+                                Precio Unitario: $${unitPrice.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
                             </div>
                         </div>
 
@@ -755,15 +790,15 @@
                                 <div class="text-sm sm:text-base font-black text-white">$${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</div>
                             </div>
 
-                            <div class="flex items-center gap-1.5 bg-slate-950 border border-slate-700 rounded-xl p-1">
-                                <button type="button" onclick="updateItemQuantity('${sku}', -1)" aria-label="Disminuir cantidad" class="qty-btn w-9 h-9 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition">
-                                    -
+                            <div class="flex items-center gap-1.5 bg-slate-950 border border-slate-700 rounded-xl p-1 shadow">
+                                <button type="button" onclick="updateItemQuantity('${sku}', -1)" aria-label="Disminuir cantidad" class="qty-btn w-9 h-9 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition cursor-pointer min-h-[38px] min-w-[38px]">
+                                    <i class="fa-solid fa-minus text-xs"></i>
                                 </button>
                                 <span class="w-8 text-center text-white font-mono font-bold text-xs">${qty}</span>
-                                <button type="button" onclick="updateItemQuantity('${sku}', 1)" aria-label="Aumentar cantidad" class="qty-btn w-9 h-9 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition">
-                                    +
+                                <button type="button" onclick="updateItemQuantity('${sku}', 1)" aria-label="Aumentar cantidad" class="qty-btn w-9 h-9 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded-lg font-mono font-bold flex items-center justify-center transition cursor-pointer min-h-[38px] min-w-[38px]">
+                                    <i class="fa-solid fa-plus text-xs"></i>
                                 </button>
-                                <button type="button" onclick="deleteItemFromCart('${sku}')" aria-label="Eliminar producto" class="btn-action w-9 h-9 rounded-lg hover:bg-red-950/80 text-slate-400 hover:text-red-400 flex items-center justify-center transition ml-1" title="Eliminar">
+                                <button type="button" onclick="deleteItemFromCart('${sku}')" aria-label="Eliminar producto" class="btn-action w-9 h-9 rounded-lg bg-red-950/40 hover:bg-red-900 text-red-400 hover:text-white flex items-center justify-center transition ml-1 cursor-pointer min-h-[38px] min-w-[38px]" title="Eliminar del Carrito">
                                     <i class="fa-solid fa-trash-can text-xs"></i>
                                 </button>
                             </div>
@@ -777,12 +812,11 @@
             let items = getCartItems();
             const item = items.find(i => i.sku === sku);
             if (item) {
-                let q = parseInt(item.quantity || item.qty || 1) + delta;
+                let q = parseInt(item.quantity || 1) + delta;
                 if (q < 1) q = 1;
                 item.quantity = q;
                 item.qty = q;
-                localStorage.setItem('ecosystem_global_cart', JSON.stringify(items));
-                localStorage.setItem('cart_items', JSON.stringify(items));
+                saveCartItems(items);
                 renderCheckoutProducts();
                 calculateTotals();
             }
@@ -791,15 +825,36 @@
         function deleteItemFromCart(sku) {
             let items = getCartItems();
             items = items.filter(i => i.sku !== sku);
-            localStorage.setItem('ecosystem_global_cart', JSON.stringify(items));
-            localStorage.setItem('cart_items', JSON.stringify(items));
+            saveCartItems(items);
+            renderCheckoutProducts();
+            calculateTotals();
+        }
+
+        function clearAllCart() {
+            saveCartItems([]);
             renderCheckoutProducts();
             calculateTotals();
         }
 
         function calculateTotals() {
             const items = getCartItems();
-            const subtotal = items.reduce((s, i) => s + ((parseFloat(i.precio || i.price) || 0) * (parseInt(i.quantity || i.qty) || 1)), 0);
+            
+            // Subtotal calculando mayoreo si son >= 10 pzs del mismo SKU
+            let subtotal = 0;
+            let wholesaleDiscountTotal = 0;
+
+            items.forEach(i => {
+                const p = parseFloat(i.price || i.precio || 0);
+                const q = parseInt(i.quantity || i.qty || 1);
+                if (q >= 10) {
+                    const discountedPrice = p * 0.93;
+                    wholesaleDiscountTotal += (p - discountedPrice) * q;
+                    subtotal += discountedPrice * q;
+                } else {
+                    subtotal += p * q;
+                }
+            });
+
             const cashback = subtotal * 0.05;
             const zoneSelect = document.getElementById("checkoutZoneSelect");
             const warnBox = document.getElementById("shipping-warning-box");
@@ -812,7 +867,7 @@
                 if (warnBox) {
                     warnBox.className = "p-3 bg-red-950/70 border border-red-500/60 rounded-xl text-[11px] text-red-200 leading-relaxed font-mono flex items-start gap-2";
                     warnBox.innerHTML = `<i class="fa-solid fa-shield-halved text-red-400 text-base mt-0.5 shrink-0"></i>
-                    <span><strong>COMPRA SUPERIOR A $2,000 MXN:</strong> Por la seguridad de tu equipo y del chofer, las motocicletas de Uber solo aseguran hasta $2,000 MXN. Tu pedido se despachará vía <strong>Paquetería Asegurada con Firma Obligatoria de Recibido</strong> ($180 MXN) o puedes recogerlo sin costo en mostrador.</span>`;
+                    <span><strong>COMPRA SUPERIOR A $2,000 MXN:</strong> Por la seguridad de tu equipo y cobertura de seguro, tu pedido se despachará vía <strong>Paquetería Asegurada con Firma Obligatoria de Recibido</strong> ($180 MXN) o puedes recogerlo sin costo en mostrador Pedro Moreno 501 A.</span>`;
                 }
             } else {
                 if (warnBox) {
@@ -822,8 +877,8 @@
                 }
             }
 
-            const shipping = parseFloat(zoneSelect ? zoneSelect.value : (subtotal > 2000 ? 180 : 35));
-            const total = subtotal + shipping;
+            const shipping = subtotal === 0 ? 0 : parseFloat(zoneSelect ? zoneSelect.value : (subtotal > 2000 ? 180 : 35));
+            const total = subtotal === 0 ? 0 : (subtotal + shipping);
 
             const elSub = document.getElementById("chk-subtotal");
             const elCash = document.getElementById("chk-cashback");
@@ -832,11 +887,7 @@
 
             if (elSub) elSub.innerText = `$${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
             if (elCash) elCash.innerText = `$${cashback.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-            if (elShip) elShip.innerText = `$${shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-            if (elTot) elTot.innerText = `$${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-        })} MXN`;
-            if (elCash) elCash.innerText = `$${cashback.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
-            if (elShip) elShip.innerText = `$${shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+            if (elShip) elShip.innerText = subtotal === 0 ? "$0.00 MXN" : (shipping === 0 ? "GRATIS (Mostrador)" : `$${shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`);
             if (elTot) elTot.innerText = `$${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
         }
 
@@ -854,56 +905,76 @@
             const phone = (document.getElementById("custPhone").value || '').trim();
             const email = (document.getElementById("custEmail").value || '').trim();
             const address = (document.getElementById("custAddress").value || '').trim();
-            const cp = (document.getElementById("custCP").value || '').trim();
 
             if (!name || !phone || !email || !address) {
                 expandAddressForm();
-                alert("⚠️ Por favor ingresa y confirma tu nombre, teléfono, correo y domicilio de entrega.");
-                document.getElementById("custName").focus();
+                alert("⚠️ Por favor completa y confirma tus datos de entrega en la Sección 1.");
+                const secDom = document.getElementById("sec-domicilio-root");
+                if (secDom) secDom.scrollIntoView({ behavior: 'smooth' });
                 return;
             }
 
-            // Guardar Lead de Cliente en Base de Datos Local de Clientes (CRM)
-            const customerLead = {
-                fecha: new Date().toISOString().replace('T', ' ').substring(0, 16),
-                tienda: "PC CUSTOM LAB",
-                nombre: name,
-                telefono: phone,
-                email: email,
-                direccion: address,
-                cp: cp,
-                articulos_comprados: items.map(i => `${i.quantity || 1}x ${i.nombre || i.title} (${i.sku})`).join('; '),
-                total_mxn: document.getElementById("chk-total").innerText,
-                metodo_pago: currentPaymentMethod.toUpperCase()
-            };
+            // Calcular resumen final
+            let subtotal = 0;
+            items.forEach(i => {
+                const p = parseFloat(i.price || i.precio || 0);
+                const q = parseInt(i.quantity || i.qty || 1);
+                subtotal += (q >= 10 ? p * 0.93 : p) * q;
+            });
+            const zoneSelect = document.getElementById("checkoutZoneSelect");
+            const shipping = parseFloat(zoneSelect ? zoneSelect.value : (subtotal > 2000 ? 180 : 35));
+            const total = subtotal + shipping;
+            const pin = localStorage.getItem('checkout_uber_pin') || '7453';
 
-            let crmList = JSON.parse(localStorage.getItem('ecosystem_crm_leads') || '[]');
-            crmList.unshift(customerLead);
-            localStorage.setItem('ecosystem_crm_leads', JSON.stringify(crmList));
+            const itemsText = items.map((i, idx) => `${idx + 1}. [${i.sku}] ${i.name} (x${i.quantity}) - $${((i.quantity >= 10 ? i.price * 0.93 : i.price) * i.quantity).toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`).join("\n");
 
-            // Si es SPEI -> Enviar por WhatsApp con formato profesional
-            if (currentPaymentMethod === 'spei') {
-                const msg = `*NUEVO PEDIDO EN PC CUSTOM LAB*%0A` +
-                    `👤 *Cliente:* ${name}%0A` +
-                    `📱 *Tel:* ${phone}%0A` +
-                    `✉️ *Email:* ${email}%0A` +
-                    `📍 *Entrega:* ${address} (CP ${cp})%0A` +
-                    `💳 *Pago:* SPEI Directo BBVA (012 180 01542584394 9)%0A` +
-                    `📦 *Artículos:*%0A` +
-                    items.map(i => `• (${i.quantity || 1}) ${i.nombre || i.title} - $${((i.precio || 0)*(i.quantity || 1)).toLocaleString('es-MX')}`).join('%0A') +
-                    `%0A💰 *${document.getElementById("chk-total").innerText}*%0A` +
-                    `Adjunto mi comprobante de transferencia.`;
+            if (currentPaymentMethod === 'tarjeta') {
+                // Generación de preferencia / flujo Mercado Pago
+                const msg = `💳 *PEDIDO PC CUSTOM LAB - MERCADO PAGO*\n\n👤 *Cliente:* ${name}
+📱 *WhatsApp:* ${phone}
+📍 *Domicilio:* ${address}
+🔑 *PIN Entrega:* ${pin}
 
-                window.open(`https://wa.me/523337271440?text=${msg}`, '_blank');
-            } 
-            // Si es Tarjeta / Mercado Pago
-            else if (currentPaymentMethod === 'tarjeta') {
-                alert("💳 Redirigiendo a la pasarela segura de Mercado Pago para procesar tu pago de forma encriptada...");
-                window.location.href = "https://www.mercadopago.com.mx/";
-            } 
-            // Si es OXXO
-            else {
-                alert("🏪 Ficha de pago generada. Presenta el código de convenio en cualquier tienda OXXO o 7-Eleven.");
+🛒 *Artículos Solicitados:*
+${itemsText}
+
+📦 *Subtotal:* $${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
+🚚 *Envío:* $${shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
+💰 *Total a Liquidar:* $${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
+
+_Solicito link de cobro seguro de Mercado Pago._`;
+                const waUrl = `https://wa.me/523337271440?text=${encodeURIComponent(msg)}`;
+                window.open(waUrl, '_blank');
+            } else if (currentPaymentMethod === 'spei') {
+                const msg = `🏛️ *PEDIDO PC CUSTOM LAB - PAGO SPEI*\n\n👤 *Cliente:* ${name}
+📱 *WhatsApp:* ${phone}
+📍 *Domicilio:* ${address}
+🔑 *PIN Entrega:* ${pin}
+
+🛒 *Artículos:*
+${itemsText}
+
+📦 *Subtotal:* $${subtotal.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
+🚚 *Envío:* $${shipping.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
+💰 *Total a Transferir:* $${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
+
+_Adjunto mi comprobante de transferencia BBVA CLABE: 012 180 01542584394 9._`;
+                const waUrl = `https://wa.me/523337271440?text=${encodeURIComponent(msg)}`;
+                window.open(waUrl, '_blank');
+            } else {
+                const msg = `🏪 *PEDIDO PC CUSTOM LAB - PAGO EFECTIVO OXXO*\n\n👤 *Cliente:* ${name}
+📱 *WhatsApp:* ${phone}
+📍 *Domicilio:* ${address}
+🔑 *PIN Entrega:* ${pin}
+
+🛒 *Artículos:*
+${itemsText}
+
+💰 *Total a Pagar en Caja:* $${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
+
+_Solicito código de barras / referencia digital OXXO Pay._`;
+                const waUrl = `https://wa.me/523337271440?text=${encodeURIComponent(msg)}`;
+                window.open(waUrl, '_blank');
             }
         }
     </script>
