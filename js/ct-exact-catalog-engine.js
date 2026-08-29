@@ -519,19 +519,6 @@ function renderSidebarFacets() {
 
         </div>
     `;
-                    }).join('')}
-                </div>
-
-                <button 
-                    onclick="activeSelectedCategory='Todas'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView(); document.getElementById('catalog-main-content-root').scrollIntoView({behavior:'smooth'});" 
-                    class="w-full bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/40 font-mono font-bold py-2 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer shadow mt-2"
-                >
-                    <i class="fa-solid fa-layer-group text-xs"></i> <span>Ver Todo el Catálogo</span>
-                </button>
-            </div>
-
-        </div>
-    `;
 }
 
 // =========================================================================
