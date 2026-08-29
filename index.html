@@ -12,11 +12,11 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
-    <!-- Carga Asíncrona con Preload de Fuentes -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Font Awesome asíncrono con font-display: swap para eliminar render-blocking -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
-    <!-- CSS Crítico Inyectado Directamente en Head (Cero Render-Blocking) -->
+    <!-- CSS Crítico Inyectado Directamente en Head (Cero Render-Blocking, Cero CLS) -->
     <style>
 *,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.15 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,fieldset,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.\!container{width:100%!important}.container{width:100%}@media (min-width:640px){.\!container{max-width:640px!important}.container{max-width:640px}}@media (min-width:768px){.\!container{max-width:768px!important}.container{max-width:768px}}@media (min-width:1024px){.\!container{max-width:1024px!important}.container{max-width:1024px}}@media (min-width:1280px){.\!container{max-width:1280px!important}.container{max-width:1280px}}@media (min-width:1536px){.\!container{max-width:1536px!important}.container{max-width:1536px}}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.inset-x-0{left:0;right:0}.-right-1{right:-.25rem}.-right-2\.5{right:-.625rem}.-top-1{top:-.25rem}.-top-2\.5{top:-.625rem}.bottom-0{bottom:0}.bottom-16{bottom:4rem}.bottom-20{bottom:5rem}.bottom-6{bottom:1.5rem}.bottom-8{bottom:2rem}.left-0{left:0}.left-4{left:1rem}.left-6{left:1.5rem}.right-0{right:0}.right-4{right:1rem}.right-6{right:1.5rem}.top-0{top:0}.top-1\/2{top:50%}.top-16{top:4rem}.top-6{top:1.5rem}.z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.z-30{z-index:30}.z-50{z-index:50}.z-\[10000\]{z-index:10000}.z-\[100\]{z-index:100}.z-\[200\]{z-index:200}.z-\[250\]{z-index:250}.z-\[300\]{z-index:300}.z-\[9999\]{z-index:9999}.col-span-1{grid-column:span 1/span 1}.col-span-4{grid-column:span 4/span 4}.col-span-5{grid-column:span 5/span 5}.col-span-8{grid-column:span 8/span 8}.col-span-full{grid-column:1/-1}.mx-4{margin-left:1rem;margin-right:1rem}.mx-auto{margin-left:auto;margin-right:auto}.mb-0\.5{margin-bottom:.125rem}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-1{margin-left:.25rem}.ml-auto{margin-left:auto}.mr-1{margin-right:.25rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-12{margin-top:3rem}.mt-16{margin-top:4rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-8{margin-top:2rem}.line-clamp-2{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.\!grid{display:grid!important}.grid{display:grid}.hidden{display:none}.aspect-\[3\/4\]{aspect-ratio:3/4}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2\.5{height:.625rem}.h-3{height:.75rem}.h-32{height:8rem}.h-4{height:1rem}.h-40{height:10rem}.h-48{height:12rem}.h-6{height:1.5rem}.h-64{height:16rem}.h-7{height:1.75rem}.h-72{height:18rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-\[28px\]{height:28px}.h-\[320px\]{height:320px}.h-\[32px\]{height:32px}.h-\[600px\]{height:600px}.h-full{height:100%}.max-h-\[350px\]{max-height:350px}.max-h-\[45vh\]{max-height:45vh}.max-h-\[60vh\]{max-height:60vh}.max-h-\[65vh\]{max-height:65vh}.max-h-full{max-height:100%}.min-h-\[28px\]{min-height:28px}.min-h-\[300px\]{min-height:300px}.min-h-\[32px\]{min-height:32px}.min-h-\[48px\]{min-height:48px}.min-h-\[50px\]{min-height:50px}.min-h-\[90px\]{min-height:90px}.min-h-screen{min-height:100vh}.w-1{width:.25rem}.w-1\/3{width:33.333333%}.w-1\/4{width:25%}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-2\.5{width:.625rem}.w-3{width:.75rem}.w-3\/4{width:75%}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-72{width:18rem}.w-8{width:2rem}.w-80{width:20rem}.w-9{width:2.25rem}.w-full{width:100%}.w-max{width:-moz-max-content;width:max-content}.min-w-0{min-width:0}.min-w-\[18px\]{min-width:18px}.min-w-\[28px\]{min-width:28px}.min-w-\[32px\]{min-width:32px}.min-w-\[65px\]{min-width:65px}.min-w-\[70px\]{min-width:70px}.min-w-\[75px\]{min-width:75px}.max-w-2xl{max-width:42rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-\[85\%\]{max-width:85%}.max-w-full{max-width:100%}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.flex-shrink-0,.shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.-translate-y-1\/2{--tw-translate-y:-50%}.-translate-y-1\/2,.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes bounce{0%,to{transform:translateY(-25%);animation-timing-function:cubic-bezier(.8,0,1,1)}50%{transform:none;animation-timing-function:cubic-bezier(0,0,.2,1)}}.animate-bounce{animation:bounce 1s infinite}@keyframes ping{75%,to{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0,0,.2,1) infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;-moz-user-select:none;user-select:none}.select-all{-webkit-user-select:all;-moz-user-select:all;user-select:all}.resize-none{resize:none}.list-inside{list-style-position:inside}.list-decimal{list-style-type:decimal}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.grid-cols-8{grid-template-columns:repeat(8,minmax(0,1fr))}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.flex-nowrap{flex-wrap:nowrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-start{justify-content:flex-start}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-0\.5{gap:.125rem}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-12{gap:3rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-3\.5{gap:.875rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-7{gap:1.75rem}.gap-8{gap:2rem}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.self-start{align-self:flex-start}.self-end{align-self:flex-end}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.overflow-x-hidden{overflow-x:hidden}.truncate{overflow:hidden;text-overflow:ellipsis}.truncate,.whitespace-nowrap{white-space:nowrap}.break-all{word-break:break-all}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.rounded-xl{border-radius:.75rem}.rounded-tl-none{border-top-left-radius:0}.rounded-tr-none{border-top-right-radius:0}.border{border-width:1px}.border-0{border-width:0}.border-2{border-width:2px}.border-y{border-top-width:1px}.border-b,.border-y{border-bottom-width:1px}.border-l{border-left-width:1px}.border-t{border-top-width:1px}.border-none{border-style:none}.border-\[\#FCD200\]{--tw-border-opacity:1;border-color:rgb(252 210 0/var(--tw-border-opacity,1))}.border-\[\#ddb347\]{--tw-border-opacity:1;border-color:rgb(221 179 71/var(--tw-border-opacity,1))}.border-amber-500\/20{border-color:rgba(245,158,11,.2)}.border-amber-500\/30{border-color:rgba(245,158,11,.3)}.border-amber-500\/40{border-color:rgba(245,158,11,.4)}.border-amber-500\/50{border-color:rgba(245,158,11,.5)}.border-amber-600{--tw-border-opacity:1;border-color:rgb(217 119 6/var(--tw-border-opacity,1))}.border-blue-500{--tw-border-opacity:1;border-color:rgb(59 130 246/var(--tw-border-opacity,1))}.border-blue-500\/20{border-color:rgba(59,130,246,.2)}.border-blue-500\/30{border-color:rgba(59,130,246,.3)}.border-cyan-500{--tw-border-opacity:1;border-color:rgb(6 182 212/var(--tw-border-opacity,1))}.border-cyan-500\/20{border-color:rgba(6,182,212,.2)}.border-cyan-500\/30{border-color:rgba(6,182,212,.3)}.border-cyan-500\/80{border-color:rgba(6,182,212,.8)}.border-emerald-500\/20{border-color:rgba(16,185,129,.2)}.border-emerald-500\/30{border-color:rgba(16,185,129,.3)}.border-green-500\/20{border-color:rgba(34,197,94,.2)}.border-indigo-500\/30{border-color:rgba(99,102,241,.3)}.border-pink-500\/30{border-color:rgba(236,72,153,.3)}.border-purple-500\/30{border-color:rgba(168,85,247,.3)}.border-red-500\/30{border-color:rgba(239,68,68,.3)}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85/var(--tw-border-opacity,1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59/var(--tw-border-opacity,1))}.border-slate-800\/60{border-color:rgba(30,41,59,.6)}.border-slate-800\/80{border-color:rgba(30,41,59,.8)}.border-slate-900{--tw-border-opacity:1;border-color:rgb(15 23 42/var(--tw-border-opacity,1))}.border-teal-500\/20{border-color:rgba(20,184,166,.2)}.border-teal-500\/25{border-color:rgba(20,184,166,.25)}.border-teal-500\/30{border-color:rgba(20,184,166,.3)}.bg-\[\#FFD814\]{--tw-bg-opacity:1;background-color:rgb(255 216 20/var(--tw-bg-opacity,1))}.bg-\[\#f0c14b\]{--tw-bg-opacity:1;background-color:rgb(240 193 75/var(--tw-bg-opacity,1))}.bg-\[\#f59e0b\]{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36/var(--tw-bg-opacity,1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11/var(--tw-bg-opacity,1))}.bg-amber-500\/10{background-color:rgba(245,158,11,.1)}.bg-amber-500\/5{background-color:rgba(245,158,11,.05)}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246/var(--tw-bg-opacity,1))}.bg-blue-500\/10{background-color:rgba(59,130,246,.1)}.bg-blue-500\/5{background-color:rgba(59,130,246,.05)}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235/var(--tw-bg-opacity,1))}.bg-blue-600\/10{background-color:rgba(37,99,235,.1)}.bg-cyan-500{--tw-bg-opacity:1;background-color:rgb(6 182 212/var(--tw-bg-opacity,1))}.bg-cyan-500\/10{background-color:rgba(6,182,212,.1)}.bg-cyan-600\/10{background-color:rgba(8,145,178,.1)}.bg-cyan-950\/40{background-color:rgba(8,51,68,.4)}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.bg-emerald-500\/10{background-color:rgba(16,185,129,.1)}.bg-emerald-500\/5{background-color:rgba(16,185,129,.05)}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105/var(--tw-bg-opacity,1))}.bg-green-500\/10{background-color:rgba(34,197,94,.1)}.bg-indigo-500\/10{background-color:rgba(99,102,241,.1)}.bg-indigo-600\/10{background-color:rgba(79,70,229,.1)}.bg-pink-600\/10{background-color:rgba(219,39,119,.1)}.bg-purple-500\/10{background-color:rgba(168,85,247,.1)}.bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234/var(--tw-bg-opacity,1))}.bg-red-500\/10{background-color:rgba(239,68,68,.1)}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38/var(--tw-bg-opacity,1))}.bg-red-600\/10{background-color:rgba(220,38,38,.1)}.bg-red-950{--tw-bg-opacity:1;background-color:rgb(69 10 10/var(--tw-bg-opacity,1))}.bg-red-950\/5{background-color:rgba(69,10,10,.05)}.bg-slate-600{--tw-bg-opacity:1;background-color:rgb(71 85 105/var(--tw-bg-opacity,1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85/var(--tw-bg-opacity,1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.bg-slate-900\/20{background-color:rgba(15,23,42,.2)}.bg-slate-900\/40{background-color:rgba(15,23,42,.4)}.bg-slate-900\/50{background-color:rgba(15,23,42,.5)}.bg-slate-900\/60{background-color:rgba(15,23,42,.6)}.bg-slate-900\/80{background-color:rgba(15,23,42,.8)}.bg-slate-900\/90{background-color:rgba(15,23,42,.9)}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23/var(--tw-bg-opacity,1))}.bg-slate-950\/40{background-color:rgba(2,6,23,.4)}.bg-slate-950\/50{background-color:rgba(2,6,23,.5)}.bg-slate-950\/60{background-color:rgba(2,6,23,.6)}.bg-slate-950\/70{background-color:rgba(2,6,23,.7)}.bg-slate-950\/80{background-color:rgba(2,6,23,.8)}.bg-teal-400{--tw-bg-opacity:1;background-color:rgb(45 212 191/var(--tw-bg-opacity,1))}.bg-teal-500\/10{background-color:rgba(20,184,166,.1)}.bg-teal-500\/20{background-color:rgba(20,184,166,.2)}.bg-teal-950\/10{background-color:rgba(4,47,46,.1)}.bg-teal-950\/80{background-color:rgba(4,47,46,.8)}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top,var(--tw-gradient-stops))}.from-amber-400{--tw-gradient-from:#fbbf24 var(--tw-gradient-from-position);--tw-gradient-to:rgba(251,191,36,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-blue-400{--tw-gradient-from:#60a5fa var(--tw-gradient-from-position);--tw-gradient-to:rgba(96,165,250,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-blue-600{--tw-gradient-from:#2563eb var(--tw-gradient-from-position);--tw-gradient-to:rgba(37,99,235,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-purple-400{--tw-gradient-from:#c084fc var(--tw-gradient-from-position);--tw-gradient-to:rgba(192,132,252,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-slate-900{--tw-gradient-from:#0f172a var(--tw-gradient-from-position);--tw-gradient-to:rgba(15,23,42,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-slate-950{--tw-gradient-from:#020617 var(--tw-gradient-from-position);--tw-gradient-to:rgba(2,6,23,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-indigo-400{--tw-gradient-to:rgba(129,140,248,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#818cf8 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-orange-400{--tw-gradient-to:rgba(251,146,60,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#fb923c var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-pink-400{--tw-gradient-to:rgba(244,114,182,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#f472b6 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-slate-900{--tw-gradient-to:rgba(15,23,42,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#0f172a var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-slate-950{--tw-gradient-to:rgba(2,6,23,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#020617 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-slate-950\/20{--tw-gradient-to:rgba(2,6,23,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(2,6,23,.2) var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-indigo-400{--tw-gradient-to:#818cf8 var(--tw-gradient-to-position)}.to-indigo-600{--tw-gradient-to:#4f46e5 var(--tw-gradient-to-position)}.to-indigo-950{--tw-gradient-to:#1e1b4b var(--tw-gradient-to-position)}.to-purple-400{--tw-gradient-to:#c084fc var(--tw-gradient-to-position)}.to-slate-900{--tw-gradient-to:#0f172a var(--tw-gradient-to-position)}.to-slate-950\/40{--tw-gradient-to:rgba(2,6,23,.4) var(--tw-gradient-to-position)}.to-yellow-400{--tw-gradient-to:#facc15 var(--tw-gradient-to-position)}.bg-cover{background-size:cover}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.bg-center{background-position:50%}.object-contain{-o-object-fit:contain;object-fit:contain}.object-cover{-o-object-fit:cover;object-fit:cover}.p-0\.5{padding:.125rem}.p-1{padding:.25rem}.p-1\.5{padding:.375rem}.p-2{padding:.5rem}.p-2\.5{padding:.625rem}.p-3{padding:.75rem}.p-3\.5{padding:.875rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-1\.5{padding-left:.375rem;padding-right:.375rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-2{padding-bottom:.5rem}.pb-20{padding-bottom:5rem}.pb-3{padding-bottom:.75rem}.pb-4{padding-bottom:1rem}.pb-8{padding-bottom:2rem}.pl-0{padding-left:0}.pr-1{padding-right:.25rem}.pr-2{padding-right:.5rem}.pt-1{padding-top:.25rem}.pt-2{padding-top:.5rem}.pt-2\.5{padding-top:.625rem}.pt-3{padding-top:.75rem}.pt-4{padding-top:1rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.font-sans{font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[8px\]{font-size:8px}.text-\[9px\]{font-size:9px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-light{font-weight:300}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-.025em}.tracking-wide{letter-spacing:.025em}.tracking-wider{letter-spacing:.05em}.tracking-widest{letter-spacing:.1em}.text-\[\#111827\]{--tw-text-opacity:1;color:rgb(17 24 39/var(--tw-text-opacity,1))}.text-amber-200{--tw-text-opacity:1;color:rgb(253 230 138/var(--tw-text-opacity,1))}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77/var(--tw-text-opacity,1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36/var(--tw-text-opacity,1))}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11/var(--tw-text-opacity,1))}.text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253/var(--tw-text-opacity,1))}.text-blue-400{--tw-text-opacity:1;color:rgb(96 165 250/var(--tw-text-opacity,1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246/var(--tw-text-opacity,1))}.text-cyan-300{--tw-text-opacity:1;color:rgb(103 232 249/var(--tw-text-opacity,1))}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238/var(--tw-text-opacity,1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.text-emerald-500{--tw-text-opacity:1;color:rgb(16 185 129/var(--tw-text-opacity,1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128/var(--tw-text-opacity,1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94/var(--tw-text-opacity,1))}.text-indigo-300{--tw-text-opacity:1;color:rgb(165 180 252/var(--tw-text-opacity,1))}.text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248/var(--tw-text-opacity,1))}.text-pink-300{--tw-text-opacity:1;color:rgb(249 168 212/var(--tw-text-opacity,1))}.text-pink-400{--tw-text-opacity:1;color:rgb(244 114 182/var(--tw-text-opacity,1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252/var(--tw-text-opacity,1))}.text-red-300{--tw-text-opacity:1;color:rgb(252 165 165/var(--tw-text-opacity,1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113/var(--tw-text-opacity,1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity,1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249/var(--tw-text-opacity,1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240/var(--tw-text-opacity,1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23/var(--tw-text-opacity,1))}.text-teal-300{--tw-text-opacity:1;color:rgb(94 234 212/var(--tw-text-opacity,1))}.text-teal-400{--tw-text-opacity:1;color:rgb(45 212 191/var(--tw-text-opacity,1))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.underline{text-decoration-line:underline}.line-through{text-decoration-line:line-through}.underline-offset-4{text-underline-offset:4px}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.placeholder-slate-500::-moz-placeholder{--tw-placeholder-opacity:1;color:rgb(100 116 139/var(--tw-placeholder-opacity,1))}.placeholder-slate-500::placeholder{--tw-placeholder-opacity:1;color:rgb(100 116 139/var(--tw-placeholder-opacity,1))}.accent-cyan-500{accent-color:#06b6d4}.opacity-0{opacity:0}.opacity-100{opacity:1}.opacity-40{opacity:.4}.opacity-60{opacity:.6}.opacity-70{opacity:.7}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-2xl,.shadow-\[0_0_15px_rgba\(6\2c 182\2c 212\2c 0\.6\)\]{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_0_15px_rgba\(6\2c 182\2c 212\2c 0\.6\)\]{--tw-shadow:0 0 15px rgba(6,182,212,.6);--tw-shadow-colored:0 0 15px var(--tw-shadow-color)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.shadow-lg,.shadow-md{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.shadow-sm,.shadow-xl{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)}.shadow-amber-500\/20{--tw-shadow-color:rgba(245,158,11,.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-blue-600\/30{--tw-shadow-color:rgba(37,99,235,.3);--tw-shadow:var(--tw-shadow-colored)}.shadow-blue-600\/50{--tw-shadow-color:rgba(37,99,235,.5);--tw-shadow:var(--tw-shadow-colored)}.shadow-cyan-500\/20{--tw-shadow-color:rgba(6,182,212,.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-teal-950\/20{--tw-shadow-color:rgba(4,47,46,.2);--tw-shadow:var(--tw-shadow-colored)}.outline-none{outline:2px solid transparent;outline-offset:2px}.grayscale{--tw-grayscale:grayscale(100%)}.filter,.grayscale{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-1000{transition-duration:1s}.duration-300{transition-duration:.3s}.duration-500{transition-duration:.5s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-blue-500:hover{--tw-border-opacity:1;border-color:rgb(59 130 246/var(--tw-border-opacity,1))}.hover\:border-cyan-400:hover{--tw-border-opacity:1;border-color:rgb(34 211 238/var(--tw-border-opacity,1))}.hover\:border-cyan-500:hover{--tw-border-opacity:1;border-color:rgb(6 182 212/var(--tw-border-opacity,1))}.hover\:border-teal-500:hover{--tw-border-opacity:1;border-color:rgb(20 184 166/var(--tw-border-opacity,1))}.hover\:border-teal-500\/50:hover{border-color:rgba(20,184,166,.5)}.hover\:bg-\[\#F7CA00\]:hover{--tw-bg-opacity:1;background-color:rgb(247 202 0/var(--tw-bg-opacity,1))}.hover\:bg-\[\#e08e00\]:hover{--tw-bg-opacity:1;background-color:rgb(224 142 0/var(--tw-bg-opacity,1))}.hover\:bg-amber-300:hover{--tw-bg-opacity:1;background-color:rgb(252 211 77/var(--tw-bg-opacity,1))}.hover\:bg-amber-400:hover{--tw-bg-opacity:1;background-color:rgb(251 191 36/var(--tw-bg-opacity,1))}.hover\:bg-blue-400:hover{--tw-bg-opacity:1;background-color:rgb(96 165 250/var(--tw-bg-opacity,1))}.hover\:bg-blue-500:hover{--tw-bg-opacity:1;background-color:rgb(59 130 246/var(--tw-bg-opacity,1))}.hover\:bg-blue-600:hover{--tw-bg-opacity:1;background-color:rgb(37 99 235/var(--tw-bg-opacity,1))}.hover\:bg-cyan-400:hover{--tw-bg-opacity:1;background-color:rgb(34 211 238/var(--tw-bg-opacity,1))}.hover\:bg-cyan-600:hover{--tw-bg-opacity:1;background-color:rgb(8 145 178/var(--tw-bg-opacity,1))}.hover\:bg-emerald-400:hover{--tw-bg-opacity:1;background-color:rgb(52 211 153/var(--tw-bg-opacity,1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.hover\:bg-indigo-600:hover{--tw-bg-opacity:1;background-color:rgb(79 70 229/var(--tw-bg-opacity,1))}.hover\:bg-pink-600:hover{--tw-bg-opacity:1;background-color:rgb(219 39 119/var(--tw-bg-opacity,1))}.hover\:bg-purple-500:hover{--tw-bg-opacity:1;background-color:rgb(168 85 247/var(--tw-bg-opacity,1))}.hover\:bg-red-500\/20:hover{background-color:rgba(239,68,68,.2)}.hover\:bg-red-600:hover{--tw-bg-opacity:1;background-color:rgb(220 38 38/var(--tw-bg-opacity,1))}.hover\:bg-red-700:hover{--tw-bg-opacity:1;background-color:rgb(185 28 28/var(--tw-bg-opacity,1))}.hover\:bg-red-900:hover{--tw-bg-opacity:1;background-color:rgb(127 29 29/var(--tw-bg-opacity,1))}.hover\:bg-slate-600:hover{--tw-bg-opacity:1;background-color:rgb(71 85 105/var(--tw-bg-opacity,1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85/var(--tw-bg-opacity,1))}.hover\:bg-slate-800:hover{--tw-bg-opacity:1;background-color:rgb(30 41 59/var(--tw-bg-opacity,1))}.hover\:bg-slate-900:hover{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.hover\:bg-slate-950\/60:hover{background-color:rgba(2,6,23,.6)}.hover\:from-blue-500:hover{--tw-gradient-from:#3b82f6 var(--tw-gradient-from-position);--tw-gradient-to:rgba(59,130,246,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.hover\:to-indigo-500:hover{--tw-gradient-to:#6366f1 var(--tw-gradient-to-position)}.hover\:text-amber-400:hover{--tw-text-opacity:1;color:rgb(251 191 36/var(--tw-text-opacity,1))}.hover\:text-blue-300:hover{--tw-text-opacity:1;color:rgb(147 197 253/var(--tw-text-opacity,1))}.hover\:text-blue-400:hover{--tw-text-opacity:1;color:rgb(96 165 250/var(--tw-text-opacity,1))}.hover\:text-blue-500:hover{--tw-text-opacity:1;color:rgb(59 130 246/var(--tw-text-opacity,1))}.hover\:text-cyan-400:hover{--tw-text-opacity:1;color:rgb(34 211 238/var(--tw-text-opacity,1))}.hover\:text-pink-400:hover{--tw-text-opacity:1;color:rgb(244 114 182/var(--tw-text-opacity,1))}.hover\:text-red-300:hover{--tw-text-opacity:1;color:rgb(252 165 165/var(--tw-text-opacity,1))}.hover\:text-red-400:hover{--tw-text-opacity:1;color:rgb(248 113 113/var(--tw-text-opacity,1))}.hover\:text-red-500:hover{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity,1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:underline:hover{text-decoration-line:underline}.hover\:opacity-100:hover{opacity:1}.hover\:shadow-blue-900\/10:hover{--tw-shadow-color:rgba(30,58,138,.1);--tw-shadow:var(--tw-shadow-colored)}.focus\:border-amber-400:focus{--tw-border-opacity:1;border-color:rgb(251 191 36/var(--tw-border-opacity,1))}.focus\:border-amber-500:focus{--tw-border-opacity:1;border-color:rgb(245 158 11/var(--tw-border-opacity,1))}.focus\:border-blue-500:focus{--tw-border-opacity:1;border-color:rgb(59 130 246/var(--tw-border-opacity,1))}.focus\:border-cyan-400:focus{--tw-border-opacity:1;border-color:rgb(34 211 238/var(--tw-border-opacity,1))}.focus\:border-cyan-500:focus{--tw-border-opacity:1;border-color:rgb(6 182 212/var(--tw-border-opacity,1))}.focus\:border-emerald-500:focus{--tw-border-opacity:1;border-color:rgb(16 185 129/var(--tw-border-opacity,1))}.focus\:border-indigo-500:focus{--tw-border-opacity:1;border-color:rgb(99 102 241/var(--tw-border-opacity,1))}.focus\:border-pink-500:focus{--tw-border-opacity:1;border-color:rgb(236 72 153/var(--tw-border-opacity,1))}.focus\:border-purple-500:focus{--tw-border-opacity:1;border-color:rgb(168 85 247/var(--tw-border-opacity,1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95}.active\:scale-95:active,.group:hover .group-hover\:scale-105{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05}.group:hover .group-hover\:border-teal-500\/30{border-color:rgba(20,184,166,.3)}.group:hover .group-hover\:text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238/var(--tw-text-opacity,1))}.group:hover .group-hover\:text-teal-400{--tw-text-opacity:1;color:rgb(45 212 191/var(--tw-text-opacity,1))}@media (min-width:640px){.sm\:col-span-2{grid-column:span 2/span 2}.sm\:inline{display:inline}.sm\:h-56{height:14rem}.sm\:h-\[352px\]{height:352px}.sm\:h-\[650px\]{height:650px}.sm\:min-h-\[450px\]{min-height:450px}.sm\:w-\[352px\]{width:352px}.sm\:w-\[420px\]{width:420px}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:p-10{padding:2.5rem}.sm\:p-12{padding:3rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}}@media (min-width:768px){.md\:h-40{height:10rem}.md\:h-\[360px\]{height:360px}.md\:w-auto{width:auto}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:justify-center{justify-content:center}.md\:px-0{padding-left:0;padding-right:0}.md\:px-12{padding-left:3rem;padding-right:3rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}}@media (min-width:1024px){.lg\:sticky{position:sticky}.lg\:top-24{top:6rem}.lg\:top-8{top:2rem}.lg\:col-span-1{grid-column:span 1/span 1}.lg\:col-span-3{grid-column:span 3/span 3}.lg\:col-span-4{grid-column:span 4/span 4}.lg\:col-span-5{grid-column:span 5/span 5}.lg\:col-span-6{grid-column:span 6/span 6}.lg\:col-span-7{grid-column:span 7/span 7}.lg\:block{display:block}.lg\:inline{display:inline}.lg\:flex{display:flex}.lg\:w-auto{width:auto}.lg\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.lg\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.lg\:flex-col{flex-direction:column}.lg\:items-stretch{align-items:stretch}.lg\:justify-normal{justify-content:normal}.lg\:gap-0{gap:0}.lg\:gap-2{gap:.5rem}.lg\:gap-6{gap:1.5rem}.lg\:space-y-1\.5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.375rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.375rem*var(--tw-space-y-reverse))}.lg\:overflow-visible{overflow:visible}.lg\:whitespace-normal{white-space:normal}.lg\:border-none{border-style:none}.lg\:bg-transparent{background-color:transparent}.lg\:p-0{padding:0}.lg\:p-5{padding:1.25rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:pl-2{padding-left:.5rem}.lg\:text-sm{font-size:.875rem;line-height:1.25rem}}
 /* === PC CUSTOM LAB ESTILOS CRÍTICOS INLINE === */
@@ -33,59 +33,6 @@
 @font-face {
     font-family: 'Font Awesome 6 Brands';
     font-display: swap;
-}
-
-/* === INGENIERÍA DE ESTABILIDAD VISUAL (CLS < 0.05) & ACCESIBILIDAD UNIVERSAL === */
-.product-img-wrapper {
-    aspect-ratio: 1 / 1 !important;
-    width: 100% !important;
-    height: 140px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    contain: layout size style paint !important;
-    position: relative !important;
-    overflow: hidden !important;
-    background-color: #020617 !important;
-}
-
-.product-img-wrapper img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    aspect-ratio: 1 / 1 !important;
-}
-
-/* Áreas de contacto calibradas >= 48px (superando el umbral de 24px para WCAG 2.2) */
-.pagination-btn, .qty-btn, .category-link, .btn-action {
-    min-width: 48px !important;
-    min-height: 48px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-/* Anulaciones métricas de fuentes tipográficas para cero saltos FOUT */
-@font-face {
-    font-family: 'Font Awesome 6 Free';
-    font-display: swap;
-    ascent-override: 90%;
-    descent-override: 20%;
-    size-adjust: 100%;
-}
-@font-face {
-    font-family: 'Font Awesome 6 Brands';
-    font-display: swap;
-    ascent-override: 90%;
-    descent-override: 20%;
-    size-adjust: 100%;
-}
-
-.no-scrollbar::-webkit-scrollbar { display: none !important; }
-.no-scrollbar { -ms-overflow-style: none !important; scrollbar-width: none !important; }
-.neon-glow-pc {
-    border: 1px solid rgba(6,182,212,0.9) !important;
-    box-shadow: 0 0 16px rgba(6,182,212,0.6), inset 0 0 10px rgba(6,182,212,0.3) !important;
 }
 
     </style>
@@ -105,28 +52,28 @@
             </div>
             
             <nav class="flex items-center gap-1.5 shrink-0 text-xs font-mono font-bold" aria-label="Ecosistema de Tiendas">
-                <a href="https://iaworldcenter-creator.github.io/sitios-web/" aria-label="Ir al portal matriz" class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] flex items-center">
+                <a href="https://iaworldcenter-creator.github.io/sitios-web/" aria-label="Ir al portal matriz" class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] min-w-[48px] flex items-center justify-center">
                     <i class="fa-solid fa-house text-amber-400 mr-1.5" aria-hidden="true"></i> Matriz
                 </a>
-                <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" aria-label="Tienda activa PC Custom Lab" class="px-3 py-1.5 rounded-xl bg-cyan-950/80 text-cyan-300 font-black neon-glow-pc transition min-h-[48px] flex items-center">
+                <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" aria-label="Tienda activa PC Custom Lab" class="px-3 py-1.5 rounded-xl bg-cyan-950/80 text-cyan-300 font-black neon-glow-pc transition min-h-[48px] min-w-[48px] flex items-center justify-center">
                     <i class="fa-solid fa-microchip text-cyan-400 mr-1.5" aria-hidden="true"></i> PC Custom
                 </a>
-                <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" aria-label="Ir a boutique Vía MX" class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] flex items-center">
+                <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" aria-label="Ir a boutique Vía MX" class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] min-w-[48px] flex items-center justify-center">
                     <i class="fa-solid fa-gem text-cyan-300 mr-1.5" aria-hidden="true"></i> Vía MX
                 </a>
-                <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" aria-label="Ir a boutique Cigarros Bazar" class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] flex items-center">
+                <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" aria-label="Ir a boutique Cigarros Bazar" class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] min-w-[48px] flex items-center justify-center">
                     <i class="fa-solid fa-smoking text-amber-400 mr-1.5" aria-hidden="true"></i> Cigarros
                 </a>
-                <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" aria-label="Ir a boutique Dulces Bazar" class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] flex items-center">
+                <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" aria-label="Ir a boutique Dulces Bazar" class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] min-w-[48px] flex items-center justify-center">
                     <i class="fa-solid fa-candy-cane text-pink-400 mr-1.5" aria-hidden="true"></i> Dulces
                 </a>
-                <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" aria-label="Ir a Kiosco Digital" class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] flex items-center">
+                <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" aria-label="Ir a Kiosco Digital" class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] min-w-[48px] flex items-center justify-center">
                     <i class="fa-solid fa-newspaper text-indigo-400 mr-1.5" aria-hidden="true"></i> Kiosco
                 </a>
-                <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" aria-label="Ir a Mi Puesto Bazar" class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] flex items-center">
+                <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" aria-label="Ir a Mi Puesto Bazar" class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] min-w-[48px] flex items-center justify-center">
                     <i class="fa-solid fa-store text-emerald-400 mr-1.5" aria-hidden="true"></i> Mi Puesto
                 </a>
-                <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" aria-label="Ir a Ofertas y Liquidaciones" class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] flex items-center">
+                <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" aria-label="Ir a Ofertas y Liquidaciones" class="px-2.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-800 transition min-h-[48px] min-w-[48px] flex items-center justify-center">
                     <i class="fa-solid fa-tags text-red-400 mr-1.5" aria-hidden="true"></i> Liquidaciones
                 </a>
             </nav>
@@ -154,7 +101,7 @@
                         name="q"
                         aria-label="Buscar productos por SKU, procesador o modelo" 
                         placeholder="Busca por SKU, procesador, RTX 4070, B760M, RAM DDR5..." 
-                        class="w-full bg-transparent text-slate-900 placeholder-slate-500 text-xs sm:text-sm outline-none font-medium min-h-[44px]" 
+                        class="w-full bg-transparent text-slate-900 placeholder-slate-500 text-xs sm:text-sm outline-none font-medium min-h-[48px]" 
                     />
                     <button type="submit" aria-label="Buscar productos" class="btn-action bg-blue-700 hover:bg-blue-600 text-white font-mono font-black px-4 py-2 rounded-lg text-xs uppercase tracking-wider shadow shrink-0 min-h-[48px]">
                         Buscar
@@ -246,9 +193,1388 @@
                     </div>
                 </div>
 
-                <!-- CONTENEDOR DEL APARADOR DE 20 PRODUCTOS (5 FILAS X 4 COLUMNAS) -->
-                <div id="products-grid-container" class="min-h-[700px]">
-                    <!-- Inyectado por JS: 20 productos -->
+                <!-- CONTENEDOR DEL APARADOR CON SSR PRE-RENDERIZADO (CLS = 0.000 GARANTIZADO) -->
+                <div id="products-grid-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-2">
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ Ultra 9 285K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4720')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4720.jpg" 
+                    alt="Procesador Intel® Core™ Ultra 9 285K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili" 
+                    width="300" 
+                    height="300" 
+                    fetchpriority="high" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4720/CPUINT4720_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $13,391.30 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$17,855.07</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $12,833.33</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4720')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ Ultra 9 285K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili">
+                Procesador Intel® Core™ Ultra 9 285K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4720</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4720')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ Ultra 9 285K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4720', 'Procesador Intel® Core™ Ultra 9 285K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili', 13391.3, './assets/img/catalog/procesadores/CPUINT4720.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ Ultra 9 285K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ Ultra 7 265K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4730')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4730.jpg" 
+                    alt="Procesador Intel® Core™ Ultra 7 265K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili" 
+                    width="300" 
+                    height="300" 
+                    fetchpriority="high" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4730/CPUINT4730_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $7,919.86 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$10,559.81</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $7,589.86</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4730')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ Ultra 7 265K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili">
+                Procesador Intel® Core™ Ultra 7 265K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4730</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4730')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ Ultra 7 265K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4730', 'Procesador Intel® Core™ Ultra 7 265K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili', 7919.86, './assets/img/catalog/procesadores/CPUINT4730.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ Ultra 7 265K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ Ultra 7 265KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4740')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4740.jpg" 
+                    alt="Procesador Intel® Core™ Ultra 7 265KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad" 
+                    width="300" 
+                    height="300" 
+                    fetchpriority="high" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4740/CPUINT4740_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $6,656.00 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$8,874.67</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $6,378.67</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4740')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ Ultra 7 265KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad">
+                Procesador Intel® Core™ Ultra 7 265KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4740</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4740')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ Ultra 7 265KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4740', 'Procesador Intel® Core™ Ultra 7 265KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad', 6656.0, './assets/img/catalog/procesadores/CPUINT4740.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ Ultra 7 265KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ Ultra 5 245K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4750')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4750.jpg" 
+                    alt="Procesador Intel® Core™ Ultra 5 245K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili" 
+                    width="300" 
+                    height="300" 
+                    fetchpriority="high" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4750/CPUINT4750_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $5,004.22 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$6,672.29</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $4,795.71</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4750')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ Ultra 5 245K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili">
+                Procesador Intel® Core™ Ultra 5 245K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4750</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4750')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ Ultra 5 245K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4750', 'Procesador Intel® Core™ Ultra 5 245K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili', 5004.22, './assets/img/catalog/procesadores/CPUINT4750.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ Ultra 5 245K, LGA 1851. INCLUYE GRAFICOS DE PROCESADOR. Con compatibili" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ Ultra 5 245KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4760')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4760.jpg" 
+                    alt="Procesador Intel® Core™ Ultra 5 245KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad" 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4760/CPUINT4760_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $4,735.90 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$6,314.53</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $4,538.57</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4760')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ Ultra 5 245KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad">
+                Procesador Intel® Core™ Ultra 5 245KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4760</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4760')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ Ultra 5 245KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4760', 'Procesador Intel® Core™ Ultra 5 245KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad', 4735.9, './assets/img/catalog/procesadores/CPUINT4760.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ Ultra 5 245KF, LGA 1851. SIN GRAFICOS DE PROCESADOR. Con compatibilidad" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ Ultra 9 para escritorio 285 LGA 1851, 24 cores (8P + 16E) Hasta 5.4 GHz a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4770')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4770.jpg" 
+                    alt="Procesador Intel® Core™ Ultra 9 para escritorio 285 LGA 1851, 24 cores (8P + 16E) Hasta 5.4 GHz" 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4770/CPUINT4770_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $13,078.00 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$17,437.33</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $12,533.08</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4770')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ Ultra 9 para escritorio 285 LGA 1851, 24 cores (8P + 16E) Hasta 5.4 GHz">
+                Procesador Intel® Core™ Ultra 9 para escritorio 285 LGA 1851, 24 cores (8P + 16E) Hasta 5.4 GHz
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4770</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4770')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ Ultra 9 para escritorio 285 LGA 1851, 24 cores (8P + 16E) Hasta 5.4 GHz" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4770', 'Procesador Intel® Core™ Ultra 9 para escritorio 285 LGA 1851, 24 cores (8P + 16E) Hasta 5.4 GHz', 13078.0, './assets/img/catalog/procesadores/CPUINT4770.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ Ultra 9 para escritorio 285 LGA 1851, 24 cores (8P + 16E) Hasta 5.4 GHz" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ Ultra 7 para escritorio 265 LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GHz a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4780')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4780.jpg" 
+                    alt="Procesador Intel® Core™ Ultra 7 para escritorio 265 LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GHz" 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4780/CPUINT4780_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $9,074.00 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$12,098.67</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $8,695.92</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4780')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ Ultra 7 para escritorio 265 LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GHz">
+                Procesador Intel® Core™ Ultra 7 para escritorio 265 LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GHz
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4780</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4780')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ Ultra 7 para escritorio 265 LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GHz" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4780', 'Procesador Intel® Core™ Ultra 7 para escritorio 265 LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GHz', 9074.0, './assets/img/catalog/procesadores/CPUINT4780.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ Ultra 7 para escritorio 265 LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GHz" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ Ultra 7 para escritorio 265F LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GH a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4790')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4790.jpg" 
+                    alt="Procesador Intel® Core™ Ultra 7 para escritorio 265F LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GH" 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4790/CPUINT4790_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $8,139.30 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$10,852.40</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $7,800.16</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4790')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ Ultra 7 para escritorio 265F LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GH">
+                Procesador Intel® Core™ Ultra 7 para escritorio 265F LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GH
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4790</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4790')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ Ultra 7 para escritorio 265F LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GH" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4790', 'Procesador Intel® Core™ Ultra 7 para escritorio 265F LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GH', 8139.3, './assets/img/catalog/procesadores/CPUINT4790.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ Ultra 7 para escritorio 265F LGA 1851, 20 cores (8P + 12E) Hasta 5.3 GH" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ Ultra 5 para escritorio 225 LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz. a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4800')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4800.jpg" 
+                    alt="Procesador Intel® Core™ Ultra 5 para escritorio 225 LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz." 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4800/CPUINT4800_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $4,186.00 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$5,581.33</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $4,011.58</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4800')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ Ultra 5 para escritorio 225 LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz.">
+                Procesador Intel® Core™ Ultra 5 para escritorio 225 LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz.
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4800</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4800')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ Ultra 5 para escritorio 225 LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz." 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4800', 'Procesador Intel® Core™ Ultra 5 para escritorio 225 LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz.', 4186.0, './assets/img/catalog/procesadores/CPUINT4800.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ Ultra 5 para escritorio 225 LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz." 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ Ultra 5 para escritorio 225F LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4810')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4810.jpg" 
+                    alt="Procesador Intel® Core™ Ultra 5 para escritorio 225F LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz" 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4810/CPUINT4810_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $3,363.10 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$4,484.13</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $3,222.97</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4810')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ Ultra 5 para escritorio 225F LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz">
+                Procesador Intel® Core™ Ultra 5 para escritorio 225F LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4810</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4810')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ Ultra 5 para escritorio 225F LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4810', 'Procesador Intel® Core™ Ultra 5 para escritorio 225F LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz', 3363.1, './assets/img/catalog/procesadores/CPUINT4810.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ Ultra 5 para escritorio 225F LGA 1851, 10 cores (6P + 4E) Hasta 4.9 GHz" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel Core Ultra 7 270K Plus BX80768270K, 36 TOPS - 24 núcleos (8+16), 3.2 Ghz base, a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT5030')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT5030.jpg" 
+                    alt="Procesador Intel Core Ultra 7 270K Plus BX80768270K, 36 TOPS - 24 núcleos (8+16), 3.2 Ghz base," 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT5030/CPUINT5030_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $7,176.00 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$9,568.00</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $6,877.00</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT5030')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel Core Ultra 7 270K Plus BX80768270K, 36 TOPS - 24 núcleos (8+16), 3.2 Ghz base,">
+                Procesador Intel Core Ultra 7 270K Plus BX80768270K, 36 TOPS - 24 núcleos (8+16), 3.2 Ghz base,
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT5030</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT5030')" 
+                aria-label="Ver ficha técnica de Procesador Intel Core Ultra 7 270K Plus BX80768270K, 36 TOPS - 24 núcleos (8+16), 3.2 Ghz base," 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT5030', 'Procesador Intel Core Ultra 7 270K Plus BX80768270K, 36 TOPS - 24 núcleos (8+16), 3.2 Ghz base,', 7176.0, './assets/img/catalog/procesadores/CPUINT5030.jpg')" 
+                aria-label="Comprar Procesador Intel Core Ultra 7 270K Plus BX80768270K, 36 TOPS - 24 núcleos (8+16), 3.2 Ghz base," 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel Core Ultra 5 250K Plus BX80768250K, 30 TOPS - 18 núcleos (6+12), 3.3 Ghz base, a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT5040')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT5040.jpg" 
+                    alt="Procesador Intel Core Ultra 5 250K Plus BX80768250K, 30 TOPS - 18 núcleos (6+12), 3.3 Ghz base," 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT5040/CPUINT5040_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $5,454.28 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$7,272.37</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $5,227.01</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT5040')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel Core Ultra 5 250K Plus BX80768250K, 30 TOPS - 18 núcleos (6+12), 3.3 Ghz base,">
+                Procesador Intel Core Ultra 5 250K Plus BX80768250K, 30 TOPS - 18 núcleos (6+12), 3.3 Ghz base,
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT5040</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT5040')" 
+                aria-label="Ver ficha técnica de Procesador Intel Core Ultra 5 250K Plus BX80768250K, 30 TOPS - 18 núcleos (6+12), 3.3 Ghz base," 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT5040', 'Procesador Intel Core Ultra 5 250K Plus BX80768250K, 30 TOPS - 18 núcleos (6+12), 3.3 Ghz base,', 5454.28, './assets/img/catalog/procesadores/CPUINT5040.jpg')" 
+                aria-label="Comprar Procesador Intel Core Ultra 5 250K Plus BX80768250K, 30 TOPS - 18 núcleos (6+12), 3.3 Ghz base," 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel Core Ultra 5 250KF Plus BX80768250KF, 22 TOPS - 18 núcleos (6+12), 3.3 Ghz bas a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT5050')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT5050.jpg" 
+                    alt="Procesador Intel Core Ultra 5 250KF Plus BX80768250KF, 22 TOPS - 18 núcleos (6+12), 3.3 Ghz bas" 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT5050/CPUINT5050_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $5,029.96 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$6,706.61</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $4,820.37</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT5050')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel Core Ultra 5 250KF Plus BX80768250KF, 22 TOPS - 18 núcleos (6+12), 3.3 Ghz bas">
+                Procesador Intel Core Ultra 5 250KF Plus BX80768250KF, 22 TOPS - 18 núcleos (6+12), 3.3 Ghz bas
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT5050</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT5050')" 
+                aria-label="Ver ficha técnica de Procesador Intel Core Ultra 5 250KF Plus BX80768250KF, 22 TOPS - 18 núcleos (6+12), 3.3 Ghz bas" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT5050', 'Procesador Intel Core Ultra 5 250KF Plus BX80768250KF, 22 TOPS - 18 núcleos (6+12), 3.3 Ghz bas', 5029.96, './assets/img/catalog/procesadores/CPUINT5050.jpg')" 
+                aria-label="Comprar Procesador Intel Core Ultra 5 250KF Plus BX80768250KF, 22 TOPS - 18 núcleos (6+12), 3.3 Ghz bas" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ i7-14700KF (14.a generación), LGA1700, sin gráficos de procesador. 33 M a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4440')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4440.jpg" 
+                    alt="Procesador Intel® Core™ i7-14700KF (14.a generación), LGA1700, sin gráficos de procesador. 33 M" 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4440/CPUINT4440_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $8,866.00 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$11,821.33</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $8,496.58</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4440')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ i7-14700KF (14.a generación), LGA1700, sin gráficos de procesador. 33 M">
+                Procesador Intel® Core™ i7-14700KF (14.a generación), LGA1700, sin gráficos de procesador. 33 M
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4440</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4440')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ i7-14700KF (14.a generación), LGA1700, sin gráficos de procesador. 33 M" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4440', 'Procesador Intel® Core™ i7-14700KF (14.a generación), LGA1700, sin gráficos de procesador. 33 M', 8866.0, './assets/img/catalog/procesadores/CPUINT4440.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ i7-14700KF (14.a generación), LGA1700, sin gráficos de procesador. 33 M" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ i7-14700F (14.ª generación), sin procesador gráfico. Con tecnología Int a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4550')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4550.jpg" 
+                    alt="Procesador Intel® Core™ i7-14700F (14.ª generación), sin procesador gráfico. Con tecnología Int" 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4550/CPUINT4550_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $7,436.00 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$9,914.67</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $7,126.17</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4550')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ i7-14700F (14.ª generación), sin procesador gráfico. Con tecnología Int">
+                Procesador Intel® Core™ i7-14700F (14.ª generación), sin procesador gráfico. Con tecnología Int
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4550</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4550')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ i7-14700F (14.ª generación), sin procesador gráfico. Con tecnología Int" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4550', 'Procesador Intel® Core™ i7-14700F (14.ª generación), sin procesador gráfico. Con tecnología Int', 7436.0, './assets/img/catalog/procesadores/CPUINT4550.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ i7-14700F (14.ª generación), sin procesador gráfico. Con tecnología Int" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ i7-14700K (14.ª generación), LGA1700, 33 MB caché, 28 hilos. Con tecnol a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4430')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4430.jpg" 
+                    alt="Procesador Intel® Core™ i7-14700K (14.ª generación), LGA1700, 33 MB caché, 28 hilos. Con tecnol" 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4430/CPUINT4430_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $8,687.90 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$11,583.87</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $8,325.91</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4430')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ i7-14700K (14.ª generación), LGA1700, 33 MB caché, 28 hilos. Con tecnol">
+                Procesador Intel® Core™ i7-14700K (14.ª generación), LGA1700, 33 MB caché, 28 hilos. Con tecnol
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4430</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4430')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ i7-14700K (14.ª generación), LGA1700, 33 MB caché, 28 hilos. Con tecnol" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4430', 'Procesador Intel® Core™ i7-14700K (14.ª generación), LGA1700, 33 MB caché, 28 hilos. Con tecnol', 8687.9, './assets/img/catalog/procesadores/CPUINT4430.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ i7-14700K (14.ª generación), LGA1700, 33 MB caché, 28 hilos. Con tecnol" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ i7-14700 (14.ª generación). Con tecnología Intel® Turbo Boost Max 3.0,  a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4540')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4540.jpg" 
+                    alt="Procesador Intel® Core™ i7-14700 (14.ª generación). Con tecnología Intel® Turbo Boost Max 3.0, " 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4540/CPUINT4540_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $9,013.68 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$12,018.24</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $8,638.11</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4540')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ i7-14700 (14.ª generación). Con tecnología Intel® Turbo Boost Max 3.0, ">
+                Procesador Intel® Core™ i7-14700 (14.ª generación). Con tecnología Intel® Turbo Boost Max 3.0, 
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4540</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4540')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ i7-14700 (14.ª generación). Con tecnología Intel® Turbo Boost Max 3.0, " 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4540', 'Procesador Intel® Core™ i7-14700 (14.ª generación). Con tecnología Intel® Turbo Boost Max 3.0, ', 9013.68, './assets/img/catalog/procesadores/CPUINT4540.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ i7-14700 (14.ª generación). Con tecnología Intel® Turbo Boost Max 3.0, " 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ i9-14900KF (14.a generación), LGA1700, sin gráficos de procesador. 36 M a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4460')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4460.jpg" 
+                    alt="Procesador Intel® Core™ i9-14900KF (14.a generación), LGA1700, sin gráficos de procesador. 36 M" 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4460/CPUINT4460_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $10,506.08 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$14,008.11</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $10,068.33</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4460')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ i9-14900KF (14.a generación), LGA1700, sin gráficos de procesador. 36 M">
+                Procesador Intel® Core™ i9-14900KF (14.a generación), LGA1700, sin gráficos de procesador. 36 M
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4460</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4460')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ i9-14900KF (14.a generación), LGA1700, sin gráficos de procesador. 36 M" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4460', 'Procesador Intel® Core™ i9-14900KF (14.a generación), LGA1700, sin gráficos de procesador. 36 M', 10506.08, './assets/img/catalog/procesadores/CPUINT4460.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ i9-14900KF (14.a generación), LGA1700, sin gráficos de procesador. 36 M" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ i9-14900K (14.ª generación), LGA 1700, 36 MB caché, 32 hilos. Con Intel a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4450')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4450.jpg" 
+                    alt="Procesador Intel® Core™ i9-14900K (14.ª generación), LGA 1700, 36 MB caché, 32 hilos. Con Intel" 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4450/CPUINT4450_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $11,220.30 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$14,960.40</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $10,752.79</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4450')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ i9-14900K (14.ª generación), LGA 1700, 36 MB caché, 32 hilos. Con Intel">
+                Procesador Intel® Core™ i9-14900K (14.ª generación), LGA 1700, 36 MB caché, 32 hilos. Con Intel
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4450</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4450')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ i9-14900K (14.ª generación), LGA 1700, 36 MB caché, 32 hilos. Con Intel" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4450', 'Procesador Intel® Core™ i9-14900K (14.ª generación), LGA 1700, 36 MB caché, 32 hilos. Con Intel', 11220.3, './assets/img/catalog/procesadores/CPUINT4450.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ i9-14900K (14.ª generación), LGA 1700, 36 MB caché, 32 hilos. Con Intel" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
+
+    <article class="bg-slate-900/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+        <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+            <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+        </div>
+
+        <button class="btn-action absolute top-2.5 right-2.5 text-slate-400 hover:text-pink-400 transition text-base z-10 cursor-pointer min-h-[48px] min-w-[48px] flex items-center justify-center" title="Favoritos" aria-label="Agregar Procesador Intel® Core™ i9-14900F (14.ª generación), sin procesador gráfico. Con Intel® Thermal a favoritos">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        </button>
+
+        <div>
+            <!-- Contenedor Geométrico Predictivo Estricto (CLS = 0) -->
+            <div onclick="openProductDetailModal('CPUINT4570')" class="product-img-wrapper bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer">
+                <img 
+                    src="./assets/img/catalog/procesadores/CPUINT4570.jpg" 
+                    alt="Procesador Intel® Core™ i9-14900F (14.ª generación), sin procesador gráfico. Con Intel® Thermal" 
+                    width="300" 
+                    height="300" 
+                    loading="lazy" 
+                    decoding="async"
+                    class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
+                    onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='https://static.ctonline.mx/imagenes/CPUINT4570/CPUINT4570_400.jpg'; } else { this.src='./assets/img/placeholders/cpu_placeholder.jpg'; }"
+                />
+            </div>
+
+            <!-- Precios con Ratio de Contraste Superior a 7:1 -->
+            <div class="text-center mb-1.5">
+                <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                    $12,515.10 MXN
+                </span>
+                <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                    <span class="text-slate-400 line-through">$16,686.80</span>
+                    <span class="text-amber-300 font-bold">Mayoreo: $11,993.64</span>
+                </div>
+            </div>
+
+            <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible Mostrador GDL
+            </div>
+
+            <!-- H3 Semántico para Jerarquía Descendente -->
+            <h3 onclick="openProductDetailModal('CPUINT4570')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="Procesador Intel® Core™ i9-14900F (14.ª generación), sin procesador gráfico. Con Intel® Thermal">
+                Procesador Intel® Core™ i9-14900F (14.ª generación), sin procesador gráfico. Con Intel® Thermal
+            </h3>
+
+            <div class="text-center text-[9.5px] font-mono text-slate-300 mb-2">
+                <span>SKU: <strong>CPUINT4570</strong></span>
+            </div>
+        </div>
+
+        <!-- Botones de Acción con Tap Targets >= 48px -->
+        <div class="pt-1 flex gap-2">
+            <button 
+                onclick="openProductDetailModal('CPUINT4570')" 
+                aria-label="Ver ficha técnica de Procesador Intel® Core™ i9-14900F (14.ª generación), sin procesador gráfico. Con Intel® Thermal" 
+                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer border border-slate-700 min-h-[48px]"
+            >
+                <span>Ficha Técnica</span>
+            </button>
+            <button 
+                onclick="buyNowCT('CPUINT4570', 'Procesador Intel® Core™ i9-14900F (14.ª generación), sin procesador gráfico. Con Intel® Thermal', 12515.1, './assets/img/catalog/procesadores/CPUINT4570.jpg')" 
+                aria-label="Comprar Procesador Intel® Core™ i9-14900F (14.ª generación), sin procesador gráfico. Con Intel® Thermal" 
+                class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
+            >
+                <span>Comprar</span>
+            </button>
+        </div>
+    </article>
+    
                 </div>
 
                 <!-- Paginación Inferior -->
@@ -304,16 +1630,16 @@
                     </div>
 
                     <div class="pt-2 border-t border-slate-900 space-y-1.5 text-[10.5px]">
-                        <a href="https://www.facebook.com/profile.php?id=61593020515115" target="_blank" rel="noopener" aria-label="Perfil oficial de Facebook" class="text-slate-300 hover:text-blue-400 flex items-center gap-2 transition min-h-[44px]">
+                        <a href="https://www.facebook.com/profile.php?id=61593020515115" target="_blank" rel="noopener" aria-label="Perfil oficial de Facebook" class="text-slate-300 hover:text-blue-400 flex items-center gap-2 transition min-h-[48px]">
                             <i class="fa-brands fa-facebook text-blue-500 w-4 text-center" aria-hidden="true"></i> <span>Facebook: <strong>BAZAR NFL.GDL</strong></span>
                         </a>
-                        <a href="https://www.instagram.com/pccustomlab/" target="_blank" rel="noopener" aria-label="Perfil oficial de Instagram" class="text-slate-300 hover:text-pink-400 flex items-center gap-2 transition min-h-[44px]">
+                        <a href="https://www.instagram.com/pccustomlab/" target="_blank" rel="noopener" aria-label="Perfil oficial de Instagram" class="text-slate-300 hover:text-pink-400 flex items-center gap-2 transition min-h-[48px]">
                             <i class="fa-brands fa-instagram text-pink-500 w-4 text-center" aria-hidden="true"></i> <span>Instagram: <strong>@pccustomlab</strong></span>
                         </a>
-                        <a href="https://www.youtube.com/@IAWorldCenter" target="_blank" rel="noopener" aria-label="Canal oficial de YouTube" class="text-slate-300 hover:text-red-400 flex items-center gap-2 transition min-h-[44px]">
+                        <a href="https://www.youtube.com/@IAWorldCenter" target="_blank" rel="noopener" aria-label="Canal oficial de YouTube" class="text-slate-300 hover:text-red-400 flex items-center gap-2 transition min-h-[48px]">
                             <i class="fa-brands fa-youtube text-red-500 w-4 text-center" aria-hidden="true"></i> <span>YouTube: <strong>IA World Center</strong></span>
                         </a>
-                        <a href="https://t.me/pc_custom_lab" target="_blank" rel="noopener" aria-label="Canal oficial de Telegram" class="text-slate-300 hover:text-cyan-400 flex items-center gap-2 transition min-h-[44px]">
+                        <a href="https://t.me/pc_custom_lab" target="_blank" rel="noopener" aria-label="Canal oficial de Telegram" class="text-slate-300 hover:text-cyan-400 flex items-center gap-2 transition min-h-[48px]">
                             <i class="fa-brands fa-telegram text-cyan-400 w-4 text-center" aria-hidden="true"></i> <span>Telegram: <strong>pc_custom_lab</strong></span>
                         </a>
                     </div>
@@ -394,7 +1720,7 @@
         </div>
     </footer>
 
-    <script src="js/ct-catalog-data.js?v=20260828_2130"></script>
-    <script defer src="js/ct-exact-catalog-engine.js?v=20260828_2130"></script>
+    <script src="js/ct-catalog-data.js?v=20260828_2135"></script>
+    <script defer src="js/ct-exact-catalog-engine.js?v=20260828_2135"></script>
 </body>
 </html>
