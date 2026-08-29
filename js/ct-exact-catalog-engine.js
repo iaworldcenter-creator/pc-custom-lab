@@ -419,9 +419,9 @@ function renderSidebarFacets() {
                                 <span class="flex items-center gap-2.5 truncate">
                                     <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-4 h-4 accent-cyan-400 cursor-pointer shrink-0" />
                                     <i class="fa-solid ${c.icon} text-xs text-slate-300 w-3.5 text-center shrink-0" aria-hidden="true"></i>
-                                    <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-cyan-300' : 'text-slate-200'}">${c.name}</span>
+                                    <span class="cat-title truncate text-xs sm:text-xs md:text-sm font-bold ${activeSelectedCategory === c.id ? "text-cyan-300" : "text-slate-100"}">${c.name}</span>
                                 </span>
-                                <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
+                                <span class="cat-count text-[11px] sm:text-[10px] text-slate-300 font-mono">(${getCount(c.id)})</span>
                             </label>
                         `).join('')}
                     </div>
@@ -438,9 +438,9 @@ function renderSidebarFacets() {
                                 <span class="flex items-center gap-2.5 truncate">
                                     <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-4 h-4 accent-purple-400 cursor-pointer shrink-0" />
                                     <i class="fa-solid ${c.icon} text-xs text-slate-300 w-3.5 text-center shrink-0" aria-hidden="true"></i>
-                                    <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-purple-300' : 'text-slate-200'}">${c.name}</span>
+                                    <span class="cat-title truncate text-xs sm:text-xs md:text-sm font-bold ${activeSelectedCategory === c.id ? "text-cyan-300" : "text-slate-100"}">${c.name}</span>
                                 </span>
-                                <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
+                                <span class="cat-count text-[11px] sm:text-[10px] text-slate-300 font-mono">(${getCount(c.id)})</span>
                             </label>
                         `).join('')}
                     </div>
@@ -457,9 +457,9 @@ function renderSidebarFacets() {
                                 <span class="flex items-center gap-2.5 truncate">
                                     <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="activeSelectedCategory='${c.id}'; currentPageNumber=1; renderSidebarFacets(); renderExactCatalogView();" class="w-4 h-4 accent-amber-400 cursor-pointer shrink-0" />
                                     <i class="fa-solid ${c.icon} text-xs text-slate-300 w-3.5 text-center shrink-0" aria-hidden="true"></i>
-                                    <span class="truncate text-xs ${activeSelectedCategory === c.id ? 'font-bold text-amber-300' : 'text-slate-200'}">${c.name}</span>
+                                    <span class="cat-title truncate text-xs sm:text-xs md:text-sm font-bold ${activeSelectedCategory === c.id ? "text-cyan-300" : "text-slate-100"}">${c.name}</span>
                                 </span>
-                                <span class="text-[10px] text-slate-400 font-mono">(${getCount(c.id)})</span>
+                                <span class="cat-count text-[11px] sm:text-[10px] text-slate-300 font-mono">(${getCount(c.id)})</span>
                             </label>
                         `).join('')}
                     </div>
