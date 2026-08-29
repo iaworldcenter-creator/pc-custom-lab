@@ -1,3 +1,39 @@
+
+// Notificación interactiva al agregar al carrito con ciclo de retorno
+function showAddToCartToast(productTitle) {
+    let toast = document.getElementById("cart-notification-toast");
+    if (!toast) {
+        toast = document.createElement("div");
+        toast.id = "cart-notification-toast";
+        toast.className = "fixed bottom-6 right-6 z-50 max-w-md bg-slate-900/95 border-2 border-emerald-500/80 p-4 rounded-2xl shadow-2xl text-white transform transition-all duration-300 ease-out";
+        document.body.appendChild(toast);
+    }
+    
+    toast.innerHTML = `
+        <div class="space-y-3">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                <div class="flex-1 min-w-0">
+                    <div class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider">¡Agregado al Carrito!</div>
+                    <div class="text-xs text-slate-200 font-bold truncate">${productTitle}</div>
+                </div>
+            </div>
+            <div class="flex gap-2 pt-1 border-t border-slate-800">
+                <button onclick="window.scrollToDepartments(); this.closest('#cart-notification-toast').classList.add('hidden');" class="flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-mono text-[11px] font-bold py-2 px-2.5 rounded-xl border border-cyan-500/40 cursor-pointer min-h-[44px]">
+                    <i class="fa-solid fa-layer-group"></i> Más Productos
+                </button>
+                <a href="checkout.html" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-[11px] font-black py-2 px-2.5 rounded-xl flex items-center justify-center gap-1 shadow cursor-pointer min-h-[44px]">
+                    <i class="fa-solid fa-cart-shopping"></i> Ir a Pagar
+                </a>
+            </div>
+        </div>
+    `;
+    toast.classList.remove("hidden");
+    setTimeout(() => {
+        if (toast) toast.classList.add("hidden");
+    }, 6000);
+}
+
 // Función global para seleccionar categoría y viajar directamente a la vitrina en celular y desktop
 window.selectCategoryFacet = function(catId) {
     activeSelectedCategory = catId;
@@ -5,17 +41,26 @@ window.selectCategoryFacet = function(catId) {
     activeSelectedBrand = 'Todas';
     currentPageNumber = 1;
     
-    // Limpiar input de búsqueda visualmente
     const searchInput = document.getElementById("boutiqueSearchInput");
     if (searchInput) searchInput.value = '';
 
     renderSidebarFacets();
     renderExactCatalogView();
 
-    // En celular y desktop: Desplazamiento directo y suave a la vitrina de productos
-    const showcaseTarget = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
-    if (showcaseTarget) {
-        showcaseTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Desplazamiento suave directo al inicio de la vitrina de productos
+    setTimeout(() => {
+        const showcaseTarget = document.getElementById("catalog-main-content-root") || document.getElementById("results-count-display") || document.getElementById("products-grid-container");
+        if (showcaseTarget) {
+            showcaseTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }, 50);
+};
+
+// Función para volver rápidamente a la lista de departamentos arriba
+window.scrollToDepartments = function() {
+    const target = document.getElementById("sidebar-facets-root") || document.getElementById("boutiqueSearchInput");
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 };
 
