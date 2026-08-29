@@ -642,8 +642,10 @@ function renderSidebarFacets() {
                 </div>
             </div>
 
-            <!-- 3 TARJETAS DE CONVERSIÓN INTEGRADAS -->
-            <div class="pt-2 space-y-3 border-t border-slate-800 hidden md:block">
+                        <!-- 3 TARJETAS DE CONVERSIÓN INTEGRADAS -->
+            <div class="pt-2 space-y-3 border-t border-slate-800">
+                
+                <!-- TARJETA 1: APP MÓVIL WHATSAPP CON QR -->
                 <div class="bg-slate-950/90 border border-cyan-500/40 rounded-2xl p-3 text-center shadow-lg">
                     <span class="text-[11px] font-mono font-bold text-cyan-400 uppercase tracking-wider flex items-center justify-center gap-1.5 mb-2">
                         <i class="fa-solid fa-mobile-screen-button"></i> App Móvil Pedidos
@@ -651,10 +653,43 @@ function renderSidebarFacets() {
                     <div class="w-28 h-28 mx-auto bg-white p-1.5 rounded-xl shadow mb-2 flex items-center justify-center">
                         <img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://iaworldcenter-creator.github.io/pc-custom-lab/&color=0-0-0&bgcolor=255-255-255" alt="QR App" width="110" height="110" class="w-full h-full object-contain" />
                     </div>
-                    <a href="https://wa.me/523337271440" target="_blank" rel="noopener" class="w-full bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-cyan-500/40 font-mono font-bold rounded-lg text-[10px] uppercase py-2 flex items-center justify-center gap-1">
+                    <a href="https://wa.me/523337271440" target="_blank" rel="noopener" class="w-full bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-cyan-500/40 font-mono font-bold rounded-lg text-[10px] uppercase py-2 flex items-center justify-center gap-1 min-h-[40px]">
                         ▶ Abrir App Oficial
                     </a>
                 </div>
+
+                <!-- TARJETA 2: CREADO CON GOOGLE GEMINI -->
+                <div class="bg-slate-950/90 border border-blue-500/40 hover:border-blue-400 rounded-2xl p-3.5 shadow-lg transition text-left">
+                    <span class="text-[11px] font-mono font-bold text-blue-400 uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
+                        <i class="fa-solid fa-wand-magic-sparkles text-blue-400" aria-hidden="true"></i> Creado con Google Gemini
+                    </span>
+                    <div class="text-white font-bold text-xs leading-snug mb-1">
+                        Inteligencia Artificial para tu Negocio
+                    </div>
+                    <p class="text-slate-300 text-[10px] leading-tight mb-2.5">
+                        Concebido y programado con la IA más avanzada de Google para crear tiendas de ultra velocidad.
+                    </p>
+                    <a href="https://gemini.google.com/" target="_blank" rel="noopener" aria-label="Suscribirse a Google Gemini" class="btn-action w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-lg text-[10px] uppercase tracking-wider flex items-center justify-center gap-1 transition shadow min-h-[40px]">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i> <span>SUSCRÍBETE A GOOGLE GEMINI</span>
+                    </a>
+                </div>
+
+                <!-- TARJETA 3: DESARROLLADO POR ANTI-GRAVITY -->
+                <div class="bg-slate-950/90 border border-amber-500/40 hover:border-amber-400 rounded-2xl p-3.5 shadow-lg transition text-left">
+                    <span class="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5 mb-1.5">
+                        <i class="fa-solid fa-robot text-amber-400" aria-hidden="true"></i> Desarrollado por Anti-Gravity
+                    </span>
+                    <div class="text-white font-bold text-xs leading-snug mb-1">
+                        Agente Autónomo de Software
+                    </div>
+                    <p class="text-slate-300 text-[10px] leading-tight mb-2.5">
+                        Desarrollado, optimizado y desplegado por Anti-Gravity Copilot. Crea tus páginas web gratis.
+                    </p>
+                    <a href="https://antigravity.google/download" target="_blank" rel="noopener" aria-label="Descargar Anti-Gravity Gratis" class="btn-action w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black rounded-lg text-[10px] uppercase tracking-wider flex items-center justify-center gap-1 transition shadow min-h-[40px]">
+                        <i class="fa-solid fa-download text-[9px]"></i> <span>DESCARGAR Y PRUEBA ANTI-GRAVITY</span>
+                    </a>
+                </div>
+
             </div>
 
         </div>
