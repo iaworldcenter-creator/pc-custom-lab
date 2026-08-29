@@ -225,7 +225,7 @@ function renderExactCatalogView() {
                             <span>Ficha Técnica</span>
                         </button>
                         <button 
-                            onclick="buyNowCT('${sku}', '${title}', ${price}, '${localImg}')" 
+                            onclick="buyNowCT(\'${sku}\')" 
                             aria-label="Comprar ${title}" 
                             class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase tracking-wider flex items-center justify-center gap-1 transition active:scale-95 shadow-md cursor-pointer min-h-[48px]"
                         >
@@ -295,7 +295,7 @@ function renderExactCatalogView() {
                                 <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
                             </button>
                             <button 
-                                onclick="addToCartCT('${sku}', '${title}', ${price}, '${localImg}')" 
+                                onclick="addToCartCT(\'${sku}\')" 
                                 aria-label="Agregar ${title} al carrito"
                                 class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black py-2.5 px-3 rounded-xl text-xs flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer uppercase min-h-[48px]"
                             >
@@ -1043,12 +1043,28 @@ window.removeProductFromCart = function(sku) {
     alert("🗑️ Producto removido de la selección.");
 };
 
-window.addToCartCT = function(sku, title, price, img, qty = 1) {
-    let cart = JSON.parse(localStorage.getItem('ecosystem_global_cart') || localStorage.getItem('cart_items') || '[]');
+window.addToCartCT = function(sku, customTitle, customPrice, customImg, qty = 1) {
+    const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
+    const prod = all.find(p => p.sku === sku);
+    
+    const title = customTitle || (prod ? (prod.nombre || prod.descripcion_completa) : sku);
+    const price = (customPrice !== undefined && customPrice !== null) ? customPrice : (prod ? (prod.precio_mxn || prod.precio || 0) : 0);
+    const cat = prod ? (prod.categoria_clasificada || 'accesorios_perifericos') : 'accesorios_perifericos';
+    const img = customImg || (prod ? `./assets/img/catalog/${cat}/${sku}.jpg` : './assets/img/placeholders/acc_placeholder.jpg');
+
+    let cart = [];
+    try {
+        const raw = localStorage.getItem('ecosystem_global_cart') || localStorage.getItem('cart_items') || '[]';
+        cart = JSON.parse(raw);
+        if (!Array.isArray(cart)) cart = [];
+    } catch(e) { cart = []; }
+
     const existing = cart.find(i => i.sku === sku);
     if (existing) {
-        existing.quantity = (existing.quantity || 1) + qty;
+        existing.quantity = (parseInt(existing.quantity || existing.qty) || 1) + qty;
         existing.qty = existing.quantity;
+        if (!existing.imagen && !existing.image) existing.imagen = img;
+        if (!existing.nombre && !existing.title) existing.nombre = title;
     } else {
         cart.push({
             sku: sku,
@@ -1059,17 +1075,23 @@ window.addToCartCT = function(sku, title, price, img, qty = 1) {
             quantity: qty,
             qty: qty,
             imagen: img,
-            image: img
+            image: img,
+            tienda: 'PC Custom Lab'
         });
     }
-    localStorage.setItem('ecosystem_global_cart', JSON.stringify(cart));
-    localStorage.setItem('cart_items', JSON.stringify(cart));
+
+    try {
+        localStorage.setItem('ecosystem_global_cart', JSON.stringify(cart));
+        localStorage.setItem('cart_items', JSON.stringify(cart));
+    } catch(e) {}
+
     syncBoutiqueCart();
-    alert(`🛒 ¡(${qty}) ${title} agregado al carrito!`);
+    try { window.dispatchEvent(new Event('storage')); } catch(e) {}
+    alert(`🛒 ¡(${qty}) ${title} agregado al carrito del ecosistema!`);
 };
 
-window.buyNowCT = function(sku, title, price, img) {
-    window.addToCartCT(sku, title, price, img, 1);
+window.buyNowCT = function(sku, customTitle, customPrice, customImg) {
+    window.addToCartCT(sku, customTitle, customPrice, customImg, 1);
     window.location.href = "checkout.html";
 };
 

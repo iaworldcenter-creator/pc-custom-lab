@@ -669,9 +669,32 @@
         }
 
         // Renderizado de productos en el carrito con FOTO GRANDE y CONTROLES
+                // Recuperación blindada del carrito unificado del ecosistema
         function getCartItems() {
             try {
-                return JSON.parse(localStorage.getItem('ecosystem_global_cart') || localStorage.getItem('cart_items') || '[]');
+                const raw1 = localStorage.getItem('ecosystem_global_cart');
+                const raw2 = localStorage.getItem('cart_items');
+                let items = [];
+                if (raw1) {
+                    try { items = JSON.parse(raw1); } catch(e) {}
+                }
+                if ((!items || items.length === 0) && raw2) {
+                    try { items = JSON.parse(raw2); } catch(e) {}
+                }
+                if (!Array.isArray(items)) return [];
+                return items.map(item => {
+                    return {
+                        sku: item.sku || item.id || 'ITEM-GEN',
+                        nombre: item.nombre || item.title || item.name || 'Producto del Catálogo',
+                        title: item.title || item.nombre || item.name || 'Producto del Catálogo',
+                        precio: parseFloat(item.precio || item.price || 0),
+                        price: parseFloat(item.precio || item.price || 0),
+                        quantity: parseInt(item.quantity || item.qty || 1),
+                        qty: parseInt(item.quantity || item.qty || 1),
+                        imagen: item.imagen || item.image || item.img || './assets/img/placeholders/acc_placeholder.jpg',
+                        tienda: item.tienda || 'Ecosistema Comercial'
+                    };
+                });
             } catch(e) { return []; }
         }
 
