@@ -533,7 +533,7 @@ function renderExactCatalogView() {
             const original = p.precio_original || (price * 1.33);
             const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
             const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
-            const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+            const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`;
             const placeholder = getPlaceholderForCat(cat);
 
             return `
@@ -620,7 +620,7 @@ function renderExactCatalogView() {
             const original = p.precio_original || (price * 1.33);
             const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
             const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
-            const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+            const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`;
             const placeholder = getPlaceholderForCat(cat);
 
             return `
@@ -971,7 +971,7 @@ function initPredictiveSearchEngine() {
                         const price = p.precio_mxn || p.precio;
                         const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
                         const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
-                        const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+                        const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`;
                         const placeholder = getPlaceholderForCat(cat);
 
                         return `
@@ -1077,7 +1077,7 @@ window.addToCartCT = function(sku) {
             store: 'pc-custom-lab',
             storeName: 'PC Custom Lab',
             image: `./assets/img/catalog/${cat}/${sku}.jpg`,
-            cdn_url: `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`,
+            cdn_url: `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`,
             quantity: 1
         });
     }
@@ -1109,7 +1109,7 @@ window.buyNowCT = function(sku) {
             store: 'pc-custom-lab',
             storeName: 'PC Custom Lab',
             image: `./assets/img/catalog/${cat}/${sku}.jpg`,
-            cdn_url: `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`,
+            cdn_url: `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`,
             quantity: 1
         });
     }
@@ -1169,7 +1169,7 @@ window.openProductDetailModal = function(sku) {
     const original = p.precio_original || (price * 1.33);
     const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
     const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
-    const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+    const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`;
     const placeholder = getPlaceholderForCat(cat);
 
     content.innerHTML = `

@@ -709,7 +709,7 @@
                         quantity: qty > 0 ? qty : 1,
                         qty: qty > 0 ? qty : 1,
                         image: item.image || item.imagen || item.img || './assets/img/placeholders/acc_placeholder.jpg',
-                        cdn_url: item.cdn_url || (item.sku ? `https://static.ctonline.mx/imagenes/${item.sku}/${item.sku}_400.jpg` : ''),
+                        cdn_url: item.cdn_url || (item.sku ? `https://static.ctonline.mx/imagenes/${item.sku}/${item.sku}_800.jpg` : ''),
                         store: item.store || 'pc-custom-lab',
                         storeName: item.storeName || 'PC Custom Lab'
                     };
@@ -759,7 +759,7 @@
                 const subtotal = unitPrice * qty;
                 
                 const localImg = p.image || './assets/img/placeholders/acc_placeholder.jpg';
-                const cdnImg = p.cdn_url || `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+                const cdnImg = p.cdn_url || `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`;
                 const placeholder = './assets/img/placeholders/acc_placeholder.jpg';
 
                 return `
