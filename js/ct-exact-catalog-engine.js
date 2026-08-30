@@ -312,27 +312,28 @@ function getPlaceholderForCat(cat) {
         'procesadores': 'cpu_placeholder.jpg',
         'tarjetas_madre': 'mbd_placeholder.jpg',
         'memorias_ram': 'ram_placeholder.jpg',
-        'discos_duros': 'ssd_placeholder.jpg',
+        'almacenamiento_ssd': 'ssd_placeholder.jpg',
+        'tarjetas_video': 'gpu_placeholder.jpg',
         'tarjetas_de_video': 'gpu_placeholder.jpg',
         'gabinetes': 'gab_placeholder.jpg',
         'fuentes_energia': 'psu_placeholder.jpg',
         'enfriamiento': 'cooling_placeholder.jpg',
         'reguladores_ups': 'ups_placeholder.jpg',
         'monitores': 'mon_placeholder.jpg',
-        'mini_pcs_ia': 'minipc_placeholder.jpg',
+        'cables_adaptadores': 'acc_placeholder.jpg',
+        'audio_audifonos': 'elec_placeholder.jpg',
+        'teclados_mouse': 'acc_placeholder.jpg',
+        'laptops_portatiles': 'lap_placeholder.jpg',
         'computadoras_ensambladas': 'pc_placeholder.jpg',
-        'laptops': 'lap_placeholder.jpg',
-        'all_in_one': 'aio_placeholder.jpg',
-        'consumibles': 'toner_placeholder.jpg',
-        'impresoras': 'imp_placeholder.jpg',
-        'accesorios_perifericos': 'acc_placeholder.jpg',
+        'servidores_enterprise': 'minipc_placeholder.jpg',
+        'impresoras_consumibles': 'imp_placeholder.jpg',
         'conectividad_redes': 'redes_placeholder.jpg',
-        'software': 'sof_placeholder.jpg',
+        'software_licencias': 'sof_placeholder.jpg',
         'telefonia_seguridad': 'cctv_placeholder.jpg',
         'punto_de_venta': 'pos_placeholder.jpg',
-        'electronica_consumo': 'elec_placeholder.jpg',
-        'linea_blanca': 'lb_placeholder.jpg',
-        'outlet_liquidaciones': 'outlet_placeholder.jpg'
+        'celulares_tablets': 'lap_placeholder.jpg',
+        'videojuegos_gaming': 'acc_placeholder.jpg',
+        'accesorios_perifericos': 'acc_placeholder.jpg'
     };
     return `./assets/img/placeholders/${map[cat] || 'acc_placeholder.jpg'}`;
 }
@@ -543,35 +544,36 @@ function renderSidebarFacets() {
     if (!root) return;
 
     const block1 = [
-        { id: 'procesadores', name: 'Procesadores (Intel/AMD)', icon: 'fa-microchip' },
+        { id: 'procesadores', name: 'Procesadores (CPUs)', icon: 'fa-microchip' },
         { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', icon: 'fa-chess-board' },
-        { id: 'memorias_ram', name: 'Memorias RAM (DDR4 / DDR5)', icon: 'fa-memory' },
-        { id: 'discos_duros', name: 'Almacenamiento (SSD & HDD)', icon: 'fa-hard-drive' },
-        { id: 'tarjetas_de_video', name: 'Tarjetas de Video (GPUs)', icon: 'fa-vr-cardboard' },
+        { id: 'memorias_ram', name: 'Memorias RAM para PC/Laptop', icon: 'fa-memory' },
+        { id: 'almacenamiento_ssd', name: 'Discos SSD, NVMe y HDDs', icon: 'fa-hard-drive' },
+        { id: 'tarjetas_video', name: 'Tarjetas de Video (GPUs)', icon: 'fa-vr-cardboard' },
         { id: 'gabinetes', name: 'Gabinetes & Chasis Gamer', icon: 'fa-server' },
-        { id: 'fuentes_energia', name: 'Fuentes de Poder (PSU)', icon: 'fa-bolt' },
-        { id: 'enfriamiento', name: 'Enfriamiento y Disipadores', icon: 'fa-fan' },
-        { id: 'reguladores_ups', name: 'Reguladores & No-Breaks', icon: 'fa-car-battery' },
-        { id: 'monitores', name: 'Monitores & Pantallas PC', icon: 'fa-desktop' }
+        { id: 'fuentes_energia', name: 'Fuentes de Poder Certificadas', icon: 'fa-bolt' },
+        { id: 'enfriamiento', name: 'Enfriamiento Líquido & Disipadores', icon: 'fa-fan' },
+        { id: 'reguladores_ups', name: 'Reguladores & No-Breaks (UPS)', icon: 'fa-car-battery' },
+        { id: 'monitores', name: 'Monitores & Pantallas Gamer', icon: 'fa-desktop' }
     ];
 
     const block2 = [
-        { id: 'mini_pcs_ia', name: 'Mini PCs & Servidores IA (NUC)', icon: 'fa-brain' },
-        { id: 'laptops', name: 'Laptops y Portátiles', icon: 'fa-laptop' },
-        { id: 'all_in_one', name: 'Equipos All-in-One e iMac', icon: 'fa-tv' }
+        { id: 'laptops_portatiles', name: 'Laptops y Portátiles', icon: 'fa-laptop' },
+        { id: 'computadoras_ensambladas', name: 'PCs de Escritorio & All-in-One', icon: 'fa-tv' },
+        { id: 'servidores_enterprise', name: 'Servidores Enterprise & Racks', icon: 'fa-brain' }
     ];
 
     const block3 = [
-        { id: 'consumibles', name: 'Tóners, Tintas y Consumibles', icon: 'fa-droplet' },
-        { id: 'impresoras', name: 'Impresoras y Multifuncionales', icon: 'fa-print' },
-        { id: 'accesorios_perifericos', name: 'Teclados, Mouse & Periféricos', icon: 'fa-keyboard' },
+        { id: 'cables_adaptadores', name: 'Cables, Adaptadores & Conectores', icon: 'fa-network-wired' },
+        { id: 'audio_audifonos', name: 'Audio, Diademas & Audífonos', icon: 'fa-headphones' },
+        { id: 'teclados_mouse', name: 'Teclados, Mouse & Periféricos', icon: 'fa-keyboard' },
+        { id: 'impresoras_consumibles', name: 'Impresoras, Tóners & Tintas', icon: 'fa-print' },
         { id: 'conectividad_redes', name: 'Redes & Conectividad WiFi', icon: 'fa-wifi' },
-        { id: 'software', name: 'Software & Licencias Originales', icon: 'fa-compact-disc' },
-        { id: 'telefonia_seguridad', name: 'Telefonía & Videovigilancia (CCTV)', icon: 'fa-video' },
+        { id: 'software_licencias', name: 'Software & Licencias Originales', icon: 'fa-compact-disc' },
+        { id: 'telefonia_seguridad', name: 'Seguridad CCTV & Control Acceso', icon: 'fa-video' },
         { id: 'punto_de_venta', name: 'Punto de Venta (POS)', icon: 'fa-barcode' },
-        { id: 'electronica_consumo', name: 'Audio, Video & Electrónica', icon: 'fa-headphones' },
-        { id: 'linea_blanca', name: 'Línea Blanca & Electrodomésticos', icon: 'fa-blender' },
-        { id: 'outlet_liquidaciones', name: 'Outlet & Liquidaciones', icon: 'fa-percent' }
+        { id: 'celulares_tablets', name: 'Smartphones, Celulares & Tablets', icon: 'fa-mobile-screen-button' },
+        { id: 'videojuegos_gaming', name: 'Consolas & Sillas Gamer', icon: 'fa-gamepad' },
+        { id: 'accesorios_perifericos', name: 'Accesorios & Maletines', icon: 'fa-bag-shopping' }
     ];
 
     const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
