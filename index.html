@@ -175,11 +175,12 @@
                         <!-- Menú Desplegable 'Ordenar por' -->
                         <div class="flex items-center gap-1.5 text-xs font-mono text-slate-400">
                             <span>Ordenar:</span>
-                            <select id="sort-select" onchange="currentSortCriterion=this.value; renderExactCatalogView();" class="bg-slate-950 border border-slate-800 text-white rounded-xl px-2.5 py-1 text-xs outline-none cursor-pointer">
-                                <option value="existencia">Disponibilidad</option>
-                                <option value="precio_asc">Precio: Menor a Mayor</option>
-                                <option value="precio_desc">Precio: Mayor a Menor</option>
-                                <option value="nombre">Nombre A-Z</option>
+                            <select id="sort-select" onchange="window.setSortCriterion(this.value);" class="bg-slate-950 border border-slate-700 text-cyan-300 font-bold rounded-xl px-3 py-1.5 text-xs outline-none cursor-pointer shadow">
+                                <option value="destacados">⭐ Destacados (Fotos Primero)</option>
+                                <option value="precio_desc">💰 Precio: Mayor a Menor ($$$ → $)</option>
+                                <option value="precio_asc">🏷️ Precio: Menor a Mayor ($ → $$$)</option>
+                                <option value="descuento">🔥 Mayor Descuento (-25% Inauguración)</option>
+                                <option value="nombre">🔤 Nombre A-Z</option>
                             </select>
                         </div>
                     </div>
@@ -347,8 +348,8 @@
     
 
 
-    <script src="js/ct-catalog-data.js?v=20260829_2155"></script>
-    <script src="js/ct-exact-catalog-engine.js?v=20260829_2155"></script>
+    <script src="js/ct-catalog-data.js?v=20260829_2220"></script>
+    <script src="js/ct-exact-catalog-engine.js?v=20260829_2220"></script>
     
 </body>
 </html>

@@ -2,14 +2,16 @@
 // MOTOR UNIVERSAL BILINGÜE PC CUSTOM LAB (16,139 PRODUCTOS INDEXADOS)
 // =========================================================================
 
-let currentViewStyle = 'grid'; // 'grid' (5x4) o 'list'
+let currentViewStyle = 'grid';
 let currentPageNumber = 1;
-const productsPerPage = 20; // 5 filas x 4 columnas
-
+let productsPerPage = 24;
 let activeSelectedCategory = 'Todas';
 let activeSelectedBrand = 'Todas';
+let activeMinPrice = 0;
+let activeMaxPrice = Infinity;
+let activeMinDiscount = 0;
 let activeSearchQuery = '';
-let currentSortCriterion = 'existencia';
+let currentSortCriterion = 'destacados';
 let isFullCatalogLoaded = false;
 
 // Normalización de texto sin acentos, mayúsculas o símbolos
@@ -193,6 +195,60 @@ function searchCatalogMaster(query) {
     return scoredResults.map(r => r.product);
 }
 
+
+// =========================================================================
+// CONTROLES DE PRESUPUESTO, DESCUENTOS Y ORDENAMIENTO INTERACTIVO
+// =========================================================================
+
+window.setBudgetPreset = function(min, max) {
+    activeMinPrice = min;
+    activeMaxPrice = max;
+    currentPageNumber = 1;
+    
+    const minInp = document.getElementById("budgetMinInput");
+    const maxInp = document.getElementById("budgetMaxInput");
+    if (minInp) minInp.value = min > 0 ? min : '';
+    if (maxInp) maxInp.value = max < Infinity ? max : '';
+    
+    renderExactCatalogView();
+    window.scrollToResults();
+};
+
+window.applyCustomBudget = function() {
+    const minInp = document.getElementById("budgetMinInput");
+    const maxInp = document.getElementById("budgetMaxInput");
+    
+    const minVal = parseFloat(minInp ? minInp.value : 0) || 0;
+    const maxVal = parseFloat(maxInp && maxInp.value ? maxInp.value : Infinity) || Infinity;
+    
+    activeMinPrice = minVal;
+    activeMaxPrice = maxVal;
+    currentPageNumber = 1;
+    
+    renderExactCatalogView();
+    window.scrollToResults();
+};
+
+window.setSortCriterion = function(criterion) {
+    currentSortCriterion = criterion;
+    currentPageNumber = 1;
+    renderExactCatalogView();
+};
+
+window.setDiscountFilter = function(minPct) {
+    activeMinDiscount = minPct;
+    currentPageNumber = 1;
+    renderExactCatalogView();
+    window.scrollToResults();
+};
+
+window.scrollToResults = function() {
+    const target = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+};
+
 // Inicialización instantánea
 function initFullCatalog() {
     if (window.CT_CATALOG_DATA && Array.isArray(window.CT_CATALOG_DATA) && window.CT_CATALOG_DATA.length > 0) {
@@ -283,26 +339,59 @@ function getFilteredList() {
         ? searchCatalogMaster(activeSearchQuery)
         : [...(window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [])];
 
+    // 1. Filtro por Departamento / Categoría
     if (activeSelectedCategory !== 'Todas') {
         items = items.filter(p => {
             const catClasif = (p.categoria_clasificada || '').toLowerCase();
             return catClasif === activeSelectedCategory.toLowerCase();
         });
-
-        items.sort((a, b) => (a.sort_priority || 1) - (b.sort_priority || 1));
     }
 
+    // 2. Filtro por Marca
     if (activeSelectedBrand !== 'Todas') {
         items = items.filter(p => (p.marca || '').toUpperCase() === activeSelectedBrand.toUpperCase());
     }
 
-    if (currentSortCriterion === 'precio_asc') {
-        items.sort((a, b) => (a.precio_mxn || a.precio || 0) - (b.precio_mxn || b.precio || 0));
-    } else if (currentSortCriterion === 'precio_desc') {
-        items.sort((a, b) => (b.precio_mxn || b.precio || 0) - (a.precio_mxn || a.precio || 0));
-    } else if (currentSortCriterion === 'nombre') {
-        items.sort((a, b) => (a.nombre || '').localeCompare(b.nombre || ''));
+    // 3. Filtro por Presupuesto (Rango de Precios Mínimo y Máximo)
+    if (activeMinPrice > 0 || activeMaxPrice < Infinity) {
+        items = items.filter(p => {
+            const pr = parseFloat(p.precio_mxn || p.precio || 0);
+            return pr >= activeMinPrice && pr <= activeMaxPrice;
+        });
     }
+
+    // 4. Filtro por Descuento Mínimo
+    if (activeMinDiscount > 0) {
+        items = items.filter(p => {
+            const desc = parseFloat(p.descuento_porcentaje || 25);
+            return desc >= activeMinDiscount;
+        });
+    }
+
+    // 5. Ordenamiento Matemático y Regla Foto-First
+    items.sort((a, b) => {
+        // Orden Primario: Los productos con fotografía comprobada van en las primeras páginas (1, 2, 3, 4...)
+        const aHasImg = (a.has_verified_image === true || a.distribuidor === 'CT Internacional') ? 1 : 0;
+        const bHasImg = (b.has_verified_image === true || b.distribuidor === 'CT Internacional') ? 1 : 0;
+        
+        if (aHasImg !== bHasImg) {
+            return bHasImg - aHasImg; // Primero con imagen
+        }
+
+        // Si tienen igual prioridad de imagen, aplicar el criterio seleccionado
+        if (currentSortCriterion === 'precio_asc') {
+            return (a.precio_mxn || a.precio || 0) - (b.precio_mxn || b.precio || 0);
+        } else if (currentSortCriterion === 'precio_desc') {
+            return (b.precio_mxn || b.precio || 0) - (a.precio_mxn || a.precio || 0);
+        } else if (currentSortCriterion === 'descuento') {
+            return (b.descuento_porcentaje || 25) - (a.descuento_porcentaje || 25);
+        } else if (currentSortCriterion === 'nombre') {
+            return (a.nombre || '').localeCompare(b.nombre || '');
+        } else {
+            // Destacados / Relevancia
+            return (a.sort_priority || 1) - (b.sort_priority || 1);
+        }
+    });
 
     return items;
 }
@@ -543,7 +632,9 @@ function renderSidebarFacets() {
     const root = document.getElementById("sidebar-facets-root");
     if (!root) return;
 
+    // BLOQUE 1: COMPUTADORAS COMPLETAS Y COMPONENTES DE ENSAMBLE
     const block1 = [
+        { id: 'computadoras_sistemas', name: '💻 Computadoras, Laptops & All-in-One', icon: 'fa-desktop' },
         { id: 'procesadores', name: 'Procesadores (CPUs)', icon: 'fa-microchip' },
         { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', icon: 'fa-chess-board' },
         { id: 'memorias_ram', name: 'Memorias RAM para PC/Laptop', icon: 'fa-memory' },
@@ -552,20 +643,19 @@ function renderSidebarFacets() {
         { id: 'gabinetes', name: 'Gabinetes & Chasis Gamer', icon: 'fa-server' },
         { id: 'fuentes_energia', name: 'Fuentes de Poder Certificadas', icon: 'fa-bolt' },
         { id: 'enfriamiento', name: 'Enfriamiento Líquido & Disipadores', icon: 'fa-fan' },
-        { id: 'reguladores_ups', name: 'Reguladores & No-Breaks (UPS)', icon: 'fa-car-battery' },
-        { id: 'monitores', name: 'Monitores & Pantallas Gamer', icon: 'fa-desktop' }
+        { id: 'monitores', name: 'Monitores & Pantallas Gamer', icon: 'fa-tv' }
     ];
 
+    // BLOQUE 2: PERIFÉRICOS, CABLES Y AUDIO
     const block2 = [
-        { id: 'laptops_portatiles', name: 'Laptops y Portátiles', icon: 'fa-laptop' },
-        { id: 'computadoras_ensambladas', name: 'PCs de Escritorio & All-in-One', icon: 'fa-tv' },
-        { id: 'servidores_enterprise', name: 'Servidores Enterprise & Racks', icon: 'fa-brain' }
+        { id: 'cables_adaptadores', name: '🔌 Cables, Adaptadores & Conectores', icon: 'fa-network-wired' },
+        { id: 'audio_audifonos', name: '🎧 Audio, Diademas & Audífonos', icon: 'fa-headphones' },
+        { id: 'teclados_mouse', name: 'Teclados, Mouse & Periféricos', icon: 'fa-keyboard' },
+        { id: 'reguladores_ups', name: 'Reguladores & No-Breaks (UPS)', icon: 'fa-car-battery' }
     ];
 
+    // BLOQUE 3: SOLUCIONES, REDES Y SOFTWARE
     const block3 = [
-        { id: 'cables_adaptadores', name: 'Cables, Adaptadores & Conectores', icon: 'fa-network-wired' },
-        { id: 'audio_audifonos', name: 'Audio, Diademas & Audífonos', icon: 'fa-headphones' },
-        { id: 'teclados_mouse', name: 'Teclados, Mouse & Periféricos', icon: 'fa-keyboard' },
         { id: 'impresoras_consumibles', name: 'Impresoras, Tóners & Tintas', icon: 'fa-print' },
         { id: 'conectividad_redes', name: 'Redes & Conectividad WiFi', icon: 'fa-wifi' },
         { id: 'software_licencias', name: 'Software & Licencias Originales', icon: 'fa-compact-disc' },
@@ -619,52 +709,93 @@ function renderSidebarFacets() {
                 </label>
             </div>
 
-            <!-- BLOQUE 1 - COMPONENTES DE ENSAMBLE -->
+            <!-- BLOQUE 1 - COMPUTADORAS & COMPONENTES -->
             <div class="border-b border-slate-800 pb-3">
                 <h3 class="dept-heading text-cyan-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-microchip text-cyan-400" aria-hidden="true"></i> 1. Componentes de Ensamble
+                    <i class="fa-solid fa-microchip text-cyan-400" aria-hidden="true"></i> 1. Computadoras & Ensamble
                 </h3>
                 <div class="space-y-1 text-slate-300">
                     ${block1.map(renderBtn).join('')}
                 </div>
             </div>
 
-            <!-- BLOQUE 2 - SISTEMAS Y EQUIPOS COMPLETOS -->
+            <!-- BLOQUE 2 - CABLES, AUDIO & PERIFÉRICOS -->
             <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-purple-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-cube text-purple-400" aria-hidden="true"></i> 2. Sistemas & Mini PCs IA
+                <h3 class="dept-heading text-emerald-300 font-mono uppercase text-xs font-black mb-2">
+                    <i class="fa-solid fa-plug text-emerald-400" aria-hidden="true"></i> 2. Cables, Audio & Periféricos
                 </h3>
                 <div class="space-y-1 text-slate-300">
                     ${block2.map(renderBtn).join('')}
                 </div>
             </div>
 
-            <!-- BLOQUE 3 - CONSUMIBLES, SOLUCIONES Y ELECTRÓNICA -->
+            <!-- BLOQUE 3 - SOLUCIONES, REDES Y SOFTWARE -->
             <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-amber-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-puzzle-piece text-amber-400" aria-hidden="true"></i> 3. Consumibles & Soluciones
+                <h3 class="dept-heading text-purple-300 font-mono uppercase text-xs font-black mb-2">
+                    <i class="fa-solid fa-puzzle-piece text-purple-400" aria-hidden="true"></i> 3. Soluciones & Redes
                 </h3>
                 <div class="space-y-1 text-slate-300">
                     ${block3.map(renderBtn).join('')}
                 </div>
             </div>
 
-            <!-- 3 TARJETAS DE CONVERSIÓN INTEGRADAS -->
-            <div class="pt-3 space-y-3.5 border-t border-slate-800">
+            <!-- BARRA DE PRESUPUESTO INTERACTIVO Y RANGO DE PRECIO -->
+            <div class="border-b border-slate-800 pb-3.5 space-y-2.5">
+                <h3 class="dept-heading text-amber-300 font-mono uppercase text-xs font-black flex items-center justify-between">
+                    <span><i class="fa-solid fa-calculator text-amber-400 mr-1.5"></i> Tu Presupuesto</span>
+                    <span class="text-[9px] text-slate-400 font-normal">($ MXN)</span>
+                </h3>
                 
-                <!-- TARJETA 1: APP MÓVIL OFICIAL CON QR, GOOGLE PLAY Y APP STORE -->
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <label for="budgetMinInput" class="text-[9px] font-mono text-slate-400 block mb-0.5">Mínimo:</label>
+                        <input type="number" id="budgetMinInput" placeholder="$0" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-1.5 text-xs text-white font-mono outline-none focus:border-cyan-400" />
+                    </div>
+                    <div>
+                        <label for="budgetMaxInput" class="text-[9px] font-mono text-slate-400 block mb-0.5">Máximo:</label>
+                        <input type="number" id="budgetMaxInput" placeholder="Sin límite" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-1.5 text-xs text-white font-mono outline-none focus:border-cyan-400" />
+                    </div>
+                </div>
+
+                <button type="button" onclick="applyCustomBudget()" class="btn-action w-full py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs font-mono uppercase transition cursor-pointer shadow min-h-[36px]">
+                    Filtrar Presupuesto
+                </button>
+
+                <!-- Botones de Presupuesto Rápido -->
+                <div class="flex flex-wrap gap-1 pt-1">
+                    <button type="button" onclick="setBudgetPreset(0, 1000)" class="px-2 py-1 bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white rounded text-[10px] font-mono transition cursor-pointer">&lt; $1,000</button>
+                    <button type="button" onclick="setBudgetPreset(1000, 5000)" class="px-2 py-1 bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white rounded text-[10px] font-mono transition cursor-pointer">$1k - $5k</button>
+                    <button type="button" onclick="setBudgetPreset(5000, 15000)" class="px-2 py-1 bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white rounded text-[10px] font-mono transition cursor-pointer">$5k - $15k</button>
+                    <button type="button" onclick="setBudgetPreset(15000, 50000)" class="px-2 py-1 bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white rounded text-[10px] font-mono transition cursor-pointer">$15k - $50k</button>
+                    <button type="button" onclick="setBudgetPreset(50000, 9999999)" class="px-2 py-1 bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white rounded text-[10px] font-mono transition cursor-pointer">&gt; $50k</button>
+                </div>
+            </div>
+
+            <!-- FILTRO DE DESCUENTOS Y OFERTAS -->
+            <div class="border-b border-slate-800 pb-3 space-y-1.5">
+                <h3 class="dept-heading text-red-400 font-mono uppercase text-xs font-black flex items-center gap-1.5">
+                    <i class="fa-solid fa-tags text-red-400"></i> Descuentos & Ofertas
+                </h3>
+                <div class="grid grid-cols-2 gap-1.5 text-[10.5px] font-mono">
+                    <button type="button" onclick="setDiscountFilter(0)" class="px-2 py-1.5 rounded-lg bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-300 text-left transition cursor-pointer">Todos</button>
+                    <button type="button" onclick="setDiscountFilter(25)" class="px-2 py-1.5 rounded-lg bg-red-950/60 hover:bg-red-900/60 border border-red-500/50 text-red-300 text-left font-bold transition cursor-pointer">-25% Apertura</button>
+                </div>
+            </div>
+
+            <!-- 3 TARJETAS DE CONVERSIÓN INTEGRADAS -->
+            <div class="pt-2 space-y-3.5 border-t border-slate-800">
+                
+                <!-- TARJETA 1: APP MÓVIL CON QR -->
                 <div class="bg-slate-950/90 border border-cyan-500/40 rounded-2xl p-3.5 text-center shadow-lg space-y-2.5">
                     <span class="text-[11px] font-mono font-black text-cyan-300 uppercase tracking-wider flex items-center justify-center gap-1.5">
                         <i class="fa-solid fa-mobile-screen-button text-cyan-400"></i> App Móvil & Pedidos
                     </span>
                     
-                    <!-- Código QR Oficial -->
                     <div class="w-32 h-32 mx-auto bg-white p-2 rounded-2xl shadow-md flex items-center justify-center">
                         <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://iaworldcenter-creator.github.io/pc-custom-lab/&color=0-0-0&bgcolor=255-255-255" alt="Código QR Descargar App" width="120" height="120" class="w-full h-full object-contain" />
                     </div>
-                    <span class="text-[9.5px] font-mono text-slate-400 block">Escanea con la cámara de tu celular</span>
+                    <span class="text-[9.5px] font-mono text-slate-400 block">Escanea con tu celular</span>
 
-                    <!-- Botones de Tiendas de Aplicaciones: Google Play & App Store -->
                     <div class="grid grid-cols-2 gap-2 pt-1">
                         <a href="https://play.google.com/store" target="_blank" rel="noopener" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-400 text-white rounded-xl p-2 flex flex-col items-center justify-center transition shadow group min-h-[44px]">
                             <i class="fa-brands fa-google-play text-cyan-400 text-sm mb-0.5 group-hover:scale-110 transition"></i>
@@ -678,14 +809,13 @@ function renderSidebarFacets() {
                         </a>
                     </div>
 
-                    <!-- Acceso Directo por WhatsApp -->
                     <a href="https://wa.me/523337271440" target="_blank" rel="noopener" class="w-full bg-slate-900 hover:bg-slate-800 text-emerald-300 hover:text-white border border-emerald-500/40 hover:border-emerald-400 font-mono font-bold rounded-xl text-[10.5px] uppercase py-2.5 flex items-center justify-center gap-1.5 transition shadow min-h-[40px]">
                         <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
                         <span>▶ Abrir App Oficial</span>
                     </a>
                 </div>
 
-                <!-- TARJETA 2: CREADO CON GOOGLE GEMINI (ABAJO DEL CÓDIGO QR) -->
+                <!-- TARJETA 2: CREADO CON GOOGLE GEMINI -->
                 <div class="bg-slate-950/90 border border-blue-500/40 hover:border-blue-400 rounded-2xl p-3.5 shadow-lg transition text-left space-y-2">
                     <span class="text-[11px] font-mono font-bold text-blue-400 uppercase tracking-wider flex items-center gap-1.5">
                         <i class="fa-solid fa-wand-magic-sparkles text-blue-400" aria-hidden="true"></i> Creado con Google Gemini
@@ -693,16 +823,13 @@ function renderSidebarFacets() {
                     <div class="text-white font-bold text-xs leading-snug">
                         Inteligencia Artificial para tu Negocio
                     </div>
-                    <p class="text-slate-300 text-[10px] leading-tight">
-                        Concebido y programado con la IA más avanzada de Google para crear tiendas de ultra velocidad.
-                    </p>
                     <a href="https://gemini.google.com/" target="_blank" rel="noopener" aria-label="Suscribirse a Google Gemini" class="btn-action w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[10.5px] font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition shadow min-h-[42px]">
                         <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                         <span>SUSCRÍBETE A GOOGLE GEMINI</span>
                     </a>
                 </div>
 
-                <!-- TARJETA 3: DESARROLLADO POR ANTI-GRAVITY (ABAJO DE GEMINI) -->
+                <!-- TARJETA 3: DESARROLLADO POR ANTI-GRAVITY -->
                 <div class="bg-slate-950/90 border border-amber-500/40 hover:border-amber-400 rounded-2xl p-3.5 shadow-lg transition text-left space-y-2">
                     <span class="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
                         <i class="fa-solid fa-robot text-amber-400" aria-hidden="true"></i> Desarrollado por Anti-Gravity
@@ -710,9 +837,6 @@ function renderSidebarFacets() {
                     <div class="text-white font-bold text-xs leading-snug">
                         Agente Autónomo de Software
                     </div>
-                    <p class="text-slate-300 text-[10px] leading-tight">
-                        Desarrollado, optimizado y desplegado por Anti-Gravity Copilot. Crea tus páginas web gratis.
-                    </p>
                     <a href="https://antigravity.google/download" target="_blank" rel="noopener" aria-label="Descargar Anti-Gravity Gratis" class="btn-action w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black rounded-xl text-[10.5px] font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition shadow min-h-[42px]">
                         <i class="fa-solid fa-download text-[10px]"></i>
                         <span>DESCARGAR Y PRUEBA ANTI-GRAVITY</span>
