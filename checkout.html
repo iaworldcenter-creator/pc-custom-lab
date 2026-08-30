@@ -787,7 +787,7 @@
                                 <span>SKU: <strong class="text-cyan-300 font-bold">${sku}</strong></span>
                                 <span>•</span>
                                 <span class="text-emerald-400 font-bold"><i class="fa-solid fa-shield-check"></i> Garantía 48h / 1 Año</span>
-                                ${hasWholesale ? '<span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[9px] px-1.5 py-0.5 rounded font-black uppercase">Mayoreo -7% Aplicado (10+ pzs)</span>' : ''}
+                                ${hasWholesale ? '<span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[9px] px-1.5 py-0.5 rounded font-black uppercase">Mayoreo Especial (10+ pzs)</span>' : ''}
                             </div>
                             <div class="text-xs font-mono font-black text-emerald-300">
                                 Precio Unitario: $${unitPrice.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
@@ -854,7 +854,7 @@
             items.forEach(i => {
                 const p = parseFloat(i.price || i.precio || 0);
                 const q = parseInt(i.quantity || i.qty || 1);
-                subtotal += (q >= 10 ? p * 0.93 : p) * q;
+                subtotal += (q >= 10 ? p * 0.9143 : p) * q;
             });
 
             const cashback = subtotal * 0.05;
@@ -950,7 +950,7 @@
             items.forEach(i => {
                 const p = parseFloat(i.price || i.precio || 0);
                 const q = parseInt(i.quantity || i.qty || 1);
-                subtotal += (q >= 10 ? p * 0.93 : p) * q;
+                subtotal += (q >= 10 ? p * 0.9143 : p) * q;
             });
             const zoneSelect = document.getElementById("checkoutZoneSelect");
             const shipping = subtotal >= 3000 ? 0 : parseFloat(zoneSelect ? zoneSelect.value : (subtotal > 2000 ? 180 : 35));

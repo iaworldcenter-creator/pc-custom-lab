@@ -6,6 +6,7 @@ let currentViewStyle = 'grid';
 let currentPageNumber = 1;
 let productsPerPage = 24;
 let activeSelectedCategory = 'Todas';
+let activeSelectedChip = 'Todos';
 let activeSelectedBrand = 'Todas';
 let activeMinPrice = 0;
 let activeMaxPrice = Infinity;
@@ -249,6 +250,14 @@ window.scrollToResults = function() {
     }
 };
 
+
+window.selectSubChipFilter = function(chipId) {
+    activeSelectedChip = chipId;
+    currentPageNumber = 1;
+    renderExactCatalogView();
+    window.scrollToResults();
+};
+
 // Inicialización instantánea
 function initFullCatalog() {
     if (window.CT_CATALOG_DATA && Array.isArray(window.CT_CATALOG_DATA) && window.CT_CATALOG_DATA.length > 0) {
@@ -269,6 +278,7 @@ function initFullCatalog() {
 // Selección de categorías y auto-scroll instantáneo en celular y desktop
 window.selectCategoryFacet = function(catId) {
     activeSelectedCategory = catId;
+    activeSelectedChip = 'Todos';
     activeSelectedBrand = 'Todas';
     activeSearchQuery = '';
     currentPageNumber = 1;
@@ -345,6 +355,11 @@ function getFilteredList() {
             const catClasif = (p.categoria_clasificada || '').toLowerCase();
             return catClasif === activeSelectedCategory.toLowerCase();
         });
+
+        // Filtro por sub-chip rápido (ej. HDMI, DisplayPort, Diademas)
+        if (activeSelectedChip !== 'Todos') {
+            items = items.filter(p => (p.chip_filter || '').toLowerCase() === activeSelectedChip.toLowerCase());
+        }
     }
 
     // 2. Filtro por Marca
@@ -428,6 +443,50 @@ function getPlaceholderForCat(cat) {
 }
 
 function renderExactCatalogView() {
+
+    // Renderizar barra de chips si estamos en Cables o Audio
+    let chipsHtml = '';
+    if (activeSelectedCategory === 'cables_adaptadores') {
+        const cableChips = [
+            { id: 'Todos', label: 'Todos los Cables' },
+            { id: 'hdmi', label: 'HDMI' },
+            { id: 'displayport', label: 'DisplayPort' },
+            { id: 'usb', label: 'USB-C / USB' },
+            { id: 'red', label: 'Red / Cat6' },
+            { id: 'impresora', label: 'Impresora / Paralelo' },
+            { id: 'vga_dvi', label: 'VGA / DVI' },
+            { id: 'poder', label: 'Alimentación' },
+            { id: 'adaptadores', label: 'Adaptadores & Coples' }
+        ];
+        chipsHtml = `
+            <div class="w-full flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-2.5 pt-1">
+                ${cableChips.map(c => `
+                    <button type="button" onclick="selectSubChipFilter('${c.id}')" class="btn-action px-3 py-1.5 rounded-xl font-mono text-[11px] font-bold shrink-0 transition cursor-pointer border ${activeSelectedChip === c.id ? 'bg-cyan-500 text-slate-950 border-cyan-400 shadow-lg shadow-cyan-500/20' : 'bg-slate-900 hover:bg-slate-800 text-slate-300 border-slate-800'}">
+                        ${c.label}
+                    </button>
+                `).join('')}
+            </div>
+        `;
+    } else if (activeSelectedCategory === 'audio_audifonos') {
+        const audioChips = [
+            { id: 'Todos', label: 'Todo Audio' },
+            { id: 'diademas', label: 'Diademas & Headsets Gamer' },
+            { id: 'bluetooth', label: 'Bluetooth / TWS' },
+            { id: 'bocinas', label: 'Bocinas & Parlantes' },
+            { id: 'microfonos', label: 'Micrófonos' },
+            { id: 'auriculares', label: 'Auriculares In-Ear' }
+        ];
+        chipsHtml = `
+            <div class="w-full flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-2.5 pt-1">
+                ${audioChips.map(c => `
+                    <button type="button" onclick="selectSubChipFilter('${c.id}')" class="btn-action px-3 py-1.5 rounded-xl font-mono text-[11px] font-bold shrink-0 transition cursor-pointer border ${activeSelectedChip === c.id ? 'bg-cyan-500 text-slate-950 border-cyan-400 shadow-lg shadow-cyan-500/20' : 'bg-slate-900 hover:bg-slate-800 text-slate-300 border-slate-800'}">
+                        ${c.label}
+                    </button>
+                `).join('')}
+            </div>
+        `;
+    }
+
     const container = document.getElementById("products-grid-container");
     const resultsCountTxt = document.getElementById("results-count-display");
     if (!container) return;
@@ -441,13 +500,15 @@ function renderExactCatalogView() {
     const pageItems = filtered.slice(startIdx, startIdx + productsPerPage);
 
     if (resultsCountTxt) {
+        let titleTxt = '';
         if (activeSearchQuery) {
-            resultsCountTxt.innerHTML = `Búsqueda: "${activeSearchQuery}" <span class="text-slate-400 font-normal">(${totalCount.toLocaleString('es-MX')} productos)</span>`;
+            titleTxt = `Búsqueda: "${activeSearchQuery}" <span class="text-slate-400 font-normal">(${totalCount.toLocaleString('es-MX')} productos)</span>`;
         } else if (activeSelectedCategory !== 'Todas') {
-            resultsCountTxt.innerHTML = `${activeSelectedCategory.replace(/_/g, ' ').toUpperCase()} <span class="text-slate-400 font-normal">(${startIdx + 1}-${Math.min(startIdx + productsPerPage, totalCount)} de ${totalCount.toLocaleString('es-MX')})</span>`;
+            titleTxt = `${activeSelectedCategory.replace(/_/g, ' ').toUpperCase()} <span class="text-slate-400 font-normal">(${startIdx + 1}-${Math.min(startIdx + productsPerPage, totalCount)} de ${totalCount.toLocaleString('es-MX')})</span>`;
         } else {
-            resultsCountTxt.innerHTML = `Aparador Principal <span class="text-slate-400 font-normal">(${startIdx + 1}-${Math.min(startIdx + productsPerPage, totalCount)} de ${totalCount.toLocaleString('es-MX')})</span>`;
+            titleTxt = `Aparador Principal <span class="text-slate-400 font-normal">(${startIdx + 1}-${Math.min(startIdx + productsPerPage, totalCount)} de ${totalCount.toLocaleString('es-MX')})</span>`;
         }
+        resultsCountTxt.innerHTML = titleTxt + (chipsHtml ? `<div class="mt-2 w-full">${chipsHtml}</div>` : '');
     }
 
     renderPaginationBar(totalPages);
@@ -632,38 +693,38 @@ function renderSidebarFacets() {
     const root = document.getElementById("sidebar-facets-root");
     if (!root) return;
 
-    // BLOQUE 1: COMPUTADORAS COMPLETAS Y COMPONENTES DE ENSAMBLE
+    // BLOQUE 1: ENSAMBLE DE HARDWARE & COMPUTADORAS (ORDEN PRIORITARIO)
     const block1 = [
-        { id: 'computadoras_sistemas', name: '💻 Computadoras, Laptops & All-in-One', icon: 'fa-desktop' },
-        { id: 'procesadores', name: 'Procesadores (CPUs)', icon: 'fa-microchip' },
-        { id: 'tarjetas_madre', name: 'Tarjetas Madre (Motherboards)', icon: 'fa-chess-board' },
-        { id: 'memorias_ram', name: 'Memorias RAM para PC/Laptop', icon: 'fa-memory' },
-        { id: 'almacenamiento_ssd', name: 'Discos SSD, NVMe y HDDs', icon: 'fa-hard-drive' },
-        { id: 'tarjetas_video', name: 'Tarjetas de Video (GPUs)', icon: 'fa-vr-cardboard' },
-        { id: 'gabinetes', name: 'Gabinetes & Chasis Gamer', icon: 'fa-server' },
-        { id: 'fuentes_energia', name: 'Fuentes de Poder Certificadas', icon: 'fa-bolt' },
-        { id: 'enfriamiento', name: 'Enfriamiento Líquido & Disipadores', icon: 'fa-fan' },
-        { id: 'monitores', name: 'Monitores & Pantallas Gamer', icon: 'fa-tv' }
+        { id: 'procesadores', name: '⚡ Procesadores (Intel / AMD)', icon: 'fa-microchip' },
+        { id: 'tarjetas_madre', name: '🧩 Tarjetas Madre (Motherboards)', icon: 'fa-chess-board' },
+        { id: 'memorias_ram', name: '🧠 Memorias RAM para PC/Laptop', icon: 'fa-memory' },
+        { id: 'almacenamiento_ssd', name: '💽 Discos SSD NVMe & HDDs', icon: 'fa-hard-drive' },
+        { id: 'tarjetas_video', name: '🎮 Tarjetas de Video (GPUs)', icon: 'fa-vr-cardboard' },
+        { id: 'gabinetes', name: '🖥️ Gabinetes & Chasis Gamer', icon: 'fa-server' },
+        { id: 'fuentes_energia', name: '🔌 Fuentes de Poder Certificadas', icon: 'fa-bolt' },
+        { id: 'enfriamiento', name: '❄️ Enfriamiento Líquido & Disipadores', icon: 'fa-fan' },
+        { id: 'monitores', name: '🖥️ Monitores & Pantallas PC', icon: 'fa-desktop' },
+        { id: 'teclados_mouse', name: '⌨️ Teclados, Mouse & Periféricos', icon: 'fa-keyboard' },
+        { id: 'computadoras_sistemas', name: '💻 Computadoras Completas & Laptops', icon: 'fa-laptop-code' }
     ];
 
-    // BLOQUE 2: PERIFÉRICOS, CABLES Y AUDIO
+    // BLOQUE 2: CABLES, AUDIO & CONECTIVIDAD (DONDE DESTACA INTCOMEX)
     const block2 = [
         { id: 'cables_adaptadores', name: '🔌 Cables, Adaptadores & Conectores', icon: 'fa-network-wired' },
         { id: 'audio_audifonos', name: '🎧 Audio, Diademas & Audífonos', icon: 'fa-headphones' },
-        { id: 'teclados_mouse', name: 'Teclados, Mouse & Periféricos', icon: 'fa-keyboard' },
-        { id: 'reguladores_ups', name: 'Reguladores & No-Breaks (UPS)', icon: 'fa-car-battery' }
+        { id: 'reguladores_ups', name: '🔋 Reguladores & No-Breaks (UPS)', icon: 'fa-car-battery' },
+        { id: 'conectividad_redes', name: '🌐 Redes & Conectividad WiFi', icon: 'fa-wifi' }
     ];
 
-    // BLOQUE 3: SOLUCIONES, REDES Y SOFTWARE
+    // BLOQUE 3: SOLUCIONES CORPORATIVAS, SOFTWARE & POS
     const block3 = [
-        { id: 'impresoras_consumibles', name: 'Impresoras, Tóners & Tintas', icon: 'fa-print' },
-        { id: 'conectividad_redes', name: 'Redes & Conectividad WiFi', icon: 'fa-wifi' },
-        { id: 'software_licencias', name: 'Software & Licencias Originales', icon: 'fa-compact-disc' },
-        { id: 'telefonia_seguridad', name: 'Seguridad CCTV & Control Acceso', icon: 'fa-video' },
-        { id: 'punto_de_venta', name: 'Punto de Venta (POS)', icon: 'fa-barcode' },
-        { id: 'celulares_tablets', name: 'Smartphones, Celulares & Tablets', icon: 'fa-mobile-screen-button' },
-        { id: 'videojuegos_gaming', name: 'Consolas & Sillas Gamer', icon: 'fa-gamepad' },
-        { id: 'accesorios_perifericos', name: 'Accesorios & Maletines', icon: 'fa-bag-shopping' }
+        { id: 'impresoras_consumibles', name: '🖨️ Impresoras, Tóners & Tintas', icon: 'fa-print' },
+        { id: 'software_licencias', name: '💿 Software & Licencias Originales', icon: 'fa-compact-disc' },
+        { id: 'telefonia_seguridad', name: '📹 Seguridad CCTV & Control Acceso', icon: 'fa-video' },
+        { id: 'punto_de_venta', name: '🏷️ Punto de Venta (POS)', icon: 'fa-barcode' },
+        { id: 'celulares_tablets', name: '📱 Smartphones, Celulares & Tablets', icon: 'fa-mobile-screen-button' },
+        { id: 'videojuegos_gaming', name: '🕹️ Consolas & Sillas Gamer', icon: 'fa-gamepad' },
+        { id: 'accesorios_perifericos', name: '🎒 Accesorios & Maletines', icon: 'fa-bag-shopping' }
     ];
 
     const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
