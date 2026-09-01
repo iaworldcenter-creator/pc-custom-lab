@@ -416,6 +416,7 @@ function getPlaceholderForCat(cat) {
         'procesadores': 'cpu_placeholder.jpg',
         'tarjetas_madre': 'mbd_placeholder.jpg',
         'memorias_ram': 'ram_placeholder.jpg',
+        'almacenamiento_flash': 'ssd_placeholder.jpg',
         'almacenamiento_ssd': 'ssd_placeholder.jpg',
         'tarjetas_video': 'gpu_placeholder.jpg',
         'tarjetas_de_video': 'gpu_placeholder.jpg',
