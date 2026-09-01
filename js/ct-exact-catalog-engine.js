@@ -428,11 +428,13 @@ function getPlaceholderForCat(cat) {
         'audio_audifonos': 'elec_placeholder.jpg',
         'teclados_mouse': 'acc_placeholder.jpg',
         'laptops_portatiles': 'lap_placeholder.jpg',
+        'computadoras_sistemas': 'pc_placeholder.jpg',
         'computadoras_ensambladas': 'pc_placeholder.jpg',
         'servidores_enterprise': 'minipc_placeholder.jpg',
         'impresoras_consumibles': 'imp_placeholder.jpg',
         'conectividad_redes': 'redes_placeholder.jpg',
         'software_licencias': 'sof_placeholder.jpg',
+        'seguridad_cctv': 'cctv_placeholder.jpg',
         'telefonia_seguridad': 'cctv_placeholder.jpg',
         'punto_de_venta': 'pos_placeholder.jpg',
         'celulares_tablets': 'lap_placeholder.jpg',
@@ -441,6 +443,27 @@ function getPlaceholderForCat(cat) {
     };
     return `./assets/img/placeholders/${map[cat] || 'acc_placeholder.jpg'}`;
 }
+
+window.handleProductImgError = function(imgEl, sku, cat) {
+    if (!imgEl) return;
+    const step = parseInt(imgEl.getAttribute('data-err-step') || '0', 10);
+    const fallbacks = [
+        `https://static.ctonline.mx/imagenes/${sku}/${sku}_full.jpg`,
+        `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`,
+        `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`,
+        `https://d22k14p2jfj20i.cloudfront.net/items/${sku}.jpg`,
+        `https://static.ctonline.mx/img/Thumbs/${sku}_100.jpg`,
+        getPlaceholderForCat(cat)
+    ];
+
+    if (step < fallbacks.length) {
+        imgEl.setAttribute('data-err-step', (step + 1).toString());
+        imgEl.src = fallbacks[step];
+    } else {
+        imgEl.onerror = null;
+        imgEl.src = getPlaceholderForCat(cat);
+    }
+};
 
 function renderExactCatalogView() {
 
@@ -556,7 +579,7 @@ function renderExactCatalogView() {
                                 loading="lazy" 
                                 decoding="async" 
                                 class="w-full h-full object-contain group-hover:scale-105 transition duration-200" 
-                                onerror="this.onerror=null; if (this.src.indexOf('.webp') !== -1) { this.src='${cdnImg}'; } else if (this.src.indexOf('_full.jpg') !== -1) { this.src='${cdnImg400}'; } else if (this.src.indexOf('_400.jpg') !== -1) { this.src='${cdnThumb}'; } else if (this.src.indexOf('Thumbs') !== -1) { this.src='${cdnCloudfront}'; } else { this.src='${placeholder}'; }"
+                                onerror="window.handleProductImgError(this, '${sku}', '${cat}')"
                             />
                         </div>
 
@@ -622,14 +645,13 @@ function renderExactCatalogView() {
             const price = p.precio_mxn || p.precio;
             const original = p.precio_original || (price * 1.33);
             const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
-            const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
-            const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`;
+            const localImg = `assets/img/${sku}.webp`;
             const placeholder = getPlaceholderForCat(cat);
 
             return `
                 <article class="bg-slate-900/95 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition group shadow-xl relative overflow-hidden text-slate-100">
                     <div class="w-24 h-24 sm:w-28 sm:h-28 bg-slate-950 rounded-xl p-2 shrink-0 flex items-center justify-center cursor-pointer" onclick="openProductDetailModal('${sku}')">
-                        <img src="${localImg}" alt="${title}" width="120" height="120" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='${cdnImg}'; } else { this.src='${placeholder}'; }" />
+                        <img src="${localImg}" alt="${title}" width="120" height="120" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${sku}', '${cat}')" />
                     </div>
                     <div class="flex-1 min-w-0 text-left">
                         <span class="text-[10px] font-mono text-cyan-400 font-bold uppercase tracking-wider block mb-1">${cat.replace(/_/g, ' ')} • SKU: ${sku}</span>
@@ -974,14 +996,13 @@ function initPredictiveSearchEngine() {
                         const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
                         const price = p.precio_mxn || p.precio;
                         const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
-                        const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
-                        const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`;
+                        const localImg = `assets/img/${sku}.webp`;
                         const placeholder = getPlaceholderForCat(cat);
 
                         return `
                             <div class="flex items-center justify-between gap-3 p-3 hover:bg-slate-850 transition cursor-pointer group min-h-[48px]" onclick="openProductDetailModal('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" role="button" tabindex="0" aria-label="Ver detalle de ${title}">
                                 <div class="w-12 h-12 bg-slate-950 rounded-xl p-1 shrink-0 border border-slate-800 group-hover:border-cyan-400/50 flex items-center justify-center">
-                                    <img src="${localImg}" alt="${title}" width="48" height="48" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='${cdnImg}'; } else { this.src='${placeholder}'; }" />
+                                    <img src="${localImg}" alt="${title}" width="48" height="48" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${sku}', '${cat}')" />
                                 </div>
                                 <div class="flex-1 min-w-0 text-left">
                                     <div class="text-xs font-bold text-white group-hover:text-cyan-300 transition truncate">${title}</div>
@@ -1191,7 +1212,7 @@ window.openProductDetailModal = function(sku) {
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="w-full aspect-square bg-slate-950 rounded-2xl p-4 flex items-center justify-center border border-slate-800">
-                <img src="${localImg}" alt="${title}" width="400" height="400" class="w-full h-full object-contain" onerror="this.onerror=null; if (this.src.indexOf('.webp') !== -1) { this.src='${cdnImg}'; } else if (this.src.indexOf('_full.jpg') !== -1) { this.src='${cdnImg400}'; } else if (this.src.indexOf('_400.jpg') !== -1) { this.src='${cdnThumb}'; } else if (this.src.indexOf('Thumbs') !== -1) { this.src='${cdnCloudfront}'; } else { this.src='${placeholder}'; }" />
+                <img src="${localImg}" alt="${title}" width="400" height="400" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${sku}', '${cat}')" />
             </div>
 
             <div class="flex flex-col justify-between space-y-4">
