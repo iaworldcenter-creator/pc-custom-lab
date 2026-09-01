@@ -1172,8 +1172,11 @@ window.openProductDetailModal = function(sku) {
     const price = p.precio_mxn || p.precio || 0;
     const original = p.precio_original || (price * 1.33);
     const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
-    const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
-    const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`;
+    const localImg = `assets/img/${sku}.webp`;
+    const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_full.jpg`;
+    const cdnImg400 = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+    const cdnThumb = `https://static.ctonline.mx/img/Thumbs/${sku}_100.jpg`;
+    const cdnCloudfront = `https://d22k14p2jfj20i.cloudfront.net/items/${sku}.jpg`;
     const placeholder = getPlaceholderForCat(cat);
 
     content.innerHTML = `
