@@ -1,0 +1,217 @@
+﻿SKU,Marca,Categoria,Nombre,Motivo
+CPUINT4550,INTEL,procesadores,"Procesador Intel® Core™ i7-14700F (14.ª generación), sin procesador gráfico. Con tecnología Intel® Turbo Boost Max 3.0, compatibilidad con P",HTTP Error 404
+CPUINT4540,INTEL,procesadores,"Procesador Intel® Core™ i7-14700 (14.ª generación). Con tecnología Intel® Turbo Boost Max 3.0, compatibilidad con PCIe 5.0 y 4.0, compatibil",HTTP Error 404
+CPUINT4570,INTEL,procesadores,"Procesador Intel® Core™ i9-14900F (14.ª generación), sin procesador gráfico. Con Intel® Thermal Velocity Boost, Intel® Turbo Boost Max Techn",HTTP Error 404
+CPUINT4560,INTEL,procesadores,"Procesador Intel® Core™ i9-14900 (14.ª generación). Con Intel® Thermal Velocity Boost, Intel® Turbo Boost Max Technology 3.0, compatibilidad",HTTP Error 404
+CPUINT4520,INTEL,procesadores,"Procesador Intel® Core™ i5-14400 (14.ª generación). Con compatibilidad con PCIe 5.0 y 4.0, compatibilidad con DDR5 y DDR4, los procesadores ",HTTP Error 404
+CPUINT5090,INTEL,procesadores,"Procesador Intel i5-14400 CM8071504821112, VERSION TRAY - SIN DISIPADOR, SIN CAJA,  10 núcleos, 16 subprocesos, 2.5 GHz base y 4.7 GHz en tu",HTTP Error 404
+CPUINT5020,INTEL,procesadores,"Procesador Intel i9-12900F BX8071512900F, SIN GRAFICOS - INCLUYE DISIPADOR, 16 núcleos, 24 subprocesos, 2.40 GHz base y 5.10 GHz en turbo. 3",HTTP Error 404
+CPUINT4910,INTEL,procesadores,"Procesador Intel® Core™ i5-12400 VERSION TRAY - SIN DISIPADOR LGA 1700, 18MB caché, hasta 4.40 Ghz. 6 núcleos, compatible con memorias DDR4 ",HTTP Error 404
+CPUAMD2050,AMD,procesadores,Procesador AMD ATHLON 3000G RADEON VEGA Procesadores AMD Athlon Línea de productos Procesadores de escritorio AMD Athlon con gráficos Radeon,HTTP Error 404
+CPUAMD2540,AMD,procesadores,Procesador RYZEN 3 4100 4 CORE 4GHZ RETAIL Plataforma Computadora de escritorio Familia de productos Procesadores AMD Ryzen Línea de product,HTTP Error 404
+CPUAMD2000,AMD,procesadores,Procesador AMD RYZEN 3 3200G SPIRE COOLER RADEON Procesador en caja Familia de productos Procesadores AMD Ryzen Línea de producto Procesador,HTTP Error 404
+CPUAMD2140,AMD,procesadores,"Procesador AMD Ryzen 5 5600X, with Wraith Spire cooler Socket AM4. 6 núcleos de CPU, 12 hilos, Reloj base 3.7GHz, Reloj de aumento máx. Hast",HTTP Error 404
+CPUAMD2660,AMD,procesadores,"AMD RYZEN 7 5700, familia de productos AMD Ryzen™, línea de productos AMD Ryzen™ 7, cuenta con 8 núcleos, 16 hilos, reloj base de 3,7 GHz má",HTTP Error 404
+CPUAMD2880,AMD,procesadores,"AMD RYZEN 5 9600, familia Ryzen, serie Ryzen 9000 Series, Zen 5, 6 núcleos del CPU y 12 subprocesos, reloj base 3.8 GHz, reloj turbo máximo ",HTTP Error 404
+CPUAMD2640,AMD,procesadores,"AMD RYZEN 7 7800X3D 8 CORE RETAIL, familia de productos Ryzen, línea de productos Ryzen 7000 Series, socket AM5, 8 núcleos de CPU, 16 hilos,",HTTP Error 404
+CPUAMD2170,AMD,procesadores,"Procesador AMD Ryzen 9 5950X AMD zen 3core architecture, Socket AM4, 3.4GHz, 16 Núcleos, 8MB Caché -NO Incluye Disipador-No incluy graficos ",HTTP Error 404
+CPUAMD2460,AMD,procesadores,Procesador AMD RYZEN 7 5800X3D Especificaciones generales Plataforma Computadora de escritorio Familia de productos Procesadores AMD Ryzen L,HTTP Error 404
+CPUAMD2850,AMD,procesadores,"AMD RYZEN 9 9900X3D, familia ryzen, serie Ryzen 9000 serie, 12 núcleos de CPU, 24 subprocesos, socket AM5, tarjetas madres compatibles A620 ",HTTP Error 404
+CPUAMD2450,AMD,procesadores,Procesador AMD RYZEN 9 7900X3D Plataforma Computadora de escritorio Familia de productos Procesadores AMD Ryzen Línea de productos Procesado,HTTP Error 404
+CPUAMD2690,AMD,procesadores,"AMD RYZEN Threadripper 7960X, Familia de productos AMD Ryzen™, línea de productos AMD Ryzen™ Threadripper™, 24 núcleos de CPU, 48 hilos, rel",HTTP Error 404
+CPUAMD2620,AMD,procesadores,"AMD RYZEN THREDRIPPER PRO 7970X, familia de productos Procesadores AMD Ryzen™, línea de productos Procesadores AMD Ryzen™ Threadripper™, núc",HTTP Error 404
+CPUAMD2590,AMD,procesadores,"AMD RYZEN THREDRIPPER PRO 7995WX, familia de productos Procesadores AMD Ryzen™ PRO, línea de producto AMD Ryzen™ Threadripper™ PRO Serie 700",HTTP Error 404
+VENITL280,GENERICO,gabinetes,"Ventilador para Fuentes de Poder/Gabinetes (700955) 80 mm, 3 pines, rodamientos tipo sleeve.",HTTP Error 404
+VENITL040,GENERICO,gabinetes,"Ventilador de fuente de poder/gabinetes, 8mm, 4 pines, rodamiento tipo SLEEVE (700320)",HTTP Error 404
+ACCITL420,GENERICO,componentes_ensamble,"Pasta Térmica para CPU, 1.5 Gr. Para inyectar (701662)",HTTP Error 404
+ACCITL2450,GENERICO,componentes_ensamble,"Pasta Térmica para CPU, MANHATTAN, 20 g Color: Plateado, 140065, Color: gris, Conductividad térmica: 0.965 W/M-K, Impedancia térmica: 0.255°",HTTP Error 404
+MEMKGN2870,KINGSTON,memorias_ram,Memoria KINGSTON 8GB 3200MHz DDR4 CL16 DIMM FURY Beast KF432C16BB/8 Negra,HTTP Error 404
+MEMKGN2910,KINGSTON,memorias_ram,Memoria KINGSTON 16GB 3200MHz DDR4 CL16 DIMM 1Gx8 FURY Beast KF432C16BB1/16 Negra,HTTP Error 404
+MEMKGN3750,KINGSTON,memorias_ram,Memoria KINGSTON 16GB 3200MT/s DDR4 CL16 DIMM FURY Beast KF432C16BB/16 Negra,HTTP Error 404
+MEMKGN3250,KINGSTON,memorias_ram,Memoria KINGSTON 32GB 3200MHz DDR4 CL16 DIMM FURY Beast KF432C16BB/32 Negra,HTTP Error 404
+MEMKGN4390,KINGSTON,memorias_ram,Memoria KINGSTON 8GB 3200MT/s DDR4 CL16 DIMM FURY Beast RGB KF432C16BB2A/8,HTTP Error 404
+MEMKGN4400,KINGSTON,memorias_ram,Memoria KINGSTON 16GB 3200MT/s DDR4 CL16 DIMM FURY Beast RGB KF432C16BB2A/16,HTTP Error 404
+MEMKGN5950,KINGSTON,memorias_ram,Memoria KINGSTON 16GB (2X8) 3200MT/s DDR4 CL16 DIMM FURY Beast RGB KF432C16BB2AK2/16  Kit of 2,HTTP Error 404
+MEMKGN4760,KINGSTON,memorias_ram,Memoria KINGSTON 16GB 3200MHz DDR4 CL16 DIMM 1Gx8 FURY Beast RGB KF432C16BB12A/16,HTTP Error 404
+MEMKGN4420,KINGSTON,memorias_ram,Memoria KINGSTON 32GB 3200MT/s DDR4 CL16 DIMM FURY Beast RGB KF432C16BB2A/32,HTTP Error 404
+MEMKGN3060,KINGSTON,memorias_ram,Memoria KINGSTON 8GB (1x8GB) DDR4 3600MT/s CL17 FURY Beast  KF436C17BB/8 Negra,HTTP Error 404
+MEMKGN2920,KINGSTON,memorias_ram,Memoria KINGSTON 16GB 3600MHz DDR4 CL18 DIMM FURY Beast KF436C18BB/16 Negra,HTTP Error 404
+MEMKGN3380,KINGSTON,memorias_ram,Memoria KINGSTON 32GB 3600MHz DDR4 CL18 DIMM FURY Beast KF436C18BB/32 Negra,HTTP Error 404
+MEMKGN4430,KINGSTON,memorias_ram,Memoria KINGSTON 8GB 3600MT/s DDR4 CL17 DIMM FURY Beast RGB KF436C17BB2A/8,HTTP Error 404
+MEMKGN4440,KINGSTON,memorias_ram,Memoria KINGSTON 16GB 3600MT/s DDR4 CL18 DIMM FURY Beast RGB KF436C18BB2A/16,HTTP Error 404
+MEMKGN3420,KINGSTON,memorias_ram,Memoria KINGSTON 16GB 5200MHz DDR5 CL40 DIMM FURY Beast KF552C40BB-16  Negra,HTTP Error 404
+MEMKGN4580,KINGSTON,memorias_ram,Memoria KINGSTON 128GB 5200MT/s DDR5 CL40 DIMM (Kit of 4) FURY Beast Black XMP KF552C40BBK4-128,HTTP Error 404
+MEMKGN4100,KINGSTON,memorias_ram,Memoria KINGSTON 16GB 5600MT/s DDR5 CL36 DIMM (Kit of 2) FURY Beast KF556C36BBEK2-16 Negra,HTTP Error 404
+MEMKGN4110,KINGSTON,memorias_ram,Memoria KINGSTON 32GB 5600MT/s DDR5 CL36 DIMM (Kit of 2) FURY Beast KF556C36BBEK2-32 Negra,HTTP Error 404
+MEMKGN2670,KINGSTON,memorias_ram,Memoria Kingston 4GB 1600MHz DDR3 Non-ECC CL11 DIMM 1Rx8 (Select Regions ONLY) KVR16N11S8/4WP,HTTP Error 404
+MEMKGN2690,KINGSTON,memorias_ram,Memoria Kingston 8GB 1600MHz DDR3 Non-ECC CL11 DIMM (Select Regions ONLY) KVR16N11/8WP,HTTP Error 404
+MEMKGN5150,KINGSTON,memorias_ram,Memoria Kingston 8GB 1600MT/s DDR3L Non-ECC CL11 DIMM 1.35V(Select Regions ONLY) KVR16LN11/8WP,HTTP Error 404
+MEMKGN3590,KINGSTON,memorias_ram,Memoria Kingston 8GB 3200MT/s DDR4 Non-ECC CL22 DIMM 1Rx16 KVR32N22S6/8,HTTP Error 404
+MEMKGN5070,KINGSTON,memorias_ram,Memoria Kingston 8GB 3200MT/s DDR4 Non-ECC CL22 DIMM 1Rx8 KVR32N22S8/8,HTTP Error 404
+MEMKGN3470,KINGSTON,memorias_ram,Memoria Kingston 16GB 3200MHz DDR4 Non-ECC CL22 DIMM 1Rx8 KVR32N22S8/16,HTTP Error 404
+MEMKGN4990,KINGSTON,memorias_ram,Memoria Kingston 8GB 3200MT/s DDR4 Non-ECC CL22 SODIMM 1RX8 KVR32S22S8/8,HTTP Error 404
+MEMKGN4850,KINGSTON,memorias_ram,Memoria Kingston 32GB 5600MTS DDR5 Non-ECC CL46 SODIMM 2RX8 KVR56S46BD8-32,HTTP Error 404
+MEMKGN3080,KINGSTON,memorias_ram,Memoria KINGSTON 8GB 3200MHz DDR4 CL20 SODIMM FURY Impact KF432S20IB/8,HTTP Error 404
+MEMKGN3150,KINGSTON,memorias_ram,Memoria KINGSTON 16GB 3200MHz DDR4 CL20 SODIMM FURY Impact KF432S20IB/16,HTTP Error 404
+MEMKGN3280,KINGSTON,memorias_ram,Memoria KINGSTON 32GB 3200MHz DDR4 CL20 SODIMM FURY Impact KF432S20IB/32,HTTP Error 404
+MEMKGN4960,KINGSTON,memorias_ram,Memoria KINGSTON 8GB 4800MT/s DDR5 CL38 SODIMM FURY Impact KF548S38IB-8,HTTP Error 404
+MEMKGN3680,KINGSTON,memorias_ram,Memoria KINGSTON 16GB 4800MT/s DDR5 CL38 SODIMM FURY Impact KF548S38IB-16,HTTP Error 404
+MEMKGN6000,KINGSTON,memorias_ram,Memoria Kingston Propietaria 32GB DDR4 3200MT/s ECC Registered DIMM CL22 2RX8 1.2V 288-pin 16Gbit KTL-TS432D8/32G,HTTP Error 404
+MEMKGN3530,KINGSTON,memorias_ram,Memoria Kingston Propietaria 16GB DDR4 3200MT/s ECC Registered DIMM CL22 1RX8 1.2V 288-pin 16Gbit KTD-PE432ES8/16G,HTTP Error 404
+MEMKGN2280,KINGSTON,memorias_ram,Memoria Kingston Propietaria 16GB DDR4 3200MT/s Non-ECC Unbuffered SODIMM CL22 1RX8 1.2V 260-pin 16Gbit KCP432SS8/16,HTTP Error 404
+MEMKGN2350,KINGSTON,memorias_ram,Memoria Kingston Propietaria 8GB DDR4 3200MT/s Non-ECC Unbuffered SODIMM CL22 1RX8 1.2V 260-pin 8Gbit KCP432SS8/8,HTTP Error 404
+MEMKGN3320,KINGSTON,memorias_ram,Memoria Kingston Propietaria 16GB DDR4 3200MT/s Non-ECC Unbuffered SODIMM CL22 2RX8 1.2V 260-pin 8Gbit KCP432SD8/16,HTTP Error 404
+MEMKGN2710,KINGSTON,memorias_ram,Memoria Kingston Propietaria 32GB DDR4 3200MT/s Non-ECC Unbuffered SODIMM CL22 2RX8 1.2V 260-pin 16Gbit KCP432SD8/32,HTTP Error 404
+MEMKGN3510,KINGSTON,memorias_ram,Memoria Kingston Propietaria 8GB DDR4 3200MT/s DDR4 CL22 DIMM 1.2V PARA PC  KCP432NS8/8,HTTP Error 404
+MEMKGN2620,KINGSTON,memorias_ram,Memoria Kingston Propietaria 8GB DDR4 3200MT/s Non-ECC Unbuffered DIMM CL22 1RX16 1.2V 288-pin 16Gbit KCP432NS6/8,HTTP Error 404
+MEMKGN3310,KINGSTON,memorias_ram,Memoria Kingston Propietaria 16GB DDR4 3200MT/s Non-ECC Unbuffered DIMM CL22 1RX8 1.2V 288-pin 16Gbit KCP432NS8/16,HTTP Error 404
+MEMKGN3300,KINGSTON,memorias_ram,Memoria Kingston Propietaria 32GB DDR4 3200MT/s Non-ECC Unbuffered DIMM CL22 2RX8 1.2V 288-pin 16Gbit KCP432ND8/32,HTTP Error 404
+MEMKGN3370,KINGSTON,memorias_ram,Memoria Kingston Propietaria 16GB DDR4 3200MT/s Non-ECC Unbuffered DIMM CL22 2RX8 1.2V 288-pin 8Gbit KCP432ND8/16,HTTP Error 404
+MEMKGN3690,KINGSTON,memorias_ram,Memoria Kingston Propietaria 32GB 3200MT/S DDR4 CL22 DIMM 1.2V PARA SERVIDOR KTD-PE432E/32G,HTTP Error 404
+MEMKGN3900,KINGSTON,memorias_ram,Memoria Kingston Propietaria 16GB 3200MT/S DDR4 CL22 DIMM 1.2V PARA SERVIDOR KTH-PL432ES8/16G,HTTP Error 404
+MEMKGN5010,KINGSTON,memorias_ram,Memoria Kingston Propietaria 16GB DDR5 5600MT/s Non-ECC Unbuffered DIMM CL46 1RX8 1.1V 288-pin 16Gbit KCP556US8-16,HTTP Error 404
+MEMKGN4600,KINGSTON,memorias_ram,Memoria Kingston Propietaria 16GB DDR5 5600MT/s Non-ECC Unbuffered SODIMM CL46 1RX8 1.1V 262-pin 16Gbit KCP556SS8-16,HTTP Error 404
+MEMKGN5840,KINGSTON,memorias_ram,Memoria Kingston Propietaria 32GB DDR5 5600MT/s ECC Registered DIMM CL46 2RX8 1.1V 288-pin 16Gbit KTL-TS556D8-32G,HTTP Error 404
+MEMKGN5770,KINGSTON,memorias_ram,Memoria Kingston Propietaria 16GB DDR5 5600MT/s ECC Registered DIMM CL46 1RX8 1.1V 288-pin 16Gbit KTL-TS556S8-16G,HTTP Error 404
+MEMKGN1620,KINGSTON,componentes_ensamble,Micro Endurance 32GB Kingston SDCE/32GB,HTTP Error 404
+MEMKGN1630,KINGSTON,componentes_ensamble,Micro Endurance 64GB Kingston SDCE/64GB,HTTP Error 404
+MEMKGN1640,KINGSTON,componentes_ensamble,Micro Endurance 128GB Kingston SDCE/128GB,HTTP Error 404
+MEMKGN5320,KINGSTON,componentes_ensamble,Micro Endurance 256GB Kingston SDCE/256GB,HTTP Error 404
+MEMKGN2340,KINGSTON,componentes_ensamble,Memoria USB 64GB Kingston DTKN/64GB,HTTP Error 404
+MEMKGN2290,KINGSTON,componentes_ensamble,Memoria USB 128GB Kingston DTKN/128GB,HTTP Error 404
+MEMKGN3640,KINGSTON,componentes_ensamble,Memoria USB de 64GB Kingston DTXM/64GB (Black + Blue),HTTP Error 404
+MEMKGN3650,KINGSTON,componentes_ensamble,Memoria USB de 128GB Kingston DTXM/128GB (Black + Red),HTTP Error 404
+MEMKGN3660,KINGSTON,componentes_ensamble,Memoria USB de 256GB Kingston DTXM/1256GB (Black + Teal),HTTP Error 404
+MEMKGN2200,KINGSTON,componentes_ensamble,Memoria USB de 128GB Kingston DTX/128GB (Black + Yellow),HTTP Error 404
+MEMKGN2210,KINGSTON,componentes_ensamble,Memoria USB de 256GB Kingston DTX/256GB (Black + Pink),HTTP Error 404
+MEMKGN4280,KINGSTON,componentes_ensamble,Memoria USB de 64GB Kingston DTX/64GBCL COLOGO,HTTP Error 404
+MEMKGN2570,KINGSTON,componentes_ensamble,Memoria USB de 64GB Kingston DT70/64GB,HTTP Error 404
+MEMKGN2580,KINGSTON,componentes_ensamble,Memoria USB de 128GB Kingston DT70/128GB,HTTP Error 404
+MEMKGN6030,KINGSTON,componentes_ensamble,Memoria USB de 128GB Kingston DTXG2/128GB Exodia Black/Blue,HTTP Error 404
+MEMKGN6040,KINGSTON,componentes_ensamble,Memoria USB de 256GB Kingston DTXG2/256GB Exodia Black/Green,HTTP Error 404
+MEMKGN6050,KINGSTON,componentes_ensamble,Memoria USB de 512GB Kingston DTXG2/512GB Exodia Black/Purple,HTTP Error 404
+MEMKGN4630,KINGSTON,componentes_ensamble,Memoria USB de 128GB Kingston DTSE9G3/128GB,HTTP Error 404
+MEMKGN4640,KINGSTON,componentes_ensamble,Memoria USB de 256GB Kingston DTSE9G3/256GB,HTTP Error 404
+MEMKGN4650,KINGSTON,componentes_ensamble,Memoria USB de 512GB Kingston DTSE9G3/512GB,HTTP Error 404
+MEMKGN5230,KINGSTON,componentes_ensamble,Memoria USB de 64GB Kingston DTXS/64GB Exodia S (Negro),HTTP Error 404
+MEMKGN4660,KINGSTON,componentes_ensamble,IronKey S1000 KINGSTON 128GB IKS1000E/128GB,HTTP Error 404
+DDUKGT1290,GENERICO,componentes_ensamble,Disco de Estado Solido SATA de 240GB SA400S37/240G,HTTP Error 404
+DDUKGT1300,GENERICO,componentes_ensamble,Disco de Estado Solido SATA de 480GB  SA400S37/480G,HTTP Error 404
+DDUKGT1360,GENERICO,componentes_ensamble,Disco de Estado Solido SATA de 960GB SA400S37/960G,HTTP Error 404
+DDUKGT2570,GENERICO,componentes_ensamble,Disco de Estado Solido SATA de 480GB KC-S44480-7S,HTTP Error 404
+DDUKGT2010,KINGSTON,almacenamiento_ssd,SSD KC600 2.5 KINGSTON 256GB SKC600MS/256G,HTTP Error 404
+DDUKGT1870,KINGSTON,almacenamiento_ssd,SSD KC600 2.5 KINGSTON 256GB SKC600/256G,HTTP Error 404
+DDUKGT1880,KINGSTON,almacenamiento_ssd,SSD KC600 2.5 KINGSTON 512GB SKC600/512G,HTTP Error 404
+DDUKGT1890,KINGSTON,almacenamiento_ssd,SSD KC600 2.5 KINGSTON 1024GB SKC600/1024G,HTTP Error 404
+DDUKGT2310,KINGSTON,almacenamiento_ssd,SSD DC600M 2.5 KINGSTON 480GB SEDC600M/480G,HTTP Error 404
+DDUKGT2320,KINGSTON,almacenamiento_ssd,SSD DC600M 2.5 KINGSTON 960GB SEDC600M/960G,HTTP Error 404
+DDUKGT2330,KINGSTON,almacenamiento_ssd,SSD DC600M 2.5 KINGSTON 1920GB SEDC600M/1920G,HTTP Error 404
+DDUKGT2340,KINGSTON,almacenamiento_ssd,SSD DC600M 2.5 KINGSTON 3840GB SEDC600M/3840G,HTTP Error 404
+DDUKGT2300,KINGSTON,almacenamiento_ssd,SSD DC600M 2.5 KINGSTON 7680GB SEDC600M/7680G,HTTP Error 404
+DDUKGT2070,KINGSTON,almacenamiento_ssd,SSD KC3000 PCIe NVMe M.2 KINGSTON 512GB SKC3000S/512G,HTTP Error 404
+DDUKGT2060,KINGSTON,almacenamiento_ssd,SSD KC3000 PCIe NVMe M.2 KINGSTON 2048GB SKC3000D/2048G,HTTP Error 404
+DDUKGT2090,KINGSTON,almacenamiento_ssd,SSD KC3000 PCIe NVMe M.2 KINGSTON 4096GB SKC3000D/4096G,HTTP Error 404
+DDUKGT2580,KINGSTON,almacenamiento_ssd,SSD SFYRS M.2 KINGSTON 8192GB SFYR2D/8T1,HTTP Error 404
+DDUKGT2030,KINGSTON,almacenamiento_ssd,SSD KC600 mSATA KINGSTON 1024GB SKC600MS/1024G,HTTP Error 404
+DDUKGT2530,KINGSTON,almacenamiento_ssd,SSD NV3 M.2 2230 PCIe 4.0 NVMe KINGSTON 500GB SNV3SM3/500G,HTTP Error 404
+DDUKGT2380,KINGSTON,almacenamiento_ssd,SSD EXTERNO XS1000 KINGSTON 1000GB SXS1000/1000G,HTTP Error 404
+DDUKGT2390,KINGSTON,almacenamiento_ssd,SSD EXTERNO XS1000 KINGSTON 2000GB SXS1000/2000G,HTTP Error 404
+DDUKGT2150,KINGSTON,almacenamiento_ssd,SSD EXTERNO XS2000 KINGSTON 1000GB SXS2000/1000G,HTTP Error 404
+MEMDAT2400,GENERICO,memorias_ram,Memoria DDR3L de 8 GB SO DIMM Bus de 1600 MHz A-DATA ADDS1600W8G11-S,HTTP Error 404
+MEMDAT4730,ADATA,componentes_ensamble,"Micro Secure Digital ADATA Premier A1 UHS-I 256GB Class 10, Velocidad de lec/esc 100/25 (MB/s). N.P. AUSDX256GUICL10A1-RA1",HTTP Error 404
+MEMDAT6490,ADATA,componentes_ensamble,"Micro Secure Digital ADATA microSDXC/SDHC UHS-I U3 V30 128GB Clase 10 (A2), Velocidad de lectura / escritura 100/85 (MB/s) AUSDX128GUI3V30SA",HTTP Error 404
+MEMDAT6340,ADATA,componentes_ensamble,"Micro Secure Digital ADATA microSDXC/SDHC UHS-I U3 V30 256GB Clase 10 (A2), Velocidad de lectura / escritura hasta 100/85 (MB/s) AUSDX256GUI",HTTP Error 404
+MEMDAT6160,ADATA,componentes_ensamble,"Micro Secure Digital ADATA microSDXC/SDHC UHS-I U3 V30 512GB Clase 10 (A2), Velocidad de lectura / escritura hasta 100/85 (MB/s) AUSDX512GUI",HTTP Error 404
+MEMDAT6880,ADATA,componentes_ensamble,"Micro Secure Digital ADATA microSDXC/SDHC UHS-I U3 V30 1TB Clase 10 (A2), Velocidad de lectura / escritura hasta 100/85 (MB/s) AUSDX1TUI3V30",HTTP Error 404
+MEMDAT7290,ADATA,componentes_ensamble,"Micro Secure Digital ADATA SPEED PLUS microSDXC/SDHC UHS-I U3 V30 64GB Clase 10 (A2), Velocidad de lectura / escritura hasta 180/160(MB/s). ",HTTP Error 404
+MEMDAT2630,LG,componentes_ensamble,"Memoria USB de 16 GB C008, presenta un diseño elegante y minimalista. Activado con el pulgar fácilmente. Color Blanco/Azul N.P. AC008-16G-RW",HTTP Error 404
+MEMDAT1380,LG,componentes_ensamble,"Memoria USB de 16 GB C008, presenta un diseño elegante y minimalista. Activado con el pulgar fácilmente. Color Negro + Rojo. AC008-16G-RKD",HTTP Error 404
+MEMDAT1850,LG,componentes_ensamble,"Memoria USB de 32 GB C008, presenta un diseño elegante y minimalista. Activado con el pulgar fácilmente. Color Blanco + Azul AC008-32G-RWE",HTTP Error 404
+MEMDAT1880,GENERICO,componentes_ensamble,"Memoria USB 2.0 de 32GB C906, diseño clásico y compacta. NP. AC906-32G-RWH Color Blanco",HTTP Error 404
+MEMDAT4140,GENERICO,componentes_ensamble,"Memoria USB 2.0 de 32GB C906, diseño clásico y compacta. NP. AC906-32G-RBK Color Negro.",HTTP Error 404
+MEMDAT6630,GENERICO,componentes_ensamble,"Memoria USB 2.0 de 32GB C906, diseño clásico y compacta. NP. AC906-32G-RPP Color ROSA",HTTP Error 404
+MEMDAT6640,GENERICO,componentes_ensamble,"Memoria USB 2.0 de 32GB C906, diseño clásico y compacta. NP. AC906-32G-RWB Color AZUL",HTTP Error 404
+MEMDAT6650,GENERICO,componentes_ensamble,"Memoria USB 2.0 de 64GB C906, diseño clásico y compacta. NP. AC906-64G-RBK Color NEGRO",HTTP Error 404
+MEMDAT6660,GENERICO,componentes_ensamble,"Memoria USB 2.0 de 64GB C906, diseño clásico y compacta. NP. AC906-64G-RPP Color ROSA",HTTP Error 404
+MEMDAT6670,GENERICO,componentes_ensamble,"Memoria USB 2.0 de 64GB C906, diseño clásico y compacta. NP. AC906-64G-RWB. Color AZUL",HTTP Error 404
+MEMDAT4350,GENERICO,componentes_ensamble,"Memoria USB de 32GB UV220 2.0, diseño deslizante sin tapa. Color Blanco/Gris. AUV220-32G-RWHGY",HTTP Error 404
+MEMDAT4340,GENERICO,componentes_ensamble,"Memoria USB de 32GB UV220 2.0, diseño deslizante sin tapa. Color Negro/Azul. AUV220-32G-RBKBL",HTTP Error 404
+MEMDAT6390,GENERICO,componentes_ensamble,"Memoria USB de 64GB UV220 2.0, diseño deslizante sin tapa. Color Negro/azul. AUV220-64G-RBKBL",HTTP Error 404
+MEMDAT4710,ADATA,componentes_ensamble,"Memoria USB ADATA UV240 2.0 de 32GB, diseño abatible sin tapa. Color ROJO. AUV240-32G-RRD",HTTP Error 404
+MEMDAT4700,ADATA,componentes_ensamble,"Memoria USB ADATA UV240 2.0 de 32GB, diseño abatible sin tapa. Color NEGRO. AUV240-32G-RBK",HTTP Error 404
+MEMDAT6350,ADATA,componentes_ensamble,"Memoria USB ADATA UV240, 2.0 de 32GB  diseño abatible sin tapa. Color BLANCA N.P. AUV240-32G-RWH",HTTP Error 404
+MEMDAT6360,ADATA,componentes_ensamble,"Memoria USB ADATA UV240, 2.0 de 64GB  diseño abatible sin tapa. Color NEGRO N.P. AUV240-64G-RBK",HTTP Error 404
+MEMDAT4820,GENERICO,componentes_ensamble,"Memoria USB 2.0 16GB UV250, resistente al agua, polvo e impactos. Metálica AUV250-16G-RBK",HTTP Error 404
+MEMDAT4830,GENERICO,componentes_ensamble,"Memoria USB 2.0 32GB UV250, resistente al agua, polvo e impactos. Metálica AUV250-32G-RBK",HTTP Error 404
+MEMDAT6500,GENERICO,componentes_ensamble,"Memoria USB 2.0 64GB UV250, resistente al agua, polvo e impactos. Metálica AUV250-64G-RBK",HTTP Error 404
+MEMDAT3240,GENERICO,componentes_ensamble,"Memoria USB 2.0 32GB UV210, resistente al agua, polvo e impactos. Metálica AUV210-32G-RGD",HTTP Error 404
+MEMDAT4420,ADATA,componentes_ensamble,"Memoria USB ADATA de 32GB UV150 3.2, (retrocompatible con 3.0 y 2.0) diseño elegante, con tapa. Color Rojo. AUV150-32G-RRD",HTTP Error 404
+MEMDAT4120,GENERICO,componentes_ensamble,"Memoria USB de 32GB UV150 3.2, diseño elegante, con tapa. Color Negro. AUV150-32G-RBK",HTTP Error 404
+MEMDAT4540,GENERICO,componentes_ensamble,"Memoria USB de 64GB UV150 3.2, diseño elegante, con tapa. Color NEGRO. AUV150-64G-RBK",HTTP Error 404
+MEMDAT4130,GENERICO,componentes_ensamble,"Memoria USB de 64GB UV150 3.2, diseño elegante, con tapa. Color Rojo. AUV150-64G-RRD",HTTP Error 404
+MEMDAT7120,GENERICO,componentes_ensamble,"Memoria USB de 128GB UC310 3.2 Gen 1 (retrocompatible 3.0 y 2.0), diseño elegante rotativo sin tapa. Color negro. UC310-128G-RBK",HTTP Error 404
+MEMDAT7130,GENERICO,componentes_ensamble,"Memoria USB de 128GB UC310 3.2 Gen 1 (retrocompatible 3.0 y 2.0), diseño elegante rotativo sin tapa. Color Blanco. UC310-128G-RWH",HTTP Error 404
+MEMDAT6600,GENERICO,componentes_ensamble,"Memoria USB de 128GB UR340 3.2 Gen 1 (retrocompatible 3.0 y 2.0), diseño elegante sin tapa. Color Metálico negro. AAROY-UR340-128GBK",HTTP Error 404
+MEMDAT7090,GENERICO,componentes_ensamble,"Memoria USB de 256GB UR340 3.2 Gen 1 (retrocompatible 3.0 y 2.0), diseño elegante sin tapa. Color Metálico negro. AROY-UR340-256GBK",HTTP Error 404
+MEMDAT6410,GENERICO,componentes_ensamble,"Memoria USB de 64GB UV350 3.2 Gen 1 (retrocompatible 3.0 y 2.0), diseño elegante sin tapa. Color Metálico negro. AUV350-64G-RBK",HTTP Error 404
+MEMDAT2490,GENERICO,componentes_ensamble,"Memoria USB de 32 GB UV128 3.2 compatible con USB 2.0, diseño elegante y minimalista. Color Negro/Azul",HTTP Error 404
+MEMDAT2530,GENERICO,componentes_ensamble,Memoria USB de 64GB UV128 3.2 compatible con USB 2.0 diseño elegante y minimalista. Color Negro/Azul.,HTTP Error 404
+MEMDAT3040,GENERICO,componentes_ensamble,Memoria USB de 128 GB UV128 3.2 compatible con USB 2.0 presenta un diseño elegante y minimalista. Color Negro/Azul N.P. AUV128-128G-RBE,HTTP Error 404
+MEMDAT5350,ADATA,componentes_ensamble,Memoria USB ADATA UV128 256GB USB 3.2 Gen1 (compatible con USB 2.0). Presenta un diseño elegante y minimalista. Color Negro/Azul N.P. AUV128,HTTP Error 404
+MEMDAT7460,ADATA,componentes_ensamble,Memoria USB ADATA UV128 512GB USB 3.2 Gen1 (compatible con USB 2.0). Color Negro/Azul. AUV128-512G-RBE,HTTP Error 404
+DDUDAT450,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" modelo HV620S 1TB USB 3.1, Carcasa elegante, brillante y portátil. Con compatibilidad universal de dispositivos. Col",HTTP Error 404
+DDUDAT670,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" HV620S 1TB USB 3.1, Carcasa elegante, brillante y portátil. Con compatibilidad universal de dispositivos. Color Blan",HTTP Error 404
+DDUDAT600,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" HV620S 1TB USB 3.2, Carcasa elegante, brillante y portátil. Con compatibilidad universal de dispositivos. Color AZUL",HTTP Error 404
+DDUDAT690,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" HV620S 2TB USB 3.2, Carcasa elegante, brillante y portátil. Con compatibilidad universal de dispositivos. Color AZUL",HTTP Error 404
+DDUDAT460,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" modelo HV620S 2TB USB 3.1, Carcasa elegante, brillante y portátil. Con compatibilidad universal de dispositivos. Col",HTTP Error 404
+DDUDAT680,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" HV620S 2TB USB 3.2 Gen1, compatible con 3.1 y 2.0, Carcasa elegante, brillante y portátil. Con compatibilidad univer",HTTP Error 404
+DDUDAT700,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" HV620S 4TB USB 3.1, Carcasa elegante, brillante y portátil. Con compatibilidad universal de dispositivos. Color Negr",HTTP Error 404
+DDUDAT1350,ADATA,almacenamiento_ssd,"Disco Duro Externo ADATA de 2.5"" HD330 1TB USB 3.2 Gen1, compatible con 3.1 y 2.0. Contra golpes. Color ROJO NP. AHD330-1TU31-CRD",HTTP Error 404
+DDUDAT1120,GENERICO,almacenamiento_ssd,"Disco Duro Externo de 2.5"" modelo HD330 1TB USB 3.2 Gen1 compatible con 3.1 y 2.0. Contra golpes. Color NEGRO NP. AHD330-1TU31-CBK",HTTP Error 404
+DDUDAT1130,GENERICO,almacenamiento_ssd,"Disco Duro Externo de 2.5"" modelo HD330 2TB USB 3.2 Gen1 compatible con 3.1 y 2.0. Contra golpes. Color NEGRO NP. AHD330-2TU31-CBK",HTTP Error 404
+DDUDAT1360,GENERICO,almacenamiento_ssd,"Disco Duro Externo de 2.5"" modelo HD330 2TB USB 3.2 Gen1 compatible con 3.1 y 2.0. Contra golpes. Color ROJO NP. AHD330-2TU31-CRD",HTTP Error 404
+DDUDAT1370,GENERICO,almacenamiento_ssd,"Disco Duro Externo de 2.5"" modelo HD330 2TB USB 3.2 Gen1 compatible con 3.1 y 2.0. Contra golpes. Color AZUL NP. AHD330-2TU31-CBL",HTTP Error 404
+DDUDAT1140,GENERICO,almacenamiento_ssd,"Disco Duro Externo de 2.5"" modelo HD330 4TB USB 3.2 Gen1 compatible con 3.1 y 2.0. Contra golpes. Color NEGRO NP. AHD330-4TU31-CBK",HTTP Error 404
+DDUDAT1850,GENERICO,almacenamiento_ssd,"Disco Duro Externo de 2.5"" modelo HD330 5TB USB 3.2 Gen1 (USB 5Gbps) compatible con 3.1 y 2.0. Contra golpes. Color NEGRO NP. AHD330-5TU31-C",HTTP Error 404
+ACCDAT980,GENERICO,almacenamiento_ssd,"Disco Duro Externo de 2.5"" modelo HD650 1TB USB 3.1 Contragolpes y aprueba de agua. Compatible USB 2.0, Windows 8.x (y versiones anteriores)",HTTP Error 404
+ACCDAT440,GENERICO,almacenamiento_ssd,"Disco Duro Externo de 2.5"" modelo HD650 1TB USB 3.1 Contragolpes y aprueba de agua. Compatible USB 2.0, Windows 8.x (y versiones anteriores)",HTTP Error 404
+DDUDAT570,GENERICO,almacenamiento_ssd,"Disco Duro Externo de 2.5"" modelo HD650 2TB USB 3.1 Contra golpes y aprueba de agua. Color NEGRO. AHD650-2TU31-CBK",HTTP Error 404
+DDUDAT590,ADATA,almacenamiento_ssd,"Disco Duro Externo ADATA HD650 2TB 2.5"", USB 3.2 Gen 1 (USB 5Gbps). Contra golpes y aprueba de agua. Color ROJO. AHD650-2TU31-CRD",HTTP Error 404
+DDUDAT710,GENERICO,almacenamiento_ssd,"Disco Duro Externo de 2.5"" modelo HD650 4TB USB 3.1 Contra golpes y aprueba de agua. Color NEGRO. AHD650-4TU31-CBK",HTTP Error 404
+DDUDAT540,GENERICO,almacenamiento_ssd,"Disco Duro Externo HD710 PRO 1TB 2.5"", USB 3.2 Gen 1 (USB 5Gbps) Impermeable y resistente a golpes. Color ROJO AHD710P-1TU31-CRD",HTTP Error 404
+DDUDAT730,GENERICO,almacenamiento_ssd,"Disco Duro Externo HD710 PRO 1TB 2.5"" Interfaz USB 3.1. Impermeable y resistente a golpes. Color AZUL AHD710P-1TU31-CBL",HTTP Error 404
+DDUDAT530,GENERICO,almacenamiento_ssd,"Disco Duro Externo HD710 PRO 1TB 2.5"" Interfaz USB 3.1. Impermeable y resistente a golpes. Color MILITAR AHD710MP-1TU31-CCF",HTTP Error 404
+DDUDAT740,GENERICO,almacenamiento_ssd,"Disco Duro Externo HD710 PRO 1TB 2.5"", USB 3.2 Gen 1 (USB 5Gbps) Impermeable y resistente a golpes. Color AMARILLO AHD710P-1TU31-CYL",HTTP Error 404
+DDUDAT750,GENERICO,almacenamiento_ssd,"Disco Duro Externo HD710 PRO 1TB 2.5"" Interfaz USB 3.1. Impermeable y resistente a golpes. Color NEGRO AHD710P-1TU31-CBK",HTTP Error 404
+DDUDAT1900,GENERICO,almacenamiento_ssd,"Disco Duro Externo HD710M PRO 2TB 2.5"" USB 3.2 Gen1 (USB 5Gbps) Impermeable y resistente a golpes. Color MILITAR AHD710MP-2TU31-CCF",HTTP Error 404
+ACCDAT1470,GENERICO,almacenamiento_ssd,"Disco Duro Externo HD710 PRO 2TB 2.5"" Interfaz USB 3.1. Impermeable y resistente a golpes, AHD710P-2TU31-CBL. Color AZUL",HTTP Error 404
+ACCDAT1460,GENERICO,almacenamiento_ssd,"Disco Duro Externo HD710 PRO 2TB 2.5"" Interfaz USB 3.1. Impermeable y resistente a golpes. Color NEGRO AHD710P-2TU31-CBK",HTTP Error 404
+DDUDAT520,GENERICO,almacenamiento_ssd,"Disco Duro Externo HD710 PRO 4TB 2.5"" Interfaz USB 3.1. Impermeable y resistente a golpes. Color NEGRO AHD710P-4TU31-CBK",HTTP Error 404
+DDUDAT720,GENERICO,almacenamiento_ssd,"Disco Duro Externo HD710 PRO 5TB 2.5"" Interfaz USB 3.1. Impermeable y resistente a golpes. Color NEGRO AHD710P-5TU31-CBK",HTTP Error 404
+ACCDAT1300,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" modelo HD720 1TB USB 3.0 / 3.1 Ultra resistente a golpes, agua y polvo. Compatible con Windows y Mac. Color Negro, N",HTTP Error 404
+DDUDAT110,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" modelo HD720 2TB USB 3.0 / 3.1 Ultra resistente a golpes, agua y polvo. Compatible con Windows y Mac. Color Azul, N.",HTTP Error 404
+ACCDAT1260,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" modelo HD720 2TB USB 3.0 / 3.1 Ultra resistente a golpes, agua y polvo. Compatible con Windows y Mac. Color Negro, N",HTTP Error 404
+DDUDAT1240,GENERICO,almacenamiento_ssd,"Disco Duro Externo HD770G 1TB 2.5"", Interfaz USB 3.2 Gen 1 (Retrocompatible con USB 2.0.) Con iluminación RGB, impermeable y resistente a go",HTTP Error 404
+DDUDAT1260,GENERICO,almacenamiento_ssd,"Disco Duro Externo HD770G 2TB 2.5"", Interfaz USB 3.2 Gen 1 (Retrocompatible con USB 2.0.) Con iluminación RGB, impermeable y resistente a go",HTTP Error 404
+DDUDAT1270,GENERICO,almacenamiento_ssd,"Disco Duro Externo HD770G 2TB 2.5"", Interfaz USB 3.2 Gen 1 (Retrocompatible con USB 2.0.) Con iluminación RGB, impermeable y resistente a go",HTTP Error 404
+DDUDAT1390,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" modelo HV300 1TB USB 3.2 Gen 1 (Retrocompatible con USB 2.0). Con compatibilidad universal de dispositivos. Color BL",HTTP Error 404
+DDUDAT850,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" modelo HV300 1TB USB 3.1, Con compatibilidad universal de dispositivos. Color AZUL. PN. AHV300-1TU31-CBL",HTTP Error 404
+DDUDAT860,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" modelo HV300 1TB USB 3.1, Con compatibilidad universal de dispositivos. Color ROJO. PN. AHV300-1TU31-CRD",HTTP Error 404
+DDUDAT830,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" modelo HV300 1TB USB 3.1, Con compatibilidad universal de dispositivos. Color Negro.",HTTP Error 404
+DDUDAT870,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" modelo HV300 2TB USB 3.1, Con compatibilidad universal de dispositivos. Color NEGRO. PN. AHV300-2TU31-CBK",HTTP Error 404
+DDUDAT880,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" modelo HV300 2TB USB 3.1, Con compatibilidad universal de dispositivos. Color AZUL. PN. AHV300-2TU31-CBL",HTTP Error 404
+DDUDAT890,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" modelo HV300 2TB USB 3.1, Con compatibilidad universal de dispositivos. Color ROJO. PN. AHV300-2TU31-CRD",HTTP Error 404
+DDUDAT900,GENERICO,almacenamiento_ssd,"Disco Duro Externo 2.5"" modelo HV300 4TB USB 3.1, Con compatibilidad universal de dispositivos. Color NEGRO. PN. AHV300-4TU31-CBK",HTTP Error 404
+DDUDAT1160,GENERICO,almacenamiento_ssd,"Disco Duro Externo de 3.5"" HM800 4TB USB 3.2 (Compatible con USB 3.1, 3.0 y 2.0) (Con Windows y Mac). Color NEGRO N.P.  AHM800-4TU32G1-CUSBK",HTTP Error 404
+DDUDAT1170,GENERICO,almacenamiento_ssd,"Disco Duro Externo de 3.5"" HM800 6TB USB 3.2 (Compatible con USB 3.1, 3.0 y 2.0) (Con Windows y Mac). Color NEGRO N.P.  AHM800-6TU32G1-CUSBK",HTTP Error 404
+DDUDAT1180,GENERICO,almacenamiento_ssd,"Disco Duro Externo de 3.5"" HM800 8TB USB 3.2 (Compatible con USB 3.1, 3.0 y 2.0) (Con Windows y Mac). Color NEGRO N.P.  AHM800-8TU32G1-CUSBK",HTTP Error 404
+DDUDAT2560,ADATA,almacenamiento_ssd,"Disco Duro Externo ADATA HD680 1TB 2.5"", interfaz USB 3.2 Gen1 (USB 5Gbps). Resistente a golpes. NEGRO AHD680-1TU31-CBK",HTTP Error 404
+DDUDAT2540,ADATA,almacenamiento_ssd,"SSD Externo ADATASC750 500GB. Interfaz USB 3.2 Gen 2 con velocidades de lectura/escritura de hasta 1050/1000, Puerto USB-C. Color NEGRO. Num",HTTP Error 404
+DDUDAT2530,ADATA,almacenamiento_ssd,"SSD Externo ADATA SC740 500GB. USB tipo C incorporado, 1.050/1.000 MB/s de lectura/escritura, Resistente a caídas MIL-STD de 1,22 m. Color A",HTTP Error 404
+DDUDAT1300,ADATA,componentes_ensamble,"Unidad de Estado Sólido ADATA SU630 SATAIII, 480GB. N.P. ASU630SS-480GQ-R",HTTP Error 404
+DDUDAT1310,ADATA,componentes_ensamble,"Unidad de Estado Sólido ADATA SU630 SATAIII, 960GB. N.P. ASU630SS-960GQ-R",HTTP Error 404
+DDUDAT2370,ADATA,almacenamiento_ssd,"Unidad de Estado Sólido ADATA LEGEND 710 512GB PCIe Gen3x4 M.2 2280, Con disipador de aluminio. ALEG-710-512GCS",HTTP Error 404
+DDUDAT2380,ADATA,almacenamiento_ssd,"Unidad de Estado Sólido ADATA LEGEND 710 1TB PCIe Gen3x4 M.2 2280, Con disipador de aluminio. ALEG-710-1TCS",HTTP Error 404
+DDUDAT2170,ADATA,almacenamiento_ssd,Unidad de Estado Sólido ADATA LEGEND 960 MAX 1TB PCIe Gen4x4 M.2 2280. Velocidad máxima de lectura/escritura: 7.400/6.800MB/s. Con disipador,HTTP Error 404
+DDUDAT2180,ADATA,almacenamiento_ssd,Unidad de Estado Sólido ADATA LEGEND 960 MAX 2TB PCIe Gen4x4 M.2 2280. Velocidad máxima de lectura/escritura: 7.400/6.800MB/s. Con disipador,HTTP Error 404
+MEMDAT7240,ADATA,memorias_ram,"Memoria RAM ADATA XPG LANCER BLADE, DDR5 8GB UDIMM 5600MT/s. Disipador aluminio NEGRO. AX5U5600C468G-SLABBK",HTTP Error 404

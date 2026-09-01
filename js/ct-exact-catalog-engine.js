@@ -532,8 +532,11 @@ function renderExactCatalogView() {
             const price = p.precio_mxn || p.precio;
             const original = p.precio_original || (price * 1.33);
             const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
-            const localImg = `./assets/img/catalog/${cat}/${sku}.jpg`;
-            const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`;
+            const localImg = `assets/img/${sku}.webp`;
+            const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_full.jpg`;
+            const cdnImg400 = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
+            const cdnThumb = `https://static.ctonline.mx/img/Thumbs/${sku}_100.jpg`;
+            const cdnCloudfront = `https://d22k14p2jfj20i.cloudfront.net/items/${sku}.jpg`;
             const placeholder = getPlaceholderForCat(cat);
 
             return `
@@ -551,9 +554,9 @@ function renderExactCatalogView() {
                                 width="300" 
                                 height="300" 
                                 loading="lazy" 
-                                decoding="async"
-                                class="w-full h-full object-contain group-hover:scale-105 transition duration-200"
-                                onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='${cdnImg}'; } else { this.src='${placeholder}'; }"
+                                decoding="async" 
+                                class="w-full h-full object-contain group-hover:scale-105 transition duration-200" 
+                                onerror="this.onerror=null; if (this.src.indexOf('.webp') !== -1) { this.src='${cdnImg}'; } else if (this.src.indexOf('_full.jpg') !== -1) { this.src='${cdnImg400}'; } else if (this.src.indexOf('_400.jpg') !== -1) { this.src='${cdnThumb}'; } else if (this.src.indexOf('Thumbs') !== -1) { this.src='${cdnCloudfront}'; } else { this.src='${placeholder}'; }"
                             />
                         </div>
 
@@ -698,6 +701,7 @@ function renderSidebarFacets() {
         { id: 'procesadores', name: '⚡ Procesadores (Intel / AMD)', icon: 'fa-microchip' },
         { id: 'tarjetas_madre', name: '🧩 Tarjetas Madre (Motherboards)', icon: 'fa-chess-board' },
         { id: 'memorias_ram', name: '🧠 Memorias RAM para PC/Laptop', icon: 'fa-memory' },
+        { id: 'almacenamiento_flash', name: '💾 Almacenamiento Flash, SD & USB', icon: 'fa-sd-card' },
         { id: 'almacenamiento_ssd', name: '💽 Discos SSD NVMe & HDDs', icon: 'fa-hard-drive' },
         { id: 'tarjetas_video', name: '🎮 Tarjetas de Video (GPUs)', icon: 'fa-vr-cardboard' },
         { id: 'gabinetes', name: '🖥️ Gabinetes & Chasis Gamer', icon: 'fa-server' },
@@ -1184,7 +1188,7 @@ window.openProductDetailModal = function(sku) {
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="w-full aspect-square bg-slate-950 rounded-2xl p-4 flex items-center justify-center border border-slate-800">
-                <img src="${localImg}" alt="${title}" width="400" height="400" class="w-full h-full object-contain" onerror="this.onerror=null; if (this.src.indexOf('static.ctonline.mx') === -1) { this.src='${cdnImg}'; } else { this.src='${placeholder}'; }" />
+                <img src="${localImg}" alt="${title}" width="400" height="400" class="w-full h-full object-contain" onerror="this.onerror=null; if (this.src.indexOf('.webp') !== -1) { this.src='${cdnImg}'; } else if (this.src.indexOf('_full.jpg') !== -1) { this.src='${cdnImg400}'; } else if (this.src.indexOf('_400.jpg') !== -1) { this.src='${cdnThumb}'; } else if (this.src.indexOf('Thumbs') !== -1) { this.src='${cdnCloudfront}'; } else { this.src='${placeholder}'; }" />
             </div>
 
             <div class="flex flex-col justify-between space-y-4">
