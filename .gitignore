@@ -2,3 +2,8 @@ __pycache__/
 *.py[cod]
 node_modules/
 .aider*
+
+*.zip
+*.tar.gz
+*.tmp
+*.log
