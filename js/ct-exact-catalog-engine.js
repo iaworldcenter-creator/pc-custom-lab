@@ -741,32 +741,40 @@ function renderSidebarFacets() {
         { id: 'reguladores_ups', name: '🔋 Reguladores & No-Breaks (UPS)', icon: 'fa-car-battery' }
     ];
 
-    // BLOQUE 2: 💾 OTRAS MEMORIAS & ALMACENAMIENTO
+    // BLOQUE 2: 💻 COMPUTADORAS ARMADAS & PORTÁTILES (INMEDIATAMENTE TRAS REGULADORES)
     const block2 = [
+        { id: 'computadoras_ensambladas', name: '🖥️ Computadoras Armadas & Desktop', icon: 'fa-desktop' },
+        { id: 'mini_pcs_ia', name: '📦 Mini PCs & NUCs', icon: 'fa-box-open' },
+        { id: 'laptops_portatiles', name: '💻 Laptops & Portátiles', icon: 'fa-laptop' },
+        { id: 'all_in_one', name: '🖥️ Computadoras All-in-One (AIO)', icon: 'fa-tv' },
+        { id: 'servidores_enterprise', name: '🗄️ Servidores Torre & Rack', icon: 'fa-server' }
+    ];
+
+    // BLOQUE 3: 📱 SMARTPHONES & TABLETS (ALTA ROTACIÓN COMERCIAL)
+    const block3 = [
+        { id: 'celulares_tablets', name: '📱 Smartphones, Celulares & Tablets', icon: 'fa-mobile-screen-button' }
+    ];
+
+    // BLOQUE 4: 💾 OTRAS MEMORIAS & ALMACENAMIENTO
+    const block4 = [
         { id: 'memorias_ram_laptop', name: '💻 RAM para Laptop (SODIMM)', icon: 'fa-laptop' },
         { id: 'memorias_ram_servidor', name: '🗄️ RAM para Servidor (ECC)', icon: 'fa-server' },
         { id: 'tarjetas_sd_microsd', name: '📷 Tarjetas SD & MicroSD', icon: 'fa-sd-card' },
         { id: 'memorias_usb_flash', name: '💾 Memorias USB & Pendrives', icon: 'fa-usb' }
     ];
 
-    // BLOQUE 3: 💻 EQUIPOS COMPLETOS & DISPOSITIVOS MÓVILES
-    const block3 = [
-        { id: 'computadoras_sistemas', name: '💻 Laptops, All-in-One & Mini PCs', icon: 'fa-laptop-code' },
-        { id: 'celulares_tablets', name: '📱 Smartphones, Celulares & Tablets', icon: 'fa-mobile-screen-button' }
-    ];
-
-    // BLOQUE 4: 🔌 CABLES, AUDIO & PERIFÉRICOS
-    const block4 = [
+    // BLOQUE 5: 🔌 CABLES, AUDIO & PERIFÉRICOS
+    const block5 = [
         { id: 'cables_adaptadores', name: '🔌 Cables & Adaptadores', icon: 'fa-network-wired' },
         { id: 'audio_audifonos', name: '🎧 Audio, Diademas & Audífonos', icon: 'fa-headphones' },
-        { id: 'accesorios_perifericos', name: '🎒 Accesorios & Varios', icon: 'fa-bag-shopping' }
+        { id: 'accesorios_perifericos', name: '🎒 Accesorios & Maletines', icon: 'fa-bag-shopping' }
     ];
 
-    // BLOQUE 5: 🖨️ IMPRESIÓN, SOLUCIONES & REDES
-    const block5 = [
-        { id: 'impresoras_consumibles', name: '🖨️ Impresoras, Tóners & Tintas', icon: 'fa-print' },
+    // BLOQUE 6: 🏢 SOLUCIONES COMERCIALES, REDES & IMPRESIÓN
+    const block6 = [
         { id: 'punto_de_venta', name: '🏷️ Punto de Venta (POS)', icon: 'fa-barcode' },
         { id: 'seguridad_cctv', name: '📹 Cámaras CCTV & Seguridad', icon: 'fa-video' },
+        { id: 'impresoras_consumibles', name: '🖨️ Impresoras, Tóners & Tintas', icon: 'fa-print' },
         { id: 'conectividad_redes', name: '🌐 Redes & Conectividad WiFi', icon: 'fa-wifi' },
         { id: 'proyectores', name: '📽️ Proyectores de Video', icon: 'fa-video' },
         { id: 'videojuegos_gaming', name: '🕹️ Consolas & Sillas Gamer', icon: 'fa-gamepad' }
@@ -825,43 +833,53 @@ function renderSidebarFacets() {
                 </div>
             </div>
 
-            <!-- BLOQUE 2 - OTRAS MEMORIAS -->
+            <!-- BLOQUE 2 - COMPUTADORAS ARMADAS & PORTÁTILES -->
             <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-emerald-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-memory text-emerald-400" aria-hidden="true"></i> 2. Otras Memorias & Almacenamiento
+                <h3 class="dept-heading text-amber-300 font-mono uppercase text-xs font-black mb-2">
+                    <i class="fa-solid fa-desktop text-amber-400" aria-hidden="true"></i> 2. PCs Armadas & Laptops
                 </h3>
                 <div class="space-y-1 text-slate-300">
                     ${block2.map(renderBtn).join('')}
                 </div>
             </div>
 
-            <!-- BLOQUE 3 - EQUIPOS ARMADOS & SMARTPHONES -->
+            <!-- BLOQUE 3 - SMARTPHONES & TABLETS -->
             <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-amber-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-laptop text-amber-400" aria-hidden="true"></i> 3. Laptops, PCs & Celulares
+                <h3 class="dept-heading text-rose-300 font-mono uppercase text-xs font-black mb-2">
+                    <i class="fa-solid fa-mobile-screen-button text-rose-400" aria-hidden="true"></i> 3. Celulares & Tablets
                 </h3>
                 <div class="space-y-1 text-slate-300">
                     ${block3.map(renderBtn).join('')}
                 </div>
             </div>
 
-            <!-- BLOQUE 4 - CABLES & PERIFÉRICOS -->
+            <!-- BLOQUE 4 - OTRAS MEMORIAS -->
             <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-indigo-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-plug text-indigo-400" aria-hidden="true"></i> 4. Cables, Audio & Periféricos
+                <h3 class="dept-heading text-emerald-300 font-mono uppercase text-xs font-black mb-2">
+                    <i class="fa-solid fa-memory text-emerald-400" aria-hidden="true"></i> 4. Otras Memorias & USBs
                 </h3>
                 <div class="space-y-1 text-slate-300">
                     ${block4.map(renderBtn).join('')}
                 </div>
             </div>
 
-            <!-- BLOQUE 5 - SOLUCIONES CORPORATIVAS & REDES -->
+            <!-- BLOQUE 5 - CABLES & PERIFÉRICOS -->
             <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-purple-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-building text-purple-400" aria-hidden="true"></i> 5. Soluciones, Redes & POS
+                <h3 class="dept-heading text-indigo-300 font-mono uppercase text-xs font-black mb-2">
+                    <i class="fa-solid fa-plug text-indigo-400" aria-hidden="true"></i> 5. Cables & Periféricos
                 </h3>
                 <div class="space-y-1 text-slate-300">
                     ${block5.map(renderBtn).join('')}
+                </div>
+            </div>
+
+            <!-- BLOQUE 6 - SOLUCIONES CORPORATIVAS & OFICINA -->
+            <div class="border-b border-slate-800 pb-3">
+                <h3 class="dept-heading text-purple-300 font-mono uppercase text-xs font-black mb-2">
+                    <i class="fa-solid fa-building text-purple-400" aria-hidden="true"></i> 6. Soluciones & Redes
+                </h3>
+                <div class="space-y-1 text-slate-300">
+                    ${block6.map(renderBtn).join('')}
                 </div>
             </div>
 
