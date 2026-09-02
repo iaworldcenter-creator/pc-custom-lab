@@ -94,18 +94,19 @@
             </a>
 
             <div class="flex-1 max-w-2xl relative">
-                <div class="flex items-center bg-white rounded-xl border border-slate-300 shadow-inner px-3 py-1.5">
+                <form onsubmit="event.preventDefault(); window.executeSearchQuery(document.getElementById('boutiqueSearchInput').value);" class="flex items-center bg-white rounded-xl border border-slate-300 shadow-inner px-3 py-1.5">
                     <i class="fa-solid fa-magnifying-glass text-slate-400 text-sm mr-2 shrink-0"></i>
                     <input 
                         type="search" 
                         id="boutiqueSearchInput" 
                         placeholder="Encuentra aquí y compra lo que necesitas en un solo clic" 
                         class="w-full bg-transparent text-slate-900 placeholder-slate-400 text-xs sm:text-sm outline-none font-medium" 
+                        onkeydown="if(event.key === 'Enter') { event.preventDefault(); window.executeSearchQuery(this.value); }"
                     />
-                    <button class="bg-blue-700 hover:bg-blue-600 text-white font-mono font-black px-3 py-1 rounded-lg text-xs uppercase tracking-wider shadow shrink-0">
+                    <button type="submit" onclick="window.executeSearchQuery(document.getElementById('boutiqueSearchInput').value);" class="bg-blue-700 hover:bg-blue-600 text-white font-mono font-black px-3 py-1 rounded-lg text-xs uppercase tracking-wider shadow shrink-0 cursor-pointer">
                         Buscar
                     </button>
-                </div>
+                </form>
                 <div id="boutique-autocomplete-box" class="absolute top-full left-0 w-full bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl mt-1.5 p-2 z-[100] hidden max-h-96 overflow-y-auto no-scrollbar"></div>
             </div>
 
