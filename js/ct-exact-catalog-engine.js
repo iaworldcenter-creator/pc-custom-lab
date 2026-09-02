@@ -416,6 +416,11 @@ function getPlaceholderForCat(cat) {
         'procesadores': 'cpu_placeholder.jpg',
         'tarjetas_madre': 'mbd_placeholder.jpg',
         'memorias_ram': 'ram_placeholder.jpg',
+        'memorias_ram_pc': 'ram_placeholder.jpg',
+        'memorias_ram_laptop': 'ram_placeholder.jpg',
+        'memorias_ram_servidor': 'ram_placeholder.jpg',
+        'tarjetas_sd_microsd': 'ssd_placeholder.jpg',
+        'memorias_usb_flash': 'ssd_placeholder.jpg',
         'almacenamiento_flash': 'ssd_placeholder.jpg',
         'almacenamiento_ssd': 'ssd_placeholder.jpg',
         'tarjetas_video': 'gpu_placeholder.jpg',
@@ -425,6 +430,7 @@ function getPlaceholderForCat(cat) {
         'enfriamiento': 'cooling_placeholder.jpg',
         'reguladores_ups': 'ups_placeholder.jpg',
         'monitores': 'mon_placeholder.jpg',
+        'proyectores': 'mon_placeholder.jpg',
         'cables_adaptadores': 'acc_placeholder.jpg',
         'audio_audifonos': 'elec_placeholder.jpg',
         'teclados_mouse': 'acc_placeholder.jpg',
@@ -723,14 +729,18 @@ function renderSidebarFacets() {
     const block1 = [
         { id: 'procesadores', name: '⚡ Procesadores (Intel / AMD)', icon: 'fa-microchip' },
         { id: 'tarjetas_madre', name: '🧩 Tarjetas Madre (Motherboards)', icon: 'fa-chess-board' },
-        { id: 'memorias_ram', name: '🧠 Memorias RAM para PC/Laptop', icon: 'fa-memory' },
-        { id: 'almacenamiento_flash', name: '💾 Almacenamiento Flash, SD & USB', icon: 'fa-sd-card' },
+        { id: 'memorias_ram_pc', name: '🧠 RAM para PC Escritorio (DIMM)', icon: 'fa-memory' },
+        { id: 'memorias_ram_laptop', name: '💻 RAM para Laptop (SODIMM)', icon: 'fa-laptop' },
+        { id: 'memorias_ram_servidor', name: '🗄️ RAM para Servidor (ECC)', icon: 'fa-server' },
+        { id: 'tarjetas_sd_microsd', name: '📷 Tarjetas SD & MicroSD', icon: 'fa-sd-card' },
+        { id: 'memorias_usb_flash', name: '💾 Memorias USB & Pendrives', icon: 'fa-usb' },
         { id: 'almacenamiento_ssd', name: '💽 Discos SSD NVMe & HDDs', icon: 'fa-hard-drive' },
         { id: 'tarjetas_video', name: '🎮 Tarjetas de Video (GPUs)', icon: 'fa-vr-cardboard' },
         { id: 'gabinetes', name: '🖥️ Gabinetes & Chasis Gamer', icon: 'fa-server' },
         { id: 'fuentes_energia', name: '🔌 Fuentes de Poder Certificadas', icon: 'fa-bolt' },
         { id: 'enfriamiento', name: '❄️ Enfriamiento Líquido & Disipadores', icon: 'fa-fan' },
         { id: 'monitores', name: '🖥️ Monitores & Pantallas PC', icon: 'fa-desktop' },
+        { id: 'proyectores', name: '📽️ Proyectores de Video', icon: 'fa-video' },
         { id: 'teclados_mouse', name: '⌨️ Teclados, Mouse & Periféricos', icon: 'fa-keyboard' },
         { id: 'computadoras_sistemas', name: '💻 Computadoras Completas & Laptops', icon: 'fa-laptop-code' }
     ];
@@ -745,11 +755,11 @@ function renderSidebarFacets() {
 
     // BLOQUE 3: SOLUCIONES CORPORATIVAS, SOFTWARE & POS
     const block3 = [
-        { id: 'impresoras_consumibles', name: '🖨️ Impresoras, Tóners & Tintas', icon: 'fa-print' },
-        { id: 'software_licencias', name: '💿 Software & Licencias Originales', icon: 'fa-compact-disc' },
-        { id: 'telefonia_seguridad', name: '📹 Seguridad CCTV & Control Acceso', icon: 'fa-video' },
         { id: 'punto_de_venta', name: '🏷️ Punto de Venta (POS)', icon: 'fa-barcode' },
         { id: 'celulares_tablets', name: '📱 Smartphones, Celulares & Tablets', icon: 'fa-mobile-screen-button' },
+        { id: 'impresoras_consumibles', name: '🖨️ Impresoras, Tóners & Tintas', icon: 'fa-print' },
+        { id: 'software_licencias', name: '💿 Software & Licencias Originales', icon: 'fa-compact-disc' },
+        { id: 'seguridad_cctv', name: '📹 Seguridad CCTV & Control Acceso', icon: 'fa-video' },
         { id: 'videojuegos_gaming', name: '🕹️ Consolas & Sillas Gamer', icon: 'fa-gamepad' },
         { id: 'accesorios_perifericos', name: '🎒 Accesorios & Maletines', icon: 'fa-bag-shopping' }
     ];
