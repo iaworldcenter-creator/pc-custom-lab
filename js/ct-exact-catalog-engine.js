@@ -1,5 +1,5 @@
 // =========================================================================
-// MOTOR UNIVERSAL BILINGÜE PC CUSTOM LAB (16,139 PRODUCTOS INDEXADOS)
+// MOTOR UNIVERSAL BILINGÜE PC CUSTOM LAB (17,490 PRODUCTOS EN 60 VITRINAS)
 // =========================================================================
 
 let currentViewStyle = 'grid';
@@ -37,6 +37,40 @@ window.formatPriceDisplay = function(priceMxn, priceUsd) {
     const isUsd = window.activeCurrency === 'USD';
     const val = isUsd ? (priceUsd || ((priceMxn || 0) / 19.50)) : (priceMxn || 0);
     return `$${Number(val).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+};
+
+// Normalizador universal de objetos (soporta formato compacto y completo)
+window.normalizeProductItem = function(p) {
+    if (!p) return null;
+    const priceMxn = p.precio_mxn || p.p || p.precio || 0;
+    const priceUsd = p.precio_usd || p.u || (priceMxn / 19.50);
+    const orig = p.precio_original || p.o || (priceMxn * 1.3333);
+    const may = p.precio_mayoreo_10pzs || p.y || (priceMxn * 0.90);
+    const mayUsd = p.precio_mayoreo_usd || (may / 19.50);
+    const sku = p.sku || p.s || p.clave || '';
+    const cat = p.categoria_clasificada || p.c || 'accesorios_perifericos';
+    const name = p.nombre || p.n || p.descripcion_completa || '';
+    const desc = p.descripcion_completa || p.d || name;
+    const marca = p.marca || p.m || 'Generica';
+    const isAgotado = (p.agotado === true || p.a === 1);
+    const hasImg = (p.has_verified_image === true || p.i === 1);
+    const subLabel = p.subgrupo_label || '';
+
+    return {
+        sku,
+        cat,
+        name,
+        desc,
+        marca,
+        priceMxn,
+        priceUsd,
+        orig,
+        may,
+        mayUsd,
+        isAgotado,
+        hasImg,
+        subLabel
+    };
 };
 
 // Normalización de texto sin acentos, mayúsculas o símbolos
@@ -117,13 +151,13 @@ function searchCatalogMaster(query) {
 
     for (let i = 0; i < all.length; i++) {
         const p = all[i];
-        const skuNorm = stripAccents(p.sku || p.clave);
-        const nameNorm = stripAccents(p.nombre);
-        const catNorm = stripAccents(p.categoria_clasificada);
-        const brandNorm = stripAccents(p.marca);
-        const descNorm = stripAccents(p.descripcion_completa);
+        const item = window.normalizeProductItem(p);
+        const skuNorm = stripAccents(item.sku);
+        const nameNorm = stripAccents(item.name);
+        const catNorm = stripAccents(item.cat);
+        const brandNorm = stripAccents(item.marca);
+        const descNorm = stripAccents(item.desc);
 
-        // Modo de 1 solo caracter: Coincidencia por letra inicial de producto, marca o categoría
         if (isSingleChar) {
             if (nameNorm.startsWith(charPrefix) || brandNorm.startsWith(charPrefix) || catNorm.startsWith(charPrefix) || skuNorm.startsWith(charPrefix)) {
                 let score = 500;
@@ -186,7 +220,6 @@ function searchCatalogMaster(query) {
         }
 
         if (matchAll) {
-            // Potenciadores Semánticos por Categoría
             if (tokens.some(t => ['ram', 'memoria', 'memorias'].includes(t))) {
                 if (catNorm.includes('memorias_ram')) score += 10000;
                 if (nameNorm.includes('memoria ram')) score += 8000;
@@ -198,32 +231,12 @@ function searchCatalogMaster(query) {
                 if (nameNorm.startsWith('procesador')) score += 8000;
             }
 
-            if (tokens.some(t => ['video', 'grafica', 'graficas', 'gpu', 'rtx', 'gtx'].includes(t))) {
-                if (catNorm === 'tarjetas_video') score += 10000;
-            }
-
-            if (tokens.some(t => ['madre', 'motherboard', 'placa', 'placas'].includes(t))) {
-                if (catNorm === 'tarjetas_madre') score += 10000;
-            }
-
-            if (tokens.some(t => ['gabinete', 'gabinetes', 'chasis'].includes(t))) {
-                if (catNorm === 'gabinetes') score += 10000;
-            }
-
-            if (tokens.some(t => ['fuente', 'fuentes', 'psu'].includes(t))) {
-                if (catNorm === 'fuentes_energia') score += 10000;
-            }
-
-            if (tokens.some(t => ['teclado', 'teclados', 'mouse', 'raton', 'ratones'].includes(t))) {
-                if (catNorm === 'teclados_mouse') score += 10000;
-            }
-
             if (tokens.some(t => ['disco', 'discos', 'ssd', 'nvme'].includes(t))) {
-                if (catNorm === 'almacenamiento_ssd') score += 10000;
+                if (catNorm.includes('ssd') || catNorm.includes('disco')) score += 10000;
             }
 
             if (tokens.some(t => ['monitor', 'monitores', 'pantalla', 'pantallas'].includes(t))) {
-                if (catNorm === 'monitores') score += 10000;
+                if (catNorm.includes('monitores')) score += 10000;
             }
 
             scoredResults.push({ score, product: p });
@@ -234,11 +247,7 @@ function searchCatalogMaster(query) {
     return scoredResults.map(r => r.product);
 }
 
-
-// =========================================================================
-// CONTROLES DE PRESUPUESTO, DESCUENTOS Y ORDENAMIENTO INTERACTIVO
-// =========================================================================
-
+// Controles de Presupuesto
 window.setBudgetPreset = function(min, max) {
     activeMinPrice = min;
     activeMaxPrice = max;
@@ -268,35 +277,18 @@ window.applyCustomBudget = function() {
     window.scrollToResults();
 };
 
-window.setSortCriterion = function(criterion) {
-    currentSortCriterion = criterion;
+window.setSortCriterion = function(crit) {
+    currentSortCriterion = crit;
     currentPageNumber = 1;
     renderExactCatalogView();
-};
-
-window.setDiscountFilter = function(minPct) {
-    activeMinDiscount = minPct;
-    currentPageNumber = 1;
-    renderExactCatalogView();
-    window.scrollToResults();
 };
 
 window.scrollToResults = function() {
-    const target = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
-    if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    const el = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
 
-
-window.selectSubChipFilter = function(chipId) {
-    activeSelectedChip = chipId;
-    currentPageNumber = 1;
-    renderExactCatalogView();
-    window.scrollToResults();
-};
-
-// Inicialización instantánea con protección anti-pantalla en blanco
+// Inicialización instantánea sin bloqueo de pantalla
 function initFullCatalog() {
     if (window.activeCurrency === 'USD') {
         const btnMxn = document.getElementById('currencyToggleMXN');
@@ -310,7 +302,6 @@ function initFullCatalog() {
     const checkAndRender = () => {
         const data = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL;
         if (data && Array.isArray(data) && data.length > 0) {
-            window.CT_CATALOG_DATA = data;
             isFullCatalogLoaded = true;
             renderSidebarFacets();
             renderExactCatalogView();
@@ -345,7 +336,7 @@ function initFullCatalog() {
     }
 }
 
-// RENDERIZADO DEL WELCOME HUB (HUB DE DEPARTAMENTOS EN PANTALLA DE BIENVENIDA)
+// Renderizado del Welcome Hub (Panel superior de acceso rápido)
 function renderWelcomeHub() {
     const hubContainer = document.getElementById("welcome-hub-container");
     if (!hubContainer) return;
@@ -357,29 +348,29 @@ function renderWelcomeHub() {
     }
 
     const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
-    const getCount = (id) => all.filter(p => (p.categoria_clasificada || '').toLowerCase() === id.toLowerCase()).length;
+    const getCount = (id) => all.filter(p => (p.categoria_clasificada || p.c || '').toLowerCase() === id.toLowerCase()).length;
 
     const hubDepts = [
-        { id: 'procesadores', name: '1. Procesadores (CPUs)', icon: 'fa-microchip', color: 'from-blue-600 to-cyan-600', badge: 'Intel & AMD Ryzen' },
+        { id: 'procesadores', name: '1. Procesadores (CPUs)', icon: 'fa-microchip', color: 'from-blue-600 to-cyan-600', badge: 'Intel Core Ultra & AMD Ryzen' },
         { id: 'tarjetas_madre', name: '2. Tarjetas Madre', icon: 'fa-chess-board', color: 'from-indigo-600 to-blue-600', badge: 'AM5, LGA1851, LGA1700' },
-        { id: 'memorias_ram_pc', name: '3. Memorias RAM', icon: 'fa-memory', color: 'from-emerald-600 to-teal-600', badge: 'DDR5 & DDR4 DIMM' },
+        { id: 'memorias_ram_pc', name: '3. Memorias RAM PC', icon: 'fa-memory', color: 'from-emerald-600 to-teal-600', badge: 'DDR5 & DDR4 DIMM' },
         { id: 'gabinetes', name: '4. Gabinetes Gamer', icon: 'fa-server', color: 'from-amber-600 to-orange-600', badge: 'Cristal Templado & ARGB' },
-        { id: 'tarjetas_video', name: '5. Tarjetas de Video (GPUs)', icon: 'fa-vr-cardboard', color: 'from-purple-600 to-pink-600', badge: 'GeForce RTX & Radeon' },
-        { id: 'enfriamiento', name: '6. Sistemas de Enfriamiento', icon: 'fa-fan', color: 'from-cyan-600 to-blue-500', badge: 'Líquido AIO & Disipadores' },
-        { id: 'almacenamiento_ssd', name: '7. Almacenamiento SSD & HDDs', icon: 'fa-hard-drive', color: 'from-sky-600 to-indigo-600', badge: 'M.2 NVMe PCIe 4.0/5.0' },
-        { id: 'fuentes_energia', name: '8. Fuentes de Poder Certificadas', icon: 'fa-bolt', color: 'from-yellow-600 to-amber-600', badge: '80 Plus Gold & Bronze' },
-        { id: 'monitores', name: '9. Monitores & Pantallas PC', icon: 'fa-desktop', color: 'from-rose-600 to-red-600', badge: 'Gamer 144Hz - 240Hz & 4K' },
-        { id: 'computadoras_ensambladas', name: '10. PCs Armadas & Laptops', icon: 'fa-computer', color: 'from-cyan-500 to-emerald-600', badge: 'Gaming & Workstations' },
-        { id: 'proyectores_presentacion', name: '11. Proyectores & Pantallas', icon: 'fa-video', color: 'from-violet-600 to-purple-700', badge: 'BenQ, Epson & Láser' },
-        { id: 'conectividad_redes', name: '12. Redes & Telecomunicaciones', icon: 'fa-wifi', color: 'from-blue-700 to-indigo-800', badge: 'WiFi 6/7, Switches & Fibra' },
-        { id: 'seguridad_cctv', name: '13. CCTV & Videovigilancia', icon: 'fa-shield-halved', color: 'from-slate-700 to-cyan-900', badge: 'Cámaras IP, DVRs & NVRs' },
-        { id: 'reguladores_ups', name: '14. Energía, UPS & Reguladores', icon: 'fa-car-battery', color: 'from-emerald-700 to-green-900', badge: 'Respaldo Eléctrico No-Break' },
-        { id: 'limpieza_mantenimiento', name: '15. Limpieza & Mantenimiento', icon: 'fa-spray-can-sparkles', color: 'from-teal-600 to-cyan-700', badge: 'Aire Comprimido & Espumas' }
+        { id: 'tarjetas_video', name: '5. Tarjetas de Video', icon: 'fa-vr-cardboard', color: 'from-purple-600 to-pink-600', badge: 'GeForce RTX & Radeon' },
+        { id: 'enfriamiento', name: '6. Enfriamiento Líquido', icon: 'fa-fan', color: 'from-cyan-600 to-blue-500', badge: 'Líquido AIO & Disipadores' },
+        { id: 'ssds_m2_nvme', name: '7. Almacenamiento SSD', icon: 'fa-hard-drive', color: 'from-sky-600 to-indigo-600', badge: 'M.2 NVMe PCIe 4.0/5.0' },
+        { id: 'fuentes_energia', name: '8. Fuentes de Poder', icon: 'fa-bolt', color: 'from-yellow-600 to-amber-600', badge: '80 Plus Gold & Bronze' },
+        { id: 'monitores_pantallas', name: '9. Monitores PC', icon: 'fa-desktop', color: 'from-rose-600 to-red-600', badge: 'Gamer 144Hz - 240Hz & 4K' },
+        { id: 'computadoras_ensambladas', name: '10. PCs Armadas & Gamer', icon: 'fa-computer', color: 'from-cyan-500 to-emerald-600', badge: 'Gaming & Workstations' },
+        { id: 'proyectores_presentacion', name: '11. Proyectores Video', icon: 'fa-video', color: 'from-violet-600 to-purple-700', badge: 'BenQ, Epson & Láser' },
+        { id: 'switches_red', name: '12. Redes & Switches', icon: 'fa-network-wired', color: 'from-blue-700 to-indigo-800', badge: 'Ethernet, PoE+ & Fibra' },
+        { id: 'camaras_seguridad_cctv', name: '13. Cámaras CCTV', icon: 'fa-video', color: 'from-slate-700 to-cyan-900', badge: 'Cámaras IP, Bala & Domo' },
+        { id: 'no_breaks_ups', name: '14. No-Breaks & UPS', icon: 'fa-car-battery', color: 'from-emerald-700 to-green-900', badge: 'Respaldo Eléctrico' },
+        { id: 'limpieza_mantenimiento', name: '15. Limpieza & Servicio', icon: 'fa-spray-can-sparkles', color: 'from-teal-600 to-cyan-700', badge: 'Aire Comprimido & Espumas' }
     ];
 
     hubContainer.classList.remove("hidden");
     hubContainer.innerHTML = `
-        <div class="bg-slate-900/95 border border-cyan-500/40 rounded-2xl p-4 sm:p-5 shadow-2xl space-y-4 mb-4">
+        <div class="bg-slate-900/95 border border-cyan-500/40 rounded-3xl p-4 sm:p-5 shadow-2xl space-y-4 mb-4">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
                 <div class="flex items-center gap-2.5">
                     <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-slate-950 font-black shadow-md">
@@ -390,7 +381,7 @@ function renderWelcomeHub() {
                             WELCOME HUB • NAVEGACIÓN RÁPIDA POR DEPARTAMENTO
                         </h2>
                         <p class="text-[11px] text-slate-400 font-mono">
-                            Haz clic en cualquier categoría para desplegar su catálogo de ensamble con entrega inmediata
+                            Haz clic en cualquier categoría para desplegar su vitrina completa con entrega inmediata
                         </p>
                     </div>
                 </div>
@@ -406,7 +397,7 @@ function renderWelcomeHub() {
                         <button 
                             type="button" 
                             onclick="window.selectCategoryFacet('${d.id}')" 
-                            class="btn-action group text-left p-3 rounded-xl bg-slate-950/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400 transition-all duration-200 shadow-md hover:shadow-cyan-500/20 flex flex-col justify-between min-h-[92px] cursor-pointer"
+                            class="btn-action group text-left p-3 rounded-2xl bg-slate-950/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400 transition-all duration-200 shadow-md hover:shadow-cyan-500/20 flex flex-col justify-between min-h-[92px] cursor-pointer"
                         >
                             <div class="flex items-center justify-between w-full mb-1">
                                 <div class="w-8 h-8 rounded-lg bg-gradient-to-br ${d.color} flex items-center justify-center text-white text-xs shadow-sm group-hover:scale-110 transition">
@@ -432,7 +423,7 @@ function renderWelcomeHub() {
     `;
 }
 
-// Selección de categorías y auto-scroll instantáneo en celular y desktop
+// Selección de categorías y auto-scroll
 window.selectCategoryFacet = function(catId) {
     activeSelectedCategory = catId;
     activeSelectedChip = 'Todos';
@@ -446,17 +437,10 @@ window.selectCategoryFacet = function(catId) {
     renderSidebarFacets();
     renderExactCatalogView();
 
-    // Auto-scroll inmediato garantizado a la vitrina
-    const target = document.getElementById("results-count-display") || document.getElementById("products-grid-container") || document.getElementById("catalog-main-content-root");
+    const target = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
     if (target) {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-    setTimeout(() => {
-        const target2 = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
-        if (target2) {
-            target2.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }, 80);
 };
 
 window.scrollToDepartments = function() {
@@ -475,7 +459,7 @@ window.resetFacets = function() {
     if (searchInput) searchInput.value = '';
     renderSidebarFacets();
     renderExactCatalogView();
-    window.scrollToDepartments();
+    window.scrollToResults();
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -509,72 +493,47 @@ function getFilteredList() {
     // 1. Filtro por Departamento / Categoría
     if (activeSelectedCategory !== 'Todas') {
         items = items.filter(p => {
-            const catClasif = (p.categoria_clasificada || '').toLowerCase();
+            const catClasif = (p.categoria_clasificada || p.c || '').toLowerCase();
             return catClasif === activeSelectedCategory.toLowerCase();
         });
-
-        // Filtro por sub-chip rápido (ej. HDMI, DisplayPort, Diademas)
-        if (activeSelectedChip !== 'Todos') {
-            items = items.filter(p => (p.chip_filter || '').toLowerCase() === activeSelectedChip.toLowerCase());
-        }
     }
 
     // 2. Filtro por Marca
     if (activeSelectedBrand !== 'Todas') {
-        items = items.filter(p => (p.marca || '').toUpperCase() === activeSelectedBrand.toUpperCase());
+        items = items.filter(p => (p.marca || p.m || '').toUpperCase() === activeSelectedBrand.toUpperCase());
     }
 
-    // 3. Filtro por Presupuesto (Rango de Precios Mínimo y Máximo)
+    // 3. Filtro por Presupuesto
     if (activeMinPrice > 0 || activeMaxPrice < Infinity) {
         items = items.filter(p => {
-            const pr = parseFloat(p.precio_mxn || p.precio || 0);
+            const pr = parseFloat(p.precio_mxn || p.p || p.precio || 0);
             return pr >= activeMinPrice && pr <= activeMaxPrice;
         });
     }
 
-    // 4. Filtro por Descuento Mínimo
-    if (activeMinDiscount > 0) {
-        items = items.filter(p => {
-            const desc = parseFloat(p.descuento_porcentaje || 25);
-            return desc >= activeMinDiscount;
-        });
-    }
-
-    // 5. Ordenamiento Matemático y Regla Foto-First
+    // 4. Ordenamiento
     if (activeSearchQuery && activeSearchQuery.trim() !== '' && currentSortCriterion === 'destacados') {
         return items;
     }
 
     items.sort((a, b) => {
-        // Orden Primario: Los productos con fotografía comprobada van en las primeras páginas (1, 2, 3, 4...)
-        const aHasImg = (a.has_verified_image === true || a.distribuidor === 'PC Custom Lab Oficial' || a.distribuidor === 'CT Internacional') ? 1 : 0;
-        const bHasImg = (b.has_verified_image === true || b.distribuidor === 'PC Custom Lab Oficial' || b.distribuidor === 'CT Internacional') ? 1 : 0;
+        const aItem = window.normalizeProductItem(a);
+        const bItem = window.normalizeProductItem(b);
+        const aHasImg = aItem.hasImg ? 1 : 0;
+        const bHasImg = bItem.hasImg ? 1 : 0;
         
         if (aHasImg !== bHasImg) {
-            return bHasImg - aHasImg; // Primero con imagen
+            return bHasImg - aHasImg;
         }
 
-        // Si tienen igual prioridad de imagen, aplicar el criterio seleccionado
         if (currentSortCriterion === 'precio_asc') {
-            return (a.precio_mxn || a.precio || 0) - (b.precio_mxn || b.precio || 0);
+            return aItem.priceMxn - bItem.priceMxn;
         } else if (currentSortCriterion === 'precio_desc') {
-            return (b.precio_mxn || b.precio || 0) - (a.precio_mxn || a.precio || 0);
-        } else if (currentSortCriterion === 'descuento') {
-            return (b.descuento_porcentaje || 25) - (a.descuento_porcentaje || 25);
+            return bItem.priceMxn - aItem.priceMxn;
         } else if (currentSortCriterion === 'nombre') {
-            return (a.nombre || '').localeCompare(b.nombre || '');
+            return aItem.name.localeCompare(bItem.name);
         } else {
-            // Destacados / Relevancia:
-            // Si estamos dentro de un departamento, agrupar estrictamente por sub-conjunto (puros M.2 juntos, puros SATA juntos, etc.)
-            if (activeSelectedCategory !== 'Todas') {
-                const subDiff = (a.subgrupo_orden || 50) - (b.subgrupo_orden || 50);
-                if (subDiff !== 0) return subDiff;
-                return (b.precio_mxn || b.precio || 0) - (a.precio_mxn || a.precio || 0);
-            }
-            // En Vitrina General (Todas): Computadoras de escritorio, laptops y sistemas completos primero
-            const prioDiff = (a.sort_priority || 50) - (b.sort_priority || 50);
-            if (prioDiff !== 0) return prioDiff;
-            return (b.precio_mxn || b.precio || 0) - (a.precio_mxn || a.precio || 0);
+            return bItem.priceMxn - aItem.priceMxn;
         }
     });
 
@@ -585,38 +544,54 @@ function getPlaceholderForCat(cat) {
     const map = {
         'procesadores': 'cpu_placeholder.jpg',
         'tarjetas_madre': 'mbd_placeholder.jpg',
-        'memorias_ram': 'ram_placeholder.jpg',
         'memorias_ram_pc': 'ram_placeholder.jpg',
         'memorias_ram_laptop': 'ram_placeholder.jpg',
         'memorias_ram_servidor': 'ram_placeholder.jpg',
-        'tarjetas_sd_microsd': 'ssd_placeholder.jpg',
-        'memorias_usb_flash': 'ssd_placeholder.jpg',
-        'almacenamiento_flash': 'ssd_placeholder.jpg',
-        'almacenamiento_ssd': 'ssd_placeholder.jpg',
+        'tarjetas_microsd': 'ssd_placeholder.jpg',
+        'tarjetas_sd': 'ssd_placeholder.jpg',
+        'memorias_usb_pendrives': 'ssd_placeholder.jpg',
+        'ssds_m2_nvme': 'ssd_placeholder.jpg',
+        'discos_duros_hdd_internos': 'ssd_placeholder.jpg',
+        'discos_duros_externos': 'ssd_placeholder.jpg',
+        'ssds_externos_portatiles': 'ssd_placeholder.jpg',
         'tarjetas_video': 'gpu_placeholder.jpg',
-        'tarjetas_de_video': 'gpu_placeholder.jpg',
         'gabinetes': 'gab_placeholder.jpg',
         'fuentes_energia': 'psu_placeholder.jpg',
         'enfriamiento': 'cooling_placeholder.jpg',
-        'reguladores_ups': 'ups_placeholder.jpg',
-        'monitores': 'mon_placeholder.jpg',
-        'proyectores': 'mon_placeholder.jpg',
-        'cables_adaptadores': 'acc_placeholder.jpg',
-        'audio_audifonos': 'elec_placeholder.jpg',
-        'teclados_mouse': 'acc_placeholder.jpg',
-        'laptops_portatiles': 'lap_placeholder.jpg',
-        'computadoras_sistemas': 'pc_placeholder.jpg',
+        'no_breaks_ups': 'ups_placeholder.jpg',
+        'reguladores_voltaje': 'ups_placeholder.jpg',
+        'monitores_pantallas': 'mon_placeholder.jpg',
+        'proyectores_presentacion': 'mon_placeholder.jpg',
+        'teclados': 'acc_placeholder.jpg',
+        'ratones_mouse': 'acc_placeholder.jpg',
+        'combos_teclado_mouse': 'acc_placeholder.jpg',
+        'diademas_headsets': 'elec_placeholder.jpg',
+        'bocinas_sonido': 'elec_placeholder.jpg',
+        'microfonos': 'elec_placeholder.jpg',
         'computadoras_ensambladas': 'pc_placeholder.jpg',
+        'laptops_portatiles': 'lap_placeholder.jpg',
+        'computadoras_all_in_one': 'pc_placeholder.jpg',
+        'mini_pcs_nuc': 'minipc_placeholder.jpg',
         'servidores_enterprise': 'minipc_placeholder.jpg',
-        'impresoras_consumibles': 'imp_placeholder.jpg',
-        'conectividad_redes': 'redes_placeholder.jpg',
-        'software_licencias': 'sof_placeholder.jpg',
-        'seguridad_cctv': 'cctv_placeholder.jpg',
-        'telefonia_seguridad': 'cctv_placeholder.jpg',
+        'switches_red': 'redes_placeholder.jpg',
+        'routers_access_points': 'redes_placeholder.jpg',
+        'camaras_seguridad_cctv': 'cctv_placeholder.jpg',
+        'grabadores_dvr_nvr': 'cctv_placeholder.jpg',
+        'control_acceso_biometricos': 'cctv_placeholder.jpg',
+        'alarmas_sensores_seguridad': 'cctv_placeholder.jpg',
+        'telefonia_conmutadores': 'cctv_placeholder.jpg',
+        'impresoras_multifuncionales': 'imp_placeholder.jpg',
+        'toners_laser': 'imp_placeholder.jpg',
+        'tintas_cartuchos': 'imp_placeholder.jpg',
+        'plotters_gran_formato': 'imp_placeholder.jpg',
+        'sistemas_operativos': 'sof_placeholder.jpg',
+        'ofimatica_productividad': 'sof_placeholder.jpg',
+        'antivirus_seguridad_digital': 'sof_placeholder.jpg',
         'punto_de_venta': 'pos_placeholder.jpg',
-        'celulares_tablets': 'lap_placeholder.jpg',
-        'videojuegos_gaming': 'acc_placeholder.jpg',
-        'accesorios_perifericos': 'acc_placeholder.jpg'
+        'smartphones_celulares': 'lap_placeholder.jpg',
+        'tablets_ipads': 'lap_placeholder.jpg',
+        'cables_adaptadores': 'acc_placeholder.jpg',
+        'limpieza_mantenimiento': 'acc_placeholder.jpg'
     };
     return `./assets/img/placeholders/${map[cat] || 'acc_placeholder.jpg'}`;
 }
@@ -642,55 +617,203 @@ window.handleProductImgError = function(imgEl, sku, cat) {
     }
 };
 
-function renderExactCatalogView() {
-    // Renderizar Welcome Hub si estamos en inicio sin filtros
-    renderWelcomeHub();
-    let chipsHtml = '';
-    if (activeSelectedCategory === 'cables_adaptadores') {
-        const cableChips = [
-            { id: 'Todos', label: 'Todos los Cables' },
-            { id: 'hdmi', label: 'HDMI' },
-            { id: 'displayport', label: 'DisplayPort' },
-            { id: 'usb', label: 'USB-C / USB' },
-            { id: 'red', label: 'Red / Cat6' },
-            { id: 'impresora', label: 'Impresora / Paralelo' },
-            { id: 'vga_dvi', label: 'VGA / DVI' },
-            { id: 'poder', label: 'Alimentación' },
-            { id: 'adaptadores', label: 'Adaptadores & Coples' }
-        ];
-        chipsHtml = `
-            <div class="w-full flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-2.5 pt-1">
-                ${cableChips.map(c => `
-                    <button type="button" onclick="selectSubChipFilter('${c.id}')" class="btn-action px-3 py-1.5 rounded-xl font-mono text-[11px] font-bold shrink-0 transition cursor-pointer border ${activeSelectedChip === c.id ? 'bg-cyan-500 text-slate-950 border-cyan-400 shadow-lg shadow-cyan-500/20' : 'bg-slate-900 hover:bg-slate-800 text-slate-300 border-slate-800'}">
-                        ${c.label}
+// Renderizador individual de tarjeta de producto (cuadrada 1080x1080)
+function renderProductCardHTML(p, viewStyle) {
+    const item = window.normalizeProductItem(p);
+    if (!item) return '';
+
+    const title = item.name.replace(/'/g, "&#39;").replace(/"/g, '&quot;');
+    const localImg = `assets/img/${item.sku}.webp`;
+
+    if (viewStyle === 'grid') {
+        return `
+            <article class="bg-slate-900/95 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
+                <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
+                    <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
+                </div>
+
+                <div>
+                    <!-- Foto Cuadrada 1080x1080 WebP -->
+                    <div onclick="openProductDetailModal('${item.sku}')" class="w-full aspect-square bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer flex items-center justify-center">
+                        <img 
+                            src="${localImg}" 
+                            alt="${title}" 
+                            width="300" 
+                            height="300" 
+                            loading="lazy" 
+                            decoding="async" 
+                            class="w-full h-full object-contain group-hover:scale-105 transition duration-200" 
+                            onerror="window.handleProductImgError(this, '${item.sku}', '${item.cat}')"
+                        />
+                    </div>
+
+                    ${item.subLabel ? `
+                        <div class="text-center mb-1">
+                            <span class="inline-block bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 text-[9px] font-mono font-bold px-2 py-0.5 rounded-full">
+                                ${item.subLabel}
+                            </span>
+                        </div>
+                    ` : ''}
+
+                    <!-- Precios Claros -->
+                    <div class="text-center mb-1.5">
+                        <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
+                            ${window.formatPriceDisplay(item.priceMxn, item.priceUsd)}
+                        </span>
+                        <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
+                            <span class="text-slate-400 line-through">${window.formatPriceDisplay(item.orig, (item.priceUsd || (item.priceMxn/19.5))*1.33)}</span>
+                            <span class="text-amber-300 font-bold">Mayoreo: ${window.formatPriceDisplay(item.may, item.mayUsd)}</span>
+                        </div>
+                    </div>
+
+                    <div class="text-center text-[9px] font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                        ${item.isAgotado 
+                            ? `<span class="text-amber-400"><i class="fa-solid fa-clock mr-0.5"></i> Bajo Pedido (Próxima Existencia)</span>`
+                            : `<span class="text-cyan-300"><i class="fa-solid fa-truck-bolt mr-0.5"></i> Disponible en Pedro Moreno 501 A</span>`
+                        }
+                    </div>
+
+                    <h3 onclick="openProductDetailModal('${item.sku}')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="${title}">
+                        ${title}
+                    </h3>
+
+                    <div class="text-center text-[9.5px] font-mono text-slate-400 mb-2">
+                        <span>SKU: <strong class="text-cyan-300">${item.sku}</strong></span>
+                    </div>
+                </div>
+
+                <!-- Botones de Acción: Ficha, + Carrito y Comprar -->
+                <div class="pt-2 border-t border-slate-800/80 space-y-1.5">
+                    <div class="flex gap-1.5">
+                        <button 
+                            onclick="openProductDetailModal('${item.sku}')" 
+                            aria-label="Ver ficha de ${title}" 
+                            class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-mono text-[10.5px] font-bold rounded-xl py-2 transition cursor-pointer border border-slate-700 min-h-[40px] flex items-center justify-center gap-1"
+                        >
+                            <i class="fa-solid fa-file-lines text-xs"></i> <span>Ficha</span>
+                        </button>
+                        <button 
+                            onclick="${item.isAgotado ? `openProductDetailModal('${item.sku}')` : `addToCartCT('${item.sku}')`}" 
+                            aria-label="Agregar ${title} al carrito" 
+                            class="btn-action flex-1 ${item.isAgotado ? 'bg-slate-800 text-slate-400 border border-slate-700' : 'bg-blue-600 hover:bg-blue-500 text-white shadow active:scale-95'} font-mono text-[10.5px] font-bold rounded-xl py-2 transition cursor-pointer min-h-[40px] flex items-center justify-center gap-1"
+                        >
+                            <i class="fa-solid ${item.isAgotado ? 'fa-clock' : 'fa-cart-plus'} text-xs"></i> <span>${item.isAgotado ? 'Apartar' : '+ Carrito'}</span>
+                        </button>
+                    </div>
+                    <button 
+                        onclick="${item.isAgotado ? `openProductDetailModal('${item.sku}')` : `buyNowCT('${item.sku}')`}" 
+                        aria-label="Comprar ${title} ahora" 
+                        class="btn-action w-full ${item.isAgotado ? 'bg-slate-800 hover:bg-slate-750 text-amber-300 border border-amber-500/40' : 'bg-gradient-to-r from-emerald-600 via-cyan-600 to-blue-600 hover:from-emerald-500 hover:to-cyan-500 text-white shadow-lg active:scale-95'} font-mono text-[11px] font-black rounded-xl py-2.5 uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer min-h-[44px]"
+                    >
+                        <i class="fa-solid ${item.isAgotado ? 'fa-hourglass-half text-amber-300' : 'fa-bolt text-yellow-300'}"></i> <span>${item.isAgotado ? 'Bajo Pedido' : 'Comprar Ahora'}</span>
                     </button>
-                `).join('')}
-            </div>
+                </div>
+            </article>
         `;
-    } else if (activeSelectedCategory === 'audio_audifonos') {
-        const audioChips = [
-            { id: 'Todos', label: 'Todo Audio' },
-            { id: 'diademas', label: 'Diademas & Headsets Gamer' },
-            { id: 'bluetooth', label: 'Bluetooth / TWS' },
-            { id: 'bocinas', label: 'Bocinas & Parlantes' },
-            { id: 'microfonos', label: 'Micrófonos' },
-            { id: 'auriculares', label: 'Auriculares In-Ear' }
-        ];
-        chipsHtml = `
-            <div class="w-full flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-2.5 pt-1">
-                ${audioChips.map(c => `
-                    <button type="button" onclick="selectSubChipFilter('${c.id}')" class="btn-action px-3 py-1.5 rounded-xl font-mono text-[11px] font-bold shrink-0 transition cursor-pointer border ${activeSelectedChip === c.id ? 'bg-cyan-500 text-slate-950 border-cyan-400 shadow-lg shadow-cyan-500/20' : 'bg-slate-900 hover:bg-slate-800 text-slate-300 border-slate-800'}">
-                        ${c.label}
+    } else {
+        return `
+            <article class="bg-slate-900/95 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition group shadow-xl relative overflow-hidden text-slate-100">
+                <div class="w-24 h-24 sm:w-28 sm:h-28 bg-slate-950 rounded-xl p-2 shrink-0 flex items-center justify-center cursor-pointer" onclick="openProductDetailModal('${item.sku}')">
+                    <img src="${localImg}" alt="${title}" width="120" height="120" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${item.sku}', '${item.cat}')" />
+                </div>
+                <div class="flex-1 min-w-0 text-left">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="text-[10px] font-mono text-cyan-400 font-bold uppercase tracking-wider block">${item.cat.replace(/_/g, ' ')} • SKU: ${item.sku}</span>
+                        ${item.subLabel ? `<span class="bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 text-[9px] font-mono px-2 py-0.5 rounded-full font-bold">${item.subLabel}</span>` : ''}
+                    </div>
+                    <h3 onclick="openProductDetailModal('${item.sku}')" class="text-xs sm:text-sm font-bold text-slate-100 hover:text-cyan-300 transition line-clamp-2 cursor-pointer mb-1.5">${title}</h3>
+                    <div class="text-[11px] font-mono ${item.isAgotado ? 'text-amber-400' : 'text-slate-400'}">
+                        ${item.isAgotado ? '<i class="fa-solid fa-clock"></i> Bajo Pedido hasta su próxima existencia' : 'Entrega Inmediata en Pedro Moreno 501 A • Garantía 48h Directa'}
+                    </div>
+                </div>
+                <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-48 border-t sm:border-t-0 sm:border-l border-slate-800 pt-2 sm:pt-0 sm:pl-4 shrink-0 space-y-2">
+                    <div class="text-right">
+                        <span class="text-[10px] text-slate-500 line-through font-mono block">${window.formatPriceDisplay(item.orig, (item.priceUsd || (item.priceMxn/19.5))*1.33)}</span>
+                        <div class="text-sm sm:text-base font-black text-emerald-400 font-mono">${window.formatPriceDisplay(item.priceMxn, item.priceUsd)}</div>
+                    </div>
+                    <div class="flex gap-1.5 w-full">
+                        <button onclick="${item.isAgotado ? `openProductDetailModal('${item.sku}')` : `addToCartCT('${item.sku}')`}" class="flex-1 ${item.isAgotado ? 'bg-slate-800 text-slate-400' : 'bg-blue-600 hover:bg-blue-500 text-white'} font-bold py-2 rounded-xl text-[10.5px] font-mono uppercase flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer min-h-[40px]">
+                            <i class="fa-solid ${item.isAgotado ? 'fa-clock' : 'fa-cart-plus'}"></i> ${item.isAgotado ? 'Bajo Pedido' : '+Carrito'}
+                        </button>
+                        <button onclick="${item.isAgotado ? `openProductDetailModal('${item.sku}')` : `buyNowCT('${item.sku}')`}" class="flex-1 ${item.isAgotado ? 'bg-slate-800 text-amber-300 border border-amber-500/40' : 'bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white'} font-black py-2 rounded-xl text-[10.5px] font-mono uppercase flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer min-h-[40px]">
+                            <i class="fa-solid ${item.isAgotado ? 'fa-hourglass-half' : 'fa-bolt'}"></i> ${item.isAgotado ? 'Apartar' : 'Comprar'}
+                        </button>
+                    </div>
+                </div>
+            </article>
+        `;
+    }
+}
+
+// RENDERIZADOR MAESTRO DE VITRINAS POR DEPARTAMENTO (PANTALLA DE INICIO)
+function renderShowcaseVitrinas(container) {
+    const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
+    const depts = window.PC_DEPARTAMENTOS || [];
+
+    // Ocultar barras de paginación en la vista modular de vitrinas
+    const bars = document.querySelectorAll(".pagination-target-bar");
+    bars.forEach(b => b.innerHTML = '');
+
+    const resultsCountTxt = document.getElementById("results-count-display");
+    if (resultsCountTxt) {
+        resultsCountTxt.innerHTML = `Vitrinas Oficiales por Departamento <span class="text-slate-400 font-normal">(${depts.length} Departamentos • ${all.length.toLocaleString('es-MX')} Productos)</span>`;
+    }
+
+    let vitrinasHtml = '';
+
+    for (let i = 0; i < depts.length; i++) {
+        const dept = depts[i];
+        const deptProducts = all.filter(p => (p.categoria_clasificada || p.c) === dept.id);
+        if (deptProducts.length === 0) continue;
+
+        const sample = deptProducts.slice(0, 4);
+
+        vitrinasHtml += `
+            <section class="vitrina-modulo mb-6 bg-slate-900/90 border border-slate-800 hover:border-cyan-500/50 rounded-3xl p-4 sm:p-5 shadow-2xl transition duration-200" data-dept-id="${dept.id}">
+                <!-- Encabezado de la Vitrina -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 mb-4 border-b border-slate-800">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-slate-950 font-black shadow-lg text-base shrink-0">
+                            <i class="fa-solid ${dept.icon}"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h2 class="text-white font-black text-sm sm:text-base tracking-wide font-mono uppercase">
+                                    ${dept.name}
+                                </h2>
+                                <span class="bg-cyan-950 text-cyan-300 border border-cyan-500/30 text-[10px] font-mono px-2 py-0.5 rounded-full font-bold">
+                                    ${deptProducts.length.toLocaleString('es-MX')} Modelos
+                                </span>
+                            </div>
+                            <span class="text-[11px] text-slate-400 font-mono">
+                                Componentes certificados listos para ensamble y entrega inmediata en Guadalajara
+                            </span>
+                        </div>
+                    </div>
+                    <button 
+                        type="button" 
+                        onclick="window.selectCategoryFacet('${dept.id}')" 
+                        class="btn-action bg-slate-950 hover:bg-slate-800 text-cyan-300 hover:text-white border border-cyan-500/40 hover:border-cyan-400 font-mono text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition cursor-pointer shadow min-h-[40px] w-fit shrink-0"
+                    >
+                        <span>Ver Vitrina Completa (${deptProducts.length.toLocaleString('es-MX')})</span>
+                        <i class="fa-solid fa-arrow-right text-[11px]"></i>
                     </button>
-                `).join('')}
-            </div>
+                </div>
+
+                <!-- Tarjetas de la Vitrina (Grid de 4 columnas) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
+                    ${sample.map(p => renderProductCardHTML(p, 'grid')).join('')}
+                </div>
+            </section>
         `;
     }
 
-    const container = document.getElementById("products-grid-container");
-    const resultsCountTxt = document.getElementById("results-count-display");
-    if (!container) return;
+    container.className = "flex flex-col gap-2 pb-6";
+    container.innerHTML = vitrinasHtml;
+}
 
+// RENDERIZADOR DE VITRINA COMPLETA PAGINADA (CUANDO SE ENTRA A UN DEPARTAMENTO O BÚSQUEDA)
+function renderPaginatedDepartmentView(container, resultsCountTxt) {
     const filtered = getFilteredList();
     const totalCount = filtered.length;
     const totalPages = Math.ceil(totalCount / productsPerPage) || 1;
@@ -704,11 +827,22 @@ function renderExactCatalogView() {
         if (activeSearchQuery) {
             titleTxt = `Búsqueda: "${activeSearchQuery}" <span class="text-slate-400 font-normal">(${totalCount.toLocaleString('es-MX')} productos)</span>`;
         } else if (activeSelectedCategory !== 'Todas') {
-            titleTxt = `${activeSelectedCategory.replace(/_/g, ' ').toUpperCase()} <span class="text-slate-400 font-normal">(${startIdx + 1}-${Math.min(startIdx + productsPerPage, totalCount)} de ${totalCount.toLocaleString('es-MX')})</span>`;
+            const deptObj = (window.PC_DEPARTAMENTOS || []).find(d => d.id === activeSelectedCategory);
+            const deptName = deptObj ? deptObj.name : activeSelectedCategory.replace(/_/g, ' ').toUpperCase();
+            titleTxt = `
+                <div class="flex flex-wrap items-center gap-2">
+                    <button type="button" onclick="resetFacets()" class="text-cyan-400 hover:text-cyan-300 text-xs font-mono font-bold hover:underline cursor-pointer flex items-center gap-1">
+                        <i class="fa-solid fa-arrow-left"></i> Volver a Vitrinas
+                    </button>
+                    <span class="text-slate-500">|</span>
+                    <span>${deptName}</span>
+                    <span class="text-slate-400 font-normal text-xs">(${startIdx + 1}-${Math.min(startIdx + productsPerPage, totalCount)} de ${totalCount.toLocaleString('es-MX')})</span>
+                </div>
+            `;
         } else {
             titleTxt = `Aparador Principal <span class="text-slate-400 font-normal">(${startIdx + 1}-${Math.min(startIdx + productsPerPage, totalCount)} de ${totalCount.toLocaleString('es-MX')})</span>`;
         }
-        resultsCountTxt.innerHTML = titleTxt + (chipsHtml ? `<div class="mt-2 w-full">${chipsHtml}</div>` : '');
+        resultsCountTxt.innerHTML = titleTxt;
     }
 
     renderPaginationBar(totalPages);
@@ -717,164 +851,45 @@ function renderExactCatalogView() {
         container.className = "w-full py-16 text-center text-slate-300 font-mono text-sm bg-slate-900/90 border border-slate-800 rounded-2xl";
         container.innerHTML = `
             <i class="fa-solid fa-box-open text-4xl text-cyan-400 mb-3 block" aria-hidden="true"></i>
-            No se encontraron productos con los filtros seleccionados.
-            <br><button onclick="resetFacets()" aria-label="Ver todo el catálogo" class="btn-action mt-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-black px-5 py-2.5 rounded-xl text-xs uppercase cursor-pointer shadow-lg hover:shadow-cyan-500/30 min-h-[44px]">Ver Todo el Catálogo</button>
+            No se encontraron productos en esta sección con los filtros actuales.
+            <br><button onclick="resetFacets()" aria-label="Ver todas las vitrinas" class="btn-action mt-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-black px-5 py-2.5 rounded-xl text-xs uppercase cursor-pointer shadow-lg min-h-[44px]">Ver Todas las Vitrinas</button>
         `;
         return;
     }
 
     if (currentViewStyle === 'grid') {
         container.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-2";
-        container.innerHTML = pageItems.map((p) => {
-            const sku = p.sku;
-            const cat = p.categoria_clasificada || 'accesorios_perifericos';
-            const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
-            const price = p.precio_mxn || p.precio;
-            const original = p.precio_original || (price * 1.33);
-            const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
-            const localImg = `assets/img/${sku}.webp`;
-            const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_full.jpg`;
-            const cdnImg400 = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
-            const cdnThumb = `https://static.ctonline.mx/img/Thumbs/${sku}_100.jpg`;
-            const cdnCloudfront = `https://d22k14p2jfj20i.cloudfront.net/items/${sku}.jpg`;
-            const placeholder = getPlaceholderForCat(cat);
-
-            const isAgotado = p.agotado === true;
-            const subLabel = p.subgrupo_label || '';
-
-            return `
-                <article class="bg-slate-900/95 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
-                    <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
-                        <span class="text-[7.5px] font-black text-white uppercase tracking-tighter">-25% DTO</span>
-                    </div>
-
-                    <div>
-                        <!-- Foto Grande 1200x1200 WebP -->
-                        <div onclick="openProductDetailModal('${sku}')" class="w-full aspect-square bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer flex items-center justify-center">
-                            <img 
-                                src="${localImg}" 
-                                alt="${title}" 
-                                width="300" 
-                                height="300" 
-                                loading="lazy" 
-                                decoding="async" 
-                                class="w-full h-full object-contain group-hover:scale-105 transition duration-200" 
-                                onerror="window.handleProductImgError(this, '${sku}', '${cat}')"
-                            />
-                        </div>
-
-                        ${subLabel ? `
-                            <div class="text-center mb-1">
-                                <span class="inline-block bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 text-[9px] font-mono font-bold px-2 py-0.5 rounded-full">
-                                    ${subLabel}
-                                </span>
-                            </div>
-                        ` : ''}
-
-                        <!-- Precios Claros -->
-                        <div class="text-center mb-1.5">
-                            <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
-                                ${window.formatPriceDisplay(price, p.precio_usd)}
-                            </span>
-                            <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
-                                <span class="text-slate-400 line-through">${window.formatPriceDisplay(original, (p.precio_usd || (price/19.5))*1.33)}</span>
-                                <span class="text-amber-300 font-bold">Mayoreo: ${window.formatPriceDisplay(mayoreo, p.precio_mayoreo_usd)}</span>
-                            </div>
-                        </div>
-
-                        <div class="text-center text-[9px] font-mono font-bold mb-1 flex items-center justify-center gap-1">
-                            ${isAgotado 
-                                ? `<span class="text-amber-400"><i class="fa-solid fa-clock mr-0.5"></i> Bajo Pedido (Próxima Existencia)</span>`
-                                : `<span class="text-cyan-300"><i class="fa-solid fa-truck-bolt mr-0.5"></i> Disponible en Pedro Moreno 501 A</span>`
-                            }
-                        </div>
-
-                        <h3 onclick="openProductDetailModal('${sku}')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="${title}">
-                            ${title}
-                        </h3>
-
-                        <div class="text-center text-[9.5px] font-mono text-slate-400 mb-2">
-                            <span>SKU: <strong class="text-cyan-300">${sku}</strong></span>
-                        </div>
-                    </div>
-
-                    <!-- Botones de Acción: Ficha, + Carrito y Comprar -->
-                    <div class="pt-2 border-t border-slate-800/80 space-y-1.5">
-                        <div class="flex gap-1.5">
-                            <button 
-                                onclick="openProductDetailModal('${sku}')" 
-                                aria-label="Ver ficha de ${title}" 
-                                class="btn-action flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-mono text-[10.5px] font-bold rounded-xl py-2 transition cursor-pointer border border-slate-700 min-h-[40px] flex items-center justify-center gap-1"
-                            >
-                                <i class="fa-solid fa-file-lines text-xs"></i> <span>Ficha</span>
-                            </button>
-                            <button 
-                                onclick="${isAgotado ? `openProductDetailModal('${sku}')` : `addToCartCT('${sku}')`}" 
-                                aria-label="Agregar ${title} al carrito" 
-                                class="btn-action flex-1 ${isAgotado ? 'bg-slate-800 text-slate-400 border border-slate-700' : 'bg-blue-600 hover:bg-blue-500 text-white shadow active:scale-95'} font-mono text-[10.5px] font-bold rounded-xl py-2 transition cursor-pointer min-h-[40px] flex items-center justify-center gap-1"
-                            >
-                                <i class="fa-solid ${isAgotado ? 'fa-clock' : 'fa-cart-plus'} text-xs"></i> <span>${isAgotado ? 'Apartar' : '+ Carrito'}</span>
-                            </button>
-                        </div>
-                        <button 
-                            onclick="${isAgotado ? `openProductDetailModal('${sku}')` : `buyNowCT('${sku}')`}" 
-                            aria-label="Comprar ${title} ahora" 
-                            class="btn-action w-full ${isAgotado ? 'bg-slate-800 hover:bg-slate-750 text-amber-300 border border-amber-500/40' : 'bg-gradient-to-r from-emerald-600 via-cyan-600 to-blue-600 hover:from-emerald-500 hover:to-cyan-500 text-white shadow-lg active:scale-95'} font-mono text-[11px] font-black rounded-xl py-2.5 uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer min-h-[44px]"
-                        >
-                            <i class="fa-solid ${isAgotado ? 'fa-hourglass-half text-amber-300' : 'fa-bolt text-yellow-300'}"></i> <span>${isAgotado ? 'Bajo Pedido' : 'Comprar Ahora'}</span>
-                        </button>
-                    </div>
-                </article>
-            `;
-        }).join('');
+        container.innerHTML = pageItems.map(p => renderProductCardHTML(p, 'grid')).join('');
     } else {
         container.className = "flex flex-col gap-3.5 pb-2";
-        container.innerHTML = pageItems.map(p => {
-            const sku = p.sku;
-            const cat = p.categoria_clasificada || 'accesorios_perifericos';
-            const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
-            const price = p.precio_mxn || p.precio;
-            const original = p.precio_original || (price * 1.33);
-            const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
-            const localImg = `assets/img/${sku}.webp`;
-            const isAgotado = p.agotado === true;
-            const subLabel = p.subgrupo_label || '';
-
-            return `
-                <article class="bg-slate-900/95 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition group shadow-xl relative overflow-hidden text-slate-100">
-                    <div class="w-24 h-24 sm:w-28 sm:h-28 bg-slate-950 rounded-xl p-2 shrink-0 flex items-center justify-center cursor-pointer" onclick="openProductDetailModal('${sku}')">
-                        <img src="${localImg}" alt="${title}" width="120" height="120" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${sku}', '${cat}')" />
-                    </div>
-                    <div class="flex-1 min-w-0 text-left">
-                        <div class="flex items-center gap-2 mb-1">
-                            <span class="text-[10px] font-mono text-cyan-400 font-bold uppercase tracking-wider block">${cat.replace(/_/g, ' ')} • SKU: ${sku}</span>
-                            ${subLabel ? `<span class="bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 text-[9px] font-mono px-2 py-0.5 rounded-full font-bold">${subLabel}</span>` : ''}
-                        </div>
-                        <h3 onclick="openProductDetailModal('${sku}')" class="text-xs sm:text-sm font-bold text-slate-100 hover:text-cyan-300 transition line-clamp-2 cursor-pointer mb-1.5">${title}</h3>
-                        <div class="text-[11px] font-mono ${isAgotado ? 'text-amber-400' : 'text-slate-400'}">
-                            ${isAgotado ? '<i class="fa-solid fa-clock"></i> Bajo Pedido hasta su próxima existencia' : 'Entrega Inmediata en Pedro Moreno 501 A • Garantía 48h Directa'}
-                        </div>
-                    </div>
-                    <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-48 border-t sm:border-t-0 sm:border-l border-slate-800 pt-2 sm:pt-0 sm:pl-4 shrink-0 space-y-2">
-                        <div class="text-right">
-                            <span class="text-[10px] text-slate-500 line-through font-mono block">${window.formatPriceDisplay(original, (p.precio_usd || (price/19.5))*1.33)}</span>
-                            <div class="text-sm sm:text-base font-black text-emerald-400 font-mono">${window.formatPriceDisplay(price, p.precio_usd)}</div>
-                        </div>
-                        <div class="flex gap-1.5 w-full">
-                            <button onclick="${isAgotado ? `openProductDetailModal('${sku}')` : `addToCartCT('${sku}')`}" class="flex-1 ${isAgotado ? 'bg-slate-800 text-slate-400' : 'bg-blue-600 hover:bg-blue-500 text-white'} font-bold py-2 rounded-xl text-[10.5px] font-mono uppercase flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer min-h-[40px]">
-                                <i class="fa-solid ${isAgotado ? 'fa-clock' : 'fa-cart-plus'}"></i> ${isAgotado ? 'Bajo Pedido' : '+Carrito'}
-                            </button>
-                            <button onclick="${isAgotado ? `openProductDetailModal('${sku}')` : `buyNowCT('${sku}')`}" class="flex-1 ${isAgotado ? 'bg-slate-800 text-amber-300 border border-amber-500/40' : 'bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white'} font-black py-2 rounded-xl text-[10.5px] font-mono uppercase flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer min-h-[40px]">
-                                <i class="fa-solid ${isAgotado ? 'fa-hourglass-half' : 'fa-bolt'}"></i> ${isAgotado ? 'Apartar' : 'Comprar'}
-                            </button>
-                        </div>
-                    </div>
-                </article>
-            `;
-        }).join('');
+        container.innerHTML = pageItems.map(p => renderProductCardHTML(p, 'list')).join('');
     }
 }
 
+// CONTROLADOR MAESTRO DE VISTA DEL CATÁLOGO
+function renderExactCatalogView() {
+    const container = document.getElementById("products-grid-container");
+    const resultsCountTxt = document.getElementById("results-count-display");
+    if (!container) return;
+
+    // Modo A: Pantalla de Bienvenida con Vitrinas Modulares por Departamento
+    if (activeSelectedCategory === 'Todas' && (!activeSearchQuery || activeSearchQuery.trim() === '') && currentPageNumber === 1) {
+        renderWelcomeHub();
+        renderShowcaseVitrinas(container);
+        return;
+    }
+
+    // Modo B: Ocultar Welcome Hub y renderizar Vitrina Completa Paginada
+    const hubContainer = document.getElementById("welcome-hub-container");
+    if (hubContainer) {
+        hubContainer.innerHTML = '';
+        hubContainer.classList.add("hidden");
+    }
+
+    renderPaginatedDepartmentView(container, resultsCountTxt);
+}
+
+// BARRA DE PAGINACIÓN NUMÉRICA EXTENDIDA
 function renderPaginationBar(totalPages) {
     const bars = document.querySelectorAll(".pagination-target-bar");
     if (!bars.length) return;
@@ -919,7 +934,7 @@ function renderPaginationBar(totalPages) {
                 </button>
             </div>
 
-            <!-- Botones Numéricos Visibles [ 1 ] [ 2 ] [ 3 ] ... [ 15 ] [ 16 ] ... [ 728 ] -->
+            <!-- Botones Numéricos Visibles -->
             <div class="flex items-center gap-1 overflow-x-auto no-scrollbar py-1">
                 ${pages.map(p => {
                     if (p === '...') {
@@ -987,84 +1002,29 @@ function goToPage(page) {
     if (showcaseTarget) showcaseTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+// ÁRBOL LATERAL DE DEPARTAMENTOS (60 DEPARTAMENTOS CLASIFICADOS)
 function renderSidebarFacets() {
     const root = document.getElementById("sidebar-facets-root");
     if (!root) return;
 
-    // BLOQUE 1: 🖥️ ENSAMBLE DE COMPUTADORAS (ORDEN EXACTO DE PIEZAS)
-    const block1 = [
-        { id: 'gabinetes', name: '🖥️ Gabinetes & Chasis Gamer', icon: 'fa-server' },
-        { id: 'fuentes_energia', name: '🔌 Fuentes de Poder Certificadas', icon: 'fa-bolt' },
-        { id: 'tarjetas_madre', name: '🧩 Tarjetas Madre (Motherboards)', icon: 'fa-chess-board' },
-        { id: 'procesadores', name: '⚡ Procesadores (Intel / AMD)', icon: 'fa-microchip' },
-        { id: 'enfriamiento', name: '❄️ Sistemas de Enfriamiento', icon: 'fa-fan' },
-        { id: 'memorias_ram_pc', name: '🧠 RAM para PC Escritorio (DIMM)', icon: 'fa-memory' },
-        { id: 'almacenamiento_ssd', name: '💽 Discos Duros & SSDs NVMe', icon: 'fa-hard-drive' },
-        { id: 'tarjetas_video', name: '🎮 Tarjetas de Video (GPUs)', icon: 'fa-vr-cardboard' },
-        { id: 'monitores', name: '🖥️ Monitores & Pantallas PC', icon: 'fa-desktop' },
-        { id: 'teclados_mouse', name: '⌨️ Teclados y Ratón', icon: 'fa-keyboard' },
-        { id: 'software_licencias', name: '💿 Sistemas Operativos & Software', icon: 'fa-compact-disc' },
-        { id: 'reguladores_ups', name: '🔋 Reguladores & No-Breaks (UPS)', icon: 'fa-car-battery' }
-    ];
-
-    // BLOQUE 2: 💻 COMPUTADORAS ARMADAS & PORTÁTILES (INMEDIATAMENTE TRAS REGULADORES)
-    const block2 = [
-        { id: 'computadoras_ensambladas', name: '🖥️ Computadoras Armadas & Desktop', icon: 'fa-desktop' },
-        { id: 'mini_pcs_ia', name: '📦 Mini PCs & NUCs', icon: 'fa-box-open' },
-        { id: 'laptops_portatiles', name: '💻 Laptops & Portátiles', icon: 'fa-laptop' },
-        { id: 'all_in_one', name: '🖥️ Computadoras All-in-One (AIO)', icon: 'fa-tv' },
-        { id: 'servidores_enterprise', name: '🗄️ Servidores Torre & Rack', icon: 'fa-server' }
-    ];
-
-    // BLOQUE 3: 📱 SMARTPHONES & TABLETS (ALTA ROTACIÓN COMERCIAL)
-    const block3 = [
-        { id: 'celulares_tablets', name: '📱 Smartphones, Celulares & Tablets', icon: 'fa-mobile-screen-button' }
-    ];
-
-    // BLOQUE 4: 💾 OTRAS MEMORIAS & ALMACENAMIENTO
-    const block4 = [
-        { id: 'memorias_ram_laptop', name: '💻 RAM para Laptop (SODIMM)', icon: 'fa-laptop' },
-        { id: 'memorias_ram_servidor', name: '🗄️ RAM para Servidor (ECC)', icon: 'fa-server' },
-        { id: 'tarjetas_sd_microsd', name: '📷 Tarjetas SD & MicroSD', icon: 'fa-sd-card' },
-        { id: 'memorias_usb_flash', name: '💾 Memorias USB & Pendrives', icon: 'fa-usb' }
-    ];
-
-    // BLOQUE 5: 🔌 CABLES, LIMPIEZA & PERIFÉRICOS
-    const block5 = [
-        { id: 'cables_adaptadores', name: '🔌 Cables & Adaptadores', icon: 'fa-network-wired' },
-        { id: 'audio_audifonos', name: '🎧 Audio, Diademas & Audífonos', icon: 'fa-headphones' },
-        { id: 'limpieza_mantenimiento', name: '🧹 Limpieza & Mantenimiento', icon: 'fa-spray-can-sparkles' },
-        { id: 'accesorios_perifericos', name: '🎒 Accesorios & Maletines', icon: 'fa-bag-shopping' }
-    ];
-
-    // BLOQUE 6: 🏢 SOLUCIONES COMERCIALES, RACKS, CCTV, PROYECCIÓN
-    const block6 = [
-        { id: 'punto_de_venta', name: '🏷️ Punto de Venta (POS)', icon: 'fa-barcode' },
-        { id: 'seguridad_cctv', name: '📹 CCTV & Videovigilancia', icon: 'fa-shield-halved' },
-        { id: 'racks_gabinetes_servidor', name: '🗄️ Racks & Gabinetes Servidor', icon: 'fa-server' },
-        { id: 'proyectores_presentacion', name: '📽️ Proyectores & Presentación', icon: 'fa-video' },
-        { id: 'conectividad_redes', name: '🌐 Redes & Conectividad WiFi', icon: 'fa-wifi' },
-        { id: 'impresoras_consumibles', name: '🖨️ Impresoras, Tóners & Tintas', icon: 'fa-print' },
-        { id: 'videojuegos_gaming', name: '🕹️ Consolas & Sillas Gamer', icon: 'fa-gamepad' }
-    ];
-
     const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
-    const getCount = (id) => all.filter(p => (p.categoria_clasificada || '').toLowerCase() === id.toLowerCase()).length;
+    const depts = window.PC_DEPARTAMENTOS || [];
+    const getCount = (id) => all.filter(p => (p.categoria_clasificada || p.c || '').toLowerCase() === id.toLowerCase()).length;
 
     const renderBtn = (c) => `
         <label for="cat_${c.id}" class="category-link flex items-center justify-between cursor-pointer hover:text-cyan-300 transition py-1">
-            <span class="flex items-center gap-2.5 truncate">
+            <span class="flex items-center gap-2 truncate">
                 <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="window.selectCategoryFacet('${c.id}')" class="accent-cyan-400 cursor-pointer shrink-0" />
-                <i class="fa-solid ${c.icon} text-cyan-400 w-4 text-center shrink-0" aria-hidden="true"></i>
+                <i class="fa-solid ${c.icon} text-cyan-400 w-3.5 text-center shrink-0 text-xs" aria-hidden="true"></i>
                 <span class="cat-title truncate ${activeSelectedCategory === c.id ? 'font-black text-cyan-300' : 'text-slate-200'} text-xs">${c.name}</span>
             </span>
-            <span class="cat-count font-mono text-[10px] text-slate-400">(${getCount(c.id)})</span>
+            <span class="cat-count font-mono text-[9.5px] text-slate-400">(${getCount(c.id)})</span>
         </label>
     `;
 
     root.innerHTML = `
         <div class="bg-gradient-to-r from-slate-900 to-cyan-950 border border-cyan-500/40 text-white p-3 rounded-t-2xl font-bold text-xs uppercase flex items-center justify-between shadow-lg">
-            <h2 class="flex items-center gap-2 text-cyan-300 font-mono text-xs"><i class="fa-solid fa-sliders text-cyan-400" aria-hidden="true"></i> Departamentos</h2>
+            <h2 class="flex items-center gap-2 text-cyan-300 font-mono text-xs"><i class="fa-solid fa-sliders text-cyan-400" aria-hidden="true"></i> Departamentos (${depts.length})</h2>
             <span class="text-[9px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono font-bold">${all.length.toLocaleString('es-MX')} Items</span>
         </div>
 
@@ -1079,80 +1039,25 @@ function renderSidebarFacets() {
                 </button>
             </div>
 
-            <!-- ENLACE A TODAS LAS CATEGORÍAS -->
+            <!-- ENLACE A TODAS LAS VITRINAS -->
             <div class="bg-slate-950 p-2 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition flex items-center">
                 <label for="cat_todas" class="category-link flex items-center justify-between cursor-pointer w-full">
                     <span class="flex items-center gap-2 truncate">
-                        <input type="radio" id="cat_todas" name="cat_facet" aria-label="Todas las categorías" ${activeSelectedCategory === 'Todas' ? 'checked' : ''} onchange="window.selectCategoryFacet('Todas')" class="accent-cyan-400 cursor-pointer shrink-0" />
+                        <input type="radio" id="cat_todas" name="cat_facet" aria-label="Todas las vitrinas" ${activeSelectedCategory === 'Todas' ? 'checked' : ''} onchange="window.selectCategoryFacet('Todas')" class="accent-cyan-400 cursor-pointer shrink-0" />
                         <i class="fa-solid fa-layer-group text-xs text-cyan-400 shrink-0" aria-hidden="true"></i>
-                        <span class="cat-title truncate font-black text-white text-xs">Todas las Categorías</span>
+                        <span class="cat-title truncate font-black text-white text-xs">Todas las Vitrinas</span>
                     </span>
-                    <span class="cat-count font-mono font-bold text-[10px] text-cyan-300">(${all.length.toLocaleString('es-MX')})</span>
+                    <span class="font-mono text-[9.5px] text-cyan-300 font-bold">(${all.length.toLocaleString('es-MX')})</span>
                 </label>
             </div>
 
-            <!-- BLOQUE 1 - ENSAMBLE DE COMPUTADORAS -->
-            <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-cyan-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-microchip text-cyan-400" aria-hidden="true"></i> 1. Ensamble de PC
-                </h3>
-                <div class="space-y-1 text-slate-300">
-                    ${block1.map(renderBtn).join('')}
-                </div>
+            <!-- LISTA DE DEPARTAMENTOS CLASIFICADOS -->
+            <div class="space-y-1 text-slate-300 max-h-[650px] overflow-y-auto no-scrollbar pr-1 divide-y divide-slate-800/40">
+                ${depts.map(renderBtn).join('')}
             </div>
 
-            <!-- BLOQUE 2 - COMPUTADORAS ARMADAS & PORTÁTILES -->
-            <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-amber-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-desktop text-amber-400" aria-hidden="true"></i> 2. PCs Armadas & Laptops
-                </h3>
-                <div class="space-y-1 text-slate-300">
-                    ${block2.map(renderBtn).join('')}
-                </div>
-            </div>
-
-            <!-- BLOQUE 3 - SMARTPHONES & TABLETS -->
-            <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-rose-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-mobile-screen-button text-rose-400" aria-hidden="true"></i> 3. Celulares & Tablets
-                </h3>
-                <div class="space-y-1 text-slate-300">
-                    ${block3.map(renderBtn).join('')}
-                </div>
-            </div>
-
-            <!-- BLOQUE 4 - OTRAS MEMORIAS -->
-            <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-emerald-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-memory text-emerald-400" aria-hidden="true"></i> 4. Otras Memorias & USBs
-                </h3>
-                <div class="space-y-1 text-slate-300">
-                    ${block4.map(renderBtn).join('')}
-                </div>
-            </div>
-
-            <!-- BLOQUE 5 - CABLES & PERIFÉRICOS -->
-            <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-indigo-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-plug text-indigo-400" aria-hidden="true"></i> 5. Cables & Periféricos
-                </h3>
-                <div class="space-y-1 text-slate-300">
-                    ${block5.map(renderBtn).join('')}
-                </div>
-            </div>
-
-            <!-- BLOQUE 6 - SOLUCIONES CORPORATIVAS & OFICINA -->
-            <div class="border-b border-slate-800 pb-3">
-                <h3 class="dept-heading text-purple-300 font-mono uppercase text-xs font-black mb-2">
-                    <i class="fa-solid fa-building text-purple-400" aria-hidden="true"></i> 6. Soluciones & Redes
-                </h3>
-                <div class="space-y-1 text-slate-300">
-                    ${block6.map(renderBtn).join('')}
-                </div>
-            </div>
-
-            <!-- BARRA DE PRESUPUESTO INTERACTIVO Y RANGO DE PRECIO -->
-            <div class="border-b border-slate-800 pb-3.5 space-y-2.5">
+            <!-- BARRA DE PRESUPUESTO INTERACTIVO -->
+            <div class="border-t border-slate-800 pt-3.5 space-y-2.5">
                 <h3 class="dept-heading text-amber-300 font-mono uppercase text-xs font-black flex items-center justify-between">
                     <span><i class="fa-solid fa-calculator text-amber-400 mr-1.5"></i> Tu Presupuesto</span>
                     <span class="text-[9px] text-slate-400 font-normal">($ MXN)</span>
@@ -1169,98 +1074,16 @@ function renderSidebarFacets() {
                     </div>
                 </div>
 
-                <button type="button" onclick="applyCustomBudget()" class="btn-action w-full py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs font-mono uppercase transition cursor-pointer shadow min-h-[36px]">
-                    Filtrar Presupuesto
+                <button onclick="window.applyCustomBudget()" aria-label="Filtrar por presupuesto" class="btn-action w-full bg-slate-800 hover:bg-slate-700 text-amber-300 font-mono font-bold text-xs py-2 rounded-xl transition cursor-pointer border border-amber-500/30 flex items-center justify-center gap-1.5 min-h-[40px]">
+                    <i class="fa-solid fa-filter text-[10px]"></i> <span>Filtrar Presupuesto</span>
                 </button>
-
-                <!-- Botones de Presupuesto Rápido -->
-                <div class="flex flex-wrap gap-1 pt-1">
-                    <button type="button" onclick="setBudgetPreset(0, 1000)" class="px-2 py-1 bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white rounded text-[10px] font-mono transition cursor-pointer">&lt; $1,000</button>
-                    <button type="button" onclick="setBudgetPreset(1000, 5000)" class="px-2 py-1 bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white rounded text-[10px] font-mono transition cursor-pointer">$1k - $5k</button>
-                    <button type="button" onclick="setBudgetPreset(5000, 15000)" class="px-2 py-1 bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white rounded text-[10px] font-mono transition cursor-pointer">$5k - $15k</button>
-                    <button type="button" onclick="setBudgetPreset(15000, 50000)" class="px-2 py-1 bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white rounded text-[10px] font-mono transition cursor-pointer">$15k - $50k</button>
-                    <button type="button" onclick="setBudgetPreset(50000, 9999999)" class="px-2 py-1 bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-300 hover:text-white rounded text-[10px] font-mono transition cursor-pointer">&gt; $50k</button>
-                </div>
-            </div>
-
-            <!-- FILTRO DE DESCUENTOS Y OFERTAS -->
-            <div class="border-b border-slate-800 pb-3 space-y-1.5">
-                <h3 class="dept-heading text-red-400 font-mono uppercase text-xs font-black flex items-center gap-1.5">
-                    <i class="fa-solid fa-tags text-red-400"></i> Descuentos & Ofertas
-                </h3>
-                <div class="grid grid-cols-2 gap-1.5 text-[10.5px] font-mono">
-                    <button type="button" onclick="setDiscountFilter(0)" class="px-2 py-1.5 rounded-lg bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-300 text-left transition cursor-pointer">Todos</button>
-                    <button type="button" onclick="setDiscountFilter(25)" class="px-2 py-1.5 rounded-lg bg-red-950/60 hover:bg-red-900/60 border border-red-500/50 text-red-300 text-left font-bold transition cursor-pointer">-25% Apertura</button>
-                </div>
-            </div>
-
-            <!-- 3 TARJETAS DE CONVERSIÓN INTEGRADAS -->
-            <div class="pt-2 space-y-3.5 border-t border-slate-800">
-                
-                <!-- TARJETA 1: APP MÓVIL CON QR -->
-                <div class="bg-slate-950/90 border border-cyan-500/40 rounded-2xl p-3.5 text-center shadow-lg space-y-2.5">
-                    <span class="text-[11px] font-mono font-black text-cyan-300 uppercase tracking-wider flex items-center justify-center gap-1.5">
-                        <i class="fa-solid fa-mobile-screen-button text-cyan-400"></i> App Móvil & Pedidos
-                    </span>
-                    
-                    <div class="w-32 h-32 mx-auto bg-white p-2 rounded-2xl shadow-md flex items-center justify-center">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://iaworldcenter-creator.github.io/pc-custom-lab/&color=0-0-0&bgcolor=255-255-255" alt="Código QR Descargar App" width="120" height="120" class="w-full h-full object-contain" />
-                    </div>
-                    <span class="text-[9.5px] font-mono text-slate-400 block">Escanea con tu celular</span>
-
-                    <div class="grid grid-cols-2 gap-2 pt-1">
-                        <a href="https://play.google.com/store" target="_blank" rel="noopener" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-400 text-white rounded-xl p-2 flex flex-col items-center justify-center transition shadow group min-h-[44px]">
-                            <i class="fa-brands fa-google-play text-cyan-400 text-sm mb-0.5 group-hover:scale-110 transition"></i>
-                            <span class="text-[8px] font-mono uppercase text-slate-400 leading-none">Disponible en</span>
-                            <span class="text-[9.5px] font-bold text-white leading-tight">Google Play</span>
-                        </a>
-                        <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-400 text-white rounded-xl p-2 flex flex-col items-center justify-center transition shadow group min-h-[44px]">
-                            <i class="fa-brands fa-apple text-slate-200 text-sm mb-0.5 group-hover:scale-110 transition"></i>
-                            <span class="text-[8px] font-mono uppercase text-slate-400 leading-none">Consíguelo en</span>
-                            <span class="text-[9.5px] font-bold text-white leading-tight">App Store</span>
-                        </a>
-                    </div>
-
-                    <a href="https://wa.me/523337271440" target="_blank" rel="noopener" class="w-full bg-slate-900 hover:bg-slate-800 text-emerald-300 hover:text-white border border-emerald-500/40 hover:border-emerald-400 font-mono font-bold rounded-xl text-[10.5px] uppercase py-2.5 flex items-center justify-center gap-1.5 transition shadow min-h-[40px]">
-                        <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i>
-                        <span>▶ Abrir App Oficial</span>
-                    </a>
-                </div>
-
-                <!-- TARJETA 2: CREADO CON GOOGLE GEMINI -->
-                <div class="bg-slate-950/90 border border-blue-500/40 hover:border-blue-400 rounded-2xl p-3.5 shadow-lg transition text-left space-y-2">
-                    <span class="text-[11px] font-mono font-bold text-blue-400 uppercase tracking-wider flex items-center gap-1.5">
-                        <i class="fa-solid fa-wand-magic-sparkles text-blue-400" aria-hidden="true"></i> Creado con Google Gemini
-                    </span>
-                    <div class="text-white font-bold text-xs leading-snug">
-                        Inteligencia Artificial para tu Negocio
-                    </div>
-                    <a href="https://gemini.google.com/" target="_blank" rel="noopener" aria-label="Suscribirse a Google Gemini" class="btn-action w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[10.5px] font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition shadow min-h-[42px]">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        <span>SUSCRÍBETE A GOOGLE GEMINI</span>
-                    </a>
-                </div>
-
-                <!-- TARJETA 3: DESARROLLADO POR ANTI-GRAVITY -->
-                <div class="bg-slate-950/90 border border-amber-500/40 hover:border-amber-400 rounded-2xl p-3.5 shadow-lg transition text-left space-y-2">
-                    <span class="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
-                        <i class="fa-solid fa-robot text-amber-400" aria-hidden="true"></i> Desarrollado por Anti-Gravity
-                    </span>
-                    <div class="text-white font-bold text-xs leading-snug">
-                        Agente Autónomo de Software
-                    </div>
-                    <a href="https://antigravity.google/download" target="_blank" rel="noopener" aria-label="Descargar Anti-Gravity Gratis" class="btn-action w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black rounded-xl text-[10.5px] font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition shadow min-h-[42px]">
-                        <i class="fa-solid fa-download text-[10px]"></i>
-                        <span>DESCARGAR Y PRUEBA ANTI-GRAVITY</span>
-                    </a>
-                </div>
-
             </div>
 
         </div>
     `;
 }
 
+// Búsqueda Predictiva Rápida
 let searchDebounceTimer = null;
 function initPredictiveSearchEngine() {
     const input = document.getElementById("boutiqueSearchInput");
@@ -1298,7 +1121,6 @@ function initPredictiveSearchEngine() {
                     <div class="p-4 text-center text-slate-300 font-mono text-xs">
                         <i class="fa-solid fa-magnifying-glass text-cyan-400 text-lg mb-1 block" aria-hidden="true"></i>
                         No se encontraron coincidencias para "<strong>${rawQuery}</strong>".
-                        <br><span class="text-[10px] text-slate-400">Prueba con: ratón y teclado, regulador, i9, RTX 4070, fuente de poder...</span>
                     </div>
                 `;
                 box.classList.remove("hidden");
@@ -1311,41 +1133,37 @@ function initPredictiveSearchEngine() {
                 <div class="p-2.5 border-b border-slate-800 flex justify-between items-center text-[10.5px] font-mono text-slate-300 bg-slate-950/90">
                     <span>${matches.length.toLocaleString('es-MX')} coincidencias encontradas para: "<strong>${rawQuery}</strong>"</span>
                     <button type="button" onclick="window.executeSearchQuery(document.getElementById('boutiqueSearchInput').value);" class="text-cyan-300 font-bold hover:underline cursor-pointer">
-                        Ver todas en aparador »
+                        Ver todas en vitrina »
                     </button>
                 </div>
                 <div class="divide-y divide-slate-800/60 max-h-96 overflow-y-auto">
-                    ${topMatches.map(p => {
-                        const sku = p.sku || p.clave;
-                        const cat = p.categoria_clasificada || 'accesorios_perifericos';
-                        const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;").replace(/"/g, '&quot;');
-                        const price = p.precio_mxn || p.precio;
-                        const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
-                        const localImg = `assets/img/${sku}.webp`;
-                        const placeholder = getPlaceholderForCat(cat);
+                    ${topMatches.map(rawP => {
+                        const item = window.normalizeProductItem(rawP);
+                        const title = item.name.replace(/'/g, "&#39;").replace(/"/g, '&quot;');
+                        const localImg = `assets/img/${item.sku}.webp`;
 
                         return `
-                            <div class="flex items-center justify-between gap-3 p-3 hover:bg-slate-850 transition cursor-pointer group min-h-[48px]" onclick="openProductDetailModal('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" role="button" tabindex="0" aria-label="Ver detalle de ${title}">
+                            <div class="flex items-center justify-between gap-3 p-3 hover:bg-slate-850 transition cursor-pointer group min-h-[48px]" onclick="openProductDetailModal('${item.sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" role="button" tabindex="0" aria-label="Ver detalle de ${title}">
                                 <div class="w-12 h-12 bg-slate-950 rounded-xl p-1 shrink-0 border border-slate-800 group-hover:border-cyan-400/50 flex items-center justify-center">
-                                    <img src="${localImg}" alt="${title}" width="48" height="48" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${sku}', '${cat}')" />
+                                    <img src="${localImg}" alt="${title}" width="48" height="48" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${item.sku}', '${item.cat}')" />
                                 </div>
                                 <div class="flex-1 min-w-0 text-left">
                                     <div class="text-xs font-bold text-white group-hover:text-cyan-300 transition truncate">${title}</div>
                                     <div class="text-[10px] font-mono text-slate-300 flex items-center gap-1.5">
-                                        <span class="text-cyan-300 font-bold">SKU: ${sku}</span>
+                                        <span class="text-cyan-300 font-bold">SKU: ${item.sku}</span>
                                         <span>•</span>
-                                        <span class="text-amber-300">May: ${window.formatPriceDisplay(mayoreo, p.precio_mayoreo_usd)}</span>
+                                        <span class="text-amber-300">May: ${window.formatPriceDisplay(item.may, item.mayUsd)}</span>
                                     </div>
                                 </div>
                                 <div class="text-right shrink-0 flex items-center gap-1.5">
-                                    <div class="text-xs font-mono font-black text-emerald-300">${window.formatPriceDisplay(price, p.precio_usd)}</div>
-                                    <button type="button" onclick="event.stopPropagation(); openProductDetailModal('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" aria-label="Ver ficha de ${title}" class="btn-action bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[10px] font-bold px-2 py-1.5 rounded-lg border border-slate-700 uppercase min-h-[40px]">
+                                    <div class="text-xs font-mono font-black text-emerald-300">${window.formatPriceDisplay(item.priceMxn, item.priceUsd)}</div>
+                                    <button type="button" onclick="event.stopPropagation(); openProductDetailModal('${item.sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" aria-label="Ver ficha de ${title}" class="btn-action bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[10px] font-bold px-2 py-1.5 rounded-lg border border-slate-700 uppercase min-h-[40px]">
                                         Ficha
                                     </button>
-                                    <button type="button" onclick="event.stopPropagation(); addToCartCT('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" aria-label="Agregar ${title} al carrito" class="btn-action bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-bold px-2.5 py-1.5 rounded-lg uppercase min-h-[40px]">
+                                    <button type="button" onclick="event.stopPropagation(); addToCartCT('${item.sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" aria-label="Agregar ${title} al carrito" class="btn-action bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-bold px-2.5 py-1.5 rounded-lg uppercase min-h-[40px]">
                                         + Carrito
                                     </button>
-                                    <button type="button" onclick="event.stopPropagation(); buyNowCT('${sku}');" aria-label="Comprar ${title} ahora" class="btn-action bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white text-[10px] font-black px-2.5 py-1.5 rounded-lg uppercase shadow min-h-[40px]">
+                                    <button type="button" onclick="event.stopPropagation(); buyNowCT('${item.sku}');" aria-label="Comprar ${title} ahora" class="btn-action bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white text-[10px] font-black px-2.5 py-1.5 rounded-lg uppercase shadow min-h-[40px]">
                                         ⚡ Comprar
                                     </button>
                                 </div>
@@ -1369,97 +1187,91 @@ function initPredictiveSearchEngine() {
 window.executeSearchQuery = function(query) {
     activeSearchQuery = (query || '').trim();
     activeSelectedCategory = 'Todas';
-    activeSelectedBrand = 'Todas';
     currentPageNumber = 1;
-    renderSidebarFacets();
-    renderExactCatalogView();
     
     const box = document.getElementById("boutique-autocomplete-box");
     if (box) box.classList.add("hidden");
-    
-    const target = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    renderSidebarFacets();
+    renderExactCatalogView();
+    window.scrollToResults();
 };
 
-// =========================================================================
-// CARRITO GLOBAL PERSISTENTE Y COMPRA INMEDIATA
-// =========================================================================
-
+// Carrito de compras
 function getBoutiqueCart() {
     try {
-        return JSON.parse(localStorage.getItem('ecosystem_global_cart')) || [];
-    } catch(e) { return []; }
+        return JSON.parse(localStorage.getItem('pc_custom_cart') || '[]');
+    } catch {
+        return [];
+    }
 }
 
 function saveBoutiqueCart(cart) {
-    localStorage.setItem('ecosystem_global_cart', JSON.stringify(cart));
+    localStorage.setItem('pc_custom_cart', JSON.stringify(cart));
     syncBoutiqueCart();
 }
 
 function syncBoutiqueCart() {
     const cart = getBoutiqueCart();
+    const count = cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
+    const totalMxn = cart.reduce((acc, item) => acc + ((item.price || 0) * (item.quantity || 1)), 0);
+
     const badge = document.getElementById("boutique-cart-badge");
     const totalTxt = document.getElementById("boutique-cart-total");
-    const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
-    const total = cart.reduce((sum, item) => sum + ((item.price || 0) * (item.quantity || 1)), 0);
 
-    if (badge) badge.innerText = count;
-    if (totalTxt) totalTxt.innerText = window.formatPriceDisplay(total);
+    if (badge) badge.innerText = count.toString();
+    if (totalTxt) totalTxt.innerText = window.formatPriceDisplay(totalMxn);
 }
 
 window.addToCartCT = function(sku) {
     const catalog = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
-    const p = catalog.find(item => item.sku === sku || item.clave === sku);
-    if (!p) return;
+    const raw = catalog.find(item => (item.sku === sku || item.s === sku || item.clave === sku));
+    if (!raw) return;
 
+    const p = window.normalizeProductItem(raw);
     const cart = getBoutiqueCart();
     const existing = cart.find(item => item.sku === sku);
 
     if (existing) {
         existing.quantity = (existing.quantity || 1) + 1;
     } else {
-        const cat = p.categoria_clasificada || 'accesorios_perifericos';
-        const price = p.precio_mxn || p.precio || 0;
         cart.push({
-            sku: sku,
-            name: p.nombre || p.descripcion_completa,
-            price: price,
+            sku: p.sku,
+            name: p.name,
+            price: p.priceMxn,
             store: 'pc-custom-lab',
             storeName: 'PC Custom Lab',
-            image: `./assets/img/catalog/${cat}/${sku}.jpg`,
-            cdn_url: `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`,
+            image: `./assets/img/${p.sku}.webp`,
             quantity: 1
         });
     }
 
     saveBoutiqueCart(cart);
-    showAddToCartToast(p.nombre || p.descripcion_completa || "Producto");
+    showAddToCartToast(p.name);
 };
 
 window.buyNowCT = function(sku) {
     const catalog = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
-    const p = catalog.find(item => item.sku === sku || item.clave === sku);
-    if (!p) {
+    const raw = catalog.find(item => (item.sku === sku || item.s === sku || item.clave === sku));
+    if (!raw) {
         window.location.href = "checkout.html";
         return;
     }
 
+    const p = window.normalizeProductItem(raw);
     const cart = getBoutiqueCart();
     const existing = cart.find(item => item.sku === sku);
 
     if (existing) {
         existing.quantity = (existing.quantity || 1) + 1;
     } else {
-        const cat = p.categoria_clasificada || 'accesorios_perifericos';
-        const price = p.precio_mxn || p.precio || 0;
         cart.push({
-            sku: sku,
-            name: p.nombre || p.descripcion_completa,
-            price: price,
+            sku: p.sku,
+            name: p.name,
+            price: p.priceMxn,
             store: 'pc-custom-lab',
             storeName: 'PC Custom Lab',
-            image: `./assets/img/catalog/${cat}/${sku}.jpg`,
-            cdn_url: `https://static.ctonline.mx/imagenes/${sku}/${sku}_800.jpg`,
+            image: `./assets/img/${p.sku}.webp`,
             quantity: 1
         });
     }
@@ -1502,33 +1314,25 @@ function showAddToCartToast(productTitle) {
     }, 6000);
 }
 
-// Modal Ficha Técnica (PDP)
+// Modal Ficha Técnica (PDP) 100% Nativo PC Custom Lab
 window.openProductDetailModal = function(sku) {
     const catalog = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
-    const p = catalog.find(item => item.sku === sku || item.clave === sku);
-    if (!p) return;
+    const raw = catalog.find(item => (item.sku === sku || item.s === sku || item.clave === sku));
+    if (!raw) return;
 
+    const p = window.normalizeProductItem(raw);
     const modal = document.getElementById("productDetailModal");
     const content = document.getElementById("productDetailModalContent");
     if (!modal || !content) return;
 
-    const cat = p.categoria_clasificada || 'accesorios_perifericos';
-    const title = (p.nombre || p.descripcion_completa || '').replace(/'/g, "&#39;");
-    const desc = (p.descripcion_completa || p.nombre || '').replace(/'/g, "&#39;");
-    const price = p.precio_mxn || p.precio || 0;
-    const original = p.precio_original || (price * 1.33);
-    const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
-    const localImg = `assets/img/${sku}.webp`;
-    const cdnImg = `https://static.ctonline.mx/imagenes/${sku}/${sku}_full.jpg`;
-    const cdnImg400 = `https://static.ctonline.mx/imagenes/${sku}/${sku}_400.jpg`;
-    const cdnThumb = `https://static.ctonline.mx/img/Thumbs/${sku}_100.jpg`;
-    const cdnCloudfront = `https://d22k14p2jfj20i.cloudfront.net/items/${sku}.jpg`;
-    const placeholder = getPlaceholderForCat(cat);
+    const title = p.name.replace(/'/g, "&#39;");
+    const desc = p.desc.replace(/'/g, "&#39;");
+    const localImg = `assets/img/${p.sku}.webp`;
 
     content.innerHTML = `
         <div class="flex justify-between items-center pb-3 border-b border-slate-800 mb-4">
             <span class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider">
-                <i class="fa-solid fa-circle-info mr-1"></i> Ficha Técnica Oficial PC Custom Lab
+                <i class="fa-solid fa-microchip mr-1.5 text-cyan-400"></i> Ficha Técnica Oficial • PC Custom Lab
             </span>
             <button onclick="closeProductDetailModal()" aria-label="Cerrar modal" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-red-950 text-slate-300 hover:text-red-400 flex items-center justify-center transition cursor-pointer min-h-[44px]">
                 <i class="fa-solid fa-xmark"></i>
@@ -1537,18 +1341,18 @@ window.openProductDetailModal = function(sku) {
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="w-full aspect-square bg-slate-950 rounded-2xl p-4 flex items-center justify-center border border-slate-800">
-                <img src="${localImg}" alt="${title}" width="400" height="400" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${sku}', '${cat}')" />
+                <img src="${localImg}" alt="${title}" width="400" height="400" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${p.sku}', '${p.cat}')" />
             </div>
 
             <div class="flex flex-col justify-between space-y-4">
                 <div>
                     <div class="flex flex-wrap items-center gap-2 mb-1.5">
                         <span class="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider block">
-                            ${cat.replace(/_/g, ' ')} • SKU: ${sku}
+                            ${p.cat.replace(/_/g, ' ')} • SKU: ${p.sku}
                         </span>
-                        ${p.subgrupo_label ? `
+                        ${p.subLabel ? `
                             <span class="bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 text-[10px] font-mono px-2 py-0.5 rounded-full font-bold">
-                                ${p.subgrupo_label}
+                                ${p.subLabel}
                             </span>
                         ` : ''}
                         <span class="bg-slate-800 text-slate-300 text-[10px] font-mono px-2 py-0.5 rounded-full">
@@ -1563,7 +1367,7 @@ window.openProductDetailModal = function(sku) {
                         <p>${desc}</p>
                     </div>
 
-                    <!-- Ficha Técnica Nativa PC Custom Lab (Protección contra fuga comercial) -->
+                    <!-- Ficha Técnica Nativa PC Custom Lab (Blindaje comercial) -->
                     <div class="w-full bg-slate-950/90 text-slate-300 border border-cyan-500/30 rounded-xl p-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 shadow font-mono text-[11px]">
                         <span class="flex items-center gap-1.5 text-cyan-300 font-bold">
                             <i class="fa-solid fa-certificate text-cyan-400"></i> Ficha Técnica Nativa PC Custom Lab
@@ -1577,32 +1381,32 @@ window.openProductDetailModal = function(sku) {
                 <div class="p-4 bg-slate-950 rounded-2xl border border-slate-800 space-y-3">
                     <div class="flex items-baseline justify-between">
                         <div>
-                            <span class="text-xs text-slate-500 line-through font-mono block">${window.formatPriceDisplay(original, (p.precio_usd || (price/19.5))*1.33)}</span>
-                            <div class="text-xl font-black text-emerald-400 font-mono">${window.formatPriceDisplay(price, p.precio_usd)}</div>
+                            <span class="text-xs text-slate-500 line-through font-mono block">${window.formatPriceDisplay(p.orig, (p.priceUsd)*1.33)}</span>
+                            <div class="text-xl font-black text-emerald-400 font-mono">${window.formatPriceDisplay(p.priceMxn, p.priceUsd)}</div>
                         </div>
                         <span class="text-xs font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded-lg">
-                            Mayoreo: ${window.formatPriceDisplay(mayoreo, p.precio_mayoreo_usd)}
+                            Mayoreo: ${window.formatPriceDisplay(p.may, p.mayUsd)}
                         </span>
                     </div>
 
                     <div class="text-[11px] font-mono text-slate-400 space-y-1.5">
-                        ${p.agotado ? `
+                        ${p.isAgotado ? `
                             <div class="p-2.5 rounded-xl bg-amber-950/40 border border-amber-500/40 text-amber-300 font-mono text-xs flex items-center gap-2">
                                 <i class="fa-solid fa-clock-rotate-left text-base"></i>
-                                <span>Disponibilidad: <strong>Bajo Pedido (hasta su próxima existencia en almacén de fábrica)</strong></span>
+                                <span>Disponibilidad: <strong>Bajo Pedido (hasta su próxima existencia en almacén)</strong></span>
                             </div>
                         ` : `
-                            <div><i class="fa-solid fa-shield-check text-emerald-400 mr-1"></i> Garantía 48h Directa / 1 Año Fabricante</div>
+                            <div><i class="fa-solid fa-shield-check text-emerald-400 mr-1"></i> Garantía 48h Directa en Tienda / 1 Año Fabricante</div>
                             <div><i class="fa-solid fa-location-dot text-cyan-400 mr-1"></i> Entrega Inmediata en Pedro Moreno 501 A</div>
                         `}
                     </div>
 
                     <div class="flex gap-2 pt-2">
-                        <button onclick="${p.agotado ? `window.open('https://wa.me/523337271440?text=Hola,%20me%20interesa%20apartar%20bajo%20pedido%20el%20producto:%20${sku}', '_blank')` : `addToCartCT('${sku}'); closeProductDetailModal();`}" class="flex-1 ${p.agotado ? 'bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/40' : 'bg-blue-600 hover:bg-blue-500 text-white shadow'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer min-h-[44px]">
-                            <i class="fa-solid ${p.agotado ? 'fa-clock' : 'fa-cart-plus'}"></i> <span>${p.agotado ? 'Apartar Bajo Pedido' : '+ Carrito'}</span>
+                        <button onclick="${p.isAgotado ? `window.open('https://wa.me/523337271440?text=Hola,%20me%20interesa%20apartar%20bajo%20pedido%20el%20producto:%20${p.sku}', '_blank')` : `addToCartCT('${p.sku}'); closeProductDetailModal();`}" class="flex-1 ${p.isAgotado ? 'bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/40' : 'bg-blue-600 hover:bg-blue-500 text-white shadow'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer min-h-[44px]">
+                            <i class="fa-solid ${p.isAgotado ? 'fa-clock' : 'fa-cart-plus'}"></i> <span>${p.isAgotado ? 'Apartar Bajo Pedido' : '+ Carrito'}</span>
                         </button>
-                        <button onclick="${p.agotado ? `window.open('https://wa.me/523337271440?text=Hola,%20cotizar%20bajo%20pedido:%20${sku}', '_blank')` : `buyNowCT('${sku}');`}" class="flex-1 ${p.agotado ? 'bg-amber-600 hover:bg-amber-500 text-slate-950' : 'bg-emerald-600 hover:bg-emerald-500 text-white'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 shadow transition cursor-pointer min-h-[44px]">
-                            <i class="fa-solid ${p.agotado ? 'fa-file-invoice-dollar' : 'fa-bolt'}"></i> <span>${p.agotado ? 'Cotizar Pieza' : 'Comprar Ahora'}</span>
+                        <button onclick="${p.isAgotado ? `window.open('https://wa.me/523337271440?text=Hola,%20cotizar%20bajo%20pedido:%20${p.sku}', '_blank')` : `buyNowCT('${p.sku}');`}" class="flex-1 ${p.isAgotado ? 'bg-amber-600 hover:bg-amber-500 text-slate-950' : 'bg-emerald-600 hover:bg-emerald-500 text-white'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 shadow transition cursor-pointer min-h-[44px]">
+                            <i class="fa-solid ${p.isAgotado ? 'fa-file-invoice-dollar' : 'fa-bolt'}"></i> <span>${p.isAgotado ? 'Cotizar Pieza' : 'Comprar Ahora'}</span>
                         </button>
                     </div>
                 </div>
