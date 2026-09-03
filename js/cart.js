@@ -1,33 +1,55 @@
 // =========================================================================
-// CARRITO LATERAL DESLIZANTE (SLIDE-OVER DRAWER) & ENGINE DE COMPRAS
-// PC CUSTOM LAB - ECOSYSTEM BAZAR NFL GDL
+// MOTOR DE CARRITO UNIFICADO DEL ECOSISTEMA (IAWC_MASTER_CART)
+// PERSISTENCIA MULTI-TIENDA Y SINCRONIZACIÓN REACTIVA
 // =========================================================================
 
 (function() {
     'use strict';
 
+    const STORAGE_KEY = 'IAWC_MASTER_CART';
+
     function getCart() {
         try {
-            const raw = localStorage.getItem('pc_custom_cart') || localStorage.getItem('ecosystem_global_cart') || localStorage.getItem('cart_items');
-            return raw ? JSON.parse(raw) : [];
+            const raw = localStorage.getItem(STORAGE_KEY);
+            if (raw) {
+                return JSON.parse(raw);
+            }
+            // Migración transparente de claves heredadas
+            for (const legacyKey of ['ecosystem_global_cart', 'cart_items', 'pc_custom_cart']) {
+                const leg = localStorage.getItem(legacyKey);
+                if (leg) {
+                    const parsed = JSON.parse(leg);
+                    if (Array.isArray(parsed) && parsed.length > 0) {
+                        saveCart(parsed);
+                        return parsed;
+                    }
+                }
+            }
+            return [];
         } catch(e) {
             return [];
         }
     }
 
     function saveCart(cart) {
-        const json = JSON.stringify(cart);
-        localStorage.setItem('pc_custom_cart', json);
-        localStorage.setItem('ecosystem_global_cart', json);
-        localStorage.setItem('cart_items', json);
+        try {
+            const json = JSON.stringify(cart);
+            localStorage.setItem(STORAGE_KEY, json);
+            // Sincronización con claves legadas para compatibilidad con código existente
+            localStorage.setItem('ecosystem_global_cart', json);
+            localStorage.setItem('cart_items', json);
+            localStorage.setItem('pc_custom_cart', json);
+        } catch(e) {
+            console.warn("Error persistiendo carrito IAWC:", e);
+        }
         syncCartCounters();
         renderDrawerItems();
     }
 
     function syncCartCounters() {
         const cart = getCart();
-        const totalCount = cart.reduce((acc, item) => acc + (parseInt(item.quantity || item.qty) || 1), 0);
-        const totalNeto = cart.reduce((acc, item) => acc + ((parseFloat(item.price || item.precio) || 0) * (parseInt(item.quantity || item.qty) || 1)), 0);
+        const totalCount = cart.reduce((acc, item) => acc + (parseInt(item.qty || item.quantity) || 1), 0);
+        const totalNeto = cart.reduce((acc, item) => acc + ((parseFloat(item.price || item.precio) || 0) * (parseInt(item.qty || item.quantity) || 1)), 0);
 
         document.querySelectorAll('#boutique-cart-badge, .cart-badge, #cart-count').forEach(el => {
             el.textContent = totalCount.toString();
@@ -77,8 +99,8 @@
         if (!container) return;
 
         const cart = getCart();
-        const totalCount = cart.reduce((acc, item) => acc + (parseInt(item.quantity || item.qty) || 1), 0);
-        const totalNeto = cart.reduce((acc, item) => acc + ((parseFloat(item.price || item.precio) || 0) * (parseInt(item.quantity || item.qty) || 1)), 0);
+        const totalCount = cart.reduce((acc, item) => acc + (parseInt(item.qty || item.quantity) || 1), 0);
+        const totalNeto = cart.reduce((acc, item) => acc + ((parseFloat(item.price || item.precio) || 0) * (parseInt(item.qty || item.quantity) || 1)), 0);
         const subtotalSinIva = totalNeto / 1.16;
         const iva = totalNeto - subtotalSinIva;
 
@@ -99,7 +121,7 @@
                     </div>
                     <div>
                         <h3 class="text-white font-mono font-bold text-sm">Tu carrito está vacío</h3>
-                        <p class="text-xs text-slate-400 font-mono mt-1">Tu carrito está listo para tu próximo ensamble</p>
+                        <p class="text-xs text-slate-400 font-mono mt-1">Listo para tu próximo ensamble o compra en el ecosistema</p>
                     </div>
                     <button type="button" onclick="window.toggleCartDrawer(false); window.scrollToDepartments();" class="btn-action mt-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-black px-4 py-2 rounded-xl text-xs uppercase cursor-pointer shadow min-h-[40px]">
                         Explorar Vitrinas
@@ -110,27 +132,31 @@
         }
 
         container.innerHTML = cart.map(item => {
-            const sku = item.sku;
-            const name = (item.name || item.nombre || '').replace(/'/g, "&#39;");
+            const sku = item.sku || item.id || '';
+            const title = (item.title || item.name || item.nombre || '').replace(/'/g, "&#39;");
             const price = parseFloat(item.price || item.precio) || 0;
-            const qty = parseInt(item.quantity || item.qty) || 1;
+            const qty = parseInt(item.qty || item.quantity) || 1;
             const itemSubtotal = price * qty;
-            const img = item.image || `assets/img/${sku}.webp`;
+            const storeName = item.storeName || item.tienda_origen || 'PC Custom Lab';
+            const img = item.img || item.image || `assets/img/${sku}.webp`;
 
             return `
-                <div class="py-3 flex items-center gap-3">
+                <div class="py-3 flex items-start gap-3">
                     <div class="w-14 h-14 bg-slate-950 rounded-xl p-1 shrink-0 border border-slate-800 flex items-center justify-center">
-                        <img src="${img}" alt="${name}" width="56" height="56" class="w-full h-full object-contain" onerror="this.src='./assets/img/placeholders/acc_placeholder.jpg'" />
+                        <img src="${img}" alt="${title}" width="56" height="56" class="w-full h-full object-contain" onerror="this.src='./assets/img/placeholders/acc_placeholder.jpg'" />
                     </div>
                     <div class="flex-1 min-w-0">
-                        <h4 class="text-xs font-bold text-white leading-snug line-clamp-2" title="${name}">
-                            ${name}
-                        </h4>
-                        <div class="text-[10px] font-mono text-cyan-300 font-bold mt-0.5">
-                            SKU: ${sku}
+                        <div class="flex items-center gap-1.5 mb-0.5">
+                            <span class="text-[9px] font-mono font-bold bg-cyan-950 text-cyan-300 border border-cyan-500/40 px-1.5 py-0.5 rounded">
+                                ${storeName}
+                            </span>
+                            <span class="text-[9.5px] font-mono text-slate-400">SKU: ${sku}</span>
                         </div>
+                        <h4 class="text-xs font-bold text-white leading-snug line-clamp-2" title="${title}">
+                            ${title}
+                        </h4>
                         <div class="flex items-center justify-between mt-2">
-                            <!-- Selector de piezas interactivo [ - ] [ Cantidad ] [ + ] -->
+                            <!-- Selector interactivo [ - ] [ Cantidad ] [ + ] -->
                             <div class="flex items-center gap-1 bg-slate-950 border border-slate-800 rounded-lg p-0.5">
                                 <button type="button" onclick="window.updateCartItemQty('${sku}', -1)" aria-label="Disminuir" class="w-6 h-6 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 flex items-center justify-center text-xs font-bold transition cursor-pointer">
                                     -
@@ -156,26 +182,37 @@
 
     window.updateCartItemQty = function(sku, delta) {
         let cart = getCart();
-        const item = cart.find(i => i.sku === sku);
+        const item = cart.find(i => (i.sku === sku || i.id === sku));
         if (!item) return;
 
-        item.quantity = (parseInt(item.quantity || item.qty) || 1) + delta;
-        item.qty = item.quantity;
-        if (item.quantity <= 0) {
-            cart = cart.filter(i => i.sku !== sku);
+        const currentQty = parseInt(item.qty || item.quantity) || 1;
+        const newQty = currentQty + delta;
+        item.qty = newQty;
+        item.quantity = newQty;
+
+        if (newQty <= 0) {
+            cart = cart.filter(i => (i.sku !== sku && i.id !== sku));
         }
         saveCart(cart);
     };
 
     window.removeCartItem = function(sku) {
         let cart = getCart();
-        cart = cart.filter(i => i.sku !== sku);
+        cart = cart.filter(i => (i.sku !== sku && i.id !== sku));
         saveCart(cart);
     };
 
     window.getBoutiqueCart = getCart;
     window.saveBoutiqueCart = saveCart;
     window.syncBoutiqueCart = syncCartCounters;
+
+    // SINCRONIZACIÓN REACTIVA MULTI-PESTAÑA Y MULTI-SITIO
+    window.addEventListener("storage", (e) => {
+        if (e.key === STORAGE_KEY || e.key === 'ecosystem_global_cart' || e.key === 'cart_items') {
+            syncCartCounters();
+            renderDrawerItems();
+        }
+    });
 
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") {

@@ -1,6 +1,6 @@
 // =========================================================================
-// MOTOR UNIVERSAL BILINGÜE PC CUSTOM LAB (17,490 PRODUCTOS EN 60 VITRINAS)
-// FASE 2: BUSCADOR PREDICTIVO EN VIVO + CARRITO SLIDE-OVER + GABINETES PECERA
+// MOTOR UNIVERSAL BILINGÜE PC CUSTOM LAB (16,177 PRODUCTOS EN VITRINAS LIMPIAS)
+// ENTIDAD NÚCLEO (PRIMARY ENTITY) + CARRITO UNIFICADO (IAWC_MASTER_CART)
 // =========================================================================
 
 let currentViewStyle = 'grid';
@@ -43,9 +43,9 @@ const MASTER_DEPARTMENTS = [
         name: '2. EQUIPOS COMPLETOS Y LAPTOPS',
         icon: 'fa-laptop',
         deptIds: [
-            'computadoras_ensambladas',
-            'mini_pcs_nuc',
             'laptops_portatiles',
+            'mini_pcs_nuc',
+            'computadoras_ensambladas',
             'computadoras_all_in_one',
             'servidores_enterprise'
         ]
@@ -101,29 +101,27 @@ const MASTER_DEPARTMENTS = [
         name: '7. ACCESORIOS Y MANTENIMIENTO',
         icon: 'fa-boxes-stacked',
         deptIds: [
-            'limpieza_mantenimiento',
-            'cables_adaptadores',
-            'mochilas_fundas_maletines',
-            'soportes_ergonomia',
-            'hubs_docks_estaciones',
-            'gaming_consolas_sillas',
-            'tarjetas_microsd',
-            'tarjetas_sd',
+            'tablets_ipads',
+            'smartphones_celulares',
+            'punto_de_venta',
             'memorias_usb_pendrives',
+            'tarjetas_microsd',
             'discos_duros_externos',
             'ssds_externos_portatiles',
             'memorias_ram_laptop',
             'memorias_ram_servidor',
             'diademas_headsets',
             'bocinas_sonido',
-            'microfonos',
             'proyectores_presentacion',
+            'limpieza_mantenimiento',
+            'cables_adaptadores',
+            'mochilas_fundas_maletines',
+            'soportes_ergonomia',
+            'hubs_docks_estaciones',
+            'gaming_consolas_sillas',
             'sistemas_operativos',
             'ofimatica_productividad',
             'antivirus_seguridad_digital',
-            'punto_de_venta',
-            'smartphones_celulares',
-            'tablets_ipads',
             'accesorios_perifericos'
         ]
     }
@@ -196,49 +194,40 @@ function stripAccents(text) {
 }
 
 const SYNONYM_DICTIONARY = {
-    "ram": ["ram", "ddr4", "ddr5", "ddr3", "dimm", "sodimm", "udimm", "rdimm"],
+    "ram": ["ram", "ddr5", "ddr4", "ddr3", "dimm", "sodimm", "udimm"],
     "memoria": ["memoria", "memorias"],
     "memorias": ["memoria", "memorias"],
-    "disco": ["disco duro", "ssd", "nvme", "disco solido", "disco sólido", "hdd"],
-    "discos": ["disco duro", "ssd", "nvme", "disco solido", "hdd"],
+    "disco": ["disco duro", "ssd", "nvme", "disco solido", "hdd"],
     "solido": ["ssd", "nvme", "disco solido", "m.2"],
     "ssd": ["ssd", "nvme", "disco solido", "m.2"],
-    "fuente": ["fuente de poder", "power supply", "fuente atx", "fuente cert", "psu", "80 plus"],
-    "fuentes": ["fuente de poder", "power supply", "fuente atx", "fuente cert", "psu", "80 plus"],
-    "psu": ["fuente de poder", "power supply", "psu"],
+    "fuente": ["fuente de poder", "power supply", "fuente atx", "psu"],
     "gabinete": ["gabinete", "chasis", "case gamer", "media torre", "mini torre", "pecera", "aquarium"],
-    "gabinetes": ["gabinete", "chasis", "case gamer", "pecera"],
     "pecera": ["pecera", "aquarium", "cristal templado", "panoramico", "panorámico", "dual chamber"],
     "procesador": ["procesador", "cpu", "ryzen", "core i", "core ultra", "intel core", "amd ryzen"],
-    "procesadores": ["procesador", "cpu", "ryzen", "core i", "core ultra", "intel core", "amd ryzen"],
     "cpu": ["procesador", "cpu", "ryzen", "core i", "core ultra"],
-    "grafica": ["tarjeta de video", "tarjeta grafica", "gpu", "geforce rtx", "geforce gtx", "radeon rx"],
-    "graficas": ["tarjeta de video", "tarjeta grafica", "gpu"],
+    "grafica": ["tarjeta de video", "tarjeta grafica", "gpu", "geforce rtx", "radeon rx"],
     "gpu": ["tarjeta de video", "gpu", "rtx", "gtx", "radeon rx"],
-    "video": ["tarjeta de video", "gpu", "rtx", "gtx", "radeon rx"],
-    "tarjeta": ["tarjeta madre", "tarjeta de video", "tarjeta sd", "motherboard", "gpu"],
-    "tarjetas": ["tarjeta madre", "tarjeta de video", "tarjeta sd", "motherboard", "gpu"],
-    "madre": ["tarjeta madre", "motherboard", "placa madre", "mainboard"],
+    "madre": ["tarjeta madre", "motherboard", "placa madre"],
     "motherboard": ["tarjeta madre", "motherboard", "placa madre"],
-    "teclado": ["teclado", "keyboard", "keypad"],
-    "teclados": ["teclado", "keyboard"],
-    "mouse": ["mouse", "raton", "ratón", "mice", "mousepad"],
-    "raton": ["mouse", "raton", "ratón", "mice", "mousepad"],
-    "ratones": ["mouse", "raton", "ratón", "mice"],
-    "monitor": ["monitor", "pantalla gamer", "pantalla led", "display"],
-    "monitores": ["monitor", "pantalla gamer", "pantalla led"],
+    "teclado": ["teclado", "keyboard"],
+    "mouse": ["mouse", "raton", "ratón"],
+    "monitor": ["monitor", "pantalla gamer", "pantalla led"],
     "laptop": ["laptop", "notebook", "macbook", "portatil", "portátil"],
     "laptops": ["laptop", "notebook", "macbook", "portatil", "portátil"],
-    "regulador": ["regulador", "no-break", "nobreak", "ups"],
-    "reguladores": ["regulador", "no-break", "nobreak", "ups"],
-    "nobreak": ["no-break", "nobreak", "ups", "regulador"]
+    "toner": ["toner", "tóner", "cartucho de toner", "drum"],
+    "toners": ["toner", "tóner", "cartucho de toner"],
+    "impresora": ["impresora", "multifuncional", "copiadora", "ecotank", "laserjet"],
+    "impresoras": ["impresora", "multifuncional", "copiadora"],
+    "tablet": ["tablet", "tableta", "ipad", "galaxy tab"],
+    "tablets": ["tablet", "tableta", "ipad", "galaxy tab"],
+    "celular": ["celular", "smartphone", "telefono celular"],
+    "celulares": ["celular", "smartphone", "telefono celular"]
 };
 
 const STOP_WORDS_SET = new Set([
     "el", "la", "los", "las", "un", "una", "unos", "unas",
     "de", "del", "al", "a", "en", "con", "para", "por",
-    "que", "se", "es", "y", "e", "o", "u", "su", "sus",
-    "the", "and", "with", "for", "in", "on", "of"
+    "que", "se", "es", "y", "e", "o", "u", "su", "sus"
 ]);
 
 function cleanSearchTokens(query) {
@@ -256,9 +245,6 @@ function searchCatalogMaster(query) {
     const tokens = cleanSearchTokens(rawQuery);
     if (!tokens || tokens.length === 0) return all;
 
-    const isSingleChar = rawQuery.length === 1;
-    const charPrefix = rawQuery.toLowerCase();
-
     const scoredResults = [];
 
     for (let i = 0; i < all.length; i++) {
@@ -269,16 +255,6 @@ function searchCatalogMaster(query) {
         const catNorm = stripAccents(item.cat);
         const brandNorm = stripAccents(item.marca);
         const descNorm = stripAccents(item.desc);
-
-        if (isSingleChar) {
-            if (nameNorm.startsWith(charPrefix) || brandNorm.startsWith(charPrefix) || catNorm.startsWith(charPrefix) || skuNorm.startsWith(charPrefix)) {
-                let score = 500;
-                if (nameNorm.startsWith(charPrefix)) score += 300;
-                if (catNorm.startsWith(charPrefix)) score += 200;
-                scoredResults.push({ score, product: p });
-            }
-            continue;
-        }
 
         let matchAll = true;
         let score = 0;
@@ -332,31 +308,36 @@ function searchCatalogMaster(query) {
         }
 
         if (matchAll) {
-            // Penalizar gabinetes de servidor/rack/piso industrial para que no desplacen gabinetes de ensamble
+            // Penalizar gabinetes de servidor o rack para búsquedas de gabinetes normales
             if (/(servidor|rack|1u|2u|3u|4u|42 u|42u|gabinete de piso|industrial)/.test(nameNorm + ' ' + descNorm)) {
                 score -= 8000;
             }
 
-            // Prioridad a existencia física en tienda
             if (!item.isAgotado) score += 2000;
-            // Prioridad a fotos verificadas
             if (item.hasImg) score += 1500;
-
-            if (tokens.some(t => ['ram', 'memoria', 'memorias'].includes(t))) {
-                if (catNorm.includes('memorias_ram')) score += 10000;
-                if (nameNorm.includes('memoria ram')) score += 8000;
-                else if (nameNorm.startsWith('memoria')) score += 4000;
-            }
-
-            if (tokens.some(t => ['procesador', 'procesadores', 'cpu', 'ryzen', 'core'].includes(t))) {
-                if (catNorm === 'procesadores') score += 10000;
-                if (nameNorm.startsWith('procesador')) score += 8000;
-            }
 
             if (tokens.some(t => ['gabinete', 'pecera', 'aquarium'].includes(t))) {
                 if (catNorm === 'gabinetes') score += 10000;
                 if (nameNorm.includes('pecera') || nameNorm.includes('panorak') || nameNorm.includes('aquarium')) score += 12000;
                 if (nameNorm.includes('cristal') || nameNorm.includes('panoramico')) score += 6000;
+            }
+
+            if (tokens.some(t => ['toner', 'tóner', 'toners'].includes(t))) {
+                if (catNorm === 'toners_laser') score += 12000;
+                if (catNorm === 'impresoras_multifuncionales') score -= 5000;
+            }
+
+            if (tokens.some(t => ['impresora', 'impresoras', 'multifuncional'].includes(t))) {
+                if (catNorm === 'impresoras_multifuncionales') score += 12000;
+                if (catNorm === 'toners_laser') score -= 8000;
+            }
+
+            if (tokens.some(t => ['laptop', 'laptops', 'notebook'].includes(t))) {
+                if (catNorm === 'laptops_portatiles') score += 15000;
+            }
+
+            if (tokens.some(t => ['mini pc', 'minipc', 'nuc'].includes(t))) {
+                if (catNorm === 'mini_pcs_nuc') score += 15000;
             }
 
             scoredResults.push({ score, product: p });
@@ -466,6 +447,7 @@ function initFullCatalog() {
     }, 25);
 }
 
+// WELCOME HUB ACTUALIZADO CON VISIBILIDAD DE LAPTOPS, MINI PCS E IMPRESORAS
 function renderWelcomeHub() {
     const hubContainer = document.getElementById("welcome-hub-container");
     if (!hubContainer) return;
@@ -485,16 +467,21 @@ function renderWelcomeHub() {
         { id: 'memorias_ram_pc', name: '3. Memorias RAM PC', icon: 'fa-memory', color: 'from-emerald-600 to-teal-600', badge: 'DDR5 & DDR4 DIMM' },
         { id: 'gabinetes', name: '4. Gabinetes Gamer', icon: 'fa-server', color: 'from-amber-600 to-orange-600', badge: 'Pecera, Vidrio Templado & ARGB' },
         { id: 'tarjetas_video', name: '5. Tarjetas de Video', icon: 'fa-vr-cardboard', color: 'from-purple-600 to-pink-600', badge: 'GeForce RTX & Radeon' },
-        { id: 'enfriamiento', name: '6. Enfriamiento Líquido', icon: 'fa-fan', color: 'from-cyan-600 to-blue-500', badge: 'Líquido AIO & Disipadores' },
-        { id: 'ssds_m2_nvme', name: '7. Almacenamiento SSD', icon: 'fa-hard-drive', color: 'from-sky-600 to-indigo-600', badge: 'M.2 NVMe PCIe 4.0/5.0' },
-        { id: 'fuentes_energia', name: '8. Fuentes de Poder', icon: 'fa-bolt', color: 'from-yellow-600 to-amber-600', badge: '80 Plus Gold & Bronze' },
-        { id: 'monitores_pantallas', name: '9. Monitores PC', icon: 'fa-desktop', color: 'from-rose-600 to-red-600', badge: 'Gamer 144Hz - 240Hz & 4K' },
-        { id: 'computadoras_ensambladas', name: '10. PCs Armadas & Gamer', icon: 'fa-computer', color: 'from-cyan-500 to-emerald-600', badge: 'Gaming & Workstations' },
-        { id: 'proyectores_presentacion', name: '11. Proyectores Video', icon: 'fa-video', color: 'from-violet-600 to-purple-700', badge: 'BenQ, Epson & Láser' },
-        { id: 'switches_red', name: '12. Redes & Switches', icon: 'fa-network-wired', color: 'from-blue-700 to-indigo-800', badge: 'Ethernet, PoE+ & Fibra' },
-        { id: 'camaras_seguridad_cctv', name: '13. Cámaras CCTV', icon: 'fa-video', color: 'from-slate-700 to-cyan-900', badge: 'Cámaras IP, Bala & Domo' },
-        { id: 'no_breaks_ups', name: '14. No-Breaks & UPS', icon: 'fa-car-battery', color: 'from-emerald-700 to-green-900', badge: 'Respaldo Eléctrico' },
-        { id: 'limpieza_mantenimiento', name: '15. Limpieza & Servicio', icon: 'fa-spray-can-sparkles', color: 'from-teal-600 to-cyan-700', badge: 'Aire Comprimido & Espumas' }
+        { id: 'laptops_portatiles', name: '6. Laptops & Portátiles', icon: 'fa-laptop', color: 'from-cyan-600 to-blue-500', badge: 'Gamer, ThinkPad & Ultrabooks' },
+        { id: 'mini_pcs_nuc', name: '7. Mini PCs & Barebones', icon: 'fa-cube', color: 'from-indigo-700 to-purple-600', badge: 'Asus NUC, Beelink & Brix' },
+        { id: 'computadoras_ensambladas', name: '8. PCs Armadas & Gamer', icon: 'fa-computer', color: 'from-emerald-500 to-cyan-600', badge: 'Gaming & Workstations' },
+        { id: 'enfriamiento', name: '9. Enfriamiento Líquido', icon: 'fa-fan', color: 'from-sky-600 to-indigo-600', badge: 'Líquido AIO & Disipadores' },
+        { id: 'ssds_m2_nvme', name: '10. Almacenamiento SSD', icon: 'fa-hard-drive', color: 'from-blue-700 to-cyan-700', badge: 'M.2 NVMe PCIe 4.0/5.0' },
+        { id: 'fuentes_energia', name: '11. Fuentes de Poder', icon: 'fa-bolt', color: 'from-yellow-600 to-amber-600', badge: '80 Plus Gold & Bronze' },
+        { id: 'monitores_pantallas', name: '12. Monitores PC', icon: 'fa-desktop', color: 'from-rose-600 to-red-600', badge: 'Gamer 144Hz - 240Hz & 4K' },
+        { id: 'impresoras_multifuncionales', name: '13. Impresoras & Copiadoras', icon: 'fa-print', color: 'from-violet-600 to-purple-700', badge: 'EcoTank, LaserJet & Smart Tank' },
+        { id: 'toners_laser', name: '14. Tóners Láser Certificados', icon: 'fa-fill-drip', color: 'from-amber-700 to-yellow-600', badge: 'Cartuchos & Tambores de Tóner' },
+        { id: 'switches_red', name: '15. Redes & Switches', icon: 'fa-network-wired', color: 'from-blue-700 to-indigo-800', badge: 'Ethernet, PoE+ & Fibra' },
+        { id: 'camaras_seguridad_cctv', name: '16. Cámaras CCTV & Alarmas', icon: 'fa-video', color: 'from-slate-700 to-cyan-900', badge: 'Cámaras IP, Bala & Domo' },
+        { id: 'no_breaks_ups', name: '17. No-Breaks & UPS', icon: 'fa-car-battery', color: 'from-emerald-700 to-green-900', badge: 'Respaldo Eléctrico y Baterías' },
+        { id: 'tablets_ipads', name: '18. Tablets & iPads', icon: 'fa-tablet-screen-button', color: 'from-teal-600 to-cyan-700', badge: 'Galaxy Tab, iPad & Lenovo' },
+        { id: 'punto_de_venta', name: '19. Punto de Venta & Kioscos', icon: 'fa-cash-register', color: 'from-orange-600 to-red-600', badge: 'Terminales POS & Código Barras' },
+        { id: 'limpieza_mantenimiento', name: '20. Limpieza & Servicio', icon: 'fa-spray-can-sparkles', color: 'from-teal-700 to-emerald-800', badge: 'Aire Comprimido & Espumas' }
     ];
 
     hubContainer.classList.remove("hidden");
@@ -510,7 +497,7 @@ function renderWelcomeHub() {
                             WELCOME HUB • NAVEGACIÓN RÁPIDA POR DEPARTAMENTO
                         </h2>
                         <p class="text-[11px] text-slate-400 font-mono">
-                            Haz clic en cualquier categoría para desplegar su vitrina completa con entrega inmediata
+                            Catálogo verificado por entidad física: selecciona una sección para abrir su vitrina completa
                         </p>
                     </div>
                 </div>
@@ -636,7 +623,7 @@ function getFilteredList() {
         return items;
     }
 
-    // ORDENAMIENTO ESPECIAL DE GABINETES: ENSAMBLE PC, PECERA Y CRISTAL PRIMERO
+    // PRIORIDAD EN GABINETES: PECERA, CRISTAL TEMPLADO Y GAMING PRIMERO
     if (activeSelectedCategory === 'gabinetes' && currentSortCriterion === 'destacados') {
         items.sort((a, b) => {
             const aItem = window.normalizeProductItem(a);
@@ -704,7 +691,6 @@ function getPlaceholderForCat(cat) {
         'memorias_ram_laptop': 'ram_placeholder.jpg',
         'memorias_ram_servidor': 'ram_placeholder.jpg',
         'tarjetas_microsd': 'ssd_placeholder.jpg',
-        'tarjetas_sd': 'ssd_placeholder.jpg',
         'memorias_usb_pendrives': 'ssd_placeholder.jpg',
         'ssds_m2_nvme': 'ssd_placeholder.jpg',
         'discos_duros_hdd_internos': 'ssd_placeholder.jpg',
@@ -723,7 +709,6 @@ function getPlaceholderForCat(cat) {
         'combos_teclado_mouse': 'acc_placeholder.jpg',
         'diademas_headsets': 'elec_placeholder.jpg',
         'bocinas_sonido': 'elec_placeholder.jpg',
-        'microfonos': 'elec_placeholder.jpg',
         'computadoras_ensambladas': 'pc_placeholder.jpg',
         'laptops_portatiles': 'lap_placeholder.jpg',
         'computadoras_all_in_one': 'pc_placeholder.jpg',
@@ -876,7 +861,7 @@ function renderProductCardHTML(p, viewStyle) {
                     </div>
                     <h3 onclick="openProductDetailModal('${item.sku}')" class="text-xs sm:text-sm font-bold text-slate-100 hover:text-cyan-300 transition line-clamp-2 cursor-pointer mb-1.5">${title}</h3>
                     <div class="text-[11px] font-mono ${item.isAgotado ? 'text-amber-400' : 'text-slate-400'}">
-                        ${item.isAgotado ? '<i class="fa-solid fa-clock"></i> Bajo Pedido hasta su próxima existencia' : 'Entrega Inmediata en Pedro Moreno 501 A • Garantía 48h Directa'}
+                        ${item.isAgotado ? '<i class="fa-solid fa-clock"></i> Bajo Pedido hasta su próxima existencia' : 'Entrega Inmediata en Pedro Moreno 501 A • Garantía Directa'}
                     </div>
                 </div>
                 <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-48 border-t sm:border-t-0 sm:border-l border-slate-800 pt-2 sm:pt-0 sm:pl-4 shrink-0 space-y-2">
@@ -917,7 +902,6 @@ function renderShowcaseVitrinas(container) {
         let deptProducts = all.filter(p => (p.categoria_clasificada || p.c) === dept.id);
         if (deptProducts.length === 0) continue;
 
-        // Si es vitrina de gabinetes en portada: poner peceras y cristal primero!
         if (dept.id === 'gabinetes') {
             deptProducts = [...deptProducts].sort((a, b) => {
                 const aItem = window.normalizeProductItem(a);
@@ -954,7 +938,7 @@ function renderShowcaseVitrinas(container) {
                                 </span>
                             </div>
                             <span class="text-[11px] text-slate-400 font-mono">
-                                Componentes certificados listos para ensamble y entrega inmediata en Guadalajara
+                                Entrega inmediata y garantía directa en Guadalajara
                             </span>
                         </div>
                     </div>
@@ -1037,7 +1021,7 @@ function renderExactCatalogView() {
     const resultsCountTxt = document.getElementById("results-count-display");
     if (!container) return;
 
-    if (activeSelectedCategory === 'Todas' && (!activeSearchQuery || activeSearchQuery.trim() === '') && currentPageNumber === 1) {
+    if (activeSelectedCategory === 'Todas' && (!activeSearchQuery || activeSearchQuery.trim() !== '') && currentPageNumber === 1) {
         renderWelcomeHub();
         renderShowcaseVitrinas(container);
         return;
@@ -1068,18 +1052,10 @@ function renderPaginationBar(totalPages) {
     const right = Math.min(totalPages - 1, current + delta);
 
     pages.push(1);
-    if (left > 2) {
-        pages.push('...');
-    }
-    for (let i = left; i <= right; i++) {
-        pages.push(i);
-    }
-    if (right < totalPages - 1) {
-        pages.push('...');
-    }
-    if (totalPages > 1) {
-        pages.push(totalPages);
-    }
+    if (left > 2) pages.push('...');
+    for (let i = left; i <= right; i++) pages.push(i);
+    if (right < totalPages - 1) pages.push('...');
+    if (totalPages > 1) pages.push(totalPages);
 
     const html = `
         <div class="w-full flex flex-wrap items-center justify-between gap-3 font-mono text-xs text-white">
@@ -1097,9 +1073,7 @@ function renderPaginationBar(totalPages) {
 
             <div class="flex items-center gap-1 overflow-x-auto no-scrollbar py-1">
                 ${pages.map(p => {
-                    if (p === '...') {
-                        return `<span class="px-2 py-1 text-slate-500 font-bold select-none">...</span>`;
-                    }
+                    if (p === '...') return `<span class="px-2 py-1 text-slate-500 font-bold select-none">...</span>`;
                     const isActive = p === current;
                     return `
                         <button 
@@ -1163,9 +1137,7 @@ function goToPage(page) {
     }
 }
 
-// =========================================================================
 // MENÚ LATERAL: 7 ACORDEONES + BOTONES PATROCINADOS GEMINI & ANTIGRAVITY
-// =========================================================================
 function renderSidebarFacets() {
     const root = document.getElementById("sidebar-facets-root");
     if (!root) return;
@@ -1254,7 +1226,6 @@ function renderSidebarFacets() {
 
             <!-- BOTONES PATROCINADOS OFICIALES: GEMINI ADVANCED & ANTIGRAVITY -->
             <div class="pt-2 border-t border-slate-800 space-y-2">
-                <!-- 1. Botón Google Gemini Leader -->
                 <a 
                     href="https://gemini.google.com/advanced" 
                     target="_blank" 
@@ -1277,7 +1248,6 @@ function renderSidebarFacets() {
                     <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-purple-400 group-hover:text-white shrink-0 ml-1"></i>
                 </a>
 
-                <!-- 2. Botón Antigravity Engine -->
                 <a 
                     href="https://github.com/iaworldcenter-creator" 
                     target="_blank" 
@@ -1326,9 +1296,7 @@ function renderSidebarFacets() {
     `;
 }
 
-// =========================================================================
-// BUSCADOR PREDICTIVO EN VIVO (LIVE INSTANT SEARCH DROPDOWN CON DEBOUNCE 150ms)
-// =========================================================================
+// BUSCADOR PREDICTIVO EN VIVO
 let searchDebounceTimer = null;
 function initPredictiveSearchEngine() {
     const input = document.querySelector("#main-search-input, #boutiqueSearchInput");
@@ -1348,7 +1316,6 @@ function initPredictiveSearchEngine() {
         clearTimeout(searchDebounceTimer);
         const rawQuery = (e.target.value || '').trim();
         
-        // Activar a partir de 2 caracteres
         if (rawQuery.length < 2) {
             box.classList.add("hidden");
             box.innerHTML = "";
@@ -1373,7 +1340,6 @@ function initPredictiveSearchEngine() {
                 return;
             }
 
-            // Top 5 a 6 productos requeridos
             const topMatches = matches.slice(0, 6);
 
             box.innerHTML = `
@@ -1391,7 +1357,6 @@ function initPredictiveSearchEngine() {
 
                         return `
                             <div class="flex items-center justify-between gap-3 p-2.5 hover:bg-slate-850 transition cursor-pointer group min-h-[64px]" onclick="openProductDetailModal('${item.sku}');" role="button" tabindex="0" aria-label="Ver detalle de ${title}">
-                                <!-- Miniatura WebP cuadrada 60x60px centrada -->
                                 <div class="w-[60px] h-[60px] bg-slate-950 rounded-xl p-1 shrink-0 border border-slate-800 group-hover:border-cyan-400/50 flex items-center justify-center">
                                     <img src="${localImg}" alt="${title}" width="54" height="54" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${item.sku}', '${item.cat}')" />
                                 </div>
@@ -1427,14 +1392,12 @@ function initPredictiveSearchEngine() {
         }, 150);
     });
 
-    // Cierre inteligente con tecla ESC
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") {
             box.classList.add("hidden");
         }
     });
 
-    // Cierre al hacer clic fuera del dropdown
     document.addEventListener("click", (e) => {
         if (!input.contains(e.target) && !box.contains(e.target)) {
             box.classList.add("hidden");
@@ -1456,7 +1419,7 @@ window.executeSearchQuery = function(query) {
 };
 
 // =========================================================================
-// ACCIONES DE CARRITO: AGREGAR Y COMPRAR
+// ACCIONES DE CARRITO UNIFICADO (IAWC_MASTER_CART)
 // =========================================================================
 window.addToCartCT = function(sku, event) {
     if (event) event.stopPropagation();
@@ -1466,21 +1429,28 @@ window.addToCartCT = function(sku, event) {
 
     const p = window.normalizeProductItem(raw);
     const cart = typeof window.getBoutiqueCart === 'function' ? window.getBoutiqueCart() : [];
-    const existing = cart.find(item => item.sku === sku);
+    const existing = cart.find(item => (item.sku === sku || item.id === sku));
 
     if (existing) {
-        existing.quantity = (existing.quantity || 1) + 1;
-        existing.qty = existing.quantity;
+        existing.qty = (parseInt(existing.qty || existing.quantity) || 1) + 1;
+        existing.quantity = existing.qty;
     } else {
         cart.push({
+            id: p.sku,
             sku: p.sku,
+            title: p.name,
             name: p.name,
+            nombre: p.name,
             price: p.priceMxn,
-            store: 'pc-custom-lab',
-            storeName: 'PC Custom Lab',
-            image: `./assets/img/${p.sku}.webp`,
+            precio: p.priceMxn,
+            qty: 1,
             quantity: 1,
-            qty: 1
+            img: `./assets/img/${p.sku}.webp`,
+            image: `./assets/img/${p.sku}.webp`,
+            storeName: 'PC Custom Lab',
+            tienda_origen: 'PC Custom Lab',
+            storeUrl: window.location.origin + window.location.pathname,
+            url_tienda: window.location.origin + window.location.pathname
         });
     }
 
@@ -1497,28 +1467,34 @@ window.buyNowCT = function(sku, event) {
     if (raw) {
         const p = window.normalizeProductItem(raw);
         const cart = typeof window.getBoutiqueCart === 'function' ? window.getBoutiqueCart() : [];
-        const existing = cart.find(item => item.sku === sku);
+        const existing = cart.find(item => (item.sku === sku || item.id === sku));
 
         if (existing) {
-            existing.quantity = (existing.quantity || 1) + 1;
-            existing.qty = existing.quantity;
+            existing.qty = (parseInt(existing.qty || existing.quantity) || 1) + 1;
+            existing.quantity = existing.qty;
         } else {
             cart.push({
+                id: p.sku,
                 sku: p.sku,
+                title: p.name,
                 name: p.name,
+                nombre: p.name,
                 price: p.priceMxn,
-                store: 'pc-custom-lab',
-                storeName: 'PC Custom Lab',
-                image: `./assets/img/${p.sku}.webp`,
+                precio: p.priceMxn,
+                qty: 1,
                 quantity: 1,
-                qty: 1
+                img: `./assets/img/${p.sku}.webp`,
+                image: `./assets/img/${p.sku}.webp`,
+                storeName: 'PC Custom Lab',
+                tienda_origen: 'PC Custom Lab',
+                storeUrl: window.location.origin + window.location.pathname,
+                url_tienda: window.location.origin + window.location.pathname
             });
         }
         if (typeof window.saveBoutiqueCart === 'function') {
             window.saveBoutiqueCart(cart);
         }
     }
-    // Abre de inmediato el panel lateral deslizante (slide-over drawer)
     if (typeof window.toggleCartDrawer === 'function') {
         window.toggleCartDrawer(true);
     }
@@ -1538,7 +1514,7 @@ function showAddToCartToast(productTitle) {
             <div class="flex items-center gap-2">
                 <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
                 <div class="flex-1 min-w-0">
-                    <div class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider">¡Agregado al Carrito!</div>
+                    <div class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider">¡Agregado al Carrito Unificado!</div>
                     <div class="text-xs text-slate-200 font-bold truncate">${productTitle}</div>
                 </div>
             </div>
@@ -1639,7 +1615,7 @@ window.openProductDetailModal = function(sku) {
                                 <span>Disponibilidad: <strong>Bajo Pedido (hasta su próxima existencia en almacén)</strong></span>
                             </div>
                         ` : `
-                            <div><i class="fa-solid fa-shield-check text-emerald-400 mr-1"></i> Garantía 48h Directa en Tienda / 1 Año Fabricante</div>
+                            <div><i class="fa-solid fa-shield-check text-emerald-400 mr-1"></i> Garantía Directa en Tienda / 1 Año Fabricante</div>
                             <div><i class="fa-solid fa-location-dot text-cyan-400 mr-1"></i> Entrega Inmediata en Pedro Moreno 501 A</div>
                         `}
                     </div>
