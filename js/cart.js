@@ -90,6 +90,19 @@
         }
     };
 
+    
+    function isVolumetricItem(item) {
+        if (!item) return false;
+        if (item.isVolumetric === true || item.v === 1) return true;
+        const sku = (item.sku || item.id || '').toUpperCase();
+        if (sku.startsWith('GAB') || sku.startsWith('MON') || sku.startsWith('SER') || sku.startsWith('SIL') || sku.startsWith('CLIM')) return true;
+        if (window.CT_CATALOG_DATA && Array.isArray(window.CT_CATALOG_DATA)) {
+            const found = window.CT_CATALOG_DATA.find(p => (p.s === sku || p.sku === sku));
+            if (found && (found.v === 1 || found.is_volumetric === true)) return true;
+        }
+        return false;
+    }
+
     function renderDrawerItems() {
         const container = document.getElementById("drawer-cart-items");
         const countEl = document.getElementById("drawer-cart-count");
@@ -108,12 +121,15 @@
             ? window.formatPriceDisplay(val) 
             : `$${val.toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} MXN`;
 
+        const shippingBadgeEl = document.getElementById("drawer-shipping-badge");
+
         if (countEl) countEl.innerText = `${totalCount} ${totalCount === 1 ? 'artículo seleccionado' : 'artículos seleccionados'}`;
         if (subtotalEl) subtotalEl.innerText = format(subtotalSinIva);
         if (ivaEl) ivaEl.innerText = format(iva);
         if (totalEl) totalEl.innerText = format(totalNeto);
 
         if (cart.length === 0) {
+            if (shippingBadgeEl) shippingBadgeEl.innerHTML = '';
             container.innerHTML = `
                 <div class="h-full min-h-[320px] flex flex-col items-center justify-center text-center p-6 space-y-3 my-auto">
                     <div class="w-16 h-16 rounded-2xl bg-slate-950 border border-slate-800 flex items-center justify-center text-cyan-400 text-3xl shadow-inner">
@@ -129,6 +145,51 @@
                 </div>
             `;
             return;
+        }
+
+        // Evaluación de la Matriz Logística / Reglas de Envío
+        const hasVolumetric = cart.some(item => isVolumetricItem(item));
+        if (shippingBadgeEl) {
+            if (hasVolumetric) {
+                // REGLA A: Artículos Volumétricos / Frágiles (Prohibida moto)
+                shippingBadgeEl.innerHTML = `
+                    <div class="p-2.5 rounded-xl bg-amber-950/40 border border-amber-500/50 text-amber-300 font-mono text-[11px] flex items-start gap-2.5 shadow-md mb-2">
+                        <i class="fa-solid fa-box-open text-base text-amber-400 mt-0.5 shrink-0"></i>
+                        <div>
+                            <strong class="block font-bold text-amber-300 uppercase tracking-wide">📦 Paquetería Especializada Obligatoria</strong>
+                            <span class="text-[10px] text-amber-300/90 leading-tight block mt-0.5">
+                                Incluye piezas volumétricas/frágiles. Despacho exclusivo en vehículo seguro (no moto) con seguro de traslado.
+                            </span>
+                        </div>
+                    </div>
+                `;
+            } else if (totalNeto >= 2000) {
+                // REGLA B: Pedidos >= $2,000 MXN
+                shippingBadgeEl.innerHTML = `
+                    <div class="p-2.5 rounded-xl bg-cyan-950/40 border border-cyan-500/50 text-cyan-300 font-mono text-[11px] flex items-start gap-2.5 shadow-md mb-2">
+                        <i class="fa-solid fa-shield-halved text-base text-cyan-400 mt-0.5 shrink-0"></i>
+                        <div>
+                            <strong class="block font-bold text-cyan-300 uppercase tracking-wide">🛡️ Paquetería Asegurada Nacional</strong>
+                            <span class="text-[10px] text-cyan-300/90 leading-tight block mt-0.5">
+                                Envío asegurado contra mermas con guía rastreable y firma obligatoria de entrega.
+                            </span>
+                        </div>
+                    </div>
+                `;
+            } else {
+                // REGLA C: Pedidos < $2,000 MXN estándar
+                shippingBadgeEl.innerHTML = `
+                    <div class="p-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/50 text-emerald-300 font-mono text-[11px] flex items-start gap-2.5 shadow-md mb-2">
+                        <i class="fa-solid fa-motorcycle text-base text-emerald-400 mt-0.5 shrink-0"></i>
+                        <div>
+                            <strong class="block font-bold text-emerald-300 uppercase tracking-wide">🛵 Envío Exprés Local o Paquetería</strong>
+                            <span class="text-[10px] text-emerald-300/90 leading-tight block mt-0.5">
+                                Aplica despacho ágil en motocicleta o recolección directa en tienda Pedro Moreno 501 A.
+                            </span>
+                        </div>
+                    </div>
+                `;
+            }
         }
 
         container.innerHTML = cart.map(item => {
@@ -151,6 +212,7 @@
                                 ${storeName}
                             </span>
                             <span class="text-[9.5px] font-mono text-slate-400">SKU: ${sku}</span>
+                            ${isVolumetricItem(item) ? `<span class="text-[8.5px] font-mono font-bold bg-amber-950 text-amber-300 border border-amber-500/40 px-1.5 py-0.2 rounded flex items-center gap-0.5"><i class="fa-solid fa-box-open text-[8px]"></i> Volumétrico</span>` : ''}
                         </div>
                         <h4 class="text-xs font-bold text-white leading-snug line-clamp-2" title="${title}">
                             ${title}

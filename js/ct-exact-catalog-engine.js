@@ -257,6 +257,12 @@ window.normalizeProductItem = function(p) {
     const isAgotado = (p.agotado === true || p.a === 1);
     const hasImg = (p.has_verified_image === true || p.i === 1);
     const subLabel = p.subgrupo_label || '';
+    const imgs = (Array.isArray(p.k) && p.k.length > 0) 
+        ? p.k 
+        : (Array.isArray(p.imgs) && p.imgs.length > 0) 
+            ? p.imgs 
+            : [`assets/img/${sku}.webp`];
+    const isVolumetric = (p.is_volumetric === true || p.v === 1);
 
     return {
         sku,
@@ -271,7 +277,9 @@ window.normalizeProductItem = function(p) {
         mayUsd,
         isAgotado,
         hasImg,
-        subLabel
+        subLabel,
+        imgs,
+        isVolumetric
     };
 };
 
@@ -1735,6 +1743,71 @@ function showAddToCartToast(productTitle) {
 }
 
 // Modal Ficha Técnica (PDP) 100% Nativo PC Custom Lab
+
+// =========================================================================
+// GALERÍA MULTI-IMAGEN HD (1080x1080) Y SLIDER INTERACTIVO EN MODAL
+// =========================================================================
+window.currentModalProduct = null;
+window.currentModalImgIndex = 0;
+
+window.setModalImage = function(idx) {
+    try {
+        if (!window.currentModalProduct || !window.currentModalProduct.imgs) return;
+        const imgs = window.currentModalProduct.imgs;
+        if (idx < 0 || idx >= imgs.length) return;
+        window.currentModalImgIndex = idx;
+
+        const mainImg = document.getElementById("modalMainImg");
+        if (mainImg) {
+            mainImg.src = imgs[idx];
+        }
+
+        const counter = document.getElementById("modalImgCounter");
+        if (counter) {
+            counter.textContent = String(idx + 1);
+        }
+
+        // Resaltar miniatura activa
+        imgs.forEach((_, i) => {
+            const thumb = document.getElementById(`modalThumb_${i}`);
+            if (thumb) {
+                if (i === idx) {
+                    thumb.className = "w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-slate-950 border-2 border-cyan-400 ring-2 ring-cyan-400/40 transition overflow-hidden p-1 shrink-0 flex items-center justify-center cursor-pointer shadow-lg";
+                } else {
+                    thumb.className = "w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-600 opacity-60 hover:opacity-100 transition overflow-hidden p-1 shrink-0 flex items-center justify-center cursor-pointer";
+                }
+            }
+        });
+    } catch(e) {
+        console.warn("setModalImage error:", e);
+    }
+};
+
+window.prevModalImage = function(e) {
+    if (e && typeof e.stopPropagation === 'function') e.stopPropagation();
+    if (!window.currentModalProduct || !window.currentModalProduct.imgs) return;
+    const imgs = window.currentModalProduct.imgs;
+    const newIdx = (window.currentModalImgIndex - 1 + imgs.length) % imgs.length;
+    window.setModalImage(newIdx);
+};
+
+window.nextModalImage = function(e) {
+    if (e && typeof e.stopPropagation === 'function') e.stopPropagation();
+    if (!window.currentModalProduct || !window.currentModalProduct.imgs) return;
+    const imgs = window.currentModalProduct.imgs;
+    const newIdx = (window.currentModalImgIndex + 1) % imgs.length;
+    window.setModalImage(newIdx);
+};
+
+// Navegación por teclado dentro del modal
+document.addEventListener("keydown", (e) => {
+    const modal = document.getElementById("productDetailModal");
+    if (modal && !modal.classList.contains("hidden")) {
+        if (e.key === "ArrowLeft") window.prevModalImage(e);
+        if (e.key === "ArrowRight") window.nextModalImage(e);
+        if (e.key === "Escape") window.closeProductDetailModal();
+    }
+});
 window.openProductDetailModal = function(sku) {
     try {
         const catalog = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
@@ -1746,9 +1819,13 @@ window.openProductDetailModal = function(sku) {
         const content = document.getElementById("productDetailModalContent");
         if (!modal || !content) return;
 
+        window.currentModalProduct = p;
+        window.currentModalImgIndex = 0;
+
         const title = p.name.replace(/'/g, "&#39;");
         const desc = p.desc.replace(/'/g, "&#39;");
-        const localImg = `assets/img/${p.sku}.webp`;
+        const imgs = (p.imgs && p.imgs.length > 0) ? p.imgs : [`assets/img/${p.sku}.webp`];
+        const hasMultiple = imgs.length > 1;
 
         content.innerHTML = `
             <div class="flex justify-between items-center pb-3 border-b border-slate-800 mb-4">
@@ -1761,10 +1838,48 @@ window.openProductDetailModal = function(sku) {
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="w-full aspect-square bg-slate-950 rounded-2xl p-4 flex items-center justify-center border border-slate-800">
-                    <img src="${localImg}" alt="${title}" width="400" height="400" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${p.sku}', '${p.cat}')" />
+                <!-- Columna Izquierda: Visor Interactivo Multi-Imagen HD -->
+                <div class="flex flex-col">
+                    <div id="modalGalleryMain" class="relative w-full aspect-square bg-slate-950 rounded-2xl p-4 flex items-center justify-center border border-slate-800 overflow-hidden group/gallery select-none shadow-2xl">
+                        <img 
+                            id="modalMainImg" 
+                            src="${imgs[0]}" 
+                            alt="${title}" 
+                            width="600" 
+                            height="600" 
+                            class="w-full h-full object-contain transition duration-200" 
+                            onerror="window.handleProductImgError(this, '${p.sku}', '${p.cat}')" 
+                        />
+
+                        ${hasMultiple ? `
+                            <!-- Botones Laterales de Navegación Flecha Izq / Der -->
+                            <button type="button" onclick="window.prevModalImage(event)" aria-label="Foto anterior" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/85 hover:bg-cyan-500 hover:text-slate-950 text-white border border-slate-700/80 flex items-center justify-center transition shadow-xl cursor-pointer backdrop-blur-sm z-20 active:scale-95">
+                                <i class="fa-solid fa-chevron-left text-sm"></i>
+                            </button>
+                            <button type="button" onclick="window.nextModalImage(event)" aria-label="Siguiente foto" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/85 hover:bg-cyan-500 hover:text-slate-950 text-white border border-slate-700/80 flex items-center justify-center transition shadow-xl cursor-pointer backdrop-blur-sm z-20 active:scale-95">
+                                <i class="fa-solid fa-chevron-right text-sm"></i>
+                            </button>
+                            
+                            <!-- Contador de Fotografías -->
+                            <div class="absolute bottom-3 right-3 bg-slate-950/85 border border-slate-800 text-cyan-300 font-mono text-[10px] font-bold px-2.5 py-1 rounded-full z-10 shadow">
+                                <i class="fa-solid fa-camera mr-1"></i><span id="modalImgCounter">1</span> / ${imgs.length} tomas
+                            </div>
+                        ` : ''}
+                    </div>
+
+                    ${hasMultiple ? `
+                        <!-- Tira Inferior de Miniaturas (Thumbnails) -->
+                        <div class="flex items-center gap-2 mt-3 overflow-x-auto pb-1 max-w-full no-scrollbar" id="modalThumbnailsStrip">
+                            ${imgs.map((src, i) => `
+                                <button type="button" onclick="window.setModalImage(${i})" class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-slate-950 ${i === 0 ? 'border-2 border-cyan-400 ring-2 ring-cyan-400/40 shadow-lg' : 'border border-slate-800 hover:border-slate-600 opacity-60 hover:opacity-100'} transition overflow-hidden p-1 shrink-0 flex items-center justify-center cursor-pointer" id="modalThumb_${i}">
+                                    <img src="${src}" alt="Vista ${i+1}" class="w-full h-full object-contain" />
+                                </button>
+                            `).join('')}
+                        </div>
+                    ` : ''}
                 </div>
 
+                <!-- Columna Derecha: Ficha Técnica y Acciones de Compra -->
                 <div class="flex flex-col justify-between space-y-4">
                     <div>
                         <div class="flex flex-wrap items-center gap-2 mb-1.5">
@@ -1787,6 +1902,13 @@ window.openProductDetailModal = function(sku) {
                             <div class="font-bold text-cyan-300 font-mono uppercase text-[11px]"><i class="fa-solid fa-list-check mr-1"></i> Especificaciones Técnicas:</div>
                             <p>${desc}</p>
                         </div>
+
+                        ${p.isVolumetric ? `
+                            <div class="p-2.5 rounded-xl bg-amber-950/40 border border-amber-500/50 text-amber-300 font-mono text-xs flex items-center gap-2.5 mb-2 shadow">
+                                <i class="fa-solid fa-box-open text-base text-amber-400 shrink-0"></i>
+                                <span>Artículo Volumétrico / Frágil: <strong>Despacho Seguro en Vehículo Protegido</strong></span>
+                            </div>
+                        ` : ''}
 
                         <div class="w-full bg-slate-950/90 text-slate-300 border border-cyan-500/30 rounded-xl p-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 shadow font-mono text-[11px]">
                             <span class="flex items-center gap-1.5 text-cyan-300 font-bold">
@@ -1825,7 +1947,7 @@ window.openProductDetailModal = function(sku) {
                             <button onclick="${p.isAgotado ? `window.open('https://wa.me/523337271440?text=Hola,%20me%20interesa%20apartar%20bajo%20pedido%20el%20producto:%20${p.sku}', '_blank')` : `addToCartCT('${p.sku}', event); closeProductDetailModal();`}" class="flex-1 ${p.isAgotado ? 'bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/40' : 'bg-blue-600 hover:bg-blue-500 text-white shadow'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer min-h-[44px]">
                                 <i class="fa-solid ${p.isAgotado ? 'fa-clock' : 'fa-cart-plus'}"></i> <span>${p.isAgotado ? 'Apartar Bajo Pedido' : '+ Carrito'}</span>
                             </button>
-                            <button onclick="${p.isAgotado ? `window.open('https://wa.me/523337271440?text=Hola,%20cotizar%20bajo%20pedido:%20${p.sku}', '_blank')` : `buyNowCT('${p.sku}', event); closeProductDetailModal();`}" class="flex-1 ${p.isAgotado ? 'bg-amber-600 hover:bg-amber-500 text-slate-950' : 'bg-emerald-600 hover:bg-emerald-500 text-white'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 shadow transition cursor-pointer min-h-[44px]">
+                            <button onclick="${p.isAgotado ? `window.open('https://wa.me/523337271440?text=Hola,%20cotizar%20bajo%20pedido:%20${p.sku}', '_blank')` : `buyNowCT('${p.sku}', event); closeProductDetailModal();`}" class="flex-1 ${p.isAgotado ? 'bg-amber-600 hover:bg-amber-500 text-slate-950' : 'bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 shadow transition cursor-pointer min-h-[44px]">
                                 <i class="fa-solid ${p.isAgotado ? 'fa-file-invoice-dollar' : 'fa-bolt'}"></i> <span>${p.isAgotado ? 'Cotizar Pieza' : 'Comprar Ahora'}</span>
                             </button>
                         </div>
@@ -1833,6 +1955,28 @@ window.openProductDetailModal = function(sku) {
                 </div>
             </div>
         `;
+
+        // Soporte de Touch Swipe en dispositivos móviles
+        const galleryEl = document.getElementById("modalGalleryMain");
+        if (galleryEl && hasMultiple) {
+            let touchStartX = 0;
+            galleryEl.addEventListener("touchstart", (e) => {
+                if (e.touches && e.touches.length > 0) {
+                    touchStartX = e.touches[0].clientX;
+                }
+            }, { passive: true });
+            galleryEl.addEventListener("touchend", (e) => {
+                if (e.changedTouches && e.changedTouches.length > 0) {
+                    const touchEndX = e.changedTouches[0].clientX;
+                    const diffX = touchEndX - touchStartX;
+                    if (diffX > 40) {
+                        window.prevModalImage();
+                    } else if (diffX < -40) {
+                        window.nextModalImage();
+                    }
+                }
+            }, { passive: true });
+        }
 
         modal.classList.remove("hidden");
     } catch(e) {
