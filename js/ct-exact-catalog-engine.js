@@ -38,8 +38,8 @@ const DEFAULT_PC_DEPARTAMENTOS = [
     { id: 'servidores_enterprise', name: '18. Servidores Torre & Rack Enterprise', icon: 'fa-server', order: 18 },
     { id: 'no_breaks_ups', name: '19. No-Breaks & Sistemas UPS', icon: 'fa-car-battery', order: 19 },
     { id: 'reguladores_voltaje', name: '20. Reguladores de Voltaje & Supresores', icon: 'fa-bolt', order: 20 },
-    { id: 'discos_duros_externos', name: '21. Discos Duros Externos HDD', icon: 'fa-hard-drive', order: 21 },
-    { id: 'ssds_externos_portatiles', name: '22. Unidades SSD Externas Portátiles', icon: 'fa-rocket', order: 22 },
+    { id: 'cargadores_baterias_powerbanks', name: '21. Cargadores, Baterías & Power Banks', icon: 'fa-plug-circle-bolt', order: 21 },
+    { id: 'discos_duros_externos', name: '22. Unidades & Discos Externos (SSD & HDD)', icon: 'fa-hard-drive', order: 22 },
     { id: 'tarjetas_microsd', name: '23. Tarjetas de Memoria MicroSD & SD', icon: 'fa-sd-card', order: 23 },
     { id: 'memorias_usb_pendrives', name: '24. Memorias USB Flash & Pendrives', icon: 'fa-usb', order: 24 },
     { id: 'memorias_ram_laptop', name: '25. Memorias RAM para Laptop (SODIMM)', icon: 'fa-laptop', order: 25 },
@@ -47,36 +47,44 @@ const DEFAULT_PC_DEPARTAMENTOS = [
     { id: 'diademas_headsets', name: '27. Diademas & Headsets Gamer', icon: 'fa-headphones', order: 27 },
     { id: 'bocinas_sonido', name: '28. Bocinas, Barras de Sonido & Bafles', icon: 'fa-volume-high', order: 28 },
     { id: 'microfonos', name: '29. Micrófonos para Streaming & Voz', icon: 'fa-microphone', order: 29 },
-    { id: 'camaras_seguridad_cctv', name: '30. Cámaras de Seguridad (IP, Bala, Domo)', icon: 'fa-video', order: 30 },
-    { id: 'grabadores_dvr_nvr', name: '30. Grabadores de Video DVR & NVR', icon: 'fa-compact-disc', order: 30 },
-    { id: 'control_acceso_biometricos', name: '31. Control de Acceso, Asistencia & Biometría', icon: 'fa-fingerprint', order: 31 },
-    { id: 'alarmas_sensores_seguridad', name: '32. Alarmas, Sensores de Intrusión & Sirenas', icon: 'fa-shield-halved', order: 32 },
-    { id: 'telefonia_conmutadores', name: '33. Conmutadores & Telefonía IP', icon: 'fa-phone', order: 33 },
-    { id: 'switches_red', name: '34. Switches Ethernet & PoE+', icon: 'fa-network-wired', order: 34 },
-    { id: 'routers_access_points', name: '35. Routers Inalámbricos & Access Points WiFi', icon: 'fa-wifi', order: 35 },
-    { id: 'antenas_radioenlaces', name: '36. Antenas de Largo Alcance & Radioenlaces', icon: 'fa-satellite-dish', order: 36 },
-    { id: 'cableado_estructurado', name: '37. Bobinas UTP, Patch Cords & Conectores RJ45', icon: 'fa-network-wired', order: 37 },
-    { id: 'fibra_optica_transceivers', name: '38. Módulos Transceivers SFP & Fibra Óptica', icon: 'fa-network-wired', order: 38 },
-    { id: 'racks_gabinetes_servidor', name: '39. Racks de Telecomunicaciones & Gabinetes', icon: 'fa-server', order: 39 },
-    { id: 'proyectores_presentacion', name: '40. Proyectores de Video & Pantallas Murales', icon: 'fa-video', order: 40 },
-    { id: 'impresoras_multifuncionales', name: '41. Impresoras de Inyección & Multifuncionales', icon: 'fa-print', order: 41 },
-    { id: 'toners_laser', name: '42. Tóners para Impresoras Láser', icon: 'fa-cubes', order: 42 },
-    { id: 'tintas_cartuchos', name: '43. Tintas Originales & Cartuchos', icon: 'fa-droplet', order: 43 },
-    { id: 'plotters_gran_formato', name: '44. Plotters de Impresión en Gran Formato', icon: 'fa-ruler-combined', order: 44 },
-    { id: 'etiquetas_ribbons', name: '45. Cintas Ribbon & Rollos de Etiquetas', icon: 'fa-tags', order: 45 },
-    { id: 'sistemas_operativos', name: '46. Sistemas Operativos Windows Oficiales', icon: 'fa-compact-disc', order: 46 },
-    { id: 'ofimatica_productividad', name: '47. Microsoft 365 & Suites de Oficina', icon: 'fa-file-lines', order: 47 },
-    { id: 'antivirus_seguridad_digital', name: '48. Antivirus & Seguridad Digital', icon: 'fa-shield', order: 48 },
-    { id: 'punto_de_venta', name: '49. Sistemas de Punto de Venta (POS)', icon: 'fa-barcode', order: 49 },
-    { id: 'smartphones_celulares', name: '50. Teléfonos Celulares & Smartphones', icon: 'fa-mobile-screen-button', order: 50 },
-    { id: 'tablets_ipads', name: '51. Tablets & iPads', icon: 'fa-tablet-screen-button', order: 51 },
-    { id: 'limpieza_mantenimiento', name: '52. Aire Comprimido, Espumas & Limpieza', icon: 'fa-spray-can-sparkles', order: 52 },
-    { id: 'cables_adaptadores', name: '53. Cables de Video, USB & Adaptadores', icon: 'fa-plug', order: 53 },
-    { id: 'mochilas_fundas_maletines', name: '54. Mochilas, Fundas & Maletines para Laptop', icon: 'fa-briefcase', order: 54 },
-    { id: 'soportes_ergonomia', name: '55. Soportes Articulados & Bases para Monitor', icon: 'fa-tv', order: 55 },
-    { id: 'hubs_docks_estaciones', name: '56. Hubs USB-C & Docking Stations', icon: 'fa-layer-group', order: 56 },
-    { id: 'gaming_consolas_sillas', name: '57. Sillas Gamer, Consolas & Videojuegos', icon: 'fa-gamepad', order: 57 },
-    { id: 'accesorios_perifericos', name: '58. Accesorios de Cómputo & Misceláneos', icon: 'fa-boxes-stacked', order: 58 }
+    { id: 'webcams_videoconferencia', name: '30. Cámaras Web & Videoconferencia', icon: 'fa-camera', order: 30 },
+    { id: 'proyectores_presentacion', name: '31. Proyectores de Video & Pantallas Murales', icon: 'fa-video', order: 31 },
+    { id: 'camaras_seguridad_cctv', name: '32. Cámaras de Seguridad (IP, Bala, Domo)', icon: 'fa-video', order: 32 },
+    { id: 'grabadores_dvr_nvr', name: '33. Grabadores de Video DVR & NVR', icon: 'fa-compact-disc', order: 33 },
+    { id: 'control_acceso_biometricos', name: '34. Control de Acceso, Asistencia & Biometría', icon: 'fa-fingerprint', order: 34 },
+    { id: 'alarmas_sensores_seguridad', name: '35. Alarmas, Sensores de Intrusión & Sirenas', icon: 'fa-shield-halved', order: 35 },
+    { id: 'telefonia_conmutadores', name: '36. Conmutadores & Telefonía IP', icon: 'fa-phone', order: 36 },
+    { id: 'switches_red', name: '37. Switches Ethernet & PoE+', icon: 'fa-network-wired', order: 37 },
+    { id: 'routers_access_points', name: '38. Routers Inalámbricos & Access Points WiFi', icon: 'fa-wifi', order: 38 },
+    { id: 'antenas_radioenlaces', name: '39. Antenas de Largo Alcance & Radioenlaces', icon: 'fa-satellite-dish', order: 39 },
+    { id: 'cableado_estructurado', name: '40. Bobinas UTP, Patch Cords & Conectores RJ45', icon: 'fa-network-wired', order: 40 },
+    { id: 'fibra_optica_transceivers', name: '41. Módulos Transceivers SFP & Fibra Óptica', icon: 'fa-network-wired', order: 41 },
+    { id: 'racks_gabinetes_servidor', name: '42. Racks de Telecomunicaciones & Gabinetes', icon: 'fa-server', order: 42 },
+    { id: 'impresoras_multifuncionales', name: '43. Impresoras de Inyección & Multifuncionales', icon: 'fa-print', order: 43 },
+    { id: 'toners_laser', name: '44. Tóners para Impresoras Láser', icon: 'fa-cubes', order: 44 },
+    { id: 'tintas_cartuchos', name: '45. Tintas Originales & Cartuchos', icon: 'fa-droplet', order: 45 },
+    { id: 'plotters_gran_formato', name: '46. Plotters de Impresión en Gran Formato', icon: 'fa-ruler-combined', order: 46 },
+    { id: 'etiquetas_ribbons', name: '47. Cintas Ribbon, Etiquetas & Papel Térmico', icon: 'fa-tags', order: 47 },
+    { id: 'escaneres_digitalizadores', name: '48. Escáneres de Documentos & Cama Plana', icon: 'fa-scanner', order: 48 },
+    { id: 'sistemas_operativos', name: '49. Sistemas Operativos Windows Oficiales', icon: 'fa-compact-disc', order: 49 },
+    { id: 'ofimatica_productividad', name: '50. Microsoft 365 & Suites de Oficina', icon: 'fa-file-lines', order: 50 },
+    { id: 'software_contable_administrativo', name: '51. Software Aspel & CONTPAQi Administrativo', icon: 'fa-calculator', order: 51 },
+    { id: 'antivirus_seguridad_digital', name: '52. Antivirus & Seguridad Digital', icon: 'fa-shield', order: 52 },
+    { id: 'garantias_polizas_servicio', name: '53. Pólizas & Extensiones de Garantía Oficial', icon: 'fa-certificate', order: 53 },
+    { id: 'punto_de_venta', name: '54. Sistemas de Punto de Venta (POS)', icon: 'fa-barcode', order: 54 },
+    { id: 'smartphones_celulares', name: '55. Teléfonos Celulares & Smartphones', icon: 'fa-mobile-screen-button', order: 55 },
+    { id: 'tablets_ipads', name: '56. Tablets & iPads', icon: 'fa-tablet-screen-button', order: 56 },
+    { id: 'smartwatches_wearables', name: '57. Smartwatches & Relojes Inteligentes', icon: 'fa-clock', order: 57 },
+    { id: 'limpieza_mantenimiento', name: '58. Aire Comprimido, Espumas & Limpieza', icon: 'fa-spray-can-sparkles', order: 58 },
+    { id: 'cables_adaptadores', name: '59. Cables de Video, USB & Adaptadores', icon: 'fa-plug', order: 59 },
+    { id: 'mochilas_fundas_maletines', name: '60. Mochilas, Fundas & Maletines para Laptop', icon: 'fa-briefcase', order: 60 },
+    { id: 'soportes_ergonomia', name: '61. Soportes Articulados & Bases para Monitor', icon: 'fa-tv', order: 61 },
+    { id: 'hubs_docks_estaciones', name: '62. Hubs USB-C & Docking Stations', icon: 'fa-layer-group', order: 62 },
+    { id: 'herramientas_servicio_tecnico', name: '63. Herramientas de Red & Ensamble Técnico', icon: 'fa-wrench', order: 63 },
+    { id: 'candados_seguridad_laptop', name: '64. Candados de Seguridad Kensington', icon: 'fa-lock', order: 64 },
+    { id: 'climatizacion_aires_acondicionados', name: '65. Climatización & Minisplits', icon: 'fa-snowflake', order: 65 },
+    { id: 'gaming_consolas_sillas', name: '66. Sillas Gamer, Consolas & Videojuegos', icon: 'fa-gamepad', order: 66 },
+    { id: 'accesorios_perifericos', name: '67. Accesorios de Cómputo & Misceláneos', icon: 'fa-boxes-stacked', order: 67 }
 ];
 
 function getMasterDepartmentsList() {
@@ -127,8 +135,8 @@ const MASTER_DEPARTMENTS = [
         deptIds: [
             'switches_red',
             'routers_access_points',
-            'cableado_estructurado',
             'antenas_radioenlaces',
+            'cableado_estructurado',
             'fibra_optica_transceivers',
             'racks_gabinetes_servidor'
         ]
@@ -154,7 +162,8 @@ const MASTER_DEPARTMENTS = [
             'toners_laser',
             'tintas_cartuchos',
             'plotters_gran_formato',
-            'etiquetas_ribbons'
+            'etiquetas_ribbons',
+            'escaneres_digitalizadores'
         ]
     },
     {
@@ -163,7 +172,8 @@ const MASTER_DEPARTMENTS = [
         icon: 'fa-car-battery',
         deptIds: [
             'no_breaks_ups',
-            'reguladores_voltaje'
+            'reguladores_voltaje',
+            'cargadores_baterias_powerbanks'
         ]
     },
     {
@@ -171,28 +181,34 @@ const MASTER_DEPARTMENTS = [
         name: '7. ACCESORIOS Y MANTENIMIENTO',
         icon: 'fa-boxes-stacked',
         deptIds: [
-            'tablets_ipads',
-            'smartphones_celulares',
-            'punto_de_venta',
-            'memorias_usb_pendrives',
-            'tarjetas_microsd',
             'discos_duros_externos',
-            'ssds_externos_portatiles',
+            'tarjetas_microsd',
+            'memorias_usb_pendrives',
             'memorias_ram_laptop',
             'memorias_ram_servidor',
             'diademas_headsets',
             'bocinas_sonido',
             'microfonos',
+            'webcams_videoconferencia',
             'proyectores_presentacion',
+            'sistemas_operativos',
+            'ofimatica_productividad',
+            'software_contable_administrativo',
+            'antivirus_seguridad_digital',
+            'garantias_polizas_servicio',
+            'punto_de_venta',
+            'smartphones_celulares',
+            'tablets_ipads',
+            'smartwatches_wearables',
             'limpieza_mantenimiento',
             'cables_adaptadores',
             'mochilas_fundas_maletines',
             'soportes_ergonomia',
             'hubs_docks_estaciones',
+            'herramientas_servicio_tecnico',
+            'candados_seguridad_laptop',
+            'climatizacion_aires_acondicionados',
             'gaming_consolas_sillas',
-            'sistemas_operativos',
-            'ofimatica_productividad',
-            'antivirus_seguridad_digital',
             'accesorios_perifericos'
         ]
     }
@@ -638,6 +654,18 @@ function renderWelcomeHub() {
     `;
 }
 
+
+window.selectSubcategoryChip = function(chip) {
+    try {
+        activeSelectedChip = chip;
+        currentPageNumber = 1;
+        renderExactCatalogView();
+        window.scrollToResults();
+    } catch(e) {
+        console.warn("selectSubcategoryChip error:", e);
+    }
+};
+
 window.selectCategoryFacet = function(catId) {
     try {
         activeSelectedCategory = catId;
@@ -714,6 +742,17 @@ function getFilteredList() {
         items = items.filter(p => {
             const catClasif = (p.categoria_clasificada || p.c || '').toLowerCase();
             return catClasif === activeSelectedCategory.toLowerCase();
+        });
+        if (activeSelectedChip && activeSelectedChip !== 'Todos') {
+            items = items.filter(p => {
+                const item = window.normalizeProductItem(p);
+                return item && item.subLabel === activeSelectedChip;
+            });
+        }
+    } else if (activeSelectedChip && activeSelectedChip !== 'Todos') {
+        items = items.filter(p => {
+            const item = window.normalizeProductItem(p);
+            return item && item.subLabel === activeSelectedChip;
         });
     }
 
@@ -1092,14 +1131,38 @@ function renderPaginatedDepartmentView(container, resultsCountTxt) {
             const depts = getMasterDepartmentsList();
             const deptObj = depts.find(d => d.id === activeSelectedCategory);
             const deptName = deptObj ? deptObj.name : activeSelectedCategory.replace(/_/g, ' ').toUpperCase();
+            // Extracción dinámica de subcategorías para este departamento
+            const allDeptItems = (window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || []).filter(p => (p.categoria_clasificada || p.c || '').toLowerCase() === activeSelectedCategory.toLowerCase());
+            const availableSubs = Array.from(new Set(allDeptItems.map(p => (window.normalizeProductItem(p) || {}).subLabel).filter(Boolean)));
+
+            let subChipsHTML = '';
+            if (availableSubs.length > 0) {
+                subChipsHTML = `
+                    <div class="flex flex-wrap items-center gap-1.5 mt-2.5 pt-2 border-t border-slate-800/80">
+                        <span class="text-[10px] font-mono font-bold text-slate-400 mr-1 flex items-center gap-1"><i class="fa-solid fa-filter text-cyan-400"></i> Subáreas:</span>
+                        <button type="button" onclick="window.selectSubcategoryChip('Todos')" class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold transition cursor-pointer ${activeSelectedChip === 'Todos' ? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'}">
+                            Todas
+                        </button>
+                        ${availableSubs.map(s => `
+                            <button type="button" onclick="window.selectSubcategoryChip('${s.replace(/'/g, "\\'")}')" class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold transition cursor-pointer ${activeSelectedChip === s ? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'}">
+                                ${s}
+                            </button>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
             titleTxt = `
-                <div class="flex flex-wrap items-center gap-2">
-                    <button type="button" onclick="window.resetFacets()" class="text-cyan-400 hover:text-cyan-300 text-xs font-mono font-bold hover:underline cursor-pointer flex items-center gap-1">
-                        <i class="fa-solid fa-arrow-left"></i> Volver a Vitrinas
-                    </button>
-                    <span class="text-slate-500">|</span>
-                    <span>${deptName}</span>
-                    <span class="text-slate-400 font-normal text-xs">(${startIdx + 1}-${Math.min(startIdx + productsPerPage, totalCount)} de ${totalCount.toLocaleString('es-MX')})</span>
+                <div>
+                    <div class="flex flex-wrap items-center gap-2">
+                        <button type="button" onclick="window.resetFacets()" class="text-cyan-400 hover:text-cyan-300 text-xs font-mono font-bold hover:underline cursor-pointer flex items-center gap-1">
+                            <i class="fa-solid fa-arrow-left"></i> Volver a Vitrinas
+                        </button>
+                        <span class="text-slate-500">|</span>
+                        <span>${deptName}</span>
+                        <span class="text-slate-400 font-normal text-xs">(${totalCount.toLocaleString('es-MX')} productos)</span>
+                    </div>
+                    ${subChipsHTML}
                 </div>
             `;
         } else {
