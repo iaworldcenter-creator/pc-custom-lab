@@ -11,9 +11,34 @@ let activeSelectedBrand = 'Todas';
 let activeMinPrice = 0;
 let activeMaxPrice = Infinity;
 let activeMinDiscount = 0;
-let activeSearchQuery = '';
 let currentSortCriterion = 'destacados';
 let isFullCatalogLoaded = false;
+window.activeCurrency = localStorage.getItem('pc_custom_currency') || 'MXN';
+
+window.setCurrencyDisplay = function(curr) {
+    window.activeCurrency = curr;
+    localStorage.setItem('pc_custom_currency', curr);
+    const btnMxn = document.getElementById('currencyToggleMXN');
+    const btnUsd = document.getElementById('currencyToggleUSD');
+    if (btnMxn && btnUsd) {
+        if (curr === 'USD') {
+            btnUsd.className = 'px-2 py-0.5 rounded-full bg-cyan-500 text-slate-950 font-black transition cursor-pointer';
+            btnMxn.className = 'px-2 py-0.5 rounded-full text-slate-300 hover:text-white transition cursor-pointer';
+        } else {
+            btnMxn.className = 'px-2 py-0.5 rounded-full bg-cyan-500 text-slate-950 font-black transition cursor-pointer';
+            btnUsd.className = 'px-2 py-0.5 rounded-full text-slate-300 hover:text-white transition cursor-pointer';
+        }
+    }
+    renderExactCatalogView();
+    syncBoutiqueCart();
+};
+
+window.formatPriceDisplay = function(priceMxn, priceUsd) {
+    const isUsd = window.activeCurrency === 'USD';
+    const val = isUsd ? (priceUsd || ((priceMxn || 0) / 19.50)) : (priceMxn || 0);
+    const currTxt = isUsd ? 'USD' : 'MXN';
+    return `$${Number(val).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${currTxt}`;
+};
 
 // Normalización de texto sin acentos, mayúsculas o símbolos
 function stripAccents(text) {
@@ -260,6 +285,14 @@ window.selectSubChipFilter = function(chipId) {
 
 // Inicialización instantánea
 function initFullCatalog() {
+    if (window.activeCurrency === 'USD') {
+        const btnMxn = document.getElementById('currencyToggleMXN');
+        const btnUsd = document.getElementById('currencyToggleUSD');
+        if (btnMxn && btnUsd) {
+            btnUsd.className = 'px-2 py-0.5 rounded-full bg-cyan-500 text-slate-950 font-black transition cursor-pointer';
+            btnMxn.className = 'px-2 py-0.5 rounded-full text-slate-300 hover:text-white transition cursor-pointer';
+        }
+    }
     if (window.CT_CATALOG_DATA && Array.isArray(window.CT_CATALOG_DATA) && window.CT_CATALOG_DATA.length > 0) {
         isFullCatalogLoaded = true;
         renderSidebarFacets();
@@ -593,11 +626,11 @@ function renderExactCatalogView() {
                         <!-- Precios Claros -->
                         <div class="text-center mb-1.5">
                             <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
-                                $${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN
+                                ${window.formatPriceDisplay(price, p.precio_usd)}
                             </span>
                             <div class="flex items-center justify-center gap-1.5 text-[10px] font-mono">
-                                <span class="text-slate-400 line-through">$${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
-                                <span class="text-amber-300 font-bold">Mayoreo: $${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                                <span class="text-slate-400 line-through">${window.formatPriceDisplay(original, (p.precio_usd || (price/19.5))*1.33)}</span>
+                                <span class="text-amber-300 font-bold">Mayoreo: ${window.formatPriceDisplay(mayoreo, p.precio_mayoreo_usd)}</span>
                             </div>
                         </div>
 
@@ -667,8 +700,8 @@ function renderExactCatalogView() {
                     </div>
                     <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-48 border-t sm:border-t-0 sm:border-l border-slate-800 pt-2 sm:pt-0 sm:pl-4 shrink-0 space-y-2">
                         <div class="text-right">
-                            <span class="text-[10px] text-slate-500 line-through font-mono block">$${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
-                            <div class="text-sm sm:text-base font-black text-emerald-400 font-mono">$${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN</div>
+                            <span class="text-[10px] text-slate-500 line-through font-mono block">${window.formatPriceDisplay(original, (p.precio_usd || (price/19.5))*1.33)}</span>
+                            <div class="text-sm sm:text-base font-black text-emerald-400 font-mono">${window.formatPriceDisplay(price, p.precio_usd)}</div>
                         </div>
                         <div class="flex gap-1.5 w-full">
                             <button onclick="addToCartCT('${sku}')" class="flex-1 bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 rounded-xl text-[10.5px] font-mono uppercase flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer min-h-[40px]">
@@ -1066,11 +1099,11 @@ function initPredictiveSearchEngine() {
                                     <div class="text-[10px] font-mono text-slate-300 flex items-center gap-1.5">
                                         <span class="text-cyan-300 font-bold">SKU: ${sku}</span>
                                         <span>•</span>
-                                        <span class="text-amber-300">May: $${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
+                                        <span class="text-amber-300">May: ${window.formatPriceDisplay(mayoreo, p.precio_mayoreo_usd)}</span>
                                     </div>
                                 </div>
                                 <div class="text-right shrink-0 flex items-center gap-1.5">
-                                    <div class="text-xs font-mono font-black text-emerald-300">$${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</div>
+                                    <div class="text-xs font-mono font-black text-emerald-300">${window.formatPriceDisplay(price, p.precio_usd)}</div>
                                     <button type="button" onclick="event.stopPropagation(); openProductDetailModal('${sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" aria-label="Ver ficha de ${title}" class="btn-action bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[10px] font-bold px-2 py-1.5 rounded-lg border border-slate-700 uppercase min-h-[40px]">
                                         Ficha
                                     </button>
@@ -1136,7 +1169,7 @@ function syncBoutiqueCart() {
     const total = cart.reduce((sum, item) => sum + ((item.price || 0) * (item.quantity || 1)), 0);
 
     if (badge) badge.innerText = count;
-    if (totalTxt) totalTxt.innerText = `$${total.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN`;
+    if (totalTxt) totalTxt.innerText = window.formatPriceDisplay(total);
 }
 
 window.addToCartCT = function(sku) {
@@ -1284,11 +1317,11 @@ window.openProductDetailModal = function(sku) {
                 <div class="p-4 bg-slate-950 rounded-2xl border border-slate-800 space-y-3">
                     <div class="flex items-baseline justify-between">
                         <div>
-                            <span class="text-xs text-slate-500 line-through font-mono block">$${original.toLocaleString('es-MX', { minimumFractionDigits: 2 })}</span>
-                            <div class="text-xl font-black text-emerald-400 font-mono">$${price.toLocaleString('es-MX', { minimumFractionDigits: 2 })} MXN</div>
+                            <span class="text-xs text-slate-500 line-through font-mono block">${window.formatPriceDisplay(original, (p.precio_usd || (price/19.5))*1.33)}</span>
+                            <div class="text-xl font-black text-emerald-400 font-mono">${window.formatPriceDisplay(price, p.precio_usd)}</div>
                         </div>
                         <span class="text-xs font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-1 rounded-lg">
-                            Mayoreo: $${mayoreo.toLocaleString('es-MX', { minimumFractionDigits: 2 })}
+                            Mayoreo: ${window.formatPriceDisplay(mayoreo, p.precio_mayoreo_usd)}
                         </span>
                     </div>
 
