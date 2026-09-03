@@ -36,8 +36,7 @@ window.setCurrencyDisplay = function(curr) {
 window.formatPriceDisplay = function(priceMxn, priceUsd) {
     const isUsd = window.activeCurrency === 'USD';
     const val = isUsd ? (priceUsd || ((priceMxn || 0) / 19.50)) : (priceMxn || 0);
-    const currTxt = isUsd ? 'USD' : 'MXN';
-    return `$${Number(val).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${currTxt}`;
+    return `$${Number(val).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 };
 
 // Normalización de texto sin acentos, mayúsculas o símbolos
@@ -454,8 +453,10 @@ function getFilteredList() {
         } else if (currentSortCriterion === 'nombre') {
             return (a.nombre || '').localeCompare(b.nombre || '');
         } else {
-            // Destacados / Relevancia
-            return (a.sort_priority || 1) - (b.sort_priority || 1);
+            // Destacados / Relevancia (PCs de escritorio primero, luego Mini PCs, Laptops, etc.)
+            const prioDiff = (a.sort_priority || 50) - (b.sort_priority || 50);
+            if (prioDiff !== 0) return prioDiff;
+            return (b.precio_mxn || b.precio || 0) - (a.precio_mxn || a.precio || 0);
         }
     });
 
