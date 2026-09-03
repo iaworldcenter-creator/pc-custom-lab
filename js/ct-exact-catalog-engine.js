@@ -1,5 +1,6 @@
 // =========================================================================
 // MOTOR UNIVERSAL BILINGÜE PC CUSTOM LAB (17,490 PRODUCTOS EN 60 VITRINAS)
+// ARQUITECTURA ZERO-BLANK F5 + SIDEBAR STICKY CON 7 DEPARTAMENTOS MAESTROS
 // =========================================================================
 
 let currentViewStyle = 'grid';
@@ -14,6 +15,119 @@ let activeMinDiscount = 0;
 let currentSortCriterion = 'destacados';
 let isFullCatalogLoaded = false;
 window.activeCurrency = localStorage.getItem('pc_custom_currency') || 'MXN';
+
+// Definición Oficial de los 7 Departamentos Maestros en Acordeón Colapsable
+const MASTER_DEPARTMENTS = [
+    {
+        id: 'master_ensamble',
+        name: '1. COMPUTADORAS Y ENSAMBLE',
+        icon: 'fa-microchip',
+        deptIds: [
+            'procesadores',
+            'tarjetas_madre',
+            'memorias_ram_pc',
+            'gabinetes',
+            'tarjetas_video',
+            'enfriamiento',
+            'fuentes_energia',
+            'ssds_m2_nvme',
+            'discos_duros_hdd_internos',
+            'monitores_pantallas',
+            'teclados',
+            'ratones_mouse',
+            'combos_teclado_mouse'
+        ]
+    },
+    {
+        id: 'master_equipos',
+        name: '2. EQUIPOS COMPLETOS Y LAPTOPS',
+        icon: 'fa-laptop',
+        deptIds: [
+            'computadoras_ensambladas',
+            'mini_pcs_nuc',
+            'laptops_portatiles',
+            'computadoras_all_in_one',
+            'servidores_enterprise'
+        ]
+    },
+    {
+        id: 'master_redes',
+        name: '3. REDES Y TELECOMUNICACIONES',
+        icon: 'fa-network-wired',
+        deptIds: [
+            'switches_red',
+            'routers_access_points',
+            'cableado_estructurado',
+            'antenas_radioenlaces',
+            'fibra_optica_transceivers',
+            'racks_gabinetes_servidor'
+        ]
+    },
+    {
+        id: 'master_seguridad',
+        name: '4. SEGURIDAD Y CCTV',
+        icon: 'fa-shield-halved',
+        deptIds: [
+            'camaras_seguridad_cctv',
+            'grabadores_dvr_nvr',
+            'control_acceso_biometricos',
+            'alarmas_sensores_seguridad',
+            'telefonia_conmutadores'
+        ]
+    },
+    {
+        id: 'master_impresion',
+        name: '5. IMPRESIÓN Y DIGITALIZACIÓN',
+        icon: 'fa-print',
+        deptIds: [
+            'impresoras_multifuncionales',
+            'toners_laser',
+            'tintas_cartuchos',
+            'plotters_gran_formato',
+            'etiquetas_ribbons'
+        ]
+    },
+    {
+        id: 'master_energia',
+        name: '6. ENERGÍA Y PROTECCIÓN',
+        icon: 'fa-car-battery',
+        deptIds: [
+            'no_breaks_ups',
+            'reguladores_voltaje'
+        ]
+    },
+    {
+        id: 'master_accesorios',
+        name: '7. ACCESORIOS Y MANTENIMIENTO',
+        icon: 'fa-boxes-stacked',
+        deptIds: [
+            'limpieza_mantenimiento',
+            'cables_adaptadores',
+            'mochilas_fundas_maletines',
+            'soportes_ergonomia',
+            'hubs_docks_estaciones',
+            'gaming_consolas_sillas',
+            'tarjetas_microsd',
+            'tarjetas_sd',
+            'memorias_usb_pendrives',
+            'discos_duros_externos',
+            'ssds_externos_portatiles',
+            'memorias_ram_laptop',
+            'memorias_ram_servidor',
+            'diademas_headsets',
+            'bocinas_sonido',
+            'microfonos',
+            'proyectores_presentacion',
+            'sistemas_operativos',
+            'ofimatica_productividad',
+            'antivirus_seguridad_digital',
+            'punto_de_venta',
+            'smartphones_celulares',
+            'tablets_ipads',
+            'accesorios_perifericos'
+        ]
+    }
+];
 
 window.setCurrencyDisplay = function(curr) {
     window.activeCurrency = curr;
@@ -73,7 +187,6 @@ window.normalizeProductItem = function(p) {
     };
 };
 
-// Normalización de texto sin acentos, mayúsculas o símbolos
 function stripAccents(text) {
     if (!text) return "";
     return String(text)
@@ -83,7 +196,6 @@ function stripAccents(text) {
         .trim();
 }
 
-// Diccionario de Sinónimos Bilingüe Limpio y Preciso
 const SYNONYM_DICTIONARY = {
     "ram": ["ram", "ddr4", "ddr5", "ddr3", "dimm", "sodimm", "udimm", "rdimm"],
     "memoria": ["memoria", "memorias"],
@@ -288,7 +400,33 @@ window.scrollToResults = function() {
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
 
-// Inicialización instantánea sin bloqueo de pantalla
+// =========================================================================
+// SUBRUTINA MAESTRA UNIFICADA: ARRANQUE NATIVO LIMPIO (ZERO-BLANK F5)
+// =========================================================================
+window.runCleanHomeCatalog = function() {
+    activeSelectedCategory = 'Todas';
+    activeSelectedBrand = 'Todas';
+    activeSelectedChip = 'Todos';
+    activeSearchQuery = '';
+    currentPageNumber = 1;
+    activeMinPrice = 0;
+    activeMaxPrice = Infinity;
+    activeMinDiscount = 0;
+
+    const searchInput = document.getElementById("boutiqueSearchInput");
+    if (searchInput) searchInput.value = '';
+
+    renderSidebarFacets();
+    renderExactCatalogView();
+};
+
+// El botón "LIMPIAR" y el arranque F5 invocan exactamente la misma subrutina
+window.resetFacets = function() {
+    window.runCleanHomeCatalog();
+    window.scrollToResults();
+};
+
+// Inicialización del Catálogo
 function initFullCatalog() {
     if (window.activeCurrency === 'USD') {
         const btnMxn = document.getElementById('currencyToggleMXN');
@@ -299,41 +437,25 @@ function initFullCatalog() {
         }
     }
 
-    const checkAndRender = () => {
-        const data = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL;
-        if (data && Array.isArray(data) && data.length > 0) {
-            isFullCatalogLoaded = true;
-            renderSidebarFacets();
-            renderExactCatalogView();
-            return true;
-        }
-        return false;
-    };
-
-    if (!checkAndRender()) {
-        const container = document.getElementById("products-grid-container");
-        if (container) {
-            container.className = "w-full py-20 text-center text-cyan-300 font-mono text-sm bg-slate-900/90 border border-cyan-500/30 rounded-2xl shadow-2xl flex flex-col items-center justify-center gap-4";
-            container.innerHTML = `
-                <div class="relative w-16 h-16 flex items-center justify-center">
-                    <div class="w-16 h-16 border-4 border-cyan-500/20 border-t-cyan-400 rounded-full animate-spin"></div>
-                    <i class="fa-solid fa-microchip text-cyan-400 text-xl absolute"></i>
-                </div>
-                <div>
-                    <h3 class="text-base font-bold text-white tracking-wider uppercase mb-1">Cargando Catálogo Maestro PC Custom Lab...</h3>
-                    <p class="text-xs text-slate-400 font-mono">Indexando productos oficiales listos para compra inmediata</p>
-                </div>
-            `;
-        }
-
-        let attempts = 0;
-        const interval = setInterval(() => {
-            attempts++;
-            if (checkAndRender() || attempts > 100) {
-                clearInterval(interval);
-            }
-        }, 40);
+    const data = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL;
+    if (data && Array.isArray(data) && data.length > 0) {
+        isFullCatalogLoaded = true;
+        window.runCleanHomeCatalog();
+        return;
     }
+
+    let attempts = 0;
+    const interval = setInterval(() => {
+        attempts++;
+        const d = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL;
+        if (d && Array.isArray(d) && d.length > 0) {
+            clearInterval(interval);
+            isFullCatalogLoaded = true;
+            window.runCleanHomeCatalog();
+        } else if (attempts > 80) {
+            clearInterval(interval);
+        }
+    }, 25);
 }
 
 // Renderizado del Welcome Hub (Panel superior de acceso rápido)
@@ -450,23 +572,21 @@ window.scrollToDepartments = function() {
     }
 };
 
-window.resetFacets = function() {
-    activeSelectedCategory = 'Todas';
-    activeSelectedBrand = 'Todas';
-    activeSearchQuery = '';
-    currentPageNumber = 1;
-    const searchInput = document.getElementById("boutiqueSearchInput");
-    if (searchInput) searchInput.value = '';
-    renderSidebarFacets();
-    renderExactCatalogView();
-    window.scrollToResults();
-};
-
-document.addEventListener("DOMContentLoaded", () => {
+// Inicializador Maestro que cubre DOMContentLoaded, ejecución diferida e inmediata
+function bootMasterZeroBlank() {
     initFullCatalog();
     initPredictiveSearchEngine();
     syncBoutiqueCart();
-});
+    window.runCleanHomeCatalog();
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", bootMasterZeroBlank);
+} else {
+    bootMasterZeroBlank();
+}
+// Doble verificación a 20ms para garantizar que F5 jamás muestre pantalla blanca
+setTimeout(bootMasterZeroBlank, 20);
 
 function setViewStyle(style) {
     currentViewStyle = style;
@@ -490,7 +610,6 @@ function getFilteredList() {
         ? searchCatalogMaster(activeSearchQuery)
         : [...(window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [])];
 
-    // 1. Filtro por Departamento / Categoría
     if (activeSelectedCategory !== 'Todas') {
         items = items.filter(p => {
             const catClasif = (p.categoria_clasificada || p.c || '').toLowerCase();
@@ -498,12 +617,10 @@ function getFilteredList() {
         });
     }
 
-    // 2. Filtro por Marca
     if (activeSelectedBrand !== 'Todas') {
         items = items.filter(p => (p.marca || p.m || '').toUpperCase() === activeSelectedBrand.toUpperCase());
     }
 
-    // 3. Filtro por Presupuesto
     if (activeMinPrice > 0 || activeMaxPrice < Infinity) {
         items = items.filter(p => {
             const pr = parseFloat(p.precio_mxn || p.p || p.precio || 0);
@@ -511,7 +628,6 @@ function getFilteredList() {
         });
     }
 
-    // 4. Ordenamiento
     if (activeSearchQuery && activeSearchQuery.trim() !== '' && currentSortCriterion === 'destacados') {
         return items;
     }
@@ -617,7 +733,6 @@ window.handleProductImgError = function(imgEl, sku, cat) {
     }
 };
 
-// Renderizador individual de tarjeta de producto (cuadrada 1080x1080)
 function renderProductCardHTML(p, viewStyle) {
     const item = window.normalizeProductItem(p);
     if (!item) return '';
@@ -750,7 +865,6 @@ function renderShowcaseVitrinas(container) {
     const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
     const depts = window.PC_DEPARTAMENTOS || [];
 
-    // Ocultar barras de paginación en la vista modular de vitrinas
     const bars = document.querySelectorAll(".pagination-target-bar");
     bars.forEach(b => b.innerHTML = '');
 
@@ -770,7 +884,6 @@ function renderShowcaseVitrinas(container) {
 
         vitrinasHtml += `
             <section class="vitrina-modulo mb-6 bg-slate-900/90 border border-slate-800 hover:border-cyan-500/50 rounded-3xl p-4 sm:p-5 shadow-2xl transition duration-200" data-dept-id="${dept.id}">
-                <!-- Encabezado de la Vitrina -->
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 mb-4 border-b border-slate-800">
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-slate-950 font-black shadow-lg text-base shrink-0">
@@ -793,14 +906,13 @@ function renderShowcaseVitrinas(container) {
                     <button 
                         type="button" 
                         onclick="window.selectCategoryFacet('${dept.id}')" 
-                        class="btn-action bg-slate-950 hover:bg-slate-800 text-cyan-300 hover:text-white border border-cyan-500/40 hover:border-cyan-400 font-mono text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition cursor-pointer shadow min-h-[40px] w-fit shrink-0"
+                        class="btn-action bg-slate-950 hover:bg-slate-850 text-cyan-300 hover:text-white border border-cyan-500/40 hover:border-cyan-400 font-mono text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition cursor-pointer shadow min-h-[40px] w-fit shrink-0"
                     >
                         <span>Ver Vitrina Completa (${deptProducts.length.toLocaleString('es-MX')})</span>
                         <i class="fa-solid fa-arrow-right text-[11px]"></i>
                     </button>
                 </div>
 
-                <!-- Tarjetas de la Vitrina (Grid de 4 columnas) -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
                     ${sample.map(p => renderProductCardHTML(p, 'grid')).join('')}
                 </div>
@@ -872,14 +984,12 @@ function renderExactCatalogView() {
     const resultsCountTxt = document.getElementById("results-count-display");
     if (!container) return;
 
-    // Modo A: Pantalla de Bienvenida con Vitrinas Modulares por Departamento
     if (activeSelectedCategory === 'Todas' && (!activeSearchQuery || activeSearchQuery.trim() === '') && currentPageNumber === 1) {
         renderWelcomeHub();
         renderShowcaseVitrinas(container);
         return;
     }
 
-    // Modo B: Ocultar Welcome Hub y renderizar Vitrina Completa Paginada
     const hubContainer = document.getElementById("welcome-hub-container");
     if (hubContainer) {
         hubContainer.innerHTML = '';
@@ -921,7 +1031,6 @@ function renderPaginationBar(totalPages) {
 
     const html = `
         <div class="w-full flex flex-wrap items-center justify-between gap-3 font-mono text-xs text-white">
-            <!-- Botón Anterior -->
             <div class="flex items-center gap-1.5">
                 <button 
                     type="button"
@@ -934,7 +1043,6 @@ function renderPaginationBar(totalPages) {
                 </button>
             </div>
 
-            <!-- Botones Numéricos Visibles -->
             <div class="flex items-center gap-1 overflow-x-auto no-scrollbar py-1">
                 ${pages.map(p => {
                     if (p === '...') {
@@ -954,7 +1062,6 @@ function renderPaginationBar(totalPages) {
                 }).join('')}
             </div>
 
-            <!-- Salto Directo a Página y Botón Siguiente -->
             <div class="flex items-center gap-2">
                 <div class="flex items-center gap-1.5 bg-slate-950 px-2.5 py-1.5 rounded-xl border border-slate-800 text-[11px] font-mono text-slate-400">
                     <label for="pageJumpInput" class="text-[10.5px]">Ir a:</label>
@@ -1002,45 +1109,81 @@ function goToPage(page) {
     if (showcaseTarget) showcaseTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// ÁRBOL LATERAL DE DEPARTAMENTOS (60 DEPARTAMENTOS CLASIFICADOS)
+// =========================================================================
+// MENÚ LATERAL: ACORDEÓN DE 7 DEPARTAMENTOS MAESTROS (SIN SCROLL DESBORDADO)
+// =========================================================================
 function renderSidebarFacets() {
     const root = document.getElementById("sidebar-facets-root");
     if (!root) return;
 
     const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
     const depts = window.PC_DEPARTAMENTOS || [];
-    const getCount = (id) => all.filter(p => (p.categoria_clasificada || p.c || '').toLowerCase() === id.toLowerCase()).length;
 
-    const renderBtn = (c) => `
-        <label for="cat_${c.id}" class="category-link flex items-center justify-between cursor-pointer hover:text-cyan-300 transition py-1">
-            <span class="flex items-center gap-2 truncate">
-                <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${activeSelectedCategory === c.id ? 'checked' : ''} onchange="window.selectCategoryFacet('${c.id}')" class="accent-cyan-400 cursor-pointer shrink-0" />
-                <i class="fa-solid ${c.icon} text-cyan-400 w-3.5 text-center shrink-0 text-xs" aria-hidden="true"></i>
-                <span class="cat-title truncate ${activeSelectedCategory === c.id ? 'font-black text-cyan-300' : 'text-slate-200'} text-xs">${c.name}</span>
-            </span>
-            <span class="cat-count font-mono text-[9.5px] text-slate-400">(${getCount(c.id)})</span>
-        </label>
-    `;
+    const renderMasterAccordion = (master) => {
+        const isParentOfActive = master.deptIds.includes(activeSelectedCategory);
+        
+        // Sumar todos los productos correspondientes a este maestro
+        const masterCount = master.deptIds.reduce((sum, deptId) => {
+            return sum + all.filter(p => (p.categoria_clasificada || p.c || '').toLowerCase() === deptId.toLowerCase()).length;
+        }, 0);
+
+        const childDepts = master.deptIds
+            .map(id => depts.find(d => d.id === id))
+            .filter(Boolean);
+
+        return `
+            <details class="master-dept group bg-slate-950/75 border ${isParentOfActive ? 'border-cyan-500/70 bg-slate-950 shadow-lg shadow-cyan-500/10' : 'border-slate-800/90'} rounded-xl overflow-hidden transition-all duration-200" ${isParentOfActive ? 'open' : ''}>
+                <summary class="flex items-center justify-between p-2.5 cursor-pointer select-none hover:bg-slate-850 transition list-none font-mono text-xs font-bold text-white">
+                    <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                        <i class="fa-solid ${master.icon} text-cyan-400 text-xs w-4 text-center shrink-0"></i>
+                        <span class="truncate text-[11px] ${isParentOfActive ? 'text-cyan-300 font-black' : 'text-slate-200'}">${master.name}</span>
+                    </div>
+                    <div class="flex items-center gap-1.5 shrink-0">
+                        <span class="text-[9px] font-mono bg-slate-900 border border-slate-700 px-1.5 py-0.5 rounded text-cyan-300 font-bold">
+                            ${masterCount.toLocaleString('es-MX')}
+                        </span>
+                        <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-open:rotate-180 transition-transform duration-200"></i>
+                    </div>
+                </summary>
+                <div class="p-2 pt-1 pb-1.5 space-y-1 bg-slate-900/80 border-t border-slate-800/80 text-xs divide-y divide-slate-800/40">
+                    ${childDepts.map(c => {
+                        const count = all.filter(p => (p.categoria_clasificada || p.c || '').toLowerCase() === c.id.toLowerCase()).length;
+                        const isSelected = activeSelectedCategory === c.id;
+                        return `
+                            <label for="cat_${c.id}" class="category-link flex items-center justify-between cursor-pointer hover:text-cyan-300 transition py-1">
+                                <span class="flex items-center gap-2 truncate pr-1">
+                                    <input type="radio" id="cat_${c.id}" name="cat_facet" aria-label="${c.name}" ${isSelected ? 'checked' : ''} onchange="window.selectCategoryFacet('${c.id}')" class="accent-cyan-400 cursor-pointer shrink-0" />
+                                    <i class="fa-solid ${c.icon} text-cyan-400 w-3 text-center shrink-0 text-[10px]" aria-hidden="true"></i>
+                                    <span class="cat-title truncate ${isSelected ? 'font-black text-cyan-300' : 'text-slate-300'} text-[10.5px]">${c.name}</span>
+                                </span>
+                                <span class="cat-count font-mono text-[9px] text-slate-400 shrink-0">(${count.toLocaleString('es-MX')})</span>
+                            </label>
+                        `;
+                    }).join('')}
+                </div>
+            </details>
+        `;
+    };
 
     root.innerHTML = `
         <div class="bg-gradient-to-r from-slate-900 to-cyan-950 border border-cyan-500/40 text-white p-3 rounded-t-2xl font-bold text-xs uppercase flex items-center justify-between shadow-lg">
-            <h2 class="flex items-center gap-2 text-cyan-300 font-mono text-xs"><i class="fa-solid fa-sliders text-cyan-400" aria-hidden="true"></i> Departamentos (${depts.length})</h2>
+            <h2 class="flex items-center gap-2 text-cyan-300 font-mono text-xs"><i class="fa-solid fa-sliders text-cyan-400" aria-hidden="true"></i> Departamentos</h2>
             <span class="text-[9px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono font-bold">${all.length.toLocaleString('es-MX')} Items</span>
         </div>
 
-        <div class="p-3 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-200 text-xs shadow-2xl flex flex-col justify-between space-y-4">
+        <div class="p-3 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-200 text-xs shadow-2xl flex flex-col justify-between space-y-3 max-h-[calc(100vh-100px)] overflow-y-auto no-scrollbar">
             
             <div class="flex gap-2">
-                <button onclick="renderExactCatalogView()" aria-label="Aplicar filtros seleccionados" class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase transition cursor-pointer shadow min-h-[44px]">
+                <button onclick="renderExactCatalogView()" aria-label="Aplicar filtros seleccionados" class="btn-action flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-black rounded-xl text-[11px] uppercase transition cursor-pointer shadow min-h-[40px]">
                     Aplicar
                 </button>
-                <button onclick="window.resetFacets()" aria-label="Limpiar todos los filtros" class="btn-action flex-1 bg-slate-800 hover:bg-red-950/60 border border-slate-700 hover:border-red-500/50 text-slate-200 hover:text-red-400 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer min-h-[44px]">
+                <button onclick="window.resetFacets()" aria-label="Limpiar todos los filtros" class="btn-action flex-1 bg-slate-800 hover:bg-red-950/60 border border-slate-700 hover:border-red-500/50 text-slate-200 hover:text-red-400 font-bold rounded-xl text-[11px] uppercase transition cursor-pointer min-h-[40px]">
                     Limpiar
                 </button>
             </div>
 
             <!-- ENLACE A TODAS LAS VITRINAS -->
-            <div class="bg-slate-950 p-2 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition flex items-center">
+            <div class="bg-slate-950 p-2.5 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition flex items-center">
                 <label for="cat_todas" class="category-link flex items-center justify-between cursor-pointer w-full">
                     <span class="flex items-center gap-2 truncate">
                         <input type="radio" id="cat_todas" name="cat_facet" aria-label="Todas las vitrinas" ${activeSelectedCategory === 'Todas' ? 'checked' : ''} onchange="window.selectCategoryFacet('Todas')" class="accent-cyan-400 cursor-pointer shrink-0" />
@@ -1051,30 +1194,28 @@ function renderSidebarFacets() {
                 </label>
             </div>
 
-            <!-- LISTA DE DEPARTAMENTOS CLASIFICADOS -->
-            <div class="space-y-1 text-slate-300 max-h-[650px] overflow-y-auto no-scrollbar pr-1 divide-y divide-slate-800/40">
-                ${depts.map(renderBtn).join('')}
+            <!-- LOS 7 DEPARTAMENTOS MAESTROS COLAPSABLES (ACORDEÓN COMPACTO SIN SCROLL DESBORDADO) -->
+            <div class="space-y-1.5 pr-0.5">
+                ${MASTER_DEPARTMENTS.map(renderMasterAccordion).join('')}
             </div>
 
             <!-- BARRA DE PRESUPUESTO INTERACTIVO -->
-            <div class="border-t border-slate-800 pt-3.5 space-y-2.5">
+            <div class="border-t border-slate-800 pt-3 space-y-2">
                 <h3 class="dept-heading text-amber-300 font-mono uppercase text-xs font-black flex items-center justify-between">
-                    <span><i class="fa-solid fa-calculator text-amber-400 mr-1.5"></i> Tu Presupuesto</span>
+                    <span><i class="fa-solid fa-calculator text-amber-400 mr-1.5"></i> Presupuesto</span>
                     <span class="text-[9px] text-slate-400 font-normal">($ MXN)</span>
                 </h3>
                 
                 <div class="grid grid-cols-2 gap-2">
                     <div>
-                        <label for="budgetMinInput" class="text-[9px] font-mono text-slate-400 block mb-0.5">Mínimo:</label>
-                        <input type="number" id="budgetMinInput" placeholder="$0" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-1.5 text-xs text-white font-mono outline-none focus:border-cyan-400" />
+                        <input type="number" id="budgetMinInput" placeholder="Mín: $0" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-1.5 text-xs text-white font-mono outline-none focus:border-cyan-400" />
                     </div>
                     <div>
-                        <label for="budgetMaxInput" class="text-[9px] font-mono text-slate-400 block mb-0.5">Máximo:</label>
-                        <input type="number" id="budgetMaxInput" placeholder="Sin límite" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-1.5 text-xs text-white font-mono outline-none focus:border-cyan-400" />
+                        <input type="number" id="budgetMaxInput" placeholder="Máx: Sin límite" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-1.5 text-xs text-white font-mono outline-none focus:border-cyan-400" />
                     </div>
                 </div>
 
-                <button onclick="window.applyCustomBudget()" aria-label="Filtrar por presupuesto" class="btn-action w-full bg-slate-800 hover:bg-slate-700 text-amber-300 font-mono font-bold text-xs py-2 rounded-xl transition cursor-pointer border border-amber-500/30 flex items-center justify-center gap-1.5 min-h-[40px]">
+                <button onclick="window.applyCustomBudget()" aria-label="Filtrar por presupuesto" class="btn-action w-full bg-slate-800 hover:bg-slate-700 text-amber-300 font-mono font-bold text-xs py-1.5 rounded-xl transition cursor-pointer border border-amber-500/30 flex items-center justify-center gap-1.5 min-h-[38px]">
                     <i class="fa-solid fa-filter text-[10px]"></i> <span>Filtrar Presupuesto</span>
                 </button>
             </div>
@@ -1367,7 +1508,6 @@ window.openProductDetailModal = function(sku) {
                         <p>${desc}</p>
                     </div>
 
-                    <!-- Ficha Técnica Nativa PC Custom Lab (Blindaje comercial) -->
                     <div class="w-full bg-slate-950/90 text-slate-300 border border-cyan-500/30 rounded-xl p-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 shadow font-mono text-[11px]">
                         <span class="flex items-center gap-1.5 text-cyan-300 font-bold">
                             <i class="fa-solid fa-certificate text-cyan-400"></i> Ficha Técnica Nativa PC Custom Lab
