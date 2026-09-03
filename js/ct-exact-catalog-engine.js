@@ -1,6 +1,6 @@
 // =========================================================================
 // MOTOR UNIVERSAL BILINGÜE PC CUSTOM LAB (17,490 PRODUCTOS EN 60 VITRINAS)
-// ARQUITECTURA ZERO-BLANK F5 + SIDEBAR STICKY CON 7 DEPARTAMENTOS MAESTROS
+// FASE 2: BUSCADOR PREDICTIVO EN VIVO + CARRITO SLIDE-OVER + GABINETES PECERA
 // =========================================================================
 
 let currentViewStyle = 'grid';
@@ -144,7 +144,7 @@ window.setCurrencyDisplay = function(curr) {
         }
     }
     renderExactCatalogView();
-    syncBoutiqueCart();
+    if (typeof window.syncBoutiqueCart === 'function') window.syncBoutiqueCart();
 };
 
 window.formatPriceDisplay = function(priceMxn, priceUsd) {
@@ -153,7 +153,6 @@ window.formatPriceDisplay = function(priceMxn, priceUsd) {
     return `$${Number(val).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 };
 
-// Normalizador universal de objetos (soporta formato compacto y completo)
 window.normalizeProductItem = function(p) {
     if (!p) return null;
     const priceMxn = p.precio_mxn || p.p || p.precio || 0;
@@ -207,8 +206,9 @@ const SYNONYM_DICTIONARY = {
     "fuente": ["fuente de poder", "power supply", "fuente atx", "fuente cert", "psu", "80 plus"],
     "fuentes": ["fuente de poder", "power supply", "fuente atx", "fuente cert", "psu", "80 plus"],
     "psu": ["fuente de poder", "power supply", "psu"],
-    "gabinete": ["gabinete", "chasis", "case gamer", "media torre", "mini torre"],
-    "gabinetes": ["gabinete", "chasis", "case gamer"],
+    "gabinete": ["gabinete", "chasis", "case gamer", "media torre", "mini torre", "pecera", "aquarium"],
+    "gabinetes": ["gabinete", "chasis", "case gamer", "pecera"],
+    "pecera": ["pecera", "aquarium", "cristal templado", "panoramico", "panorámico", "dual chamber"],
     "procesador": ["procesador", "cpu", "ryzen", "core i", "core ultra", "intel core", "amd ryzen"],
     "procesadores": ["procesador", "cpu", "ryzen", "core i", "core ultra", "intel core", "amd ryzen"],
     "cpu": ["procesador", "cpu", "ryzen", "core i", "core ultra"],
@@ -332,6 +332,16 @@ function searchCatalogMaster(query) {
         }
 
         if (matchAll) {
+            // Penalizar gabinetes de servidor/rack/piso industrial para que no desplacen gabinetes de ensamble
+            if (/(servidor|rack|1u|2u|3u|4u|42 u|42u|gabinete de piso|industrial)/.test(nameNorm + ' ' + descNorm)) {
+                score -= 8000;
+            }
+
+            // Prioridad a existencia física en tienda
+            if (!item.isAgotado) score += 2000;
+            // Prioridad a fotos verificadas
+            if (item.hasImg) score += 1500;
+
             if (tokens.some(t => ['ram', 'memoria', 'memorias'].includes(t))) {
                 if (catNorm.includes('memorias_ram')) score += 10000;
                 if (nameNorm.includes('memoria ram')) score += 8000;
@@ -343,12 +353,10 @@ function searchCatalogMaster(query) {
                 if (nameNorm.startsWith('procesador')) score += 8000;
             }
 
-            if (tokens.some(t => ['disco', 'discos', 'ssd', 'nvme'].includes(t))) {
-                if (catNorm.includes('ssd') || catNorm.includes('disco')) score += 10000;
-            }
-
-            if (tokens.some(t => ['monitor', 'monitores', 'pantalla', 'pantallas'].includes(t))) {
-                if (catNorm.includes('monitores')) score += 10000;
+            if (tokens.some(t => ['gabinete', 'pecera', 'aquarium'].includes(t))) {
+                if (catNorm === 'gabinetes') score += 10000;
+                if (nameNorm.includes('pecera') || nameNorm.includes('panorak') || nameNorm.includes('aquarium')) score += 12000;
+                if (nameNorm.includes('cristal') || nameNorm.includes('panoramico')) score += 6000;
             }
 
             scoredResults.push({ score, product: p });
@@ -397,7 +405,9 @@ window.setSortCriterion = function(crit) {
 
 window.scrollToResults = function() {
     const el = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (el && typeof el.scrollIntoView === 'function') {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 };
 
 // =========================================================================
@@ -413,20 +423,18 @@ window.runCleanHomeCatalog = function() {
     activeMaxPrice = Infinity;
     activeMinDiscount = 0;
 
-    const searchInput = document.getElementById("boutiqueSearchInput");
+    const searchInput = document.querySelector("#main-search-input, #boutiqueSearchInput");
     if (searchInput) searchInput.value = '';
 
     renderSidebarFacets();
     renderExactCatalogView();
 };
 
-// El botón "LIMPIAR" y el arranque F5 invocan exactamente la misma subrutina
 window.resetFacets = function() {
     window.runCleanHomeCatalog();
     window.scrollToResults();
 };
 
-// Inicialización del Catálogo
 function initFullCatalog() {
     if (window.activeCurrency === 'USD') {
         const btnMxn = document.getElementById('currencyToggleMXN');
@@ -458,7 +466,6 @@ function initFullCatalog() {
     }, 25);
 }
 
-// Renderizado del Welcome Hub (Panel superior de acceso rápido)
 function renderWelcomeHub() {
     const hubContainer = document.getElementById("welcome-hub-container");
     if (!hubContainer) return;
@@ -476,7 +483,7 @@ function renderWelcomeHub() {
         { id: 'procesadores', name: '1. Procesadores (CPUs)', icon: 'fa-microchip', color: 'from-blue-600 to-cyan-600', badge: 'Intel Core Ultra & AMD Ryzen' },
         { id: 'tarjetas_madre', name: '2. Tarjetas Madre', icon: 'fa-chess-board', color: 'from-indigo-600 to-blue-600', badge: 'AM5, LGA1851, LGA1700' },
         { id: 'memorias_ram_pc', name: '3. Memorias RAM PC', icon: 'fa-memory', color: 'from-emerald-600 to-teal-600', badge: 'DDR5 & DDR4 DIMM' },
-        { id: 'gabinetes', name: '4. Gabinetes Gamer', icon: 'fa-server', color: 'from-amber-600 to-orange-600', badge: 'Cristal Templado & ARGB' },
+        { id: 'gabinetes', name: '4. Gabinetes Gamer', icon: 'fa-server', color: 'from-amber-600 to-orange-600', badge: 'Pecera, Vidrio Templado & ARGB' },
         { id: 'tarjetas_video', name: '5. Tarjetas de Video', icon: 'fa-vr-cardboard', color: 'from-purple-600 to-pink-600', badge: 'GeForce RTX & Radeon' },
         { id: 'enfriamiento', name: '6. Enfriamiento Líquido', icon: 'fa-fan', color: 'from-cyan-600 to-blue-500', badge: 'Líquido AIO & Disipadores' },
         { id: 'ssds_m2_nvme', name: '7. Almacenamiento SSD', icon: 'fa-hard-drive', color: 'from-sky-600 to-indigo-600', badge: 'M.2 NVMe PCIe 4.0/5.0' },
@@ -545,7 +552,6 @@ function renderWelcomeHub() {
     `;
 }
 
-// Selección de categorías y auto-scroll
 window.selectCategoryFacet = function(catId) {
     activeSelectedCategory = catId;
     activeSelectedChip = 'Todos';
@@ -553,30 +559,29 @@ window.selectCategoryFacet = function(catId) {
     activeSearchQuery = '';
     currentPageNumber = 1;
 
-    const searchInput = document.getElementById("boutiqueSearchInput");
+    const searchInput = document.querySelector("#main-search-input, #boutiqueSearchInput");
     if (searchInput) searchInput.value = '';
 
     renderSidebarFacets();
     renderExactCatalogView();
 
     const target = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
-    if (target) {
+    if (target && typeof target.scrollIntoView === 'function') {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 };
 
 window.scrollToDepartments = function() {
-    const target = document.getElementById("sidebar-facets-root") || document.getElementById("boutiqueSearchInput");
-    if (target) {
+    const target = document.getElementById("sidebar-facets-root") || document.getElementById("main-search-input") || document.getElementById("boutiqueSearchInput");
+    if (target && typeof target.scrollIntoView === 'function') {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 };
 
-// Inicializador Maestro que cubre DOMContentLoaded, ejecución diferida e inmediata
 function bootMasterZeroBlank() {
     initFullCatalog();
     initPredictiveSearchEngine();
-    syncBoutiqueCart();
+    if (typeof window.syncBoutiqueCart === 'function') window.syncBoutiqueCart();
     window.runCleanHomeCatalog();
 }
 
@@ -585,7 +590,6 @@ if (document.readyState === "loading") {
 } else {
     bootMasterZeroBlank();
 }
-// Doble verificación a 20ms para garantizar que F5 jamás muestre pantalla blanca
 setTimeout(bootMasterZeroBlank, 20);
 
 function setViewStyle(style) {
@@ -629,6 +633,42 @@ function getFilteredList() {
     }
 
     if (activeSearchQuery && activeSearchQuery.trim() !== '' && currentSortCriterion === 'destacados') {
+        return items;
+    }
+
+    // ORDENAMIENTO ESPECIAL DE GABINETES: ENSAMBLE PC, PECERA Y CRISTAL PRIMERO
+    if (activeSelectedCategory === 'gabinetes' && currentSortCriterion === 'destacados') {
+        items.sort((a, b) => {
+            const aItem = window.normalizeProductItem(a);
+            const bItem = window.normalizeProductItem(b);
+            
+            const aHasImg = aItem.hasImg ? 1 : 0;
+            const bHasImg = bItem.hasImg ? 1 : 0;
+            if (aHasImg !== bHasImg) return bHasImg - aHasImg;
+
+            const gabScore = (item) => {
+                const text = (item.name + ' ' + item.desc).toLowerCase();
+                let score = 0;
+                if (/(pecera|aquarium|cristal templado|vidrio templado|panoramico|panorámico|tempered glass|vista panoramica|vista panorámica|dual chamber|acuari)/.test(text)) {
+                    score += 6000;
+                }
+                if (/(argb|rgb|fan argb|iluminacion|iluminación|ventiladores)/.test(text)) {
+                    score += 2500;
+                }
+                if (/(gamer|gaming|media torre|mid tower|mini torre|full tower|torre completa)/.test(text)) {
+                    score += 1500;
+                }
+                if (/(servidor|rack|1u|2u|3u|4u|industrial)/.test(text)) {
+                    score -= 8000;
+                }
+                return score;
+            };
+
+            const scoreDiff = gabScore(bItem) - gabScore(aItem);
+            if (scoreDiff !== 0) return scoreDiff;
+
+            return aItem.priceMxn - bItem.priceMxn;
+        });
         return items;
     }
 
@@ -770,7 +810,6 @@ function renderProductCardHTML(p, viewStyle) {
                         </div>
                     ` : ''}
 
-                    <!-- Precios Claros -->
                     <div class="text-center mb-1.5">
                         <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
                             ${window.formatPriceDisplay(item.priceMxn, item.priceUsd)}
@@ -797,7 +836,6 @@ function renderProductCardHTML(p, viewStyle) {
                     </div>
                 </div>
 
-                <!-- Botones de Acción: Ficha, + Carrito y Comprar -->
                 <div class="pt-2 border-t border-slate-800/80 space-y-1.5">
                     <div class="flex gap-1.5">
                         <button 
@@ -808,7 +846,7 @@ function renderProductCardHTML(p, viewStyle) {
                             <i class="fa-solid fa-file-lines text-xs"></i> <span>Ficha</span>
                         </button>
                         <button 
-                            onclick="${item.isAgotado ? `openProductDetailModal('${item.sku}')` : `addToCartCT('${item.sku}')`}" 
+                            onclick="${item.isAgotado ? `openProductDetailModal('${item.sku}')` : `addToCartCT('${item.sku}', event)`}" 
                             aria-label="Agregar ${title} al carrito" 
                             class="btn-action flex-1 ${item.isAgotado ? 'bg-slate-800 text-slate-400 border border-slate-700' : 'bg-blue-600 hover:bg-blue-500 text-white shadow active:scale-95'} font-mono text-[10.5px] font-bold rounded-xl py-2 transition cursor-pointer min-h-[40px] flex items-center justify-center gap-1"
                         >
@@ -816,7 +854,7 @@ function renderProductCardHTML(p, viewStyle) {
                         </button>
                     </div>
                     <button 
-                        onclick="${item.isAgotado ? `openProductDetailModal('${item.sku}')` : `buyNowCT('${item.sku}')`}" 
+                        onclick="${item.isAgotado ? `openProductDetailModal('${item.sku}')` : `buyNowCT('${item.sku}', event)`}" 
                         aria-label="Comprar ${title} ahora" 
                         class="btn-action w-full ${item.isAgotado ? 'bg-slate-800 hover:bg-slate-750 text-amber-300 border border-amber-500/40' : 'bg-gradient-to-r from-emerald-600 via-cyan-600 to-blue-600 hover:from-emerald-500 hover:to-cyan-500 text-white shadow-lg active:scale-95'} font-mono text-[11px] font-black rounded-xl py-2.5 uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer min-h-[44px]"
                     >
@@ -847,10 +885,10 @@ function renderProductCardHTML(p, viewStyle) {
                         <div class="text-sm sm:text-base font-black text-emerald-400 font-mono">${window.formatPriceDisplay(item.priceMxn, item.priceUsd)}</div>
                     </div>
                     <div class="flex gap-1.5 w-full">
-                        <button onclick="${item.isAgotado ? `openProductDetailModal('${item.sku}')` : `addToCartCT('${item.sku}')`}" class="flex-1 ${item.isAgotado ? 'bg-slate-800 text-slate-400' : 'bg-blue-600 hover:bg-blue-500 text-white'} font-bold py-2 rounded-xl text-[10.5px] font-mono uppercase flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer min-h-[40px]">
+                        <button onclick="${item.isAgotado ? `openProductDetailModal('${item.sku}')` : `addToCartCT('${item.sku}', event)`}" class="flex-1 ${item.isAgotado ? 'bg-slate-800 text-slate-400' : 'bg-blue-600 hover:bg-blue-500 text-white'} font-bold py-2 rounded-xl text-[10.5px] font-mono uppercase flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer min-h-[40px]">
                             <i class="fa-solid ${item.isAgotado ? 'fa-clock' : 'fa-cart-plus'}"></i> ${item.isAgotado ? 'Bajo Pedido' : '+Carrito'}
                         </button>
-                        <button onclick="${item.isAgotado ? `openProductDetailModal('${item.sku}')` : `buyNowCT('${item.sku}')`}" class="flex-1 ${item.isAgotado ? 'bg-slate-800 text-amber-300 border border-amber-500/40' : 'bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white'} font-black py-2 rounded-xl text-[10.5px] font-mono uppercase flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer min-h-[40px]">
+                        <button onclick="${item.isAgotado ? `openProductDetailModal('${item.sku}')` : `buyNowCT('${item.sku}', event)`}" class="flex-1 ${item.isAgotado ? 'bg-slate-800 text-amber-300 border border-amber-500/40' : 'bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white'} font-black py-2 rounded-xl text-[10.5px] font-mono uppercase flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer min-h-[40px]">
                             <i class="fa-solid ${item.isAgotado ? 'fa-hourglass-half' : 'fa-bolt'}"></i> ${item.isAgotado ? 'Apartar' : 'Comprar'}
                         </button>
                     </div>
@@ -860,7 +898,6 @@ function renderProductCardHTML(p, viewStyle) {
     }
 }
 
-// RENDERIZADOR MAESTRO DE VITRINAS POR DEPARTAMENTO (PANTALLA DE INICIO)
 function renderShowcaseVitrinas(container) {
     const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
     const depts = window.PC_DEPARTAMENTOS || [];
@@ -877,8 +914,26 @@ function renderShowcaseVitrinas(container) {
 
     for (let i = 0; i < depts.length; i++) {
         const dept = depts[i];
-        const deptProducts = all.filter(p => (p.categoria_clasificada || p.c) === dept.id);
+        let deptProducts = all.filter(p => (p.categoria_clasificada || p.c) === dept.id);
         if (deptProducts.length === 0) continue;
+
+        // Si es vitrina de gabinetes en portada: poner peceras y cristal primero!
+        if (dept.id === 'gabinetes') {
+            deptProducts = [...deptProducts].sort((a, b) => {
+                const aItem = window.normalizeProductItem(a);
+                const bItem = window.normalizeProductItem(b);
+                const aHasImg = aItem.hasImg ? 1 : 0;
+                const bHasImg = bItem.hasImg ? 1 : 0;
+                if (aHasImg !== bHasImg) return bHasImg - aHasImg;
+
+                const isPecera = (it) => /(pecera|aquarium|cristal templado|vidrio templado|panoramico|panorámico|tempered glass|dual chamber)/i.test(it.name + ' ' + it.desc);
+                const aP = isPecera(aItem) ? 1 : 0;
+                const bP = isPecera(bItem) ? 1 : 0;
+                if (aP !== bP) return bP - aP;
+
+                return aItem.priceMxn - bItem.priceMxn;
+            });
+        }
 
         const sample = deptProducts.slice(0, 4);
 
@@ -924,7 +979,6 @@ function renderShowcaseVitrinas(container) {
     container.innerHTML = vitrinasHtml;
 }
 
-// RENDERIZADOR DE VITRINA COMPLETA PAGINADA (CUANDO SE ENTRA A UN DEPARTAMENTO O BÚSQUEDA)
 function renderPaginatedDepartmentView(container, resultsCountTxt) {
     const filtered = getFilteredList();
     const totalCount = filtered.length;
@@ -978,7 +1032,6 @@ function renderPaginatedDepartmentView(container, resultsCountTxt) {
     }
 }
 
-// CONTROLADOR MAESTRO DE VISTA DEL CATÁLOGO
 function renderExactCatalogView() {
     const container = document.getElementById("products-grid-container");
     const resultsCountTxt = document.getElementById("results-count-display");
@@ -999,7 +1052,6 @@ function renderExactCatalogView() {
     renderPaginatedDepartmentView(container, resultsCountTxt);
 }
 
-// BARRA DE PAGINACIÓN NUMÉRICA EXTENDIDA
 function renderPaginationBar(totalPages) {
     const bars = document.querySelectorAll(".pagination-target-bar");
     if (!bars.length) return;
@@ -1106,11 +1158,13 @@ function goToPage(page) {
     currentPageNumber = page;
     renderExactCatalogView();
     const showcaseTarget = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
-    if (showcaseTarget) showcaseTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (showcaseTarget && typeof showcaseTarget.scrollIntoView === 'function') {
+        showcaseTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
 // =========================================================================
-// MENÚ LATERAL: ACORDEÓN DE 7 DEPARTAMENTOS MAESTROS (SIN SCROLL DESBORDADO)
+// MENÚ LATERAL: 7 ACORDEONES + BOTONES PATROCINADOS GEMINI & ANTIGRAVITY
 // =========================================================================
 function renderSidebarFacets() {
     const root = document.getElementById("sidebar-facets-root");
@@ -1122,7 +1176,6 @@ function renderSidebarFacets() {
     const renderMasterAccordion = (master) => {
         const isParentOfActive = master.deptIds.includes(activeSelectedCategory);
         
-        // Sumar todos los productos correspondientes a este maestro
         const masterCount = master.deptIds.reduce((sum, deptId) => {
             return sum + all.filter(p => (p.categoria_clasificada || p.c || '').toLowerCase() === deptId.toLowerCase()).length;
         }, 0);
@@ -1194,9 +1247,58 @@ function renderSidebarFacets() {
                 </label>
             </div>
 
-            <!-- LOS 7 DEPARTAMENTOS MAESTROS COLAPSABLES (ACORDEÓN COMPACTO SIN SCROLL DESBORDADO) -->
+            <!-- LOS 7 DEPARTAMENTOS MAESTROS COLAPSABLES -->
             <div class="space-y-1.5 pr-0.5">
                 ${MASTER_DEPARTMENTS.map(renderMasterAccordion).join('')}
+            </div>
+
+            <!-- BOTONES PATROCINADOS OFICIALES: GEMINI ADVANCED & ANTIGRAVITY -->
+            <div class="pt-2 border-t border-slate-800 space-y-2">
+                <!-- 1. Botón Google Gemini Leader -->
+                <a 
+                    href="https://gemini.google.com/advanced" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="group w-full p-2.5 rounded-xl bg-gradient-to-r from-blue-950/90 via-indigo-950 to-purple-950/90 border border-indigo-500/40 hover:border-cyan-400 flex items-center justify-between transition-all duration-200 shadow-md hover:shadow-indigo-500/20 cursor-pointer text-left block"
+                >
+                    <div class="flex items-center gap-2.5 min-w-0">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-xs shadow shrink-0 group-hover:scale-105 transition">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <div class="truncate">
+                            <span class="text-[11px] font-mono font-black text-white group-hover:text-cyan-300 block truncate">
+                                Suscríbete a Gemini
+                            </span>
+                            <span class="text-[9px] font-mono text-purple-300 block truncate">
+                                Inteligencia Artificial de Google
+                            </span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-purple-400 group-hover:text-white shrink-0 ml-1"></i>
+                </a>
+
+                <!-- 2. Botón Antigravity Engine -->
+                <a 
+                    href="https://github.com/iaworldcenter-creator" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="group w-full p-2.5 rounded-xl bg-gradient-to-r from-cyan-950/90 via-slate-900 to-emerald-950/90 border border-cyan-500/40 hover:border-emerald-400 flex items-center justify-between transition-all duration-200 shadow-md hover:shadow-cyan-500/20 cursor-pointer text-left block"
+                >
+                    <div class="flex items-center gap-2.5 min-w-0">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-emerald-500 flex items-center justify-center text-slate-950 text-xs shadow shrink-0 group-hover:scale-105 transition">
+                            <i class="fa-solid fa-atom"></i>
+                        </div>
+                        <div class="truncate">
+                            <span class="text-[11px] font-mono font-black text-white group-hover:text-emerald-300 block truncate">
+                                Descarga Anti Gravity
+                            </span>
+                            <span class="text-[9px] font-mono text-cyan-300 block truncate">
+                                Prueba su Inteligencia Autónoma
+                            </span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-download text-[10px] text-cyan-400 group-hover:text-white shrink-0 ml-1"></i>
+                </a>
             </div>
 
             <!-- BARRA DE PRESUPUESTO INTERACTIVO -->
@@ -1224,11 +1326,13 @@ function renderSidebarFacets() {
     `;
 }
 
-// Búsqueda Predictiva Rápida
+// =========================================================================
+// BUSCADOR PREDICTIVO EN VIVO (LIVE INSTANT SEARCH DROPDOWN CON DEBOUNCE 150ms)
+// =========================================================================
 let searchDebounceTimer = null;
 function initPredictiveSearchEngine() {
-    const input = document.getElementById("boutiqueSearchInput");
-    const box = document.getElementById("boutique-autocomplete-box");
+    const input = document.querySelector("#main-search-input, #boutiqueSearchInput");
+    const box = document.querySelector("#search-results-dropdown, #boutique-autocomplete-box");
     if (!input || !box) return;
 
     const form = input.closest("form");
@@ -1244,7 +1348,8 @@ function initPredictiveSearchEngine() {
         clearTimeout(searchDebounceTimer);
         const rawQuery = (e.target.value || '').trim();
         
-        if (rawQuery.length < 1) {
+        // Activar a partir de 2 caracteres
+        if (rawQuery.length < 2) {
             box.classList.add("hidden");
             box.innerHTML = "";
             if (activeSearchQuery !== '') {
@@ -1261,52 +1366,56 @@ function initPredictiveSearchEngine() {
                 box.innerHTML = `
                     <div class="p-4 text-center text-slate-300 font-mono text-xs">
                         <i class="fa-solid fa-magnifying-glass text-cyan-400 text-lg mb-1 block" aria-hidden="true"></i>
-                        No se encontraron coincidencias para "<strong>${rawQuery}</strong>".
+                        No se encontraron coincidencias exactas para "<strong>${rawQuery}</strong>".
                     </div>
                 `;
                 box.classList.remove("hidden");
                 return;
             }
 
-            const topMatches = matches.slice(0, 10);
+            // Top 5 a 6 productos requeridos
+            const topMatches = matches.slice(0, 6);
 
             box.innerHTML = `
                 <div class="p-2.5 border-b border-slate-800 flex justify-between items-center text-[10.5px] font-mono text-slate-300 bg-slate-950/90">
-                    <span>${matches.length.toLocaleString('es-MX')} coincidencias encontradas para: "<strong>${rawQuery}</strong>"</span>
-                    <button type="button" onclick="window.executeSearchQuery(document.getElementById('boutiqueSearchInput').value);" class="text-cyan-300 font-bold hover:underline cursor-pointer">
+                    <span>${matches.length.toLocaleString('es-MX')} productos encontrados para: "<strong>${rawQuery}</strong>"</span>
+                    <button type="button" onclick="window.executeSearchQuery(document.querySelector('#main-search-input, #boutiqueSearchInput').value);" class="text-cyan-300 font-bold hover:underline cursor-pointer">
                         Ver todas en vitrina »
                     </button>
                 </div>
-                <div class="divide-y divide-slate-800/60 max-h-96 overflow-y-auto">
+                <div class="divide-y divide-slate-800/60 max-h-[460px] overflow-y-auto no-scrollbar">
                     ${topMatches.map(rawP => {
                         const item = window.normalizeProductItem(rawP);
                         const title = item.name.replace(/'/g, "&#39;").replace(/"/g, '&quot;');
                         const localImg = `assets/img/${item.sku}.webp`;
 
                         return `
-                            <div class="flex items-center justify-between gap-3 p-3 hover:bg-slate-850 transition cursor-pointer group min-h-[48px]" onclick="openProductDetailModal('${item.sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" role="button" tabindex="0" aria-label="Ver detalle de ${title}">
-                                <div class="w-12 h-12 bg-slate-950 rounded-xl p-1 shrink-0 border border-slate-800 group-hover:border-cyan-400/50 flex items-center justify-center">
-                                    <img src="${localImg}" alt="${title}" width="48" height="48" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${item.sku}', '${item.cat}')" />
+                            <div class="flex items-center justify-between gap-3 p-2.5 hover:bg-slate-850 transition cursor-pointer group min-h-[64px]" onclick="openProductDetailModal('${item.sku}');" role="button" tabindex="0" aria-label="Ver detalle de ${title}">
+                                <!-- Miniatura WebP cuadrada 60x60px centrada -->
+                                <div class="w-[60px] h-[60px] bg-slate-950 rounded-xl p-1 shrink-0 border border-slate-800 group-hover:border-cyan-400/50 flex items-center justify-center">
+                                    <img src="${localImg}" alt="${title}" width="54" height="54" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${item.sku}', '${item.cat}')" />
                                 </div>
                                 <div class="flex-1 min-w-0 text-left">
-                                    <div class="text-xs font-bold text-white group-hover:text-cyan-300 transition truncate">${title}</div>
-                                    <div class="text-[10px] font-mono text-slate-300 flex items-center gap-1.5">
+                                    <div class="text-xs font-bold text-white group-hover:text-cyan-300 transition line-clamp-1 leading-snug">${title}</div>
+                                    <div class="text-[10px] font-mono text-slate-300 flex items-center gap-1.5 mt-0.5">
                                         <span class="text-cyan-300 font-bold">SKU: ${item.sku}</span>
                                         <span>•</span>
-                                        <span class="text-amber-300">May: ${window.formatPriceDisplay(item.may, item.mayUsd)}</span>
+                                        ${item.isAgotado 
+                                            ? `<span class="text-amber-400 font-bold">Bajo Pedido</span>` 
+                                            : `<span class="text-emerald-400 font-bold">Entrega Inmediata</span>`
+                                        }
                                     </div>
                                 </div>
-                                <div class="text-right shrink-0 flex items-center gap-1.5">
-                                    <div class="text-xs font-mono font-black text-emerald-300">${window.formatPriceDisplay(item.priceMxn, item.priceUsd)}</div>
-                                    <button type="button" onclick="event.stopPropagation(); openProductDetailModal('${item.sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" aria-label="Ver ficha de ${title}" class="btn-action bg-slate-800 hover:bg-slate-700 text-cyan-300 text-[10px] font-bold px-2 py-1.5 rounded-lg border border-slate-700 uppercase min-h-[40px]">
-                                        Ficha
-                                    </button>
-                                    <button type="button" onclick="event.stopPropagation(); addToCartCT('${item.sku}'); document.getElementById('boutique-autocomplete-box').classList.add('hidden');" aria-label="Agregar ${title} al carrito" class="btn-action bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-bold px-2.5 py-1.5 rounded-lg uppercase min-h-[40px]">
-                                        + Carrito
-                                    </button>
-                                    <button type="button" onclick="event.stopPropagation(); buyNowCT('${item.sku}');" aria-label="Comprar ${title} ahora" class="btn-action bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white text-[10px] font-black px-2.5 py-1.5 rounded-lg uppercase shadow min-h-[40px]">
-                                        ⚡ Comprar
-                                    </button>
+                                <div class="text-right shrink-0 flex items-center gap-2">
+                                    <div class="text-xs font-mono font-black text-emerald-400">${window.formatPriceDisplay(item.priceMxn, item.priceUsd)}</div>
+                                    <div class="flex items-center gap-1">
+                                        <button type="button" onclick="window.addToCartCT('${item.sku}', event);" aria-label="Agregar al carrito" class="btn-action bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-mono font-bold px-2.5 py-1.5 rounded-lg transition active:scale-95 shadow cursor-pointer min-h-[36px]">
+                                            + Carrito
+                                        </button>
+                                        <button type="button" onclick="window.buyNowCT('${item.sku}', event);" aria-label="Comprar ahora" class="btn-action bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white text-[10px] font-mono font-black px-2.5 py-1.5 rounded-lg shadow transition active:scale-95 cursor-pointer min-h-[36px]">
+                                            Comprar Ahora
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         `;
@@ -1315,9 +1424,17 @@ function initPredictiveSearchEngine() {
             `;
 
             box.classList.remove("hidden");
-        }, 100);
+        }, 150);
     });
 
+    // Cierre inteligente con tecla ESC
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            box.classList.add("hidden");
+        }
+    });
+
+    // Cierre al hacer clic fuera del dropdown
     document.addEventListener("click", (e) => {
         if (!input.contains(e.target) && !box.contains(e.target)) {
             box.classList.add("hidden");
@@ -1330,7 +1447,7 @@ window.executeSearchQuery = function(query) {
     activeSelectedCategory = 'Todas';
     currentPageNumber = 1;
     
-    const box = document.getElementById("boutique-autocomplete-box");
+    const box = document.querySelector("#search-results-dropdown, #boutique-autocomplete-box");
     if (box) box.classList.add("hidden");
 
     renderSidebarFacets();
@@ -1338,43 +1455,22 @@ window.executeSearchQuery = function(query) {
     window.scrollToResults();
 };
 
-// Carrito de compras
-function getBoutiqueCart() {
-    try {
-        return JSON.parse(localStorage.getItem('pc_custom_cart') || '[]');
-    } catch {
-        return [];
-    }
-}
-
-function saveBoutiqueCart(cart) {
-    localStorage.setItem('pc_custom_cart', JSON.stringify(cart));
-    syncBoutiqueCart();
-}
-
-function syncBoutiqueCart() {
-    const cart = getBoutiqueCart();
-    const count = cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
-    const totalMxn = cart.reduce((acc, item) => acc + ((item.price || 0) * (item.quantity || 1)), 0);
-
-    const badge = document.getElementById("boutique-cart-badge");
-    const totalTxt = document.getElementById("boutique-cart-total");
-
-    if (badge) badge.innerText = count.toString();
-    if (totalTxt) totalTxt.innerText = window.formatPriceDisplay(totalMxn);
-}
-
-window.addToCartCT = function(sku) {
+// =========================================================================
+// ACCIONES DE CARRITO: AGREGAR Y COMPRAR
+// =========================================================================
+window.addToCartCT = function(sku, event) {
+    if (event) event.stopPropagation();
     const catalog = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
     const raw = catalog.find(item => (item.sku === sku || item.s === sku || item.clave === sku));
     if (!raw) return;
 
     const p = window.normalizeProductItem(raw);
-    const cart = getBoutiqueCart();
+    const cart = typeof window.getBoutiqueCart === 'function' ? window.getBoutiqueCart() : [];
     const existing = cart.find(item => item.sku === sku);
 
     if (existing) {
         existing.quantity = (existing.quantity || 1) + 1;
+        existing.qty = existing.quantity;
     } else {
         cart.push({
             sku: p.sku,
@@ -1383,42 +1479,49 @@ window.addToCartCT = function(sku) {
             store: 'pc-custom-lab',
             storeName: 'PC Custom Lab',
             image: `./assets/img/${p.sku}.webp`,
-            quantity: 1
+            quantity: 1,
+            qty: 1
         });
     }
 
-    saveBoutiqueCart(cart);
+    if (typeof window.saveBoutiqueCart === 'function') {
+        window.saveBoutiqueCart(cart);
+    }
     showAddToCartToast(p.name);
 };
 
-window.buyNowCT = function(sku) {
+window.buyNowCT = function(sku, event) {
+    if (event) event.stopPropagation();
     const catalog = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
     const raw = catalog.find(item => (item.sku === sku || item.s === sku || item.clave === sku));
-    if (!raw) {
-        window.location.href = "checkout.html";
-        return;
+    if (raw) {
+        const p = window.normalizeProductItem(raw);
+        const cart = typeof window.getBoutiqueCart === 'function' ? window.getBoutiqueCart() : [];
+        const existing = cart.find(item => item.sku === sku);
+
+        if (existing) {
+            existing.quantity = (existing.quantity || 1) + 1;
+            existing.qty = existing.quantity;
+        } else {
+            cart.push({
+                sku: p.sku,
+                name: p.name,
+                price: p.priceMxn,
+                store: 'pc-custom-lab',
+                storeName: 'PC Custom Lab',
+                image: `./assets/img/${p.sku}.webp`,
+                quantity: 1,
+                qty: 1
+            });
+        }
+        if (typeof window.saveBoutiqueCart === 'function') {
+            window.saveBoutiqueCart(cart);
+        }
     }
-
-    const p = window.normalizeProductItem(raw);
-    const cart = getBoutiqueCart();
-    const existing = cart.find(item => item.sku === sku);
-
-    if (existing) {
-        existing.quantity = (existing.quantity || 1) + 1;
-    } else {
-        cart.push({
-            sku: p.sku,
-            name: p.name,
-            price: p.priceMxn,
-            store: 'pc-custom-lab',
-            storeName: 'PC Custom Lab',
-            image: `./assets/img/${p.sku}.webp`,
-            quantity: 1
-        });
+    // Abre de inmediato el panel lateral deslizante (slide-over drawer)
+    if (typeof window.toggleCartDrawer === 'function') {
+        window.toggleCartDrawer(true);
     }
-
-    saveBoutiqueCart(cart);
-    window.location.href = "checkout.html";
 };
 
 function showAddToCartToast(productTitle) {
@@ -1443,16 +1546,16 @@ function showAddToCartToast(productTitle) {
                 <button onclick="window.scrollToDepartments(); this.closest('#cart-notification-toast').classList.add('hidden');" class="flex-1 bg-slate-800 hover:bg-slate-700 text-cyan-300 font-mono text-[11px] font-bold py-2 px-2.5 rounded-xl border border-cyan-500/40 cursor-pointer min-h-[44px]">
                     <i class="fa-solid fa-layer-group"></i> Más Productos
                 </button>
-                <a href="checkout.html" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-[11px] font-black py-2 px-2.5 rounded-xl flex items-center justify-center gap-1 shadow cursor-pointer min-h-[44px]">
-                    <i class="fa-solid fa-cart-shopping"></i> Ir a Pagar
-                </a>
+                <button onclick="window.toggleCartDrawer(true); this.closest('#cart-notification-toast').classList.add('hidden');" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-[11px] font-black py-2 px-2.5 rounded-xl flex items-center justify-center gap-1 shadow cursor-pointer min-h-[44px]">
+                    <i class="fa-solid fa-cart-shopping"></i> Ver Carrito
+                </button>
             </div>
         </div>
     `;
     toast.classList.remove("hidden");
     setTimeout(() => {
         if (toast) toast.classList.add("hidden");
-    }, 6000);
+    }, 4500);
 }
 
 // Modal Ficha Técnica (PDP) 100% Nativo PC Custom Lab
@@ -1542,10 +1645,10 @@ window.openProductDetailModal = function(sku) {
                     </div>
 
                     <div class="flex gap-2 pt-2">
-                        <button onclick="${p.isAgotado ? `window.open('https://wa.me/523337271440?text=Hola,%20me%20interesa%20apartar%20bajo%20pedido%20el%20producto:%20${p.sku}', '_blank')` : `addToCartCT('${p.sku}'); closeProductDetailModal();`}" class="flex-1 ${p.isAgotado ? 'bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/40' : 'bg-blue-600 hover:bg-blue-500 text-white shadow'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer min-h-[44px]">
+                        <button onclick="${p.isAgotado ? `window.open('https://wa.me/523337271440?text=Hola,%20me%20interesa%20apartar%20bajo%20pedido%20el%20producto:%20${p.sku}', '_blank')` : `addToCartCT('${p.sku}', event); closeProductDetailModal();`}" class="flex-1 ${p.isAgotado ? 'bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/40' : 'bg-blue-600 hover:bg-blue-500 text-white shadow'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer min-h-[44px]">
                             <i class="fa-solid ${p.isAgotado ? 'fa-clock' : 'fa-cart-plus'}"></i> <span>${p.isAgotado ? 'Apartar Bajo Pedido' : '+ Carrito'}</span>
                         </button>
-                        <button onclick="${p.isAgotado ? `window.open('https://wa.me/523337271440?text=Hola,%20cotizar%20bajo%20pedido:%20${p.sku}', '_blank')` : `buyNowCT('${p.sku}');`}" class="flex-1 ${p.isAgotado ? 'bg-amber-600 hover:bg-amber-500 text-slate-950' : 'bg-emerald-600 hover:bg-emerald-500 text-white'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 shadow transition cursor-pointer min-h-[44px]">
+                        <button onclick="${p.isAgotado ? `window.open('https://wa.me/523337271440?text=Hola,%20cotizar%20bajo%20pedido:%20${p.sku}', '_blank')` : `buyNowCT('${p.sku}', event); closeProductDetailModal();`}" class="flex-1 ${p.isAgotado ? 'bg-amber-600 hover:bg-amber-500 text-slate-950' : 'bg-emerald-600 hover:bg-emerald-500 text-white'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 shadow transition cursor-pointer min-h-[44px]">
                             <i class="fa-solid ${p.isAgotado ? 'fa-file-invoice-dollar' : 'fa-bolt'}"></i> <span>${p.isAgotado ? 'Cotizar Pieza' : 'Comprar Ahora'}</span>
                         </button>
                     </div>

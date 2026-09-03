@@ -103,29 +103,33 @@
             </a>
 
             <div class="flex-1 max-w-2xl relative">
-                <form onsubmit="event.preventDefault(); window.executeSearchQuery(document.getElementById('boutiqueSearchInput').value);" class="flex items-center bg-white rounded-xl border border-slate-300 shadow-inner px-3 py-1.5">
+                <form onsubmit="event.preventDefault(); window.executeSearchQuery(document.querySelector('#main-search-input, #boutiqueSearchInput').value);" class="flex items-center bg-white rounded-xl border border-slate-300 shadow-inner px-3 py-1.5">
                     <i class="fa-solid fa-magnifying-glass text-slate-400 text-sm mr-2 shrink-0"></i>
                     <input 
                         type="search" 
-                        id="boutiqueSearchInput" 
+                        id="main-search-input" 
+                        name="q"
                         placeholder="Encuentra rápido aquí y compra con un solo clic" 
                         class="w-full bg-transparent text-slate-900 placeholder-slate-400 text-xs sm:text-sm outline-none font-medium" 
                         onkeydown="if(event.key === 'Enter') { event.preventDefault(); window.executeSearchQuery(this.value); }"
                     />
-                    <button type="submit" onclick="window.executeSearchQuery(document.getElementById('boutiqueSearchInput').value);" class="bg-blue-700 hover:bg-blue-600 text-white font-mono font-black px-3 py-1 rounded-lg text-xs uppercase tracking-wider shadow shrink-0 cursor-pointer">
+                    <button type="submit" onclick="window.executeSearchQuery(document.querySelector('#main-search-input, #boutiqueSearchInput').value);" class="bg-blue-700 hover:bg-blue-600 text-white font-mono font-black px-3 py-1 rounded-lg text-xs uppercase tracking-wider shadow shrink-0 cursor-pointer">
                         Buscar
                     </button>
                 </form>
-                <div id="boutique-autocomplete-box" class="absolute top-full left-0 w-full bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl mt-1.5 p-2 z-[100] hidden max-h-96 overflow-y-auto no-scrollbar"></div>
+                <!-- Cortina Flotante del Buscador Predictivo en Vivo (#search-results-dropdown) -->
+                <div id="search-results-dropdown" class="absolute top-full left-0 w-full bg-slate-900/95 border border-cyan-500/40 rounded-2xl shadow-2xl mt-1.5 p-2 z-50 hidden max-h-[480px] overflow-y-auto no-scrollbar backdrop-blur-md"></div>
+                <div id="boutique-autocomplete-box" class="hidden"></div>
             </div>
 
-            <a href="checkout.html" class="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 border border-cyan-500/40 text-white px-3 py-1.5 rounded-xl font-mono text-xs font-bold transition shrink-0 shadow">
+            <!-- Botón del Carrito en el Header (#btn-header-cart) que despliega el Slide-Over Drawer -->
+            <button type="button" id="btn-header-cart" onclick="window.toggleCartDrawer(true)" class="flex items-center gap-2 bg-slate-900 hover:bg-slate-850 border border-cyan-500/40 text-white px-3 py-1.5 rounded-xl font-mono text-xs font-bold transition shrink-0 shadow cursor-pointer">
                 <div class="relative">
                     <i class="fa-solid fa-cart-shopping text-cyan-400 text-sm"></i>
                     <span id="boutique-cart-badge" class="absolute -top-2 -right-2 bg-amber-400 text-slate-950 text-[9px] font-black w-4 h-4 rounded-full flex items-center justify-center">0</span>
                 </div>
                 <span id="boutique-cart-total" class="hidden sm:inline text-amber-400 font-bold">$0.00 MXN</span>
-            </a>
+            </button>
         </div>
     </header>
 
@@ -361,9 +365,61 @@
     
 
 
-    <script src="js/ct-catalog-data.js?v=20260903_v21_f5"></script>
-    <script src="js/ct-exact-catalog-engine.js?v=20260903_v21_f5"></script>
-    
+    <!-- BACKDROP OSCURO DEL CARRITO SLIDE-OVER (#cart-backdrop) -->
+    <div id="cart-backdrop" onclick="window.toggleCartDrawer(false)" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-[250] hidden transition-opacity duration-300 opacity-0"></div>
+
+    <!-- PANEL LATERAL DESLIZANTE (#cart-slide-drawer) -->
+    <aside id="cart-slide-drawer" class="fixed top-0 right-0 h-full w-full sm:w-[440px] max-w-full bg-slate-900 border-l border-cyan-500/40 shadow-2xl z-[260] flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out">
+        <!-- Cabecera del Drawer -->
+        <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-950/90">
+            <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-400">
+                    <i class="fa-solid fa-cart-shopping text-sm"></i>
+                </div>
+                <div>
+                    <h2 class="text-white font-mono font-bold text-sm uppercase tracking-wide">Tu Carrito de Compras</h2>
+                    <span id="drawer-cart-count" class="text-[10px] font-mono text-slate-400">0 artículos seleccionados</span>
+                </div>
+            </div>
+            <button id="btn-close-cart" type="button" onclick="window.toggleCartDrawer(false)" aria-label="Cerrar Carrito" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-red-950 text-slate-300 hover:text-red-400 flex items-center justify-center transition cursor-pointer">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+        </div>
+
+        <!-- Cuerpo del Drawer con scroll interno -->
+        <div id="drawer-cart-items" class="flex-1 overflow-y-auto p-4 space-y-3 divide-y divide-slate-800/60 no-scrollbar"></div>
+
+        <!-- Pie Fijo del Drawer (Sticky Footer) -->
+        <div class="p-4 border-t border-slate-800 bg-slate-950 space-y-3">
+            <div class="space-y-1.5 font-mono text-xs">
+                <div class="flex justify-between text-slate-400">
+                    <span>Subtotal:</span>
+                    <span id="drawer-cart-subtotal" class="font-bold text-white">$0.00 MXN</span>
+                </div>
+                <div class="flex justify-between text-slate-400 text-[11px]">
+                    <span>IVA (16% Incluido):</span>
+                    <span id="drawer-cart-iva" class="text-slate-300">$0.00 MXN</span>
+                </div>
+                <div class="flex justify-between text-sm pt-2 border-t border-slate-800 text-white font-black">
+                    <span class="text-cyan-300">Total Neto:</span>
+                    <span id="drawer-cart-total" class="text-emerald-400 font-mono text-base">$0.00 MXN</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2 pt-1">
+                <a href="checkout.html" class="w-full bg-gradient-to-r from-emerald-600 via-cyan-600 to-blue-600 hover:from-emerald-500 hover:to-cyan-500 text-white font-mono font-black py-3 rounded-xl uppercase text-xs tracking-wider flex items-center justify-center gap-2 shadow-lg cursor-pointer transition active:scale-95 text-center min-h-[44px]">
+                    <i class="fa-solid fa-credit-card"></i> Finalizar Pedido / Pagar
+                </a>
+                <button type="button" onclick="window.toggleCartDrawer(false)" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white font-mono font-bold py-2.5 rounded-xl uppercase text-[11px] transition cursor-pointer border border-slate-700 min-h-[40px]">
+                    Seguir Comprando
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <script src="js/ct-catalog-data.js?v=20260903_v22"></script>
+    <script src="js/cart.js?v=20260903_v22"></script>
+    <script src="js/ct-exact-catalog-engine.js?v=20260903_v22"></script>
     <script src="js/ux-engine.js"></script>
 </body>
 </html>
