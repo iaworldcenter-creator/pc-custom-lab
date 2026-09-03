@@ -453,7 +453,14 @@ function getFilteredList() {
         } else if (currentSortCriterion === 'nombre') {
             return (a.nombre || '').localeCompare(b.nombre || '');
         } else {
-            // Destacados / Relevancia (PCs de escritorio primero, luego Mini PCs, Laptops, etc.)
+            // Destacados / Relevancia:
+            // Si estamos dentro de un departamento, agrupar estrictamente por sub-conjunto (puros M.2 juntos, puros SATA juntos, etc.)
+            if (activeSelectedCategory !== 'Todas') {
+                const subDiff = (a.subgrupo_orden || 50) - (b.subgrupo_orden || 50);
+                if (subDiff !== 0) return subDiff;
+                return (b.precio_mxn || b.precio || 0) - (a.precio_mxn || a.precio || 0);
+            }
+            // En Vitrina General (Todas): Computadoras de escritorio, laptops y sistemas completos primero
             const prioDiff = (a.sort_priority || 50) - (b.sort_priority || 50);
             if (prioDiff !== 0) return prioDiff;
             return (b.precio_mxn || b.precio || 0) - (a.precio_mxn || a.precio || 0);
@@ -621,6 +628,9 @@ function renderExactCatalogView() {
             const cdnCloudfront = `https://d22k14p2jfj20i.cloudfront.net/items/${sku}.jpg`;
             const placeholder = getPlaceholderForCat(cat);
 
+            const isAgotado = p.agotado === true;
+            const subLabel = p.subgrupo_label || '';
+
             return `
                 <article class="bg-slate-900/95 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-3.5 flex flex-col justify-between transition group shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden text-slate-100">
                     <div class="absolute -top-7 -left-7 w-16 h-16 bg-gradient-to-br from-red-600 to-amber-600 rotate-[-45deg] flex items-end justify-center pb-0.5 shadow-md z-10">
@@ -628,7 +638,7 @@ function renderExactCatalogView() {
                     </div>
 
                     <div>
-                        <!-- Foto Grande -->
+                        <!-- Foto Grande 1200x1200 WebP -->
                         <div onclick="openProductDetailModal('${sku}')" class="w-full aspect-square bg-slate-950/90 border border-slate-800/80 rounded-xl p-2 mb-2.5 group-hover:border-cyan-500/40 transition cursor-pointer flex items-center justify-center">
                             <img 
                                 src="${localImg}" 
@@ -642,6 +652,14 @@ function renderExactCatalogView() {
                             />
                         </div>
 
+                        ${subLabel ? `
+                            <div class="text-center mb-1">
+                                <span class="inline-block bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 text-[9px] font-mono font-bold px-2 py-0.5 rounded-full">
+                                    ${subLabel}
+                                </span>
+                            </div>
+                        ` : ''}
+
                         <!-- Precios Claros -->
                         <div class="text-center mb-1.5">
                             <span class="text-sm font-black text-emerald-300 block font-mono tracking-tight drop-shadow-[0_0_8px_rgba(52,211,153,0.3)]">
@@ -653,8 +671,11 @@ function renderExactCatalogView() {
                             </div>
                         </div>
 
-                        <div class="text-center text-[9px] text-cyan-300 font-mono font-bold mb-1 flex items-center justify-center gap-1">
-                            <i class="fa-solid fa-truck-bolt text-[10px]" aria-hidden="true"></i> Disponible en Pedro Moreno 501 A
+                        <div class="text-center text-[9px] font-mono font-bold mb-1 flex items-center justify-center gap-1">
+                            ${isAgotado 
+                                ? `<span class="text-amber-400"><i class="fa-solid fa-clock mr-0.5"></i> Bajo Pedido (Próxima Existencia)</span>`
+                                : `<span class="text-cyan-300"><i class="fa-solid fa-truck-bolt mr-0.5"></i> Disponible en Pedro Moreno 501 A</span>`
+                            }
                         </div>
 
                         <h3 onclick="openProductDetailModal('${sku}')" class="text-slate-100 text-xs font-semibold text-center line-clamp-2 leading-tight hover:text-cyan-300 transition mb-1 cursor-pointer" title="${title}">
@@ -677,19 +698,19 @@ function renderExactCatalogView() {
                                 <i class="fa-solid fa-file-lines text-xs"></i> <span>Ficha</span>
                             </button>
                             <button 
-                                onclick="addToCartCT('${sku}')" 
+                                onclick="${isAgotado ? `openProductDetailModal('${sku}')` : `addToCartCT('${sku}')`}" 
                                 aria-label="Agregar ${title} al carrito" 
-                                class="btn-action flex-1 bg-blue-600 hover:bg-blue-500 text-white font-mono text-[10.5px] font-bold rounded-xl py-2 transition active:scale-95 shadow cursor-pointer min-h-[40px] flex items-center justify-center gap-1"
+                                class="btn-action flex-1 ${isAgotado ? 'bg-slate-800 text-slate-400 border border-slate-700' : 'bg-blue-600 hover:bg-blue-500 text-white shadow active:scale-95'} font-mono text-[10.5px] font-bold rounded-xl py-2 transition cursor-pointer min-h-[40px] flex items-center justify-center gap-1"
                             >
-                                <i class="fa-solid fa-cart-plus text-xs"></i> <span>+ Carrito</span>
+                                <i class="fa-solid ${isAgotado ? 'fa-clock' : 'fa-cart-plus'} text-xs"></i> <span>${isAgotado ? 'Apartar' : '+ Carrito'}</span>
                             </button>
                         </div>
                         <button 
-                            onclick="buyNowCT('${sku}')" 
+                            onclick="${isAgotado ? `openProductDetailModal('${sku}')` : `buyNowCT('${sku}')`}" 
                             aria-label="Comprar ${title} ahora" 
-                            class="btn-action w-full bg-gradient-to-r from-emerald-600 via-cyan-600 to-blue-600 hover:from-emerald-500 hover:to-cyan-500 text-white font-mono text-[11px] font-black rounded-xl py-2.5 uppercase tracking-wider flex items-center justify-center gap-1.5 transition active:scale-95 shadow-lg cursor-pointer min-h-[44px]"
+                            class="btn-action w-full ${isAgotado ? 'bg-slate-800 hover:bg-slate-750 text-amber-300 border border-amber-500/40' : 'bg-gradient-to-r from-emerald-600 via-cyan-600 to-blue-600 hover:from-emerald-500 hover:to-cyan-500 text-white shadow-lg active:scale-95'} font-mono text-[11px] font-black rounded-xl py-2.5 uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer min-h-[44px]"
                         >
-                            <i class="fa-solid fa-bolt text-yellow-300"></i> <span>Comprar Ahora</span>
+                            <i class="fa-solid ${isAgotado ? 'fa-hourglass-half text-amber-300' : 'fa-bolt text-yellow-300'}"></i> <span>${isAgotado ? 'Bajo Pedido' : 'Comprar Ahora'}</span>
                         </button>
                     </div>
                 </article>
@@ -705,7 +726,8 @@ function renderExactCatalogView() {
             const original = p.precio_original || (price * 1.33);
             const mayoreo = p.precio_mayoreo_10pzs || (price * 0.93);
             const localImg = `assets/img/${sku}.webp`;
-            const placeholder = getPlaceholderForCat(cat);
+            const isAgotado = p.agotado === true;
+            const subLabel = p.subgrupo_label || '';
 
             return `
                 <article class="bg-slate-900/95 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition group shadow-xl relative overflow-hidden text-slate-100">
@@ -713,9 +735,14 @@ function renderExactCatalogView() {
                         <img src="${localImg}" alt="${title}" width="120" height="120" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${sku}', '${cat}')" />
                     </div>
                     <div class="flex-1 min-w-0 text-left">
-                        <span class="text-[10px] font-mono text-cyan-400 font-bold uppercase tracking-wider block mb-1">${cat.replace(/_/g, ' ')} • SKU: ${sku}</span>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-mono text-cyan-400 font-bold uppercase tracking-wider block">${cat.replace(/_/g, ' ')} • SKU: ${sku}</span>
+                            ${subLabel ? `<span class="bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 text-[9px] font-mono px-2 py-0.5 rounded-full font-bold">${subLabel}</span>` : ''}
+                        </div>
                         <h3 onclick="openProductDetailModal('${sku}')" class="text-xs sm:text-sm font-bold text-slate-100 hover:text-cyan-300 transition line-clamp-2 cursor-pointer mb-1.5">${title}</h3>
-                        <div class="text-[11px] font-mono text-slate-400">Entrega Inmediata en Pedro Moreno 501 A • Garantía 48h Directa</div>
+                        <div class="text-[11px] font-mono ${isAgotado ? 'text-amber-400' : 'text-slate-400'}">
+                            ${isAgotado ? '<i class="fa-solid fa-clock"></i> Bajo Pedido hasta su próxima existencia' : 'Entrega Inmediata en Pedro Moreno 501 A • Garantía 48h Directa'}
+                        </div>
                     </div>
                     <div class="flex sm:flex-col items-center sm:items-end justify-between w-full sm:w-48 border-t sm:border-t-0 sm:border-l border-slate-800 pt-2 sm:pt-0 sm:pl-4 shrink-0 space-y-2">
                         <div class="text-right">
@@ -723,11 +750,11 @@ function renderExactCatalogView() {
                             <div class="text-sm sm:text-base font-black text-emerald-400 font-mono">${window.formatPriceDisplay(price, p.precio_usd)}</div>
                         </div>
                         <div class="flex gap-1.5 w-full">
-                            <button onclick="addToCartCT('${sku}')" class="flex-1 bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 rounded-xl text-[10.5px] font-mono uppercase flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer min-h-[40px]">
-                                <i class="fa-solid fa-cart-plus"></i> +Carrito
+                            <button onclick="${isAgotado ? `openProductDetailModal('${sku}')` : `addToCartCT('${sku}')`}" class="flex-1 ${isAgotado ? 'bg-slate-800 text-slate-400' : 'bg-blue-600 hover:bg-blue-500 text-white'} font-bold py-2 rounded-xl text-[10.5px] font-mono uppercase flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer min-h-[40px]">
+                                <i class="fa-solid ${isAgotado ? 'fa-clock' : 'fa-cart-plus'}"></i> ${isAgotado ? 'Bajo Pedido' : '+Carrito'}
                             </button>
-                            <button onclick="buyNowCT('${sku}')" class="flex-1 bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white font-black py-2 rounded-xl text-[10.5px] font-mono uppercase flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer min-h-[40px]">
-                                <i class="fa-solid fa-bolt"></i> Comprar
+                            <button onclick="${isAgotado ? `openProductDetailModal('${sku}')` : `buyNowCT('${sku}')`}" class="flex-1 ${isAgotado ? 'bg-slate-800 text-amber-300 border border-amber-500/40' : 'bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white'} font-black py-2 rounded-xl text-[10.5px] font-mono uppercase flex items-center justify-center gap-1 transition active:scale-95 shadow cursor-pointer min-h-[40px]">
+                                <i class="fa-solid ${isAgotado ? 'fa-hourglass-half' : 'fa-bolt'}"></i> ${isAgotado ? 'Apartar' : 'Comprar'}
                             </button>
                         </div>
                     </div>
@@ -1326,11 +1353,32 @@ window.openProductDetailModal = function(sku) {
 
             <div class="flex flex-col justify-between space-y-4">
                 <div>
-                    <span class="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider block mb-1">
-                        ${cat.replace(/_/g, ' ')} • SKU: ${sku}
-                    </span>
+                    <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                        <span class="text-xs font-mono text-cyan-400 font-bold uppercase tracking-wider block">
+                            ${cat.replace(/_/g, ' ')} • SKU: ${sku}
+                        </span>
+                        ${p.subgrupo_label ? `
+                            <span class="bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 text-[10px] font-mono px-2 py-0.5 rounded-full font-bold">
+                                ${p.subgrupo_label}
+                            </span>
+                        ` : ''}
+                        <span class="bg-slate-800 text-slate-300 text-[10px] font-mono px-2 py-0.5 rounded-full">
+                            Marca: ${p.marca || 'CT'}
+                        </span>
+                    </div>
+
                     <h2 class="text-base sm:text-lg font-bold text-white leading-snug mb-2">${title}</h2>
-                    <p class="text-xs text-slate-300 leading-relaxed max-h-48 overflow-y-auto">${desc}</p>
+
+                    <div class="bg-slate-950/80 rounded-xl p-3 border border-slate-800/80 text-xs text-slate-300 leading-relaxed max-h-48 overflow-y-auto space-y-2 mb-2">
+                        <div class="font-bold text-cyan-300 font-mono uppercase text-[11px]"><i class="fa-solid fa-list-check mr-1"></i> Especificaciones Técnicas:</div>
+                        <p>${desc}</p>
+                    </div>
+
+                    <!-- Enlace a Ficha Técnica Oficial CT Online -->
+                    <a href="${p.url_ficha_ct || ('https://ctonline.mx/buscar/productos?b=' + sku)}" target="_blank" rel="noopener" class="w-full bg-slate-900/90 hover:bg-slate-800 text-cyan-300 hover:text-white border border-cyan-500/40 font-mono font-bold rounded-xl text-xs py-2.5 px-3 flex items-center justify-center gap-2 transition cursor-pointer shadow">
+                        <i class="fa-solid fa-arrow-up-right-from-square text-cyan-400"></i>
+                        <span>Consultar Ficha Técnica Oficial en CT Online</span>
+                    </a>
                 </div>
 
                 <div class="p-4 bg-slate-950 rounded-2xl border border-slate-800 space-y-3">
@@ -1344,17 +1392,24 @@ window.openProductDetailModal = function(sku) {
                         </span>
                     </div>
 
-                    <div class="text-[11px] font-mono text-slate-400 space-y-1">
-                        <div><i class="fa-solid fa-shield-check text-emerald-400 mr-1"></i> Garantía 48h Directa / 1 Año Fabricante</div>
-                        <div><i class="fa-solid fa-location-dot text-cyan-400 mr-1"></i> Entrega Inmediata en Pedro Moreno 501 A</div>
+                    <div class="text-[11px] font-mono text-slate-400 space-y-1.5">
+                        ${p.agotado ? `
+                            <div class="p-2.5 rounded-xl bg-amber-950/40 border border-amber-500/40 text-amber-300 font-mono text-xs flex items-center gap-2">
+                                <i class="fa-solid fa-clock-rotate-left text-base"></i>
+                                <span>Disponibilidad: <strong>Bajo Pedido (hasta su próxima existencia en almacén de fábrica)</strong></span>
+                            </div>
+                        ` : `
+                            <div><i class="fa-solid fa-shield-check text-emerald-400 mr-1"></i> Garantía 48h Directa / 1 Año Fabricante</div>
+                            <div><i class="fa-solid fa-location-dot text-cyan-400 mr-1"></i> Entrega Inmediata en Pedro Moreno 501 A</div>
+                        `}
                     </div>
 
                     <div class="flex gap-2 pt-2">
-                        <button onclick="addToCartCT('${sku}'); closeProductDetailModal();" class="flex-1 bg-blue-600 hover:bg-blue-500 text-white font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 shadow transition cursor-pointer min-h-[44px]">
-                            <i class="fa-solid fa-cart-plus"></i> <span>+ Carrito</span>
+                        <button onclick="${p.agotado ? `window.open('https://wa.me/523337271440?text=Hola,%20me%20interesa%20apartar%20bajo%20pedido%20el%20producto:%20${sku}', '_blank')` : `addToCartCT('${sku}'); closeProductDetailModal();`}" class="flex-1 ${p.agotado ? 'bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/40' : 'bg-blue-600 hover:bg-blue-500 text-white shadow'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer min-h-[44px]">
+                            <i class="fa-solid ${p.agotado ? 'fa-clock' : 'fa-cart-plus'}"></i> <span>${p.agotado ? 'Apartar Bajo Pedido' : '+ Carrito'}</span>
                         </button>
-                        <button onclick="buyNowCT('${sku}');" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 shadow transition cursor-pointer min-h-[44px]">
-                            <i class="fa-solid fa-bolt"></i> <span>Comprar Ahora</span>
+                        <button onclick="${p.agotado ? `window.open('https://wa.me/523337271440?text=Hola,%20cotizar%20bajo%20pedido:%20${sku}', '_blank')` : `buyNowCT('${sku}');`}" class="flex-1 ${p.agotado ? 'bg-amber-600 hover:bg-amber-500 text-slate-950' : 'bg-emerald-600 hover:bg-emerald-500 text-white'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 shadow transition cursor-pointer min-h-[44px]">
+                            <i class="fa-solid ${p.agotado ? 'fa-file-invoice-dollar' : 'fa-bolt'}"></i> <span>${p.agotado ? 'Cotizar Pieza' : 'Comprar Ahora'}</span>
                         </button>
                     </div>
                 </div>
