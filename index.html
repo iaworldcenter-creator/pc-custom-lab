@@ -108,7 +108,7 @@
                     <input 
                         type="search" 
                         id="boutiqueSearchInput" 
-                        placeholder="Encuentra aquí y compra lo que necesitas en un solo clic" 
+                        placeholder="Encuentra rápido aquí y compra con un solo clic" 
                         class="w-full bg-transparent text-slate-900 placeholder-slate-400 text-xs sm:text-sm outline-none font-medium" 
                         onkeydown="if(event.key === 'Enter') { event.preventDefault(); window.executeSearchQuery(this.value); }"
                     />
@@ -157,6 +157,9 @@
                         Ver Catálogo
                     </button>
                 </div>
+
+                <!-- CONTENEDOR WELCOME HUB: HUB INTERACTIVO DE DEPARTAMENTOS -->
+                <div id="welcome-hub-container" class="w-full"></div>
 
                 <!-- Barra Superior de Control (Resultados + Alternador Vista + Paginación 1..7...50 + Ordenar) -->
                 <div class="p-3.5 bg-slate-900/95 border border-slate-800 rounded-2xl shadow-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-white">

@@ -296,7 +296,7 @@ window.selectSubChipFilter = function(chipId) {
     window.scrollToResults();
 };
 
-// Inicialización instantánea
+// Inicialización instantánea con protección anti-pantalla en blanco
 function initFullCatalog() {
     if (window.activeCurrency === 'USD') {
         const btnMxn = document.getElementById('currencyToggleMXN');
@@ -306,19 +306,130 @@ function initFullCatalog() {
             btnMxn.className = 'px-2 py-0.5 rounded-full text-slate-300 hover:text-white transition cursor-pointer';
         }
     }
-    if (window.CT_CATALOG_DATA && Array.isArray(window.CT_CATALOG_DATA) && window.CT_CATALOG_DATA.length > 0) {
-        isFullCatalogLoaded = true;
-        renderSidebarFacets();
-        renderExactCatalogView();
+
+    const checkAndRender = () => {
+        const data = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL;
+        if (data && Array.isArray(data) && data.length > 0) {
+            window.CT_CATALOG_DATA = data;
+            isFullCatalogLoaded = true;
+            renderSidebarFacets();
+            renderExactCatalogView();
+            return true;
+        }
+        return false;
+    };
+
+    if (!checkAndRender()) {
+        const container = document.getElementById("products-grid-container");
+        if (container) {
+            container.className = "w-full py-20 text-center text-cyan-300 font-mono text-sm bg-slate-900/90 border border-cyan-500/30 rounded-2xl shadow-2xl flex flex-col items-center justify-center gap-4";
+            container.innerHTML = `
+                <div class="relative w-16 h-16 flex items-center justify-center">
+                    <div class="w-16 h-16 border-4 border-cyan-500/20 border-t-cyan-400 rounded-full animate-spin"></div>
+                    <i class="fa-solid fa-microchip text-cyan-400 text-xl absolute"></i>
+                </div>
+                <div>
+                    <h3 class="text-base font-bold text-white tracking-wider uppercase mb-1">Cargando Catálogo Maestro PC Custom Lab...</h3>
+                    <p class="text-xs text-slate-400 font-mono">Indexando productos oficiales listos para compra inmediata</p>
+                </div>
+            `;
+        }
+
+        let attempts = 0;
+        const interval = setInterval(() => {
+            attempts++;
+            if (checkAndRender() || attempts > 100) {
+                clearInterval(interval);
+            }
+        }, 40);
+    }
+}
+
+// RENDERIZADO DEL WELCOME HUB (HUB DE DEPARTAMENTOS EN PANTALLA DE BIENVENIDA)
+function renderWelcomeHub() {
+    const hubContainer = document.getElementById("welcome-hub-container");
+    if (!hubContainer) return;
+
+    if (activeSelectedCategory !== 'Todas' || (activeSearchQuery && activeSearchQuery.trim() !== '') || currentPageNumber > 1) {
+        hubContainer.innerHTML = '';
+        hubContainer.classList.add("hidden");
         return;
     }
-    if (window.CT_CATALOG_DATA_INITIAL && Array.isArray(window.CT_CATALOG_DATA_INITIAL)) {
-        window.CT_CATALOG_DATA = window.CT_CATALOG_DATA_INITIAL;
-        isFullCatalogLoaded = true;
-        renderSidebarFacets();
-        renderExactCatalogView();
-        return;
-    }
+
+    const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
+    const getCount = (id) => all.filter(p => (p.categoria_clasificada || '').toLowerCase() === id.toLowerCase()).length;
+
+    const hubDepts = [
+        { id: 'procesadores', name: '1. Procesadores (CPUs)', icon: 'fa-microchip', color: 'from-blue-600 to-cyan-600', badge: 'Intel & AMD Ryzen' },
+        { id: 'tarjetas_madre', name: '2. Tarjetas Madre', icon: 'fa-chess-board', color: 'from-indigo-600 to-blue-600', badge: 'AM5, LGA1851, LGA1700' },
+        { id: 'memorias_ram_pc', name: '3. Memorias RAM', icon: 'fa-memory', color: 'from-emerald-600 to-teal-600', badge: 'DDR5 & DDR4 DIMM' },
+        { id: 'gabinetes', name: '4. Gabinetes Gamer', icon: 'fa-server', color: 'from-amber-600 to-orange-600', badge: 'Cristal Templado & ARGB' },
+        { id: 'tarjetas_video', name: '5. Tarjetas de Video (GPUs)', icon: 'fa-vr-cardboard', color: 'from-purple-600 to-pink-600', badge: 'GeForce RTX & Radeon' },
+        { id: 'enfriamiento', name: '6. Sistemas de Enfriamiento', icon: 'fa-fan', color: 'from-cyan-600 to-blue-500', badge: 'Líquido AIO & Disipadores' },
+        { id: 'almacenamiento_ssd', name: '7. Almacenamiento SSD & HDDs', icon: 'fa-hard-drive', color: 'from-sky-600 to-indigo-600', badge: 'M.2 NVMe PCIe 4.0/5.0' },
+        { id: 'fuentes_energia', name: '8. Fuentes de Poder Certificadas', icon: 'fa-bolt', color: 'from-yellow-600 to-amber-600', badge: '80 Plus Gold & Bronze' },
+        { id: 'monitores', name: '9. Monitores & Pantallas PC', icon: 'fa-desktop', color: 'from-rose-600 to-red-600', badge: 'Gamer 144Hz - 240Hz & 4K' },
+        { id: 'computadoras_ensambladas', name: '10. PCs Armadas & Laptops', icon: 'fa-computer', color: 'from-cyan-500 to-emerald-600', badge: 'Gaming & Workstations' },
+        { id: 'proyectores_presentacion', name: '11. Proyectores & Pantallas', icon: 'fa-video', color: 'from-violet-600 to-purple-700', badge: 'BenQ, Epson & Láser' },
+        { id: 'conectividad_redes', name: '12. Redes & Telecomunicaciones', icon: 'fa-wifi', color: 'from-blue-700 to-indigo-800', badge: 'WiFi 6/7, Switches & Fibra' },
+        { id: 'seguridad_cctv', name: '13. CCTV & Videovigilancia', icon: 'fa-shield-halved', color: 'from-slate-700 to-cyan-900', badge: 'Cámaras IP, DVRs & NVRs' },
+        { id: 'reguladores_ups', name: '14. Energía, UPS & Reguladores', icon: 'fa-car-battery', color: 'from-emerald-700 to-green-900', badge: 'Respaldo Eléctrico No-Break' },
+        { id: 'limpieza_mantenimiento', name: '15. Limpieza & Mantenimiento', icon: 'fa-spray-can-sparkles', color: 'from-teal-600 to-cyan-700', badge: 'Aire Comprimido & Espumas' }
+    ];
+
+    hubContainer.classList.remove("hidden");
+    hubContainer.innerHTML = `
+        <div class="bg-slate-900/95 border border-cyan-500/40 rounded-2xl p-4 sm:p-5 shadow-2xl space-y-4 mb-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-slate-950 font-black shadow-md">
+                        <i class="fa-solid fa-cubes text-base"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-white font-black text-sm sm:text-base tracking-wide font-mono uppercase">
+                            WELCOME HUB • NAVEGACIÓN RÁPIDA POR DEPARTAMENTO
+                        </h2>
+                        <p class="text-[11px] text-slate-400 font-mono">
+                            Haz clic en cualquier categoría para desplegar su catálogo de ensamble con entrega inmediata
+                        </p>
+                    </div>
+                </div>
+                <span class="text-xs font-mono font-bold bg-cyan-950 text-cyan-300 border border-cyan-500/40 px-3 py-1 rounded-full w-fit">
+                    ${all.length.toLocaleString('es-MX')} Productos en Catálogo
+                </span>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2.5 sm:gap-3">
+                ${hubDepts.map(d => {
+                    const count = getCount(d.id);
+                    return `
+                        <button 
+                            type="button" 
+                            onclick="window.selectCategoryFacet('${d.id}')" 
+                            class="btn-action group text-left p-3 rounded-xl bg-slate-950/90 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400 transition-all duration-200 shadow-md hover:shadow-cyan-500/20 flex flex-col justify-between min-h-[92px] cursor-pointer"
+                        >
+                            <div class="flex items-center justify-between w-full mb-1">
+                                <div class="w-8 h-8 rounded-lg bg-gradient-to-br ${d.color} flex items-center justify-center text-white text-xs shadow-sm group-hover:scale-110 transition">
+                                    <i class="fa-solid ${d.icon}"></i>
+                                </div>
+                                <span class="text-[9px] font-mono text-cyan-300 font-bold bg-cyan-950/80 px-1.5 py-0.5 rounded border border-cyan-500/30">
+                                    ${count.toLocaleString('es-MX')}
+                                </span>
+                            </div>
+                            <div>
+                                <h3 class="text-white group-hover:text-cyan-300 font-bold text-xs leading-snug line-clamp-1">
+                                    ${d.name}
+                                </h3>
+                                <span class="text-[9.5px] font-mono text-slate-400 block line-clamp-1">
+                                    ${d.badge}
+                                </span>
+                            </div>
+                        </button>
+                    `;
+                }).join('')}
+            </div>
+        </div>
+    `;
 }
 
 // Selección de categorías y auto-scroll instantáneo en celular y desktop
@@ -436,8 +547,8 @@ function getFilteredList() {
 
     items.sort((a, b) => {
         // Orden Primario: Los productos con fotografía comprobada van en las primeras páginas (1, 2, 3, 4...)
-        const aHasImg = (a.has_verified_image === true || a.distribuidor === 'CT Internacional') ? 1 : 0;
-        const bHasImg = (b.has_verified_image === true || b.distribuidor === 'CT Internacional') ? 1 : 0;
+        const aHasImg = (a.has_verified_image === true || a.distribuidor === 'PC Custom Lab Oficial' || a.distribuidor === 'CT Internacional') ? 1 : 0;
+        const bHasImg = (b.has_verified_image === true || b.distribuidor === 'PC Custom Lab Oficial' || b.distribuidor === 'CT Internacional') ? 1 : 0;
         
         if (aHasImg !== bHasImg) {
             return bHasImg - aHasImg; // Primero con imagen
@@ -532,8 +643,8 @@ window.handleProductImgError = function(imgEl, sku, cat) {
 };
 
 function renderExactCatalogView() {
-
-    // Renderizar barra de chips si estamos en Cables o Audio
+    // Renderizar Welcome Hub si estamos en inicio sin filtros
+    renderWelcomeHub();
     let chipsHtml = '';
     if (activeSelectedCategory === 'cables_adaptadores') {
         const cableChips = [
@@ -773,17 +884,93 @@ function renderPaginationBar(totalPages) {
         return;
     }
 
-    let html = `
-        <div class="flex items-center gap-1 font-mono text-xs">
-            <button onclick="goToPage(${currentPageNumber - 1})" ${currentPageNumber === 1 ? 'disabled class="p-1.5 rounded-lg text-slate-600 cursor-not-allowed min-h-[40px]"' : 'class="p-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition cursor-pointer min-h-[40px]"'} aria-label="Página anterior">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <span class="px-2.5 py-1 rounded-lg bg-cyan-950 text-cyan-300 border border-cyan-500/40 font-bold font-mono">
-                ${currentPageNumber} / ${totalPages}
-            </span>
-            <button onclick="goToPage(${currentPageNumber + 1})" ${currentPageNumber === totalPages ? 'disabled class="p-1.5 rounded-lg text-slate-600 cursor-not-allowed min-h-[40px]"' : 'class="p-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition cursor-pointer min-h-[40px]"'} aria-label="Página siguiente">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
+    const current = currentPageNumber;
+    const pages = [];
+    const delta = 2;
+    const left = Math.max(2, current - delta);
+    const right = Math.min(totalPages - 1, current + delta);
+
+    pages.push(1);
+    if (left > 2) {
+        pages.push('...');
+    }
+    for (let i = left; i <= right; i++) {
+        pages.push(i);
+    }
+    if (right < totalPages - 1) {
+        pages.push('...');
+    }
+    if (totalPages > 1) {
+        pages.push(totalPages);
+    }
+
+    const html = `
+        <div class="w-full flex flex-wrap items-center justify-between gap-3 font-mono text-xs text-white">
+            <!-- Botón Anterior -->
+            <div class="flex items-center gap-1.5">
+                <button 
+                    type="button"
+                    onclick="goToPage(${current - 1})" 
+                    ${current === 1 ? 'disabled class="px-3 py-2 rounded-xl bg-slate-800/40 text-slate-600 border border-slate-800 cursor-not-allowed text-xs font-bold min-h-[40px]"' : 'class="btn-action px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 hover:text-white border border-slate-700 hover:border-cyan-400 cursor-pointer text-xs font-bold transition shadow min-h-[40px] flex items-center gap-1"'}
+                    aria-label="Página anterior"
+                >
+                    <i class="fa-solid fa-chevron-left text-[11px]"></i>
+                    <span>Anterior</span>
+                </button>
+            </div>
+
+            <!-- Botones Numéricos Visibles [ 1 ] [ 2 ] [ 3 ] ... [ 15 ] [ 16 ] ... [ 728 ] -->
+            <div class="flex items-center gap-1 overflow-x-auto no-scrollbar py-1">
+                ${pages.map(p => {
+                    if (p === '...') {
+                        return `<span class="px-2 py-1 text-slate-500 font-bold select-none">...</span>`;
+                    }
+                    const isActive = p === current;
+                    return `
+                        <button 
+                            type="button" 
+                            onclick="goToPage(${p})" 
+                            class="btn-action min-w-[36px] h-9 px-2 rounded-xl text-xs font-bold transition flex items-center justify-center cursor-pointer border ${isActive ? 'bg-cyan-500 text-slate-950 border-cyan-400 font-black shadow-lg shadow-cyan-500/20 scale-105' : 'bg-slate-950/90 text-slate-300 hover:text-white hover:bg-slate-800 border-slate-800'}"
+                            aria-label="Ir a página ${p}"
+                        >
+                            ${p}
+                        </button>
+                    `;
+                }).join('')}
+            </div>
+
+            <!-- Salto Directo a Página y Botón Siguiente -->
+            <div class="flex items-center gap-2">
+                <div class="flex items-center gap-1.5 bg-slate-950 px-2.5 py-1.5 rounded-xl border border-slate-800 text-[11px] font-mono text-slate-400">
+                    <label for="pageJumpInput" class="text-[10.5px]">Ir a:</label>
+                    <input 
+                        type="number" 
+                        id="pageJumpInput"
+                        min="1" 
+                        max="${totalPages}" 
+                        value="${current}" 
+                        onkeydown="if(event.key==='Enter'){event.preventDefault(); goToPage(parseInt(this.value, 10));}"
+                        class="w-12 bg-slate-900 border border-slate-700 rounded-lg px-1.5 py-0.5 text-center text-white text-xs font-bold outline-none focus:border-cyan-400 font-mono"
+                    />
+                    <button 
+                        type="button" 
+                        onclick="const inp=this.previousElementSibling; if(inp){goToPage(parseInt(inp.value, 10));}"
+                        class="btn-action bg-blue-600 hover:bg-blue-500 text-white font-black px-2.5 py-1 rounded-lg text-[10px] uppercase cursor-pointer transition shadow"
+                    >
+                        Ir
+                    </button>
+                </div>
+
+                <button 
+                    type="button"
+                    onclick="goToPage(${current + 1})" 
+                    ${current === totalPages ? 'disabled class="px-3 py-2 rounded-xl bg-slate-800/40 text-slate-600 border border-slate-800 cursor-not-allowed text-xs font-bold min-h-[40px]"' : 'class="btn-action px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 hover:text-white border border-slate-700 hover:border-cyan-400 cursor-pointer text-xs font-bold transition shadow min-h-[40px] flex items-center gap-1"'}
+                    aria-label="Página siguiente"
+                >
+                    <span>Siguiente</span>
+                    <i class="fa-solid fa-chevron-right text-[11px]"></i>
+                </button>
+            </div>
         </div>
     `;
 
@@ -793,7 +980,7 @@ function renderPaginationBar(totalPages) {
 function goToPage(page) {
     const filtered = getFilteredList();
     const totalPages = Math.ceil(filtered.length / productsPerPage) || 1;
-    if (page < 1 || page > totalPages) return;
+    if (page < 1 || page > totalPages || isNaN(page)) return;
     currentPageNumber = page;
     renderExactCatalogView();
     const showcaseTarget = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
@@ -842,20 +1029,22 @@ function renderSidebarFacets() {
         { id: 'memorias_usb_flash', name: '💾 Memorias USB & Pendrives', icon: 'fa-usb' }
     ];
 
-    // BLOQUE 5: 🔌 CABLES, AUDIO & PERIFÉRICOS
+    // BLOQUE 5: 🔌 CABLES, LIMPIEZA & PERIFÉRICOS
     const block5 = [
         { id: 'cables_adaptadores', name: '🔌 Cables & Adaptadores', icon: 'fa-network-wired' },
         { id: 'audio_audifonos', name: '🎧 Audio, Diademas & Audífonos', icon: 'fa-headphones' },
+        { id: 'limpieza_mantenimiento', name: '🧹 Limpieza & Mantenimiento', icon: 'fa-spray-can-sparkles' },
         { id: 'accesorios_perifericos', name: '🎒 Accesorios & Maletines', icon: 'fa-bag-shopping' }
     ];
 
-    // BLOQUE 6: 🏢 SOLUCIONES COMERCIALES, REDES & IMPRESIÓN
+    // BLOQUE 6: 🏢 SOLUCIONES COMERCIALES, RACKS, CCTV, PROYECCIÓN
     const block6 = [
         { id: 'punto_de_venta', name: '🏷️ Punto de Venta (POS)', icon: 'fa-barcode' },
-        { id: 'seguridad_cctv', name: '📹 Cámaras CCTV & Seguridad', icon: 'fa-video' },
-        { id: 'impresoras_consumibles', name: '🖨️ Impresoras, Tóners & Tintas', icon: 'fa-print' },
+        { id: 'seguridad_cctv', name: '📹 CCTV & Videovigilancia', icon: 'fa-shield-halved' },
+        { id: 'racks_gabinetes_servidor', name: '🗄️ Racks & Gabinetes Servidor', icon: 'fa-server' },
+        { id: 'proyectores_presentacion', name: '📽️ Proyectores & Presentación', icon: 'fa-video' },
         { id: 'conectividad_redes', name: '🌐 Redes & Conectividad WiFi', icon: 'fa-wifi' },
-        { id: 'proyectores', name: '📽️ Proyectores de Video', icon: 'fa-video' },
+        { id: 'impresoras_consumibles', name: '🖨️ Impresoras, Tóners & Tintas', icon: 'fa-print' },
         { id: 'videojuegos_gaming', name: '🕹️ Consolas & Sillas Gamer', icon: 'fa-gamepad' }
     ];
 
@@ -1363,7 +1552,7 @@ window.openProductDetailModal = function(sku) {
                             </span>
                         ` : ''}
                         <span class="bg-slate-800 text-slate-300 text-[10px] font-mono px-2 py-0.5 rounded-full">
-                            Marca: ${p.marca || 'CT'}
+                            Marca: ${(p.marca && p.marca.toUpperCase() !== 'CT') ? p.marca : 'Certificada PC Custom'}
                         </span>
                     </div>
 
@@ -1374,11 +1563,15 @@ window.openProductDetailModal = function(sku) {
                         <p>${desc}</p>
                     </div>
 
-                    <!-- Enlace a Ficha Técnica Oficial CT Online -->
-                    <a href="${p.url_ficha_ct || ('https://ctonline.mx/buscar/productos?b=' + sku)}" target="_blank" rel="noopener" class="w-full bg-slate-900/90 hover:bg-slate-800 text-cyan-300 hover:text-white border border-cyan-500/40 font-mono font-bold rounded-xl text-xs py-2.5 px-3 flex items-center justify-center gap-2 transition cursor-pointer shadow">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-cyan-400"></i>
-                        <span>Consultar Ficha Técnica Oficial en CT Online</span>
-                    </a>
+                    <!-- Ficha Técnica Nativa PC Custom Lab (Protección contra fuga comercial) -->
+                    <div class="w-full bg-slate-950/90 text-slate-300 border border-cyan-500/30 rounded-xl p-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 shadow font-mono text-[11px]">
+                        <span class="flex items-center gap-1.5 text-cyan-300 font-bold">
+                            <i class="fa-solid fa-certificate text-cyan-400"></i> Ficha Técnica Nativa PC Custom Lab
+                        </span>
+                        <span class="text-emerald-400 font-bold flex items-center gap-1">
+                            <i class="fa-solid fa-shield-check"></i> Garantía y Facturación SAT
+                        </span>
+                    </div>
                 </div>
 
                 <div class="p-4 bg-slate-950 rounded-2xl border border-slate-800 space-y-3">
