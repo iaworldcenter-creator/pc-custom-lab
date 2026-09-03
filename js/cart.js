@@ -268,6 +268,8 @@
     window.saveBoutiqueCart = saveCart;
     window.syncBoutiqueCart = syncCartCounters;
 
+    window.renderDrawerItems = renderDrawerItems;
+
     // SINCRONIZACIÓN REACTIVA MULTI-PESTAÑA Y MULTI-SITIO
     window.addEventListener("storage", (e) => {
         if (e.key === STORAGE_KEY || e.key === 'ecosystem_global_cart' || e.key === 'cart_items') {

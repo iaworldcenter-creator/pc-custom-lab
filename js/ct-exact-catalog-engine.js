@@ -1208,7 +1208,7 @@ function renderExactCatalogView() {
         const resultsCountTxt = document.getElementById("results-count-display");
         if (!container) return;
 
-        if (activeSelectedCategory === 'Todas' && (!activeSearchQuery || activeSearchQuery.trim() !== '') && currentPageNumber === 1) {
+        if (activeSelectedCategory === 'Todas' && (!activeSearchQuery || activeSearchQuery.trim() === '') && currentPageNumber === 1) {
             renderWelcomeHub();
             renderShowcaseVitrinas(container);
             return;
