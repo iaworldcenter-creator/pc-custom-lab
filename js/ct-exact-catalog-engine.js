@@ -532,6 +532,85 @@ window.resetFacets = function() {
     window.scrollToResults();
 };
 
+// =========================================================================
+// CARGA DIFERIDA ASÍNCRONA DEL CATÁLOGO GLOBAL (17,490 ITEMS EN BACKGROUND)
+// =========================================================================
+let isFullMasterLoading = false;
+window.ensureFullCatalogLoaded = function(callback) {
+    if (window.CT_CATALOG_DATA && Array.isArray(window.CT_CATALOG_DATA) && window.CT_CATALOG_DATA.length > 1000) {
+        if (typeof callback === 'function') callback();
+        return;
+    }
+    if (isFullMasterLoading) {
+        if (typeof callback === 'function' && typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
+            window.addEventListener('ct_master_catalog_ready', callback, { once: true });
+        }
+        return;
+    }
+    if (typeof document === 'undefined' || !document.createElement) {
+        if (typeof callback === 'function') callback();
+        return;
+    }
+    isFullMasterLoading = true;
+    const script = document.createElement('script');
+    script.src = 'js/ct-catalog-data.js?v=20260903_v27_multimagen_logistica';
+    script.async = true;
+    script.onload = () => {
+        isFullMasterLoading = false;
+        try {
+            if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function') {
+                window.dispatchEvent(new CustomEvent('ct_master_catalog_ready'));
+            }
+        } catch(e) {}
+        if (typeof callback === 'function') callback();
+        
+        // Refrescar vistas si el usuario está interactuando en búsqueda o departamento
+        if ((typeof activeSearchQuery !== 'undefined' && activeSearchQuery && activeSearchQuery.trim() !== '') || 
+            (typeof activeSelectedCategory !== 'undefined' && activeSelectedCategory !== 'Todas')) {
+            if (typeof renderSidebarFacets === 'function') renderSidebarFacets();
+            if (typeof renderExactCatalogView === 'function') renderExactCatalogView();
+        } else {
+            // Actualizar contadores oficiales en el título principal
+            const resultsCountTxt = document.getElementById("results-count-display");
+            if (resultsCountTxt && window.CT_CATALOG_DATA) {
+                const depts = typeof getMasterDepartmentsList === 'function' ? getMasterDepartmentsList() : [];
+                resultsCountTxt.innerHTML = `Vitrinas Oficiales por Departamento <span class="text-slate-400 font-normal">(${depts.length} Departamentos • ${window.CT_CATALOG_DATA.length.toLocaleString('es-MX')} Productos)</span>`;
+            }
+            if (typeof renderSidebarFacets === 'function') renderSidebarFacets();
+        }
+    };
+    script.onerror = () => {
+        isFullMasterLoading = false;
+    };
+    const head = document.head || document.body || document.documentElement;
+    if (head && typeof head.appendChild === 'function') {
+        head.appendChild(script);
+    }
+};
+
+if (typeof window !== 'undefined') {
+    const triggerIdleCatalogLoad = () => {
+        if (typeof requestIdleCallback === 'function') {
+            requestIdleCallback(() => {
+                if (typeof window.ensureFullCatalogLoaded === 'function') {
+                    window.ensureFullCatalogLoaded();
+                }
+            }, { timeout: 3500 });
+        } else {
+            setTimeout(() => {
+                if (typeof window.ensureFullCatalogLoaded === 'function') {
+                    window.ensureFullCatalogLoaded();
+                }
+            }, 2000);
+        }
+    };
+    if (typeof document !== 'undefined' && document.readyState === 'complete') {
+        triggerIdleCatalogLoad();
+    } else if (typeof window.addEventListener === 'function') {
+        window.addEventListener('load', triggerIdleCatalogLoad);
+    }
+}
+
 function initFullCatalog() {
     try {
         if (window.activeCurrency === 'USD') {
@@ -691,6 +770,15 @@ window.selectCategoryFacet = function(catId) {
         const target = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
         if (target && typeof target.scrollIntoView === 'function') {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        if (typeof window.ensureFullCatalogLoaded === 'function') {
+            window.ensureFullCatalogLoaded(() => {
+                if (activeSelectedCategory === catId) {
+                    renderSidebarFacets();
+                    renderExactCatalogView();
+                }
+            });
         }
     } catch(e) {
         console.error("selectCategoryFacet error:", e);
@@ -1560,6 +1648,14 @@ function initPredictiveSearchEngine() {
         const box = document.querySelector("#search-results-dropdown, #boutique-autocomplete-box");
         if (!input || !box) return;
 
+        // Pre-cargar catálogo completo al interactuar o enfocar el buscador
+        input.addEventListener("focus", () => {
+            if (typeof window.ensureFullCatalogLoaded === 'function') window.ensureFullCatalogLoaded();
+        }, { once: true });
+        input.addEventListener("mouseenter", () => {
+            if (typeof window.ensureFullCatalogLoaded === 'function') window.ensureFullCatalogLoaded();
+        }, { once: true });
+
         const form = input.closest("form");
         if (form) {
             form.addEventListener("submit", (e) => {
@@ -1581,6 +1677,10 @@ function initPredictiveSearchEngine() {
                     renderExactCatalogView();
                 }
                 return;
+            }
+
+            if (typeof window.ensureFullCatalogLoaded === 'function') {
+                window.ensureFullCatalogLoaded();
             }
 
             searchDebounceTimer = setTimeout(() => {
@@ -1677,6 +1777,15 @@ window.executeSearchQuery = function(query) {
         renderSidebarFacets();
         renderExactCatalogView();
         window.scrollToResults();
+
+        if (typeof window.ensureFullCatalogLoaded === 'function') {
+            window.ensureFullCatalogLoaded(() => {
+                if (activeSearchQuery === (query || '').trim()) {
+                    renderSidebarFacets();
+                    renderExactCatalogView();
+                }
+            });
+        }
     } catch(e) {
         console.error("executeSearchQuery error:", e);
     }
