@@ -611,6 +611,67 @@ if (typeof window !== 'undefined') {
     }
 }
 
+// =========================================================================
+// PUENTE DE COMUNICACIÓN CON EL WEB WORKER (OFF-MAIN-THREAD ARCHITECTURE)
+// =========================================================================
+let catalogWorker = null;
+let isWorkerAvailable = false;
+let workerMsgId = 0;
+const workerCallbacks = new Map();
+
+function initCatalogWorker() {
+    try {
+        if (typeof Worker !== 'undefined' && typeof window !== 'undefined' && window.location.protocol.startsWith('http')) {
+            catalogWorker = new Worker('js/catalog-worker.js?v=20260904_chunk');
+            catalogWorker.onmessage = function(e) {
+                const { id, action, success, data, error } = e.data || {};
+                if (action === 'ALL_LOADED') {
+                    console.log(`[Worker] Inventario 100% en memoria secundaria: ${data ? data.totalProducts : 17490} productos.`);
+                    const resultsCountTxt = document.getElementById("results-count-display");
+                    if (resultsCountTxt && activeSelectedCategory === 'Todas' && (!activeSearchQuery || activeSearchQuery.trim() === '')) {
+                        const depts = getMasterDepartmentsList();
+                        resultsCountTxt.innerHTML = `Vitrinas Oficiales por Departamento <span class="text-slate-400 font-normal">(${depts.length} Departamentos • ${(data ? data.totalProducts : 17490).toLocaleString('es-MX')} Productos)</span>`;
+                    }
+                    return;
+                }
+                if (id && workerCallbacks.has(id)) {
+                    const cb = workerCallbacks.get(id);
+                    workerCallbacks.delete(id);
+                    cb(success ? data : null, error);
+                }
+            };
+            catalogWorker.onerror = function(err) {
+                console.warn("[Worker] Error en hilo secundario:", err);
+            };
+
+            // Iniciar worker
+            catalogWorker.postMessage({
+                id: ++workerMsgId,
+                action: 'INIT',
+                payload: { baseUrl: '' }
+            });
+            isWorkerAvailable = true;
+        }
+    } catch(e) {
+        console.warn("[Worker] No disponible, recurriendo a hilo principal sincrónico:", e);
+        isWorkerAvailable = false;
+    }
+}
+
+function queryWorkerCatalog(params, callback) {
+    if (!isWorkerAvailable || !catalogWorker) {
+        if (typeof callback === 'function') callback(null);
+        return;
+    }
+    const msgId = ++workerMsgId;
+    workerCallbacks.set(msgId, callback);
+    catalogWorker.postMessage({
+        id: msgId,
+        action: 'QUERY_CATALOG',
+        payload: params
+    });
+}
+
 function initFullCatalog() {
     try {
         if (window.activeCurrency === 'USD') {
@@ -798,6 +859,7 @@ function bootMasterZeroBlank() {
     try {
         initFullCatalog();
         initPredictiveSearchEngine();
+        initCatalogWorker();
         if (typeof window.syncBoutiqueCart === 'function') window.syncBoutiqueCart();
         window.runCleanHomeCatalog();
     } catch(e) {
@@ -1275,13 +1337,37 @@ function renderShowcaseVitrinas(container) {
 }
 
 function renderPaginatedDepartmentView(container, resultsCountTxt) {
-    const filtered = getFilteredList();
-    const totalCount = filtered.length;
-    const totalPages = Math.ceil(totalCount / productsPerPage) || 1;
+    // Si el Web Worker está disponible, delegar consulta y ordenamiento fuera del hilo principal
+    if (isWorkerAvailable && catalogWorker) {
+        const queryToken = ++workerMsgId;
+        container._activeQueryToken = queryToken;
 
+        queryWorkerCatalog({
+            query: activeSearchQuery,
+            category: activeSelectedCategory,
+            chip: activeSelectedChip,
+            minPrice: activeMinPrice,
+            maxPrice: activeMaxPrice,
+            sort: currentSortCriterion,
+            page: currentPageNumber,
+            pageSize: productsPerPage
+        }, (data, err) => {
+            if (container._activeQueryToken !== queryToken) return;
+            if (data && Array.isArray(data.items)) {
+                renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, data.items, data.totalCount, data.totalPages, data.currentPage, data.availableSubs);
+                return;
+            }
+            renderPaginatedDepartmentViewSync(container, resultsCountTxt);
+        });
+        return;
+    }
+
+    renderPaginatedDepartmentViewSync(container, resultsCountTxt);
+}
+
+function renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, pageItems, totalCount, totalPages, currentPage, availableSubs) {
     if (currentPageNumber > totalPages) currentPageNumber = totalPages;
-    const startIdx = (currentPageNumber - 1) * productsPerPage;
-    const pageItems = filtered.slice(startIdx, startIdx + productsPerPage);
+    const startIdx = (currentPage - 1) * productsPerPage;
 
     if (resultsCountTxt) {
         let titleTxt = '';
@@ -1291,12 +1377,9 @@ function renderPaginatedDepartmentView(container, resultsCountTxt) {
             const depts = getMasterDepartmentsList();
             const deptObj = depts.find(d => d.id === activeSelectedCategory);
             const deptName = deptObj ? deptObj.name : activeSelectedCategory.replace(/_/g, ' ').toUpperCase();
-            // Extracción dinámica de subcategorías para este departamento
-            const allDeptItems = (window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || []).filter(p => (p.categoria_clasificada || p.c || '').toLowerCase() === activeSelectedCategory.toLowerCase());
-            const availableSubs = Array.from(new Set(allDeptItems.map(p => (window.normalizeProductItem(p) || {}).subLabel).filter(Boolean)));
 
             let subChipsHTML = '';
-            if (availableSubs.length > 0) {
+            if (availableSubs && availableSubs.length > 0) {
                 subChipsHTML = `
                     <div class="flex flex-wrap items-center gap-1.5 mt-2.5 pt-2 border-t border-slate-800/80">
                         <span class="text-[10px] font-mono font-bold text-slate-400 mr-1 flex items-center gap-1"><i class="fa-solid fa-filter text-cyan-400"></i> Subáreas:</span>
@@ -1350,6 +1433,23 @@ function renderPaginatedDepartmentView(container, resultsCountTxt) {
         container.className = "flex flex-col gap-3.5 pb-2";
         container.innerHTML = pageItems.map(p => renderProductCardHTML(p, 'list')).join('');
     }
+}
+
+function renderPaginatedDepartmentViewSync(container, resultsCountTxt) {
+    const filtered = getFilteredList();
+    const totalCount = filtered.length;
+    const totalPages = Math.ceil(totalCount / productsPerPage) || 1;
+    if (currentPageNumber > totalPages) currentPageNumber = totalPages;
+    const startIdx = (currentPageNumber - 1) * productsPerPage;
+    const pageItems = filtered.slice(startIdx, startIdx + productsPerPage);
+    
+    let availableSubs = [];
+    if (activeSelectedCategory !== 'Todas') {
+        const allDeptItems = (window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || []).filter(p => (p.categoria_clasificada || p.c || '').toLowerCase() === activeSelectedCategory.toLowerCase());
+        availableSubs = Array.from(new Set(allDeptItems.map(p => (window.normalizeProductItem(p) || {}).subLabel).filter(Boolean)));
+    }
+    
+    renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, pageItems, totalCount, totalPages, currentPageNumber, availableSubs);
 }
 
 function renderExactCatalogView() {
@@ -1640,8 +1740,72 @@ function renderSidebarFacets() {
     }
 }
 
-// BUSCADOR PREDICTIVO EN VIVO
+// BUSCADOR PREDICTIVO EN VIVO (CONECTADO A WEB WORKER OFF-MAIN-THREAD)
 let searchDebounceTimer = null;
+
+function renderSearchDropdownHTML(topMatches, totalMatches, rawQuery, box) {
+    if (!box) return;
+
+    if (!topMatches || topMatches.length === 0) {
+        box.innerHTML = `
+            <div class="p-4 text-center text-slate-300 font-mono text-xs">
+                <i class="fa-solid fa-magnifying-glass text-cyan-400 text-lg mb-1 block" aria-hidden="true"></i>
+                No se encontraron coincidencias exactas para "<strong>${rawQuery}</strong>".
+            </div>
+        `;
+        box.classList.remove("hidden");
+        return;
+    }
+
+    box.innerHTML = `
+        <div class="p-2.5 border-b border-slate-800 flex justify-between items-center text-[10.5px] font-mono text-slate-300 bg-slate-950/90">
+            <span>${(totalMatches || topMatches.length).toLocaleString('es-MX')} productos encontrados para: "<strong>${rawQuery}</strong>"</span>
+            <button type="button" onclick="window.executeSearchQuery(document.querySelector('#main-search-input, #boutiqueSearchInput').value);" class="text-cyan-300 font-bold hover:underline cursor-pointer">
+                Ver todas en vitrina »
+            </button>
+        </div>
+        <div class="divide-y divide-slate-800/60 max-h-[460px] overflow-y-auto no-scrollbar">
+            ${topMatches.map(rawP => {
+                const item = window.normalizeProductItem(rawP);
+                const title = item.name.replace(/'/g, "&#39;").replace(/"/g, '&quot;');
+                const localImg = `assets/img/${item.sku}.webp`;
+
+                return `
+                    <div class="flex items-center justify-between gap-3 p-2.5 hover:bg-slate-850 transition cursor-pointer group min-h-[64px]" onclick="openProductDetailModal('${item.sku}');" role="button" tabindex="0" aria-label="Ver detalle de ${title}">
+                        <div class="w-[60px] h-[60px] bg-slate-950 rounded-xl p-1 shrink-0 border border-slate-800 group-hover:border-cyan-400/50 flex items-center justify-center">
+                            <img src="${localImg}" alt="${title}" width="54" height="54" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${item.sku}', '${item.cat}')" />
+                        </div>
+                        <div class="flex-1 min-w-0 text-left">
+                            <div class="text-xs font-bold text-white group-hover:text-cyan-300 transition line-clamp-1 leading-snug">${title}</div>
+                            <div class="text-[10px] font-mono text-slate-300 flex items-center gap-1.5 mt-0.5">
+                                <span class="text-cyan-300 font-bold">SKU: ${item.sku}</span>
+                                <span>•</span>
+                                ${item.isAgotado 
+                                    ? `<span class="text-amber-400 font-bold">Bajo Pedido</span>` 
+                                    : `<span class="text-emerald-400 font-bold">Entrega Inmediata</span>`
+                                }
+                            </div>
+                        </div>
+                        <div class="text-right shrink-0 flex items-center gap-2">
+                            <div class="text-xs font-mono font-black text-emerald-400">${window.formatPriceDisplay(item.priceMxn, item.priceUsd)}</div>
+                            <div class="flex items-center gap-1">
+                                <button type="button" onclick="window.addToCartCT('${item.sku}', event);" aria-label="Agregar al carrito" class="btn-action bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-mono font-bold px-2.5 py-1.5 rounded-lg transition active:scale-95 shadow cursor-pointer min-h-[36px]">
+                                    + Carrito
+                                </button>
+                                <button type="button" onclick="window.buyNowCT('${item.sku}', event);" aria-label="Comprar ahora" class="btn-action bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white text-[10px] font-mono font-black px-2.5 py-1.5 rounded-lg shadow transition active:scale-95 cursor-pointer min-h-[36px]">
+                                    Comprar Ahora
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('')}
+        </div>
+    `;
+
+    box.classList.remove("hidden");
+}
+
 function initPredictiveSearchEngine() {
     try {
         const input = document.querySelector("#main-search-input, #boutiqueSearchInput");
@@ -1683,69 +1847,29 @@ function initPredictiveSearchEngine() {
                 window.ensureFullCatalogLoaded();
             }
 
+            // Si el Web Worker está activo, delegar la búsqueda predictiva fuera del hilo principal
+            if (isWorkerAvailable && catalogWorker) {
+                const searchToken = ++workerMsgId;
+                box._searchToken = searchToken;
+                workerCallbacks.set(searchToken, (data) => {
+                    if (box._searchToken !== searchToken) return;
+                    if (data && data.query === rawQuery) {
+                        renderSearchDropdownHTML(data.matches, data.totalMatches, rawQuery, box);
+                    }
+                });
+                catalogWorker.postMessage({
+                    id: searchToken,
+                    action: 'PREDICTIVE_SEARCH',
+                    payload: { query: rawQuery, limit: 6 }
+                });
+                return;
+            }
+
+            // Fallback síncrono si el Worker no está disponible
             searchDebounceTimer = setTimeout(() => {
                 const matches = searchCatalogMaster(rawQuery);
-
-                if (matches.length === 0) {
-                    box.innerHTML = `
-                        <div class="p-4 text-center text-slate-300 font-mono text-xs">
-                            <i class="fa-solid fa-magnifying-glass text-cyan-400 text-lg mb-1 block" aria-hidden="true"></i>
-                            No se encontraron coincidencias exactas para "<strong>${rawQuery}</strong>".
-                        </div>
-                    `;
-                    box.classList.remove("hidden");
-                    return;
-                }
-
                 const topMatches = matches.slice(0, 6);
-
-                box.innerHTML = `
-                    <div class="p-2.5 border-b border-slate-800 flex justify-between items-center text-[10.5px] font-mono text-slate-300 bg-slate-950/90">
-                        <span>${matches.length.toLocaleString('es-MX')} productos encontrados para: "<strong>${rawQuery}</strong>"</span>
-                        <button type="button" onclick="window.executeSearchQuery(document.querySelector('#main-search-input, #boutiqueSearchInput').value);" class="text-cyan-300 font-bold hover:underline cursor-pointer">
-                            Ver todas en vitrina »
-                        </button>
-                    </div>
-                    <div class="divide-y divide-slate-800/60 max-h-[460px] overflow-y-auto no-scrollbar">
-                        ${topMatches.map(rawP => {
-                            const item = window.normalizeProductItem(rawP);
-                            const title = item.name.replace(/'/g, "&#39;").replace(/"/g, '&quot;');
-                            const localImg = `assets/img/${item.sku}.webp`;
-
-                            return `
-                                <div class="flex items-center justify-between gap-3 p-2.5 hover:bg-slate-850 transition cursor-pointer group min-h-[64px]" onclick="openProductDetailModal('${item.sku}');" role="button" tabindex="0" aria-label="Ver detalle de ${title}">
-                                    <div class="w-[60px] h-[60px] bg-slate-950 rounded-xl p-1 shrink-0 border border-slate-800 group-hover:border-cyan-400/50 flex items-center justify-center">
-                                        <img src="${localImg}" alt="${title}" width="54" height="54" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${item.sku}', '${item.cat}')" />
-                                    </div>
-                                    <div class="flex-1 min-w-0 text-left">
-                                        <div class="text-xs font-bold text-white group-hover:text-cyan-300 transition line-clamp-1 leading-snug">${title}</div>
-                                        <div class="text-[10px] font-mono text-slate-300 flex items-center gap-1.5 mt-0.5">
-                                            <span class="text-cyan-300 font-bold">SKU: ${item.sku}</span>
-                                            <span>•</span>
-                                            ${item.isAgotado 
-                                                ? `<span class="text-amber-400 font-bold">Bajo Pedido</span>` 
-                                                : `<span class="text-emerald-400 font-bold">Entrega Inmediata</span>`
-                                            }
-                                        </div>
-                                    </div>
-                                    <div class="text-right shrink-0 flex items-center gap-2">
-                                        <div class="text-xs font-mono font-black text-emerald-400">${window.formatPriceDisplay(item.priceMxn, item.priceUsd)}</div>
-                                        <div class="flex items-center gap-1">
-                                            <button type="button" onclick="window.addToCartCT('${item.sku}', event);" aria-label="Agregar al carrito" class="btn-action bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-mono font-bold px-2.5 py-1.5 rounded-lg transition active:scale-95 shadow cursor-pointer min-h-[36px]">
-                                                + Carrito
-                                            </button>
-                                            <button type="button" onclick="window.buyNowCT('${item.sku}', event);" aria-label="Comprar ahora" class="btn-action bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white text-[10px] font-mono font-black px-2.5 py-1.5 rounded-lg shadow transition active:scale-95 cursor-pointer min-h-[36px]">
-                                                Comprar Ahora
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            `;
-                        }).join('')}
-                    </div>
-                `;
-
-                box.classList.remove("hidden");
+                renderSearchDropdownHTML(topMatches, matches.length, rawQuery, box);
             }, 150);
         });
 

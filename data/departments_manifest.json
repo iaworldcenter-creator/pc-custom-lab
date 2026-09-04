@@ -1,0 +1,686 @@
+{
+  "generatedAt": "2026-09-04T23:52:11.652Z",
+  "totalProducts": 17490,
+  "departmentsCount": 67,
+  "departments": {
+    "procesadores": {
+      "id": "procesadores",
+      "name": "1. Procesadores (CPUs)",
+      "icon": "fa-microchip",
+      "order": 1,
+      "count": 308,
+      "files": [
+        "data/departments/procesadores.json"
+      ]
+    },
+    "tarjetas_madre": {
+      "id": "tarjetas_madre",
+      "name": "2. Tarjetas Madre (Motherboards)",
+      "icon": "fa-chess-board",
+      "order": 2,
+      "count": 160,
+      "files": [
+        "data/departments/tarjetas_madre.json"
+      ]
+    },
+    "memorias_ram_pc": {
+      "id": "memorias_ram_pc",
+      "name": "3. Memorias RAM PC (DIMM)",
+      "icon": "fa-memory",
+      "order": 3,
+      "count": 75,
+      "files": [
+        "data/departments/memorias_ram_pc.json"
+      ]
+    },
+    "gabinetes": {
+      "id": "gabinetes",
+      "name": "4. Gabinetes & Chasis Gamer",
+      "icon": "fa-server",
+      "order": 4,
+      "count": 459,
+      "files": [
+        "data/departments/gabinetes.json"
+      ]
+    },
+    "tarjetas_video": {
+      "id": "tarjetas_video",
+      "name": "5. Tarjetas de Video (GPUs)",
+      "icon": "fa-vr-cardboard",
+      "order": 5,
+      "count": 70,
+      "files": [
+        "data/departments/tarjetas_video.json"
+      ]
+    },
+    "enfriamiento": {
+      "id": "enfriamiento",
+      "name": "6. Sistemas de Enfriamiento Líquido & Aire",
+      "icon": "fa-fan",
+      "order": 6,
+      "count": 173,
+      "files": [
+        "data/departments/enfriamiento.json"
+      ]
+    },
+    "fuentes_energia": {
+      "id": "fuentes_energia",
+      "name": "7. Fuentes de Poder Certificadas",
+      "icon": "fa-bolt",
+      "order": 7,
+      "count": 156,
+      "files": [
+        "data/departments/fuentes_energia.json"
+      ]
+    },
+    "ssds_m2_nvme": {
+      "id": "ssds_m2_nvme",
+      "name": "8. Unidades SSD M.2 NVMe PCIe",
+      "icon": "fa-hard-drive",
+      "order": 8,
+      "count": 80,
+      "files": [
+        "data/departments/ssds_m2_nvme.json"
+      ]
+    },
+    "discos_duros_hdd_internos": {
+      "id": "discos_duros_hdd_internos",
+      "name": "9. Discos Duros Internos HDD",
+      "icon": "fa-hard-drive",
+      "order": 9,
+      "count": 171,
+      "files": [
+        "data/departments/discos_duros_hdd_internos.json"
+      ]
+    },
+    "monitores_pantallas": {
+      "id": "monitores_pantallas",
+      "name": "10. Monitores & Pantallas PC",
+      "icon": "fa-desktop",
+      "order": 10,
+      "count": 584,
+      "files": [
+        "data/departments/monitores_pantallas_part_1.json",
+        "data/departments/monitores_pantallas_part_2.json"
+      ]
+    },
+    "teclados": {
+      "id": "teclados",
+      "name": "11. Teclados Mecánicos & Oficina",
+      "icon": "fa-keyboard",
+      "order": 11,
+      "count": 201,
+      "files": [
+        "data/departments/teclados.json"
+      ]
+    },
+    "ratones_mouse": {
+      "id": "ratones_mouse",
+      "name": "12. Ratones & Mouse Gamer",
+      "icon": "fa-mouse",
+      "order": 12,
+      "count": 416,
+      "files": [
+        "data/departments/ratones_mouse.json"
+      ]
+    },
+    "combos_teclado_mouse": {
+      "id": "combos_teclado_mouse",
+      "name": "13. Kits de Teclado y Ratón",
+      "icon": "fa-keyboard",
+      "order": 13,
+      "count": 102,
+      "files": [
+        "data/departments/combos_teclado_mouse.json"
+      ]
+    },
+    "laptops_portatiles": {
+      "id": "laptops_portatiles",
+      "name": "14. Laptops & Computadoras Portátiles",
+      "icon": "fa-laptop",
+      "order": 14,
+      "count": 463,
+      "files": [
+        "data/departments/laptops_portatiles.json"
+      ]
+    },
+    "mini_pcs_nuc": {
+      "id": "mini_pcs_nuc",
+      "name": "15. Mini PCs Ultracompactas & NUCs",
+      "icon": "fa-cube",
+      "order": 15,
+      "count": 25,
+      "files": [
+        "data/departments/mini_pcs_nuc.json"
+      ]
+    },
+    "computadoras_ensambladas": {
+      "id": "computadoras_ensambladas",
+      "name": "16. Computadoras de Escritorio & Gaming PCs",
+      "icon": "fa-computer",
+      "order": 16,
+      "count": 85,
+      "files": [
+        "data/departments/computadoras_ensambladas.json"
+      ]
+    },
+    "computadoras_all_in_one": {
+      "id": "computadoras_all_in_one",
+      "name": "17. Computadoras All-in-One (AIO)",
+      "icon": "fa-tv",
+      "order": 17,
+      "count": 86,
+      "files": [
+        "data/departments/computadoras_all_in_one.json"
+      ]
+    },
+    "servidores_enterprise": {
+      "id": "servidores_enterprise",
+      "name": "18. Servidores Torre & Rack Enterprise",
+      "icon": "fa-server",
+      "order": 18,
+      "count": 175,
+      "files": [
+        "data/departments/servidores_enterprise.json"
+      ]
+    },
+    "no_breaks_ups": {
+      "id": "no_breaks_ups",
+      "name": "19. No-Breaks & Sistemas UPS",
+      "icon": "fa-car-battery",
+      "order": 19,
+      "count": 430,
+      "files": [
+        "data/departments/no_breaks_ups.json"
+      ]
+    },
+    "reguladores_voltaje": {
+      "id": "reguladores_voltaje",
+      "name": "20. Reguladores de Voltaje & Supresores",
+      "icon": "fa-bolt",
+      "order": 20,
+      "count": 116,
+      "files": [
+        "data/departments/reguladores_voltaje.json"
+      ]
+    },
+    "cargadores_baterias_powerbanks": {
+      "id": "cargadores_baterias_powerbanks",
+      "name": "21. Cargadores, Baterías & Power Banks",
+      "icon": "fa-plug-circle-bolt",
+      "order": 21,
+      "count": 449,
+      "files": [
+        "data/departments/cargadores_baterias_powerbanks.json"
+      ]
+    },
+    "discos_duros_externos": {
+      "id": "discos_duros_externos",
+      "name": "22. Unidades & Discos Externos (SSD & HDD)",
+      "icon": "fa-hard-drive",
+      "order": 22,
+      "count": 84,
+      "files": [
+        "data/departments/discos_duros_externos.json"
+      ]
+    },
+    "tarjetas_microsd": {
+      "id": "tarjetas_microsd",
+      "name": "23. Tarjetas de Memoria MicroSD & SD",
+      "icon": "fa-sd-card",
+      "order": 23,
+      "count": 145,
+      "files": [
+        "data/departments/tarjetas_microsd.json"
+      ]
+    },
+    "memorias_usb_pendrives": {
+      "id": "memorias_usb_pendrives",
+      "name": "24. Memorias USB Flash & Pendrives",
+      "icon": "fa-usb",
+      "order": 24,
+      "count": 246,
+      "files": [
+        "data/departments/memorias_usb_pendrives.json"
+      ]
+    },
+    "memorias_ram_laptop": {
+      "id": "memorias_ram_laptop",
+      "name": "25. Memorias RAM para Laptop (SODIMM)",
+      "icon": "fa-laptop",
+      "order": 25,
+      "count": 24,
+      "files": [
+        "data/departments/memorias_ram_laptop.json"
+      ]
+    },
+    "memorias_ram_servidor": {
+      "id": "memorias_ram_servidor",
+      "name": "26. Memorias RAM para Servidor (ECC)",
+      "icon": "fa-server",
+      "order": 26,
+      "count": 51,
+      "files": [
+        "data/departments/memorias_ram_servidor.json"
+      ]
+    },
+    "diademas_headsets": {
+      "id": "diademas_headsets",
+      "name": "27. Diademas & Headsets Gamer",
+      "icon": "fa-headphones",
+      "order": 27,
+      "count": 207,
+      "files": [
+        "data/departments/diademas_headsets.json"
+      ]
+    },
+    "bocinas_sonido": {
+      "id": "bocinas_sonido",
+      "name": "28. Bocinas, Barras de Sonido & Bafles",
+      "icon": "fa-volume-high",
+      "order": 28,
+      "count": 599,
+      "files": [
+        "data/departments/bocinas_sonido_part_1.json",
+        "data/departments/bocinas_sonido_part_2.json"
+      ]
+    },
+    "microfonos": {
+      "id": "microfonos",
+      "name": "29. Micrófonos para Streaming & Voz",
+      "icon": "fa-microphone",
+      "order": 29,
+      "count": 40,
+      "files": [
+        "data/departments/microfonos.json"
+      ]
+    },
+    "webcams_videoconferencia": {
+      "id": "webcams_videoconferencia",
+      "name": "30. Cámaras Web & Videoconferencia",
+      "icon": "fa-camera",
+      "order": 30,
+      "count": 20,
+      "files": [
+        "data/departments/webcams_videoconferencia.json"
+      ]
+    },
+    "proyectores_presentacion": {
+      "id": "proyectores_presentacion",
+      "name": "31. Proyectores de Video & Pantallas Murales",
+      "icon": "fa-video",
+      "order": 31,
+      "count": 74,
+      "files": [
+        "data/departments/proyectores_presentacion.json"
+      ]
+    },
+    "camaras_seguridad_cctv": {
+      "id": "camaras_seguridad_cctv",
+      "name": "32. Cámaras de Seguridad (IP, Bala, Domo)",
+      "icon": "fa-video",
+      "order": 32,
+      "count": 846,
+      "files": [
+        "data/departments/camaras_seguridad_cctv_part_1.json",
+        "data/departments/camaras_seguridad_cctv_part_2.json"
+      ]
+    },
+    "grabadores_dvr_nvr": {
+      "id": "grabadores_dvr_nvr",
+      "name": "33. Grabadores de Video DVR & NVR",
+      "icon": "fa-compact-disc",
+      "order": 33,
+      "count": 109,
+      "files": [
+        "data/departments/grabadores_dvr_nvr.json"
+      ]
+    },
+    "control_acceso_biometricos": {
+      "id": "control_acceso_biometricos",
+      "name": "34. Control de Acceso, Asistencia & Biometría",
+      "icon": "fa-fingerprint",
+      "order": 34,
+      "count": 128,
+      "files": [
+        "data/departments/control_acceso_biometricos.json"
+      ]
+    },
+    "alarmas_sensores_seguridad": {
+      "id": "alarmas_sensores_seguridad",
+      "name": "35. Alarmas, Sensores de Intrusión & Sirenas",
+      "icon": "fa-shield-halved",
+      "order": 35,
+      "count": 46,
+      "files": [
+        "data/departments/alarmas_sensores_seguridad.json"
+      ]
+    },
+    "telefonia_conmutadores": {
+      "id": "telefonia_conmutadores",
+      "name": "36. Conmutadores & Telefonía IP",
+      "icon": "fa-phone",
+      "order": 36,
+      "count": 82,
+      "files": [
+        "data/departments/telefonia_conmutadores.json"
+      ]
+    },
+    "switches_red": {
+      "id": "switches_red",
+      "name": "37. Switches Ethernet & PoE+",
+      "icon": "fa-network-wired",
+      "order": 37,
+      "count": 418,
+      "files": [
+        "data/departments/switches_red.json"
+      ]
+    },
+    "routers_access_points": {
+      "id": "routers_access_points",
+      "name": "38. Routers Inalámbricos & Access Points WiFi",
+      "icon": "fa-wifi",
+      "order": 38,
+      "count": 381,
+      "files": [
+        "data/departments/routers_access_points.json"
+      ]
+    },
+    "antenas_radioenlaces": {
+      "id": "antenas_radioenlaces",
+      "name": "39. Antenas de Largo Alcance & Radioenlaces",
+      "icon": "fa-satellite-dish",
+      "order": 39,
+      "count": 104,
+      "files": [
+        "data/departments/antenas_radioenlaces.json"
+      ]
+    },
+    "cableado_estructurado": {
+      "id": "cableado_estructurado",
+      "name": "40. Bobinas UTP, Patch Cords & Conectores RJ45",
+      "icon": "fa-network-wired",
+      "order": 40,
+      "count": 309,
+      "files": [
+        "data/departments/cableado_estructurado.json"
+      ]
+    },
+    "fibra_optica_transceivers": {
+      "id": "fibra_optica_transceivers",
+      "name": "41. Módulos Transceivers SFP & Fibra Óptica",
+      "icon": "fa-network-wired",
+      "order": 41,
+      "count": 74,
+      "files": [
+        "data/departments/fibra_optica_transceivers.json"
+      ]
+    },
+    "racks_gabinetes_servidor": {
+      "id": "racks_gabinetes_servidor",
+      "name": "42. Racks de Telecomunicaciones & Gabinetes",
+      "icon": "fa-server",
+      "order": 42,
+      "count": 117,
+      "files": [
+        "data/departments/racks_gabinetes_servidor.json"
+      ]
+    },
+    "impresoras_multifuncionales": {
+      "id": "impresoras_multifuncionales",
+      "name": "43. Impresoras de Inyección & Multifuncionales",
+      "icon": "fa-print",
+      "order": 43,
+      "count": 585,
+      "files": [
+        "data/departments/impresoras_multifuncionales_part_1.json",
+        "data/departments/impresoras_multifuncionales_part_2.json"
+      ]
+    },
+    "toners_laser": {
+      "id": "toners_laser",
+      "name": "44. Tóners para Impresoras Láser",
+      "icon": "fa-cubes",
+      "order": 44,
+      "count": 679,
+      "files": [
+        "data/departments/toners_laser.json"
+      ]
+    },
+    "tintas_cartuchos": {
+      "id": "tintas_cartuchos",
+      "name": "45. Tintas Originales & Cartuchos",
+      "icon": "fa-droplet",
+      "order": 45,
+      "count": 702,
+      "files": [
+        "data/departments/tintas_cartuchos.json"
+      ]
+    },
+    "plotters_gran_formato": {
+      "id": "plotters_gran_formato",
+      "name": "46. Plotters de Impresión en Gran Formato",
+      "icon": "fa-ruler-combined",
+      "order": 46,
+      "count": 193,
+      "files": [
+        "data/departments/plotters_gran_formato.json"
+      ]
+    },
+    "etiquetas_ribbons": {
+      "id": "etiquetas_ribbons",
+      "name": "47. Cintas Ribbon, Etiquetas & Papel Térmico",
+      "icon": "fa-tags",
+      "order": 47,
+      "count": 270,
+      "files": [
+        "data/departments/etiquetas_ribbons.json"
+      ]
+    },
+    "escaneres_digitalizadores": {
+      "id": "escaneres_digitalizadores",
+      "name": "48. Escáneres de Documentos & Cama Plana",
+      "icon": "fa-scanner",
+      "order": 48,
+      "count": 172,
+      "files": [
+        "data/departments/escaneres_digitalizadores.json"
+      ]
+    },
+    "sistemas_operativos": {
+      "id": "sistemas_operativos",
+      "name": "49. Sistemas Operativos Windows Oficiales",
+      "icon": "fa-compact-disc",
+      "order": 49,
+      "count": 206,
+      "files": [
+        "data/departments/sistemas_operativos.json"
+      ]
+    },
+    "ofimatica_productividad": {
+      "id": "ofimatica_productividad",
+      "name": "50. Microsoft 365 & Suites de Oficina",
+      "icon": "fa-file-lines",
+      "order": 50,
+      "count": 57,
+      "files": [
+        "data/departments/ofimatica_productividad.json"
+      ]
+    },
+    "software_contable_administrativo": {
+      "id": "software_contable_administrativo",
+      "name": "51. Software Aspel & CONTPAQi Administrativo",
+      "icon": "fa-calculator",
+      "order": 51,
+      "count": 222,
+      "files": [
+        "data/departments/software_contable_administrativo.json"
+      ]
+    },
+    "antivirus_seguridad_digital": {
+      "id": "antivirus_seguridad_digital",
+      "name": "52. Antivirus & Seguridad Digital",
+      "icon": "fa-shield",
+      "order": 52,
+      "count": 389,
+      "files": [
+        "data/departments/antivirus_seguridad_digital.json"
+      ]
+    },
+    "garantias_polizas_servicio": {
+      "id": "garantias_polizas_servicio",
+      "name": "53. Pólizas & Extensiones de Garantía Oficial",
+      "icon": "fa-certificate",
+      "order": 53,
+      "count": 68,
+      "files": [
+        "data/departments/garantias_polizas_servicio.json"
+      ]
+    },
+    "punto_de_venta": {
+      "id": "punto_de_venta",
+      "name": "54. Sistemas de Punto de Venta (POS)",
+      "icon": "fa-barcode",
+      "order": 54,
+      "count": 83,
+      "files": [
+        "data/departments/punto_de_venta.json"
+      ]
+    },
+    "smartphones_celulares": {
+      "id": "smartphones_celulares",
+      "name": "55. Teléfonos Celulares & Smartphones",
+      "icon": "fa-mobile-screen-button",
+      "order": 55,
+      "count": 117,
+      "files": [
+        "data/departments/smartphones_celulares.json"
+      ]
+    },
+    "tablets_ipads": {
+      "id": "tablets_ipads",
+      "name": "56. Tablets & iPads",
+      "icon": "fa-tablet-screen-button",
+      "order": 56,
+      "count": 82,
+      "files": [
+        "data/departments/tablets_ipads.json"
+      ]
+    },
+    "smartwatches_wearables": {
+      "id": "smartwatches_wearables",
+      "name": "57. Smartwatches & Relojes Inteligentes",
+      "icon": "fa-clock",
+      "order": 57,
+      "count": 47,
+      "files": [
+        "data/departments/smartwatches_wearables.json"
+      ]
+    },
+    "limpieza_mantenimiento": {
+      "id": "limpieza_mantenimiento",
+      "name": "58. Aire Comprimido, Espumas & Limpieza",
+      "icon": "fa-spray-can-sparkles",
+      "order": 58,
+      "count": 98,
+      "files": [
+        "data/departments/limpieza_mantenimiento.json"
+      ]
+    },
+    "cables_adaptadores": {
+      "id": "cables_adaptadores",
+      "name": "59. Cables de Video, USB & Adaptadores",
+      "icon": "fa-plug",
+      "order": 59,
+      "count": 885,
+      "files": [
+        "data/departments/cables_adaptadores_part_1.json",
+        "data/departments/cables_adaptadores_part_2.json"
+      ]
+    },
+    "mochilas_fundas_maletines": {
+      "id": "mochilas_fundas_maletines",
+      "name": "60. Mochilas, Fundas & Maletines para Laptop",
+      "icon": "fa-briefcase",
+      "order": 60,
+      "count": 238,
+      "files": [
+        "data/departments/mochilas_fundas_maletines.json"
+      ]
+    },
+    "soportes_ergonomia": {
+      "id": "soportes_ergonomia",
+      "name": "61. Soportes Articulados & Bases para Monitor",
+      "icon": "fa-tv",
+      "order": 61,
+      "count": 102,
+      "files": [
+        "data/departments/soportes_ergonomia.json"
+      ]
+    },
+    "hubs_docks_estaciones": {
+      "id": "hubs_docks_estaciones",
+      "name": "62. Hubs USB-C & Docking Stations",
+      "icon": "fa-layer-group",
+      "order": 62,
+      "count": 48,
+      "files": [
+        "data/departments/hubs_docks_estaciones.json"
+      ]
+    },
+    "herramientas_servicio_tecnico": {
+      "id": "herramientas_servicio_tecnico",
+      "name": "63. Herramientas de Red & Ensamble Técnico",
+      "icon": "fa-wrench",
+      "order": 63,
+      "count": 82,
+      "files": [
+        "data/departments/herramientas_servicio_tecnico.json"
+      ]
+    },
+    "candados_seguridad_laptop": {
+      "id": "candados_seguridad_laptop",
+      "name": "64. Candados de Seguridad Kensington",
+      "icon": "fa-lock",
+      "order": 64,
+      "count": 108,
+      "files": [
+        "data/departments/candados_seguridad_laptop.json"
+      ]
+    },
+    "climatizacion_aires_acondicionados": {
+      "id": "climatizacion_aires_acondicionados",
+      "name": "65. Climatización & Minisplits",
+      "icon": "fa-snowflake",
+      "order": 65,
+      "count": 54,
+      "files": [
+        "data/departments/climatizacion_aires_acondicionados.json"
+      ]
+    },
+    "gaming_consolas_sillas": {
+      "id": "gaming_consolas_sillas",
+      "name": "66. Sillas Gamer, Consolas & Videojuegos",
+      "icon": "fa-gamepad",
+      "order": 66,
+      "count": 82,
+      "files": [
+        "data/departments/gaming_consolas_sillas.json"
+      ]
+    },
+    "accesorios_perifericos": {
+      "id": "accesorios_perifericos",
+      "name": "67. Accesorios de Cómputo & Misceláneos",
+      "icon": "fa-boxes-stacked",
+      "order": 67,
+      "count": 3033,
+      "files": [
+        "data/departments/accesorios_perifericos_part_1.json",
+        "data/departments/accesorios_perifericos_part_2.json",
+        "data/departments/accesorios_perifericos_part_3.json",
+        "data/departments/accesorios_perifericos_part_4.json",
+        "data/departments/accesorios_perifericos_part_5.json"
+      ]
+    }
+  }
+}
