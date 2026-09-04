@@ -1148,22 +1148,41 @@ function renderShowcaseVitrinas(container) {
     }
     container.innerHTML = initialHtml;
 
-    // FASE 2: Renderizar el resto en el siguiente fotograma para no bloquear el hilo principal (TBT -> 0ms)
+    // FASE 2: Renderizado progresivo por lotes pequeños (libera el procesador móvil)
     if (remainingDepts.length > 0) {
         const renderToken = Date.now();
         container._vitrinaRenderToken = renderToken;
+        let currentIndex = 0;
+        const BATCH_SIZE = 3; // Lotes de 3 vitrinas para no superar los 50ms por tarea
 
-        const raf = typeof requestAnimationFrame === 'function' ? requestAnimationFrame : (fn) => setTimeout(fn, 16);
-        raf(() => {
-            setTimeout(() => {
-                if (container._vitrinaRenderToken !== renderToken) return;
-                let remainingHtml = '';
-                for (let j = 0; j < remainingDepts.length; j++) {
-                    remainingHtml += buildVitrinaMarkup(remainingDepts[j], false);
+        function renderNextBatch() {
+            if (container._vitrinaRenderToken !== renderToken) return;
+            if (currentIndex >= remainingDepts.length) return;
+
+            const chunk = remainingDepts.slice(currentIndex, currentIndex + BATCH_SIZE);
+            let chunkHtml = '';
+            for (let j = 0; j < chunk.length; j++) {
+                chunkHtml += buildVitrinaMarkup(chunk[j], false);
+            }
+            container.insertAdjacentHTML('beforeend', chunkHtml);
+            currentIndex += BATCH_SIZE;
+
+            if (currentIndex < remainingDepts.length) {
+                // Cede el control al navegador antes del siguiente lote
+                if (typeof requestIdleCallback === 'function') {
+                    requestIdleCallback(renderNextBatch, { timeout: 100 });
+                } else {
+                    setTimeout(renderNextBatch, 25);
                 }
-                container.insertAdjacentHTML('beforeend', remainingHtml);
-            }, 0);
-        });
+            }
+        }
+
+        // Arrancar la carga progresiva en el siguiente tiempo libre
+        if (typeof requestIdleCallback === 'function') {
+            requestIdleCallback(renderNextBatch, { timeout: 150 });
+        } else {
+            setTimeout(renderNextBatch, 50);
+        }
     }
 }
 
