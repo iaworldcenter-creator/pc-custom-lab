@@ -916,12 +916,15 @@ window.handleProductImgError = function(imgEl, sku, cat) {
     }
 };
 
-function renderProductCardHTML(p, viewStyle) {
+function renderProductCardHTML(p, viewStyle, isPriority = false) {
     const item = window.normalizeProductItem(p);
     if (!item) return '';
 
     const title = item.name.replace(/'/g, "&#39;").replace(/"/g, '&quot;');
     const localImg = `assets/img/${item.sku}.webp`;
+    const imgLoadingAttrs = isPriority 
+        ? 'fetchpriority="high" decoding="async"' 
+        : 'loading="lazy" decoding="async"';
 
     if (viewStyle === 'grid') {
         return `
@@ -938,10 +941,9 @@ function renderProductCardHTML(p, viewStyle) {
                             alt="${title}" 
                             width="300" 
                             height="300" 
-                            loading="lazy" 
-                            decoding="async" 
+                            ${imgLoadingAttrs} 
                             class="w-full h-full object-contain group-hover:scale-105 transition duration-200" 
-                            onerror="window.handleProductImgError(this, '${item.sku}', '${item.cat}')"
+                            onerror="window.handleProductImgError(this, '${item.sku}', '${item.cat}')" 
                         />
                     </div>
 
@@ -1010,7 +1012,7 @@ function renderProductCardHTML(p, viewStyle) {
         return `
             <article class="bg-slate-900/95 hover:bg-slate-850 border border-slate-800 hover:border-cyan-400/80 rounded-2xl p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 transition group shadow-xl relative overflow-hidden text-slate-100">
                 <div class="w-24 h-24 sm:w-28 sm:h-28 bg-slate-950 rounded-xl p-2 shrink-0 flex items-center justify-center cursor-pointer" onclick="openProductDetailModal('${item.sku}')">
-                    <img src="${localImg}" alt="${title}" width="120" height="120" loading="lazy" decoding="async" class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${item.sku}', '${item.cat}')" />
+                    <img src="${localImg}" alt="${title}" width="120" height="120" ${imgLoadingAttrs} class="w-full h-full object-contain" onerror="window.handleProductImgError(this, '${item.sku}', '${item.cat}')" />
                 </div>
                 <div class="flex-1 min-w-0 text-left">
                     <div class="flex items-center gap-2 mb-1">
@@ -1048,20 +1050,36 @@ function renderShowcaseVitrinas(container) {
     const bars = document.querySelectorAll(".pagination-target-bar");
     bars.forEach(b => b.innerHTML = '');
 
-    // Calcular cuántos departamentos realmente tienen productos
-    const activeDepts = depts.filter(dept => all.some(p => (p.categoria_clasificada || p.c) === dept.id));
+    // Agrupación en una sola pasada O(N) para liberar la CPU
+    const productsByDept = new Map();
+    for (let i = 0; i < all.length; i++) {
+        const prod = all[i];
+        const cat = prod.categoria_clasificada || prod.c;
+        let list = productsByDept.get(cat);
+        if (!list) {
+            list = [];
+            productsByDept.set(cat, list);
+        }
+        list.push(prod);
+    }
+
+    // Filtrar sólo departamentos con productos activos
+    const activeDepts = depts.filter(dept => {
+        const list = productsByDept.get(dept.id);
+        return list && list.length > 0;
+    });
 
     const resultsCountTxt = document.getElementById("results-count-display");
     if (resultsCountTxt) {
         resultsCountTxt.innerHTML = `Vitrinas Oficiales por Departamento <span class="text-slate-400 font-normal">(${activeDepts.length} Departamentos • ${all.length.toLocaleString('es-MX')} Productos)</span>`;
     }
 
-    let vitrinasHtml = '';
+    container.className = "flex flex-col gap-2 pb-6";
 
-    for (let i = 0; i < depts.length; i++) {
-        const dept = depts[i];
-        let deptProducts = all.filter(p => (p.categoria_clasificada || p.c) === dept.id);
-        if (deptProducts.length === 0) continue;
+    // Función auxiliar para construir el HTML de una sola vitrina (exactamente el mismo HTML)
+    const buildVitrinaMarkup = (dept, isFirstVitrina) => {
+        let deptProducts = productsByDept.get(dept.id) || [];
+        if (deptProducts.length === 0) return '';
 
         if (dept.id === 'gabinetes') {
             deptProducts = [...deptProducts].sort((a, b) => {
@@ -1082,7 +1100,7 @@ function renderShowcaseVitrinas(container) {
 
         const sample = deptProducts.slice(0, 4);
 
-        vitrinasHtml += `
+        return `
             <section class="vitrina-modulo mb-6 bg-slate-900/90 border border-slate-800 hover:border-cyan-500/50 rounded-3xl p-4 sm:p-5 shadow-2xl transition duration-200" data-dept-id="${dept.id}">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 mb-4 border-b border-slate-800">
                     <div class="flex items-center gap-3">
@@ -1114,14 +1132,39 @@ function renderShowcaseVitrinas(container) {
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5">
-                    ${sample.map(p => renderProductCardHTML(p, 'grid')).join('')}
+                    ${sample.map((p, idx) => renderProductCardHTML(p, 'grid', isFirstVitrina && idx < 2)).join('')}
                 </div>
             </section>
         `;
-    }
+    };
 
-    container.className = "flex flex-col gap-2 pb-6";
-    container.innerHTML = vitrinasHtml;
+    // FASE 1: Renderizar inmediatamente las primeras 2 vitrinas (Pantalla visible)
+    const initialDepts = activeDepts.slice(0, 2);
+    const remainingDepts = activeDepts.slice(2);
+
+    let initialHtml = '';
+    for (let i = 0; i < initialDepts.length; i++) {
+        initialHtml += buildVitrinaMarkup(initialDepts[i], i === 0);
+    }
+    container.innerHTML = initialHtml;
+
+    // FASE 2: Renderizar el resto en el siguiente fotograma para no bloquear el hilo principal (TBT -> 0ms)
+    if (remainingDepts.length > 0) {
+        const renderToken = Date.now();
+        container._vitrinaRenderToken = renderToken;
+
+        const raf = typeof requestAnimationFrame === 'function' ? requestAnimationFrame : (fn) => setTimeout(fn, 16);
+        raf(() => {
+            setTimeout(() => {
+                if (container._vitrinaRenderToken !== renderToken) return;
+                let remainingHtml = '';
+                for (let j = 0; j < remainingDepts.length; j++) {
+                    remainingHtml += buildVitrinaMarkup(remainingDepts[j], false);
+                }
+                container.insertAdjacentHTML('beforeend', remainingHtml);
+            }, 0);
+        });
+    }
 }
 
 function renderPaginatedDepartmentView(container, resultsCountTxt) {
