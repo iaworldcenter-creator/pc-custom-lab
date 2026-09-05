@@ -7,6 +7,8 @@
     <meta name="description" content="Mayorista de hardware y ensamble de cómputo en Guadalajara. Procesadores Intel y AMD Ryzen, tarjetas de video RTX, tarjetas madre, memorias RAM, SSDs y servidores. Despacho el mismo día en Pedro Moreno 501 A.">
     <!-- SEO CANONICAL & METAETIQUETAS GEO-LOCALIZADAS GUADALAJARA -->
     <link rel="canonical" href="https://iaworldcenter-creator.github.io/pc-custom-lab/">
+    <!-- WEBMCP AGENTIC MANIFEST (LIGHTHOUSE 13.4+ NAVEGACIÓN AGÉNTICA) -->
+    <link rel="alternate" type="text/plain" href="llms.txt" title="WebMCP Agent Manifest">
     <meta name="geo.region" content="MX-JAL">
     <meta name="geo.placename" content="Guadalajara">
     <meta name="geo.position" content="20.6766;-103.3470">
@@ -267,7 +269,7 @@
                 display: flex !important;
             }
             #mobile-departments-hub-wrapper {
-                display: block !important;
+                display: none !important;
             }
         }
     </style>
@@ -382,6 +384,7 @@
                         type="search" 
                         id="main-search-input" 
                         name="q"
+                        aria-label="Buscar componentes, hardware y ensambles"
                         placeholder="Encuentra rápido aquí y compra con un solo clic" 
                         class="w-full bg-transparent text-slate-900 placeholder-slate-400 text-xs sm:text-sm outline-none font-medium" 
                         onkeydown="if(event.key === 'Enter') { event.preventDefault(); window.executeSearchQuery(this.value); }"
@@ -420,7 +423,7 @@
             <section id="main-showcase-section" style="contain: layout;" class="flex-1 min-w-0 w-full flex flex-col gap-3.5">
                 
                 <!-- MÓVIL: EXPLORADOR RÁPIDO DE LOS 67 DEPARTAMENTOS Y SUBDEPARTAMENTOS (< 1024px) -->
-                <div id="mobile-departments-hub-wrapper" class="w-full">
+                <div id="mobile-departments-hub-wrapper" class="w-full" style="display: none !important;">
                     <!-- Inyectado dinámicamente por JS: 7 macrogrupos, 67 departamentos y subchips -->
                 </div>
 
@@ -469,8 +472,8 @@
 
                         <!-- Menú Desplegable 'Ordenar por' -->
                         <div class="flex items-center gap-1.5 text-xs font-mono text-slate-400">
-                            <span>Ordenar:</span>
-                            <select id="sort-select" onchange="window.setSortCriterion(this.value);" class="bg-slate-950 border border-slate-700 text-cyan-300 font-bold rounded-xl px-3 py-1.5 text-xs outline-none cursor-pointer shadow">
+                            <label for="sort-select" class="cursor-pointer">Ordenar:</label>
+                            <select id="sort-select" name="sort_criterion" aria-label="Ordenar productos por" onchange="window.setSortCriterion(this.value);" class="bg-slate-950 border border-slate-700 text-cyan-300 font-bold rounded-xl px-3 py-1.5 text-xs outline-none cursor-pointer shadow">
                                 <option value="destacados">⭐ Destacados (Fotos Primero)</option>
                                 <option value="precio_desc">💰 Precio: Mayor a Menor ($$$ → $)</option>
                                 <option value="precio_asc">🏷️ Precio: Menor a Mayor ($ → $$$)</option>
@@ -2556,9 +2559,9 @@
         </div>
     </aside>
 
-    <script src="js/ct-showcase-data.js?v=20260904_v28_departments_fix" defer></script>
-    <script src="js/cart.js?v=20260904_v28_departments_fix" defer></script>
-    <script src="js/ct-exact-catalog-engine.js?v=20260904_v28_departments_fix" defer></script>
+    <script src="js/ct-showcase-data.js?v=20260904_v29_agentic_cls_fix" defer></script>
+    <script src="js/cart.js?v=20260904_v29_agentic_cls_fix" defer></script>
+    <script src="js/ct-exact-catalog-engine.js?v=20260904_v29_agentic_cls_fix" defer></script>
     <script src="js/ux-engine.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {

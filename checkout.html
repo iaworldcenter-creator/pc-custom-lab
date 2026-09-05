@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PC Custom Lab | Hardware & Ensambles | Carrito de Compras & Pago Seguro</title>
     <meta name="description" content="Proceso de compra seguro para PC CUSTOM LAB. Entregas express en Guadalajara vía Uber Flash y envíos nacionales asegurados.">
+    <!-- WEBMCP AGENTIC MANIFEST (LIGHTHOUSE 13.4+ NAVEGACIÓN AGÉNTICA) -->
+    <link rel="alternate" type="text/plain" href="llms.txt" title="WebMCP Agent Manifest" />
     
     <!-- Fuentes y Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -226,8 +228,8 @@
 
                 <!-- Checkbox Newsletter / Taller Mayorista -->
                 <div class="pt-1">
-                    <label class="flex items-center gap-2.5 text-cyan-300 text-[11px] font-mono font-bold cursor-pointer">
-                        <input type="checkbox" id="custNewsletter" checked class="accent-cyan-400 w-4 h-4 cursor-pointer" />
+                    <label for="custNewsletter" class="flex items-center gap-2.5 text-cyan-300 text-[11px] font-mono font-bold cursor-pointer">
+                        <input type="checkbox" id="custNewsletter" name="newsletter" aria-label="Inscribirme al padrón de talleres y clientes frecuentes para recibir precios de mayoreo y promociones por correo" checked class="accent-cyan-400 w-4 h-4 cursor-pointer" />
                         <span>Inscribirme al padrón de talleres y clientes frecuentes para recibir precios de mayoreo y promociones por correo</span>
                     </label>
                 </div>
@@ -293,8 +295,8 @@
                 <!-- OPCIÓN 1: MERCADO PAGO -->
                 <div class="p-3.5 bg-slate-950 border-2 border-slate-800 hover:border-cyan-500/60 rounded-2xl transition cursor-pointer" onclick="selectPaymentMethod('tarjeta')">
                     <div class="flex items-center justify-between mb-1.5">
-                        <label class="flex items-center gap-2.5 cursor-pointer font-bold text-white text-xs sm:text-sm">
-                            <input type="radio" name="payment_method_radio" id="pay_card" value="tarjeta" checked class="accent-cyan-400 w-4 h-4 cursor-pointer" />
+                        <label for="pay_card" class="flex items-center gap-2.5 cursor-pointer font-bold text-white text-xs sm:text-sm">
+                            <input type="radio" name="payment_method_radio" id="pay_card" value="tarjeta" aria-label="Tarjeta de Crédito o Débito vía Mercado Pago" checked class="accent-cyan-400 w-4 h-4 cursor-pointer" />
                             <i class="fa-solid fa-credit-card text-cyan-400 text-base"></i>
                             <span>Tarjeta de Crédito / Débito (Mercado Pago)</span>
                         </label>
@@ -308,8 +310,8 @@
                 <!-- OPCIÓN 2: TRANSFERENCIA SPEI BBVA (0% COMISIÓN) -->
                 <div class="p-3.5 bg-slate-950 border-2 border-emerald-500/50 hover:border-emerald-400 rounded-2xl transition cursor-pointer" onclick="selectPaymentMethod('spei')">
                     <div class="flex items-center justify-between mb-1.5">
-                        <label class="flex items-center gap-2.5 cursor-pointer font-bold text-white text-xs sm:text-sm">
-                            <input type="radio" name="payment_method_radio" id="pay_spei" value="spei" class="accent-emerald-400 w-4 h-4 cursor-pointer" />
+                        <label for="pay_spei" class="flex items-center gap-2.5 cursor-pointer font-bold text-white text-xs sm:text-sm">
+                            <input type="radio" name="payment_method_radio" id="pay_spei" value="spei" aria-label="Transferencia SPEI Directa BBVA sin comisión" class="accent-emerald-400 w-4 h-4 cursor-pointer" />
                             <i class="fa-solid fa-building-columns text-emerald-400 text-base"></i>
                             <span>Transferencia SPEI Directa BBVA (0% Comisión)</span>
                         </label>
@@ -335,8 +337,8 @@
                 <!-- OPCIÓN 3: DEPÓSITO OXXO -->
                 <div class="p-3.5 bg-slate-950 border-2 border-slate-800 hover:border-amber-500/60 rounded-2xl transition cursor-pointer" onclick="selectPaymentMethod('oxxo')">
                     <div class="flex items-center justify-between mb-1.5">
-                        <label class="flex items-center gap-2.5 cursor-pointer font-bold text-white text-xs sm:text-sm">
-                            <input type="radio" name="payment_method_radio" id="pay_oxxo" value="oxxo" class="accent-amber-400 w-4 h-4 cursor-pointer" />
+                        <label for="pay_oxxo" class="flex items-center gap-2.5 cursor-pointer font-bold text-white text-xs sm:text-sm">
+                            <input type="radio" name="payment_method_radio" id="pay_oxxo" value="oxxo" aria-label="Depósito o Abono en Efectivo OXXO" class="accent-amber-400 w-4 h-4 cursor-pointer" />
                             <i class="fa-solid fa-store text-amber-400 text-base"></i>
                             <span>Depósito / Abono en Efectivo (OXXO, 7-Eleven, Farmacias)</span>
                         </label>

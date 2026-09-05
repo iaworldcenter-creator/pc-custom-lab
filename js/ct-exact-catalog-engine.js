@@ -892,7 +892,6 @@ if (document.readyState === "loading") {
 } else {
     bootMasterZeroBlank();
 }
-setTimeout(bootMasterZeroBlank, 20);
 
 function setViewStyle(style) {
     currentViewStyle = style;
@@ -1683,9 +1682,12 @@ function renderPaginationBar(totalPages) {
 
             <div class="flex items-center gap-2">
                 <div class="flex items-center gap-1.5 bg-slate-950 px-2.5 py-1.5 rounded-xl border border-slate-800 text-[11px] font-mono text-slate-400">
-                    <label class="text-[10.5px]">Ir a:</label>
+                    <label for="paginationTargetPageInput" class="text-[10.5px] cursor-pointer">Ir a:</label>
                     <input 
                         type="number" 
+                        id="paginationTargetPageInput"
+                        name="page_number"
+                        aria-label="Ir a la página número"
                         min="1" 
                         max="${totalPages}" 
                         value="${current}" 
@@ -1696,6 +1698,7 @@ function renderPaginationBar(totalPages) {
                         type="button" 
                         onclick="const inp=this.previousElementSibling; if(inp){window.goToPage(parseInt(inp.value, 10));}"
                         class="btn-action bg-blue-600 hover:bg-blue-500 text-white font-black px-2.5 py-1 rounded-lg text-[10px] uppercase cursor-pointer transition shadow"
+                        aria-label="Confirmar ir a la página"
                     >
                         Ir
                     </button>
@@ -1897,10 +1900,10 @@ function renderSidebarFacets() {
                     
                     <div class="grid grid-cols-2 gap-2">
                         <div>
-                            <input type="number" id="budgetMinInput" placeholder="Mín: $0" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-1.5 text-xs text-white font-mono outline-none focus:border-cyan-400" />
+                            <input type="number" id="budgetMinInput" name="budget_min" aria-label="Precio mínimo en pesos mexicanos" placeholder="Mín: $0" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-1.5 text-xs text-white font-mono outline-none focus:border-cyan-400" />
                         </div>
                         <div>
-                            <input type="number" id="budgetMaxInput" placeholder="Máx: Sin límite" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-1.5 text-xs text-white font-mono outline-none focus:border-cyan-400" />
+                            <input type="number" id="budgetMaxInput" name="budget_max" aria-label="Precio máximo en pesos mexicanos" placeholder="Máx: Sin límite" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-1.5 text-xs text-white font-mono outline-none focus:border-cyan-400" />
                         </div>
                     </div>
 
@@ -2095,109 +2098,15 @@ window.renderMobileDepartmentsList = function() {
     }
 };
 
-// EXPLORADOR MÓVIL EN PÁGINA: 67 DEPARTAMENTOS Y SUBDEPARTAMENTOS
+// // EXPLORADOR MÓVIL EN PÁGINA: DESACTIVADO DEL FLUJO PRINCIPAL PARA GARANTIZAR CLS = 0.000
+// Los 67 departamentos residen en el cajón deslizante off-canvas (#mobile-departments-drawer)
 window.renderMobileDepartmentsHub = function() {
     try {
         const wrapper = document.getElementById("mobile-departments-hub-wrapper");
-        if (!wrapper) return;
-
-        if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
+        if (wrapper) {
+            wrapper.style.display = 'none';
             wrapper.innerHTML = '';
-            return;
         }
-
-        const depts = (window.PC_DEPARTAMENTOS && Array.isArray(window.PC_DEPARTAMENTOS) && window.PC_DEPARTAMENTOS.length > 0)
-            ? window.PC_DEPARTAMENTOS
-            : getMasterDepartmentsList();
-
-        const totalItems = depts.reduce((sum, d) => sum + (d.count || 0), 0) || 17490;
-
-        wrapper.innerHTML = `
-            <div class="w-full bg-slate-900/95 border border-cyan-500/40 rounded-2xl p-3 shadow-xl mb-3.5">
-                <div class="flex items-center justify-between gap-2 mb-2 pb-2 border-b border-slate-800">
-                    <div class="flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-lg bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-400 text-xs shrink-0">
-                            <i class="fa-solid fa-layer-group"></i>
-                        </div>
-                        <div>
-                            <h2 class="text-white font-mono font-bold text-xs uppercase tracking-wide">
-                                67 Departamentos & Subcategorías
-                            </h2>
-                            <p class="text-[9.5px] font-mono text-cyan-300">
-                                Acceso directo a todo el inventario en Guadalajara
-                            </p>
-                        </div>
-                    </div>
-                    <button 
-                        type="button" 
-                        onclick="window.toggleMobileDepartmentsDrawer(true)" 
-                        class="bg-cyan-950 hover:bg-cyan-900 border border-cyan-500/60 text-cyan-300 px-2.5 py-1 rounded-xl text-[10px] font-mono font-bold uppercase shrink-0 transition flex items-center gap-1 cursor-pointer">
-                        <i class="fa-solid fa-bars text-xs"></i> <span>Menú Completo</span>
-                    </button>
-                </div>
-
-                <!-- 7 Macrogrupos con Subdepartamentos Directos -->
-                <div class="space-y-1.5">
-                    ${MASTER_DEPARTMENTS.map(master => {
-                        const childDepts = master.deptIds.map(id => depts.find(d => d.id === id)).filter(Boolean);
-                        const isMasterActive = master.deptIds.includes(activeSelectedCategory);
-                        const masterCount = childDepts.reduce((sum, d) => sum + (d.count || 0), 0);
-
-                        return `
-                            <details class="group bg-slate-950/80 border ${isMasterActive ? 'border-cyan-500/70 bg-slate-950' : 'border-slate-800/90'} rounded-xl overflow-hidden" ${isMasterActive ? 'open' : ''}>
-                                <summary class="flex items-center justify-between p-2 cursor-pointer list-none font-mono text-xs font-bold text-white hover:bg-slate-850 transition select-none">
-                                    <div class="flex items-center gap-2 truncate min-w-0 pr-1">
-                                        <i class="fa-solid ${master.icon} text-cyan-400 text-xs w-4 text-center shrink-0"></i>
-                                        <span class="truncate text-[11px] ${isMasterActive ? 'text-cyan-300 font-black' : ''}">${master.name}</span>
-                                    </div>
-                                    <div class="flex items-center gap-1.5 shrink-0">
-                                        <span class="text-[9px] font-mono bg-slate-900 border border-slate-700 px-1.5 py-0.5 rounded text-cyan-300 font-bold">
-                                            ${masterCount.toLocaleString('es-MX')}
-                                        </span>
-                                        <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-open:rotate-180 transition-transform duration-200"></i>
-                                    </div>
-                                </summary>
-                                <div class="p-2 pt-1 pb-1 space-y-1.5 bg-slate-900/90 border-t border-slate-800/80 text-xs divide-y divide-slate-800/40">
-                                    ${childDepts.map(c => {
-                                        const isDeptActive = activeSelectedCategory === c.id;
-                                        const subs = (window.PC_SUBDEPARTAMENTOS && window.PC_SUBDEPARTAMENTOS[c.id]) || [];
-                                        return `
-                                            <div class="pt-1.5 pb-1">
-                                                <div class="flex items-center justify-between">
-                                                    <button 
-                                                        type="button" 
-                                                        onclick="window.selectCategoryFacet('${c.id}')" 
-                                                        class="flex items-center gap-1.5 text-left truncate cursor-pointer ${isDeptActive ? 'text-cyan-300 font-black' : 'text-slate-200 hover:text-white'}">
-                                                        <i class="fa-solid ${c.icon} text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
-                                                        <span class="text-[10.5px] truncate font-bold">${c.name}</span>
-                                                    </button>
-                                                    <span class="font-mono text-[9px] text-slate-400 shrink-0">(${c.count || 0})</span>
-                                                </div>
-                                                ${subs.length > 0 ? `
-                                                    <div class="flex flex-wrap gap-1 mt-1 pl-4">
-                                                        ${subs.map(s => {
-                                                            const isSubActive = isDeptActive && activeSelectedChip === s.name;
-                                                            return `
-                                                                <button 
-                                                                    type="button" 
-                                                                    onclick="window.selectDepartmentWithSubcategory('${c.id}', '${s.name.replace(/'/g, "\\'")}')" 
-                                                                    class="text-[9.5px] font-mono px-2 py-0.5 rounded-md border ${isSubActive ? 'bg-cyan-500 text-slate-950 font-bold border-cyan-400 shadow-sm' : 'bg-slate-950 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400'} transition cursor-pointer shrink-0">
-                                                                    ${s.name} <span class="opacity-75">(${s.count})</span>
-                                                                </button>
-                                                            `;
-                                                        }).join('')}
-                                                    </div>
-                                                ` : ''}
-                                            </div>
-                                        `;
-                                    }).join('')}
-                                </div>
-                            </details>
-                        `;
-                    }).join('')}
-                </div>
-            </div>
-        `;
     } catch(e) {
         console.error("renderMobileDepartmentsHub error:", e);
     }
@@ -2663,7 +2572,7 @@ window.openProductDetailModal = function(sku) {
                         <!-- Tira Inferior de Miniaturas (Thumbnails) -->
                         <div class="flex items-center gap-2 mt-3 overflow-x-auto pb-1 max-w-full no-scrollbar" id="modalThumbnailsStrip">
                             ${imgs.map((src, i) => `
-                                <button type="button" onclick="window.setModalImage(${i})" class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-slate-950 ${i === 0 ? 'border-2 border-cyan-400 ring-2 ring-cyan-400/40 shadow-lg' : 'border border-slate-800 hover:border-slate-600 opacity-60 hover:opacity-100'} transition overflow-hidden p-1 shrink-0 flex items-center justify-center cursor-pointer" id="modalThumb_${i}">
+                                <button type="button" onclick="window.setModalImage(${i})" aria-label="Ver imagen ${i+1}" class="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-slate-950 ${i === 0 ? 'border-2 border-cyan-400 ring-2 ring-cyan-400/40 shadow-lg' : 'border border-slate-800 hover:border-slate-600 opacity-60 hover:opacity-100'} transition overflow-hidden p-1 shrink-0 flex items-center justify-center cursor-pointer" id="modalThumb_${i}">
                                     <img src="${src}" alt="Vista ${i+1}" class="w-full h-full object-contain" />
                                 </button>
                             `).join('')}
