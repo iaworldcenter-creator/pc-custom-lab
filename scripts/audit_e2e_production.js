@@ -499,13 +499,14 @@ try {
 
     // 10.3 Sincronización estricta de números telefónicos oficiales
     const hasOfficialLandline = rawHTML.includes('tel:+523336136348') && rawHTML.includes('(33) 3613 6348');
-    const hasOfficialMobile = rawHTML.includes('wa.me/523337271440') && rawHTML.includes('33 3727 1440');
-    if (hasOfficialLandline && hasOfficialMobile) {
-        recordResult('Sincronización Telefónica Oficial (Google Business Profile & WhatsApp)', 'PASSED',
-            'Fijo (33) 3613 6348 y Celular/WhatsApp 33 3727 1440 validados en modales, cabecera y pie de página.');
+    const hasOfficialWhatsApp = rawHTML.includes('wa.me/523337271440') && rawHTML.includes('33 3727 1440');
+    const hasOfficialCelular = rawHTML.includes('tel:+523326652109') && rawHTML.includes('33 2665 2109');
+    if (hasOfficialLandline && hasOfficialWhatsApp && hasOfficialCelular) {
+        recordResult('Sincronización Telefónica Oficial (Fijo, WhatsApp y Celular Permanente)', 'PASSED',
+            'Fijo (33) 3613 6348, WhatsApp 33 3727 1440 y Celular permanente 33 2665 2109 validados.');
     } else {
-        recordResult('Sincronización Telefónica Oficial (Google Business Profile & WhatsApp)', 'FAILED',
-            `hasLandline=${hasOfficialLandline}, hasMobile=${hasOfficialMobile}`);
+        recordResult('Sincronización Telefónica Oficial (Fijo, WhatsApp y Celular Permanente)', 'FAILED',
+            `hasLandline=${hasOfficialLandline}, hasWhatsApp=${hasOfficialWhatsApp}, hasCelular=${hasOfficialCelular}`);
     }
 } catch(e) {
     recordResult('Auditoría de Chat y Código QR', 'FAILED', e.message);
