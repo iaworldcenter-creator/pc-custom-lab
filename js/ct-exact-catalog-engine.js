@@ -1918,20 +1918,55 @@ window.toggleMobileDepartmentsDrawer = function(open) {
             window.renderMobileDepartmentsList();
             drawer.classList.remove("hidden");
             if (backdrop) backdrop.classList.remove("hidden");
-            setTimeout(() => {
-                drawer.classList.remove("-translate-x-full");
-                if (backdrop) backdrop.classList.remove("opacity-0");
-            }, 10);
+
+            // Forzar reflow en navegador para animación consistente en iOS / Android / tablets
+            void drawer.offsetWidth;
+
+            drawer.classList.add("drawer-open");
+            drawer.classList.remove("-translate-x-full");
+            if (backdrop) {
+                backdrop.classList.add("backdrop-open");
+                backdrop.classList.remove("opacity-0");
+            }
+            document.body.style.overflow = "hidden";
         } else {
+            drawer.classList.remove("drawer-open");
             drawer.classList.add("-translate-x-full");
-            if (backdrop) backdrop.classList.add("opacity-0");
+            if (backdrop) {
+                backdrop.classList.remove("backdrop-open");
+                backdrop.classList.add("opacity-0");
+            }
+            document.body.style.overflow = "";
             setTimeout(() => {
-                drawer.classList.add("hidden");
-                if (backdrop) backdrop.classList.add("hidden");
-            }, 300);
+                if (!drawer.classList.contains("drawer-open")) {
+                    drawer.classList.add("hidden");
+                    if (backdrop) backdrop.classList.add("hidden");
+                }
+            }, 320);
         }
     } catch(e) {
         console.error("toggleMobileDepartmentsDrawer error:", e);
+    }
+};
+
+window.toggleMobileSubDept = function(btn) {
+    try {
+        const item = btn.closest('.mobile-child-dept');
+        if (!item) return;
+        const subBox = item.querySelector('.mobile-subchips-box');
+        const chevron = btn.querySelector('i');
+        if (subBox) {
+            const isHidden = subBox.classList.contains('hidden');
+            if (isHidden) {
+                subBox.classList.remove('hidden');
+                if (chevron) chevron.classList.add('rotate-180');
+            } else {
+                subBox.classList.add('hidden');
+                if (chevron) chevron.classList.remove('rotate-180');
+            }
+        }
+    } catch(e) {
+        console.warn("toggleMobileSubDept error:", e);
     }
 };
 
@@ -1981,10 +2016,25 @@ window.renderMobileDepartmentsList = function() {
                         <div class="p-2 pt-1 pb-1 space-y-1 bg-slate-900/90 border-t border-slate-800/80 text-xs divide-y divide-slate-800/40">
                             ${childDepts.map(c => {
                                 const isDeptActive = activeSelectedCategory === c.id;
-                                const subs = (window.PC_SUBDEPARTAMENTOS && window.PC_SUBDEPARTAMENTOS[c.id]) || [];
+                                let subs = (window.PC_SUBDEPARTAMENTOS && window.PC_SUBDEPARTAMENTOS[c.id]) || [];
+                                if (subs.length === 0) {
+                                    const allDeptItems = (window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || []).filter(p => (p.categoria_clasificada || p.c || '').toLowerCase() === c.id.toLowerCase());
+                                    const brandMap = new Map();
+                                    allDeptItems.forEach(p => {
+                                        const b = p.marca || p.m;
+                                        if (b && typeof b === 'string' && b.trim()) {
+                                            const bName = b.trim();
+                                            brandMap.set(bName, (brandMap.get(bName) || 0) + 1);
+                                        }
+                                    });
+                                    if (brandMap.size > 1) {
+                                        subs = Array.from(brandMap.entries()).sort((a,b) => b[1] - a[1]).slice(0, 8).map(([name, count]) => ({ name, count }));
+                                    }
+                                }
+                                const hasSubs = subs && subs.length > 0;
                                 const hasActiveSub = isDeptActive && activeSelectedChip !== 'Todos';
 
-                                if (subs.length === 0) {
+                                if (!hasSubs) {
                                     return `
                                         <div class="py-1">
                                             <button 
@@ -2002,33 +2052,40 @@ window.renderMobileDepartmentsList = function() {
                                 }
 
                                 return `
-                                    <details class="group/sub py-0.5" ${hasActiveSub ? 'open' : ''}>
-                                        <summary class="flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer list-none ${isDeptActive ? 'text-cyan-300 font-black bg-slate-800/60' : 'text-slate-300'}">
-                                            <div onclick="event.preventDefault(); window.selectCategoryFacet('${c.id}'); window.toggleMobileDepartmentsDrawer(false);" class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1">
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition ${isDeptActive ? 'text-cyan-300 font-black bg-slate-800/60' : 'text-slate-300'}">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('${c.id}'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
                                                 <i class="fa-solid ${c.icon} text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
-                                                <span class="truncate text-[11px] font-medium">${c.name}</span>
-                                            </div>
-                                            <div class="flex items-center gap-1.5 shrink-0">
-                                                <span class="font-mono text-[9px] text-slate-400">(${c.count || 0})</span>
-                                                <span class="w-6 h-6 flex items-center justify-center rounded bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition" title="Ver subdepartamentos">
-                                                    <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-open/sub:rotate-180"></i>
-                                                </span>
-                                            </div>
-                                        </summary>
-                                        <div class="flex flex-wrap gap-1.5 pl-5 pr-1 pt-1 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                                <span class="truncate text-[11px] ${isDeptActive ? 'font-black' : 'font-medium'}">${c.name}</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(${c.count || 0})</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de ${c.name}">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 ${hasActiveSub ? 'rotate-180' : ''}"></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box ${hasActiveSub ? '' : 'hidden'} flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
                                             ${subs.map(s => {
                                                 const isSubActive = isDeptActive && activeSelectedChip === s.name;
+                                                const countLabel = (typeof s.count === 'number' && s.count > 0) ? ` <span class="opacity-75">(${s.count})</span>` : '';
                                                 return `
                                                     <button 
                                                         type="button" 
                                                         onclick="window.selectDepartmentWithSubcategory('${c.id}', '${s.name.replace(/'/g, "\\'")}'); window.toggleMobileDepartmentsDrawer(false);" 
                                                         class="text-[10px] font-mono px-2 py-1 rounded-lg border ${isSubActive ? 'bg-cyan-500 text-slate-950 font-black border-cyan-400 shadow-md' : 'bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400'} transition cursor-pointer shrink-0">
-                                                        ${s.name} <span class="opacity-75">(${s.count})</span>
+                                                        ${s.name}${countLabel}
                                                     </button>
                                                 `;
                                             }).join('')}
                                         </div>
-                                    </details>
+                                    </div>
                                 `;
                             }).join('')}
                         </div>

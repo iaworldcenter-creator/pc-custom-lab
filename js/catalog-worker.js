@@ -347,8 +347,8 @@ self.onmessage = async function(e) {
             case 'INIT': {
                 if (baseUrl) defaultBaseUrl = baseUrl;
                 await loadManifest(baseUrl);
-                // Iniciar precarga progresiva en background (Off-Main-Thread)
-                loadAllDepartments(baseUrl);
+                // El manifiesto está listo en memoria. Las 67 particiones se cargan bajo demanda (on-demand)
+                // para no sobrecargar el móvil ni agotar el ancho de banda en segundo plano.
                 self.postMessage({
                     id,
                     action,
