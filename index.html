@@ -554,11 +554,11 @@
                         </p>
                         <p class="flex items-center gap-2">
                             <i class="fa-brands fa-whatsapp text-emerald-400 shrink-0" aria-hidden="true"></i>
-                            <span>WhatsApp: <a href="https://wa.me/523326652109" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" class="hover:text-emerald-300 font-bold text-white transition">+52 33 2665 2109</a></span>
+                            <span>WhatsApp: <a href="https://wa.me/523337271440" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" class="hover:text-emerald-300 font-bold text-white transition">+52 33 3727 1440</a></span>
                         </p>
                         <p class="flex items-center gap-2">
                             <i class="fa-solid fa-mobile-screen-button text-cyan-400 shrink-0" aria-hidden="true"></i>
-                            <span>Celular: <a href="tel:+523326652109" aria-label="Llamar a celular de atención directa" class="hover:text-cyan-300 font-bold text-white transition"><strong>+52 33 2665 2109</strong></a></span>
+                            <span>Celular: <a href="tel:+523337271440" aria-label="Llamar a celular de atención directa" class="hover:text-cyan-300 font-bold text-white transition"><strong>+52 33 3727 1440</strong></a></span>
                         </p>
                     </div>
 
@@ -2545,6 +2545,59 @@
                                     
                         </div>
                     </details>
+
+                    <!-- CÓDIGO DE BARRAS / QR DE LA APLICACIÓN Y ENLACES DE DESCARGA -->
+                    <div id="mobile-drawer-qr-container" class="mt-4 p-3.5 bg-gradient-to-b from-slate-950 to-slate-900 border border-cyan-500/40 rounded-2xl shadow-xl text-center space-y-3">
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                            <span class="text-xs font-mono font-bold text-cyan-300 uppercase tracking-wider flex items-center gap-1.5">
+                                <i class="fa-solid fa-qrcode text-cyan-400"></i> App PC Custom Lab
+                            </span>
+                            <span class="text-[9px] font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold">Descarga Directa</span>
+                        </div>
+
+                        <!-- Código de Barras / QR Interactivo -->
+                        <div class="p-2.5 bg-white rounded-2xl shadow-inner cursor-pointer hover:scale-105 transition-transform duration-200 inline-block mx-auto border border-slate-700" onclick="window.toggleQrModal(true)" title="Clic para ampliar código QR">
+                            <img 
+                                src="assets/img/codigo_qr_bazar_nfl.png" 
+                                alt="Código QR Oficial PC Custom Lab y BAZAR NFL GDL" 
+                                width="120" 
+                                height="120" 
+                                class="w-[120px] h-[120px] object-contain rounded-xl mx-auto block" 
+                                loading="lazy" 
+                            />
+                        </div>
+
+                        <p class="text-[10.5px] font-mono text-slate-300 leading-tight">
+                            Lleva el catálogo en tu celular o descarga las aplicaciones oficiales
+                        </p>
+
+                        <!-- Enlaces de Descarga de la Aplicación y Herramientas -->
+                        <div class="space-y-2 pt-1">
+                            <button 
+                                type="button" 
+                                onclick="window.toggleQrModal(true)" 
+                                aria-label="Ampliar código QR y obtener enlace de instalación de la aplicación"
+                                class="btn-action w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-mono font-black py-2.5 px-3 rounded-xl text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 cursor-pointer shadow min-h-[40px]">
+                                <i class="fa-solid fa-mobile-screen-button"></i> <span>Instalar App en Celular</span>
+                            </button>
+
+                            <a 
+                                href="https://antigravity.google/download" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="w-full bg-slate-950 hover:bg-slate-800 border border-amber-500/50 hover:border-amber-400 text-amber-300 font-mono font-bold py-2.5 px-3 rounded-xl text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 cursor-pointer min-h-[40px] block text-center shadow">
+                                <i class="fa-solid fa-download text-amber-400"></i> <span>Descargar Anti Gravity</span>
+                            </a>
+
+                            <a 
+                                href="https://gemini.google.com/advanced" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="w-full bg-slate-950 hover:bg-slate-800 border border-indigo-500/50 hover:border-cyan-400 text-cyan-300 font-mono font-bold py-2.5 px-3 rounded-xl text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 cursor-pointer min-h-[40px] block text-center shadow">
+                                <i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i> <span>Suscríbete a Gemini</span>
+                            </a>
+                        </div>
+                    </div>
         </div>
 
         <!-- Pie del Drawer -->
@@ -2639,7 +2692,7 @@
             type="button" 
             id="btn-floating-chat"
             onclick="window.openChatOrWhatsApp()"
-            aria-label="Abrir WhatsApp oficial PC Custom Lab (+52 33 2665 2109)" 
+            aria-label="Abrir WhatsApp oficial PC Custom Lab (+52 33 3727 1440)" 
             title="Atención Directa WhatsApp"
             class="fixed bottom-5 right-5 z-50 flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl transition-transform hover:scale-110 cursor-pointer min-w-[56px] min-h-[56px] border-2 border-white/80"
             style="position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 50;">
@@ -2676,9 +2729,9 @@
 
             <div class="space-y-2.5">
                 <!-- Botón WhatsApp Directo -->
-                <a href="https://wa.me/523326652109?text=Hola%20PC%20Custom%20Lab,%20deseo%20atención%20inmediata%20sobre%20su%20catálogo%20y%20ensambles." target="_blank" rel="noopener" class="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-mono font-bold py-3 px-4 rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg shadow-emerald-950 transition active:scale-95 cursor-pointer min-h-[48px]">
+                <a href="https://wa.me/523337271440?text=Hola%20PC%20Custom%20Lab,%20deseo%20atención%20inmediata%20sobre%20su%20catálogo%20y%20ensambles." target="_blank" rel="noopener" class="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-mono font-bold py-3 px-4 rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg shadow-emerald-950 transition active:scale-95 cursor-pointer min-h-[48px]">
                     <i class="fa-brands fa-whatsapp text-xl text-white"></i>
-                    <span>Chatear por WhatsApp (+52 33 2665 2109)</span>
+                    <span>Chatear por WhatsApp (+52 33 3727 1440)</span>
                 </a>
 
                 <!-- Llamada Fija Mostrador -->
@@ -2691,12 +2744,12 @@
                 </a>
 
                 <!-- Celular Mostrador -->
-                <a href="tel:+523326652109" class="w-full bg-slate-950 hover:bg-slate-800 border border-slate-700 text-slate-200 hover:text-white font-mono font-bold py-2.5 px-4 rounded-2xl text-xs flex items-center justify-between transition cursor-pointer min-h-[44px]">
+                <a href="tel:+523337271440" class="w-full bg-slate-950 hover:bg-slate-800 border border-slate-700 text-slate-200 hover:text-white font-mono font-bold py-2.5 px-4 rounded-2xl text-xs flex items-center justify-between transition cursor-pointer min-h-[44px]">
                     <span class="flex items-center gap-2">
                         <i class="fa-solid fa-mobile-screen text-amber-400"></i>
-                        <span>Celular Directo:</span>
+                        <span>Celular Directo / WhatsApp:</span>
                     </span>
-                    <span class="text-amber-300 font-bold">+52 33 2665 2109</span>
+                    <span class="text-amber-300 font-bold">+52 33 3727 1440</span>
                 </a>
             </div>
 
@@ -2761,7 +2814,7 @@
             if (modal) {
                 modal.classList.remove('hidden');
             } else {
-                window.open('https://wa.me/523326652109?text=Hola%20PC%20Custom%20Lab,%20deseo%20atención%20inmediata%20sobre%20su%20catálogo%20y%20ensambles.', '_blank');
+                window.open('https://wa.me/523337271440?text=Hola%20PC%20Custom%20Lab,%20deseo%20atención%20inmediata%20sobre%20su%20catálogo%20y%20ensambles.', '_blank');
             }
         };
         window.toggleChatContactModal = function(show) {

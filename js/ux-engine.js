@@ -322,8 +322,8 @@ class HighConversionSearchEngine {
                     <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 10px;">
                         Sin resultados exactos para "<b>${query}</b>"
                     </p>
-                    <a href="https://wa.me/523326652109?text=Hola,%20busco%20disponibilidad%20de:%20${encodeURIComponent(query)}" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; background: #10b981; color: #020617; font-weight: 800; padding: 8px 14px; border-radius: 10px; font-size: 0.75rem; text-decoration: none;">
-                        <span>💬 Consultar inventario por WhatsApp (+52 33 2665 2109)</span>
+                    <a href="https://wa.me/523337271440?text=Hola,%20busco%20disponibilidad%20de:%20${encodeURIComponent(query)}" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; background: #10b981; color: #020617; font-weight: 800; padding: 8px 14px; border-radius: 10px; font-size: 0.75rem; text-decoration: none;">
+                        <span>💬 Consultar inventario por WhatsApp (+52 33 3727 1440)</span>
                     </a>
                 </div>
             `;
@@ -449,7 +449,7 @@ window.openChatOrWhatsApp = function() {
     if (modal) {
         modal.classList.remove('hidden');
     } else {
-        window.open('https://wa.me/523326652109?text=Hola%20PC%20Custom%20Lab,%20deseo%20atención%20inmediata%20sobre%20su%20catálogo%20y%20ensambles.', '_blank');
+        window.open('https://wa.me/523337271440?text=Hola%20PC%20Custom%20Lab,%20deseo%20atención%20inmediata%20sobre%20su%20catálogo%20y%20ensambles.', '_blank');
     }
 };
 

@@ -472,39 +472,39 @@ try {
     const hasChatContainer = rawHTML.includes('id="floating-chat-container"');
     const hasFixedBottomRight = (rawHTML.includes('bottom-5') || rawHTML.includes('bottom-4')) && (rawHTML.includes('right-5') || rawHTML.includes('right-4')) && rawHTML.includes('z-50');
     const hasChatButton = rawHTML.includes('id="btn-floating-chat"') && rawHTML.includes('openChatOrWhatsApp');
-    const hasChatModal = rawHTML.includes('id="chatContactModal"') && rawHTML.includes('wa.me/523326652109');
+    const hasChatModal = rawHTML.includes('id="chatContactModal"') && rawHTML.includes('wa.me/523337271440');
 
     if (hasChatContainer && hasFixedBottomRight && hasChatButton && hasChatModal) {
         recordResult('Chat Flotante Inferior y Modal de Contacto WhatsApp', 'PASSED',
-            'Capa fija (bottom-5 right-5 z-50), botón interactivo de 56px y modal de WhatsApp oficial (+52 33 2665 2109) verificados.');
+            'Capa fija (bottom-5 right-5 z-50), botón interactivo de 56px y modal de WhatsApp oficial (+52 33 3727 1440) verificados.');
     } else {
         recordResult('Chat Flotante Inferior y Modal de Contacto WhatsApp', 'FAILED',
             `hasContainer=${hasChatContainer}, hasFixed=${hasFixedBottomRight}, hasBtn=${hasChatButton}, hasModal=${hasChatModal}`);
     }
 
-    // 10.2 Acceso de Código QR (Barra lateral #sidebar-facets, barra superior, footer y modal)
+    // 10.2 Acceso de Código QR y Enlaces de Descarga (Bajo menú de departamentos en Drawer Móvil y Sidebar)
     const hasSidebarQr = catalogEngineJS.includes('id="sidebar-qr-container"') && catalogEngineJS.includes('assets/img/codigo_qr_bazar_nfl.png');
-    const hasTopQrBtn = rawHTML.includes('id="btn-top-qr"') && rawHTML.includes('toggleQrModal');
-    const hasFooterOrSidebarQr = hasSidebarQr || rawHTML.includes('assets/img/codigo_qr_bazar_nfl.png');
+    const hasDrawerQr = rawHTML.includes('id="mobile-drawer-qr-container"') && rawHTML.includes('assets/img/codigo_qr_bazar_nfl.png');
+    const hasDownloadLinks = rawHTML.includes('antigravity.google/download') && rawHTML.includes('Instalar App en Celular');
     const hasQrDimensions = /<img[^>]*codigo_qr_bazar_nfl\.png[^>]*width=["']\d+["'][^>]*height=["']\d+["']/i.test(catalogEngineJS) && /<img[^>]*codigo_qr_bazar_nfl\.png[^>]*width=["']\d+["'][^>]*height=["']\d+["']/i.test(rawHTML);
     const hasQrModal = rawHTML.includes('id="qrModal"') && rawHTML.includes('toggleQrModal');
 
-    if (hasSidebarQr && hasFooterOrSidebarQr && hasQrDimensions && hasQrModal) {
-        recordResult('Módulo Oficial y Visualizador de Código QR', 'PASSED',
-            'Anclado en #sidebar-facets bajo departamentos y footer, dimensiones fijas anti-CLS y modal responsive.');
+    if (hasSidebarQr && hasDrawerQr && hasDownloadLinks && hasQrDimensions && hasQrModal) {
+        recordResult('Módulo de Código QR y Enlaces de Descarga de App', 'PASSED',
+            'Anclado abajo de departamentos en Drawer Móvil (#mobile-drawer-qr-container) y Sidebar (#sidebar-facets), dimensiones anti-CLS y enlaces oficiales.');
     } else {
-        recordResult('Módulo Oficial y Visualizador de Código QR', 'FAILED',
-            `hasSidebar=${hasSidebarQr}, hasFooter=${hasFooterOrSidebarQr}, hasDims=${hasQrDimensions}, hasModal=${hasQrModal}`);
+        recordResult('Módulo de Código QR y Enlaces de Descarga de App', 'FAILED',
+            `sidebar=${hasSidebarQr}, drawer=${hasDrawerQr}, downloadLinks=${hasDownloadLinks}, dims=${hasQrDimensions}, modal=${hasQrModal}`);
     }
 
     // 10.3 Sincronización estricta de números telefónicos oficiales
     const hasOfficialLandline = rawHTML.includes('tel:+523336136348') && rawHTML.includes('(33) 3613 6348');
-    const hasOfficialMobile = rawHTML.includes('wa.me/523326652109') && rawHTML.includes('33 2665 2109');
+    const hasOfficialMobile = rawHTML.includes('wa.me/523337271440') && rawHTML.includes('33 3727 1440');
     if (hasOfficialLandline && hasOfficialMobile) {
-        recordResult('Sincronización Telefónica Oficial (Google Business Profile)', 'PASSED',
-            'Fijo (33) 3613 6348 y Celular/WhatsApp 33 2665 2109 validados en modales, cabecera y pie de página.');
+        recordResult('Sincronización Telefónica Oficial (Google Business Profile & WhatsApp)', 'PASSED',
+            'Fijo (33) 3613 6348 y Celular/WhatsApp 33 3727 1440 validados en modales, cabecera y pie de página.');
     } else {
-        recordResult('Sincronización Telefónica Oficial (Google Business Profile)', 'FAILED',
+        recordResult('Sincronización Telefónica Oficial (Google Business Profile & WhatsApp)', 'FAILED',
             `hasLandline=${hasOfficialLandline}, hasMobile=${hasOfficialMobile}`);
     }
 } catch(e) {
