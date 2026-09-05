@@ -534,83 +534,14 @@ window.resetFacets = function() {
 };
 
 // =========================================================================
-// CARGA DIFERIDA ASÍNCRONA DEL CATÁLOGO GLOBAL (17,490 ITEMS EN BACKGROUND)
+// CATÁLOGO ULTRA RÁPIDO OFF-MAIN-THREAD (WEB WORKER + DATA CHUNKING)
 // =========================================================================
-let isFullMasterLoading = false;
+// El hilo principal opera exclusivamente con js/ct-showcase-data.js para FCP/LCP instantáneo.
+// La totalidad de los 17,490 productos se delega bajo demanda al Web Worker (js/catalog-worker.js)
+// mediante particiones JSON (< 400 KB) en data/departments/. Cero bloqueo de CPU en el hilo principal.
 window.ensureFullCatalogLoaded = function(callback) {
-    if (window.CT_CATALOG_DATA && Array.isArray(window.CT_CATALOG_DATA) && window.CT_CATALOG_DATA.length > 1000) {
-        if (typeof callback === 'function') callback();
-        return;
-    }
-    if (isFullMasterLoading) {
-        if (typeof callback === 'function' && typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
-            window.addEventListener('ct_master_catalog_ready', callback, { once: true });
-        }
-        return;
-    }
-    if (typeof document === 'undefined' || !document.createElement) {
-        if (typeof callback === 'function') callback();
-        return;
-    }
-    isFullMasterLoading = true;
-    const script = document.createElement('script');
-    script.src = 'js/ct-catalog-data.js?v=20260903_v27_multimagen_logistica';
-    script.async = true;
-    script.onload = () => {
-        isFullMasterLoading = false;
-        try {
-            if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function') {
-                window.dispatchEvent(new CustomEvent('ct_master_catalog_ready'));
-            }
-        } catch(e) {}
-        if (typeof callback === 'function') callback();
-        
-        // Refrescar vistas si el usuario está interactuando en búsqueda o departamento
-        if ((typeof activeSearchQuery !== 'undefined' && activeSearchQuery && activeSearchQuery.trim() !== '') || 
-            (typeof activeSelectedCategory !== 'undefined' && activeSelectedCategory !== 'Todas')) {
-            if (typeof renderSidebarFacets === 'function') renderSidebarFacets();
-            if (typeof renderExactCatalogView === 'function') renderExactCatalogView();
-        } else {
-            // Actualizar contadores oficiales en el título principal
-            const resultsCountTxt = document.getElementById("results-count-display");
-            if (resultsCountTxt && window.CT_CATALOG_DATA) {
-                const depts = typeof getMasterDepartmentsList === 'function' ? getMasterDepartmentsList() : [];
-                resultsCountTxt.innerHTML = `Vitrinas Oficiales por Departamento <span class="text-slate-400 font-normal">(${depts.length} Departamentos • ${window.CT_CATALOG_DATA.length.toLocaleString('es-MX')} Productos)</span>`;
-            }
-            if (typeof renderSidebarFacets === 'function') renderSidebarFacets();
-        }
-    };
-    script.onerror = () => {
-        isFullMasterLoading = false;
-    };
-    const head = document.head || document.body || document.documentElement;
-    if (head && typeof head.appendChild === 'function') {
-        head.appendChild(script);
-    }
+    if (typeof callback === 'function') callback();
 };
-
-if (typeof window !== 'undefined') {
-    const triggerIdleCatalogLoad = () => {
-        if (typeof requestIdleCallback === 'function') {
-            requestIdleCallback(() => {
-                if (typeof window.ensureFullCatalogLoaded === 'function') {
-                    window.ensureFullCatalogLoaded();
-                }
-            }, { timeout: 3500 });
-        } else {
-            setTimeout(() => {
-                if (typeof window.ensureFullCatalogLoaded === 'function') {
-                    window.ensureFullCatalogLoaded();
-                }
-            }, 2000);
-        }
-    };
-    if (typeof document !== 'undefined' && document.readyState === 'complete') {
-        triggerIdleCatalogLoad();
-    } else if (typeof window.addEventListener === 'function') {
-        window.addEventListener('load', triggerIdleCatalogLoad);
-    }
-}
 
 // =========================================================================
 // PUENTE DE COMUNICACIÓN CON EL WEB WORKER (OFF-MAIN-THREAD ARCHITECTURE)
