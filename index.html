@@ -179,6 +179,25 @@
                 console.warn("toggleMobileDepartmentsDrawer error:", e);
             }
         };
+        window.toggleMobileSubDept = function(btn) {
+            try {
+                var item = btn.closest('.mobile-child-dept');
+                if (!item) return;
+                var subBox = item.querySelector('.mobile-subchips-box');
+                var chevron = btn.querySelector('i');
+                if (subBox) {
+                    if (subBox.classList.contains('hidden')) {
+                        subBox.classList.remove('hidden');
+                        if (chevron) chevron.classList.add('rotate-180');
+                    } else {
+                        subBox.classList.add('hidden');
+                        if (chevron) chevron.classList.remove('rotate-180');
+                    }
+                }
+            } catch(e) {
+                console.warn("toggleMobileSubDept error:", e);
+            }
+        };
     </script>
 
     <style>
@@ -647,7 +666,1831 @@
 
         <!-- Lista de Departamentos con scroll táctil de alta inercia (deslizable con el dedo) -->
         <div id="mobile-departments-list" class="flex-1 overflow-y-auto p-3 space-y-2 no-scrollbar" style="-webkit-overflow-scrolling: touch; overscroll-behavior-y: contain; touch-action: pan-y;">
-            <!-- Inyectado por JS: 67 categorías con stock -->
+            <div class="mb-2">
+                <button 
+                    type="button"
+                    onclick="window.selectCategoryFacet('Todas'); window.toggleMobileDepartmentsDrawer(false);" 
+                    class="w-full flex items-center justify-between p-2.5 rounded-xl bg-slate-950 hover:bg-slate-850 border border-cyan-500 bg-slate-900 text-left transition cursor-pointer">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-cyan-400 text-xs"></i>
+                        <span class="font-bold text-xs text-white">Todas las Vitrinas</span>
+                    </div>
+                    <span class="text-[9px] font-mono bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-bold">17,490</span>
+                </button>
+            </div>
+            
+                    <details class="group bg-slate-950/80 border border-slate-800/90 rounded-xl overflow-hidden mb-1.5" >
+                        <summary class="flex items-center justify-between p-2.5 cursor-pointer list-none font-mono text-xs font-bold text-white hover:bg-slate-850 transition">
+                            <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                <i class="fa-solid fa-microchip text-cyan-400 text-xs w-4 text-center shrink-0"></i>
+                                <span class="truncate text-[11px] ">1. COMPUTADORAS Y ENSAMBLE</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span class="text-[9px] font-mono bg-slate-900 border border-slate-700 px-1.5 py-0.5 rounded text-cyan-300 font-bold">
+                                    2,955
+                                </span>
+                                <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-open:rotate-180 transition-transform duration-200"></i>
+                            </div>
+                        </summary>
+                        <div class="p-2 pt-1 pb-1 space-y-1 bg-slate-900/90 border-t border-slate-800/80 text-xs divide-y divide-slate-800/40">
+                            
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('procesadores'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-microchip text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">1. Procesadores (CPUs)</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(308)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 1. Procesadores (CPUs)">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('procesadores', 'Intel Core Ultra'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Intel Core Ultra <span class="opacity-75">(78)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('procesadores', 'Intel Core i5'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Intel Core i5 <span class="opacity-75">(43)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('procesadores', 'AMD Ryzen'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        AMD Ryzen <span class="opacity-75">(30)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('procesadores', 'Intel Core i7'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Intel Core i7 <span class="opacity-75">(29)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('procesadores', 'Intel Core'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Intel Core <span class="opacity-75">(28)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('procesadores', 'AMD Ryzen 7'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        AMD Ryzen 7 <span class="opacity-75">(26)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('procesadores', 'AMD Ryzen 5'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        AMD Ryzen 5 <span class="opacity-75">(25)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('procesadores', 'AMD Ryzen 9'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        AMD Ryzen 9 <span class="opacity-75">(16)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('procesadores', 'Intel Core i3'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Intel Core i3 <span class="opacity-75">(14)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('procesadores', 'Intel Core i9'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Intel Core i9 <span class="opacity-75">(8)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('procesadores', 'AMD Ryzen 3'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        AMD Ryzen 3 <span class="opacity-75">(6)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('procesadores', 'CPUs Alto Rendimiento'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        CPUs Alto Rendimiento <span class="opacity-75">(5)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('tarjetas_madre'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-chess-board text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">2. Tarjetas Madre (Motherboards)</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(160)</span>
+                                            </button>
+                                        </div>
+                                    
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('memorias_ram_pc'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-memory text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">3. Memorias RAM PC (DIMM)</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(75)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 3. Memorias RAM PC (DIMM)">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('memorias_ram_pc', 'DDR5 DIMM'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        DDR5 DIMM <span class="opacity-75">(41)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('memorias_ram_pc', 'DDR4 DIMM'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        DDR4 DIMM <span class="opacity-75">(30)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('memorias_ram_pc', 'DDR3 / DIMM'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        DDR3 / DIMM <span class="opacity-75">(4)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('gabinetes'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-server text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">4. Gabinetes & Chasis Gamer</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(459)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 4. Gabinetes & Chasis Gamer">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('gabinetes', 'Flujo de Aire Mesh'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Flujo de Aire Mesh <span class="opacity-75">(347)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('gabinetes', 'Pecera & Cristal Templado'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Pecera & Cristal Templado <span class="opacity-75">(112)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('tarjetas_video'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-vr-cardboard text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">5. Tarjetas de Video (GPUs)</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(70)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 5. Tarjetas de Video (GPUs)">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('tarjetas_video', 'Gráficos Dedicados'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Gráficos Dedicados <span class="opacity-75">(54)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('tarjetas_video', 'AMD Radeon RX'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        AMD Radeon RX <span class="opacity-75">(7)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('tarjetas_video', 'GeForce RTX Serie 30'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        GeForce RTX Serie 30 <span class="opacity-75">(6)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('tarjetas_video', 'GeForce RTX 4060 / 4070'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        GeForce RTX 4060 / 4070 <span class="opacity-75">(2)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('tarjetas_video', 'GeForce RTX 4080 / 4090'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        GeForce RTX 4080 / 4090 <span class="opacity-75">(1)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('enfriamiento'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-fan text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">6. Sistemas de Enfriamiento Líquido & Aire</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(173)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 6. Sistemas de Enfriamiento Líquido & Aire">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('enfriamiento', 'Enfriamiento Líquido (AIO)'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Enfriamiento Líquido (AIO) <span class="opacity-75">(77)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('enfriamiento', 'Ventiladores para Gabinete (ARGB/PWM)'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Ventiladores para Gabinete (ARGB/PWM) <span class="opacity-75">(64)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('enfriamiento', 'Enfriamiento Especializado'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Enfriamiento Especializado <span class="opacity-75">(17)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('enfriamiento', 'Pastas Térmicas de Alto Rendimiento'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Pastas Térmicas de Alto Rendimiento <span class="opacity-75">(10)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('enfriamiento', 'Disipadores de Aire (CPU)'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Disipadores de Aire (CPU) <span class="opacity-75">(5)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('fuentes_energia'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-bolt text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">7. Fuentes de Poder Certificadas</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(156)</span>
+                                            </button>
+                                        </div>
+                                    
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('ssds_m2_nvme'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-hard-drive text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">8. Unidades SSD M.2 NVMe PCIe</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(80)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 8. Unidades SSD M.2 NVMe PCIe">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('ssds_m2_nvme', 'M.2 NVMe PCIe'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        M.2 NVMe PCIe <span class="opacity-75">(47)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('ssds_m2_nvme', 'PCIe 4.0 Alta Velocidad'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        PCIe 4.0 Alta Velocidad <span class="opacity-75">(20)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('ssds_m2_nvme', 'PCIe 5.0 Ultra Rápido'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        PCIe 5.0 Ultra Rápido <span class="opacity-75">(13)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('discos_duros_hdd_internos'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-hard-drive text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">9. Discos Duros Internos HDD</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(171)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 9. Discos Duros Internos HDD">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('discos_duros_hdd_internos', 'Escritorio & PC'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Escritorio & PC <span class="opacity-75">(123)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('discos_duros_hdd_internos', 'Videovigilancia CCTV'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Videovigilancia CCTV <span class="opacity-75">(25)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('discos_duros_hdd_internos', 'Servidor & NAS'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Servidor & NAS <span class="opacity-75">(23)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('monitores_pantallas'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-desktop text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">10. Monitores & Pantallas PC</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(584)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 10. Monitores & Pantallas PC">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('monitores_pantallas', 'Oficina & Trabajo'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Oficina & Trabajo <span class="opacity-75">(301)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('monitores_pantallas', 'Resolución 4K & QHD'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Resolución 4K & QHD <span class="opacity-75">(152)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('monitores_pantallas', 'Gamer 144Hz - 360Hz'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Gamer 144Hz - 360Hz <span class="opacity-75">(122)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('monitores_pantallas', 'Pantalla Curva'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Pantalla Curva <span class="opacity-75">(9)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('teclados'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-keyboard text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">11. Teclados Mecánicos & Oficina</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(201)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('ratones_mouse'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-mouse text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">12. Ratones & Mouse Gamer</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(416)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('combos_teclado_mouse'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-keyboard text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">13. Kits de Teclado y Ratón</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(102)</span>
+                                            </button>
+                                        </div>
+                                    
+                        </div>
+                    </details>
+                
+                    <details class="group bg-slate-950/80 border border-slate-800/90 rounded-xl overflow-hidden mb-1.5" >
+                        <summary class="flex items-center justify-between p-2.5 cursor-pointer list-none font-mono text-xs font-bold text-white hover:bg-slate-850 transition">
+                            <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                <i class="fa-solid fa-laptop text-cyan-400 text-xs w-4 text-center shrink-0"></i>
+                                <span class="truncate text-[11px] ">2. EQUIPOS COMPLETOS Y LAPTOPS</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span class="text-[9px] font-mono bg-slate-900 border border-slate-700 px-1.5 py-0.5 rounded text-cyan-300 font-bold">
+                                    834
+                                </span>
+                                <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-open:rotate-180 transition-transform duration-200"></i>
+                            </div>
+                        </summary>
+                        <div class="p-2 pt-1 pb-1 space-y-1 bg-slate-900/90 border-t border-slate-800/80 text-xs divide-y divide-slate-800/40">
+                            
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('laptops_portatiles'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-laptop text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">14. Laptops & Computadoras Portátiles</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(463)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 14. Laptops & Computadoras Portátiles">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('laptops_portatiles', 'Estudiantes & Trabajo'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Estudiantes & Trabajo <span class="opacity-75">(316)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('laptops_portatiles', 'Ultrabook Ligera'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Ultrabook Ligera <span class="opacity-75">(88)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('laptops_portatiles', 'Corporativa & ThinkPad'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Corporativa & ThinkPad <span class="opacity-75">(36)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('laptops_portatiles', 'Gaming con GPU RTX'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Gaming con GPU RTX <span class="opacity-75">(23)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('mini_pcs_nuc'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-cube text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">15. Mini PCs Ultracompactas & NUCs</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(25)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('computadoras_ensambladas'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-computer text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">16. Computadoras de Escritorio & Gaming PCs</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(85)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('computadoras_all_in_one'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-tv text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">17. Computadoras All-in-One (AIO)</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(86)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('servidores_enterprise'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-server text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">18. Servidores Torre & Rack Enterprise</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(175)</span>
+                                            </button>
+                                        </div>
+                                    
+                        </div>
+                    </details>
+                
+                    <details class="group bg-slate-950/80 border border-slate-800/90 rounded-xl overflow-hidden mb-1.5" >
+                        <summary class="flex items-center justify-between p-2.5 cursor-pointer list-none font-mono text-xs font-bold text-white hover:bg-slate-850 transition">
+                            <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                <i class="fa-solid fa-network-wired text-cyan-400 text-xs w-4 text-center shrink-0"></i>
+                                <span class="truncate text-[11px] ">3. REDES Y TELECOMUNICACIONES</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span class="text-[9px] font-mono bg-slate-900 border border-slate-700 px-1.5 py-0.5 rounded text-cyan-300 font-bold">
+                                    1,403
+                                </span>
+                                <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-open:rotate-180 transition-transform duration-200"></i>
+                            </div>
+                        </summary>
+                        <div class="p-2 pt-1 pb-1 space-y-1 bg-slate-900/90 border-t border-slate-800/80 text-xs divide-y divide-slate-800/40">
+                            
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('switches_red'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-network-wired text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">37. Switches Ethernet & PoE+</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(418)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('routers_access_points'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-wifi text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">38. Routers Inalámbricos & Access Points WiFi</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(381)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('antenas_radioenlaces'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-satellite-dish text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">39. Antenas de Largo Alcance & Radioenlaces</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(104)</span>
+                                            </button>
+                                        </div>
+                                    
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('cableado_estructurado'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-network-wired text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">40. Bobinas UTP, Patch Cords & Conectores RJ45</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(309)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 40. Bobinas UTP, Patch Cords & Conectores RJ45">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('cableado_estructurado', 'Cableado Cat6 & Cat6A'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Cableado Cat6 & Cat6A <span class="opacity-75">(187)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('cableado_estructurado', 'Patch Cords Certificados'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Patch Cords Certificados <span class="opacity-75">(44)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('cableado_estructurado', 'Bobinas de Cable UTP/FTP'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Bobinas de Cable UTP/FTP <span class="opacity-75">(43)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('cableado_estructurado', 'Jacks & Conectores RJ45'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Jacks & Conectores RJ45 <span class="opacity-75">(35)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('fibra_optica_transceivers'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-network-wired text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">41. Módulos Transceivers SFP & Fibra Óptica</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(74)</span>
+                                            </button>
+                                        </div>
+                                    
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('racks_gabinetes_servidor'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-server text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">42. Racks de Telecomunicaciones & Gabinetes</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(117)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 42. Racks de Telecomunicaciones & Gabinetes">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('racks_gabinetes_servidor', 'Racks & Gabinetes'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Racks & Gabinetes <span class="opacity-75">(54)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('racks_gabinetes_servidor', 'Gabinetes de Pared (6U - 12U)'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Gabinetes de Pared (6U - 12U) <span class="opacity-75">(30)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('racks_gabinetes_servidor', 'Charolas & Accesorios de Rack'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Charolas & Accesorios de Rack <span class="opacity-75">(24)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('racks_gabinetes_servidor', 'Racks de Piso para Servidor'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Racks de Piso para Servidor <span class="opacity-75">(9)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                        </div>
+                    </details>
+                
+                    <details class="group bg-slate-950/80 border border-slate-800/90 rounded-xl overflow-hidden mb-1.5" >
+                        <summary class="flex items-center justify-between p-2.5 cursor-pointer list-none font-mono text-xs font-bold text-white hover:bg-slate-850 transition">
+                            <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                <i class="fa-solid fa-shield-halved text-cyan-400 text-xs w-4 text-center shrink-0"></i>
+                                <span class="truncate text-[11px] ">4. SEGURIDAD Y CCTV</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span class="text-[9px] font-mono bg-slate-900 border border-slate-700 px-1.5 py-0.5 rounded text-cyan-300 font-bold">
+                                    1,211
+                                </span>
+                                <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-open:rotate-180 transition-transform duration-200"></i>
+                            </div>
+                        </summary>
+                        <div class="p-2 pt-1 pb-1 space-y-1 bg-slate-900/90 border-t border-slate-800/80 text-xs divide-y divide-slate-800/40">
+                            
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('camaras_seguridad_cctv'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-video text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">32. Cámaras de Seguridad (IP, Bala, Domo)</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(846)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('grabadores_dvr_nvr'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-compact-disc text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">33. Grabadores de Video DVR & NVR</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(109)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('control_acceso_biometricos'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-fingerprint text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">34. Control de Acceso, Asistencia & Biometría</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(128)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('alarmas_sensores_seguridad'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-shield-halved text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">35. Alarmas, Sensores de Intrusión & Sirenas</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(46)</span>
+                                            </button>
+                                        </div>
+                                    
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('telefonia_conmutadores'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-phone text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">36. Conmutadores & Telefonía IP</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(82)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 36. Conmutadores & Telefonía IP">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('telefonia_conmutadores', 'Teléfonos IP & Diademas'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Teléfonos IP & Diademas <span class="opacity-75">(54)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('telefonia_conmutadores', 'Videoporteros IP & Intercomunicadores'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Videoporteros IP & Intercomunicadores <span class="opacity-75">(24)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('telefonia_conmutadores', 'Conmutadores IP & PBX'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Conmutadores IP & PBX <span class="opacity-75">(4)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                        </div>
+                    </details>
+                
+                    <details class="group bg-slate-950/80 border border-slate-800/90 rounded-xl overflow-hidden mb-1.5" >
+                        <summary class="flex items-center justify-between p-2.5 cursor-pointer list-none font-mono text-xs font-bold text-white hover:bg-slate-850 transition">
+                            <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                <i class="fa-solid fa-print text-cyan-400 text-xs w-4 text-center shrink-0"></i>
+                                <span class="truncate text-[11px] ">5. IMPRESIÓN Y DIGITALIZACIÓN</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span class="text-[9px] font-mono bg-slate-900 border border-slate-700 px-1.5 py-0.5 rounded text-cyan-300 font-bold">
+                                    2,601
+                                </span>
+                                <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-open:rotate-180 transition-transform duration-200"></i>
+                            </div>
+                        </summary>
+                        <div class="p-2 pt-1 pb-1 space-y-1 bg-slate-900/90 border-t border-slate-800/80 text-xs divide-y divide-slate-800/40">
+                            
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('impresoras_multifuncionales'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-print text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">43. Impresoras de Inyección & Multifuncionales</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(585)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 43. Impresoras de Inyección & Multifuncionales">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('impresoras_multifuncionales', 'Láser Monocromática / Color'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Láser Monocromática / Color <span class="opacity-75">(305)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('impresoras_multifuncionales', 'Multifuncional Inyección'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Multifuncional Inyección <span class="opacity-75">(246)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('impresoras_multifuncionales', 'Tanque de Tinta Continuo'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Tanque de Tinta Continuo <span class="opacity-75">(34)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('toners_laser'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-cubes text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">44. Tóners para Impresoras Láser</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(679)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('tintas_cartuchos'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-droplet text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">45. Tintas Originales & Cartuchos</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(702)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('plotters_gran_formato'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-ruler-combined text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">46. Plotters de Impresión en Gran Formato</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(193)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('etiquetas_ribbons'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-tags text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">47. Cintas Ribbon, Etiquetas & Papel Térmico</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(270)</span>
+                                            </button>
+                                        </div>
+                                    
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('escaneres_digitalizadores'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-scanner text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">48. Escáneres de Documentos & Cama Plana</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(172)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 48. Escáneres de Documentos & Cama Plana">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('escaneres_digitalizadores', 'Cama Plana & Portátil'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Cama Plana & Portátil <span class="opacity-75">(123)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('escaneres_digitalizadores', 'Dúplex Alta Velocidad'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Dúplex Alta Velocidad <span class="opacity-75">(49)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                        </div>
+                    </details>
+                
+                    <details class="group bg-slate-950/80 border border-slate-800/90 rounded-xl overflow-hidden mb-1.5" >
+                        <summary class="flex items-center justify-between p-2.5 cursor-pointer list-none font-mono text-xs font-bold text-white hover:bg-slate-850 transition">
+                            <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                <i class="fa-solid fa-car-battery text-cyan-400 text-xs w-4 text-center shrink-0"></i>
+                                <span class="truncate text-[11px] ">6. ENERGÍA Y PROTECCIÓN</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span class="text-[9px] font-mono bg-slate-900 border border-slate-700 px-1.5 py-0.5 rounded text-cyan-300 font-bold">
+                                    995
+                                </span>
+                                <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-open:rotate-180 transition-transform duration-200"></i>
+                            </div>
+                        </summary>
+                        <div class="p-2 pt-1 pb-1 space-y-1 bg-slate-900/90 border-t border-slate-800/80 text-xs divide-y divide-slate-800/40">
+                            
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('no_breaks_ups'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-car-battery text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">19. No-Breaks & Sistemas UPS</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(430)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('reguladores_voltaje'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-bolt text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">20. Reguladores de Voltaje & Supresores</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(116)</span>
+                                            </button>
+                                        </div>
+                                    
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('cargadores_baterias_powerbanks'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-plug-circle-bolt text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">21. Cargadores, Baterías & Power Banks</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(449)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 21. Cargadores, Baterías & Power Banks">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('cargadores_baterias_powerbanks', 'Baterías de Respaldo'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Baterías de Respaldo <span class="opacity-75">(220)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('cargadores_baterias_powerbanks', 'Cargadores para Laptop'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Cargadores para Laptop <span class="opacity-75">(196)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('cargadores_baterias_powerbanks', 'Power Banks Portátiles'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Power Banks Portátiles <span class="opacity-75">(33)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                        </div>
+                    </details>
+                
+                    <details class="group bg-slate-950/80 border border-slate-800/90 rounded-xl overflow-hidden mb-1.5" >
+                        <summary class="flex items-center justify-between p-2.5 cursor-pointer list-none font-mono text-xs font-bold text-white hover:bg-slate-850 transition">
+                            <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                <i class="fa-solid fa-boxes-stacked text-cyan-400 text-xs w-4 text-center shrink-0"></i>
+                                <span class="truncate text-[11px] ">7. ACCESORIOS Y MANTENIMIENTO</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span class="text-[9px] font-mono bg-slate-900 border border-slate-700 px-1.5 py-0.5 rounded text-cyan-300 font-bold">
+                                    7,491
+                                </span>
+                                <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-open:rotate-180 transition-transform duration-200"></i>
+                            </div>
+                        </summary>
+                        <div class="p-2 pt-1 pb-1 space-y-1 bg-slate-900/90 border-t border-slate-800/80 text-xs divide-y divide-slate-800/40">
+                            
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('discos_duros_externos'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-hard-drive text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">22. Unidades & Discos Externos (SSD & HDD)</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(84)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 22. Unidades & Discos Externos (SSD & HDD)">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('discos_duros_externos', 'HDD Externo Portátil'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        HDD Externo Portátil <span class="opacity-75">(56)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('discos_duros_externos', 'SSD Externo Portátil'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        SSD Externo Portátil <span class="opacity-75">(28)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('tarjetas_microsd'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-sd-card text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">23. Tarjetas de Memoria MicroSD & SD</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(145)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('memorias_usb_pendrives'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-usb text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">24. Memorias USB Flash & Pendrives</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(246)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('memorias_ram_laptop'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-laptop text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">25. Memorias RAM para Laptop (SODIMM)</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(24)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('memorias_ram_servidor'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-server text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">26. Memorias RAM para Servidor (ECC)</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(51)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('diademas_headsets'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-headphones text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">27. Diademas & Headsets Gamer</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(207)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('bocinas_sonido'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-volume-high text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">28. Bocinas, Barras de Sonido & Bafles</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(599)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('microfonos'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-microphone text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">29. Micrófonos para Streaming & Voz</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(40)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('webcams_videoconferencia'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-camera text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">30. Cámaras Web & Videoconferencia</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(20)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('proyectores_presentacion'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-video text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">31. Proyectores de Video & Pantallas Murales</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(74)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('sistemas_operativos'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-compact-disc text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">49. Sistemas Operativos Windows Oficiales</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(206)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('ofimatica_productividad'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-file-lines text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">50. Microsoft 365 & Suites de Oficina</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(57)</span>
+                                            </button>
+                                        </div>
+                                    
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('software_contable_administrativo'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-calculator text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">51. Software Aspel & CONTPAQi Administrativo</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(222)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 51. Software Aspel & CONTPAQi Administrativo">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('software_contable_administrativo', 'Sistemas Aspel (SAE/COI/NOI)'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Sistemas Aspel (SAE/COI/NOI) <span class="opacity-75">(131)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('software_contable_administrativo', 'Software Administrativo'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Software Administrativo <span class="opacity-75">(57)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('software_contable_administrativo', 'CONTPAQi Factura & Nóminas'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        CONTPAQi Factura & Nóminas <span class="opacity-75">(34)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('antivirus_seguridad_digital'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-shield text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">52. Antivirus & Seguridad Digital</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(389)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('garantias_polizas_servicio'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-certificate text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">53. Pólizas & Extensiones de Garantía Oficial</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(68)</span>
+                                            </button>
+                                        </div>
+                                    
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('punto_de_venta'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-barcode text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">54. Sistemas de Punto de Venta (POS)</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(83)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 54. Sistemas de Punto de Venta (POS)">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('punto_de_venta', 'Terminales Touch All-in-One'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Terminales Touch All-in-One <span class="opacity-75">(28)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('punto_de_venta', 'Cajones de Dinero'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Cajones de Dinero <span class="opacity-75">(27)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('punto_de_venta', 'Sistemas POS'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Sistemas POS <span class="opacity-75">(18)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('punto_de_venta', 'Lectores Código de Barras'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Lectores Código de Barras <span class="opacity-75">(10)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('smartphones_celulares'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-mobile-screen-button text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">55. Teléfonos Celulares & Smartphones</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(117)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 55. Teléfonos Celulares & Smartphones">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('smartphones_celulares', 'Apple iPhone Desbloqueado'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Apple iPhone Desbloqueado <span class="opacity-75">(88)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('smartphones_celulares', 'Samsung Galaxy'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Samsung Galaxy <span class="opacity-75">(18)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('smartphones_celulares', 'Smartphones Android'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Smartphones Android <span class="opacity-75">(11)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('tablets_ipads'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-tablet-screen-button text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">56. Tablets & iPads</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(82)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 56. Tablets & iPads">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('tablets_ipads', 'Tablets Android'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Tablets Android <span class="opacity-75">(54)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('tablets_ipads', 'Apple iPad'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Apple iPad <span class="opacity-75">(19)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('tablets_ipads', 'Samsung Galaxy Tab'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Samsung Galaxy Tab <span class="opacity-75">(9)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('smartwatches_wearables'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-clock text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">57. Smartwatches & Relojes Inteligentes</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(47)</span>
+                                            </button>
+                                        </div>
+                                    
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('limpieza_mantenimiento'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-spray-can-sparkles text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">58. Aire Comprimido, Espumas & Limpieza</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(98)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 58. Aire Comprimido, Espumas & Limpieza">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('limpieza_mantenimiento', 'Limpieza General'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Limpieza General <span class="opacity-75">(36)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('limpieza_mantenimiento', 'Aire Comprimido & Dusters'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Aire Comprimido & Dusters <span class="opacity-75">(28)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('limpieza_mantenimiento', 'Limpiadores & Alcohol Isopropílico'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Limpiadores & Alcohol Isopropílico <span class="opacity-75">(26)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('limpieza_mantenimiento', 'Dispensadores & Higiene'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Dispensadores & Higiene <span class="opacity-75">(8)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('cables_adaptadores'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-plug text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">59. Cables de Video, USB & Adaptadores</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(885)</span>
+                                            </button>
+                                        </div>
+                                    
+                                    <div class="mobile-child-dept py-1">
+                                        <div class="flex items-center justify-between py-1 px-2 rounded-lg hover:bg-slate-800 text-left transition text-slate-300">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('mochilas_fundas_maletines'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1 text-left cursor-pointer">
+                                                <i class="fa-solid fa-briefcase text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                <span class="truncate text-[11px] font-medium">60. Mochilas, Fundas & Maletines para Laptop</span>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(238)</span>
+                                            </button>
+                                            <button 
+                                                type="button" 
+                                                onclick="window.toggleMobileSubDept(this)" 
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition cursor-pointer shrink-0" 
+                                                title="Ver subcategorías" 
+                                                aria-label="Ver subcategorías de 60. Mochilas, Fundas & Maletines para Laptop">
+                                                <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 "></i>
+                                            </button>
+                                        </div>
+                                        <div class="mobile-subchips-box hidden flex flex-wrap gap-1.5 pl-6 pr-1 pt-1.5 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('mochilas_fundas_maletines', 'Mochilas para Laptop 15.6" - 17"'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Mochilas para Laptop 15.6" - 17" <span class="opacity-75">(146)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('mochilas_fundas_maletines', 'Fundas & Sleeves Protectores'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Fundas & Sleeves Protectores <span class="opacity-75">(66)</span>
+                                                    </button>
+                                                
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('mochilas_fundas_maletines', 'Maletines & Portafolios'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400 transition cursor-pointer shrink-0">
+                                                        Maletines & Portafolios <span class="opacity-75">(26)</span>
+                                                    </button>
+                                                
+                                        </div>
+                                    </div>
+                                
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('soportes_ergonomia'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-tv text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">61. Soportes Articulados & Bases para Monitor</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(102)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('hubs_docks_estaciones'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-layer-group text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">62. Hubs USB-C & Docking Stations</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(48)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('herramientas_servicio_tecnico'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-wrench text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">63. Herramientas de Red & Ensamble Técnico</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(82)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('candados_seguridad_laptop'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-lock text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">64. Candados de Seguridad Kensington</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(108)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('climatizacion_aires_acondicionados'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-snowflake text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">65. Climatización & Minisplits</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(54)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('gaming_consolas_sillas'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-gamepad text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">66. Sillas Gamer, Consolas & Videojuegos</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(82)</span>
+                                            </button>
+                                        </div>
+                                    
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('accesorios_perifericos'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer text-slate-300">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid fa-boxes-stacked text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">67. Accesorios de Cómputo & Misceláneos</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(3033)</span>
+                                            </button>
+                                        </div>
+                                    
+                        </div>
+                    </details>
         </div>
 
         <!-- Pie del Drawer -->
@@ -713,9 +2556,9 @@
         </div>
     </aside>
 
-    <script src="js/ct-showcase-data.js?v=20260903_v27_multimagen_logistica" defer></script>
-    <script src="js/cart.js?v=20260903_v27_multimagen_logistica" defer></script>
-    <script src="js/ct-exact-catalog-engine.js?v=20260903_v27_multimagen_logistica" defer></script>
+    <script src="js/ct-showcase-data.js?v=20260904_v28_departments_fix" defer></script>
+    <script src="js/cart.js?v=20260904_v28_departments_fix" defer></script>
+    <script src="js/ct-exact-catalog-engine.js?v=20260904_v28_departments_fix" defer></script>
     <script src="js/ux-engine.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
