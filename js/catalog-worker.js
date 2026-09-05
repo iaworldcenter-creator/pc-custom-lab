@@ -440,10 +440,22 @@ self.onmessage = async function(e) {
                 const startIdx = (safePage - 1) * pageSize;
                 const pageItems = filtered.slice(startIdx, startIdx + pageSize).map(p => normalizeProduct(p));
 
-                // Extraer subchips disponibles para el departamento
+                // Extraer subchips y subcategorías disponibles para el departamento con conteos
+                let subcategories = [];
                 let availableSubs = [];
                 if (targetDept !== 'Todas') {
-                    availableSubs = Array.from(new Set(pool.map(p => p.subgrupo_label).filter(Boolean)));
+                    const subCountMap = new Map();
+                    for (let i = 0; i < pool.length; i++) {
+                        const p = pool[i];
+                        const subName = (p.subgrupo_label || p.subcategoria || '').trim();
+                        if (subName) {
+                            subCountMap.set(subName, (subCountMap.get(subName) || 0) + 1);
+                        }
+                    }
+                    subcategories = Array.from(subCountMap.entries())
+                        .map(([name, count]) => ({ name, count }))
+                        .sort((a, b) => b.count - a.count);
+                    availableSubs = subcategories.map(s => s.name);
                 }
 
                 self.postMessage({
@@ -456,6 +468,7 @@ self.onmessage = async function(e) {
                         totalPages,
                         currentPage: safePage,
                         availableSubs,
+                        subcategories,
                         category: targetDept,
                         deptId: targetDept,
                         query

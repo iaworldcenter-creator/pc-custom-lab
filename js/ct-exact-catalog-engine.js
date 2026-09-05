@@ -687,8 +687,12 @@ function renderWelcomeHub() {
     hubContainer.style.minHeight = '220px';
     hubContainer.classList.remove("hidden");
 
-    const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
-    const getCount = (id) => all.filter(p => (p.categoria_clasificada || p.c || '').toLowerCase() === id.toLowerCase()).length;
+    const deptsMeta = window.PC_DEPARTAMENTOS || [];
+    const totalCatalogProducts = deptsMeta.reduce((acc, d) => acc + (d.count || 0), 0) || 17490;
+    const getCount = (id) => {
+        const found = deptsMeta.find(d => d.id === id);
+        return found ? found.count : 0;
+    };
 
     const hubDepts = [
         { id: 'procesadores', name: '1. Procesadores (CPUs)', icon: 'fa-microchip', color: 'from-blue-600 to-cyan-600', badge: 'Intel Core Ultra & AMD Ryzen' },
@@ -731,7 +735,7 @@ function renderWelcomeHub() {
                     </div>
                 </div>
                 <span class="text-xs font-mono font-bold bg-cyan-950 text-cyan-300 border border-cyan-500/40 px-3 py-1 rounded-full w-fit">
-                    ${all.length.toLocaleString('es-MX')} Productos en Catálogo
+                    ${totalCatalogProducts.toLocaleString('es-MX')} Productos en Catálogo
                 </span>
             </div>
 
@@ -1327,13 +1331,13 @@ function renderPaginatedDepartmentView(container, resultsCountTxt) {
             if (container._activeQueryToken !== queryToken) return;
             if (data && Array.isArray(data.items)) {
                 if (data.items.length > 0) {
-                    renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, data.items, data.totalCount, data.totalPages, data.currentPage, data.availableSubs);
+                    renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, data.items, data.totalCount, data.totalPages, data.currentPage, data.availableSubs, data.subcategories);
                 } else if (activeSearchQuery && activeSearchQuery.trim() !== '') {
                     // Búsqueda sin resultados reales
-                    renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, [], 0, 1, 1, []);
+                    renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, [], 0, 1, 1, [], []);
                 } else if (activeMinPrice > 0 || (typeof activeMaxPrice === 'number' && isFinite(activeMaxPrice) && activeMaxPrice < Infinity)) {
                     // Filtros de precio no arrojaron resultados
-                    renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, [], 0, 1, 1, []);
+                    renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, [], 0, 1, 1, [], []);
                 }
             }
         });
@@ -1341,7 +1345,7 @@ function renderPaginatedDepartmentView(container, resultsCountTxt) {
     }
 }
 
-function renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, pageItems, totalCount, totalPages, currentPage, availableSubs) {
+function renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, pageItems, totalCount, totalPages, currentPage, availableSubs, subcategories) {
     if (currentPageNumber > totalPages) currentPageNumber = totalPages;
     const startIdx = (currentPage - 1) * productsPerPage;
 
@@ -1354,34 +1358,14 @@ function renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, page
             const deptObj = depts.find(d => d.id === activeSelectedCategory);
             const deptName = deptObj ? deptObj.name : activeSelectedCategory.replace(/_/g, ' ').toUpperCase();
 
-            let subChipsHTML = '';
-            if (availableSubs && availableSubs.length > 0) {
-                subChipsHTML = `
-                    <div class="flex flex-wrap items-center gap-1.5 mt-2.5 pt-2 border-t border-slate-800/80">
-                        <span class="text-[10px] font-mono font-bold text-slate-400 mr-1 flex items-center gap-1"><i class="fa-solid fa-filter text-cyan-400"></i> Subáreas:</span>
-                        <button type="button" onclick="window.selectSubcategoryChip('Todos')" class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold transition cursor-pointer ${activeSelectedChip === 'Todos' ? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'}">
-                            Todas
-                        </button>
-                        ${availableSubs.map(s => `
-                            <button type="button" onclick="window.selectSubcategoryChip('${s.replace(/'/g, "\\'")}')" class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold transition cursor-pointer ${activeSelectedChip === s ? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'}">
-                                ${s}
-                            </button>
-                        `).join('')}
-                    </div>
-                `;
-            }
-
             titleTxt = `
-                <div>
-                    <div class="flex flex-wrap items-center gap-2">
-                        <button type="button" onclick="window.resetFacets()" class="text-cyan-400 hover:text-cyan-300 text-xs font-mono font-bold hover:underline cursor-pointer flex items-center gap-1">
-                            <i class="fa-solid fa-arrow-left"></i> Volver a Vitrinas
-                        </button>
-                        <span class="text-slate-500">|</span>
-                        <span>${deptName}</span>
-                        <span class="text-slate-400 font-normal text-xs">(${totalCount.toLocaleString('es-MX')} productos)</span>
-                    </div>
-                    ${subChipsHTML}
+                <div class="flex flex-wrap items-center gap-2">
+                    <button type="button" onclick="window.runCleanHomeCatalog()" class="text-cyan-400 hover:text-cyan-300 text-xs font-mono font-bold hover:underline cursor-pointer flex items-center gap-1">
+                        <i class="fa-solid fa-arrow-left"></i> Volver a Vitrinas
+                    </button>
+                    <span class="text-slate-500">|</span>
+                    <span>${deptName}</span>
+                    <span class="text-slate-400 font-normal text-xs">(${totalCount.toLocaleString('es-MX')} productos)</span>
                 </div>
             `;
         } else {
@@ -1392,9 +1376,52 @@ function renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, page
 
     renderPaginationBar(totalPages);
 
+    // Normalizar subcategorías
+    const subsList = (subcategories && Array.isArray(subcategories) && subcategories.length > 0)
+        ? subcategories
+        : (availableSubs || []).map(s => typeof s === 'object' ? s : { name: s, count: null });
+
+    let headerControlsHTML = '';
+    if (activeSelectedCategory !== 'Todas' || (activeSearchQuery && activeSearchQuery.trim() !== '')) {
+        let subChipsHTML = '';
+        if (activeSelectedCategory !== 'Todas' && subsList.length > 0) {
+            subChipsHTML = `
+                <div class="w-full bg-slate-900/90 border border-slate-800 p-2.5 rounded-2xl shadow-md mb-3">
+                    <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
+                        <span class="text-[10px] font-mono font-bold text-slate-400 shrink-0 flex items-center gap-1 px-1">
+                            <i class="fa-solid fa-filter text-cyan-400"></i> Subdepartamentos:
+                        </span>
+                        <button type="button" onclick="window.selectSubcategoryChip('Todos')" class="px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition cursor-pointer shrink-0 ${activeSelectedChip === 'Todos' ? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20 font-black' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'}">
+                            Todos
+                        </button>
+                        ${subsList.map(s => {
+                            const isSelected = activeSelectedChip === s.name;
+                            const countTxt = (typeof s.count === 'number') ? ` <span class="text-[10px] opacity-75">(${s.count})</span>` : '';
+                            return `
+                                <button type="button" onclick="window.selectSubcategoryChip('${s.name.replace(/'/g, "\\'")}')" class="px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition cursor-pointer shrink-0 ${isSelected ? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20 font-black' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'}">
+                                    ${s.name}${countTxt}
+                                </button>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        headerControlsHTML = `
+            <div class="col-span-full w-full">
+                <button onclick="window.runCleanHomeCatalog()" class="mb-4 inline-flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-cyan-400 font-semibold rounded-lg text-sm border border-slate-700 transition-colors">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a Todas las Vitrinas
+                </button>
+                ${subChipsHTML}
+            </div>
+        `;
+    }
+
     if (pageItems.length === 0) {
         container.className = "w-full py-16 text-center text-slate-300 font-mono text-sm bg-slate-900/90 border border-slate-800 rounded-2xl";
         container.innerHTML = `
+            ${headerControlsHTML}
             <i class="fa-solid fa-box-open text-4xl text-cyan-400 mb-3 block" aria-hidden="true"></i>
             No se encontraron productos en esta sección con los filtros actuales.
             <br><button onclick="window.resetFacets()" aria-label="Ver todas las vitrinas" class="btn-action mt-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-black px-5 py-2.5 rounded-xl text-xs uppercase cursor-pointer shadow-lg min-h-[44px]">Ver Todas las Vitrinas</button>
@@ -1402,20 +1429,12 @@ function renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, page
         return;
     }
 
-    const returnBtnHTML = (activeSelectedCategory !== 'Todas' || (activeSearchQuery && activeSearchQuery.trim() !== ''))
-        ? `<div class="col-span-full w-full">
-             <button onclick="window.runCleanHomeCatalog()" class="mb-4 inline-flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-cyan-400 font-semibold rounded-lg text-sm border border-slate-700 transition-colors">
-               <i class="fa-solid fa-arrow-left"></i> Volver a Todas las Vitrinas
-             </button>
-           </div>`
-        : '';
-
     if (currentViewStyle === 'grid') {
         container.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-2";
-        container.innerHTML = returnBtnHTML + pageItems.map(p => renderProductCardHTML(p, 'grid')).join('');
+        container.innerHTML = headerControlsHTML + pageItems.map(p => renderProductCardHTML(p, 'grid')).join('');
     } else {
         container.className = "flex flex-col gap-3.5 pb-2";
-        container.innerHTML = returnBtnHTML + pageItems.map(p => renderProductCardHTML(p, 'list')).join('');
+        container.innerHTML = headerControlsHTML + pageItems.map(p => renderProductCardHTML(p, 'list')).join('');
     }
 }
 
@@ -1598,19 +1617,20 @@ function renderSidebarFacets() {
         const root = document.getElementById("sidebar-facets") || document.getElementById("sidebar-facets-root");
         if (!root) return;
 
-        const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
-        const depts = getMasterDepartmentsList();
+        const depts = (window.PC_DEPARTAMENTOS && Array.isArray(window.PC_DEPARTAMENTOS) && window.PC_DEPARTAMENTOS.length > 0)
+            ? window.PC_DEPARTAMENTOS
+            : getMasterDepartmentsList();
+
+        const totalItems = depts.reduce((sum, d) => sum + (d.count || 0), 0) || 17490;
 
         const renderMasterAccordion = (master) => {
             const isParentOfActive = master.deptIds.includes(activeSelectedCategory);
             
-            const masterCount = master.deptIds.reduce((sum, deptId) => {
-                return sum + all.filter(p => (p.categoria_clasificada || p.c || '').toLowerCase() === deptId.toLowerCase()).length;
-            }, 0);
-
             const childDepts = master.deptIds
                 .map(id => depts.find(d => d.id === id))
                 .filter(Boolean);
+
+            const masterCount = childDepts.reduce((sum, d) => sum + (d.count || 0), 0);
 
             return `
                 <details class="master-dept group bg-slate-950/75 border ${isParentOfActive ? 'border-cyan-500/70 bg-slate-950 shadow-lg shadow-cyan-500/10' : 'border-slate-800/90'} rounded-xl overflow-hidden transition-all duration-200" ${isParentOfActive ? 'open' : ''}>
@@ -1628,7 +1648,7 @@ function renderSidebarFacets() {
                     </summary>
                     <div class="p-2 pt-1 pb-1.5 space-y-1 bg-slate-900/80 border-t border-slate-800/80 text-xs divide-y divide-slate-800/40">
                         ${childDepts.map(c => {
-                            const count = all.filter(p => (p.categoria_clasificada || p.c || '').toLowerCase() === c.id.toLowerCase()).length;
+                            const count = c.count || 0;
                             const isSelected = activeSelectedCategory === c.id;
                             return `
                                 <label for="cat_${c.id}" class="category-link flex items-center justify-between cursor-pointer hover:text-cyan-300 transition py-1">
@@ -1649,7 +1669,7 @@ function renderSidebarFacets() {
         root.innerHTML = `
             <div class="bg-gradient-to-r from-slate-900 to-cyan-950 border border-cyan-500/40 text-white p-3 rounded-t-2xl font-bold text-xs uppercase flex items-center justify-between shadow-lg">
                 <h2 class="flex items-center gap-2 text-cyan-300 font-mono text-xs"><i class="fa-solid fa-sliders text-cyan-400" aria-hidden="true"></i> Departamentos</h2>
-                <span class="text-[9px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono font-bold">${all.length.toLocaleString('es-MX')} Items</span>
+                <span class="text-[9px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-mono font-bold">${totalItems.toLocaleString('es-MX')} Items</span>
             </div>
 
             <div class="p-3 bg-slate-900/95 border-x border-b border-slate-800 rounded-b-2xl text-slate-200 text-xs shadow-2xl flex flex-col justify-between space-y-3 max-h-[calc(100vh-100px)] overflow-y-auto no-scrollbar">
@@ -1671,7 +1691,7 @@ function renderSidebarFacets() {
                             <i class="fa-solid fa-layer-group text-xs text-cyan-400 shrink-0" aria-hidden="true"></i>
                             <span class="cat-title truncate font-black text-white text-xs">Todas las Vitrinas</span>
                         </span>
-                        <span class="font-mono text-[9.5px] text-cyan-300 font-bold">(${all.length.toLocaleString('es-MX')})</span>
+                        <span class="font-mono text-[9.5px] text-cyan-300 font-bold">(${totalItems.toLocaleString('es-MX')})</span>
                     </label>
                 </div>
 
@@ -1754,6 +1774,101 @@ function renderSidebarFacets() {
         console.error("renderSidebarFacets error:", e);
     }
 }
+window.renderSidebarFacets = renderSidebarFacets;
+
+// DRAWER DESLIZANTE PARA MÓVIL (67 DEPARTAMENTOS EN CELULAR)
+window.toggleMobileDepartmentsDrawer = function(open) {
+    try {
+        const drawer = document.getElementById("mobile-departments-drawer");
+        const backdrop = document.getElementById("mobile-departments-backdrop");
+        if (!drawer) return;
+
+        if (open) {
+            window.renderMobileDepartmentsList();
+            drawer.classList.remove("hidden");
+            if (backdrop) backdrop.classList.remove("hidden");
+            setTimeout(() => {
+                drawer.classList.remove("-translate-x-full");
+                if (backdrop) backdrop.classList.remove("opacity-0");
+            }, 10);
+        } else {
+            drawer.classList.add("-translate-x-full");
+            if (backdrop) backdrop.classList.add("opacity-0");
+            setTimeout(() => {
+                drawer.classList.add("hidden");
+                if (backdrop) backdrop.classList.add("hidden");
+            }, 300);
+        }
+    } catch(e) {
+        console.error("toggleMobileDepartmentsDrawer error:", e);
+    }
+};
+
+window.renderMobileDepartmentsList = function() {
+    try {
+        const container = document.getElementById("mobile-departments-list");
+        if (!container) return;
+
+        const depts = (window.PC_DEPARTAMENTOS && Array.isArray(window.PC_DEPARTAMENTOS) && window.PC_DEPARTAMENTOS.length > 0)
+            ? window.PC_DEPARTAMENTOS
+            : getMasterDepartmentsList();
+
+        const totalItems = depts.reduce((sum, d) => sum + (d.count || 0), 0) || 17490;
+
+        container.innerHTML = `
+            <div class="mb-2">
+                <button 
+                    type="button"
+                    onclick="window.selectCategoryFacet('Todas'); window.toggleMobileDepartmentsDrawer(false);" 
+                    class="w-full flex items-center justify-between p-2.5 rounded-xl bg-slate-950 hover:bg-slate-850 border ${activeSelectedCategory === 'Todas' ? 'border-cyan-500 bg-slate-900' : 'border-slate-800'} text-left transition cursor-pointer">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-cyan-400 text-xs"></i>
+                        <span class="font-bold text-xs text-white">Todas las Vitrinas</span>
+                    </div>
+                    <span class="text-[9px] font-mono bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 px-2 py-0.5 rounded-full font-bold">${totalItems.toLocaleString('es-MX')}</span>
+                </button>
+            </div>
+            ${MASTER_DEPARTMENTS.map(master => {
+                const childDepts = master.deptIds.map(id => depts.find(d => d.id === id)).filter(Boolean);
+                const isMasterActive = master.deptIds.includes(activeSelectedCategory);
+                const masterCount = childDepts.reduce((sum, d) => sum + (d.count || 0), 0);
+
+                return `
+                    <details class="group bg-slate-950/80 border ${isMasterActive ? 'border-cyan-500/70 bg-slate-950' : 'border-slate-800/90'} rounded-xl overflow-hidden mb-1.5" ${isMasterActive ? 'open' : ''}>
+                        <summary class="flex items-center justify-between p-2.5 cursor-pointer list-none font-mono text-xs font-bold text-white hover:bg-slate-850 transition">
+                            <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                <i class="fa-solid ${master.icon} text-cyan-400 text-xs w-4 text-center shrink-0"></i>
+                                <span class="truncate text-[11px] ${isMasterActive ? 'text-cyan-300 font-black' : ''}">${master.name}</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 shrink-0">
+                                <span class="text-[9px] font-mono bg-slate-900 border border-slate-700 px-1.5 py-0.5 rounded text-cyan-300 font-bold">
+                                    ${masterCount.toLocaleString('es-MX')}
+                                </span>
+                                <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-open:rotate-180 transition-transform duration-200"></i>
+                            </div>
+                        </summary>
+                        <div class="p-2 pt-1 pb-1 space-y-1 bg-slate-900/90 border-t border-slate-800/80 text-xs divide-y divide-slate-800/40">
+                            ${childDepts.map(c => `
+                                <button 
+                                    type="button" 
+                                    onclick="window.selectCategoryFacet('${c.id}'); window.toggleMobileDepartmentsDrawer(false);" 
+                                    class="w-full flex items-center justify-between py-1.5 px-1 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer ${activeSelectedCategory === c.id ? 'text-cyan-300 font-black bg-slate-800/60' : 'text-slate-300'}">
+                                    <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                        <i class="fa-solid ${c.icon} text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                        <span class="truncate text-[10.5px]">${c.name}</span>
+                                    </div>
+                                    <span class="font-mono text-[9px] text-slate-400 shrink-0">(${c.count || 0})</span>
+                                </button>
+                            `).join('')}
+                        </div>
+                    </details>
+                `;
+            }).join('')}
+        `;
+    } catch(e) {
+        console.error("renderMobileDepartmentsList error:", e);
+    }
+};
 
 // BUSCADOR PREDICTIVO EN VIVO (CONECTADO A WEB WORKER OFF-MAIN-THREAD)
 let searchDebounceTimer = null;

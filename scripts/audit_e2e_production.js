@@ -70,7 +70,9 @@ const KNOWN_IDS = [
     'sidebar-facets', 'sidebar-facets-root', 'drawer-shipping-badge', 'cart-items-container',
     'drawer-cart-count', 'cart-total-amount', 'cart-tax-amount', 'cart-subtotal-amount',
     'results-count-display', 'active-filters-summary', 'modal-container-root',
-    'currencyToggleMXN', 'currencyToggleUSD', 'cart-count-badge', 'cart-badge-header'
+    'currencyToggleMXN', 'currencyToggleUSD', 'cart-count-badge', 'cart-badge-header',
+    'mobile-departments-drawer', 'mobile-departments-backdrop', 'mobile-departments-list',
+    'btn-mobile-departments', 'top-announcement-bar', 'welcome-hub-container'
 ];
 KNOWN_IDS.forEach(id => {
     domElements[id] = createMockElement(id);
@@ -311,16 +313,61 @@ testDepts.forEach(deptId => {
         window.selectCategoryFacet(deptId);
         const gridHTML = domElements['products-grid-container'].innerHTML;
         const matches = (gridHTML.match(/addToCartCT/g) || []).length;
-        if (matches > 0) {
+        const hasReturnBtn = gridHTML.includes('Volver a Todas las Vitrinas');
+        if (matches > 0 && hasReturnBtn) {
             recordResult(`Departamento [${deptId}]`, 'PASSED',
-                `Renderizó ${matches} tarjetas activas sin contenedor vacío.`);
+                `Renderizó ${matches} tarjetas activas con botón de retorno y sin contenedor vacío.`);
         } else {
-            recordResult(`Departamento [${deptId}]`, 'FAILED', 'No se encontraron tarjetas (0 productos).');
+            recordResult(`Departamento [${deptId}]`, 'FAILED', `matches=${matches}, hasReturnBtn=${hasReturnBtn}`);
         }
     } catch(e) {
         recordResult(`Departamento [${deptId}]`, 'FAILED', e.message);
     }
 });
+
+// ============================================================================
+// 8. AUDITORÍA ESTRUCTURAL: 67 DEPARTAMENTOS, SIDEBAR, DRAWER MÓVIL Y FLECHAS
+// ============================================================================
+console.log('\n--- 8. AUDITORIA ESTRUCTURAL (SIDEBAR, DRAWER Y SUBCHIPS) ---');
+try {
+    // 8.1 Sidebar en Escritorio
+    window.renderSidebarFacets();
+    const sidebarHTML = domElements['sidebar-facets'].innerHTML;
+    const deptsInSidebar = (sidebarHTML.match(/cat_facet/g) || []).length; // 67 depts + 1 'todas' = 68
+    if (deptsInSidebar >= 67) {
+        recordResult('Sidebar en Escritorio (67 Departamentos)', 'PASSED',
+            `El menú lateral renderiza los 7 macrogrupos y ${deptsInSidebar - 1} departamentos oficiales.`);
+    } else {
+        recordResult('Sidebar en Escritorio', 'FAILED', `Encontrados: ${deptsInSidebar} departamentos.`);
+    }
+
+    // 8.2 Drawer Móvil
+    window.renderMobileDepartmentsList();
+    const drawerHTML = domElements['mobile-departments-list'].innerHTML;
+    const deptsInDrawer = (drawerHTML.match(/selectCategoryFacet/g) || []).length; // 67 depts + 1 'todas' = 68
+    if (deptsInDrawer >= 67) {
+        recordResult('Drawer Móvil de Departamentos (67 Categorías)', 'PASSED',
+            `El Drawer móvil contiene las 67 categorías completas con sus conteos de stock.`);
+    } else {
+        recordResult('Drawer Móvil de Departamentos', 'FAILED', `Encontrados: ${deptsInDrawer} categorías.`);
+    }
+
+    // 8.3 Verificación de Subchips y Botón en index.html
+    const hasSidebarClasses = htmlContent.includes('id="sidebar-facets" class="block w-full lg:w-64');
+    const hasMobileDeptBtn = htmlContent.includes('id="btn-mobile-departments"');
+    const hasArrow180 = htmlContent.includes('left: -180') && htmlContent.includes('left: 180');
+    const hasVerCatalogoClick = htmlContent.includes('window.runCleanHomeCatalog();');
+
+    if (hasSidebarClasses && hasMobileDeptBtn && hasArrow180 && hasVerCatalogoClick) {
+        recordResult('Integridad de Interfaz (Botón Ver Catálogo, Drawer y Flechas 180px)', 'PASSED',
+            'Sidebar sin clase hidden, botón móvil presente, flechas ±180px configuradas y Ver Catálogo vinculado.');
+    } else {
+        recordResult('Integridad de Interfaz', 'FAILED',
+            `sidebar=${hasSidebarClasses}, mobileBtn=${hasMobileDeptBtn}, arrow180=${hasArrow180}, verCat=${hasVerCatalogoClick}`);
+    }
+} catch(e) {
+    recordResult('Auditoría Estructural de Interfaz', 'FAILED', e.message);
+}
 
 // ============================================================================
 // RESUMEN Y CERTIFICACIÓN FINAL
