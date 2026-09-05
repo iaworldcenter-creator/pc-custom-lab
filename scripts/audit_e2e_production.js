@@ -326,6 +326,32 @@ testDepts.forEach(deptId => {
     }
 });
 
+// Test de Paginación en Departamento (ej. tarjetas_madre saltando a pág 4 y 2)
+try {
+    window.selectCategoryFacet('tarjetas_madre');
+    window.goToPage(4);
+    const p4HTML = domElements['products-grid-container'].innerHTML;
+    const p4Matches = (p4HTML.match(/addToCartCT/g) || []).length;
+    const p4Title = domElements['results-count-display'].innerHTML;
+    const isPage4 = p4Title.includes('Página 4') && p4Matches > 0;
+
+    window.goToPage(2);
+    const p2HTML = domElements['products-grid-container'].innerHTML;
+    const p2Matches = (p2HTML.match(/addToCartCT/g) || []).length;
+    const p2Title = domElements['results-count-display'].innerHTML;
+    const isPage2 = p2Title.includes('Página 2') && p2Matches > 0;
+
+    if (isPage4 && isPage2) {
+        recordResult('Paginación en Vitrina [tarjetas_madre] (Saltos a Pág 4 y Pág 2)', 'PASSED',
+            `Navegación entre ventanas exitosa: Pág 4 (${p4Matches} tarjetas) y Pág 2 (${p2Matches} tarjetas).`);
+    } else {
+        recordResult('Paginación en Vitrina [tarjetas_madre]', 'FAILED',
+            `isPage4=${isPage4} (${p4Matches} prods), isPage2=${isPage2} (${p2Matches} prods)`);
+    }
+} catch(e) {
+    recordResult('Paginación en Vitrina [tarjetas_madre]', 'FAILED', e.message);
+}
+
 // ============================================================================
 // 8. AUDITORÍA ESTRUCTURAL: 67 DEPARTAMENTOS, SIDEBAR, DRAWER MÓVIL Y FLECHAS
 // ============================================================================

@@ -1380,13 +1380,16 @@ function renderPaginatedDepartmentView(container, resultsCountTxt) {
 }
 
 function renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, pageItems, totalCount, totalPages, currentPage, availableSubs, subcategories) {
-    if (currentPageNumber > totalPages) currentPageNumber = totalPages;
-    const startIdx = (currentPage - 1) * productsPerPage;
+    currentActiveTotalPages = totalPages || 1;
+    if (typeof currentPage === 'number' && currentPage > 0) {
+        currentPageNumber = currentPage;
+    }
+    const startIdx = (currentPageNumber - 1) * productsPerPage;
 
     if (resultsCountTxt) {
         let titleTxt = '';
         if (activeSearchQuery) {
-            titleTxt = `Búsqueda: "${activeSearchQuery}" <span class="text-slate-400 font-normal">(${totalCount.toLocaleString('es-MX')} productos)</span>`;
+            titleTxt = `Búsqueda: "${activeSearchQuery}" <span class="text-slate-400 font-normal">(${totalCount.toLocaleString('es-MX')} productos • Página ${currentPageNumber} de ${totalPages})</span>`;
         } else if (activeSelectedCategory !== 'Todas') {
             const depts = getMasterDepartmentsList();
             const deptObj = depts.find(d => d.id === activeSelectedCategory);
@@ -1399,7 +1402,7 @@ function renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, page
                     </button>
                     <span class="text-slate-500">|</span>
                     <span>${deptName}</span>
-                    <span class="text-slate-400 font-normal text-xs">(${totalCount.toLocaleString('es-MX')} productos)</span>
+                    <span class="text-slate-400 font-normal text-xs">(${totalCount.toLocaleString('es-MX')} productos • Página ${currentPageNumber} de ${totalPages})</span>
                 </div>
             `;
         } else {
@@ -1473,10 +1476,14 @@ function renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, page
 }
 
 function renderPaginatedDepartmentViewSync(container, resultsCountTxt) {
+    const maxPages = getMaxAvailablePages();
+    if (currentPageNumber > maxPages) currentPageNumber = maxPages;
+
     const filtered = getFilteredList();
-    const totalCount = filtered.length;
-    const totalPages = Math.ceil(totalCount / productsPerPage) || 1;
-    if (currentPageNumber > totalPages) currentPageNumber = totalPages;
+    const totalCount = (activeSelectedCategory !== 'Todas') 
+        ? (((window.PC_DEPARTAMENTOS && window.PC_DEPARTAMENTOS.find(d => d.id === activeSelectedCategory)) || {}).count || filtered.length)
+        : filtered.length;
+    const totalPages = maxPages;
     const startIdx = (currentPageNumber - 1) * productsPerPage;
     const pageItems = filtered.slice(startIdx, startIdx + productsPerPage);
     
@@ -1490,7 +1497,7 @@ function renderPaginatedDepartmentViewSync(container, resultsCountTxt) {
         }
     }
     
-    // Si la categoría seleccionada tiene 0 productos sincrónicos Y aún no está el catálogo completo ni el worker
+    // Si la categoría seleccionada tiene 0 productos sincrónicos en esta página Y aún no está el catálogo completo ni el worker
     // mostramos un estado de carga elegante en lugar del mensaje erróneo "No se encontraron productos"
     if (pageItems.length === 0 && activeSelectedCategory !== 'Todas' && (!activeSearchQuery || activeSearchQuery.trim() === '') && (!window.CT_CATALOG_DATA || window.CT_CATALOG_DATA.length < 1000)) {
         const depts = getMasterDepartmentsList();
@@ -1505,7 +1512,7 @@ function renderPaginatedDepartmentViewSync(container, resultsCountTxt) {
                     </button>
                     <span class="text-slate-500">|</span>
                     <span>${deptName}</span>
-                    <span class="text-cyan-400 font-mono text-xs animate-pulse">(Cargando catálogo...)</span>
+                    <span class="text-cyan-400 font-mono text-xs animate-pulse">(Cargando página ${currentPageNumber} de ${totalPages}...)</span>
                 </div>
             `;
         }
@@ -1513,7 +1520,7 @@ function renderPaginatedDepartmentViewSync(container, resultsCountTxt) {
         container.innerHTML = `
             <div class="flex flex-col items-center justify-center gap-3">
                 <i class="fa-solid fa-circle-notch fa-spin text-3xl text-cyan-400"></i>
-                <p class="text-slate-300 font-medium text-sm">Cargando vitrina de <span class="text-cyan-300 font-bold">${deptName}</span>...</p>
+                <p class="text-slate-300 font-medium text-sm">Cargando vitrina de <span class="text-cyan-300 font-bold">${deptName}</span> (Página ${currentPageNumber} de ${totalPages})...</p>
                 <p class="text-slate-500 text-xs">Optimizando inventario en memoria ultra rápida</p>
             </div>
         `;
@@ -1552,9 +1559,33 @@ function renderExactCatalogView() {
     }
 }
 
+let currentActiveTotalPages = 1;
+
+function getMaxAvailablePages() {
+    if (currentActiveTotalPages > 1) {
+        return currentActiveTotalPages;
+    }
+    if (activeSelectedCategory !== 'Todas') {
+        const depts = (window.PC_DEPARTAMENTOS && Array.isArray(window.PC_DEPARTAMENTOS)) ? window.PC_DEPARTAMENTOS : getMasterDepartmentsList();
+        const deptObj = depts.find(d => d.id === activeSelectedCategory);
+        if (deptObj && typeof deptObj.count === 'number' && deptObj.count > 0) {
+            let count = deptObj.count;
+            if (activeSelectedChip && activeSelectedChip !== 'Todos' && window.PC_SUBDEPARTAMENTOS && window.PC_SUBDEPARTAMENTOS[activeSelectedCategory]) {
+                const sub = window.PC_SUBDEPARTAMENTOS[activeSelectedCategory].find(s => s.name === activeSelectedChip);
+                if (sub && typeof sub.count === 'number') count = sub.count;
+            }
+            return Math.ceil(count / productsPerPage) || 1;
+        }
+    }
+    const filtered = getFilteredList();
+    return Math.ceil(filtered.length / productsPerPage) || 1;
+}
+
 function renderPaginationBar(totalPages) {
     const bars = document.querySelectorAll(".pagination-target-bar");
     if (!bars.length) return;
+
+    currentActiveTotalPages = totalPages || currentActiveTotalPages || 1;
 
     if (totalPages <= 1) {
         bars.forEach(b => b.innerHTML = '');
@@ -1578,7 +1609,7 @@ function renderPaginationBar(totalPages) {
             <div class="flex items-center gap-1.5">
                 <button 
                     type="button"
-                    onclick="goToPage(${current - 1})" 
+                    onclick="window.goToPage(${current - 1})" 
                     ${current === 1 ? 'disabled class="px-3 py-2 rounded-xl bg-slate-800/40 text-slate-600 border border-slate-800 cursor-not-allowed text-xs font-bold min-h-[40px]"' : 'class="btn-action px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 hover:text-white border border-slate-700 hover:border-cyan-400 cursor-pointer text-xs font-bold transition shadow min-h-[40px] flex items-center gap-1"'}
                     aria-label="Página anterior"
                 >
@@ -1594,7 +1625,7 @@ function renderPaginationBar(totalPages) {
                     return `
                         <button 
                             type="button" 
-                            onclick="goToPage(${p})" 
+                            onclick="window.goToPage(${p})" 
                             class="btn-action min-w-[36px] h-9 px-2 rounded-xl text-xs font-bold transition flex items-center justify-center cursor-pointer border ${isActive ? 'bg-cyan-500 text-slate-950 border-cyan-400 font-black shadow-lg shadow-cyan-500/20 scale-105' : 'bg-slate-950/90 text-slate-300 hover:text-white hover:bg-slate-800 border-slate-800'}"
                             aria-label="Ir a página ${p}"
                         >
@@ -1606,19 +1637,18 @@ function renderPaginationBar(totalPages) {
 
             <div class="flex items-center gap-2">
                 <div class="flex items-center gap-1.5 bg-slate-950 px-2.5 py-1.5 rounded-xl border border-slate-800 text-[11px] font-mono text-slate-400">
-                    <label for="pageJumpInput" class="text-[10.5px]">Ir a:</label>
+                    <label class="text-[10.5px]">Ir a:</label>
                     <input 
                         type="number" 
-                        id="pageJumpInput"
                         min="1" 
                         max="${totalPages}" 
                         value="${current}" 
-                        onkeydown="if(event.key==='Enter'){event.preventDefault(); goToPage(parseInt(this.value, 10));}"
+                        onkeydown="if(event.key==='Enter'){event.preventDefault(); window.goToPage(parseInt(this.value, 10));}"
                         class="w-12 bg-slate-900 border border-slate-700 rounded-lg px-1.5 py-0.5 text-center text-white text-xs font-bold outline-none focus:border-cyan-400 font-mono"
                     />
                     <button 
                         type="button" 
-                        onclick="const inp=this.previousElementSibling; if(inp){goToPage(parseInt(inp.value, 10));}"
+                        onclick="const inp=this.previousElementSibling; if(inp){window.goToPage(parseInt(inp.value, 10));}"
                         class="btn-action bg-blue-600 hover:bg-blue-500 text-white font-black px-2.5 py-1 rounded-lg text-[10px] uppercase cursor-pointer transition shadow"
                     >
                         Ir
@@ -1627,7 +1657,7 @@ function renderPaginationBar(totalPages) {
 
                 <button 
                     type="button"
-                    onclick="goToPage(${current + 1})" 
+                    onclick="window.goToPage(${current + 1})" 
                     ${current === totalPages ? 'disabled class="px-3 py-2 rounded-xl bg-slate-800/40 text-slate-600 border border-slate-800 cursor-not-allowed text-xs font-bold min-h-[40px]"' : 'class="btn-action px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 hover:text-white border border-slate-700 hover:border-cyan-400 cursor-pointer text-xs font-bold transition shadow min-h-[40px] flex items-center gap-1"'}
                     aria-label="Página siguiente"
                 >
@@ -1642,16 +1672,25 @@ function renderPaginationBar(totalPages) {
 }
 
 function goToPage(page) {
-    const filtered = getFilteredList();
-    const totalPages = Math.ceil(filtered.length / productsPerPage) || 1;
-    if (page < 1 || page > totalPages || isNaN(page)) return;
-    currentPageNumber = page;
-    renderExactCatalogView();
-    const showcaseTarget = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
-    if (showcaseTarget && typeof showcaseTarget.scrollIntoView === 'function') {
-        showcaseTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    try {
+        const p = parseInt(page, 10);
+        if (isNaN(p) || p < 1) return;
+        
+        const maxPages = getMaxAvailablePages();
+        if (p > maxPages) return;
+        
+        currentPageNumber = p;
+        renderExactCatalogView();
+        
+        const showcaseTarget = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
+        if (showcaseTarget && typeof showcaseTarget.scrollIntoView === 'function') {
+            showcaseTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    } catch(e) {
+        console.error("goToPage error:", e);
     }
 }
+window.goToPage = goToPage;
 
 // MENÚ LATERAL: 7 ACORDEONES + BOTONES PATROCINADOS GEMINI & ANTIGRAVITY
 function renderSidebarFacets() {
