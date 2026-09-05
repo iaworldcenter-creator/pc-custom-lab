@@ -449,7 +449,7 @@ window.openChatOrWhatsApp = function() {
     if (modal) {
         modal.classList.remove('hidden');
     } else {
-        window.open('https://wa.me/523337271440?text=Hola%20PC%20Custom%20Lab,%20deseo%20atención%20inmediata%20sobre%20su%20catálogo%20y%20ensambles.', '_blank');
+        window.open('https://wa.me/523326652109?text=Hola%20PC%20Custom%20Lab,%20deseo%20atención%20inmediata%20sobre%20su%20catálogo%20y%20ensambles.', '_blank');
     }
 };
 

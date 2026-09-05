@@ -1844,6 +1844,40 @@ function renderSidebarFacets() {
                     ${MASTER_DEPARTMENTS.map(renderMasterAccordion).join('')}
                 </div>
 
+                <!-- CÓDIGO QR / BARRAS INTERACTIVO ANCLADO A DEPARTAMENTOS (#sidebar-qr-container) -->
+                <div id="sidebar-qr-container" class="relative mt-2 p-3 bg-gradient-to-b from-slate-950 to-slate-900 border border-cyan-500/40 rounded-2xl shadow-lg text-center">
+                    <div class="flex items-center justify-between gap-1 mb-1.5">
+                        <span class="text-[10.5px] font-mono font-bold text-cyan-300 uppercase tracking-wider flex items-center gap-1.5">
+                            <i class="fa-solid fa-qrcode text-cyan-400"></i> Escanear Tienda
+                        </span>
+                        <span class="text-[9px] font-mono bg-cyan-950 text-cyan-400 border border-cyan-500/30 px-1.5 py-0.5 rounded font-bold">Móvil</span>
+                    </div>
+                    
+                    <div class="p-2 bg-white rounded-xl shadow-inner cursor-pointer hover:scale-105 transition-transform duration-200 inline-block mx-auto border border-slate-700" onclick="window.toggleQrModal(true)" title="Clic para ampliar código QR">
+                        <img 
+                            src="assets/img/codigo_qr_bazar_nfl.png" 
+                            alt="Código QR Oficial PC Custom Lab y BAZAR NFL GDL" 
+                            width="110" 
+                            height="110" 
+                            class="w-[110px] h-[110px] object-contain rounded-lg mx-auto block" 
+                            loading="lazy" 
+                        />
+                    </div>
+                    
+                    <div class="mt-2 flex flex-col gap-1.5">
+                        <span class="text-[9.5px] font-mono text-slate-300 block leading-tight">
+                            Lleva el catálogo en tu celular
+                        </span>
+                        <button 
+                            type="button" 
+                            onclick="window.toggleQrModal(true)" 
+                            aria-label="Ampliar código QR para escanear"
+                            class="btn-action w-full bg-cyan-950/80 hover:bg-cyan-900 border border-cyan-500/50 text-cyan-300 px-2 py-1.5 rounded-xl text-[10px] font-mono font-bold uppercase tracking-wider transition flex items-center justify-center gap-1.5 cursor-pointer min-h-[36px]">
+                            <i class="fa-solid fa-expand text-[10px]"></i> <span>Ampliar Código QR</span>
+                        </button>
+                    </div>
+                </div>
+
                 <!-- BOTONES PATROCINADOS OFICIALES: GEMINI ADVANCED & ANTIGRAVITY -->
                 <div class="pt-2 border-t border-slate-800 space-y-2">
                     <a 
@@ -2645,10 +2679,10 @@ window.openProductDetailModal = function(sku) {
                         </div>
 
                         <div class="flex gap-2 pt-2">
-                            <button onclick="${p.isAgotado ? `window.open('https://wa.me/523337271440?text=Hola,%20me%20interesa%20apartar%20bajo%20pedido%20el%20producto:%20${p.sku}', '_blank')` : `addToCartCT('${p.sku}', event); closeProductDetailModal();`}" class="flex-1 ${p.isAgotado ? 'bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/40' : 'bg-blue-600 hover:bg-blue-500 text-white shadow'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer min-h-[44px]">
+                            <button onclick="${p.isAgotado ? `window.open('https://wa.me/523326652109?text=Hola,%20me%20interesa%20apartar%20bajo%20pedido%20el%20producto:%20${p.sku}', '_blank')` : `addToCartCT('${p.sku}', event); closeProductDetailModal();`}" class="flex-1 ${p.isAgotado ? 'bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/40' : 'bg-blue-600 hover:bg-blue-500 text-white shadow'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 transition cursor-pointer min-h-[44px]">
                                 <i class="fa-solid ${p.isAgotado ? 'fa-clock' : 'fa-cart-plus'}"></i> <span>${p.isAgotado ? 'Apartar Bajo Pedido' : '+ Carrito'}</span>
                             </button>
-                            <button onclick="${p.isAgotado ? `window.open('https://wa.me/523337271440?text=Hola,%20cotizar%20bajo%20pedido:%20${p.sku}', '_blank')` : `buyNowCT('${p.sku}', event); closeProductDetailModal();`}" class="flex-1 ${p.isAgotado ? 'bg-amber-600 hover:bg-amber-500 text-slate-950' : 'bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 shadow transition cursor-pointer min-h-[44px]">
+                            <button onclick="${p.isAgotado ? `window.open('https://wa.me/523326652109?text=Hola,%20cotizar%20bajo%20pedido:%20${p.sku}', '_blank')` : `buyNowCT('${p.sku}', event); closeProductDetailModal();`}" class="flex-1 ${p.isAgotado ? 'bg-amber-600 hover:bg-amber-500 text-slate-950' : 'bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white'} font-black py-3 px-4 rounded-xl text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-1.5 shadow transition cursor-pointer min-h-[44px]">
                                 <i class="fa-solid ${p.isAgotado ? 'fa-file-invoice-dollar' : 'fa-bolt'}"></i> <span>${p.isAgotado ? 'Cotizar Pieza' : 'Comprar Ahora'}</span>
                             </button>
                         </div>

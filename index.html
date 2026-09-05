@@ -36,7 +36,7 @@
   "@type": "ComputerStore",
   "name": "PC Custom Lab - Hardware Mayorista Guadalajara",
   "url": "https://iaworldcenter-creator.github.io/pc-custom-lab/",
-  "telephone": "+52-33-3653-6348",
+  "telephone": "+52-33-3613-6348",
   "image": "https://iaworldcenter-creator.github.io/pc-custom-lab/assets/img/CPUINT4720_0.webp",
   "priceRange": "$$",
   "currenciesAccepted": "MXN",
@@ -105,6 +105,8 @@
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .bottom-4 { bottom: 1rem !important; }
         .right-4 { right: 1rem !important; }
+        .bottom-5 { bottom: 1.25rem !important; }
+        .right-5 { right: 1.25rem !important; }
         .z-50 { z-index: 50 !important; }
         .neon-glow-pc {
             border: 1px solid rgba(6,182,212,0.9) !important;
@@ -548,15 +550,15 @@
                         </p>
                         <p class="flex items-center gap-2">
                             <i class="fa-solid fa-phone text-cyan-400 shrink-0" aria-hidden="true"></i>
-                            <span>Teléfono Fijo: <strong>(33) 3653 6348</strong></span>
+                            <span>Teléfono Fijo: <a href="tel:+523336136348" aria-label="Llamar a teléfono fijo Guadalajara" class="hover:text-cyan-300 font-bold text-white transition"><strong>(33) 3613 6348</strong></a></span>
                         </p>
                         <p class="flex items-center gap-2">
                             <i class="fa-brands fa-whatsapp text-emerald-400 shrink-0" aria-hidden="true"></i>
-                            <span>WhatsApp: <a href="https://wa.me/523337271440" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" class="hover:text-emerald-300 font-bold text-white transition">+52 33 3727 1440</a></span>
+                            <span>WhatsApp: <a href="https://wa.me/523326652109" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" class="hover:text-emerald-300 font-bold text-white transition">+52 33 2665 2109</a></span>
                         </p>
                         <p class="flex items-center gap-2">
                             <i class="fa-solid fa-mobile-screen-button text-cyan-400 shrink-0" aria-hidden="true"></i>
-                            <span>Celular: <strong>+52 33 2865 2309</strong></span>
+                            <span>Celular: <a href="tel:+523326652109" aria-label="Llamar a celular de atención directa" class="hover:text-cyan-300 font-bold text-white transition"><strong>+52 33 2665 2109</strong></a></span>
                         </p>
                     </div>
 
@@ -2631,25 +2633,19 @@
     </script>
 
     <!-- CHAT FLOTANTE INFERIOR & ATENCIÓN INMEDIATA (#floating-chat-container) -->
-    <div id="floating-chat-container" class="fixed bottom-4 right-4 z-50 flex flex-col items-end gap-2 pointer-events-auto select-none" style="bottom: 1rem; right: 1rem; z-index: 50;">
-        <!-- Tooltip emergente de chat en vivo -->
-        <div id="floating-chat-tooltip" class="hidden sm:flex items-center gap-2 bg-slate-900/95 border border-cyan-500/50 text-white px-3 py-1.5 rounded-2xl shadow-2xl backdrop-blur-md text-[11px] font-mono cursor-pointer transition hover:border-cyan-400" onclick="window.openChatOrWhatsApp()">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-            <span class="text-slate-200">¿Dudas? <strong class="text-cyan-300">Chatea en Vivo</strong></span>
-            <button type="button" onclick="event.stopPropagation(); document.getElementById('floating-chat-tooltip')?.remove();" aria-label="Cerrar sugerencia de chat" class="text-slate-400 hover:text-white text-xs ml-1 cursor-pointer">×</button>
-        </div>
-
-        <!-- Botón interactivo de Chat -->
+    <div id="floating-chat-container" class="fixed bottom-5 right-5 z-50 pointer-events-auto select-none" style="position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 50;">
+        <!-- Botón interactivo de Chat Flotante (Cero Scroll) -->
         <button 
             type="button" 
             id="btn-floating-chat"
             onclick="window.openChatOrWhatsApp()"
-            aria-label="Abrir chat de atención y soporte WhatsApp" 
-            title="Chat de Atención y Soporte Inmediato"
-            class="w-14 h-14 rounded-full bg-gradient-to-tr from-emerald-600 via-teal-500 to-cyan-500 hover:from-emerald-500 hover:to-cyan-400 text-white font-black flex items-center justify-center text-2xl shadow-[0_8px_30px_rgba(16,185,129,0.5)] border-2 border-white/80 transition-transform active:scale-95 hover:scale-110 cursor-pointer min-w-[56px] min-h-[56px] relative group">
-            <i class="fa-brands fa-whatsapp text-white drop-shadow-md text-3xl group-hover:scale-110 transition-transform"></i>
+            aria-label="Abrir WhatsApp oficial PC Custom Lab (+52 33 2665 2109)" 
+            title="Atención Directa WhatsApp"
+            class="fixed bottom-5 right-5 z-50 flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl transition-transform hover:scale-110 cursor-pointer min-w-[56px] min-h-[56px] border-2 border-white/80"
+            style="position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 50;">
+            <i class="fa-brands fa-whatsapp text-white drop-shadow-md text-3xl"></i>
             <!-- Indicador Online verde neón -->
-            <span class="absolute top-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-400 border-2 border-slate-950 shadow-sm"></span>
+            <span class="absolute top-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-300 border-2 border-slate-950 shadow-sm"></span>
         </button>
     </div>
 
@@ -2680,27 +2676,27 @@
 
             <div class="space-y-2.5">
                 <!-- Botón WhatsApp Directo -->
-                <a href="https://wa.me/523337271440?text=Hola%20PC%20Custom%20Lab,%20deseo%20atención%20inmediata%20sobre%20su%20catálogo%20y%20ensambles." target="_blank" rel="noopener" class="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-mono font-bold py-3 px-4 rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg shadow-emerald-950 transition active:scale-95 cursor-pointer min-h-[48px]">
+                <a href="https://wa.me/523326652109?text=Hola%20PC%20Custom%20Lab,%20deseo%20atención%20inmediata%20sobre%20su%20catálogo%20y%20ensambles." target="_blank" rel="noopener" class="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-mono font-bold py-3 px-4 rounded-2xl text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg shadow-emerald-950 transition active:scale-95 cursor-pointer min-h-[48px]">
                     <i class="fa-brands fa-whatsapp text-xl text-white"></i>
-                    <span>Chatear por WhatsApp (+52 33 3727 1440)</span>
+                    <span>Chatear por WhatsApp (+52 33 2665 2109)</span>
                 </a>
 
                 <!-- Llamada Fija Mostrador -->
-                <a href="tel:+523336536348" class="w-full bg-slate-950 hover:bg-slate-800 border border-slate-700 text-slate-200 hover:text-white font-mono font-bold py-2.5 px-4 rounded-2xl text-xs flex items-center justify-between transition cursor-pointer min-h-[44px]">
+                <a href="tel:+523336136348" class="w-full bg-slate-950 hover:bg-slate-800 border border-slate-700 text-slate-200 hover:text-white font-mono font-bold py-2.5 px-4 rounded-2xl text-xs flex items-center justify-between transition cursor-pointer min-h-[44px]">
                     <span class="flex items-center gap-2">
                         <i class="fa-solid fa-phone text-cyan-400"></i>
                         <span>Teléfono Fijo Centro:</span>
                     </span>
-                    <span class="text-cyan-300 font-bold">(33) 3653 6348</span>
+                    <span class="text-cyan-300 font-bold">(33) 3613 6348</span>
                 </a>
 
                 <!-- Celular Mostrador -->
-                <a href="tel:+523328652309" class="w-full bg-slate-950 hover:bg-slate-800 border border-slate-700 text-slate-200 hover:text-white font-mono font-bold py-2.5 px-4 rounded-2xl text-xs flex items-center justify-between transition cursor-pointer min-h-[44px]">
+                <a href="tel:+523326652109" class="w-full bg-slate-950 hover:bg-slate-800 border border-slate-700 text-slate-200 hover:text-white font-mono font-bold py-2.5 px-4 rounded-2xl text-xs flex items-center justify-between transition cursor-pointer min-h-[44px]">
                     <span class="flex items-center gap-2">
                         <i class="fa-solid fa-mobile-screen text-amber-400"></i>
                         <span>Celular Directo:</span>
                     </span>
-                    <span class="text-amber-300 font-bold">+52 33 2865 2309</span>
+                    <span class="text-amber-300 font-bold">+52 33 2665 2109</span>
                 </a>
             </div>
 
@@ -2765,7 +2761,7 @@
             if (modal) {
                 modal.classList.remove('hidden');
             } else {
-                window.open('https://wa.me/523337271440?text=Hola%20PC%20Custom%20Lab,%20deseo%20atención%20inmediata%20sobre%20su%20catálogo%20y%20ensambles.', '_blank');
+                window.open('https://wa.me/523326652109?text=Hola%20PC%20Custom%20Lab,%20deseo%20atención%20inmediata%20sobre%20su%20catálogo%20y%20ensambles.', '_blank');
             }
         };
         window.toggleChatContactModal = function(show) {

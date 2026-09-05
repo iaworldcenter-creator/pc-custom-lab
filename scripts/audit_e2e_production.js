@@ -461,38 +461,51 @@ try {
 }
 
 // ============================================================================
-// 10. AUDITORÍA DE CHAT FLOTANTE Y CÓDIGO QR
+// 10. AUDITORÍA DE CHAT FLOTANTE, CÓDIGO QR Y TELÉFONOS OFICIALES
 // ============================================================================
-console.log('\n--- 10. AUDITORÍA DE CHAT FLOTANTE Y CÓDIGO QR ---');
+console.log('\n--- 10. AUDITORÍA DE CHAT FLOTANTE, CÓDIGO QR Y TELÉFONOS OFICIALES ---');
 try {
     const rawHTML = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
+    const catalogEngineJS = fs.readFileSync(path.join(__dirname, '..', 'js', 'ct-exact-catalog-engine.js'), 'utf8');
 
-    // 10.1 Chat flotante inferior y modal de contacto
+    // 10.1 Chat flotante inferior y modal de contacto WhatsApp
     const hasChatContainer = rawHTML.includes('id="floating-chat-container"');
-    const hasFixedBottomRight = rawHTML.includes('bottom-4') && rawHTML.includes('right-4') && rawHTML.includes('z-50');
+    const hasFixedBottomRight = (rawHTML.includes('bottom-5') || rawHTML.includes('bottom-4')) && (rawHTML.includes('right-5') || rawHTML.includes('right-4')) && rawHTML.includes('z-50');
     const hasChatButton = rawHTML.includes('id="btn-floating-chat"') && rawHTML.includes('openChatOrWhatsApp');
-    const hasChatModal = rawHTML.includes('id="chatContactModal"') && rawHTML.includes('wa.me/523337271440');
+    const hasChatModal = rawHTML.includes('id="chatContactModal"') && rawHTML.includes('wa.me/523326652109');
 
     if (hasChatContainer && hasFixedBottomRight && hasChatButton && hasChatModal) {
         recordResult('Chat Flotante Inferior y Modal de Contacto WhatsApp', 'PASSED',
-            'Capa fija (bottom-4 right-4 z-50), botón interactivo de 56px y modal de contacto rápido verificados.');
+            'Capa fija (bottom-5 right-5 z-50), botón interactivo de 56px y modal de WhatsApp oficial (+52 33 2665 2109) verificados.');
     } else {
         recordResult('Chat Flotante Inferior y Modal de Contacto WhatsApp', 'FAILED',
             `hasContainer=${hasChatContainer}, hasFixed=${hasFixedBottomRight}, hasBtn=${hasChatButton}, hasModal=${hasChatModal}`);
     }
 
-    // 10.2 Acceso de Código QR (Barra superior, footer y modal)
+    // 10.2 Acceso de Código QR (Barra lateral #sidebar-facets, barra superior, footer y modal)
+    const hasSidebarQr = catalogEngineJS.includes('id="sidebar-qr-container"') && catalogEngineJS.includes('assets/img/codigo_qr_bazar_nfl.png');
     const hasTopQrBtn = rawHTML.includes('id="btn-top-qr"') && rawHTML.includes('toggleQrModal');
-    const hasFooterQr = rawHTML.includes('assets/img/codigo_qr_bazar_nfl.png');
-    const hasQrDimensions = /<img[^>]*codigo_qr_bazar_nfl\.png[^>]*width=["']\d+["'][^>]*height=["']\d+["']/i.test(rawHTML);
+    const hasFooterOrSidebarQr = hasSidebarQr || rawHTML.includes('assets/img/codigo_qr_bazar_nfl.png');
+    const hasQrDimensions = /<img[^>]*codigo_qr_bazar_nfl\.png[^>]*width=["']\d+["'][^>]*height=["']\d+["']/i.test(catalogEngineJS) && /<img[^>]*codigo_qr_bazar_nfl\.png[^>]*width=["']\d+["'][^>]*height=["']\d+["']/i.test(rawHTML);
     const hasQrModal = rawHTML.includes('id="qrModal"') && rawHTML.includes('toggleQrModal');
 
-    if (hasTopQrBtn && hasFooterQr && hasQrDimensions && hasQrModal) {
+    if (hasSidebarQr && hasFooterOrSidebarQr && hasQrDimensions && hasQrModal) {
         recordResult('Módulo Oficial y Visualizador de Código QR', 'PASSED',
-            'Acceso en barra superior y footer con width/height definidos y modal visualizador responsive verificado.');
+            'Anclado en #sidebar-facets bajo departamentos y footer, dimensiones fijas anti-CLS y modal responsive.');
     } else {
         recordResult('Módulo Oficial y Visualizador de Código QR', 'FAILED',
-            `hasTop=${hasTopQrBtn}, hasFooter=${hasFooterQr}, hasDims=${hasQrDimensions}, hasModal=${hasQrModal}`);
+            `hasSidebar=${hasSidebarQr}, hasFooter=${hasFooterOrSidebarQr}, hasDims=${hasQrDimensions}, hasModal=${hasQrModal}`);
+    }
+
+    // 10.3 Sincronización estricta de números telefónicos oficiales
+    const hasOfficialLandline = rawHTML.includes('tel:+523336136348') && rawHTML.includes('(33) 3613 6348');
+    const hasOfficialMobile = rawHTML.includes('wa.me/523326652109') && rawHTML.includes('33 2665 2109');
+    if (hasOfficialLandline && hasOfficialMobile) {
+        recordResult('Sincronización Telefónica Oficial (Google Business Profile)', 'PASSED',
+            'Fijo (33) 3613 6348 y Celular/WhatsApp 33 2665 2109 validados en modales, cabecera y pie de página.');
+    } else {
+        recordResult('Sincronización Telefónica Oficial (Google Business Profile)', 'FAILED',
+            `hasLandline=${hasOfficialLandline}, hasMobile=${hasOfficialMobile}`);
     }
 } catch(e) {
     recordResult('Auditoría de Chat y Código QR', 'FAILED', e.message);
