@@ -475,7 +475,8 @@ self.onmessage = async function(e) {
                 if (chip && chip !== 'Todos') {
                     filtered = filtered.filter(p => {
                         const sub = (p.subgrupo_label || '');
-                        return sub.toLowerCase() === chip.toLowerCase();
+                        const marca = (p.marca || p.m || '');
+                        return sub.toLowerCase() === chip.toLowerCase() || marca.toLowerCase() === chip.toLowerCase();
                     });
                 }
 

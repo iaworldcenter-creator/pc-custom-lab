@@ -495,14 +495,29 @@ window.setSortCriterion = function(crit) {
     }
 };
 
-window.scrollToResults = function() {
+window.scrollToControlsOrTop = function() {
     try {
-        const el = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
-        if (el && typeof el.scrollIntoView === 'function') {
-            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const controls = document.getElementById("catalog-controls-bar") || document.getElementById("results-count-display") || document.getElementById("products-grid-container");
+        if (!controls || typeof controls.getBoundingClientRect !== 'function') return;
+        const rect = controls.getBoundingClientRect();
+        const headerOffset = 135; // Altura de la cabecera sticky fija + margen de separación
+
+        // Si la barra de controles ya se encuentra cómodamente visible y despejada bajo la cabecera, evitamos saltos bruscos
+        if (rect.top >= (headerOffset - 15) && rect.top <= (window.innerHeight * 0.55)) {
+            return;
         }
-    } catch(e) {}
+
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop || 0;
+        const targetY = currentScroll + rect.top - headerOffset;
+        window.scrollTo({
+            top: Math.max(0, targetY),
+            behavior: 'smooth'
+        });
+    } catch(e) {
+        console.warn("scrollToControlsOrTop error:", e);
+    }
 };
+window.scrollToResults = window.scrollToControlsOrTop;
 
 // =========================================================================
 // SUBRUTINA MAESTRA UNIFICADA: ARRANQUE NATIVO LIMPIO (ZERO-BLANK F5)
@@ -798,9 +813,8 @@ window.selectCategoryFacet = function(catId) {
         renderSidebarFacets();
         renderExactCatalogView();
 
-        const target = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
-        if (target && typeof target.scrollIntoView === 'function') {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (typeof window.scrollToControlsOrTop === 'function') {
+            window.scrollToControlsOrTop();
         }
 
         if (typeof window.ensureFullCatalogLoaded === 'function') {
@@ -830,9 +844,8 @@ window.selectDepartmentWithSubcategory = function(catId, subName) {
         renderSidebarFacets();
         renderExactCatalogView();
 
-        const target = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
-        if (target && typeof target.scrollIntoView === 'function') {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (typeof window.scrollToControlsOrTop === 'function') {
+            window.scrollToControlsOrTop();
         }
 
         if (typeof window.ensureFullCatalogLoaded === 'function') {
@@ -910,13 +923,17 @@ function getFilteredList() {
         if (activeSelectedChip && activeSelectedChip !== 'Todos') {
             items = items.filter(p => {
                 const item = window.normalizeProductItem(p);
-                return item && item.subLabel === activeSelectedChip;
+                const matchesSub = item && item.subLabel && item.subLabel.toLowerCase() === activeSelectedChip.toLowerCase();
+                const matchesBrand = (p.marca || p.m || '').toLowerCase() === activeSelectedChip.toLowerCase();
+                return matchesSub || matchesBrand;
             });
         }
     } else if (activeSelectedChip && activeSelectedChip !== 'Todos') {
         items = items.filter(p => {
             const item = window.normalizeProductItem(p);
-            return item && item.subLabel === activeSelectedChip;
+            const matchesSub = item && item.subLabel && item.subLabel.toLowerCase() === activeSelectedChip.toLowerCase();
+            const matchesBrand = (p.marca || p.m || '').toLowerCase() === activeSelectedChip.toLowerCase();
+            return matchesSub || matchesBrand;
         });
     }
 
@@ -1414,9 +1431,28 @@ function renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, page
     renderPaginationBar(totalPages);
 
     // Normalizar subcategorías
-    const subsList = (subcategories && Array.isArray(subcategories) && subcategories.length > 0)
+    let subsList = (subcategories && Array.isArray(subcategories) && subcategories.length > 0)
         ? subcategories
         : ((window.PC_SUBDEPARTAMENTOS && window.PC_SUBDEPARTAMENTOS[activeSelectedCategory]) || (availableSubs || []).map(s => typeof s === 'object' ? s : { name: s, count: null }));
+
+    // Si el departamento no tiene subdepartamentos explícitos, extraer marcas principales como subchips
+    if ((!subsList || subsList.length === 0) && activeSelectedCategory !== 'Todas') {
+        const catProducts = (window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || []).filter(p => (p.categoria_clasificada || p.c || '').toLowerCase() === activeSelectedCategory.toLowerCase());
+        const brandSet = new Map();
+        catProducts.forEach(p => {
+            const b = p.marca || p.m;
+            if (b && typeof b === 'string' && b.trim() !== '') {
+                const bName = b.trim();
+                brandSet.set(bName, (brandSet.get(bName) || 0) + 1);
+            }
+        });
+        if (brandSet.size > 1) {
+            subsList = Array.from(brandSet.entries())
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 10)
+                .map(([name, count]) => ({ name, count }));
+        }
+    }
 
     let headerControlsHTML = '';
     if (activeSelectedCategory !== 'Todas' || (activeSearchQuery && activeSearchQuery.trim() !== '')) {
@@ -1682,9 +1718,8 @@ function goToPage(page) {
         currentPageNumber = p;
         renderExactCatalogView();
         
-        const showcaseTarget = document.getElementById("results-count-display") || document.getElementById("products-grid-container");
-        if (showcaseTarget && typeof showcaseTarget.scrollIntoView === 'function') {
-            showcaseTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (typeof window.scrollToControlsOrTop === 'function') {
+            window.scrollToControlsOrTop();
         }
     } catch(e) {
         console.error("goToPage error:", e);

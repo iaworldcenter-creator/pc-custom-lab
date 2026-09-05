@@ -93,6 +93,12 @@
     </style>
 
     <style>
+        html {
+            scroll-padding-top: 130px;
+        }
+        #catalog-controls-bar {
+            scroll-margin-top: 130px;
+        }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .neon-glow-pc {
@@ -344,7 +350,7 @@
                 <div id="welcome-hub-container" class="w-full min-h-[220px]" style="min-height: 220px;"></div>
 
                 <!-- Barra Superior de Control (Resultados + Alternador Vista + Paginación 1..7...50 + Ordenar) -->
-                <div class="p-3.5 bg-slate-900/95 border border-slate-800 rounded-2xl shadow-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-white">
+                <div id="catalog-controls-bar" style="scroll-margin-top: 130px;" class="p-3.5 bg-slate-900/95 border border-slate-800 rounded-2xl shadow-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-white">
                     <div>
                         <h2 class="text-xs sm:text-sm font-bold text-cyan-300 leading-tight font-mono" id="results-count-display">
                             Aparador Principal (20 de 16,122)
