@@ -67,7 +67,7 @@ function createMockElement(id, tag = 'div') {
 const KNOWN_IDS = [
     'products-grid-container', 'cart-slide-drawer', 'cart-backdrop',
     'main-search-input', 'search-results-dropdown', 'btn-limpiar', 'btn-aplicar',
-    'sidebar-facets-root', 'drawer-shipping-badge', 'cart-items-container',
+    'sidebar-facets', 'sidebar-facets-root', 'drawer-shipping-badge', 'cart-items-container',
     'drawer-cart-count', 'cart-total-amount', 'cart-tax-amount', 'cart-subtotal-amount',
     'results-count-display', 'active-filters-summary', 'modal-container-root',
     'currencyToggleMXN', 'currencyToggleUSD', 'cart-count-badge', 'cart-badge-header'

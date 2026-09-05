@@ -123,56 +123,76 @@
 
     <!-- CABECERA DE 2 LÍNEAS (MÓVIL Y ESCRITORIO) -->
     <header class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 shadow-xl">
-        <!-- Línea 1: Desplazamiento Horizontal con Botón Neón Activo -->
-        <div class="w-full max-w-[1850px] mx-auto px-2 sm:px-4 py-2 border-b border-slate-900/80 flex items-center justify-between gap-2 overflow-x-auto no-scrollbar scroll-smooth min-h-[48px]" style="min-height: 48px;">
-            <div class="flex items-center gap-2 shrink-0">
-                <span class="text-[9px] sm:text-[10px] font-mono font-black text-amber-300 bg-amber-500/15 border border-amber-500/40 px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1">
-                    <i class="fa-solid fa-motorcycle text-amber-400"></i> Envío Exprés el Mismo Día | > $2,000 MXN Paquetería Asegurada
-                </span>
-                <span class="text-[9px] sm:text-[10px] font-mono font-black text-cyan-300 bg-cyan-500/15 border border-cyan-500/40 px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1">
-                    <i class="fa-solid fa-triangle-exclamation text-amber-400"></i> Precios sujetos a cambio sin previo aviso
-                </span>
-                <!-- BOTÓN CONVERSOR DE MONEDA (MXN / USD) -->
-                <div class="flex items-center bg-slate-900 border border-cyan-500/40 rounded-full p-0.5 text-[9px] sm:text-[10px] font-mono font-bold shadow">
-                    <span class="text-slate-400 px-1.5 flex items-center gap-1"><i class="fa-solid fa-coins text-amber-400"></i> Moneda:</span>
-                    <button id="currencyToggleMXN" onclick="window.setCurrencyDisplay('MXN')" class="px-2 py-0.5 rounded-full bg-cyan-500 text-slate-950 font-black transition cursor-pointer">🇲🇽 MXN</button>
-                    <button id="currencyToggleUSD" onclick="window.setCurrencyDisplay('USD')" class="px-2 py-0.5 rounded-full text-slate-300 hover:text-white transition cursor-pointer">🇺🇸 USD</button>
+        <!-- Línea 1: Desplazamiento Horizontal con Controles Móviles y Botón Neón Activo -->
+        <div class="relative w-full border-b border-slate-900/80 bg-slate-950">
+            <!-- Botón Desplazar Izquierda (Móvil) -->
+            <button 
+                type="button" 
+                aria-label="Desplazar izquierda"
+                onclick="document.getElementById('top-announcement-bar')?.scrollBy({ left: -160, behavior: 'smooth' })"
+                class="lg:hidden absolute left-0 top-0 bottom-0 z-20 px-2 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent text-cyan-400 hover:text-white flex items-center justify-center cursor-pointer">
+                <i class="fa-solid fa-chevron-left text-xs drop-shadow"></i>
+            </button>
+
+            <div id="top-announcement-bar" class="w-full max-w-[1850px] mx-auto px-2 sm:px-4 py-2 flex items-center justify-between gap-2 overflow-x-auto no-scrollbar scroll-smooth min-h-[48px]" style="min-height: 48px;">
+                <div class="flex items-center gap-2 shrink-0">
+                    <span class="text-[9px] sm:text-[10px] font-mono font-black text-amber-300 bg-amber-500/15 border border-amber-500/40 px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-motorcycle text-amber-400"></i> Envío Exprés el Mismo Día | > $2,000 MXN Paquetería Asegurada
+                    </span>
+                    <span class="text-[9px] sm:text-[10px] font-mono font-black text-cyan-300 bg-cyan-500/15 border border-cyan-500/40 px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1">
+                        <i class="fa-solid fa-triangle-exclamation text-amber-400"></i> Precios sujetos a cambio sin previo aviso
+                    </span>
+                    <!-- BOTÓN CONVERSOR DE MONEDA (MXN / USD) -->
+                    <div class="flex items-center bg-slate-900 border border-cyan-500/40 rounded-full p-0.5 text-[9px] sm:text-[10px] font-mono font-bold shadow">
+                        <span class="text-slate-400 px-1.5 flex items-center gap-1"><i class="fa-solid fa-coins text-amber-400"></i> Moneda:</span>
+                        <button id="currencyToggleMXN" onclick="window.setCurrencyDisplay('MXN')" class="px-2 py-0.5 rounded-full bg-cyan-500 text-slate-950 font-black transition cursor-pointer">🇲🇽 MXN</button>
+                        <button id="currencyToggleUSD" onclick="window.setCurrencyDisplay('USD')" class="px-2 py-0.5 rounded-full text-slate-300 hover:text-white transition cursor-pointer">🇺🇸 USD</button>
+                    </div>
                 </div>
+                
+                <nav class="flex items-center gap-1.5 shrink-0 text-xs font-mono font-bold" aria-label="Ecosistema de Tiendas">
+                    <a href="https://iaworldcenter-creator.github.io/sitios-web/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
+                        <i class="fa-solid fa-house text-amber-400"></i> Matriz
+                    </a>
+                    <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="px-3 py-1 rounded-xl bg-cyan-950/80 text-cyan-300 font-black neon-glow-pc transition">
+                        <i class="fa-solid fa-microchip text-cyan-400"></i> PC Custom
+                    </a>
+                    <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
+                        <i class="fa-solid fa-gem text-cyan-300"></i> Vía MX
+                    </a>
+                    <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
+                        <i class="fa-solid fa-smoking text-amber-400"></i> Cigarros
+                    </a>
+                    <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
+                        <i class="fa-solid fa-candy-cane text-pink-400"></i> Dulces
+                    </a>
+                    <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
+                        <i class="fa-solid fa-newspaper text-indigo-400"></i> Kiosco
+                    </a>
+                    <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
+                        <i class="fa-solid fa-store text-emerald-400"></i> Mi Puesto
+                    </a>
+                    <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
+                        <i class="fa-solid fa-tags text-red-400"></i> Liquidaciones
+                    </a>
+                    <span class="text-slate-700 shrink-0">|</span>
+                    <a href="https://gemini.google.com" target="_blank" rel="noopener" class="px-2.5 py-1 rounded-xl bg-slate-950 border border-slate-800 hover:border-cyan-400 text-cyan-300 text-xs font-bold flex items-center gap-1.5 shrink-0 transition">
+                        <i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i> Suscríbete a Gemini
+                    </a>
+                    <a href="https://antigravity.google/download" target="_blank" rel="noopener" class="px-2.5 py-1 rounded-xl bg-slate-950 border border-slate-800 hover:border-amber-400 text-amber-300 text-xs font-bold flex items-center gap-1.5 shrink-0 transition">
+                        <i class="fa-solid fa-download text-amber-400"></i> Descargar y Prueba Anti-Gravity
+                    </a>
+                </nav>
             </div>
-            
-            <nav class="flex items-center gap-1.5 shrink-0 text-xs font-mono font-bold" aria-label="Ecosistema de Tiendas">
-                <a href="https://iaworldcenter-creator.github.io/sitios-web/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
-                    <i class="fa-solid fa-house text-amber-400"></i> Matriz
-                </a>
-                <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="px-3 py-1 rounded-xl bg-cyan-950/80 text-cyan-300 font-black neon-glow-pc transition">
-                    <i class="fa-solid fa-microchip text-cyan-400"></i> PC Custom
-                </a>
-                <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
-                    <i class="fa-solid fa-gem text-cyan-300"></i> Vía MX
-                </a>
-                <a href="https://iaworldcenter-creator.github.io/cigarros-bazar/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
-                    <i class="fa-solid fa-smoking text-amber-400"></i> Cigarros
-                </a>
-                <a href="https://iaworldcenter-creator.github.io/dulces-bazar/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
-                    <i class="fa-solid fa-candy-cane text-pink-400"></i> Dulces
-                </a>
-                <a href="https://iaworldcenter-creator.github.io/kiosco-digital/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
-                    <i class="fa-solid fa-newspaper text-indigo-400"></i> Kiosco
-                </a>
-                <a href="https://iaworldcenter-creator.github.io/mi-puesto-bazar/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
-                    <i class="fa-solid fa-store text-emerald-400"></i> Mi Puesto
-                </a>
-                <a href="https://iaworldcenter-creator.github.io/ofertas-y-liquidaciones-/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
-                    <i class="fa-solid fa-tags text-red-400"></i> Liquidaciones
-                </a>
-                <span class="text-slate-700 shrink-0">|</span>
-                <a href="https://gemini.google.com" target="_blank" rel="noopener" class="px-2.5 py-1 rounded-xl bg-slate-950 border border-slate-800 hover:border-cyan-400 text-cyan-300 text-xs font-bold flex items-center gap-1.5 shrink-0 transition">
-                    <i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i> Suscríbete a Gemini
-                </a>
-                <a href="https://antigravity.google/download" target="_blank" rel="noopener" class="px-2.5 py-1 rounded-xl bg-slate-950 border border-slate-800 hover:border-amber-400 text-amber-300 text-xs font-bold flex items-center gap-1.5 shrink-0 transition">
-                    <i class="fa-solid fa-download text-amber-400"></i> Descargar y Prueba Anti-Gravity
-                </a>
-            </nav>
+
+            <!-- Botón Desplazar Derecha (Móvil) -->
+            <button 
+                type="button" 
+                aria-label="Desplazar derecha"
+                onclick="document.getElementById('top-announcement-bar')?.scrollBy({ left: 160, behavior: 'smooth' })"
+                class="lg:hidden absolute right-0 top-0 bottom-0 z-20 px-2 bg-gradient-to-l from-slate-950 via-slate-950/80 to-transparent text-cyan-400 hover:text-white flex items-center justify-center cursor-pointer">
+                <i class="fa-solid fa-chevron-right text-xs drop-shadow"></i>
+            </button>
         </div>
 
         <!-- Línea 2: Logo + Barra de Búsqueda Blanca + Botón Carrito -->
@@ -224,7 +244,7 @@
         <div class="flex flex-col lg:flex-row gap-4 items-start justify-center">
             
             <!-- COLUMNA LATERAL IZQUIERDA: 7 DEPARTAMENTOS MAESTROS EN ACORDEÓN (FLOTANTE / STICKY) -->
-            <aside style="width: 280px; min-width: 280px; max-width: 280px;" class="hidden lg:block w-full lg:w-[280px] shrink-0 lg:sticky lg:top-20 z-30 self-start" id="sidebar-facets-root">
+            <aside id="sidebar-facets" class="hidden lg:block w-full lg:w-64 flex-shrink-0 lg:sticky lg:top-20 z-30 self-start">
                 <!-- Inyectado por JS: 7 Departamentos Maestros en Acordeón Colapsable -->
             </aside>
 
@@ -242,13 +262,13 @@
                             <h3 class="font-bold text-xs sm:text-sm">Precios Especiales con Entrega Inmediata en Guadalajara (Pedro Moreno 501 A)</h3>
                         </div>
                     </div>
-                    <button onclick="document.getElementById('boutiqueSearchInput').focus()" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-black px-4 py-1.5 rounded-xl text-xs uppercase font-mono tracking-wider shadow-lg transition shrink-0 cursor-pointer">
+                    <button onclick="if(window.runCleanHomeCatalog){ window.runCleanHomeCatalog(); } document.getElementById('welcome-hub-container')?.scrollIntoView({ behavior: 'smooth' });" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-black px-4 py-1.5 rounded-xl text-xs uppercase font-mono tracking-wider shadow-lg transition shrink-0 cursor-pointer">
                         Ver Catálogo
                     </button>
                 </div>
 
                 <!-- CONTENEDOR WELCOME HUB: HUB INTERACTIVO DE DEPARTAMENTOS -->
-                <div id="welcome-hub-container" class="w-full"></div>
+                <div id="welcome-hub-container" class="w-full min-h-[220px]" style="min-height: 220px;"></div>
 
                 <!-- Barra Superior de Control (Resultados + Alternador Vista + Paginación 1..7...50 + Ordenar) -->
                 <div class="p-3.5 bg-slate-900/95 border border-slate-800 rounded-2xl shadow-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-white">

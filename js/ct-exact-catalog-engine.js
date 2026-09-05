@@ -680,8 +680,12 @@ function renderWelcomeHub() {
     if (activeSelectedCategory !== 'Todas' || (activeSearchQuery && activeSearchQuery.trim() !== '') || currentPageNumber > 1) {
         hubContainer.innerHTML = '';
         hubContainer.classList.add("hidden");
+        hubContainer.style.minHeight = '0px';
         return;
     }
+
+    hubContainer.style.minHeight = '220px';
+    hubContainer.classList.remove("hidden");
 
     const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
     const getCount = (id) => all.filter(p => (p.categoria_clasificada || p.c || '').toLowerCase() === id.toLowerCase()).length;
@@ -810,7 +814,7 @@ window.selectCategoryFacet = function(catId) {
 
 window.scrollToDepartments = function() {
     try {
-        const target = document.getElementById("sidebar-facets-root") || document.getElementById("main-search-input") || document.getElementById("boutiqueSearchInput");
+        const target = document.getElementById("sidebar-facets") || document.getElementById("sidebar-facets-root") || document.getElementById("main-search-input") || document.getElementById("boutiqueSearchInput");
         if (target && typeof target.scrollIntoView === 'function') {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
@@ -1398,12 +1402,20 @@ function renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, page
         return;
     }
 
+    const returnBtnHTML = (activeSelectedCategory !== 'Todas' || (activeSearchQuery && activeSearchQuery.trim() !== ''))
+        ? `<div class="col-span-full w-full">
+             <button onclick="window.runCleanHomeCatalog()" class="mb-4 inline-flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-cyan-400 font-semibold rounded-lg text-sm border border-slate-700 transition-colors">
+               <i class="fa-solid fa-arrow-left"></i> Volver a Todas las Vitrinas
+             </button>
+           </div>`
+        : '';
+
     if (currentViewStyle === 'grid') {
         container.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-2";
-        container.innerHTML = pageItems.map(p => renderProductCardHTML(p, 'grid')).join('');
+        container.innerHTML = returnBtnHTML + pageItems.map(p => renderProductCardHTML(p, 'grid')).join('');
     } else {
         container.className = "flex flex-col gap-3.5 pb-2";
-        container.innerHTML = pageItems.map(p => renderProductCardHTML(p, 'list')).join('');
+        container.innerHTML = returnBtnHTML + pageItems.map(p => renderProductCardHTML(p, 'list')).join('');
     }
 }
 
@@ -1470,6 +1482,7 @@ function renderExactCatalogView() {
         if (hubContainer) {
             hubContainer.innerHTML = '';
             hubContainer.classList.add("hidden");
+            hubContainer.style.minHeight = '0px';
         }
 
         renderPaginatedDepartmentView(container, resultsCountTxt);
@@ -1582,7 +1595,7 @@ function goToPage(page) {
 // MENÚ LATERAL: 7 ACORDEONES + BOTONES PATROCINADOS GEMINI & ANTIGRAVITY
 function renderSidebarFacets() {
     try {
-        const root = document.getElementById("sidebar-facets-root");
+        const root = document.getElementById("sidebar-facets") || document.getElementById("sidebar-facets-root");
         if (!root) return;
 
         const all = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL || [];
