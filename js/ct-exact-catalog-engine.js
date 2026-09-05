@@ -1947,34 +1947,53 @@ window.renderMobileDepartmentsList = function() {
                             ${childDepts.map(c => {
                                 const isDeptActive = activeSelectedCategory === c.id;
                                 const subs = (window.PC_SUBDEPARTAMENTOS && window.PC_SUBDEPARTAMENTOS[c.id]) || [];
+                                const hasActiveSub = isDeptActive && activeSelectedChip !== 'Todos';
+
+                                if (subs.length === 0) {
+                                    return `
+                                        <div class="py-1">
+                                            <button 
+                                                type="button" 
+                                                onclick="window.selectCategoryFacet('${c.id}'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                class="w-full flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer ${isDeptActive ? 'text-cyan-300 font-black bg-slate-800/60' : 'text-slate-300'}">
+                                                <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                                    <i class="fa-solid ${c.icon} text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
+                                                    <span class="truncate text-[11px]">${c.name}</span>
+                                                </div>
+                                                <span class="font-mono text-[9px] text-slate-400 shrink-0">(${c.count || 0})</span>
+                                            </button>
+                                        </div>
+                                    `;
+                                }
+
                                 return `
-                                    <div class="py-1">
-                                        <button 
-                                            type="button" 
-                                            onclick="window.selectCategoryFacet('${c.id}'); window.toggleMobileDepartmentsDrawer(false);" 
-                                            class="w-full flex items-center justify-between py-1 px-1 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer ${isDeptActive ? 'text-cyan-300 font-black bg-slate-800/60' : 'text-slate-300'}">
-                                            <div class="flex items-center gap-2 truncate min-w-0 pr-1">
+                                    <details class="group/sub py-0.5" ${hasActiveSub ? 'open' : ''}>
+                                        <summary class="flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-slate-800 text-left transition cursor-pointer list-none ${isDeptActive ? 'text-cyan-300 font-black bg-slate-800/60' : 'text-slate-300'}">
+                                            <div onclick="event.preventDefault(); window.selectCategoryFacet('${c.id}'); window.toggleMobileDepartmentsDrawer(false);" class="flex items-center gap-2 truncate min-w-0 pr-1 flex-1">
                                                 <i class="fa-solid ${c.icon} text-cyan-400 text-[10px] w-3 text-center shrink-0"></i>
-                                                <span class="truncate text-[10.5px]">${c.name}</span>
+                                                <span class="truncate text-[11px] font-medium">${c.name}</span>
                                             </div>
-                                            <span class="font-mono text-[9px] text-slate-400 shrink-0">(${c.count || 0})</span>
-                                        </button>
-                                        ${subs.length > 0 ? `
-                                            <div class="flex flex-wrap gap-1 pl-4 pt-1 pb-1">
-                                                ${subs.map(s => {
-                                                    const isSubActive = isDeptActive && activeSelectedChip === s.name;
-                                                    return `
-                                                        <button 
-                                                            type="button" 
-                                                            onclick="window.selectDepartmentWithSubcategory('${c.id}', '${s.name.replace(/'/g, "\\'")}'); window.toggleMobileDepartmentsDrawer(false);" 
-                                                            class="text-[9.5px] font-mono px-2 py-0.5 rounded-md border ${isSubActive ? 'bg-cyan-500 text-slate-950 font-bold border-cyan-400 shadow-sm' : 'bg-slate-950/90 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400'} transition cursor-pointer shrink-0">
-                                                            ${s.name} <span class="opacity-75">(${s.count})</span>
-                                                        </button>
-                                                    `;
-                                                }).join('')}
+                                            <div class="flex items-center gap-1.5 shrink-0">
+                                                <span class="font-mono text-[9px] text-slate-400">(${c.count || 0})</span>
+                                                <span class="w-6 h-6 flex items-center justify-center rounded bg-slate-800/90 hover:bg-cyan-500/20 text-cyan-400 transition" title="Ver subdepartamentos">
+                                                    <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-open/sub:rotate-180"></i>
+                                                </span>
                                             </div>
-                                        ` : ''}
-                                    </div>
+                                        </summary>
+                                        <div class="flex flex-wrap gap-1.5 pl-5 pr-1 pt-1 pb-2 bg-slate-950/70 rounded-lg mt-1 border border-slate-800/60">
+                                            ${subs.map(s => {
+                                                const isSubActive = isDeptActive && activeSelectedChip === s.name;
+                                                return `
+                                                    <button 
+                                                        type="button" 
+                                                        onclick="window.selectDepartmentWithSubcategory('${c.id}', '${s.name.replace(/'/g, "\\'")}'); window.toggleMobileDepartmentsDrawer(false);" 
+                                                        class="text-[10px] font-mono px-2 py-1 rounded-lg border ${isSubActive ? 'bg-cyan-500 text-slate-950 font-black border-cyan-400 shadow-md' : 'bg-slate-900 border-slate-700/80 text-cyan-300 hover:text-white hover:border-cyan-400'} transition cursor-pointer shrink-0">
+                                                        ${s.name} <span class="opacity-75">(${s.count})</span>
+                                                    </button>
+                                                `;
+                                            }).join('')}
+                                        </div>
+                                    </details>
                                 `;
                             }).join('')}
                         </div>
