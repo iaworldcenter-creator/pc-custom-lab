@@ -1,5 +1,5 @@
-// Service Worker v2.0.2 - Aceleración Extrema de Caché & 0ms Latencia
-const CACHE_NAME = 'bazar-nfl-static-v4';
+// Service Worker v2.0.3 - Aceleración Extrema de Caché & 0ms Latencia
+const CACHE_NAME = 'bazar-nfl-static-v5';
 const STATIC_ASSETS = [
   './',
   './index.html',

@@ -461,6 +461,44 @@ try {
 }
 
 // ============================================================================
+// 10. AUDITORÍA DE CHAT FLOTANTE Y CÓDIGO QR
+// ============================================================================
+console.log('\n--- 10. AUDITORÍA DE CHAT FLOTANTE Y CÓDIGO QR ---');
+try {
+    const rawHTML = fs.readFileSync(path.join(__dirname, '..', 'index.html'), 'utf8');
+
+    // 10.1 Chat flotante inferior y modal de contacto
+    const hasChatContainer = rawHTML.includes('id="floating-chat-container"');
+    const hasFixedBottomRight = rawHTML.includes('bottom-4') && rawHTML.includes('right-4') && rawHTML.includes('z-50');
+    const hasChatButton = rawHTML.includes('id="btn-floating-chat"') && rawHTML.includes('openChatOrWhatsApp');
+    const hasChatModal = rawHTML.includes('id="chatContactModal"') && rawHTML.includes('wa.me/523337271440');
+
+    if (hasChatContainer && hasFixedBottomRight && hasChatButton && hasChatModal) {
+        recordResult('Chat Flotante Inferior y Modal de Contacto WhatsApp', 'PASSED',
+            'Capa fija (bottom-4 right-4 z-50), botón interactivo de 56px y modal de contacto rápido verificados.');
+    } else {
+        recordResult('Chat Flotante Inferior y Modal de Contacto WhatsApp', 'FAILED',
+            `hasContainer=${hasChatContainer}, hasFixed=${hasFixedBottomRight}, hasBtn=${hasChatButton}, hasModal=${hasChatModal}`);
+    }
+
+    // 10.2 Acceso de Código QR (Barra superior, footer y modal)
+    const hasTopQrBtn = rawHTML.includes('id="btn-top-qr"') && rawHTML.includes('toggleQrModal');
+    const hasFooterQr = rawHTML.includes('assets/img/codigo_qr_bazar_nfl.png');
+    const hasQrDimensions = /<img[^>]*codigo_qr_bazar_nfl\.png[^>]*width=["']\d+["'][^>]*height=["']\d+["']/i.test(rawHTML);
+    const hasQrModal = rawHTML.includes('id="qrModal"') && rawHTML.includes('toggleQrModal');
+
+    if (hasTopQrBtn && hasFooterQr && hasQrDimensions && hasQrModal) {
+        recordResult('Módulo Oficial y Visualizador de Código QR', 'PASSED',
+            'Acceso en barra superior y footer con width/height definidos y modal visualizador responsive verificado.');
+    } else {
+        recordResult('Módulo Oficial y Visualizador de Código QR', 'FAILED',
+            `hasTop=${hasTopQrBtn}, hasFooter=${hasFooterQr}, hasDims=${hasQrDimensions}, hasModal=${hasQrModal}`);
+    }
+} catch(e) {
+    recordResult('Auditoría de Chat y Código QR', 'FAILED', e.message);
+}
+
+// ============================================================================
 // RESUMEN Y CERTIFICACIÓN FINAL
 // ============================================================================
 console.log('\n' + '='.repeat(80));

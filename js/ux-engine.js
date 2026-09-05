@@ -443,6 +443,44 @@ window.closeGlobalSearchDropdown = function() {
     if (dd) dd.style.display = 'none';
 };
 
+// HANDLERS GLOBALES DE CHAT FLOTANTE Y CÓDIGO QR
+window.openChatOrWhatsApp = function() {
+    const modal = document.getElementById('chatContactModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+    } else {
+        window.open('https://wa.me/523337271440?text=Hola%20PC%20Custom%20Lab,%20deseo%20atención%20inmediata%20sobre%20su%20catálogo%20y%20ensambles.', '_blank');
+    }
+};
+
+window.toggleChatContactModal = function(show) {
+    const modal = document.getElementById('chatContactModal');
+    if (!modal) return;
+    if (show) modal.classList.remove('hidden');
+    else modal.classList.add('hidden');
+};
+
+window.toggleQrModal = function(show) {
+    const modal = document.getElementById('qrModal');
+    if (!modal) return;
+    if (show) modal.classList.remove('hidden');
+    else modal.classList.add('hidden');
+};
+
+window.copyStoreUrl = function(btn) {
+    const url = "https://iaworldcenter-creator.github.io/pc-custom-lab/";
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => {
+            if (btn) btn.innerHTML = '<i class="fa-solid fa-check"></i> <span>¡Copiado!</span>';
+            setTimeout(() => { if (btn) btn.innerHTML = '<i class="fa-solid fa-copy"></i> <span>Copiar Enlace</span>'; }, 2000);
+        }).catch(() => {
+            window.prompt("Copia el enlace:", url);
+        });
+    } else {
+        window.prompt("Copia el enlace:", url);
+    }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
     new HighConversionSearchEngine();
 });
