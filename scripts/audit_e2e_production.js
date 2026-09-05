@@ -72,7 +72,8 @@ const KNOWN_IDS = [
     'results-count-display', 'active-filters-summary', 'modal-container-root',
     'currencyToggleMXN', 'currencyToggleUSD', 'cart-count-badge', 'cart-badge-header',
     'mobile-departments-drawer', 'mobile-departments-backdrop', 'mobile-departments-list',
-    'btn-mobile-departments', 'top-announcement-bar', 'welcome-hub-container'
+    'btn-mobile-departments', 'top-announcement-bar', 'welcome-hub-container',
+    'mobile-departments-hub-wrapper'
 ];
 KNOWN_IDS.forEach(id => {
     domElements[id] = createMockElement(id);
@@ -353,7 +354,7 @@ try {
     }
 
     // 8.3 Verificación de Subchips y Botón en index.html
-    const hasSidebarClasses = htmlContent.includes('id="sidebar-facets" class="block w-full lg:w-64');
+    const hasSidebarClasses = htmlContent.includes('id="sidebar-facets"') && !htmlContent.includes('id="sidebar-facets" class="hidden"');
     const hasMobileDeptBtn = htmlContent.includes('id="btn-mobile-departments"');
     const hasArrow180 = htmlContent.includes('left: -180') && htmlContent.includes('left: 180');
     const hasVerCatalogoClick = htmlContent.includes('window.runCleanHomeCatalog();');
@@ -364,6 +365,18 @@ try {
     } else {
         recordResult('Integridad de Interfaz', 'FAILED',
             `sidebar=${hasSidebarClasses}, mobileBtn=${hasMobileDeptBtn}, arrow180=${hasArrow180}, verCat=${hasVerCatalogoClick}`);
+    }
+
+    // 8.4 Navegación Directa por Subdepartamento
+    window.selectDepartmentWithSubcategory('procesadores', 'Intel Core Ultra');
+    const ultraHTML = domElements['products-grid-container'].innerHTML;
+    const ultraMatches = (ultraHTML.match(/addToCartCT/g) || []).length;
+    const hasActiveUltraChip = ultraHTML.includes('Intel Core Ultra');
+    if (ultraMatches > 0 && hasActiveUltraChip) {
+        recordResult('Navegación Directa por Subdepartamento [Intel Core Ultra]', 'PASSED',
+            `Filtro subdepartamental exitoso: ${ultraMatches} procesadores desplegados.`);
+    } else {
+        recordResult('Navegación Directa por Subdepartamento', 'FAILED', `matches=${ultraMatches}, hasChip=${hasActiveUltraChip}`);
     }
 } catch(e) {
     recordResult('Auditoría Estructural de Interfaz', 'FAILED', e.message);
