@@ -878,6 +878,7 @@ function bootMasterZeroBlank() {
         initCatalogWorker();
         if (typeof window.syncBoutiqueCart === 'function') window.syncBoutiqueCart();
         if (typeof window.renderMobileDepartmentsHub === 'function') window.renderMobileDepartmentsHub();
+        if (typeof window.renderMobileDepartmentsList === 'function') window.renderMobileDepartmentsList();
         if (activeSelectedCategory === 'Todas' && (!activeSearchQuery || activeSearchQuery.trim() === '') && currentPageNumber === 1) {
             window.runCleanHomeCatalog();
         }
@@ -1244,7 +1245,13 @@ function renderShowcaseVitrinas(container) {
 
     const resultsCountTxt = document.getElementById("results-count-display");
     if (resultsCountTxt) {
-        resultsCountTxt.innerHTML = `Vitrinas Oficiales por Departamento <span class="text-slate-400 font-normal">(${activeDepts.length} Departamentos • ${all.length.toLocaleString('es-MX')} Productos)</span>`;
+        const totalCatalogItems = (window.PC_DEPARTAMENTOS && Array.isArray(window.PC_DEPARTAMENTOS) && window.PC_DEPARTAMENTOS.length > 0)
+            ? window.PC_DEPARTAMENTOS.reduce((sum, d) => sum + (d.count || 0), 0)
+            : 17490;
+        const totalDeptsCount = (window.PC_DEPARTAMENTOS && Array.isArray(window.PC_DEPARTAMENTOS) && window.PC_DEPARTAMENTOS.length > 0)
+            ? window.PC_DEPARTAMENTOS.length
+            : 67;
+        resultsCountTxt.innerHTML = `Vitrinas Oficiales por Departamento <span class="text-slate-400 font-normal">(${totalDeptsCount} Departamentos • ${totalCatalogItems.toLocaleString('es-MX')} Productos en Inventario)</span>`;
     }
 
     container.className = "flex flex-col gap-2 pb-6";
@@ -1423,7 +1430,10 @@ function renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, page
                 </div>
             `;
         } else {
-            titleTxt = `Aparador Principal <span class="text-slate-400 font-normal">(${startIdx + 1}-${Math.min(startIdx + productsPerPage, totalCount)} de ${totalCount.toLocaleString('es-MX')})</span>`;
+            const totalCatalogItems = (window.PC_DEPARTAMENTOS && Array.isArray(window.PC_DEPARTAMENTOS) && window.PC_DEPARTAMENTOS.length > 0)
+                ? window.PC_DEPARTAMENTOS.reduce((sum, d) => sum + (d.count || 0), 0)
+                : 17490;
+            titleTxt = `Aparador Principal <span class="text-slate-400 font-normal">(Exhibiendo ${startIdx + 1}-${Math.min(startIdx + productsPerPage, totalCount)} de ${totalCatalogItems.toLocaleString('es-MX')} Productos • 67 Departamentos)</span>`;
         }
         resultsCountTxt.innerHTML = titleTxt;
     }
@@ -1915,34 +1925,21 @@ window.toggleMobileDepartmentsDrawer = function(open) {
         if (!drawer) return;
 
         if (open) {
-            window.renderMobileDepartmentsList();
-            drawer.classList.remove("hidden");
-            if (backdrop) backdrop.classList.remove("hidden");
-
-            // Forzar reflow en navegador para animación consistente en iOS / Android / tablets
-            void drawer.offsetWidth;
-
+            const container = document.getElementById("mobile-departments-list");
+            if (container && (!container.children || container.children.length === 0)) {
+                window.renderMobileDepartmentsList();
+            }
             drawer.classList.add("drawer-open");
-            drawer.classList.remove("-translate-x-full");
             if (backdrop) {
                 backdrop.classList.add("backdrop-open");
-                backdrop.classList.remove("opacity-0");
             }
             document.body.style.overflow = "hidden";
         } else {
             drawer.classList.remove("drawer-open");
-            drawer.classList.add("-translate-x-full");
             if (backdrop) {
                 backdrop.classList.remove("backdrop-open");
-                backdrop.classList.add("opacity-0");
             }
             document.body.style.overflow = "";
-            setTimeout(() => {
-                if (!drawer.classList.contains("drawer-open")) {
-                    drawer.classList.add("hidden");
-                    if (backdrop) backdrop.classList.add("hidden");
-                }
-            }, 320);
         }
     } catch(e) {
         console.error("toggleMobileDepartmentsDrawer error:", e);
