@@ -9,6 +9,7 @@ let productsPerPage = 24;
 let activeSelectedCategory = 'Todas';
 let activeSelectedChip = 'Todos';
 let activeSelectedBrand = 'Todas';
+let activeSearchQuery = '';
 let activeMinPrice = 0;
 let activeMaxPrice = Infinity;
 let activeMinDiscount = 0;
@@ -244,25 +245,25 @@ window.formatPriceDisplay = function(priceMxn, priceUsd) {
 
 window.normalizeProductItem = function(p) {
     if (!p) return null;
-    const priceMxn = p.precio_mxn || p.p || p.precio || 0;
-    const priceUsd = p.precio_usd || p.u || (priceMxn / 19.50);
-    const orig = p.precio_original || p.o || (priceMxn * 1.3333);
-    const may = p.precio_mayoreo_10pzs || p.y || (priceMxn * 0.90);
-    const mayUsd = p.precio_mayoreo_usd || (may / 19.50);
+    const priceMxn = p.precio_mxn || p.p || p.precio || p.priceMxn || 0;
+    const priceUsd = p.precio_usd || p.u || p.priceUsd || (priceMxn / 19.50);
+    const orig = p.precio_original || p.o || p.orig || (priceMxn * 1.3333);
+    const may = p.precio_mayoreo_10pzs || p.y || p.may || (priceMxn * 0.90);
+    const mayUsd = p.precio_mayoreo_usd || p.mayUsd || (may / 19.50);
     const sku = p.sku || p.s || p.clave || '';
-    const cat = p.categoria_clasificada || p.c || 'accesorios_perifericos';
-    const name = p.nombre || p.n || p.descripcion_completa || '';
-    const desc = p.descripcion_completa || p.d || name;
+    const cat = p.categoria_clasificada || p.c || p.cat || 'accesorios_perifericos';
+    const name = p.nombre || p.n || p.descripcion_completa || p.name || '';
+    const desc = p.descripcion_completa || p.d || p.desc || name;
     const marca = p.marca || p.m || 'Generica';
-    const isAgotado = (p.agotado === true || p.a === 1);
-    const hasImg = (p.has_verified_image === true || p.i === 1);
-    const subLabel = p.subgrupo_label || '';
+    const isAgotado = (p.agotado === true || p.a === 1 || p.isAgotado === true);
+    const hasImg = (p.has_verified_image === true || p.i === 1 || p.hasImg === true);
+    const subLabel = p.subgrupo_label || p.subLabel || '';
     const imgs = (Array.isArray(p.k) && p.k.length > 0) 
         ? p.k 
         : (Array.isArray(p.imgs) && p.imgs.length > 0) 
             ? p.imgs 
             : [`assets/img/${sku}.webp`];
-    const isVolumetric = (p.is_volumetric === true || p.v === 1);
+    const isVolumetric = (p.is_volumetric === true || p.v === 1 || p.isVolumetric === true);
 
     return {
         sku,
@@ -619,9 +620,21 @@ let isWorkerAvailable = false;
 let workerMsgId = 0;
 const workerCallbacks = new Map();
 
+function getAppBaseUrl() {
+    try {
+        if (typeof window !== 'undefined' && window.location && window.location.origin) {
+            const origin = window.location.origin;
+            const path = window.location.pathname || '';
+            const dir = path.substring(0, path.lastIndexOf('/') + 1);
+            return (origin + dir).replace(/\/+$/, '');
+        }
+    } catch(e) {}
+    return '';
+}
+
 function initCatalogWorker() {
     try {
-        if (typeof Worker !== 'undefined' && typeof window !== 'undefined' && window.location.protocol.startsWith('http')) {
+        if (typeof Worker !== 'undefined' && typeof window !== 'undefined' && window.location && window.location.protocol && window.location.protocol.startsWith('http')) {
             catalogWorker = new Worker('js/catalog-worker.js?v=20260904_chunk');
             catalogWorker.onmessage = function(e) {
                 const { id, action, success, data, error } = e.data || {};
@@ -644,11 +657,11 @@ function initCatalogWorker() {
                 console.warn("[Worker] Error en hilo secundario:", err);
             };
 
-            // Iniciar worker
+            // Iniciar worker pasando baseUrl absoluto para GitHub Pages y subdirectorios
             catalogWorker.postMessage({
                 id: ++workerMsgId,
                 action: 'INIT',
-                payload: { baseUrl: '' }
+                payload: { baseUrl: getAppBaseUrl() }
             });
             isWorkerAvailable = true;
         }
@@ -665,10 +678,14 @@ function queryWorkerCatalog(params, callback) {
     }
     const msgId = ++workerMsgId;
     workerCallbacks.set(msgId, callback);
+    const payload = Object.assign({}, params);
+    if (!payload.baseUrl) payload.baseUrl = getAppBaseUrl();
+    if (!payload.deptId && payload.category) payload.deptId = payload.category;
+
     catalogWorker.postMessage({
         id: msgId,
         action: 'QUERY_CATALOG',
-        payload: params
+        payload: payload
     });
 }
 
@@ -686,7 +703,12 @@ function initFullCatalog() {
         const data = window.CT_CATALOG_DATA || window.CT_CATALOG_DATA_INITIAL;
         if (data && Array.isArray(data) && data.length > 0) {
             isFullCatalogLoaded = true;
-            window.runCleanHomeCatalog();
+            if (activeSelectedCategory === 'Todas' && (!activeSearchQuery || activeSearchQuery.trim() === '') && currentPageNumber === 1) {
+                window.runCleanHomeCatalog();
+            } else {
+                renderSidebarFacets();
+                renderExactCatalogView();
+            }
             return;
         }
 
@@ -697,16 +719,25 @@ function initFullCatalog() {
             if (d && Array.isArray(d) && d.length > 0) {
                 clearInterval(interval);
                 isFullCatalogLoaded = true;
-                window.runCleanHomeCatalog();
+                if (activeSelectedCategory === 'Todas' && (!activeSearchQuery || activeSearchQuery.trim() === '') && currentPageNumber === 1) {
+                    window.runCleanHomeCatalog();
+                } else {
+                    renderSidebarFacets();
+                    renderExactCatalogView();
+                }
             } else if (attempts > 80) {
                 clearInterval(interval);
-                // Si aún no está cargado, forzar renderizado limpio con lo que haya
-                window.runCleanHomeCatalog();
+                // Si aún no está cargado, forzar renderizado limpio únicamente si sigue en Home
+                if (activeSelectedCategory === 'Todas' && (!activeSearchQuery || activeSearchQuery.trim() === '') && currentPageNumber === 1) {
+                    window.runCleanHomeCatalog();
+                }
             }
         }, 25);
     } catch(e) {
         console.error("initFullCatalog error:", e);
-        window.runCleanHomeCatalog();
+        if (activeSelectedCategory === 'Todas' && (!activeSearchQuery || activeSearchQuery.trim() === '') && currentPageNumber === 1) {
+            window.runCleanHomeCatalog();
+        }
     }
 }
 
@@ -861,7 +892,9 @@ function bootMasterZeroBlank() {
         initPredictiveSearchEngine();
         initCatalogWorker();
         if (typeof window.syncBoutiqueCart === 'function') window.syncBoutiqueCart();
-        window.runCleanHomeCatalog();
+        if (activeSelectedCategory === 'Todas' && (!activeSearchQuery || activeSearchQuery.trim() === '') && currentPageNumber === 1) {
+            window.runCleanHomeCatalog();
+        }
     } catch(e) {
         console.error("bootMasterZeroBlank error:", e);
     }
@@ -1337,7 +1370,10 @@ function renderShowcaseVitrinas(container) {
 }
 
 function renderPaginatedDepartmentView(container, resultsCountTxt) {
-    // Si el Web Worker está disponible, delegar consulta y ordenamiento fuera del hilo principal
+    // 1. Render defensivo inmediato sincrónico (Zero-Wait / Zero-Blank)
+    renderPaginatedDepartmentViewSync(container, resultsCountTxt);
+
+    // 2. Si el Web Worker está disponible, delegar consulta y particionado fuera del hilo principal
     if (isWorkerAvailable && catalogWorker) {
         const queryToken = ++workerMsgId;
         container._activeQueryToken = queryToken;
@@ -1345,6 +1381,7 @@ function renderPaginatedDepartmentView(container, resultsCountTxt) {
         queryWorkerCatalog({
             query: activeSearchQuery,
             category: activeSelectedCategory,
+            deptId: activeSelectedCategory,
             chip: activeSelectedChip,
             minPrice: activeMinPrice,
             maxPrice: activeMaxPrice,
@@ -1354,15 +1391,19 @@ function renderPaginatedDepartmentView(container, resultsCountTxt) {
         }, (data, err) => {
             if (container._activeQueryToken !== queryToken) return;
             if (data && Array.isArray(data.items)) {
-                renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, data.items, data.totalCount, data.totalPages, data.currentPage, data.availableSubs);
-                return;
+                if (data.items.length > 0) {
+                    renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, data.items, data.totalCount, data.totalPages, data.currentPage, data.availableSubs);
+                } else if (activeSearchQuery && activeSearchQuery.trim() !== '') {
+                    // Búsqueda sin resultados reales
+                    renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, [], 0, 1, 1, []);
+                } else if (activeMinPrice > 0 || (typeof activeMaxPrice === 'number' && isFinite(activeMaxPrice) && activeMaxPrice < Infinity)) {
+                    // Filtros de precio no arrojaron resultados
+                    renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, [], 0, 1, 1, []);
+                }
             }
-            renderPaginatedDepartmentViewSync(container, resultsCountTxt);
         });
         return;
     }
-
-    renderPaginatedDepartmentViewSync(container, resultsCountTxt);
 }
 
 function renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, pageItems, totalCount, totalPages, currentPage, availableSubs) {
@@ -1449,6 +1490,36 @@ function renderPaginatedDepartmentViewSync(container, resultsCountTxt) {
         availableSubs = Array.from(new Set(allDeptItems.map(p => (window.normalizeProductItem(p) || {}).subLabel).filter(Boolean)));
     }
     
+    // Si la categoría seleccionada tiene 0 productos sincrónicos Y aún no está el catálogo completo ni el worker
+    // mostramos un estado de carga elegante en lugar del mensaje erróneo "No se encontraron productos"
+    if (pageItems.length === 0 && activeSelectedCategory !== 'Todas' && (!activeSearchQuery || activeSearchQuery.trim() === '') && (!window.CT_CATALOG_DATA || window.CT_CATALOG_DATA.length < 1000)) {
+        const depts = getMasterDepartmentsList();
+        const deptObj = depts.find(d => d.id === activeSelectedCategory);
+        const deptName = deptObj ? deptObj.name : activeSelectedCategory.replace(/_/g, ' ').toUpperCase();
+        
+        if (resultsCountTxt) {
+            resultsCountTxt.innerHTML = `
+                <div class="flex flex-wrap items-center gap-2">
+                    <button type="button" onclick="window.resetFacets()" class="text-cyan-400 hover:text-cyan-300 text-xs font-mono font-bold hover:underline cursor-pointer flex items-center gap-1">
+                        <i class="fa-solid fa-arrow-left"></i> Volver a Vitrinas
+                    </button>
+                    <span class="text-slate-500">|</span>
+                    <span>${deptName}</span>
+                    <span class="text-cyan-400 font-mono text-xs animate-pulse">(Cargando catálogo...)</span>
+                </div>
+            `;
+        }
+        container.className = "w-full py-16 text-center text-slate-300 font-mono text-sm bg-slate-900/90 border border-slate-800 rounded-2xl";
+        container.innerHTML = `
+            <div class="flex flex-col items-center justify-center gap-3">
+                <i class="fa-solid fa-circle-notch fa-spin text-3xl text-cyan-400"></i>
+                <p class="text-slate-300 font-medium text-sm">Cargando vitrina de <span class="text-cyan-300 font-bold">${deptName}</span>...</p>
+                <p class="text-slate-500 text-xs">Optimizando inventario en memoria ultra rápida</p>
+            </div>
+        `;
+        return;
+    }
+
     renderPaginatedDepartmentViewFromItems(container, resultsCountTxt, pageItems, totalCount, totalPages, currentPageNumber, availableSubs);
 }
 

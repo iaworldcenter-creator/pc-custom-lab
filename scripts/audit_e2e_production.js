@@ -57,7 +57,9 @@ function createMockElement(id, tag = 'div') {
         querySelectorAll: function() { return []; },
         focus: function() {},
         blur: function() {},
-        click: function() {}
+        click: function() {},
+        scrollIntoView: function() {},
+        insertAdjacentHTML: function(pos, html) { this.innerHTML += html; }
     };
 }
 
@@ -298,6 +300,27 @@ if (allLinksValid) {
     recordResult('Enlaces del Ecosistema (8 Subsitios)', 'PASSED',
         'Todos los 8 enlaces oficiales apuntan con precisión a sus repositorios en GitHub Pages.');
 }
+
+// ============================================================================
+// 7. NAVEGACIÓN POR DEPARTAMENTOS (CERO CONTENEDORES VACÍOS)
+// ============================================================================
+console.log('\n--- 7. NAVEGACION POR DEPARTAMENTOS ---');
+const testDepts = ['procesadores', 'tarjetas_microsd', 'gabinetes'];
+testDepts.forEach(deptId => {
+    try {
+        window.selectCategoryFacet(deptId);
+        const gridHTML = domElements['products-grid-container'].innerHTML;
+        const matches = (gridHTML.match(/addToCartCT/g) || []).length;
+        if (matches > 0) {
+            recordResult(`Departamento [${deptId}]`, 'PASSED',
+                `Renderizó ${matches} tarjetas activas sin contenedor vacío.`);
+        } else {
+            recordResult(`Departamento [${deptId}]`, 'FAILED', 'No se encontraron tarjetas (0 productos).');
+        }
+    } catch(e) {
+        recordResult(`Departamento [${deptId}]`, 'FAILED', e.message);
+    }
+});
 
 // ============================================================================
 // RESUMEN Y CERTIFICACIÓN FINAL

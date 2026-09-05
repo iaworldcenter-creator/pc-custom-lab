@@ -3,7 +3,8 @@
  * Procesa la carga de particiones JSON, búsquedas semánticas con scoring,
  * filtros de departamento, presupuesto y ordenamiento FUERA DEL HILO PRINCIPAL.
  * 
- * Garantiza que la pantalla nunca experimente bloqueo o pérdida de cuadros (60 FPS).
+ * Resuelve rutas absolutas automáticamente según self.location para soportar
+ * subcarpetas en GitHub Pages (ej. /pc-custom-lab/).
  */
 
 let manifest = null;
@@ -11,6 +12,29 @@ const departmentCache = new Map(); // deptId -> Array of products
 let allLoadedProducts = [];
 let isAllLoaded = false;
 let isLoadingAll = false;
+
+// OBTENER RUTA BASE ABSOLUTA DESDE self.location
+function getWorkerBaseUrl() {
+    try {
+        if (typeof self !== 'undefined' && self.location && self.location.href) {
+            const href = self.location.href;
+            const jsIdx = href.lastIndexOf('/js/');
+            if (jsIdx !== -1) {
+                return href.substring(0, jsIdx);
+            }
+            return href.substring(0, href.lastIndexOf('/'));
+        }
+    } catch(e) {}
+    return '';
+}
+
+const WORKER_BASE_URL = getWorkerBaseUrl();
+
+function resolveAssetUrl(relPath, explicitBaseUrl = '') {
+    const base = (explicitBaseUrl || WORKER_BASE_URL || '').replace(/\/+$/, '');
+    const cleanRel = String(relPath || '').replace(/^\/+/, '');
+    return base ? `${base}/${cleanRel}` : cleanRel;
+}
 
 // DICCIONARIO DE SINÓNIMOS Y HERRAMIENTAS DE TEXTO
 const SYNONYM_DICTIONARY = {
@@ -111,8 +135,9 @@ function normalizeProduct(p) {
 async function loadManifest(baseUrl = '') {
     if (manifest) return manifest;
     try {
-        const res = await fetch(`${baseUrl}data/departments_manifest.json?v=${Date.now()}`);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const url = resolveAssetUrl('data/departments_manifest.json', baseUrl) + `?v=${Date.now()}`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status} al solicitar ${url}`);
         manifest = await res.json();
         return manifest;
     } catch(e) {
@@ -128,20 +153,36 @@ async function loadDepartment(deptId, baseUrl = '') {
     }
 
     if (!manifest) await loadManifest(baseUrl);
-    if (!manifest || !manifest.departments[deptId]) return [];
+    if (!manifest || !manifest.departments[deptId]) {
+        // Fallback: intentar cargar directamente data/departments/{deptId}.json
+        try {
+            const fallbackUrl = resolveAssetUrl(`data/departments/${deptId}.json`, baseUrl) + '?v=20260904_chunk';
+            const res = await fetch(fallbackUrl);
+            if (res.ok) {
+                const data = await res.json();
+                if (Array.isArray(data)) {
+                    departmentCache.set(deptId, data);
+                    return data;
+                }
+            }
+        } catch(e) {}
+        return [];
+    }
 
     const deptInfo = manifest.departments[deptId];
     const deptProducts = [];
 
     try {
         for (const relPath of deptInfo.files) {
-            const url = `${baseUrl}${relPath}?v=20260904_chunk`;
+            const url = resolveAssetUrl(relPath, baseUrl) + '?v=20260904_chunk';
             const res = await fetch(url);
-            if (res.ok) {
-                const chunkData = await res.json();
-                if (Array.isArray(chunkData)) {
-                    deptProducts.push(...chunkData);
-                }
+            if (!res.ok) {
+                console.error(`[Worker] Error HTTP ${res.status} al descargar partición: ${url}`);
+                continue;
+            }
+            const chunkData = await res.json();
+            if (Array.isArray(chunkData)) {
+                deptProducts.push(...chunkData);
             }
         }
     } catch(e) {
@@ -317,7 +358,6 @@ self.onmessage = async function(e) {
 
             case 'PREDICTIVE_SEARCH': {
                 const { query, limit = 6 } = payload;
-                // Si aún no están cargados todos los departamentos, usar los cacheados o cargar los primeros
                 let pool = allLoadedProducts;
                 if (pool.length === 0) {
                     for (const cached of departmentCache.values()) {
@@ -335,10 +375,12 @@ self.onmessage = async function(e) {
                 break;
             }
 
+            case 'FILTER_DEPT':
             case 'QUERY_CATALOG': {
                 const {
                     query = '',
-                    category = 'Todas',
+                    category = payload.deptId || 'Todas',
+                    deptId,
                     chip = 'Todos',
                     minPrice = 0,
                     maxPrice = Infinity,
@@ -347,16 +389,15 @@ self.onmessage = async function(e) {
                     pageSize = 24
                 } = payload;
 
+                const targetDept = deptId || category || 'Todas';
                 let pool = [];
 
-                if (category !== 'Todas') {
-                    // Carga bajo demanda del departamento si no está en cache
-                    pool = await loadDepartment(category, baseUrl);
+                if (targetDept !== 'Todas') {
+                    pool = await loadDepartment(targetDept, baseUrl);
                 } else {
                     if (isAllLoaded) {
                         pool = allLoadedProducts;
                     } else {
-                        // Si aún se está descargando en background, combinar lo que haya en cache
                         pool = allLoadedProducts.length > 0 ? allLoadedProducts : [];
                         if (pool.length === 0) {
                             for (const cached of departmentCache.values()) pool.push(...cached);
@@ -367,15 +408,7 @@ self.onmessage = async function(e) {
                 // 1. Filtro de búsqueda
                 let filtered = query ? executeScoredSearch(query, pool) : [...pool];
 
-                // 2. Filtro de Categoría (si se buscó con categoría fija)
-                if (category !== 'Todas') {
-                    filtered = filtered.filter(p => {
-                        const cat = (p.categoria_clasificada || p.c || '').toLowerCase();
-                        return cat === category.toLowerCase();
-                    });
-                }
-
-                // 3. Filtro de Subchip
+                // 2. Filtro de Subchip
                 if (chip && chip !== 'Todos') {
                     filtered = filtered.filter(p => {
                         const sub = (p.subgrupo_label || '');
@@ -383,7 +416,7 @@ self.onmessage = async function(e) {
                     });
                 }
 
-                // 4. Filtro de Presupuesto
+                // 3. Filtro de Presupuesto
                 if (minPrice > 0 || maxPrice < Infinity) {
                     filtered = filtered.filter(p => {
                         const price = p.precio_mxn || p.p || p.precio || 0;
@@ -391,7 +424,7 @@ self.onmessage = async function(e) {
                     });
                 }
 
-                // 5. Ordenamiento
+                // 4. Ordenamiento
                 if (sort === 'precio_asc') {
                     filtered.sort((a, b) => (a.precio_mxn || a.p || 0) - (b.precio_mxn || b.p || 0));
                 } else if (sort === 'precio_desc') {
@@ -400,7 +433,7 @@ self.onmessage = async function(e) {
                     filtered.sort((a, b) => (a.nombre || a.n || '').localeCompare(b.nombre || b.n || ''));
                 }
 
-                // 6. Paginación
+                // 5. Paginación
                 const totalCount = filtered.length;
                 const totalPages = Math.ceil(totalCount / pageSize) || 1;
                 const safePage = Math.max(1, Math.min(page, totalPages));
@@ -409,7 +442,7 @@ self.onmessage = async function(e) {
 
                 // Extraer subchips disponibles para el departamento
                 let availableSubs = [];
-                if (category !== 'Todas') {
+                if (targetDept !== 'Todas') {
                     availableSubs = Array.from(new Set(pool.map(p => p.subgrupo_label).filter(Boolean)));
                 }
 
@@ -423,7 +456,8 @@ self.onmessage = async function(e) {
                         totalPages,
                         currentPage: safePage,
                         availableSubs,
-                        category,
+                        category: targetDept,
+                        deptId: targetDept,
                         query
                     }
                 });
@@ -434,6 +468,7 @@ self.onmessage = async function(e) {
                 self.postMessage({ id, action, success: false, error: 'Acción no reconocida' });
         }
     } catch(err) {
+        console.error("Worker onmessage error:", err);
         self.postMessage({ id, action, success: false, error: err.message });
     }
 };
