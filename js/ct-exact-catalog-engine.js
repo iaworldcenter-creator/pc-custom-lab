@@ -2109,20 +2109,17 @@ let searchDebounceTimer = null;
 function renderSearchDropdownHTML(topMatches, totalMatches, rawQuery, box) {
     if (!box) return;
 
+    // Si no hay coincidencias directas en la predicción, ocultar limpiamente el dropdown
+    // para NUNCA bloquear la cuadrícula de productos con letreros oscuros.
     if (!topMatches || topMatches.length === 0) {
-        box.innerHTML = `
-            <div class="p-4 text-center text-slate-300 font-mono text-xs">
-                <i class="fa-solid fa-magnifying-glass text-cyan-400 text-lg mb-1 block" aria-hidden="true"></i>
-                No se encontraron coincidencias exactas para "<strong>${rawQuery}</strong>".
-            </div>
-        `;
-        box.classList.remove("hidden");
+        box.classList.add("hidden");
+        box.innerHTML = "";
         return;
     }
 
     box.innerHTML = `
         <div class="p-2.5 border-b border-slate-800 flex justify-between items-center text-[10.5px] font-mono text-slate-300 bg-slate-950/90">
-            <span>${(totalMatches || topMatches.length).toLocaleString('es-MX')} productos encontrados para: "<strong>${rawQuery}</strong>"</span>
+            <span>${(totalMatches || topMatches.length).toLocaleString('es-MX')} productos sugeridos para: "<strong>${rawQuery}</strong>"</span>
             <button type="button" onclick="window.executeSearchQuery(document.querySelector('#main-search-input, #boutiqueSearchInput').value);" class="text-cyan-300 font-bold hover:underline cursor-pointer">
                 Ver todas en vitrina »
             </button>
@@ -2187,16 +2184,31 @@ function initPredictiveSearchEngine() {
         if (form) {
             form.addEventListener("submit", (e) => {
                 e.preventDefault();
+                clearTimeout(searchDebounceTimer);
+                box._searchToken = null;
                 box.classList.add("hidden");
+                box.innerHTML = "";
                 window.executeSearchQuery(input.value);
             });
         }
+
+        input.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                clearTimeout(searchDebounceTimer);
+                box._searchToken = null;
+                box.classList.add("hidden");
+                box.innerHTML = "";
+                window.executeSearchQuery(input.value);
+            }
+        });
 
         input.addEventListener("input", (e) => {
             clearTimeout(searchDebounceTimer);
             const rawQuery = (e.target.value || '').trim();
             
             if (rawQuery.length < 2) {
+                box._searchToken = null;
                 box.classList.add("hidden");
                 box.innerHTML = "";
                 if (activeSearchQuery !== '') {
@@ -2223,7 +2235,7 @@ function initPredictiveSearchEngine() {
                 catalogWorker.postMessage({
                     id: searchToken,
                     action: 'PREDICTIVE_SEARCH',
-                    payload: { query: rawQuery, limit: 6 }
+                    payload: { query: rawQuery, limit: 6, baseUrl: getAppBaseUrl() }
                 });
                 return;
             }
@@ -2247,6 +2259,13 @@ function initPredictiveSearchEngine() {
                 box.classList.add("hidden");
             }
         });
+
+        // Al hacer scroll en la pantalla (especialmente en móvil), ocultar cortina flotante para no obstruir los productos
+        window.addEventListener("scroll", () => {
+            if (box && !box.classList.contains("hidden")) {
+                box.classList.add("hidden");
+            }
+        }, { passive: true });
     } catch(e) {
         console.warn("initPredictiveSearchEngine error:", e);
     }
@@ -2258,8 +2277,13 @@ window.executeSearchQuery = function(query) {
         activeSelectedCategory = 'Todas';
         currentPageNumber = 1;
         
+        clearTimeout(searchDebounceTimer);
         const box = document.querySelector("#search-results-dropdown, #boutique-autocomplete-box");
-        if (box) box.classList.add("hidden");
+        if (box) {
+            box._searchToken = null;
+            box.classList.add("hidden");
+            box.innerHTML = "";
+        }
 
         renderSidebarFacets();
         renderExactCatalogView();

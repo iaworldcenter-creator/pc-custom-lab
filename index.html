@@ -143,7 +143,6 @@
                 width: calc(100% - 300px) !important;
                 max-width: calc(100% - 300px) !important;
             }
-            #btn-mobile-departments,
             #mobile-departments-hub-wrapper {
                 display: none !important;
             }
@@ -191,6 +190,17 @@
             </button>
 
             <div id="top-announcement-bar" class="w-full max-w-[1850px] mx-auto px-2 sm:px-4 py-2 flex items-center justify-between gap-2 overflow-x-auto no-scrollbar scroll-smooth min-h-[48px]" style="min-height: 48px;">
+                <!-- 1. DEPARTAMENTOS: PRIMER ELEMENTO DE LA BARRA DESLIZANTE -->
+                <button 
+                    type="button" 
+                    id="btn-mobile-departments" 
+                    onclick="window.toggleMobileDepartmentsDrawer(true)" 
+                    class="flex items-center gap-1.5 bg-gradient-to-r from-cyan-950 to-blue-950 hover:from-cyan-900 hover:to-blue-900 border border-cyan-400 text-cyan-300 hover:text-white px-3 py-1 rounded-xl font-mono text-xs font-black shadow-lg transition shrink-0 cursor-pointer"
+                    aria-label="Ver 67 Departamentos">
+                    <i class="fa-solid fa-layer-group text-cyan-400 text-xs"></i>
+                    <span class="text-[11px] uppercase tracking-wider">DEPARTAMENTOS</span>
+                </button>
+
                 <div class="flex items-center gap-2 shrink-0">
                     <span class="text-[9px] sm:text-[10px] font-mono font-black text-amber-300 bg-amber-500/15 border border-amber-500/40 px-2.5 py-1 rounded-full uppercase tracking-wider flex items-center gap-1">
                         <i class="fa-solid fa-motorcycle text-amber-400"></i> Envío Exprés el Mismo Día | > $2,000 MXN Paquetería Asegurada
@@ -209,9 +219,6 @@
                 <nav class="flex items-center gap-1.5 shrink-0 text-xs font-mono font-bold" aria-label="Ecosistema de Tiendas">
                     <a href="https://iaworldcenter-creator.github.io/sitios-web/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
                         <i class="fa-solid fa-house text-amber-400"></i> Matriz
-                    </a>
-                    <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="px-3 py-1 rounded-xl bg-cyan-950/80 text-cyan-300 font-black neon-glow-pc transition">
-                        <i class="fa-solid fa-microchip text-cyan-400"></i> PC Custom
                     </a>
                     <a href="https://iaworldcenter-creator.github.io/bazar-viamx-NFL.GDL/" class="px-2.5 py-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition">
                         <i class="fa-solid fa-gem text-cyan-300"></i> Vía MX
@@ -239,6 +246,11 @@
                         <i class="fa-solid fa-download text-amber-400"></i> Descargar y Prueba Anti-Gravity
                     </a>
                 </nav>
+
+                <!-- FINAL DE LA BARRA DESLIZANTE: PC CUSTOM LAB -->
+                <a href="https://iaworldcenter-creator.github.io/pc-custom-lab/" class="flex items-center gap-1.5 px-3 py-1 rounded-xl bg-cyan-950 text-cyan-300 font-mono text-xs font-black border border-cyan-400/80 neon-glow-pc transition shrink-0">
+                    <i class="fa-solid fa-microchip text-cyan-400"></i> PC Custom Lab
+                </a>
             </div>
 
             <!-- Botón Desplazar Derecha (Móvil) -->
@@ -251,7 +263,7 @@
             </button>
         </div>
 
-        <!-- Línea 2: Logo + Barra de Búsqueda Blanca + Botón Carrito -->
+        <!-- Línea 2: Logo + Barra de Búsqueda Blanca (Flex-1) + Botón Carrito -->
         <div class="w-full max-w-[1850px] mx-auto px-2 sm:px-4 py-2.5 flex items-center justify-between gap-3">
             <a href="index.html" class="flex items-center gap-2.5 shrink-0 group">
                 <div class="w-9 h-9 rounded-xl bg-slate-900 border border-cyan-500/40 p-1 flex items-center justify-center shrink-0">
@@ -282,17 +294,6 @@
                 <div id="search-results-dropdown" class="absolute top-full left-0 w-full bg-slate-900/95 border border-cyan-500/40 rounded-2xl shadow-2xl mt-1.5 p-2 z-50 hidden max-h-[480px] overflow-y-auto no-scrollbar backdrop-blur-md"></div>
                 <div id="boutique-autocomplete-box" class="hidden"></div>
             </div>
-
-            <!-- Botón Superior Departamentos en Móvil -->
-            <button 
-                type="button" 
-                id="btn-mobile-departments" 
-                onclick="window.toggleMobileDepartmentsDrawer(true)" 
-                class="lg:hidden flex items-center gap-1 bg-cyan-950/90 hover:bg-cyan-900 border border-cyan-500/50 hover:border-cyan-400 text-cyan-300 hover:text-white px-2.5 py-1.5 rounded-xl font-mono text-xs font-black shadow transition shrink-0 cursor-pointer"
-                aria-label="Ver 67 Departamentos">
-                <i class="fa-solid fa-layer-group text-cyan-400 text-xs"></i>
-                <span class="text-[10.5px] uppercase tracking-wider">DEPARTAMENTOS</span>
-            </button>
 
             <!-- Botón del Carrito en el Header (#btn-header-cart) que despliega el Slide-Over Drawer -->
             <button type="button" id="btn-header-cart" onclick="window.toggleCartDrawer(true)" class="flex items-center gap-2 bg-slate-900 hover:bg-slate-850 border border-cyan-500/40 text-white px-3 py-1.5 rounded-xl font-mono text-xs font-bold transition shrink-0 shadow cursor-pointer">

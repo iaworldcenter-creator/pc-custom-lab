@@ -12,6 +12,7 @@ const departmentCache = new Map(); // deptId -> Array of products
 let allLoadedProducts = [];
 let isAllLoaded = false;
 let isLoadingAll = false;
+let defaultBaseUrl = '';
 
 // OBTENER RUTA BASE ABSOLUTA DESDE self.location
 function getWorkerBaseUrl() {
@@ -344,6 +345,7 @@ self.onmessage = async function(e) {
     try {
         switch(action) {
             case 'INIT': {
+                if (baseUrl) defaultBaseUrl = baseUrl;
                 await loadManifest(baseUrl);
                 // Iniciar precarga progresiva en background (Off-Main-Thread)
                 loadAllDepartments(baseUrl);
@@ -358,10 +360,71 @@ self.onmessage = async function(e) {
 
             case 'PREDICTIVE_SEARCH': {
                 const { query, limit = 6 } = payload;
+                const effectiveBaseUrl = payload.baseUrl || defaultBaseUrl || baseUrl || '';
                 let pool = allLoadedProducts;
                 if (pool.length === 0) {
                     for (const cached of departmentCache.values()) {
                         pool.push(...cached);
+                    }
+                }
+                if (pool.length === 0) {
+                    if (!manifest) await loadManifest(effectiveBaseUrl);
+                    const cleanTokens = cleanSearchTokens(query);
+                    const deptCandidates = new Set();
+                    const DEPT_KEYWORD_MAP = {
+                        "ryzen": "procesadores",
+                        "intel": "procesadores",
+                        "core": "procesadores",
+                        "cpu": "procesadores",
+                        "procesador": "procesadores",
+                        "procesadores": "procesadores",
+                        "7700": "procesadores",
+                        "rtx": "tarjetas_video",
+                        "gtx": "tarjetas_video",
+                        "radeon": "tarjetas_video",
+                        "gpu": "tarjetas_video",
+                        "grafica": "tarjetas_video",
+                        "madre": "tarjetas_madre",
+                        "motherboard": "tarjetas_madre",
+                        "ram": "memorias_ram_pc",
+                        "dimm": "memorias_ram_pc",
+                        "ddr4": "memorias_ram_pc",
+                        "ddr5": "memorias_ram_pc",
+                        "gabinete": "gabinetes",
+                        "chasis": "gabinetes",
+                        "fuente": "fuentes_poder",
+                        "laptop": "laptops_portatiles",
+                        "laptops": "laptops_portatiles",
+                        "monitor": "monitores_pantallas",
+                        "monitores": "monitores_pantallas",
+                        "mouse": "mouses_ratones",
+                        "raton": "mouses_ratones",
+                        "teclado": "teclados",
+                        "teclados": "teclados",
+                        "ssd": "unidades_ssd",
+                        "m2": "unidades_ssd",
+                        "nvme": "unidades_ssd",
+                        "disco": "discos_duros_internos",
+                        "enfriamiento": "enfriamiento",
+                        "disipador": "enfriamiento"
+                    };
+
+                    for (const tok of cleanTokens) {
+                        if (DEPT_KEYWORD_MAP[tok]) deptCandidates.add(DEPT_KEYWORD_MAP[tok]);
+                        if (manifest && manifest.departments) {
+                            for (const deptId of Object.keys(manifest.departments)) {
+                                if (deptId.includes(tok) || stripAccents(manifest.departments[deptId].name).includes(tok)) {
+                                    deptCandidates.add(deptId);
+                                }
+                            }
+                        }
+                    }
+                    if (deptCandidates.size === 0) {
+                        ['procesadores', 'tarjetas_video', 'gabinetes', 'memorias_ram_pc', 'tarjetas_madre'].forEach(d => deptCandidates.add(d));
+                    }
+                    for (const deptId of deptCandidates) {
+                        const depts = await loadDepartment(deptId, effectiveBaseUrl);
+                        pool.push(...depts);
                     }
                 }
                 const matches = executeScoredSearch(query, pool);

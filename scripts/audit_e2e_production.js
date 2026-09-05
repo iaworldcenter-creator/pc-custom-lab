@@ -404,6 +404,58 @@ try {
     } else {
         recordResult('Navegación Directa por Subdepartamento', 'FAILED', `matches=${ultraMatches}, hasChip=${hasActiveUltraChip}`);
     }
+
+    // ========================================================================
+    // 9. AUDITORÍA DE CABECERA MÓVIL Y BUSCADOR SIN BLOQUEO
+    // ========================================================================
+    console.log('\n--- 9. AUDITORÍA DE CABECERA MÓVIL Y BUSCADOR SIN BLOQUEO ---');
+    
+    // 9.1 Orden en top-announcement-bar: DEPARTAMENTOS al inicio, PC Custom Lab al final
+    const barHTML = htmlContent.substring(htmlContent.indexOf('id="top-announcement-bar"'), htmlContent.indexOf('<!-- Botón Desplazar Derecha'));
+    const contentInsideBar = barHTML.substring(barHTML.indexOf('>') + 1).trim();
+    const deptIdx = contentInsideBar.indexOf('id="btn-mobile-departments"');
+    const pcCustomIdx = contentInsideBar.indexOf('PC Custom Lab');
+    const isDeptFirst = deptIdx !== -1 && deptIdx < 200;
+    const isPCLast = pcCustomIdx !== -1 && pcCustomIdx > deptIdx;
+
+    if (isDeptFirst && isPCLast) {
+        recordResult('Distribución en Barra Superior (Departamentos primero, PC Custom Lab al final)', 'PASSED',
+            'Departamentos colocado al inicio del riel y PC Custom Lab como cierre final.');
+    } else {
+        recordResult('Distribución en Barra Superior', 'FAILED', `deptIdx=${deptIdx}, pcCustomIdx=${pcCustomIdx}`);
+    }
+
+    // 9.2 Fila 2 sin botones redundantes (Barra de búsqueda con espacio completo flex-1)
+    const line2HTML = htmlContent.substring(htmlContent.indexOf('<!-- Línea 2:'), htmlContent.indexOf('</header>'));
+    const line2HasMobileDept = line2HTML.includes('id="btn-mobile-departments"');
+    if (!line2HasMobileDept && line2HTML.includes('id="main-search-input"')) {
+        recordResult('Despeje de Fila 2 para Móvil (Buscador con Máxima Visibilidad)', 'PASSED',
+            'La Fila 2 se reservó exclusivamente para Logo, Buscador Expandido y Carrito.');
+    } else {
+        recordResult('Despeje de Fila 2 para Móvil', 'FAILED', `line2HasMobileDept=${line2HasMobileDept}`);
+    }
+
+    // 9.3 Dropdown predictivo nunca bloquea la pantalla en cero coincidencias
+    const searchDropdown = domElements['search-results-dropdown'];
+    searchDropdown.classList.remove('hidden');
+    searchDropdown.innerHTML = '<div class="old-stuff">viejo</div>';
+    
+    // Invocamos renderSearchDropdownHTML con 0 coincidencias
+    if (typeof renderSearchDropdownHTML === 'function') {
+        renderSearchDropdownHTML([], 0, 'Inexistente', searchDropdown);
+    }
+    const isHiddenOnZero = searchDropdown.classList.contains('hidden') && searchDropdown.innerHTML === '';
+    
+    // Invocamos executeSearchQuery
+    window.executeSearchQuery('Ryzen 7700');
+    const isHiddenOnExecute = searchDropdown.classList.contains('hidden');
+
+    if (isHiddenOnZero && isHiddenOnExecute) {
+        recordResult('Dropdown Predictivo Cero-Obstrucción (Sin Letreros Negros Bloqueantes)', 'PASSED',
+            'El dropdown se auto-oculta y limpia ante 0 sugerencias o al ejecutar búsqueda.');
+    } else {
+        recordResult('Dropdown Predictivo Cero-Obstrucción', 'FAILED', `isHiddenOnZero=${isHiddenOnZero}, isHiddenOnExecute=${isHiddenOnExecute}`);
+    }
 } catch(e) {
     recordResult('Auditoría Estructural de Interfaz', 'FAILED', e.message);
 }
